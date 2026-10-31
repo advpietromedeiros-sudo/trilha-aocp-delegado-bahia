@@ -42,9 +42,18 @@ def _r02(js: str) -> bool:
     return all(s in cond for s in ("!e.ctrlKey", "!e.metaKey", "!e.altKey", "state.view==='study'"))
 
 
+def _r03(js: str) -> bool:
+    i = js.find("function renderErrorBook")
+    corpo = js[i : i + 1500] if i >= 0 else ""
+    # O caderno lê as tentativas refeitas E descarta as de item que não existe (senão a tela quebra
+    # em `it.discipline`).
+    return "state.attempts" in corpo and "BY_ID[k.split('|')[0]]" in corpo
+
+
 ASSERTIVAS = [
     ("R-01", "Refazer guarda a tentativa antes de apagar a resposta", _r01),
     ("R-02", "atalhos A–E ignoram Ctrl/Cmd/Alt e só valem na aba Estudar", _r02),
+    ("R-03", "caderno de erros mostra as tentativas refeitas, sem quebrar com item inexistente", _r03),
 ]
 
 
@@ -57,16 +66,20 @@ def _autoteste() -> int:
         "state.attempts=state.attempts||{};(state.attempts[k]=state.attempts[k]||[]).push(x);"
         "delete state.answers[k];"
         "if(!e.ctrlKey&&!e.metaKey&&!e.altKey&&state.view==='study'&&'ABCDE'.includes(letter)){}"
+        "function renderErrorBook(){const r=Object.entries(state.attempts||{})"
+        ".filter(([k])=>BY_ID[k.split('|')[0]]);}"
     )
     casos = [
-        ("código corrigido passa", bom, True, True),
-        ("Refazer sem guardar a tentativa acusa", bom.replace(".push(x)", ""), False, True),
-        ("atalho sem a guarda de Ctrl acusa", bom.replace("!e.ctrlKey&&", ""), True, False),
-        ("atalho sem a guarda da aba acusa", bom.replace("&&state.view==='study'", ""), True, False),
+        ("código corrigido passa", bom, True, True, True),
+        ("Refazer sem guardar a tentativa acusa", bom.replace(".push(x)", ""), False, True, True),
+        ("atalho sem a guarda de Ctrl acusa", bom.replace("!e.ctrlKey&&", ""), True, False, True),
+        ("atalho sem a guarda da aba acusa", bom.replace("&&state.view==='study'", ""), True, False, True),
+        ("caderno sem o filtro de item inexistente acusa",
+         bom.replace(".filter(([k])=>BY_ID[k.split('|')[0]])", ""), True, True, False),
     ]
     falhas = 0
-    for desc, js, r01, r02 in casos:
-        ok = _r01(js) == r01 and _r02(js) == r02
+    for desc, js, r01, r02, r03 in casos:
+        ok = _r01(js) == r01 and _r02(js) == r02 and _r03(js) == r03
         falhas += not ok
         print(f"  {'✅' if ok else '❌'} {desc}")
     print("❌ autoteste com falha" if falhas else f"✅ autoteste verde — {len(casos)} casos")

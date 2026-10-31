@@ -2,7 +2,7 @@
 
 > Estado, tarefas e o que ficou rodando. Atualizado a cada ~15 min de trabalho e no fechamento.
 
-**Última atualização:** 31/10/2026, 17h31.
+**Última atualização:** 31/10/2026, 17h37.
 
 ## Estado
 
@@ -15,18 +15,19 @@
   - **R-01** "Refazer" apagava a resposta sem rastro: agora a tentativa vai para `state.attempts`
     (salvo no navegador e no backup JSON) e o rótulo diz "a tentativa fica no histórico";
   - **R-02** atalhos A–E ignoram Ctrl/Cmd/Alt e só valem na aba Estudar.
+  - **R-03** (D-004, 17h37) o caderno de erros mostra as tentativas refeitas, marcadas com a data;
+    a taxa de acerto não muda. O **dashboard** continua lendo só a resposta atual.
   - ⚠️ **Camada:** corrigido no **arquivo**; o titular vê a mudança ao **recarregar** a página do app
-    (o `servidor.py` serve o `index.html` do disco). O caderno de erros e o dashboard ainda **não
-    leem** `state.attempts` — a tentativa refeita fica guardada, mas não aparece na tela.
+    (o `servidor.py` serve o `index.html` do disco).
+- ✅ **31/10/2026, 17h37 — contraste e foco aplicados** (D-003): bloco
+  `<style id="d003-contraste-foco">` no `index.html`; story em `Aprovados/Contraste e foco (D-003)`.
 
 ## Próximas tarefas, em ordem
 
-1. Aguardar D-003 (proposta de contraste e foco) e aplicar no `index.html`.
-2. Decidir com o titular se o caderno de erros deve mostrar as tentativas refeitas (`state.attempts`).
-3. Espera da geração: o polling da tela (~240 s) é menor que a geração do servidor.
-4. Servidor: `X-Frame-Options`/CSP `frame-ancestors`, `do_HEAD` bloqueado, validar `Content-Length`.
-5. Stories: alternativa com estado acessível, modal com foco, menu lateral no celular.
-6. README: `.env.exemplo` inexistente; seção "Arquivos" desatualizada.
+1. Espera da geração: o polling da tela (~240 s) é menor que a geração do servidor.
+2. Servidor: `X-Frame-Options`/CSP `frame-ancestors`, `do_HEAD` bloqueado, validar `Content-Length`.
+3. Stories: alternativa com estado acessível, modal com foco, menu lateral no celular.
+4. README: `.env.exemplo` inexistente; seção "Arquivos" desatualizada.
 
 ## O que fica rodando
 
