@@ -38,3 +38,22 @@ Resposta textual do titular, em 31/10/2026, 17h34, à pergunta *"Caderno de erro
 passe a mostrar as tentativas refeitas?"*: *"1- sim"*. Os erros guardados em `state.attempts` pelo
 botão Refazer entram no caderno, marcados *"Tentativa refeita em dd/mm/aaaa"*. **A taxa de acerto
 não muda:** o placar continua sendo a resposta atual de cada item.
+
+### D-005 — Blocos de 30: baixa por correlação AUTOMÁTICA (31/10/2026, titular)
+
+Resposta textual do titular, 31/10/2026, 19h42, às 3 perguntas de `docs/VIABILIDADE_BLOCOS_30.md`:
+*"1-AUTOMATICA    20 NO APP, HTML /PDF  3 AUDITORIA DUPLA"*. Item 1: quando o comentário de uma
+questão cobre outro ponto do edital, esse ponto recebe baixa **sem confirmação**. Salvaguarda da
+sessão (não do titular): só entram ids que existem no `items.json`, e a baixa por correlação fica
+**visualmente distinta** de "respondido" — rótulo vira prova (§E5).
+
+### D-006 — Histórico acumulado no app e em HTML/PDF (31/10/2026, titular)
+
+Mesma resposta, item 2, lido como *"2 — no app, HTML/PDF"* (o titular escreveu "20"; leitura
+declarada no chat, a corrigir se não for isso). O histórico fica no app e é exportado num único
+arquivo HTML, **regravado a cada bloco com tudo**; o PDF sai da impressão desse HTML.
+
+### D-007 — Auditoria dupla mantida nos blocos (31/10/2026, titular)
+
+Mesma resposta, item 3: *"3 AUDITORIA DUPLA"*. `DEEP_AUDIT` segue ligado: mais lento e mais caro
+por questão, menos erro. O custo real de um bloco é medido no primeiro (tempo, chamadas, tokens).

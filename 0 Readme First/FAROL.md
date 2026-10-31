@@ -33,9 +33,20 @@
 1. Servidor: `X-Frame-Options`/CSP `frame-ancestors`, `do_HEAD` bloqueado, validar `Content-Length`.
 2. Stories: alternativa com estado acessível, modal com foco, menu lateral no celular.
 3. README: `.env.exemplo` inexistente; seção "Arquivos" desatualizada.
-4. **Blocos de 30 questões** — viável (`docs/VIABILIDADE_BLOCOS_30.md`, 31/10/2026). Aguarda 3
-   decisões do titular: baixa por correlação automática ou confirmada; arquivo acumulado só no app
-   ou também HTML/PDF; manter a auditoria dupla.
+4. **Blocos de 30 questões** — viável (`docs/VIABILIDADE_BLOCOS_30.md`, 31/10/2026). Decisões do
+   titular às 19h42: baixa por correlação **automática** (D-005), histórico **no app e em HTML/PDF**
+   (D-006), **auditoria dupla mantida** (D-007).
+   - ✅ **31/10/2026, 19h58 — implementado** (servidor v8 + script v8 no `index.html`): painel
+     "📦 Bloco N" (x de 30, prontos no servidor, ir ao próximo, gerar próximo bloco), pré-preparo do
+     bloco seguinte aos 20 feitos, baixa por correlação validada contra o `items.json` (anel na
+     árvore), progresso do edital = respondidos + correlação, histórico único regravado a cada bloco
+     em `historico/Trilha_historico_acumulado.html` (fora do Git) + baixar HTML + imprimir em PDF, e
+     **métricas por questão** (duração, chamadas, tokens) gravadas no cache.
+     Provas: `testar_servidor.py` (11+1 casos, API simulada), `testar_blocos.mjs` (13 casos, script
+     real), `testar_pagina.cjs` (página real carrega sem erro). ⚠️ `testar_servidor.py` passou em 29
+     de 30 execuções locais: 1 falha intermitente não reproduzida.
+   - ⏳ **Falta a prova real:** o 1º bloco com a API de verdade mede tempo, chamadas e tokens. Ler as
+     `metricas` em `cache/*.json` depois dele.
    - ✅ **31/10/2026, 19h38 — acervo grande indexado** (`ferramentas/ampliar_acervo.py`): índice de
      744 → **9.356 páginas** (+8.612, inclusive os 42 resumos dos ZIPs PCPR; PCPR-3 e 4 eram cópia).
      ⚠️ Camada: o **arquivo** do índice mudou; o servidor só usa o índice novo ao ser **reiniciado**.

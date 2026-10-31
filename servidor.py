@@ -14,10 +14,13 @@ from __future__ import annotations
 import concurrent.futures, http.server, json, math, os, pathlib, re, sys, threading, time, unicodedata, urllib.error, urllib.parse, urllib.request, webbrowser
 from collections import Counter
 
-RELEASE = '2026.10.30-v7.2-auditoria'
+RELEASE = '2026.10.31-v8-blocos'
 ROOT = pathlib.Path(__file__).resolve().parent
 ASSETS = ROOT / 'assets'
 CACHE = ROOT / 'cache'; CACHE.mkdir(exist_ok=True)
+HIST = ROOT / 'historico'      # D-006: o arquivo acumulado (fora do Git: tem respostas e comentários)
+BLOCO_MAX = 30                 # D-005: tamanho do bloco
+HIST_MAX = 40_000_000          # bytes aceitos no POST do histórico
 CUTOFF = '29/07/2026'
 
 
@@ -549,6 +552,7 @@ BASE LOCAL: o pedido traz 'dispositivos_da_base' (lei seca com 'ref' SIGLA:ARTIG
 • commentary.traps: 2 a 4 pegadinhas recorrentes da AOCP sobre o tema (frases curtas).
 • commentary.auditoria: {"checklist": ["Uma única alternativa correta", "Cinco alternativas juridicamente plausíveis", "Extensão das alternativas equilibrada", "Fundamentação legal e jurisprudencial"] — ajuste ao caso real; "cobertura": o que a questão trabalhou e o que fica para outras questões do mesmo ponto; "fundamento_edital": "Item X — texto do ponto do edital"}.
 • commentary.gaps: subtemas do ponto ainda não cobrados (para a rodada 2).
+• commentary.itens_correlatos: ids (o campo 'id' de 'pontos_para_correlacao') de OUTROS pontos do edital que a aula e os comentários EXPLICARAM de verdade — com profundidade suficiente para o aluno dar baixa nesses pontos. Pode avançar em conteúdo correlato para isso. Lista vazia se nenhum; no máximo 5; NUNCA invente id.
 Somente JSON válido, sem Markdown e sem texto fora do JSON."""
 
 LESSON_TYPES = ['conceito', 'regra', 'distincao', 'fundamento', 'exemplo', 'juris', 'pegadinha', 'atencao', 'tabela', 'linha_do_tempo']
@@ -574,7 +578,7 @@ SCHEMA = _obj({
         'laws': {'type': 'array', 'items': _obj({'ref': S, 'diploma': S, 'dispositivo': S, 'explicacao': S, 'extensao': S})},
         'jurisprudence': {'type': 'array', 'items': _obj({'ref': S, 'tribunal': S, 'identificador': S, 'data': S, 'texto_literal': S, 'explicacao': S, 'url': S})},
         'traps': ARR_S, 'mindmap_titulo': S, 'mindmap': {'type': 'array', 'items': _obj({'title': S, 'points': ARR_S})},
-        'gaps': ARR_S,
+        'gaps': ARR_S, 'itens_correlatos': ARR_S,
         'auditoria': _obj({'checklist': ARR_S, 'cobertura': S, 'fundamento_edital': S})}),
 })
 
@@ -611,6 +615,8 @@ def user_prompt(item, round_, gaps, prev):
     return json.dumps({
         'disciplina': item['discipline'], 'ponto_oficial': item['number'], 'conteudo_literal': item['label'],
         'itens_relacionados': [{'item': t['number'], 'texto': t['label']} for t in related[1:]],
+        'pontos_para_correlacao': [{'id': t['id'], 'ponto': t['number'], 'texto': t['label'][:160]}
+                                   for t in ITEMS if t['discipline'] == item['discipline'] and t['id'] != item['id']],
         'rodada': round_, 'prioridade': item['priority'],
         'missao_especifica': ('COBERTURA HORIZONTAL: explorar o maior número possível de aspectos do ponto oficial e mapear lacunas' if round_ == 1 else
                               'APROFUNDAMENTO VERTICAL: concentrar-se em exceções, distinções, controvérsias e erros identificados, sem repetir o núcleo da primeira rodada'),
@@ -637,6 +643,20 @@ def post_json(url, payload, headers, timeout=240):
 
 
 OPENAI_FORMAT = {}  # modelo -> último formato aceito
+
+# 31/10/2026 (D-007, docs/VIABILIDADE_BLOCOS_30.md): mede cada geração — chamadas e tokens somados
+# por thread, porque cada geração roda numa thread do WORKERS. Antes, nada era registrado e o custo
+# de um bloco de 30 não tinha como ser medido.
+_MEDIDA = threading.local()
+
+
+def _somar_uso(res, provider):
+    m = getattr(_MEDIDA, 'atual', None)
+    if m is None or not isinstance(res, dict): return
+    u = res.get('usage') or {}
+    m['chamadas'] += 1
+    m['tokens_entrada'] += int(u.get('input_tokens') or 0)
+    m['tokens_saida'] += int(u.get('output_tokens') or 0)
 
 
 def call_model(system, user, provider, schema=None):
@@ -676,6 +696,7 @@ def call_model(system, user, provider, schema=None):
         raw = ''.join(c.get('text', '') for c in res.get('content', []) if c.get('type') == 'text')
     else:
         raise RuntimeError('Provedor inválido; use openai ou claude.')
+    _somar_uso(res, provider)
     m = re.search(r'\{.*\}', raw, re.S)
     if not m: raise RuntimeError('API não retornou JSON reconhecível.')
     try: return json.loads(m.group(0))
@@ -767,11 +788,22 @@ def audit_view(q):
     return json.dumps(dict(q, commentary=c), ensure_ascii=False)[:40000]
 
 
+def correlatos_validos(ids, itemid, limite=5):
+    """D-005: a baixa por correlação é automática — por isso só passa id que EXISTE no edital, que não é
+    o próprio ponto e sem repetição. O modelo pode inventar id; a tela nunca recebe um."""
+    if not isinstance(ids, list): return []
+    out = []
+    for i in ids:
+        if isinstance(i, str) and i in BY_ID and i != itemid and i not in out: out.append(i)
+    return out[:limite]
+
+
 def generate(itemid, round_, provider, gaps=None):
     key = f'{itemid}|{round_}'
     existing = stored(key)
     if existing: return existing
     item = BY_ID[itemid]
+    _MEDIDA.atual = {'chamadas': 0, 'tokens_entrada': 0, 'tokens_saida': 0}; t0 = time.time()
     previous = [v['correct'] for v in BANK.values() if 'correct' in v]
     for path in sorted(CACHE.glob('*_R*.json'), key=lambda p: p.stat().st_mtime)[-30:]:
         try: previous.append(json.loads(path.read_text('utf8'))['correct'])
@@ -799,10 +831,14 @@ def generate(itemid, round_, provider, gaps=None):
             if alerta and os.getenv('AUDIT_STRICT', '0') == '1':
                 raise RuntimeError('Auditoria independente ainda detectou problemas: ' + str(alerta)[:500])
     q['commentary'] = enrich_commentary(q.get('commentary', {}), item)
+    q['commentary']['itens_correlatos'] = correlatos_validos(q['commentary'].get('itens_correlatos'), itemid)
     if alerta: q['commentary']['alerta_auditoria'] = alerta[:6]
     q['id'] = itemid; q['round'] = round_; q['origin'] = f'Gerada via {provider} com base na trilha, na lei seca local e nos excertos anexos'
     q['sources_used'] = [{'file': x['file'], 'page': x['page']} for x in fetch_sources(item)]
     q['release'] = RELEASE
+    modelo = os.environ.get('OPENAI_MODEL', 'gpt-6.1-sol') if provider == 'openai' else os.environ.get('CLAUDE_MODEL', 'claude-sonnet-4-6')
+    q['metricas'] = dict(_MEDIDA.atual, duracao_s=round(time.time() - t0, 1), provider=provider, modelo=modelo,
+                         gerada_em=time.strftime('%d/%m/%Y %H:%M'))
     f = file_for(itemid, round_); tmp = f.with_suffix('.tmp'); tmp.write_text(json.dumps(q, ensure_ascii=False, indent=2), encoding='utf8'); os.replace(tmp, f)
     return q
 
@@ -916,11 +952,25 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         origin = self.headers.get('Origin')
         return origin is None or origin in {f'http://{h}' for h in ALLOWED_HOSTS}
 
-    def read_json(self):
-        size = int(self.headers.get('Content-Length', '0'))
-        if size > 100000: return {}
-        try: return json.loads(self.rfile.read(size).decode('utf8'))
+    def descartar_corpo(self):
+        """Lê (até HIST_MAX) e joga fora o corpo de uma requisição que será recusada."""
+        try: size = int(self.headers.get('Content-Length', '0'))
+        except ValueError: return
+        while 0 < size:
+            parte = self.rfile.read(min(size, 65536))
+            if not parte: break
+            size -= len(parte)
+            if size > HIST_MAX: break
+
+    def read_json(self, limite=100000):
+        # 31/10/2026: o limite passa a ser por rota (o histórico tem MB) e o tamanho é validado — antes,
+        # Content-Length negativo prendia a thread e não numérico derrubava a requisição (revisão, item 8).
+        try: size = int(self.headers.get('Content-Length', '0'))
+        except ValueError: return {}
+        if size < 0 or size > limite: return {}
+        try: dado = json.loads(self.rfile.read(size).decode('utf8'))
         except Exception: return {}
+        return dado if isinstance(dado, dict) else {}
 
     def do_GET(self):
         p = urllib.parse.urlparse(self.path); z = urllib.parse.parse_qs(p.query)
@@ -938,6 +988,12 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             if q: return self.send_json({'status': 'ready', 'question': public_q(q)})
             st, err = task_status(jobkey(i, r))
             return self.send_json({'status': st, **({'error': err} if err else {})})
+        if p.path == '/api/bloco':
+            try: r = int((z.get('round') or ['1'])[0] or 1)
+            except ValueError: r = 1
+            ids = [i for i in (z.get('ids') or [''])[0].split(',') if i in BY_ID][:BLOCO_MAX]
+            est = {i: task_status(jobkey(i, r))[0] for i in ids}
+            return self.send_json({'round': r, 'total': len(ids), 'contagem': dict(Counter(est.values())), 'estados': est})
         if p.path == '/api/status':
             i = (z.get('id') or [''])[0]
             try: r = int((z.get('round') or ['1'])[0] or 1)
@@ -955,9 +1011,33 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 
     def do_POST(self):
         p = urllib.parse.urlparse(self.path).path
-        if p not in ['/api/prefetch', '/api/generate', '/api/reveal']:
-            return self.send_json({'error': 'Endpoint inexistente'}, 404)
-        if not self.local_only(): return self.send_json({'error': 'Origem não permitida'}, 403)
+        if p not in ['/api/prefetch', '/api/generate', '/api/reveal', '/api/bloco', '/api/historico']:
+            self.descartar_corpo(); return self.send_json({'error': 'Endpoint inexistente'}, 404)
+        if not self.local_only():
+            # 31/10/2026: recusar SEM ler o corpo fazia o Windows derrubar a conexão (ConnectionReset) antes
+            # de a recusa chegar — intermitente, medido no testar_servidor.py. Lê e descarta antes de responder.
+            self.descartar_corpo(); return self.send_json({'error': 'Origem não permitida'}, 403)
+        if p == '/api/historico':
+            # D-006: um único arquivo, regravado a cada bloco SEMPRE com tudo (a tela manda o histórico inteiro).
+            html_txt = self.read_json(limite=HIST_MAX).get('html')
+            if not isinstance(html_txt, str) or not html_txt.lower().startswith('<!doctype html>'):
+                return self.send_json({'error': 'Histórico inválido ou grande demais'}, 400)
+            HIST.mkdir(exist_ok=True); alvo = HIST / 'Trilha_historico_acumulado.html'; tmp = alvo.with_suffix('.tmp')
+            tmp.write_text(html_txt, encoding='utf8'); os.replace(tmp, alvo)
+            return self.send_json({'ok': True, 'bytes': len(html_txt.encode('utf8')), 'arquivo': alvo.relative_to(ROOT).as_posix()})
+        if p == '/api/bloco':
+            # Blocos de 30 (D-005 a D-007): a tela escolhe os pontos (ela sabe o que foi respondido) e o servidor
+            # enfileira a geração de todos; os 2 geradores do WORKERS trabalham a fila.
+            req = self.read_json(); ids = req.get('ids'); provider = str(req.get('provider', 'openai'))
+            try: r = int(req.get('round', 1))
+            except (TypeError, ValueError): r = 1
+            gaps = req.get('gaps') if isinstance(req.get('gaps'), dict) else {}
+            if not isinstance(ids, list) or not ids or len(ids) > BLOCO_MAX or r not in (1, 2):
+                return self.send_json({'error': f'Bloco inválido (1 a {BLOCO_MAX} ids, rodada 1 ou 2)'}, 400)
+            if provider not in ('openai', 'claude'): return self.send_json({'error': 'Provedor inválido'}, 400)
+            validos = [i for i in dict.fromkeys(ids) if isinstance(i, str) and i in BY_ID]
+            estados = {i: submit(i, r, provider, gaps.get(i) if isinstance(gaps.get(i), list) else []) for i in validos}
+            return self.send_json({'round': r, 'pedidos': len(validos), 'ignorados': len(ids) - len(validos), 'estados': estados})
         req = self.read_json(); i = str(req.get('id', '')); r = req.get('round', 1)
         try: r = int(r)
         except Exception: r = 1

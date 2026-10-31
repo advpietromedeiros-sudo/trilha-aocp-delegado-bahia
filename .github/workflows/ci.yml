@@ -41,6 +41,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 24
+          cache: npm
+      # O jsdom (teste "a página carrega sem erro") vem do npm ci; sem ele a porta sairia pulada.
+      - run: npm ci
       - name: Python (ruff)
         run: pip install ruff && ruff check docs .claude/hooks
       - name: Portão

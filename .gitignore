@@ -1,6 +1,7 @@
 .env
 cache/*.json
 cache/*.tmp
+historico/
 __pycache__/
 node_modules/
 storybook-static/

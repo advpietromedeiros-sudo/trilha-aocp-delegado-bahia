@@ -43,6 +43,12 @@ PORTAS: list[tuple[str, list[str], str]] = [
      "verificador que nunca falha passa por controle para sempre"),
     ("espera pela geração: comportamento", ["node", "docs/testar_espera.mjs"],
      "tela desistindo aos 240 s com o servidor ainda gerando; 100 consultas à toa em 'missing'"),
+    ("servidor: geração medida, bloco e histórico", [sys.executable, "docs/testar_servidor.py"],
+     "custo sem medição; correlato inventado; histórico de MB descartado calado (D-005 a D-007)"),
+    ("blocos de 30: comportamento", ["node", "docs/testar_blocos.mjs"],
+     "bloco repetindo ponto; baixa por correlação de id inventado; histórico com <script> vivo"),
+    ("a página carrega sem erro de JavaScript", ["node", "docs/testar_pagina.cjs"],
+     "tela inteira em branco por nome errado ou script na ordem errada"),
 ]
 
 # Régua de segredo (31/10/2026): exige VALOR de 20+ caracteres depois do `=` — o LEIA_PRIMEIRO cita
