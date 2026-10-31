@@ -1,0 +1,6 @@
+# Python do portão, dos verificadores e dos hooks (roteiro §4.3: `ruff` na CI).
+line-length = 110
+target-version = "py311"
+
+[lint]
+select = ["E", "F", "W", "B"]

@@ -1,0 +1,42 @@
+# CI do Trilha AOCP (roteiro de fundação §4.3, HARNESS §P7). Só o verde AQUI vale (§P3).
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  storybook:
+    name: Storybook compila
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run build-storybook
+
+  verificacoes:
+    name: Verificações (segredo, Python, portão)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Segredo (gitleaks)
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Python (ruff)
+        run: pip install ruff && ruff check docs .claude/hooks
+      - name: Portão
+        run: python docs/verificar_antes_de_subir.py
