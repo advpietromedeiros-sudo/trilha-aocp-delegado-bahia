@@ -1,0 +1,587 @@
+{
+ "DBA26-PEN-1|1": {
+  "id": "DBA26-PEN-1",
+  "round": 1,
+  "tag": "Questão 001 • Direito Penal",
+  "difficulty": "Médio-alto",
+  "origin": "Questão autoral revisada nesta conversa",
+  "source_scope": "Anexo I, Direito Penal, item 1 e subitens 1.1 a 1.4",
+  "stem": "Durante a elaboração de uma proposta legislativa destinada ao enfrentamento de novas modalidades de criminalidade, determinado grupo de trabalho debateu os limites da intervenção penal, sua relação com outros ramos jurídicos e o papel da política criminal. Considerando os princípios fundamentais, as funções e as características do Direito Penal no Estado Democrático de Direito, assinale a alternativa correta.",
+  "options": {
+   "A": "A fragmentariedade seleciona os ataques mais relevantes aos bens jurídicos, enquanto a subsidiariedade autoriza a tutela penal mesmo quando a proteção administrativa se revelar suficiente no caso concreto.",
+   "B": "A reserva legal veda tanto a analogia prejudicial quanto a favorável ao acusado, porque qualquer integração da lei penal, independentemente de seus efeitos, compromete a previsibilidade da norma.",
+   "C": "A intervenção mínima orienta a seleção das condutas incriminadas; a fragmentariedade seleciona as ofensas mais graves e a subsidiariedade recomenda a atuação penal quando insuficientes os demais meios de proteção.",
+   "D": "A ofensividade pressupõe demonstração de dano efetivo ao bem jurídico em cada caso, de modo que a previsão de crimes de perigo abstrato é necessariamente contrária à Constituição Federal.",
+   "E": "A política criminal constitui fonte formal imediata do Direito Penal e pode, excepcionalmente, suprir lacunas incriminadoras por analogia, desde que haja fundamento em relevante necessidade de prevenção."
+  },
+  "correct": "C",
+  "commentary": {
+   "summary": "A alternativa C está correta: a intervenção mínima orienta o recurso excepcional à tutela penal; a fragmentariedade seleciona as ofensas mais relevantes; e a subsidiariedade recomenda sua utilização quando outros mecanismos de proteção forem insuficientes. O acerto demonstra a distinção central, mas não certifica sozinho o domínio de todas as manifestações desses princípios.",
+   "alternatives": {
+    "A": "ERRADA. A fragmentariedade foi descrita adequadamente, porém a segunda oração inverte a subsidiariedade. Se medidas civis e administrativas forem suficientes, não há fundamento de intervenção penal como ultima ratio. A pegadinha consiste na mistura de uma premissa verdadeira com uma conclusão incompatível com outro princípio.",
+    "B": "ERRADA. A legalidade proíbe analogia incriminadora ou agravadora (in malam partem), mas, em princípio, admite analogia favorável (in bonam partem), respeitados limites constitucionais e legais. Analogia integra lacuna; interpretação extensiva investiga o alcance de texto existente. Não são fenômenos idênticos.",
+    "C": "CORRETA. A intervenção mínima é diretriz ampla; a fragmentariedade limita a seleção dos ataques penalmente relevantes e a subsidiariedade situa o Direito Penal como último instrumento de proteção. Os conceitos se complementam sem significar proibição absoluta da criminalização preventiva.",
+    "D": "ERRADA. Ofensividade não se confunde com lesão consumada. Crimes de perigo concreto dependem de demonstração do risco exigido pelo tipo; crimes de perigo abstrato podem ser constitucionalmente admitidos sem demonstração individualizada de perigo concreto. Exemplo: o STJ reconhece o art. 306 do CTB como delito de perigo abstrato.",
+    "E": "ERRADA. Política criminal orienta escolhas de prevenção e criminalização, mas não é fonte formal imediata capaz de criar crimes. O princípio da legalidade impede punir por analogia prejudicial ao investigado, ainda que o comportamento pareça socialmente nocivo."
+   },
+   "lessons": [
+    {
+     "title": "1.1 • Conceito, caracteres e funções",
+     "text": "O Direito Penal é o ramo do Direito Público que disciplina infrações, penas, medidas de segurança e limites de responsabilização. Direito Penal objetivo é o conjunto de normas; subjetivo remete ao ius puniendi estatal, submetido às garantias constitucionais. Sua função não é somente sancionadora: tutela bens jurídicos e protege cidadãos contra arbitrariedades. Tem caráter público, normativo, valorativo e fragmentário. Distingua teorias de finalidade da pena: retribuição; prevenção geral negativa (intimidação); geral positiva (reafirmação da norma); especial negativa (contenção); especial positiva (ressocialização). A aplicação da pena considera reprovação e prevenção na fórmula do art. 59 do CP. A posição do Direito Penal no Estado Democrático de Direito é simultaneamente instrumento de proteção e limite à coerção."
+    },
+    {
+     "title": "1.2 • Princípios: legalidade, mínima intervenção e ofensividade",
+     "text": "Legalidade requer lex praevia, scripta, certa e stricta: lei anterior, escrita, suficientemente determinada e interpretação que não produza analogia incriminadora. A CF, art. 5º, XXXIX e XL, e o CP, arts. 1º e 2º, compõem o núcleo essencial. Intervenção mínima expressa o Direito Penal como ultima ratio; fragmentariedade restringe a tutela aos ataques mais relevantes; subsidiariedade exige insuficiência dos outros mecanismos. Ofensividade aproxima a intervenção penal de lesão ou perigo de lesão a bens jurídicos. O risco pode ser estruturalmente antecipado pelo legislador nos delitos de perigo abstrato, o que não os torna automaticamente inconstitucionais. Proporcionalidade, humanidade, culpabilidade, alteridade, pessoalidade e individualização da pena são limites complementares."
+    },
+    {
+     "title": "1.2 • Insignificância e crimes de perigo: nuances jurisprudenciais",
+     "text": "A insignificância pode excluir a tipicidade material. Vetores clássicos: mínima ofensividade, inexistência de periculosidade social da ação, reduzida reprovabilidade do comportamento e inexpressividade da lesão. Não basta afirmar que o valor econômico é baixo; devem ser consideradas as circunstâncias. A Súmula 599/STJ restringe a aplicação a crimes contra a Administração Pública, com análise responsável de eventual jurisprudência excepcional. Crimes de perigo concreto exigem a demonstração do perigo típico; crimes de perigo abstrato não reclamam prova individualizada de perigo, mas permanecem sujeitos aos demais limites da tipicidade e da Constituição. O anexo 'Crimes de Perigosidade Real & Crimes de Potencial Perigo' expõe teses doutrinárias que não devem ser confundidas com o entendimento do STJ sobre embriaguez ao volante."
+    },
+    {
+     "title": "1.3 • Relações com outros ramos jurídicos",
+     "text": "O Direito Constitucional estabelece garantias como legalidade, devido processo e dignidade humana. O Direito Processual Penal organiza investigação e persecução; o Administrativo estabelece infrações disciplinares e distingue ilícitos; o Civil disciplina obrigações e reparação; direitos humanos oferecem limites materiais e procedimentais. Criminologia estuda empiricamente crime, autor, vítima e controle social, enquanto a dogmática constrói a interpretação normativa do ordenamento. Nem todo inadimplemento civil ou descumprimento administrativo configura crime: é necessário identificar todos os elementos do tipo, o componente subjetivo e as circunstâncias do fato."
+    },
+    {
+     "title": "1.4 • Política criminal e limites do poder punitivo",
+     "text": "Política criminal formula estratégias legislativas e administrativas para prevenir e responder ao delito. Pode orientar criminalização, descriminalização e medidas alternativas, mas não substitui a lei penal. Dogmática penal examina a norma vigente; criminologia estuda o fenômeno empírico; política criminal avalia estratégias e objetivos. Direito Penal simbólico é categoria crítica aplicada a leis penais com forte efeito comunicacional, mas eficácia preventiva questionável. Uma escolha política de aumento de pena não elimina exigências de constitucionalidade, legalidade e proporcionalidade."
+    }
+   ],
+   "laws": [
+    "CF, art. 1º, III — dignidade da pessoa humana",
+    "CF, art. 5º, XXXIX e XL — legalidade e retroatividade benéfica",
+    "CF, art. 5º, XLV a XLVII — pessoalidade, individualização e limites à pena",
+    "CP, arts. 1º e 2º — legalidade e lei posterior benéfica",
+    "CP, art. 18 — dolo e culpa",
+    "CP, art. 59 — prevenção e reprovação"
+   ],
+   "jurisprudence": [
+    "STF, HC 84.412/SP — vetores clássicos da insignificância (verificar aplicação conforme o delito)",
+    "STJ, Súmula 599 — insignificância e crimes contra a Administração Pública",
+    "STJ — art. 306 do CTB: crime de perigo abstrato, sem exigência de demonstração do perigo concreto"
+   ],
+   "traps": [
+    "Subsidiariedade não significa punir mesmo quando o Direito Administrativo é suficiente.",
+    "Analogia in bonam partem não se confunde com analogia in malam partem.",
+    "Ofensividade não exige sempre produção de dano efetivo.",
+    "Política criminal não cria tipo penal sem lei.",
+    "Insignificância afasta tipicidade material, não é simples causa de diminuição de pena."
+   ],
+   "mindmap": [
+    {
+     "title": "Conceito e funções",
+     "points": [
+      "Direito Público",
+      "Ius puniendi limitado",
+      "Proteção + garantias",
+      "Reprovação e prevenção"
+     ]
+    },
+    {
+     "title": "Princípios",
+     "points": [
+      "Legalidade",
+      "Intervenção mínima",
+      "Fragmentariedade",
+      "Subsidiariedade",
+      "Ofensividade",
+      "Culpabilidade"
+     ]
+    },
+    {
+     "title": "Ramos e ciências",
+     "points": [
+      "Constitucional",
+      "Processual",
+      "Administrativo",
+      "Civil",
+      "Criminologia"
+     ]
+    },
+    {
+     "title": "Política criminal",
+     "points": [
+      "Estratégias estatais",
+      "Não cria crime",
+      "Direito Penal simbólico",
+      "Limites constitucionais"
+     ]
+    }
+   ],
+   "gaps": [
+    "Analogia e taxatividade com hipóteses práticas",
+    "Distinções doutrinárias dos crimes de perigo",
+    "Teorias de prevenção da pena",
+    "Crimes de bagatela e limites da insignificância",
+    "Aplicação cruzada de princípios a situações de investigação"
+   ],
+   "audit": "Gabarito único: C. Distratores juridicamente identificáveis. Observação pedagógica: a letra C é menos absoluta que alternativas incorretas, pista estilística a reduzir em novas questões. Correção construída a partir da questão já resolvida na conversa, com referências de revisão que devem ser verificadas no marco temporal do edital."
+  }
+ },
+ "DBA26-CPP-1|1": {
+  "id": "DBA26-CPP-1",
+  "round": 1,
+  "tag": "Questão 002 • Direito Processual Penal",
+  "difficulty": "Alto",
+  "origin": "Questão autoral preparada anteriormente nesta conversa",
+  "source_scope": "Anexo I, Processo Penal, item 1 e subitens 1.1 a 1.4",
+  "stem": "Durante investigação de crime de elevada complexidade, instaurada por autoridade policial competente, sobrevém alteração legislativa de natureza exclusivamente processual. Paralelamente, surgem controvérsias acerca da integração das normas processuais, da atuação jurisdicional durante a investigação e dos limites decorrentes da estrutura acusatória do processo penal brasileiro. Considerando a Constituição Federal, o Código de Processo Penal e a sistemática acusatória, assinale a alternativa correta.",
+  "options": {
+   "A": "A aplicação imediata da lei processual penal autoriza a revisão automática dos atos regularmente praticados sob a legislação anterior, desde que a alteração legislativa amplie as garantias individuais do investigado.",
+   "B": "A analogia constitui mecanismo de integração admitido pelo Código de Processo Penal, mas sua utilização depende da inexistência de disciplina expressa, sendo vedada sempre que produzir resultado desfavorável à acusação.",
+   "C": "A adoção da estrutura acusatória impede que o magistrado determine diligências investigativas de ofício, mas admite que assuma a iniciativa probatória da acusação durante a instrução, desde que motive a necessidade da providência.",
+   "D": "A lei processual penal possui, como regra, aplicação imediata, preservados os atos realizados sob a lei anterior; sua interpretação admite integração analógica, e a estrutura acusatória veda ao juiz substituir a atuação probatória própria da acusação.",
+   "E": "A existência do juiz das garantias converte a investigação policial em procedimento jurisdicional, cabendo a esse magistrado dirigir a produção dos elementos informativos e deliberar sobre o indiciamento realizado pela autoridade policial."
+  },
+  "correct": "D",
+  "commentary": {
+   "summary": "Alternativa D. O art. 2º do CPP consagra a aplicação imediata da lei processual penal, sem prejuízo da validade dos atos anteriores. O art. 3º admite interpretação extensiva, aplicação analógica e suplemento por princípios gerais de direito. O art. 3º-A estabelece estrutura acusatória, com vedação da iniciativa judicial na investigação e da substituição da atuação probatória do órgão acusador.",
+   "alternatives": {
+    "A": "ERRADA. Art. 2º CPP: aplicação imediata da lei processual penal, sem prejuízo da validade dos atos realizados sob a vigência da lei anterior. Os atos processuais regularmente praticados não se tornam automaticamente inválidos pela superveniência de norma mais garantista. Questões intertemporais complexas, especialmente normas mistas, demandam estudo separado.",
+    "B": "ERRADA. Art. 3º CPP admite interpretação extensiva, aplicação analógica e suplemento dos princípios gerais de Direito. A proibição formulada 'sempre que produzir resultado desfavorável à acusação' é artificial e não exprime regra geral legal. Atenção: aplicação analógica processual não autoriza superar direitos fundamentais ou criar hipóteses coercitivas sem base normativa apropriada.",
+    "C": "ERRADA. A estrutura acusatória veda ao juiz substituir a atuação probatória da acusação. A jurisprudência do STF sobre o art. 3º-A exige interpretação cuidadosa acerca da atividade judicial suplementar, sem autorizar assumir protagonismo acusatório. A oração final transforma a motivação em licença para substituir uma parte.",
+    "D": "CORRETA. Resume a regra de aplicação imediata e preservação dos atos pretéritos (CPP art. 2º), a possibilidade de integração (CPP art. 3º) e a regra estrutural do art. 3º-A, sem conferir ao magistrado atribuições de parte.",
+    "E": "ERRADA. Juiz das garantias controla legalidade da investigação e salvaguarda direitos individuais em hipóteses de reserva de jurisdição, sem transformar inquérito em processo jurisdicional nem assumir a titularidade investigativa. Indiciamento é atribuição fundamentada da autoridade policial conforme Lei 12.830/2013, art. 2º, §6º."
+   },
+   "lessons": [
+    {
+     "title": "1.1 • Conceito, finalidade e características",
+     "text": "Processo Penal é ramo do Direito Público que estabelece regras de persecução e jurisdição criminal, assegura aplicação legítima da lei penal e protege direitos fundamentais do investigado, acusado e vítima. Instrumentalidade não significa neutralidade de garantias: seu procedimento limita o poder estatal. Entre os princípios relevantes: devido processo legal, contraditório, ampla defesa, presunção de inocência, juiz natural, imparcialidade, publicidade, motivação das decisões e duração razoável do processo. No inquérito, contraditório pleno não é idêntico ao existente na instrução judicial, embora garantias específicas do investigado continuem aplicáveis."
+    },
+    {
+     "title": "1.2 • Fontes do Processo Penal",
+     "text": "Fontes de produção normativa e de conhecimento não se confundem: Constituição, leis, tratados e normas de competência pertinente estruturam a disciplina; jurisprudência e doutrina auxiliam interpretação sem substituir normas. O art. 3º do CPP admite interpretação extensiva, aplicação analógica e suplemento dos princípios gerais do Direito. A doutrina distingue fontes formais imediatas e fontes de conhecimento indiretas; não confundir norma em vigor com interpretação acadêmica ou orientação jurisprudencial não vinculante."
+    },
+    {
+     "title": "1.3 • Lei processual penal no tempo e no espaço",
+     "text": "CPP, art. 2º: lei processual penal aplica-se desde logo, sem prejuízo da validade dos atos realizados sob lei anterior (tempus regit actum). É diferente da retroatividade material penal benéfica do CP, art. 2º. Normas híbridas ou mistas, que tocam simultaneamente aspectos materiais e processuais, reclamam exame especial. Regra de territorialidade da lei processual penal consta do art. 1º do CPP, ressalvadas hipóteses específicas de tratados, convenções e exceções legais. Imunidades e prerrogativas têm assento constitucional e legal, exigindo análise de sua extensão."
+    },
+    {
+     "title": "1.4 • Sistemas processuais e juiz das garantias",
+     "text": "No modelo acusatório, funções de investigar, acusar e julgar devem preservar separação e imparcialidade. O art. 3º-A CPP veda iniciativa judicial na fase de investigação e substituição da atuação probatória da acusação. O juiz das garantias desempenha controle de legalidade e proteção dos direitos, nas atribuições do CPP, conforme delimitações da jurisprudência do STF nas ADIs 6298, 6299, 6300 e 6305. Não conduz investigação, não oferece denúncia e não realiza indiciamento. Cuidado com mudanças normativas posteriores ao edital: o marco de cobrança precisa ser aferido no instrumento convocatório."
+    }
+   ],
+   "laws": [
+    "CPP, art. 1º — aplicação territorial da lei processual penal e exceções",
+    "CPP, art. 2º — aplicação imediata e preservação de atos anteriores",
+    "CPP, art. 3º — interpretação extensiva, analogia e princípios gerais",
+    "CPP, art. 3º-A — estrutura acusatória",
+    "CPP, arts. 3º-B e seguintes — juiz das garantias",
+    "CF, art. 5º, LIV, LV e LVII — devido processo, defesa e presunção de inocência",
+    "Lei 12.830/2013, art. 2º, § 6º — indiciamento fundamentado por delegado"
+   ],
+   "jurisprudence": [
+    "STF, ADIs 6298, 6299, 6300 e 6305 (2023) — parâmetros constitucionais do juiz das garantias e do sistema acusatório",
+    "Jurisprudência sobre aplicação do art. 3º-A CPP e limites de iniciativa probatória judicial: verificar o contexto e a razão decisória antes de afirmar tese absoluta"
+   ],
+   "traps": [
+    "Tempus regit actum não invalida atos processuais regularmente praticados sob lei antiga.",
+    "Norma exclusivamente processual não se confunde com norma penal mista.",
+    "A existência de juiz das garantias não converte o inquérito em procedimento jurisdicional.",
+    "Juiz pode exercer controle de legalidade, não titularidade da investigação.",
+    "A atividade probatória judicial não pode substituir o papel da acusação."
+   ],
+   "mindmap": [
+    {
+     "title": "Princípios",
+     "points": [
+      "Devido processo",
+      "Imparcialidade",
+      "Contraditório",
+      "Ampla defesa"
+     ]
+    },
+    {
+     "title": "Fontes",
+     "points": [
+      "CF e CPP",
+      "Art. 3º CPP",
+      "Interpretação",
+      "Analogia"
+     ]
+    },
+    {
+     "title": "Lei no tempo",
+     "points": [
+      "Art. 2º CPP",
+      "Aplicação imediata",
+      "Atos anteriores válidos",
+      "Normas mistas"
+     ]
+    },
+    {
+     "title": "Sistema acusatório",
+     "points": [
+      "Funções separadas",
+      "Art. 3º-A",
+      "Juiz das garantias",
+      "Controle de legalidade"
+     ]
+    }
+   ],
+   "gaps": [
+    "Regime das normas processuais mistas",
+    "Consequências concretas das decisões das ADIs do juiz das garantias",
+    "Princípios em atos investigativos e audiências",
+    "Critérios de interpretação e analogia processual"
+   ],
+   "audit": "Gabarito único D por regra expressa dos arts. 2º, 3º e 3º-A CPP. Exige conferir atualizações temporais e amplitude da interpretação conforme do STF. Texto é a questão anteriormente apresentada ao usuário; comentário fornecido agora apenas como preparação inicial revisável."
+  }
+ },
+ "DBA26-CON-1|1": {
+  "id": "DBA26-CON-1",
+  "round": 1,
+  "tag": "Questão 003 • Direito Constitucional",
+  "difficulty": "Alto",
+  "origin": "Questão autoral de demonstração",
+  "source_scope": "Anexo I, Direito Constitucional, item 1",
+  "stem": "Em seminário sobre os fundamentos da atividade policial, candidatos ao cargo de Delegado discutiram as diferentes acepções de Constituição, o objeto do Direito Constitucional e a distinção entre normas formalmente constitucionais e materialmente constitucionais. A respeito dessas categorias, assinale a alternativa correta.",
+  "options": {
+   "A": "O conceito material de Constituição leva em conta exclusivamente a posição hierárquica e a forma de elaboração das normas, independentemente de seu conteúdo.",
+   "B": "O conceito formal de Constituição depende da natureza substancial da matéria regulada, de modo que normas sobre temas administrativos nunca podem ser formalmente constitucionais.",
+   "C": "O Direito Constitucional tem por objeto apenas a organização dos Poderes, excluindo a disciplina das garantias fundamentais e dos limites ao exercício do poder político.",
+   "D": "As normas constitucionais materialmente definidas devem necessariamente estar inseridas no documento constitucional formal, não se admitindo coincidência parcial entre os dois conceitos.",
+   "E": "O conceito formal considera a inserção da norma no texto constitucional segundo o procedimento próprio, enquanto o conceito material examina o conteúdo essencial relativo à estrutura do Estado, ao poder e aos direitos fundamentais."
+  },
+  "correct": "E",
+  "commentary": {
+   "summary": "Alternativa E. O critério formal considera a posição normativa no documento constitucional; o material observa o conteúdo estruturante da organização estatal, limitação do poder e direitos fundamentais. Os conceitos podem coincidir, mas não são sinônimos.",
+   "alternatives": {
+    "A": "ERRADA. Descreve critério formal como se fosse material.",
+    "B": "ERRADA. A identificação formal não depende da importância material do assunto; normas incluídas no texto constitucional são formalmente constitucionais.",
+    "C": "ERRADA. O Direito Constitucional compreende organização estatal, estrutura do poder, direitos e garantias fundamentais, processos constitucionais e limitações ao poder.",
+    "D": "ERRADA. Os conceitos formal e material podem se sobrepor parcialmente, mas não se exigem identidade nem inserção formal de todo conteúdo materialmente constitucional.",
+    "E": "CORRETA. Distingue o modo de reconhecimento formal da relevância material do conteúdo constitucional."
+   },
+   "lessons": [
+    {
+     "title": "Objeto do Direito Constitucional",
+     "text": "A disciplina abrange a organização do Estado, repartição de competências, estrutura dos Poderes, processo de exercício da soberania, direitos fundamentais e controle do poder. A Constituição é fundamento jurídico-político da ordem estatal. A dimensão jurídica não deve eliminar sua relação com a realidade política e social."
+    },
+    {
+     "title": "Conceitos formal e material",
+     "text": "Constituição formal é identificada pela inserção no documento superior produzido por procedimento constitucional específico. Constituição material é reconhecida pelo conteúdo que organiza o Estado, limita o poder e estabelece direitos fundamentais. Uma norma pode ser formalmente constitucional sem versar sobre assunto materialmente constitucional em sentido estrito. A coincidência não é obrigatória."
+    },
+    {
+     "title": "Outras concepções doutrinárias",
+     "text": "É frequente a contraposição entre sentidos sociológico (fatores reais de poder, associados a Ferdinand Lassalle), político (decisão política fundamental, Carl Schmitt) e jurídico (norma fundamental em Kelsen, com distinção entre sentido lógico-jurídico e jurídico-positivo). Essas associações devem ser estudadas como descrições de teorias específicas, não como definições unânimes ou equivalentes."
+    }
+   ],
+   "laws": [
+    "CF de 1988, Preâmbulo (análise doutrinária e jurisprudencial sobre natureza)",
+    "CF, art. 1º — fundamentos da República",
+    "CF, arts. 2º e 5º — organização do poder e direitos fundamentais",
+    "CF, art. 60 — reforma constitucional"
+   ],
+   "jurisprudence": [
+    "STF — preâmbulo constitucional não possui força normativa autônoma equiparada às regras constitucionais (verificar precedente e contexto em estudo específico)"
+   ],
+   "traps": [
+    "Formal = posição no texto; material = conteúdo da matéria.",
+    "Nem toda norma formalmente constitucional trata de matéria tipicamente constitucional.",
+    "O objeto do Direito Constitucional não se limita à separação de Poderes."
+   ],
+   "mindmap": [
+    {
+     "title": "Formal",
+     "points": [
+      "Inserção no texto",
+      "Procedimento próprio",
+      "Supremacia formal"
+     ]
+    },
+    {
+     "title": "Material",
+     "points": [
+      "Organização estatal",
+      "Limites ao poder",
+      "Direitos fundamentais"
+     ]
+    },
+    {
+     "title": "Concepções",
+     "points": [
+      "Lassalle",
+      "Schmitt",
+      "Kelsen"
+     ]
+    },
+    {
+     "title": "Objeto",
+     "points": [
+      "Estado e competências",
+      "Poderes",
+      "Garantias",
+      "Controle"
+     ]
+    }
+   ],
+   "gaps": [
+    "Constituição rígida, flexível, promulgada, outorgada",
+    "Concepções sociológica, política e jurídica",
+    "Poder constituinte originário e derivado"
+   ],
+   "audit": "Gabarito único E; alternativas de extensão próxima, distratores com diferenças conceituais e sem negativas absolutas em excesso."
+  }
+ },
+ "DBA26-PEN-2.2|1": {
+  "formato": "situacoes",
+  "stem": "Durante investigações conduzidas pela Polícia Civil, foram identificadas três situações juridicamente distintas:\nSituação I: Em fevereiro de 2024, Antônio praticou um crime instantâneo, cuja pena era de reclusão de dois a seis anos. Em março de 2025, uma nova lei manteve a incriminação, mas reduziu a pena para um a quatro anos. Em março de 2026, uma terceira lei revogou a anterior e agravou a pena para quatro a oito anos. O julgamento ocorreu após a entrada em vigor da terceira lei.\nSituação II: Bruno manteve uma pessoa em cárcere privado desde dezembro de 2025 até maio de 2026. Em março de 2026, enquanto ainda persistia a privação da liberdade, entrou em vigor uma lei que aumentou a pena do delito.\nSituação III: Carlos praticou, em abril de 2025, conduta criminalizada por lei temporária cuja vigência estava expressamente delimitada entre janeiro e junho daquele ano. O processo criminal foi julgado somente em 2026, após o encerramento da vigência da norma.\nConsiderando os princípios da aplicação da lei penal no tempo, as disposições do Código Penal e a jurisprudência dos tribunais superiores, assinale a alternativa correta.",
+  "options": {
+   "A": "Na primeira situação, deve prevalecer a lei vigente ao tempo da conduta, ainda que exista lei intermediária mais favorável; na segunda, aplica-se a lei agravadora; na terceira, admite-se a ultratividade da lei temporária.",
+   "B": "Na primeira situação, aplica-se a lei intermediária mais benéfica; na segunda, incide a lei agravadora vigente antes da cessação da permanência; na terceira, a lei temporária permanece aplicável ao fato praticado durante sua vigência.",
+   "C": "Na primeira situação, aplica-se a lei intermediária mais favorável; na segunda, prevalece necessariamente a lei vigente no início da privação da liberdade; na terceira, admite-se a ultratividade da lei temporária.",
+   "D": "Na primeira situação, aplica-se a lei intermediária mais benéfica; na segunda, incide a lei agravadora vigente durante a permanência; na terceira, o encerramento do prazo de vigência da lei temporária impede sua aplicação posterior.",
+   "E": "Na primeira situação, prevalece a lei mais recente, vigente no julgamento; na segunda, aplica-se a lei anterior por força da irretroatividade; na terceira, a lei temporária deixa de alcançar o fato após o término de sua vigência."
+  },
+  "correct": "B",
+  "tag": "Questão - Direito Penal",
+  "difficulty": "Alto",
+  "source_scope": "Item 2.2",
+  "commentary": {
+   "summary": "A questão envolve simultaneamente três fenômenos da sucessão de leis penais: lei intermediária mais benéfica, aplicação de lei penal mais grave aos crimes permanentes e ultratividade da lei temporária.",
+   "alternatives": {
+    "A": {
+     "veredito": "Errada",
+     "titulo": "desconsidera a lei intermediária benéfica",
+     "explicacao": "A lei vigente ao tempo da conduta é, em regra, aplicável, mas pode ser afastada por legislação superveniente mais favorável. A segunda lei, mesmo posteriormente revogada, permanece aplicável ao fato praticado por Antônio, pois é a mais benéfica (CP, art. 2º, parágrafo único)."
+    },
+    "B": {
+     "veredito": "Correta",
+     "titulo": "aplica adequadamente os três institutos",
+     "explicacao": "A lei intermediária beneficia Antônio; a lei mais gravosa alcança o crime permanente de Bruno porque entrou em vigor antes de cessar a permanência (Súmula 711 do STF); e a lei temporária rege o fato de Carlos, praticado durante sua vigência (CP, art. 3º)."
+    },
+    "C": {
+     "veredito": "Errada",
+     "titulo": "confunde início da consumação com cessação da permanência",
+     "explicacao": "O cárcere privado é crime permanente: enquanto a vítima permanece privada da liberdade, a consumação se prolonga. A lei mais grave que entra em vigor durante esse período pode ser aplicada, conforme a Súmula 711 do STF."
+    },
+    "D": {
+     "veredito": "Errada",
+     "titulo": "nega a ultratividade da lei temporária",
+     "explicacao": "O fim do prazo de vigência não torna impuníveis os fatos praticados durante a existência da lei temporária. O art. 3º do Código Penal prevê expressamente sua aplicação posterior."
+    },
+    "E": {
+     "veredito": "Errada",
+     "titulo": "contém três conclusões incompatíveis com as regras aplicáveis",
+     "explicacao": "A lei do julgamento não prevalece por ser a mais recente; a lei agravadora alcança o crime permanente ainda em execução; e o término da lei temporária não impede sua ultratividade."
+    }
+   },
+   "lessons": [
+    {
+     "title": "1. Lei intermediária mais benéfica — Situação I",
+     "blocks": [
+      {
+       "type": "linha_do_tempo",
+       "heading": "Evolução legislativa hipotética",
+       "body": "A Lei B é a mais favorável e se aplica ao fato anterior, embora já esteja revogada no julgamento.",
+       "columns": [],
+       "rows": [],
+       "timeline": [
+        {
+         "marco": "2024",
+         "rotulo": "Lei A",
+         "detalhe": "2 a 6 anos",
+         "tom": "neutro"
+        },
+        {
+         "marco": "2025",
+         "rotulo": "Lei B",
+         "detalhe": "1 a 4 anos",
+         "tom": "favoravel"
+        },
+        {
+         "marco": "2026",
+         "rotulo": "Lei C",
+         "detalhe": "4 a 8 anos",
+         "tom": "desfavoravel"
+        }
+       ]
+      },
+      {
+       "type": "fundamento",
+       "heading": "Retroatividade e ultratividade benéficas",
+       "body": "A doutrina denomina o fenômeno ultratividade da lei intermediária mais benéfica, combinada com a retroatividade favorável em relação à lei do tempo do fato. Fundamento: CF, art. 5º, XL, e CP, art. 2º, parágrafo único — a lei benéfica alcança inclusive fatos decididos por sentença transitada em julgado.",
+       "columns": [],
+       "rows": [],
+       "timeline": []
+      },
+      {
+       "type": "pegadinha",
+       "heading": "",
+       "body": "a lei intermediária não precisa estar vigente na data do julgamento para beneficiar o acusado.",
+       "columns": [],
+       "rows": [],
+       "timeline": []
+      }
+     ]
+    },
+    {
+     "title": "2. Crime permanente e lei penal mais grave — Situação II",
+     "blocks": [
+      {
+       "type": "regra",
+       "heading": "Súmula 711 do STF",
+       "body": "No cárcere privado, a consumação se prolonga enquanto persiste, por vontade do agente, a privação da liberdade. Aplica-se a lei penal mais grave ao crime permanente ou continuado se a sua vigência é anterior à cessação da permanência ou da continuidade.",
+       "columns": [],
+       "rows": [],
+       "timeline": []
+      },
+      {
+       "type": "atencao",
+       "heading": "",
+       "body": "crime permanente e crime instantâneo de efeitos permanentes não são equivalentes.",
+       "columns": [],
+       "rows": [],
+       "timeline": []
+      },
+      {
+       "type": "tabela",
+       "heading": "Permanente × instantâneo de efeitos permanentes",
+       "body": "Uma lei mais grave posterior à consumação do homicídio não incide só porque a morte produz efeitos permanentes.",
+       "columns": [
+        "Crime permanente",
+        "Crime instantâneo de efeitos permanentes"
+       ],
+       "rows": [
+        [
+         "A consumação prolonga-se no tempo",
+         "A consumação ocorre em um momento"
+        ],
+        [
+         "O agente mantém a situação típica",
+         "Os efeitos persistem após a consumação"
+        ],
+        [
+         "Exemplo: cárcere privado",
+         "Exemplo: homicídio consumado"
+        ]
+       ],
+       "timeline": []
+      }
+     ]
+    },
+    {
+     "title": "3. Lei temporária — Situação III",
+     "blocks": [
+      {
+       "type": "distincao",
+       "heading": "Temporária × excepcional",
+       "body": "A lei temporária tem prazo de vigência previamente determinado; a excepcional dura enquanto subsistirem as circunstâncias extraordinárias que a justificam. O art. 3º do CP estabelece a ultratividade de ambas para os fatos praticados durante a vigência, para que a expiração programada não esvazie a incriminação.",
+       "columns": [],
+       "rows": [],
+       "timeline": []
+      },
+      {
+       "type": "atencao",
+       "heading": "",
+       "body": "a ultratividade não imuniza o fato contra toda lei posterior: lei verdadeiramente descriminalizadora ou mais benéfica exige exame próprio, à luz do art. 5º, XL, da CF.",
+       "columns": [],
+       "rows": [],
+       "timeline": []
+      }
+     ]
+    }
+   ],
+   "laws": [
+    {
+     "ref": "CP:2",
+     "diploma": "Código Penal",
+     "dispositivo": "Art. 2º, parágrafo único",
+     "explicacao": "Lei posterior favorável alcança fatos anteriores, inclusive com trânsito em julgado.",
+     "extensao": "parágrafo"
+    },
+    {
+     "ref": "CP:3",
+     "diploma": "Código Penal",
+     "dispositivo": "Art. 3º",
+     "explicacao": "Lei excepcional ou temporária é ultrativa para fatos praticados durante a vigência.",
+     "extensao": "artigo"
+    },
+    {
+     "ref": "CF:5",
+     "diploma": "Constituição Federal",
+     "dispositivo": "Art. 5º, XL",
+     "explicacao": "A lei penal não retroage, salvo para beneficiar o réu.",
+     "extensao": "inciso"
+    }
+   ],
+   "jurisprudence": [
+    {
+     "ref": "SUM-STF-711",
+     "tribunal": "STF",
+     "identificador": "Súmula 711",
+     "data": "",
+     "texto_literal": "",
+     "explicacao": "Lei mais grave alcança crime permanente/continuado se vigente antes de cessar a permanência ou a continuidade.",
+     "url": ""
+    },
+    {
+     "ref": "SUM-STJ-501",
+     "tribunal": "STJ",
+     "identificador": "Súmula 501",
+     "data": "",
+     "texto_literal": "",
+     "explicacao": "Na sucessão de leis, aplica-se integralmente a mais favorável; vedada a combinação de leis.",
+     "url": ""
+    }
+   ],
+   "traps": [
+    "Lei intermediária benéfica vale mesmo revogada antes do julgamento.",
+    "Crime permanente ≠ instantâneo de efeitos permanentes.",
+    "Lei temporária continua aplicável após o fim da vigência."
+   ],
+   "mindmap_titulo": "Aplicação da lei penal no tempo",
+   "mindmap": [
+    {
+     "title": "Lei benéfica",
+     "points": [
+      "Retroage",
+      "Ultrapassa sua revogação",
+      "Alcança coisa julgada"
+     ]
+    },
+    {
+     "title": "Lei prejudicial",
+     "points": [
+      "Não retroage",
+      "Atenção: permanentes e continuados"
+     ]
+    },
+    {
+     "title": "Lei temporária",
+     "points": [
+      "Prazo definido",
+      "Ultratividade legal",
+      "CP, art. 3º"
+     ]
+    },
+    {
+     "title": "Crime permanente",
+     "points": [
+      "Consumação prolongada",
+      "STF, Súmula 711",
+      "Atenção à cessação"
+     ]
+    }
+   ],
+   "gaps": [
+    "Tempo do crime (CP, art. 4º)",
+    "Lugar do crime (CP, art. 6º)",
+    "Territorialidade e extraterritorialidade"
+   ],
+   "auditoria": {
+    "checklist": [
+     "Uma única alternativa correta",
+     "Cinco alternativas juridicamente plausíveis",
+     "Extensão das alternativas equilibrada",
+     "Fundamentação legal e jurisprudencial"
+    ],
+    "cobertura": "Retroatividade benéfica, lei intermediária, ultratividade, crimes permanentes, Súmula 711 e distinções sobre aplicação temporal. Tempo e lugar do crime (arts. 4º e 6º do CP), territorialidade e extraterritorialidade ficam para questões específicas.",
+    "fundamento_edital": "Item 2.2 de Direito Penal — Lei penal no tempo e no espaço"
+   }
+  },
+  "id": "DBA26-PEN-2.2",
+  "round": 1,
+  "origin": "Questão-modelo do professor (estilo AOCP)"
+ }
+}

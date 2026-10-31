@@ -1,0 +1,114 @@
+{
+  "DBA26-PEN-1": {
+    "laws": [
+      {
+        "diploma": "Constituição Federal de 1988",
+        "dispositivo": "Art. 5º, XXXIX",
+        "texto_literal": "XXXIX - não há crime sem lei anterior que o defina, nem pena sem prévia cominação legal;",
+        "explicacao": "Reserva legal e anterioridade da incriminação. O trecho acima corresponde ao inciso XXXIX, não ao art. 5º completo.",
+        "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "status": "conferido",
+        "extensao": "inciso integral",
+        "data_conferencia": "29/10/2026"
+      },
+      {
+        "diploma": "Constituição Federal de 1988",
+        "dispositivo": "Art. 5º, XL",
+        "texto_literal": "XL - a lei penal não retroagirá, salvo para beneficiar o réu;",
+        "explicacao": "Irretroatividade da lei penal gravosa e retroatividade da lei mais benéfica.",
+        "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "status": "conferido",
+        "extensao": "inciso integral",
+        "data_conferencia": "29/10/2026"
+      },
+      {
+        "diploma": "Código Penal — Decreto-Lei 2.848/1940",
+        "dispositivo": "Art. 1º",
+        "texto_literal": "Art. 1º - Não há crime sem lei anterior que o defina. Não há pena sem prévia cominação legal.",
+        "explicacao": "Enuncia a legalidade penal também na legislação ordinária.",
+        "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "status": "conferido",
+        "extensao": "artigo integral",
+        "data_conferencia": "29/10/2026"
+      },
+      {
+        "diploma": "Constituição Federal de 1988",
+        "dispositivo": "Art. 5º, XLV",
+        "texto_literal": "XLV - nenhuma pena passará da pessoa do condenado, podendo a obrigação de reparar o dano e a decretação do perdimento de bens ser, nos termos da lei, estendidas aos sucessores e contra eles executadas, até o limite do valor do patrimônio transferido;",
+        "explicacao": "Pessoalidade da pena. A obrigação de reparar dano e o perdimento patrimonial seguem os limites constitucionais expressos.",
+        "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "status": "conferido",
+        "extensao": "inciso integral",
+        "data_conferencia": "29/10/2026"
+      },
+      {
+        "diploma": "Constituição Federal de 1988",
+        "dispositivo": "Art. 5º, XLVI",
+        "texto_literal": "XLVI - a lei regulará a individualização da pena e adotará, entre outras, as seguintes:\na) privação ou restrição da liberdade;\nb) perda de bens;\nc) multa;\nd) prestação social alternativa;\ne) suspensão ou interdição de direitos;",
+        "explicacao": "Individualização da pena: leitura do inciso completo, incluindo as alíneas. O elenco é exemplificativo, pois o próprio texto usa “entre outras”.",
+        "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "status": "conferido",
+        "extensao": "inciso integral com alíneas",
+        "data_conferencia": "29/10/2026"
+      },
+      {
+        "diploma": "Constituição Federal de 1988",
+        "dispositivo": "Art. 5º, XLVII",
+        "texto_literal": "XLVII - não haverá penas:\na) de morte, salvo em caso de guerra declarada, nos termos do art. 84, XIX;\nb) de caráter perpétuo;\nc) de trabalhos forçados;\nd) de banimento;\ne) cruéis;",
+        "explicacao": "Limites constitucionais relativos à humanidade das penas; a exceção indicada no inciso refere-se à pena de morte em guerra declarada.",
+        "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "status": "conferido",
+        "extensao": "inciso integral com alíneas",
+        "data_conferencia": "29/10/2026"
+      }
+    ],
+    "jurisprudence": [
+      {
+        "tribunal": "STJ",
+        "identificador": "Súmula 599",
+        "data": "20/11/2017 (publicada em 27/11/2017)",
+        "texto_literal": "O princípio da insignificância é inaplicável aos crimes contra a administração pública.",
+        "explicacao": "Regra sumulada relativa a crimes contra a Administração Pública. Atenção aos debates sobre situações excepcionais; a súmula não deve ser descrita de forma inversa.",
+        "url": "https://scon.stj.jus.br/SCON/SearchBRS?b=SUMU&livre=%40NUM%3D599",
+        "status": "conferido",
+        "extensao": "enunciado integral",
+        "data_conferencia": "29/10/2026"
+      },
+      {
+        "tribunal": "STJ",
+        "identificador": "REsp 2.258.036/DF • Informativo 888",
+        "data": "22/04/2026 (DJe 27/04/2026)",
+        "explicacao": "A Sexta Turma considerou inaplicável a insignificância à corrupção passiva majorada em discussão envolvendo vantagem de pequeno valor. Esta é uma síntese didática da orientação, não transcrição integral da ementa.",
+        "url": "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?ativa=2",
+        "status": "conferido",
+        "extensao": "síntese conferida",
+        "data_conferencia": "29/10/2026"
+      }
+    ]
+  },
+  "DBA26-CPP-1": {
+    "laws": [
+      {
+        "diploma": "Constituição Federal de 1988",
+        "dispositivo": "Art. 5º, LIV",
+        "texto_literal": "LIV - ninguém será privado da liberdade ou de seus bens sem o devido processo legal;",
+        "explicacao": "Garantia constitucional do devido processo legal.",
+        "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "status": "conferido",
+        "extensao": "inciso integral",
+        "data_conferencia": "29/10/2026"
+      },
+      {
+        "diploma": "Constituição Federal de 1988",
+        "dispositivo": "Art. 5º, LV",
+        "texto_literal": "LV - aos litigantes, em processo judicial ou administrativo, e aos acusados em geral são assegurados o contraditório e ampla defesa, com os meios e recursos a ela inerentes;",
+        "explicacao": "Contraditório e ampla defesa como garantias estruturantes.",
+        "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "status": "conferido",
+        "extensao": "inciso integral",
+        "data_conferencia": "29/10/2026"
+      }
+    ],
+    "jurisprudence": []
+  }
+}

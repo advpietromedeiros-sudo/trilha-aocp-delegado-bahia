@@ -1,0 +1,15 @@
+.env
+cache/*.json
+cache/*.tmp
+__pycache__/
+node_modules/
+storybook-static/
+.scratch/
+*.log
+
+# Derivados de material de terceiros: ficam só no disco, fora do Git.
+# Decisão do titular de 31/10/2026 — ver docs/DECISOES.md (D-002) e docs/PROCEDENCIA.md.
+assets/fontes_paginas.json
+assets/lei_seca_material.json
+assets/juris_aocp.json
+assets/exemplo_aocp.json

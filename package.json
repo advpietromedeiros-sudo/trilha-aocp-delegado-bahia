@@ -1,0 +1,16 @@
+{
+  "name": "trilha-aocp-delegado-bahia",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Trilha de estudo AOCP — Delegado PC-BA 2026. O app é o index.html; este package.json existe só para o Storybook.",
+  "type": "module",
+  "scripts": {
+    "storybook": "storybook dev -p 6006 --no-open",
+    "build-storybook": "storybook build"
+  },
+  "devDependencies": {
+    "@storybook/html-vite": "^10.6.5",
+    "storybook": "^10.6.5",
+    "vite": "^8.3.5"
+  }
+}
