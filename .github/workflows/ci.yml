@@ -36,6 +36,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+      # A porta "defeitos corrigidos não voltam" confere a sintaxe do <script> com `node --check`;
+      # sem Node ela sairia "pulada" — e porta pulada não é verde (REGRA CINCO).
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
       - name: Python (ruff)
         run: pip install ruff && ruff check docs .claude/hooks
       - name: Portão

@@ -36,6 +36,10 @@ PORTAS: list[tuple[str, list[str], str]] = [
      "entrada nova ancorada no início da seguinte (§F62)"),
     ("o verificador de sequência acusa", [sys.executable, "docs/verificar_sequencia.py", "--autoteste"],
      "verificador que nunca falha passa por controle para sempre"),
+    ("index.html: defeitos corrigidos não voltam", [sys.executable, "docs/verificar_regressoes.py"],
+     "Refazer apagando a resposta sem rastro; Ctrl+C marcando a alternativa C (31/10/2026)"),
+    ("o verificador de regressões acusa", [sys.executable, "docs/verificar_regressoes.py", "--autoteste"],
+     "verificador que nunca falha passa por controle para sempre"),
 ]
 
 # Régua de segredo (31/10/2026): exige VALOR de 20+ caracteres depois do `=` — o LEIA_PRIMEIRO cita
