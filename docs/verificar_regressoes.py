@@ -50,10 +50,23 @@ def _r03(js: str) -> bool:
     return "state.attempts" in corpo and "BY_ID[k.split('|')[0]]" in corpo
 
 
+def _r04(js: str) -> bool:
+    i = js.find("async function requestAndPoll")
+    corpo = js[i : i + 4000] if i >= 0 else ""
+    # Sem o teto fixo de 100 consultas; com o "missing" tratado e um laço por vez.
+    return (
+        bool(corpo)
+        and "n<100" not in corpo
+        and "result.status==='missing'" in corpo
+        and "token!==pollToken" in corpo
+    )
+
+
 ASSERTIVAS = [
     ("R-01", "Refazer guarda a tentativa antes de apagar a resposta", _r01),
     ("R-02", "atalhos A–E ignoram Ctrl/Cmd/Alt e só valem na aba Estudar", _r02),
     ("R-03", "caderno de erros mostra as tentativas refeitas, sem quebrar com item inexistente", _r03),
+    ("R-04", "a tela espera enquanto o servidor gera, encerra em 'missing', um laço por vez", _r04),
 ]
 
 
@@ -68,18 +81,25 @@ def _autoteste() -> int:
         "if(!e.ctrlKey&&!e.metaKey&&!e.altKey&&state.view==='study'&&'ABCDE'.includes(letter)){}"
         "function renderErrorBook(){const r=Object.entries(state.attempts||{})"
         ".filter(([k])=>BY_ID[k.split('|')[0]]);}"
+        "async function requestAndPoll(id){const token=++pollToken;while(1){"
+        "if(token!==pollToken)return;if(result.status==='missing'){return;}}}"
     )
     casos = [
-        ("código corrigido passa", bom, True, True, True),
-        ("Refazer sem guardar a tentativa acusa", bom.replace(".push(x)", ""), False, True, True),
-        ("atalho sem a guarda de Ctrl acusa", bom.replace("!e.ctrlKey&&", ""), True, False, True),
-        ("atalho sem a guarda da aba acusa", bom.replace("&&state.view==='study'", ""), True, False, True),
+        ("código corrigido passa", bom, True, True, True, True),
+        ("Refazer sem guardar a tentativa acusa", bom.replace(".push(x)", ""), False, True, True, True),
+        ("atalho sem a guarda de Ctrl acusa", bom.replace("!e.ctrlKey&&", ""), True, False, True, True),
+        ("atalho sem a guarda da aba acusa",
+         bom.replace("&&state.view==='study'", ""), True, False, True, True),
         ("caderno sem o filtro de item inexistente acusa",
-         bom.replace(".filter(([k])=>BY_ID[k.split('|')[0]])", ""), True, True, False),
+         bom.replace(".filter(([k])=>BY_ID[k.split('|')[0]])", ""), True, True, False, True),
+        ("espera com teto de 100 consultas acusa",
+         bom.replace("while(1){", "for(let n=0;n<100;n++){"), True, True, True, False),
+        ("espera sem tratar 'missing' acusa",
+         bom.replace("result.status==='missing'", "false"), True, True, True, False),
     ]
     falhas = 0
-    for desc, js, r01, r02, r03 in casos:
-        ok = _r01(js) == r01 and _r02(js) == r02 and _r03(js) == r03
+    for desc, js, r01, r02, r03, r04 in casos:
+        ok = _r01(js) == r01 and _r02(js) == r02 and _r03(js) == r03 and _r04(js) == r04
         falhas += not ok
         print(f"  {'✅' if ok else '❌'} {desc}")
     print("❌ autoteste com falha" if falhas else f"✅ autoteste verde — {len(casos)} casos")

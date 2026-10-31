@@ -22,12 +22,17 @@
 - ✅ **31/10/2026, 17h37 — contraste e foco aplicados** (D-003): bloco
   `<style id="d003-contraste-foco">` no `index.html`; story em `Aprovados/Contraste e foco (D-003)`.
 
+- ✅ **31/10/2026, 17h42 — espera pela geração corrigida** (R-04): a tela espera enquanto o
+  servidor disser `generating` (teto de 25 min), encerra na hora em `missing`, mostra "Gerando há
+  X min Y s" (anunciado ao leitor de tela) e mantém um laço por vez. Provado por comportamento:
+  `docs/testar_espera.mjs` roda a função **real** contra servidor simulado — 3 de 3 no código novo,
+  0 de 3 no antigo.
+
 ## Próximas tarefas, em ordem
 
-1. Espera da geração: o polling da tela (~240 s) é menor que a geração do servidor.
-2. Servidor: `X-Frame-Options`/CSP `frame-ancestors`, `do_HEAD` bloqueado, validar `Content-Length`.
-3. Stories: alternativa com estado acessível, modal com foco, menu lateral no celular.
-4. README: `.env.exemplo` inexistente; seção "Arquivos" desatualizada.
+1. Servidor: `X-Frame-Options`/CSP `frame-ancestors`, `do_HEAD` bloqueado, validar `Content-Length`.
+2. Stories: alternativa com estado acessível, modal com foco, menu lateral no celular.
+3. README: `.env.exemplo` inexistente; seção "Arquivos" desatualizada.
 
 ## O que fica rodando
 

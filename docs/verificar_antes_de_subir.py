@@ -9,6 +9,7 @@ Uso: python docs/verificar_antes_de_subir.py
 
 from __future__ import annotations
 
+import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -40,6 +41,8 @@ PORTAS: list[tuple[str, list[str], str]] = [
      "Refazer apagando a resposta sem rastro; Ctrl+C marcando a alternativa C (31/10/2026)"),
     ("o verificador de regressões acusa", [sys.executable, "docs/verificar_regressoes.py", "--autoteste"],
      "verificador que nunca falha passa por controle para sempre"),
+    ("espera pela geração: comportamento", ["node", "docs/testar_espera.mjs"],
+     "tela desistindo aos 240 s com o servidor ainda gerando; 100 consultas à toa em 'missing'"),
 ]
 
 # Régua de segredo (31/10/2026): exige VALOR de 20+ caracteres depois do `=` — o LEIA_PRIMEIRO cita
@@ -92,6 +95,10 @@ def main() -> int:
         return _segredo()
     falhas, puladas = [], []
     for nome, comando, motivo in PORTAS:
+        if comando[0] == "node" and shutil.which("node") is None:
+            puladas.append(nome)
+            print(f"  [PUL] {nome} — Node não encontrado: pulada, e isto não é verde")
+            continue
         r = subprocess.run(comando, cwd=RAIZ, capture_output=True, text=True, encoding="utf-8")
         if r.returncode == 0:
             print(f"  [OK ] {nome}")

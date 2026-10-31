@@ -24,6 +24,9 @@ RAIZ = Path(__file__).resolve().parent.parent
 VIGIADOS: list[tuple[str, str, str, bool]] = [
     ("0 Readme First/0 HARNESS.md", r"^- \*\*R(\d+) ", "regras do projeto R<n>", True),
     ("docs/DECISOES.md", r"^### D-(\d+) ", "decisões tomadas D-<n>", False),
+    # 💥 31/10/2026: duas vezes na mesma tarefa a lista de tarefas ficou 1, 4, 5, 6 e depois 1, 3, 4
+    # — renumerou-se só a primeira linha. §F47: consertar o caso não conserta a classe.
+    ("0 Readme First/FAROL.md", r"^(\d+)\. ", "tarefas numeradas do FAROL", True),
 ]
 
 
