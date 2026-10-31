@@ -10,6 +10,9 @@
 - **Portas:** app em `127.0.0.1:8765` (sobe com `iniciar_windows.bat`, só quando o titular for
   estudar) · **Storybook em `localhost:6006`** (`npm run storybook`).
 - **Containers:** nenhum.
+- 🏛️ **Destino:** será uma funcionalidade do portal Pietro Medeiros (`../pietromedeiros-portal`),
+  por ordem do titular de 31/10/2026 — ver o `CLAUDE.md` da pasta-mãe. Decisão de arquitetura aqui
+  pergunta *"isso encaixa no portal?"*.
 - **Remoto:** `advpietromedeiros-sudo/trilha-aocp-delegado-bahia`, **privado** (D-001).
 - 🔴 **`.env` tem a chave de API — não se lê** (§F59). O Storybook não serve pasta do disco por
   isso: as stories leem o `index.html` como texto.
