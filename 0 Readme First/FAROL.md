@@ -33,6 +33,11 @@
 1. Servidor: `X-Frame-Options`/CSP `frame-ancestors`, `do_HEAD` bloqueado, validar `Content-Length`.
 2. Stories: alternativa com estado acessível, modal com foco, menu lateral no celular.
 3. README: `.env.exemplo` inexistente; seção "Arquivos" desatualizada.
+4. **Blocos de 30 questões** — viável (`docs/VIABILIDADE_BLOCOS_30.md`, 31/10/2026). Aguarda 3
+   decisões do titular: baixa por correlação automática ou confirmada; arquivo acumulado só no app
+   ou também HTML/PDF; manter a auditoria dupla. Primeiro passo técnico: indexar o acervo grande da
+   pasta DELEGADO BA (7.034 páginas, somadas em 31/10/2026, que hoje não entram na geração — sem
+   contar os 42 resumos dentro dos ZIPs PCPR).
 
 ## O que fica rodando
 
