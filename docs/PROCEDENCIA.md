@@ -17,6 +17,27 @@
 | `assets/juris_aocp.json` | Precedentes compilados de material de estudo | **não** (D-002) | sem autorização registrada |
 | `assets/exemplo_aocp.json` | Exemplo de questão no padrão da banca | **não** (D-002) | sem autorização registrada |
 
+## Ampliação do índice `assets/fontes_paginas.json` (31/10/2026, 19h38)
+
+Pedido do titular, 31/10/2026, textual: *"No Desktop tem a pasta DELEGADO BA... TEM UNS MATERIAIS
+NOMEADOS COMO DO PARANÁ MAS O CONTEÚDO É O DA BA TAMBÉM... pode usar"*. Indexados por
+`ferramentas/ampliar_acervo.py`, **só na máquina do titular** — o índice segue fora do Git (D-002).
+O texto das páginas vai, em trechos, para a API de IA escolhida no momento da geração (como já
+acontecia com o índice anterior; ver `LEIA_PRIMEIRO.md`, "Privacidade e custos").
+
+| material (pasta `Área de Trabalho/DELEGADO BA`) | páginas indexadas | uso |
+| --- | ---: | --- |
+| 9 resumos de curso por disciplina ("Resumo Destacado") | 5.124 | local, autorizado pelo titular |
+| Informativos 2023–2026, Súmulas STF/STJ/TSE, Teses RG, Repetitivos (compilações de curso) | 1.790 | local, autorizado pelo titular |
+| ZIP "PCPR-1": 26 resumos de leis extravagantes | 1.136 | local, autorizado pelo titular |
+| ZIP "PCPR-2": 16 resumos de Penal, parte geral (PCPR-3 e 4 são cópia e foram pulados) | 562 | local, autorizado pelo titular |
+
+Total acrescentado: **8.612 páginas** (5.124 + 1.790 + 1.136 + 562, somado pelo relatório da
+ferramenta); índice de 744 → **9.356**. A marca d'água com o CPF do
+licenciado **não entra** no índice (mesmo filtro do `construir_base.py`; conferido: 0 linhas com
+padrão de CPF). ⚠️ Os Informativos 2026 podem trazer julgados posteriores ao marco do edital
+(29/07/2026); o servidor não os marca como posteriores — o prompt manda não aplicar norma posterior.
+
 ⚠️ **Pendência:** o `index.html` embute `items-data` e `official-curated` (cópias de
 `items.json` e `acervo_oficial_curado.json`) e `seed-data`. Medido em 31/10/2026, por amostra de
 até 50 trechos longos de cada arquivo fora do Git: `fontes_paginas` 0, `juris_aocp` 0 e

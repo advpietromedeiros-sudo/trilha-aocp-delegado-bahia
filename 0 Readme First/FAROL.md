@@ -35,9 +35,12 @@
 3. README: `.env.exemplo` inexistente; seção "Arquivos" desatualizada.
 4. **Blocos de 30 questões** — viável (`docs/VIABILIDADE_BLOCOS_30.md`, 31/10/2026). Aguarda 3
    decisões do titular: baixa por correlação automática ou confirmada; arquivo acumulado só no app
-   ou também HTML/PDF; manter a auditoria dupla. Primeiro passo técnico: indexar o acervo grande da
-   pasta DELEGADO BA (7.034 páginas, somadas em 31/10/2026, que hoje não entram na geração — sem
-   contar os 42 resumos dentro dos ZIPs PCPR).
+   ou também HTML/PDF; manter a auditoria dupla.
+   - ✅ **31/10/2026, 19h38 — acervo grande indexado** (`ferramentas/ampliar_acervo.py`): índice de
+     744 → **9.356 páginas** (+8.612, inclusive os 42 resumos dos ZIPs PCPR; PCPR-3 e 4 eram cópia).
+     ⚠️ Camada: o **arquivo** do índice mudou; o servidor só usa o índice novo ao ser **reiniciado**.
+   - ⏳ Falta: indexar as **provas AOCP de Direito e de Português** (Downloads, AOCP 01–06 e
+     PORTUGUÊS 01–08 + Delegado) — hoje só as de Informática e Raciocínio Lógico estão no índice.
 
 ## O que fica rodando
 
