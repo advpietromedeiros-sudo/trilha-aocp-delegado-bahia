@@ -2,9 +2,14 @@
 
 > Estado, tarefas e o que ficou rodando. Atualizado a cada ~15 min de trabalho e no fechamento.
 
-**Última atualização:** 31/10/2026, 17h37.
+**Última atualização:** 01/11/2026, 15h35.
 
 ## Estado
+
+- 🆕 **01/11/2026, 15h33 — índice ampliado com Constitucional, Administrativo e Ambiental** (D-009):
+  11.131 páginas (eram 9.356); 0 CPF no índice. ⚠️ **Camada:** gravado no **disco**; o servidor que
+  estava aberto (desde 08h54, porta 8765) carrega o índice só na partida — **reiniciar o servidor**
+  para as matérias novas valerem. A Trilha é **estudo pessoal, fora do portal** (D-009).
 
 - Git iniciado em 31/10/2026; remoto privado (D-001). Governança do roteiro de fundação adotada
   (harness, hooks, portão, CI) — CI verde no commit `4794a16`.

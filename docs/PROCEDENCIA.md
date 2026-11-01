@@ -44,3 +44,29 @@ até 50 trechos longos de cada arquivo fora do Git: `fontes_paginas` 0, `juris_a
 `exemplo_aocp` 0 trechos no HTML; `lei_seca_material` 18 de 50 — todos **URLs oficiais do
 Planalto** presentes também em `official-curated`, não texto de terceiro. Amostra prova o que
 apareceu, não o que não está (§F20): conferir de novo antes de cada mudança no bloco de dados.
+
+## Apostilas atualizadas por tema (01/11/2026, 15h33)
+
+Autorização do titular: D-009 (uso só nesta máquina, para estudo pessoal). Pasta
+`Repositório/DELEGADO BA/` — apostilas de curso preparatório de terceiro, "Atualizado em 10/09/26",
+material pago licenciado a outra pessoa, com marca d'água de identificação. Índice **local e fora do
+Git** (D-002), como o restante.
+
+| subpasta | PDFs | páginas lidas → indexadas | disciplina no índice |
+| --- | ---: | ---: | --- |
+| `DIREITO CONSTITUCIONAL` | 30 | → 796 | DIREITO CONSTITUCIONAL |
+| `DIREITO ADMINISTRATIVO` | 19 | → 687 | DIREITO ADMINISTRATIVO |
+| `DIREITO AMBIENTAL` | 7 | → 292 | DIREITO AMBIENTAL |
+
+Total: 56 PDFs, 1.887 páginas lidas, **1.775 indexadas** (as de menos de 120 caracteres ficam de fora,
+mesma regra de sempre). Índice: 9.356 → **11.131** páginas (744 + 10.387, somado pela ferramenta).
+
+**Dado pessoal da marca d'água — medido antes de gravar:** o texto cru das 1.887 páginas tem 3.666
+linhas de marca d'água com CPF (controle: o teste enxerga o dado); depois do filtro, **0** CPF, **0**
+ocorrências do nome do licenciado e **0** e-mails. Conferido de novo no índice inteiro depois de
+gravar: **0** número de CPF e **0** rodapé "Material protegido". O nome, o CPF e o e-mail do licenciado
+**não foram escritos** em nenhum arquivo nem no chat. A ferramenta ganhou uma trava que recusa gravar
+se o número de CPF ou o rodapé escaparem, com `--autoteste`.
+
+⚠️ Material atualizado em 10/09/2026 pode trazer regra posterior ao marco do edital (29/07/2026); o
+prompt do servidor já manda não aplicar norma posterior.

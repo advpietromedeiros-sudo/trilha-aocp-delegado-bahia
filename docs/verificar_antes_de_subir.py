@@ -41,6 +41,8 @@ PORTAS: list[tuple[str, list[str], str]] = [
      "Refazer apagando a resposta sem rastro; Ctrl+C marcando a alternativa C (31/10/2026)"),
     ("o verificador de regressões acusa", [sys.executable, "docs/verificar_regressoes.py", "--autoteste"],
      "verificador que nunca falha passa por controle para sempre"),
+    ("a trava de CPF do índice acusa", [sys.executable, "ferramentas/ampliar_acervo.py", "--autoteste"],
+     "CPF do licenciado no índice; e a 1ª trava barrava a PALAVRA 'CPF' em texto jurídico (01/11/2026)"),
     ("espera pela geração: comportamento", ["node", "docs/testar_espera.mjs"],
      "tela desistindo aos 240 s com o servidor ainda gerando; 100 consultas à toa em 'missing'"),
     ("servidor: geração medida, bloco e histórico", [sys.executable, "docs/testar_servidor.py"],

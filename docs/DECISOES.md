@@ -77,3 +77,19 @@ o que vai mudar são os comentários"*.
   29/10 era "ver a letra da lei da questão".
 - As questões já geradas são **convertidas** (1 chamada ao modelo por questão, sobre o comentário
   existente); a aula antiga fica guardada no arquivo em `aula_original` (§F17).
+
+### D-009 — Trilha é estudo pessoal, local; materiais novos entram no índice (01/11/2026, titular)
+
+Ordem do titular, 01/11/2026, textual: *"ISSO SÓ PARA MINHA MAQUINA NÃO IRÃO PARA PORTAL DO PROFESSOR...
+ESSA TRILHA AOCP É PARA UM ESTUDO QUE ESTOU FAZENDO PARA UMA PROVA. O PORTAL DO PROFESSOR SERÁ OUTRA
+COISA... PODE ATÉ COLOCAR TODO ESSE CONTEÚDO DENTRO DA PASTA DELEGADO BA E COLOCAR ESSA PASTA DENTRO DO
+REPOSITÓRIO"*.
+
+- A Trilha **não** é funcionalidade do portal. ⚠️ Divergência registrada, não apagada: o `CLAUDE.md` da
+  pasta mãe (31/10/2026) diz que todo app da máquina vai para o portal; para a Trilha vence esta ordem,
+  mais nova e específica.
+- A pasta `DELEGADO BA` foi **copiada** de `OneDrive/Área de Trabalho/` para `Repositório/DELEGADO BA`
+  (34 de 34 arquivos com SHA-256 igual). A original **ficou no OneDrive** — mover apagaria a cópia da
+  nuvem; apagar de lá é decisão do titular. As pastas `DIREITO CONSTITUCIONAL` (30 PDFs),
+  `DIREITO ADMINISTRATIVO` (19) e `DIREITO AMBIENTAL` (7) foram movidas para dentro dela.
+- O `ferramentas/ampliar_acervo.py` passou a ler essa pasta e as três subpastas (ver PROCEDÊNCIA).

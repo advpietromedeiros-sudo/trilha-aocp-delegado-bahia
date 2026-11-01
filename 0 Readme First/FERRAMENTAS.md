@@ -11,7 +11,7 @@
 | `python docs/verificar_antes_de_subir.py` | o portão: todas as portas |
 | `python .claude/hooks/testar_guarda.py` | um caso que recusa e um que passa por regra da guarda |
 | `gh run list --limit 3` | estado da CI |
-| `python ferramentas/ampliar_acervo.py [pasta] [--simular]` | acrescenta PDFs da pasta DELEGADO BA ao índice de busca (aditivo; guarda cópia do índice anterior em `.scratch/`) |
+| `python ferramentas/ampliar_acervo.py [pasta] [--simular] [--autoteste]` | acrescenta ao índice de busca os PDFs da pasta `Repositório/DELEGADO BA` (padrão desde 01/11/2026) e das subpastas DIREITO CONSTITUCIONAL, ADMINISTRATIVO e AMBIENTAL (aditivo; guarda cópia do índice anterior em `.scratch/`; recusa gravar se o CPF da marca d'água escapar; `--autoteste` prova a trava) |
 | `python docs/testar_servidor.py` | servidor dos blocos com API simulada (sem gastar e sem ler o `.env`) |
 | `node docs/testar_blocos.mjs` / `node docs/testar_espera.mjs` | comportamento real do script da tela, com servidor simulado |
 | `node docs/testar_pagina.cjs` | a página real carrega sem erro de JavaScript (jsdom) |

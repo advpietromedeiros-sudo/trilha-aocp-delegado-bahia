@@ -36,7 +36,9 @@ from datetime import datetime
 
 RAIZ = pathlib.Path(__file__).resolve().parent.parent
 INDICE = RAIZ / "assets" / "fontes_paginas.json"
-PADRAO = pathlib.Path.home() / "OneDrive" / "Área de Trabalho" / "DELEGADO BA"
+# Desde 01/11/2026 a pasta mora no Repositório, ao lado deste projeto (ordem do titular; antes:
+# OneDrive/Área de Trabalho/DELEGADO BA, cuja cópia original ficou lá).
+PADRAO = RAIZ.parent / "DELEGADO BA"
 
 # Disciplinas com o nome EXATO do items.json (o servidor filtra por igualdade).
 PEN, PP = "DIREITO PENAL", "DIREITO PROCESSUAL PENAL"
@@ -71,8 +73,41 @@ ZIPS: dict[str, str] = {
     "RESUMO DESTACADO-DELEGADO PCPR-4.pdf": PEN,
 }
 
+# Subpasta inteira -> disciplina (01/11/2026: apostilas atualizadas em 10/09/2026, por tema).
+PASTAS: dict[str, str] = {
+    "DIREITO CONSTITUCIONAL": CON,
+    "DIREITO ADMINISTRATIVO": ADM,
+    "DIREITO AMBIENTAL": "DIREITO AMBIENTAL",
+}
+
 # O MESMO filtro do construir_base.py: linha com 11 dígitos seguidos ou CPF formatado sai.
 WATERMARK = re.compile(r"^.*\b\d{11}\b.*$|^.*\d{3}\.\d{3}\.\d{3}-\d{2}.*$")
+
+
+# O que identifica o licenciado: o NÚMERO do CPF e o rodapé do curso. A PALAVRA "CPF" não: ela aparece em
+# texto jurídico ("inscrição regular no CPF") — 10 páginas assim barraram a 1ª versão da trava (01/11/2026).
+VAZA = re.compile(r"\d{3}\.\d{3}\.\d{3}-\d{2}|\b\d{11}\b|Material protegido\s*-", re.I)
+
+
+def vazamento(texto: str) -> bool:
+    return bool(VAZA.search(texto))
+
+
+def autoteste() -> int:
+    casos = [  # (texto, tem de acusar?)
+        ("Material protegido - FULANO DE TAL (CPF: 123.456.789-09) - x@y.com", True),
+        ("FULANO DE TAL - CPF: 12345678909", True),
+        ("exige a comprovação de inscrição regular no CPF ou no CNPJ", False),
+        ("Art. 37. A administração pública direta e indireta", False),
+    ]
+    erradas = [t for t, deve in casos if vazamento(t) != deve]
+    filtro = [t for t, deve in casos[:2] if not WATERMARK.match(t)]
+    for t in erradas:
+        print(f"❌ trava errou em: {t[:50]}")
+    for t in filtro:
+        print(f"❌ filtro de marca d'água deixou passar: {t[:50]}")
+    print("✅ autoteste: a trava acusa o rodapé plantado e deixa passar o texto jurídico" if not (erradas or filtro) else "")
+    return 1 if (erradas or filtro) else 0
 
 
 def _pdftotext() -> str:
@@ -103,6 +138,8 @@ def linhas(rotulo: str, disc: str, pags: list[str]) -> list[dict]:
 
 def main() -> int:
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")  # §A7
+    if "--autoteste" in sys.argv:
+        return autoteste()
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     simular = "--simular" in sys.argv
     pasta = pathlib.Path(args[0]) if args else PADRAO
@@ -150,6 +187,26 @@ def main() -> int:
                     novas += rows
                     trilha.append({"arquivo": rotulo, "paginas_lidas": len(pags), "indexadas": len(rows)})
                 print(f"  ✅ ZIP {zipnome}: {len(membros)} PDFs")
+
+    for sub, disc in PASTAS.items():
+        d = pasta / sub
+        if not d.is_dir():
+            trilha.append({"arquivo": sub + "/", "situacao": "AUSENTE"})
+            print(f"  ⚠️ subpasta ausente: {sub}")
+            continue
+        for f in sorted(d.glob("*.pdf")):
+            pags = paginas(f, exe)
+            rotulo = f"{sub} › {f.name}"
+            rows = linhas(rotulo, disc, pags)
+            novas += rows
+            trilha.append({"arquivo": rotulo, "paginas_lidas": len(pags), "indexadas": len(rows)})
+        print(f"  ✅ {sub}: {sum(1 for _ in d.glob('*.pdf'))} PDFs")
+
+    # trava: dado pessoal da marca d'água não grava, nem que o formato do curso mude
+    vazou = [r["file"] for r in novas if vazamento(r["text"])]
+    if vazou:
+        print(f"❌ {len(vazou)} página(s) com CPF depois do filtro (ex.: {vazou[0]}); nada foi gravado.")
+        return 1
 
     atual = json.loads(INDICE.read_text("utf8")) if INDICE.exists() else []
     rotulos_novos = {r["file"] for r in novas}
