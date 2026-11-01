@@ -93,3 +93,27 @@ REPOSITÓRIO"*.
   nuvem; apagar de lá é decisão do titular. As pastas `DIREITO CONSTITUCIONAL` (30 PDFs),
   `DIREITO ADMINISTRATIVO` (19) e `DIREITO AMBIENTAL` (7) foram movidas para dentro dela.
 - O `ferramentas/ampliar_acervo.py` passou a ler essa pasta e as três subpastas (ver PROCEDÊNCIA).
+
+### D-010 — Montar o bloco por disciplina e assunto; revisão rápida C/E; letra da lei (01/11/2026, titular)
+
+Ordem do titular, 01/11/2026, textual: *"queria que ao gerar ali 30 questões eu tivesse um local para
+escolher a disciplina, o assunto e se aquele assunto eu quero revisar no formato certo e errado com os
+comentários no mesmo padrão das objetivas ..pq tem temas que eu ja estudei bastante e quero passar mais
+rápido... outros não eu preciso estudar mais... A ideia é passar por todos os pontos do edital e deixar o
+conhecimento horizontalizado. Na verdade em todas as disciplinas a AOCP gosta muito de detalhes das
+legislalção aplicada. Prazos... qualificadoras, aumento de pena..."*
+
+- Painel de blocos ganha **🎯 Escolher disciplinas e assuntos**: cada ponto do edital fica em
+  **Objetiva** (padrão), **C/E rápido** ou **Fora do bloco**; dá para mudar a disciplina inteira de uma vez.
+  As escolhas ficam em `state.modos` (navegador e backup JSON).
+- O bloco **intercala as disciplinas** por padrão (um ponto de cada por vez: estudo horizontal); a caixa
+  "Intercalar" volta à ordem sequencial da trilha.
+- **Revisão C/E** (servidor v10): 12 a 20 itens Certo/Errado do ponto, ao menos metade de lei seca quando
+  há lei, item errado troca UM detalhe (prazo, fração, pena, qualificadora, majorante, competência…);
+  cada item tem **título curto no padrão das alternativas** + comentário + fundamento; mesma base local
+  (lei preenchida pelo servidor) e **mesma auditoria dupla** (D-007). Placar: acerto com **70%** ou mais
+  (leitura da sessão, a ajustar se o titular quiser outro corte).
+- O prompt da banca passou a exigir o **detalhe da letra da lei em todas as disciplinas** (prazos,
+  quóruns, penas, qualificadoras, majorantes e minorantes com frações exatas, exceções, "poderá" × "deverá").
+- ⚠️ Limite: a escolha vale para pontos **ainda não gerados**. O que já está pronto no cache (ou no banco
+  inicial) não é gerado de novo — regerar gasta API e é decisão do titular, ponto a ponto.

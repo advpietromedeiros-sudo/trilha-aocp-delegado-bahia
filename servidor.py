@@ -14,7 +14,7 @@ from __future__ import annotations
 import concurrent.futures, http.server, json, math, os, pathlib, re, sys, threading, time, unicodedata, urllib.error, urllib.parse, urllib.request, webbrowser
 from collections import Counter
 
-RELEASE = '2026.10.31-v9-certo-errado'
+RELEASE = '2026.11.01-v10-revisao-ce'
 ROOT = pathlib.Path(__file__).resolve().parent
 ASSETS = ROOT / 'assets'
 CACHE = ROOT / 'cache'; CACHE.mkdir(exist_ok=True)
@@ -532,6 +532,7 @@ def fetch_sources(item):
 SYS = """Você é a banca elaboradora de uma prova de DELEGADO DE POLÍCIA CIVIL no estilo do Instituto AOCP (concurso PC-BA, Edital SAEB 02/2026). Escreva em português do Brasil, com rigor técnico e linguagem de prova — enxuta, impessoal, sem floreios.
 MARCO NORMATIVO: Edital publicado em 29/07/2026 (retificado em 16/09/2026). Não aplique leis posteriores a essa data, salvo exceção expressa do Anexo I. Nunca invente número de processo, tese, citação, estatística ou fonte.
 BASE LOCAL: o pedido traz 'dispositivos_da_base' (lei seca com 'ref' SIGLA:ARTIGO) e 'precedentes_da_base' (súmulas, teses de RG e julgados cobrados em provas, com 'ref'). A AOCP cobra literalidade: construa a questão sobre a redação desses dispositivos/precedentes quando pertinentes ao ponto do edital. CAIXA ALTA no material é só grifo didático.
+LETRA DA LEI EM TODAS AS DISCIPLINAS (titular, 01/11/2026): a AOCP cobra o DETALHE da legislação aplicada — prazos (número, unidade, termo inicial), quóruns, competências, legitimados, penas (reclusão × detenção, mínimo e máximo), qualificadoras, causas de aumento e de diminuição (frações exatas), requisitos, exceções e vedações expressas, "poderá" × "deverá". Em Civil, Empresarial, Processo Civil, Ambiental e Tributário, a questão gira sobre a literalidade dos dispositivos; nas demais, o caso prático se resolve por um detalhe legal preciso. Distratores trocam UM desses detalhes.
 
 === A QUESTÃO (estilo AOCP) ===
 1. Escolha UM formato em 'formato' e varie entre as rodadas:
@@ -579,13 +580,13 @@ def tem_fonte(c) -> bool:
     return bool(isinstance(c, dict) and (c.get('laws') or c.get('jurisprudence')))
 
 
-def validar_ce(itens, exige_tipos=True) -> str | None:
+def validar_ce(itens, exige_tipos=True, minimo=8, maximo=15, min_cada=3) -> str | None:
     """Os itens Certo/Errado: 8 a 15, com C e E (ao menos 3 de cada) e, se exige_tipos, ao menos 2 dos 3 tipos.
 
     💥 31/10/2026: o ponto CON-2 (perspectivas sociológica, política e jurídica da Constituição) não tem artigo
     nem precedente — exigir 2 tipos ali obrigava a IA a INVENTAR fonte, e ela, certa, recusou 4 vezes. Entre
     cobrir os três tipos e não inventar, vence não inventar (REGRA ZERO): sem fonte no comentário, só doutrina."""
-    if not isinstance(itens, list) or not 8 <= len(itens) <= 15: return 'Certo/Errado: são de 8 a 15 itens.'
+    if not isinstance(itens, list) or not minimo <= len(itens) <= maximo: return f'Certo/Errado: são de {minimo} a {maximo} itens.'
     for n, it in enumerate(itens, 1):
         if not isinstance(it, dict): return f'Certo/Errado: item {n} malformado.'
         if it.get('gabarito') not in ('C', 'E'): return f'Certo/Errado: item {n} sem gabarito C ou E.'
@@ -593,7 +594,7 @@ def validar_ce(itens, exige_tipos=True) -> str | None:
         if len(str(it.get('afirmacao', ''))) < 40: return f'Certo/Errado: afirmação {n} curta demais.'
         if len(str(it.get('comentario', ''))) < 60: return f'Certo/Errado: comentário {n} curto demais.'
     gab = Counter(it['gabarito'] for it in itens)
-    if gab['C'] < 3 or gab['E'] < 3: return 'Certo/Errado: misture certos e errados (ao menos 3 de cada).'
+    if gab['C'] < min_cada or gab['E'] < min_cada: return f'Certo/Errado: misture certos e errados (ao menos {min_cada} de cada).'
     if exige_tipos and len({it['tipo'] for it in itens}) < 2: return 'Certo/Errado: use ao menos 2 tipos (doutrina, lei seca, jurisprudência).'
     return None
 
@@ -610,6 +611,31 @@ SCHEMA = _obj({
         'gaps': ARR_S, 'itens_correlatos': ARR_S,
         'auditoria': _obj({'checklist': ARR_S, 'cobertura': S, 'fundamento_edital': S})}),
 })
+
+
+# 01/11/2026 (titular): ao montar o bloco, cada assunto pode vir como OBJETIVA (estudar) ou como REVISÃO
+# RÁPIDA Certo/Errado ("tem temas que eu já estudei bastante e quero passar mais rápido"), com os comentários
+# no mesmo padrão das objetivas (veredito + título curto + explicação) e foco na letra da lei.
+REV_ITEM = _obj({'afirmacao': S, 'gabarito': {'type': 'string', 'enum': ['C', 'E']},
+                 'tipo': {'type': 'string', 'enum': ['doutrina', 'lei_seca', 'jurisprudencia']},
+                 'titulo': S, 'comentario': S, 'fundamento': S})
+_COM = SCHEMA['properties']['commentary']['properties']
+REV_SCHEMA = _obj({'difficulty': S, 'commentary': _obj({
+    'summary': S, 'certo_errado': {'type': 'array', 'items': REV_ITEM}, 'laws': _COM['laws'], 'jurisprudence': _COM['jurisprudence'],
+    'gaps': ARR_S, 'itens_correlatos': ARR_S, 'auditoria': _COM['auditoria']})})
+REV_MIN, REV_MAX = 12, 20
+REV_SYS = (SYS.split('=== A QUESTÃO')[0] + f"""=== REVISÃO RÁPIDA CERTO/ERRADO (o aluno já estudou este ponto e quer passar rápido) ===
+Não escreva questão de múltipla escolha. Escreva de {REV_MIN} a {REV_MAX} itens Certo/Errado que cubram o ponto oficial HORIZONTALMENTE: todos os aspectos cobráveis, não um só.
+• Prioridade é a LETRA DA LEI APLICADA: quando o ponto tem lei, ao menos metade dos itens é do tipo "lei_seca", cada um sobre um detalhe que a AOCP cobra (prazo, fração, pena, qualificadora, majorante, quórum, competência, legitimado, exceção, "poderá"/"deverá"). O item errado troca UM detalhe, como a banca faz. Complete com jurisprudência da base e a doutrina essencial.
+• Cada item: {{"afirmacao": 1 ou 2 frases de prova, "gabarito": "C" ou "E", "tipo": "doutrina" | "lei_seca" | "jurisprudencia", "titulo": frase curta (máx. 12 palavras) começando por verbo, no padrão do comentário das alternativas — ex.: "troca o prazo de 10 por 15 dias", "reproduz fielmente o art. 121, § 2º, IV", "confunde majorante com qualificadora"; "comentario": 2 a 4 frases — por que está certo ou errado; no errado, a versão correta com o detalhe exato; "fundamento": artigo, súmula ou precedente (ou vazio)}}.
+• Ao menos 4 certos e 4 errados; ao menos 2 tipos quando houver lei ou precedente; ordem misturada.
+• commentary.summary (1 ou 2 frases: o que a revisão cobriu), commentary.laws, commentary.jurisprudence, commentary.auditoria, commentary.gaps e commentary.itens_correlatos seguem as MESMAS regras da questão objetiva: cite a lei pela 'ref' da base, sem transcrever (o sistema preenche); nunca invente artigo, número de processo, tese ou id.
+• 'difficulty': "médio" ou "alto".
+Somente JSON válido, sem Markdown e sem texto fora do JSON.""")
+AUDIT_REV_SYS = ('Você é auditor crítico de itens Certo/Errado para Delegado no estilo Instituto AOCP. Retorne APENAS JSON {"approved":true/false,"problems":["..."],"reason":"..."}. '
+                 'Confira, item por item, se o gabarito C/E está juridicamente certo no marco de 29/07/2026, se o comentário e o título explicam o gabarito sem contradição '
+                 'e se o item errado tem UM erro claro (sem ambiguidade). A redação literal da lei NÃO é enviada; não reprove por falta de transcrição. '
+                 'Reprove apenas por erro jurídico real ou item ambíguo, apontando o número do item.')
 
 
 def recent_formats(n=8):
@@ -818,12 +844,52 @@ def correlatos_validos(ids, itemid, limite=5):
     return out[:limite]
 
 
-def generate(itemid, round_, provider, gaps=None):
+def _checar_revisao(q) -> str | None:
+    c = q.get('commentary') if isinstance(q, dict) else None
+    if not isinstance(c, dict): return 'Revisão sem commentary.'
+    err = validar_ce(c.get('certo_errado'), exige_tipos=tem_fonte(c), minimo=REV_MIN, maximo=REV_MAX, min_cada=4)
+    if err: return err
+    if any(len(str(x.get('titulo', ''))) < 8 for x in c['certo_errado']): return 'Certo/Errado: cada item precisa de título curto (padrão das alternativas).'
+    return None
+
+
+def gerar_revisao(item, round_, provider, gaps, t0):
+    """revisão rápida C/E de um ponto: mesma base (lei, precedentes, fragmentos), mesma auditoria dupla (D-007)"""
+    base = json.loads(user_prompt(item, round_, gaps or [], []))
+    for chave in ('QUESTAO_MODELO_DE_ESTILO', 'gabaritos_anteriores', 'formatos_anteriores'): base.pop(chave, None)
+    base['formato_pedido'] = f'REVISÃO RÁPIDA CERTO/ERRADO ({REV_MIN} a {REV_MAX} itens), foco na letra da lei aplicada'
+    prompt = json.dumps(base, ensure_ascii=False)
+    q = call_model(REV_SYS, prompt, provider, REV_SCHEMA); err = _checar_revisao(q)
+    if err:
+        q = call_model(REV_SYS, 'Reelabore corrigindo especificamente: ' + err + '\nBase do pedido: ' + prompt[:30000] + '\nVersão anterior: ' + json.dumps(q, ensure_ascii=False)[:18000], provider, REV_SCHEMA)
+        err = _checar_revisao(q)
+    if err: raise RuntimeError('Revisão reprovada na auditoria formal: ' + err)
+    alerta = []
+    if os.getenv('DEEP_AUDIT', '1').lower() not in ('0', 'false', 'nao'):
+        auditor = audit_provider(provider)
+        a = call_model(AUDIT_REV_SYS, audit_view(q), auditor)
+        if not a.get('approved'):
+            problems = [str(x) for x in a.get('problems', [])]
+            q2 = call_model(REV_SYS, 'AUDITORIA JURÍDICA REPROVOU. Problemas: ' + '; '.join(problems)[:900] + '\nRefaça integralmente sem esses problemas. Base: ' + prompt, provider, REV_SCHEMA)
+            if _checar_revisao(q2) is None:
+                q = q2
+                a2 = call_model(AUDIT_REV_SYS, audit_view(q), auditor)
+                if not a2.get('approved'): alerta = [str(x) for x in a2.get('problems', [])]
+            else:
+                alerta = problems
+            if alerta and os.getenv('AUDIT_STRICT', '0') == '1':
+                raise RuntimeError('Auditoria independente ainda detectou problemas: ' + str(alerta)[:500])
+    q['formato'] = 'revisao_ce'; q['n_itens'] = len(q['commentary']['certo_errado'])
+    return _finalizar(q, item, round_, provider, alerta, t0)
+
+
+def generate(itemid, round_, provider, gaps=None, modo='obj'):
     key = f'{itemid}|{round_}'
     existing = stored(key)
     if existing: return existing
     item = BY_ID[itemid]
     _MEDIDA.atual = {'chamadas': 0, 'tokens_entrada': 0, 'tokens_saida': 0}; t0 = time.time()
+    if modo == 'ce': return gerar_revisao(item, round_, provider, gaps, t0)
     previous = [v['correct'] for v in BANK.values() if 'correct' in v]
     for path in sorted(CACHE.glob('*_R*.json'), key=lambda p: p.stat().st_mtime)[-30:]:
         try: previous.append(json.loads(path.read_text('utf8'))['correct'])
@@ -850,6 +916,12 @@ def generate(itemid, round_, provider, gaps=None):
                 alerta = problems  # a refação saiu mal formada: mantém a 1ª versão, com o alerta
             if alerta and os.getenv('AUDIT_STRICT', '0') == '1':
                 raise RuntimeError('Auditoria independente ainda detectou problemas: ' + str(alerta)[:500])
+    return _finalizar(q, item, round_, provider, alerta, t0)
+
+
+def _finalizar(q, item, round_, provider, alerta, t0):
+    """o que toda geração grava (objetiva ou revisão C/E): texto da base, correlatos filtrados, métricas e o arquivo"""
+    itemid = item['id']
     q['commentary'] = enrich_commentary(q.get('commentary', {}), item)
     q['commentary']['itens_correlatos'] = correlatos_validos(q['commentary'].get('itens_correlatos'), itemid)
     if alerta: q['commentary']['alerta_auditoria'] = alerta[:6]
@@ -928,7 +1000,7 @@ def estado_conversoes(novas: int = 0) -> dict:
 def jobkey(i, r): return f'{i}|{r}'
 
 
-def submit(i, r, provider, gaps=None):
+def submit(i, r, provider, gaps=None, modo='obj'):
     key = jobkey(i, r)
     if stored(key): return 'ready'
     if i not in BY_ID: return 'invalid'
@@ -937,7 +1009,7 @@ def submit(i, r, provider, gaps=None):
         f = TASKS.get(key)
         if f and not f.done(): return 'generating'
         if f and f.done() and f.exception(): TASKS.pop(key, None)
-        TASKS[key] = WORKERS.submit(generate, i, r, provider, gaps or [])
+        TASKS[key] = WORKERS.submit(generate, i, r, provider, gaps or [], 'ce' if modo == 'ce' else 'obj')
     return 'generating'
 
 
@@ -1122,11 +1194,12 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             try: r = int(req.get('round', 1))
             except (TypeError, ValueError): r = 1
             gaps = req.get('gaps') if isinstance(req.get('gaps'), dict) else {}
+            modos = req.get('modos') if isinstance(req.get('modos'), dict) else {}  # {id: 'obj' | 'ce'} (01/11/2026)
             if not isinstance(ids, list) or not ids or len(ids) > BLOCO_MAX or r not in (1, 2):
                 return self.send_json({'error': f'Bloco inválido (1 a {BLOCO_MAX} ids, rodada 1 ou 2)'}, 400)
             if provider not in ('openai', 'claude'): return self.send_json({'error': 'Provedor inválido'}, 400)
             validos = [i for i in dict.fromkeys(ids) if isinstance(i, str) and i in BY_ID]
-            estados = {i: submit(i, r, provider, gaps.get(i) if isinstance(gaps.get(i), list) else []) for i in validos}
+            estados = {i: submit(i, r, provider, gaps.get(i) if isinstance(gaps.get(i), list) else [], modos.get(i)) for i in validos}
             return self.send_json({'round': r, 'pedidos': len(validos), 'ignorados': len(ids) - len(validos), 'estados': estados})
         req = self.read_json(); i = str(req.get('id', '')); r = req.get('round', 1)
         try: r = int(r)
@@ -1136,6 +1209,9 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         if p == '/api/reveal':
             q = stored(key)
             if not q: return self.send_json({'error': 'Questão ainda não preparada'}, 404)
+            if q.get('formato') == 'revisao_ce':  # revisão C/E: o aluno julga item a item na tela; não há letra
+                return self.send_json({'correct': '', 'formato': 'revisao_ce', 'commentary': enrich_commentary(q.get('commentary', {}), BY_ID[i]),
+                                       'sources_used': q.get('sources_used', [])})
             choice = str(req.get('choice', '')).upper()
             if choice not in list('ABCDE'): return self.send_json({'error': 'Selecione uma alternativa'}, 400)
             # questões antigas do cache também ganham o texto da base local, sem regerar
@@ -1143,7 +1219,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
                                    'sources_used': q.get('sources_used', [])})
         provider = str(req.get('provider', 'openai'))
         if provider not in ('openai', 'claude'): return self.send_json({'error': 'Provedor inválido'}, 400)
-        status = submit(i, r, provider, req.get('gaps', []) if isinstance(req.get('gaps'), list) else [])
+        status = submit(i, r, provider, req.get('gaps', []) if isinstance(req.get('gaps'), list) else [], req.get('modo'))
         self.send_json({'status': status, 'id': i, 'round': r})
 
 

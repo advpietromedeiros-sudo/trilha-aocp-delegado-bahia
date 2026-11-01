@@ -33,6 +33,7 @@ async function cenario(nome, respostas, esperado) {
     showError: (titulo) => { eventos.erro = titulo; },
     renderQuestion: () => { eventos.pronta = true; },
     prefetchNext: () => {},
+    modoDe: () => "obj", // 01/11/2026: o pedido de geração leva o modo do ponto (objetiva ou revisão C/E)
     loadItem: async () => {},
     Date: { now: () => agora },
     setTimeout: (fn, ms) => { agora += ms; fn(); },

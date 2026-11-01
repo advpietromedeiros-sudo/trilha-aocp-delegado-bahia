@@ -2,9 +2,17 @@
 
 > Estado, tarefas e o que ficou rodando. Atualizado a cada ~15 min de trabalho e no fechamento.
 
-**Última atualização:** 01/11/2026, 15h35.
+**Última atualização:** 01/11/2026, 20h23.
 
 ## Estado
+
+- 🆕 **01/11/2026, 20h23 — bloco montado por disciplina e assunto, revisão rápida C/E e letra da lei**
+  (D-010, servidor v10): diálogo 🎯 no painel de blocos (Objetiva · C/E rápido · Fora do bloco, por ponto ou
+  por disciplina), bloco intercalado por disciplina, revisão de 12 a 20 itens C/E com título no padrão das
+  alternativas e auditoria dupla, prompt exigindo o detalhe legal em todas as disciplinas. Provas:
+  `testar_servidor.py` (+8 casos), `testar_blocos.mjs` (+3), `testar_espera.mjs`, `testar_pagina.cjs`,
+  conferência no Chrome com API simulada. ⚠️ **Camada:** o **servidor** só usa a v10 depois de
+  **reiniciado**; a tela muda ao recarregar.
 
 - 🆕 **01/11/2026, 15h33 — índice ampliado com Constitucional, Administrativo e Ambiental** (D-009):
   11.131 páginas (eram 9.356); 0 CPF no índice. ⚠️ **Camada:** gravado no **disco**; o servidor que

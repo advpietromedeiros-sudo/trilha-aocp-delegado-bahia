@@ -40,13 +40,13 @@ function ambiente() {
   ctx.document = { addEventListener() {}, getElementById: () => null, querySelector: () => null };
   ctx.fetch = async (url, opt) => {
     const corpo = opt?.body ? JSON.parse(opt.body) : null;
-    if (url === "/api/bloco") { ctx.pedidos.push(corpo.ids); return { ok: true, json: async () => ({ pedidos: corpo.ids.length }) }; }
+    if (url === "/api/bloco") { ctx.pedidos.push(corpo.ids); ctx.modos = corpo.modos; return { ok: true, json: async () => ({ pedidos: corpo.ids.length }) }; }
     if (url === "/api/historico") { ctx.historicos.push(corpo.html); return { ok: true, json: async () => ({ arquivo: "historico/x.html" }) }; }
     if (url.startsWith("/api/question")) return { ok: true, json: async () => ({ status: "ready", question: { stem: "Enunciado <script>alert(1)</script>", options: { A: "a", B: "b", C: "c", D: "d", E: "e" } } }) };
     if (url === "/api/reveal") return { ok: true, json: async () => ({ commentary: { summary: "resumo", alternatives: { A: { veredito: "Correta", titulo: "t", explicacao: "e" } }, laws: [{ diploma: "CP", dispositivo: "art. 1º", texto_literal: "Não há crime sem lei anterior", explicacao: "x" }], jurisprudence: [], traps: ["p"], itens_correlatos: [] } }) };
     return { ok: false, json: async () => ({}) };
   };
-  const nomes = Object.keys(ctx).filter((k) => !["avisos", "pedidos", "historicos", "carregado"].includes(k));
+  const nomes = Object.keys(ctx).filter((k) => !["avisos", "pedidos", "historicos", "carregado", "modos"].includes(k));
   // eslint-disable-next-line no-new-func
   const fab = new Function(...nomes, fonte + "\nreturn {aplicarCorrelatos,eCorrelato,pendentesParaBloco,criarBloco,progressoBloco,verificarGatilhoBloco,blocoAtual,secaoHistorico,montarHistoricoHTML,irAoProximoDoBloco};");
   return { ctx, f: fab(...nomes.map((n) => ctx[n])) };
@@ -64,9 +64,10 @@ const pen = ITEMS.filter((x) => x.discipline === "DIREITO PENAL");
   prova("comentário sem correlatos não quebra", f.aplicarCorrelatos({}, pen[0].id) === 0 && f.aplicarCorrelatos(undefined, pen[0].id) === 0);
 }
 
-// 2. blocos
+// 2. blocos (modo sequencial: a ordem da trilha, como era até 01/11/2026)
 {
   const { ctx, f } = ambiente();
+  ctx.state.blocoIntercalar = false;
   ctx.state.answers[ctx.key(ITEMS[0].id, 1)] = { choice: "A", correct: "A", is_correct: true };
   ctx.state.correlatos = { [ctx.key(ITEMS[1].id, 1)]: { via: ITEMS[0].id } };
   const b1 = await f.criarBloco();
@@ -91,6 +92,25 @@ const pen = ITEMS.filter((x) => x.discipline === "DIREITO PENAL");
   f.irAoProximoDoBloco();
   prova("'ir ao próximo do bloco' abre o 21º ponto", ctx.carregado === b2.ids[20]);
 }
+
+// 2b. 01/11/2026 — escolha de disciplina, assunto e modo; bloco intercalado (estudo horizontal)
+{
+  const { ctx, f } = ambiente();
+  const discs = [...new Set(ITEMS.map((x) => x.discipline))];
+  const b = await f.criarBloco();
+  const d0 = b.ids.slice(0, Math.min(discs.length, 30)).map((i) => BY_ID[i].discipline);
+  prova("intercalado por padrão: os primeiros pontos do bloco vêm de disciplinas diferentes", new Set(d0).size === d0.length && d0.length > 5, d0.slice(0, 4).join(" | "));
+}
+{
+  const { ctx, f } = ambiente();
+  const civ = ITEMS.filter((x) => x.discipline === discs0()[0]);
+  ctx.state.modos = Object.fromEntries(ITEMS.filter((x) => x.discipline !== civ[0].discipline).map((x) => [x.id, "fora"]));
+  ctx.state.modos[civ[1].id] = "ce";
+  const b = await f.criarBloco();
+  prova("'fora do bloco' tira os pontos; só a disciplina escolhida entra", b.ids.length === Math.min(30, civ.length) && b.ids.every((i) => BY_ID[i].discipline === civ[0].discipline), `${b.ids.length} pontos`);
+  prova("o modo de cada ponto vai ao servidor (C/E rápido = 'ce', o resto 'obj')", ctx.modos && ctx.modos[civ[1].id] === "ce" && ctx.modos[civ[0].id] === "obj", JSON.stringify(ctx.modos && ctx.modos[civ[1].id]));
+}
+function discs0() { return [...new Set(ITEMS.map((x) => x.discipline))]; }
 
 // 3. histórico
 {

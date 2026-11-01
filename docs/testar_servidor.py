@@ -98,6 +98,22 @@ def questao_valida(correlatos: list[str]) -> dict:
     }
 
 
+def revisao_valida(correlatos: list[str], n: int = 14) -> dict:
+    """Uma revisão C/E (v10) que passa no _checar_revisao(): 12 a 20 itens, cada um com título curto."""
+    return {
+        "difficulty": "alto",
+        "commentary": {
+            "summary": "s",
+            "certo_errado": [dict(x, titulo="troca o prazo de dez por quinze dias") for x in itens_ce(n)],
+            "laws": [],
+            "jurisprudence": [],
+            "gaps": [],
+            "itens_correlatos": correlatos,
+            "auditoria": {"checklist": [], "cobertura": "c", "fundamento_edital": "f"},
+        },
+    }
+
+
 def main() -> int:
     sys.stdout.reconfigure(encoding="utf-8")  # §A7
     tmp = Path(tempfile.mkdtemp(prefix="trilha_teste_"))
@@ -126,6 +142,8 @@ def main() -> int:
             sistema = str(payload.get("instructions") or payload.get("system") or "")
             if sistema.startswith("Você é auditor"):
                 texto = json.dumps({"approved": True, "problems": [], "reason": "ok"})
+            elif "=== REVISÃO RÁPIDA CERTO/ERRADO" in sistema:  # revisão C/E do bloco (v10, 01/11/2026)
+                texto = json.dumps(revisao_valida([vizinho]), ensure_ascii=False)
             elif sistema.startswith("Você é professor de cursinho"):  # conversão para Certo/Errado (v9)
                 texto = json.dumps({"certo_errado": itens_ce(12)}, ensure_ascii=False)
             else:
@@ -203,6 +221,19 @@ def main() -> int:
         )
         prova("conversão: mede a chamada", conv.get("metricas_conversao", {}).get("chamadas") == 1)
 
+        # 1d. revisão rápida Certo/Errado (v10, 01/11/2026): o titular escolhe, por assunto, revisar em C/E
+        rev_id = itens[6]["id"]
+        rv = srv.generate(rev_id, 1, "openai", [], "ce")
+        prova("revisão C/E: grava formato revisao_ce com 14 itens", rv.get("formato") == "revisao_ce" and rv.get("n_itens") == 14, str(rv.get("formato")))
+        prova("revisão C/E: sem letra de gabarito (não há alternativas)", "correct" not in rv and "options" not in rv)
+        prova("revisão C/E: auditoria dupla mantida (2 chamadas: revisão + auditor)", rv.get("metricas", {}).get("chamadas") == 2, str(rv.get("metricas")))
+        prova("revisão C/E: itens com título curto (padrão das alternativas)", all(x.get("titulo") for x in rv["commentary"]["certo_errado"]))
+        prova("revisão C/E: 11 itens é pouco", srv._checar_revisao(revisao_valida([], 11)) is not None)
+        sem_titulo = revisao_valida([])
+        sem_titulo["commentary"]["certo_errado"][0]["titulo"] = ""
+        prova("revisão C/E: item sem título é recusado", srv._checar_revisao(sem_titulo) is not None)
+        prova("prompt da banca cobra o detalhe da letra da lei em todas as disciplinas", "LETRA DA LEI EM TODAS AS DISCIPLINAS" in srv.SYS and "LETRA DA LEI EM TODAS AS DISCIPLINAS" in srv.REV_SYS)
+
         # 2 e 3. HTTP
         httpd = srv.http.server.ThreadingHTTPServer(("127.0.0.1", porta), srv.Handler)
         threading.Thread(target=httpd.serve_forever, daemon=True).start()
@@ -243,6 +274,19 @@ def main() -> int:
                 break
             time.sleep(0.2)
         prova("GET /api/bloco conta as 2 questões prontas", prontos == 2, str(r))
+        st, r = chamar("/api/reveal", {"id": rev_id, "round": 1, "choice": "C/E"})
+        prova(
+            "POST /api/reveal da revisão devolve os itens comentados (sem exigir letra A–E)",
+            st == 200 and r.get("formato") == "revisao_ce" and len(r.get("commentary", {}).get("certo_errado", [])) == 14,
+            f"{st} {str(r)[:200]}",
+        )
+        rev2 = itens[8]["id"]  # o itens[7] (PEN-2.2) já está no banco inicial como objetiva: o que está pronto não se regera
+        st, r = chamar("/api/bloco", {"ids": [rev2], "round": 1, "provider": "openai", "modos": {rev2: "ce"}})
+        for _ in range(50):
+            if srv.stored(srv.jobkey(rev2, 1)):
+                break
+            time.sleep(0.2)
+        prova("POST /api/bloco com modos: o ponto marcado 'ce' é gerado como revisão", (srv.stored(srv.jobkey(rev2, 1)) or {}).get("formato") == "revisao_ce")
         st, r = chamar("/api/bloco", {"ids": [t["id"] for t in srv.ITEMS[:31]], "round": 1})
         prova("bloco com 31 pontos é recusado (400)", st == 400, f"{st} {r}")
 
