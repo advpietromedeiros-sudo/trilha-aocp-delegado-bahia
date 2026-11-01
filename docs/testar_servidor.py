@@ -168,6 +168,20 @@ def main() -> int:
         prova("C/E: só certos é recusado (tem de misturar)", srv.validar_ce(so_certos) is not None)
         um_tipo = [dict(x, tipo="doutrina") for x in itens_ce(10)]
         prova("C/E: um tipo só é recusado", srv.validar_ce(um_tipo) is not None)
+        # 31/10/2026 (CON-2): ponto puramente teórico, sem lei nem jurisprudência — exigir 2 tipos forçaria
+        # a IA a inventar fonte. Sem fonte no comentário, só doutrina é aceito; com fonte, continua recusado.
+        prova(
+            "C/E: sem lei nem jurisprudência, o comentário não 'tem fonte'",
+            srv.tem_fonte({"laws": []}) is False,
+        )
+        prova(
+            "C/E: ponto teórico (sem fonte) aceita itens só de doutrina",
+            srv.validar_ce(um_tipo, srv.tem_fonte({"laws": [], "jurisprudence": []})) is None,
+        )
+        prova(
+            "C/E: com lei citada, um tipo só continua recusado",
+            srv.validar_ce(um_tipo, srv.tem_fonte({"laws": [{"diploma": "CF"}]})) is not None,
+        )
 
         # 1c. conversão de questão ANTIGA: a questão não muda, a aula fica guardada
         antiga = questao_valida([])

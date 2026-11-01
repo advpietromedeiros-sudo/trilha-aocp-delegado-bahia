@@ -574,8 +574,17 @@ CE_ITEM = _obj({'afirmacao': S, 'gabarito': {'type': 'string', 'enum': ['C', 'E'
 CE_SCHEMA = _obj({'certo_errado': {'type': 'array', 'items': CE_ITEM}})
 
 
-def validar_ce(itens) -> str | None:
-    """Os itens Certo/Errado: 8 a 15, com C e E (ao menos 3 de cada) e ao menos 2 dos 3 tipos."""
+def tem_fonte(c) -> bool:
+    """O comentário cita lei ou jurisprudência? Sem isso, item de lei seca ou de jurisprudência seria inventado."""
+    return bool(isinstance(c, dict) and (c.get('laws') or c.get('jurisprudence')))
+
+
+def validar_ce(itens, exige_tipos=True) -> str | None:
+    """Os itens Certo/Errado: 8 a 15, com C e E (ao menos 3 de cada) e, se exige_tipos, ao menos 2 dos 3 tipos.
+
+    💥 31/10/2026: o ponto CON-2 (perspectivas sociológica, política e jurídica da Constituição) não tem artigo
+    nem precedente — exigir 2 tipos ali obrigava a IA a INVENTAR fonte, e ela, certa, recusou 4 vezes. Entre
+    cobrir os três tipos e não inventar, vence não inventar (REGRA ZERO): sem fonte no comentário, só doutrina."""
     if not isinstance(itens, list) or not 8 <= len(itens) <= 15: return 'Certo/Errado: são de 8 a 15 itens.'
     for n, it in enumerate(itens, 1):
         if not isinstance(it, dict): return f'Certo/Errado: item {n} malformado.'
@@ -585,7 +594,7 @@ def validar_ce(itens) -> str | None:
         if len(str(it.get('comentario', ''))) < 60: return f'Certo/Errado: comentário {n} curto demais.'
     gab = Counter(it['gabarito'] for it in itens)
     if gab['C'] < 3 or gab['E'] < 3: return 'Certo/Errado: misture certos e errados (ao menos 3 de cada).'
-    if len({it['tipo'] for it in itens}) < 2: return 'Certo/Errado: use ao menos 2 tipos (doutrina, lei seca, jurisprudência).'
+    if exige_tipos and len({it['tipo'] for it in itens}) < 2: return 'Certo/Errado: use ao menos 2 tipos (doutrina, lei seca, jurisprudência).'
     return None
 
 
@@ -761,7 +770,7 @@ def validate(q):
         _, tit, exp = alt_parts(c, L)
         if len(exp) < 60: return f'Comentário da alternativa {L} curto demais.'
         if tit and len(tit.split()) > 18: return f'Título do comentário da alternativa {L} longo demais (máx. 12 palavras).'
-    err_ce = validar_ce(c.get('certo_errado'))
+    err_ce = validar_ce(c.get('certo_errado'), tem_fonte(c))
     if err_ce: return err_ce
     for group in ('laws', 'jurisprudence'):
         if not isinstance(c.get(group, []), list): return 'Referências jurídicas devem ser listas.'
@@ -870,16 +879,17 @@ def converter_ce(path: pathlib.Path, provider: str):
     fica em commentary.aula_original (dado não se apaga, HARNESS §F17)."""
     q = json.loads(path.read_text('utf8'))
     c = q.get('commentary') or {}
-    if validar_ce(c.get('certo_errado')) is None: return 'pronta'
+    exige = tem_fonte(c)
+    if validar_ce(c.get('certo_errado'), exige) is None: return 'pronta'
     base = {'questao': {k: q.get(k) for k in ('stem', 'options', 'correct')},
             'comentario': {k: c.get(k) for k in ('summary', 'alternatives', 'lessons', 'traps', 'mindmap', 'laws', 'jurisprudence')}}
     texto = json.dumps(base, ensure_ascii=False)[:60000]
     _MEDIDA.atual = {'chamadas': 0, 'tokens_entrada': 0, 'tokens_saida': 0}; t0 = time.time()
     itens = call_model(CE_SYS, texto, provider, CE_SCHEMA).get('certo_errado')
-    err = validar_ce(itens)
+    err = validar_ce(itens, exige)
     if err:
         itens = call_model(CE_SYS, 'Corrija especificamente: ' + err + '\n' + texto, provider, CE_SCHEMA).get('certo_errado')
-        err = validar_ce(itens)
+        err = validar_ce(itens, exige)
     if err: raise RuntimeError(err)
     q2 = json.loads(path.read_text('utf8'))  # relê: o arquivo pode ter mudado durante a chamada
     c2 = q2.setdefault('commentary', {})
@@ -902,7 +912,7 @@ def pedir_conversoes(provider: str) -> dict:
     for f in sorted(CACHE.glob('*_R*.json')):
         try: c = json.loads(f.read_text('utf8')).get('commentary') or {}
         except Exception: continue
-        if validar_ce(c.get('certo_errado')) is None: CONVERSOES[str(f)] = 'pronta'; continue
+        if validar_ce(c.get('certo_errado'), tem_fonte(c)) is None: CONVERSOES[str(f)] = 'pronta'; continue
         if CONVERSOES.get(str(f)) == 'na_fila': continue
         CONVERSOES[str(f)] = 'na_fila'; novas += 1
         WORKERS.submit(_job_conversao, f, provider)
