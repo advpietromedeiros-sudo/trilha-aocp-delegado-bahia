@@ -348,6 +348,16 @@ body.dark .aocp-hit,body.dark .reference-analysis strong{color:var(--accent-fg)}
 .bloco-lista span{width:10px;height:10px;border-radius:50%;background:#c9d4e0}
 .bloco-lista span.ok{background:#5bd2b0}.bloco-lista span.erro{background:#fb8e78}
 .bloco-lista span.correl{background:transparent;border:2px solid #5bd2b0;box-sizing:border-box}
+/* v9 — Certo ou Errado (31/10/2026): a aula vira estudo ativo. */
+.ce-lista{list-style:none;padding:0;margin:10px 0;display:grid;gap:10px}
+.ce-item{border:1px solid var(--border);border-left:4px solid var(--border);border-radius:10px;padding:12px 14px;background:var(--surface)}
+.ce-item.ce-ok{border-left-color:var(--green)}.ce-item.ce-erro{border-left-color:var(--red)}
+.ce-tipo{font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.ce-afirmacao{margin:6px 0 8px}.ce-botoes{display:flex;gap:8px}.ce-botoes .util-btn{min-width:96px}
+.ce-res{font-size:13px;margin-bottom:4px}.ce-fund{font-size:12px;color:var(--muted);margin-top:4px}
+.ce-placar{font-weight:700;margin-top:6px}
+.ref-details{margin-top:18px;border:1px solid var(--border);border-radius:10px;padding:8px 12px}
+.ref-details>summary{cursor:pointer;font-weight:700;padding:6px 0}
 </style>
 <script>
 /* v8 — blocos de 30, baixa por correlação e histórico acumulado (D-005, D-006, D-007; 31/10/2026).
@@ -370,12 +380,24 @@ function irAoProximoDoBloco(){const b=blocoAtual();const id=b&&b.ids.find(i=>BY_
 async function atualizarProntos(){const el=document.getElementById('bloco-prontos');const b=blocoAtual();if(!el||!b||isFile)return;try{const d=await fetch('/api/bloco?round='+b.round+'&ids='+encodeURIComponent(b.ids.join(',')),{cache:'no-store'}).then(x=>x.json());const c=d.contagem||{};el.textContent=(c.ready||0)+' / '+(d.total||b.ids.length)+(c.generating?' · '+c.generating+' gerando':'')+(c.error?' · '+c.error+' com erro':'');}catch(e){el.textContent='servidor fora do ar';}}
 function renderBloco(){const card=document.getElementById('bloco-card');if(!card)return;const b=blocoAtual();const corrTotal=ITEMS.filter(x=>!aOf(x)&&eCorrelato(x)).length;if(!b){card.innerHTML='<h3>📦 Blocos de 30</h3><p class="section-note">Nenhum bloco nesta rodada. O bloco reúne os próximos 30 pontos pendentes da trilha e pede a geração de todos ao servidor.</p><div class="stackbtn"><button class="util-btn" id="bloco-novo">Gerar bloco 1 (30 pontos)</button><button class="util-btn" id="hist-html">↓ Histórico em HTML</button><button class="util-btn" id="hist-pdf">🖨 Histórico em PDF</button></div>';}else{const p=progressoBloco(b);const bolas=b.ids.map(id=>{const it=BY_ID[id];if(!it)return '<span></span>';const a=aOf(it);const c=a?(a.is_correct?'ok':'erro'):(eCorrelato(it)?'correl':'');return '<span class="'+c+'" title="'+esc(it.number+' '+it.label)+'"></span>';}).join('');card.innerHTML='<h3>📦 Bloco '+b.n+' · Rodada '+b.round+'</h3><div class="small-stat"><span>Feitos no bloco</span><strong>'+p.feitos+' / '+p.total+'</strong></div><div class="small-stat"><span>Prontos no servidor</span><strong id="bloco-prontos">…</strong></div><div class="small-stat"><span>Baixa por correlação (rodada)</span><strong>'+corrTotal+'</strong></div><div class="bloco-lista" aria-label="Pontos do bloco: cheio = respondido, anel = visto por correlação">'+bolas+'</div><div class="stackbtn"><button class="util-btn" id="bloco-ir">Ir ao próximo do bloco →</button><button class="util-btn" id="bloco-novo">Gerar próximo bloco (30)</button><button class="util-btn" id="hist-html">↓ Histórico em HTML</button><button class="util-btn" id="hist-pdf">🖨 Histórico em PDF</button></div><div class="section-note">Ponto cheio: respondido. Anel: baixa por correlação (o comentário de outra questão cobriu o ponto).</div>';}
  const on=(id,fn)=>{const e=document.getElementById(id);if(e)e.onclick=fn;};on('bloco-novo',()=>{const b2=blocoAtual();if(b2&&progressoBloco(b2).feitos<b2.ids.length&&!confirm('O bloco atual ainda tem pontos pendentes. Gerar o próximo assim mesmo?'))return;criarBloco();});on('bloco-ir',irAoProximoDoBloco);on('hist-html',()=>exportarHistorico('baixar'));on('hist-pdf',()=>{const w=window.open('','_blank');exportarHistorico('pdf',w);});atualizarProntos();}
+/* v9 — Certo ou Errado (31/10/2026, titular): "permanece o comentário de cada alternativa… transforme a aula… em
+   questões certo e erradas comentadas… a ideia é ficar sempre um estudo ativo". O comentário de cada item só
+   aparece depois que o aluno julga; as respostas ficam em state.ce[chave][índice]. */
+const CE_TIPO={doutrina:'Doutrina',lei_seca:'Lei seca',jurisprudencia:'Jurisprudência'};
+function renderCertoErrado(c,k){const itens=Array.isArray(c.certo_errado)?c.certo_errado:[];const res=(state.ce||{})[k]||{};let feitos=0,acertos=0;let h='<section id="ce-section"><div class="subheading">Certo ou Errado — estudo ativo</div><p class="study-hint">Julgue cada afirmação antes de ver o comentário. Elas cobrem a doutrina, a lei seca e a jurisprudência do ponto.</p><ol class="ce-lista">';
+ itens.forEach((it,i)=>{const r=res[i];const gab=it.gabarito==='C'?'C':'E';if(r){feitos++;if(r===gab)acertos++;}
+  h+='<li class="ce-item'+(r?(r===gab?' ce-ok':' ce-erro'):'')+'"><div class="ce-tipo">'+(i+1)+'. '+esc(CE_TIPO[it.tipo]||'Tema')+'</div><p class="ce-afirmacao">'+esc(textoDe(it.afirmacao))+'</p>'+
+   (r?'<div class="ce-res"><b>Gabarito: '+(gab==='C'?'CERTO':'ERRADO')+'</b> — você marcou '+(r==='C'?'Certo':'Errado')+(r===gab?' ✔':' ✘')+'</div><p>'+esc(textoDe(it.comentario))+'</p>'+(it.fundamento?'<div class="ce-fund">Fundamento: '+esc(textoDe(it.fundamento))+'</div>':'')
+     :'<div class="ce-botoes"><button type="button" class="util-btn" data-ce="'+i+'" data-v="C">Certo</button><button type="button" class="util-btn" data-ce="'+i+'" data-v="E">Errado</button></div>')+'</li>';});
+ h+='</ol><div class="ce-placar" aria-live="polite">'+feitos+' de '+itens.length+' julgadas • '+acertos+' acerto'+(acertos===1?'':'s')+'</div></section>';return h;}
+function ligarCertoErrado(c,k,sources){document.querySelectorAll('#ce-section [data-ce]').forEach(b=>b.onclick=()=>{state.ce=state.ce||{};state.ce[k]=state.ce[k]||{};state.ce[k][b.dataset.ce]=b.dataset.v;save();const m=document.getElementById('main');const y=m?m.scrollTop:0;renderLesson(c,sources);if(m)m.scrollTop=y;});}
 function textoDe(v){return v==null?'':String(v);}
 function secaoHistorico(it,round,a,q,c){const com=c?.commentary||{};const alt=com.alternatives||{};const linhas=[];linhas.push('<article class="q"><div class="meta">'+esc(it.discipline)+' • Rodada '+esc(round)+' • '+esc(new Date(a.at||Date.now()).toLocaleDateString('pt-BR'))+'</div><h2>'+esc(it.number+' — '+it.label)+'</h2>');if(q){linhas.push('<div class="stem">'+esc(textoDe(q.stem)).replace(/\n/g,'<br>')+'</div><ol type="A">'+'ABCDE'.split('').map(L=>'<li class="'+(L===a.correct?'certa':'')+(L===a.choice&&L!==a.correct?' marcada':'')+'">'+esc(textoDe(q.options?.[L]))+'</li>').join('')+'</ol>');}else{linhas.push('<p class="aviso">Enunciado indisponível no servidor.</p>');}
  linhas.push('<p class="res">Sua resposta: <b>'+esc(a.choice)+'</b> • Gabarito: <b>'+esc(a.correct)+'</b> • '+(a.is_correct?'✔ acertou':'✘ errou')+'</p>');if(com.summary)linhas.push('<p>'+esc(textoDe(com.summary))+'</p>');
  const altHtml='ABCDE'.split('').map(L=>{const x=alt[L];if(!x)return '';const ver=typeof x==='object'?textoDe(x.veredito):'';const tit=typeof x==='object'?textoDe(x.titulo):'';const exp=typeof x==='object'?textoDe(x.explicacao):textoDe(x);return '<li><b>'+L+(ver?' — '+esc(ver):'')+(tit?': '+esc(tit):'')+'</b> '+esc(exp)+'</li>';}).join('');if(altHtml)linhas.push('<h3>Comentário das alternativas</h3><ul>'+altHtml+'</ul>');
  const leis=(com.laws||[]).map(l=>'<li><b>'+esc(textoDe(l.diploma))+' — '+esc(textoDe(l.dispositivo))+'</b>'+((l.texto_literal||l.texto_artigo)?'<blockquote>'+esc(textoDe(l.texto_literal||l.texto_artigo))+'</blockquote>':'')+(l.explicacao?'<div>'+esc(textoDe(l.explicacao))+'</div>':'')+'</li>').join('');if(leis)linhas.push('<h3>Letra da lei</h3><ul>'+leis+'</ul>');
  const jur=(com.jurisprudence||[]).map(j=>'<li><b>'+esc(textoDe(j.tribunal))+' '+esc(textoDe(j.identificador))+'</b>'+(j.texto_literal?'<blockquote>'+esc(textoDe(j.texto_literal))+'</blockquote>':'')+(j.explicacao?'<div>'+esc(textoDe(j.explicacao))+'</div>':'')+'</li>').join('');if(jur)linhas.push('<h3>Jurisprudência</h3><ul>'+jur+'</ul>');
+ if(Array.isArray(com.certo_errado)&&com.certo_errado.length)linhas.push('<h3>Certo ou Errado</h3><ol>'+com.certo_errado.map(x=>'<li><b>['+(x.gabarito==='C'?'CERTO':'ERRADO')+' · '+esc(CE_TIPO[x.tipo]||'Tema')+']</b> '+esc(textoDe(x.afirmacao))+'<div>'+esc(textoDe(x.comentario))+(x.fundamento?' <i>('+esc(textoDe(x.fundamento))+')</i>':'')+'</div></li>').join('')+'</ol>');
  if(Array.isArray(com.traps)&&com.traps.length)linhas.push('<h3>Pegadinhas</h3><ul>'+com.traps.map(t=>'<li>'+esc(textoDe(t))+'</li>').join('')+'</ul>');
  const corr=(com.itens_correlatos||[]).filter(id=>BY_ID[id]).map(id=>'<li>'+esc(BY_ID[id].number+' — '+BY_ID[id].label)+'</li>').join('');if(corr)linhas.push('<h3>Baixa por correlação</h3><ul>'+corr+'</ul>');
  linhas.push('</article>');return linhas.join('');}
@@ -410,7 +432,7 @@ let loaded={},corrections={},selectedChoice=null,activeItem=null,openDiscipline=
 const save=()=>{try{localStorage.setItem(storeKey,JSON.stringify(state));}catch(e){notify('Armazenamento cheio. Exporte um backup.')}};
 function esc(s){return String(s??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));}
 function fmt(s){return emphasizeText(s).replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>').replace(/\*([^*\n]+)\*/g,'<em>$1</em>').replace(/\n/g,'<br>');}
-function emphasizeText(s){return esc(s).replace(/(^|[^\p{L}])(EXCETO|INCORRETA|CORRETA|NÃO|SALVO|SOMENTE|APENAS|VEDADA|INCONDICIONADA|CONDICIONADA|OBRIGATORIAMENTE|LEGALIDADE|SUBSIDIARIEDADE|FRAGMENTARIEDADE|OFENSIVIDADE|CULPABILIDADE|INSIGNIFICÂNCIA|INTERVENÇÃO MÍNIMA|DIREITO PENAL OBJETIVO|DIREITO PENAL SUBJETIVO)(?=$|[^\p{L}])/giu,(all,prefix,word)=>prefix+'<strong class="study-keyword">'+word+'</strong>');}
+function emphasizeText(s){/* 31/10/2026 (titular): sem termo grifado de azul na questão */return esc(s);}
 function notify(text){const el=document.createElement('div');el.textContent=text;Object.assign(el.style,{position:'fixed',bottom:'20px',right:'22px',zIndex:100,background:'#102946',color:'white',padding:'12px 18px',borderRadius:'9px',boxShadow:'0 8px 28px #0019',fontSize:'12px',maxWidth:'370px'});document.body.appendChild(el);setTimeout(()=>el.remove(),4200);}
 function currentIndex(){return ITEMS.findIndex(x=>x.id===state.current)}
 function nextItem(){const pos=currentIndex();for(let distance=1;distance<=ITEMS.length;distance++){const index=(pos+distance)%ITEMS.length;const it=ITEMS[index];if(it.id!==state.current&&!aOf(it)&&!eCorrelato(it))return it;}return null;}
@@ -541,16 +563,16 @@ function renderLesson(c,sources){
  const jurisprudence=[...(curated.jurisprudence||[]),...(Array.isArray(c.jurisprudence)?c.jurisprudence:[])];
  // Evita referências duplicadas quando a IA também menciona um inciso já curado.
  const dedupe=(arr,typ)=>{const used=new Set();return arr.filter(z=>{const o=typ==='law'?formatLaw(z):formatJuris(z);const name=o.base_id?o.base_id+'|'+(o.texto_literal||'').slice(0,60):[o.dispositivo||o.identificador,o.texto_literal||o.explicacao].join('|').toLowerCase().slice(0,150);if(used.has(name))return false;used.add(name);return true;});};
- const num=String(activeItem.order).padStart(3,'0');
+ const num=String(activeItem.order).padStart(3,'0');const ceOn=Array.isArray(c.certo_errado)&&c.certo_errado.length>0;
  const alt=L=>{const a=c.alternatives?.[L];if(a&&typeof a==='object')return {v:a.veredito||(L===correct?'Correta':'Errada'),t:a.titulo||'',e:a.explicacao||''};return {v:L===correct?'Correta':'Errada',t:'',e:String(a||'Comentário não disponível')};};
  let html=`<div class="lesson-header aocp-head"><div><div class="eyebrow">GABARITO COMENTADO • QUESTÃO ${num}</div><h2>Alternativa ${esc(correct||'?')} — Correta</h2></div><span class="chip">Rodada ${state.round}</span></div>`;
  if(c.summary)html+=`<div class="aocp-verdict">${fmt(c.summary)}</div>`;
  if(Array.isArray(c.alerta_auditoria)&&c.alerta_auditoria.length)html+=`<div class="aula-callout atencao audit-alert"><b>Atenção — a auditoria independente fez ressalvas a esta questão:</b><ul class="lesson-list">${c.alerta_auditoria.map(x=>'<li>'+fmt(String(x))+'</li>').join('')}</ul><small>A questão foi mantida para não desperdiçar a geração. Se a ressalva for relevante, use “Refazer” ou gere novamente o item.</small></div>`;
- html+=`<nav class="lesson-nav" aria-label="Navegação do comentário"><button data-lesson-target="comment-section">Alternativas A–E</button><button data-lesson-target="lesson-sections">Aula de aprofundamento</button><button data-lesson-target="laws-section">Lei seca</button><button data-lesson-target="juris-section">Jurisprudência</button><button data-lesson-target="map-section">Mapa mental</button><button data-lesson-target="audit-section">Auditoria</button></nav>`;
+ html+=`<nav class="lesson-nav" aria-label="Navegação do comentário"><button data-lesson-target="comment-section">Alternativas A–E</button>${ceOn?'<button data-lesson-target="ce-section">Certo ou Errado</button>':'<button data-lesson-target="lesson-sections">Aula de aprofundamento</button>'}<button data-lesson-target="laws-section">Lei seca</button><button data-lesson-target="juris-section">Jurisprudência</button><button data-lesson-target="map-section">Mapa mental</button><button data-lesson-target="audit-section">Auditoria</button></nav>`;
  html+='<section id="comment-section"><div class="subheading">Comentário das cinco alternativas</div><div class="alt-comments">';
  for(const L of 'ABCDE'){const x=alt(L),ok=L===correct;html+=`<article class="alt-comment ${ok?'good':'bad'}"><div class="alt-head"><span class="alt-letter">${L} — </span><span class="alt-verdict">${ok?'Correta':'Errada'}</span>${x.t?`<span class="alt-title">: ${esc(x.t)}</span>`:''}</div><p>${fmt(x.e)}</p></article>`;}
  html+='</div></section>';
- html+='<section id="lesson-sections"><div class="subheading">Aula de aprofundamento</div>';
+ if(ceOn){html+=renderCertoErrado(c,k);}else{html+='<section id="lesson-sections"><div class="subheading">Aula de aprofundamento</div>';
  const KIND={conceito:'Conceito',fundamento:'Fundamento',regra:'Regra',distincao:'Distinção',exemplo:'Exemplo',juris:'Jurisprudência'};
  for(let i=0;i<(c.lessons||[]).length;i++){
    const l=c.lessons[i],blocks=lessonBlocks(l);
@@ -565,7 +587,8 @@ function renderLesson(c,sources){
    }
    html+='</section>';
  }
- html+='</section>';
+ html+='</section>';}
+ if(ceOn)html+='<details class="ref-details"><summary>📚 Consultar a letra da lei e a jurisprudência</summary>';
  html+='<div class="memo-title">Lei seca e jurisprudência para memorizar</div>';
  html+='<section id="laws-section"><div class="subheading">Lei seca</div><p class="study-hint">O texto é preenchido pela base local, não pela IA: <b>✓ Texto oficial — Planalto</b> (após rodar atualizar_lei_seca.bat) ou <b>▣ Base do curso</b> (lei seca DD LEGIS, grifos em caixa alta do material). O que não está na base fica como conferência pendente.</p><div class="reference-grid">';
  const lawList=dedupe(laws,'law');const lawChecked=lawList.filter(x=>formatLaw(x).status!=='pendente'),lawPending=lawList.filter(x=>formatLaw(x).status==='pendente');
@@ -578,11 +601,11 @@ function renderLesson(c,sources){
  for(const j of jurisChecked)html+=renderJurisCard(j);
  for(const [i,j] of (personal.jurisprudence||[]).entries())html+=renderJurisCard(j,i);
  html+=renderPendingReferenceGroup(jurisPending,'juris');
- html+='</div>'+officialShortcuts(activeItem,'juris')+personalSourceEditor('juris')+'</section>';
- if(Array.isArray(c.traps)&&c.traps.length)html+=`<section id="traps-section"><div class="subheading">Pegadinhas recorrentes da AOCP</div><div class="aula-callout pegadinha"><ul class="lesson-list">${c.traps.map(x=>'<li>'+fmt(String(x))+'</li>').join('')}</ul></div></section>`;
- html+=`<section id="map-section"><div class="subheading">Mapa mental — Revisão para Delegado</div><div class="aocp-map"><div class="map-root">${esc((c.mindmap_titulo||activeItem.label).toUpperCase())}</div><div class="map-branches">`;
+ html+='</div>'+officialShortcuts(activeItem,'juris')+personalSourceEditor('juris')+'</section>';if(ceOn)html+='</details>';
+ if(!ceOn&&Array.isArray(c.traps)&&c.traps.length)html+=`<section id="traps-section"><div class="subheading">Pegadinhas recorrentes da AOCP</div><div class="aula-callout pegadinha"><ul class="lesson-list">${c.traps.map(x=>'<li>'+fmt(String(x))+'</li>').join('')}</ul></div></section>`;
+ if(!ceOn){html+=`<section id="map-section"><div class="subheading">Mapa mental — Revisão para Delegado</div><div class="aocp-map"><div class="map-root">${esc((c.mindmap_titulo||activeItem.label).toUpperCase())}</div><div class="map-branches">`;
  for(const n of c.mindmap||[])html+=`<div class="map-branch"><h4>${esc(n.title)}</h4><ul>${(n.points||[]).map(p=>`<li>${fmt(p)}</li>`).join('')}</ul></div>`;
- html+='</div></div></section>';
+ html+='</div></div></section>';}
  const au=c.auditoria&&typeof c.auditoria==='object'?c.auditoria:null;
  html+=`<section id="audit-section"><div class="subheading">Auditoria de qualidade da questão</div><div class="aocp-audit">`;
  if(au){html+=`<ul class="audit-check">${(au.checklist||[]).map(x=>`<li>${fmt(String(x))}</li>`).join('')}</ul>${au.cobertura?`<p><b>Cobertura:</b> ${fmt(au.cobertura)}</p>`:''}${au.fundamento_edital?`<p><b>Fundamento no edital:</b> ${fmt(au.fundamento_edital)} — Edital PC-BA 2026. Questão autoral no estilo do Instituto AOCP, não reprodução de questão oficial.</p>`:''}`;}
@@ -590,7 +613,7 @@ function renderLesson(c,sources){
  html+='</div></section>';
  if(Array.isArray(c.gaps)&&c.gaps.length)html+=`<section id="gaps-section"><div class="subheading">Para a próxima rodada</div><div class="lesson-callout"><ul class="lesson-list">${c.gaps.map(x=>'<li>'+fmt(String(x))+'</li>').join('')}</ul></div></section>`;
  html+=`<div class="source-note"><b>Materiais do curso usados na elaboração:</b> ${sources.length?sources.map(x=>esc(x.file)+' (p. '+x.page+')').join('; '):'questão previamente incluída ou sem excertos identificados.'}<div style="margin-top:7px"><b>Marco temporal:</b> edital de 29/07/2026; alterações posteriores só quando expressamente previstas.</div></div>`;
- $('lesson-card').innerHTML=html;$('lesson-card').classList.remove('hidden');
+ $('lesson-card').innerHTML=html;$('lesson-card').classList.remove('hidden');if(ceOn)ligarCertoErrado(c,k,sources);
  $('lesson-card').querySelectorAll('[data-personal-form]').forEach(form=>form.addEventListener('submit',e=>{
   e.preventDefault(); const data=new FormData(form),kind=form.dataset.personalForm,id=activeItem.id;
   const url=String(data.get('url')||'').trim();
@@ -606,7 +629,7 @@ function renderLesson(c,sources){
   const id=activeItem.id,group=btn.dataset.removeKind==='law'?'laws':'jurisprudence',i=Number(btn.dataset.removePersonal);
   if(!state.personalSources[id]?.[group])return;state.personalSources[id][group].splice(i,1);save();renderLesson(c,sources);
  }));
- $('lesson-card').querySelectorAll('[data-lesson-target]').forEach(b=>b.onclick=()=>{let node=$(b.dataset.lessonTarget);if(node){node.querySelectorAll('details').forEach(d=>d.open=true);node.scrollIntoView({behavior:'smooth',block:'start'});}});
+ $('lesson-card').querySelectorAll('[data-lesson-target]').forEach(b=>b.onclick=()=>{let node=$(b.dataset.lessonTarget);if(node){const pai=node.closest('details');if(pai)pai.open=true;node.querySelectorAll('details').forEach(d=>d.open=true);node.scrollIntoView({behavior:'smooth',block:'start'});}});
 }
 
 async function prefetchNext(){if(!state.prefetch||!activeItem)return;const next=nextItem();if(!next){$('prep-title').textContent='✓ Rodada finalizada';$('prep-detail').textContent='Você percorreu todos os pontos da trilha.';return;}const k=key(next.id,state.round);$('prep-title').textContent='⚡ Próxima questão';if(loaded[k]||SEEDS[k]){$('prep-detail').textContent=next.discipline+' • já preparada e em cache.';return;}

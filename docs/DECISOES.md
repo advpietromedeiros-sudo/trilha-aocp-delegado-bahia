@@ -57,3 +57,23 @@ arquivo HTML, **regravado a cada bloco com tudo**; o PDF sai da impressão desse
 
 Mesma resposta, item 3: *"3 AUDITORIA DUPLA"*. `DEEP_AUDIT` segue ligado: mais lento e mais caro
 por questão, menos erro. O custo real de um bloco é medido no primeiro (tempo, chamadas, tokens).
+
+### D-008 — A aula vira Certo/Errado comentado; sem grifo azul na questão (31/10/2026, titular)
+
+Textual, 31/10/2026, 21h28: *"os comentários ficam muito grandes e para manter o foco e estudo ativo
+pensei o seguinte... permanece o comentario de cada alternativa... na elaboração da questão não
+precisa botar nenhum termo griafdoo de azul... quero que depois de analisar cada alternativa
+transforme a aula... os comentários... em questões certo e erradas comentadas... faz tanto da parte
+doutrinária... da lei seca e da jurisprudência... ai veja que criei 30 questões... já ajusta essas
+também e na proxima rodada continua com essa pegada... lembrando que a questão aocp permanece igual
+o que vai mudar são os comentários"*.
+
+- A questão AOCP (enunciado, alternativas, gabarito) **não muda**; o comentário de cada alternativa
+  **permanece**.
+- A aula, as pegadinhas e o mapa mental viram **8 a 15 itens Certo/Errado** (doutrina, lei seca,
+  jurisprudência), com o comentário oculto até o aluno julgar.
+- Leitura da sessão, a corrigir se não for isso: a letra da lei e os cartões de jurisprudência
+  **ficam**, mas **recolhidos** ("📚 Consultar a letra da lei e a jurisprudência") — o pedido de
+  29/10 era "ver a letra da lei da questão".
+- As questões já geradas são **convertidas** (1 chamada ao modelo por questão, sobre o comentário
+  existente); a aula antiga fica guardada no arquivo em `aula_original` (§F17).

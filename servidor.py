@@ -14,7 +14,7 @@ from __future__ import annotations
 import concurrent.futures, http.server, json, math, os, pathlib, re, sys, threading, time, unicodedata, urllib.error, urllib.parse, urllib.request, webbrowser
 from collections import Counter
 
-RELEASE = '2026.10.31-v8-blocos'
+RELEASE = '2026.10.31-v9-certo-errado'
 ROOT = pathlib.Path(__file__).resolve().parent
 ASSETS = ROOT / 'assets'
 CACHE = ROOT / 'cache'; CACHE.mkdir(exist_ok=True)
@@ -545,11 +545,9 @@ BASE LOCAL: o pedido traz 'dispositivos_da_base' (lei seca com 'ref' SIGLA:ARTIG
 === O COMENTÁRIO (estilo professor de cursinho, direto) ===
 • commentary.summary: 1 ou 2 frases dizendo o que a questão cobra ("A questão envolve simultaneamente …").
 • commentary.alternatives.{A..E}: {"veredito":"Correta" ou "Errada", "titulo": frase curta (máx. 12 palavras) que diz o erro/acerto começando por verbo — ex.: "desconsidera a lei intermediária benéfica", "confunde início da consumação com cessação da permanência", "aplica adequadamente os três institutos"; "explicacao": 2 a 4 frases objetivas, citando artigo/súmula que resolvem a alternativa}.
-• commentary.lessons ("Aula de aprofundamento"): 2 a 4 seções numeradas, cada uma ligada a uma situação/assertiva — title no formato "1. Instituto — Situação I". Blocos curtos (1 ideia por bloco, até ~5 frases). Tipos: conceito, regra, distincao, fundamento, exemplo, juris, pegadinha (texto começa direto na armadilha; a tela exibe "Pegadinha AOCP:"), atencao (alerta de distinção; a tela exibe "Atenção:"), tabela (preencha 'columns' e 'rows' — use para comparar institutos vizinhos), linha_do_tempo (preencha 'timeline' com marco/rotulo/detalhe/tom — tom 'favoravel' pinta de verde e 'desfavoravel' de vermelho; use em sucessão de leis, prazos, fases). Em blocos que não são tabela/linha do tempo, deixe columns, rows e timeline vazios. Obrigatório: ao menos 1 bloco 'pegadinha' e ao menos 1 'tabela' OU 'linha_do_tempo' na aula.
+• commentary.certo_errado ("Certo ou Errado — estudo ativo"; substitui a antiga aula de aprofundamento): 8 a 15 afirmações para o aluno julgar, que juntas cobrem o que a aula ensinaria — DOUTRINA (conceitos, distinções, exceções), LEI SECA (literalidade dos dispositivos que resolvem a questão; troque UMA palavra para fazer a errada, como a AOCP faz) e JURISPRUDÊNCIA (súmulas, teses e precedentes da base). Cada item: {"afirmacao": 1 ou 2 frases no estilo de prova, "gabarito": "C" ou "E", "tipo": "doutrina" | "lei_seca" | "jurisprudencia", "comentario": 2 a 4 frases que explicam POR QUE está certo ou errado — no item errado, diga a versão correta, "fundamento": artigo, súmula ou precedente que resolve (ou vazio)}. Misture certos e errados (ao menos 3 de cada), use ao menos 2 dos 3 tipos e transforme as pegadinhas recorrentes da AOCP em itens errados. Pode avançar em conteúdo correlato do edital. Não repita literalmente as alternativas A–E.
 • commentary.laws: cite os dispositivos usados (ref da base + dispositivo preciso: artigo, §, inciso). NÃO transcreva a lei: o sistema preenche a redação a partir da base local. 'explicacao' = 1 frase do que memorizar.
 • commentary.jurisprudence: prefira 'precedentes_da_base' (informe 'ref'); o sistema preenche o enunciado. 'texto_literal' fica vazio, salvo trecho copiado exatamente de 'fragmentos_do_material_anexo'. 'explicacao' = 1 frase do que memorizar.
-• commentary.mindmap_titulo + commentary.mindmap: 3 a 5 ramos; 'points' com 2 a 4 itens de no máximo 6 palavras.
-• commentary.traps: 2 a 4 pegadinhas recorrentes da AOCP sobre o tema (frases curtas).
 • commentary.auditoria: {"checklist": ["Uma única alternativa correta", "Cinco alternativas juridicamente plausíveis", "Extensão das alternativas equilibrada", "Fundamentação legal e jurisprudencial"] — ajuste ao caso real; "cobertura": o que a questão trabalhou e o que fica para outras questões do mesmo ponto; "fundamento_edital": "Item X — texto do ponto do edital"}.
 • commentary.gaps: subtemas do ponto ainda não cobrados (para a rodada 2).
 • commentary.itens_correlatos: ids (o campo 'id' de 'pontos_para_correlacao') de OUTROS pontos do edital que a aula e os comentários EXPLICARAM de verdade — com profundidade suficiente para o aluno dar baixa nesses pontos. Pode avançar em conteúdo correlato para isso. Lista vazia se nenhum; no máximo 5; NUNCA invente id.
@@ -568,16 +566,38 @@ ALT = _obj({'veredito': {'type': 'string', 'enum': ['Correta', 'Errada']}, 'titu
 BLOCK = _obj({'type': {'type': 'string', 'enum': LESSON_TYPES}, 'heading': S, 'body': S,
               'columns': ARR_S, 'rows': {'type': 'array', 'items': ARR_S},
               'timeline': {'type': 'array', 'items': _obj({'marco': S, 'rotulo': S, 'detalhe': S, 'tom': {'type': 'string', 'enum': ['neutro', 'favoravel', 'desfavoravel']}})}})
+# 31/10/2026 (titular): a aula, as pegadinhas e o mapa mental viram itens Certo/Errado comentados —
+# "a ideia é ficar sempre um estudo ativo". A questão AOCP não muda.
+CE_ITEM = _obj({'afirmacao': S, 'gabarito': {'type': 'string', 'enum': ['C', 'E']},
+                'tipo': {'type': 'string', 'enum': ['doutrina', 'lei_seca', 'jurisprudencia']},
+                'comentario': S, 'fundamento': S})
+CE_SCHEMA = _obj({'certo_errado': {'type': 'array', 'items': CE_ITEM}})
+
+
+def validar_ce(itens) -> str | None:
+    """Os itens Certo/Errado: 8 a 15, com C e E (ao menos 3 de cada) e ao menos 2 dos 3 tipos."""
+    if not isinstance(itens, list) or not 8 <= len(itens) <= 15: return 'Certo/Errado: são de 8 a 15 itens.'
+    for n, it in enumerate(itens, 1):
+        if not isinstance(it, dict): return f'Certo/Errado: item {n} malformado.'
+        if it.get('gabarito') not in ('C', 'E'): return f'Certo/Errado: item {n} sem gabarito C ou E.'
+        if it.get('tipo') not in ('doutrina', 'lei_seca', 'jurisprudencia'): return f'Certo/Errado: item {n} com tipo inválido.'
+        if len(str(it.get('afirmacao', ''))) < 40: return f'Certo/Errado: afirmação {n} curta demais.'
+        if len(str(it.get('comentario', ''))) < 60: return f'Certo/Errado: comentário {n} curto demais.'
+    gab = Counter(it['gabarito'] for it in itens)
+    if gab['C'] < 3 or gab['E'] < 3: return 'Certo/Errado: misture certos e errados (ao menos 3 de cada).'
+    if len({it['tipo'] for it in itens}) < 2: return 'Certo/Errado: use ao menos 2 tipos (doutrina, lei seca, jurisprudência).'
+    return None
+
+
 SCHEMA = _obj({
     'formato': {'type': 'string', 'enum': ['situacoes', 'assertivas', 'direta']},
     'stem': S, 'options': _obj({L: S for L in 'ABCDE'}), 'correct': {'type': 'string', 'enum': list('ABCDE')},
     'tag': S, 'difficulty': S, 'source_scope': S,
     'commentary': _obj({
         'summary': S, 'alternatives': _obj({L: ALT for L in 'ABCDE'}),
-        'lessons': {'type': 'array', 'items': _obj({'title': S, 'blocks': {'type': 'array', 'items': BLOCK}})},
+        'certo_errado': {'type': 'array', 'items': CE_ITEM},
         'laws': {'type': 'array', 'items': _obj({'ref': S, 'diploma': S, 'dispositivo': S, 'explicacao': S, 'extensao': S})},
         'jurisprudence': {'type': 'array', 'items': _obj({'ref': S, 'tribunal': S, 'identificador': S, 'data': S, 'texto_literal': S, 'explicacao': S, 'url': S})},
-        'traps': ARR_S, 'mindmap_titulo': S, 'mindmap': {'type': 'array', 'items': _obj({'title': S, 'points': ARR_S})},
         'gaps': ARR_S, 'itens_correlatos': ARR_S,
         'auditoria': _obj({'checklist': ARR_S, 'cobertura': S, 'fundamento_edital': S})}),
 })
@@ -599,7 +619,7 @@ def exemplo_compacto():
     if not EXEMPLO: return None
     e = json.loads(json.dumps(EXEMPLO))
     c = e.get('commentary', {})
-    c.pop('mindmap', None); c.pop('gaps', None)
+    for chave in ('mindmap', 'mindmap_titulo', 'gaps', 'lessons', 'traps'): c.pop(chave, None)
     return e
 
 
@@ -627,7 +647,7 @@ def user_prompt(item, round_, gaps, prev):
         'precedentes_da_base': rank_precedents(item),
         'fragmentos_do_material_anexo': frags,
         'transcricoes_primarias_conferidas': next((OFFICIAL[c] for c in [item['id'], item['id'].rsplit('.', 1)[0]] if c in OFFICIAL), {}),
-        'QUESTAO_MODELO_DE_ESTILO': {'instrucao': 'Siga o FORMATO e o TOM deste modelo (enunciado, paralelismo das alternativas, comentário com veredito + título curto, aula com seções numeradas, pegadinha, tabela/linha do tempo, auditoria). NÃO copie o conteúdo nem o tema.', 'modelo': exemplo_compacto()},
+        'QUESTAO_MODELO_DE_ESTILO': {'instrucao': 'Siga o FORMATO e o TOM deste modelo (enunciado, paralelismo das alternativas, comentário com veredito + título curto, auditoria). A aula do modelo foi SUBSTITUÍDA por "certo_errado" — não gere aula, pegadinhas nem mapa mental. NÃO copie o conteúdo nem o tema.', 'modelo': exemplo_compacto()},
         'aviso': 'Fragmentos são excertos dos materiais do curso, não texto oficial integral nem prova de vigência. Indique arquivo e página somente quando sustentados no material.'
     }, ensure_ascii=False)
 
@@ -741,17 +761,8 @@ def validate(q):
         _, tit, exp = alt_parts(c, L)
         if len(exp) < 60: return f'Comentário da alternativa {L} curto demais.'
         if tit and len(tit.split()) > 18: return f'Título do comentário da alternativa {L} longo demais (máx. 12 palavras).'
-    lessons = [x for x in c.get('lessons', []) if isinstance(x, dict)]
-    if len(lessons) < 2: return 'Aula de aprofundamento incompleta (mínimo 2 seções).'
-    blocks = [b for x in lessons for b in x.get('blocks', []) if isinstance(b, dict)]
-    chars = sum(len(str(b.get('body', ''))) + sum(len(' '.join(r)) for r in b.get('rows', []) if isinstance(r, list)) for b in blocks)
-    if chars < 1500: return 'Aula curta: aprofundar os institutos em blocos.'
-    for b in blocks:
-        t = b.get('type')
-        if t == 'tabela' and (len(b.get('columns') or []) < 2 or not b.get('rows')): return 'Bloco tabela sem colunas/linhas.'
-        if t == 'linha_do_tempo' and len(b.get('timeline') or []) < 2: return 'Bloco linha_do_tempo sem marcos.'
-        if t not in ('tabela', 'linha_do_tempo') and (not b.get('heading') and len(str(b.get('body', ''))) < 30): return 'Bloco de aula vazio.'
-    if 'formato' in q and not any(b.get('type') == 'pegadinha' for b in blocks): return 'Inclua ao menos um bloco "pegadinha" na aula.'
+    err_ce = validar_ce(c.get('certo_errado'))
+    if err_ce: return err_ce
     for group in ('laws', 'jurisprudence'):
         if not isinstance(c.get(group, []), list): return 'Referências jurídicas devem ser listas.'
     if q.get('formato') != 'assertivas':
@@ -775,7 +786,7 @@ def stored(key):
 
 AUDIT_SYS = ('Você é auditor crítico de questões para Delegado no estilo Instituto AOCP. Retorne APENAS JSON {"approved":true/false,"problems":["..."],"reason":"..."}. '
              'Audite SOMENTE a questão e o comentário: uma única alternativa juridicamente correta; alternativas paralelas e de extensão próxima; comando no padrão AOCP; '
-             'distratores plausíveis (sem absurdos); coerência com o marco de 29/07/2026; consistência entre gabarito, vereditos, comentários e aula. '
+             'distratores plausíveis (sem absurdos); coerência com o marco de 29/07/2026; consistência entre gabarito, vereditos, comentários e os itens certo/errado (o gabarito C/E de cada item precisa estar juridicamente certo). '
              'A redação literal da lei seca NÃO é enviada (o sistema a preenche depois a partir da base local); não reprove por falta ou forma de transcrição de lei, '
              'nem pelo checklist interno. Reprove apenas por erro jurídico real, ambiguidade de gabarito ou defeito de construção da questão.')
 
@@ -841,6 +852,67 @@ def generate(itemid, round_, provider, gaps=None):
                          gerada_em=time.strftime('%d/%m/%Y %H:%M'))
     f = file_for(itemid, round_); tmp = f.with_suffix('.tmp'); tmp.write_text(json.dumps(q, ensure_ascii=False, indent=2), encoding='utf8'); os.replace(tmp, f)
     return q
+
+
+CE_SYS = ('Você é professor de cursinho para DELEGADO (banca Instituto AOCP, PC-BA 2026). Recebe uma questão JÁ PRONTA e o '
+          'comentário dela (aula, lei seca, jurisprudência, pegadinhas). NÃO altere a questão. Transforme o conteúdo do comentário em '
+          'itens Certo/Errado para estudo ativo, cobrindo DOUTRINA, LEI SECA (literalidade: troque UMA palavra para fazer o item errado, '
+          'como a AOCP faz) e JURISPRUDÊNCIA. Cada item: afirmacao (1 ou 2 frases de prova), gabarito "C" ou "E", tipo '
+          '("doutrina", "lei_seca" ou "jurisprudencia"), comentario (2 a 4 frases: por que está certo ou errado; no errado, a versão '
+          'correta) e fundamento (artigo, súmula ou precedente; vazio se não houver). De 8 a 15 itens, ao menos 3 certos e 3 errados, '
+          'ao menos 2 tipos; as pegadinhas viram itens errados. Use só o que está no comentário e na questão: nunca invente número de '
+          'processo, tese ou artigo. Somente JSON válido {"certo_errado": [...]}.')
+CONVERSOES = {}  # caminho do arquivo -> 'na_fila' | 'pronta' | 'erro: …'  (D-008, 31/10/2026)
+
+
+def converter_ce(path: pathlib.Path, provider: str):
+    """Converte o comentário de UMA questão já gerada para Certo/Errado. A questão não muda; a aula antiga
+    fica em commentary.aula_original (dado não se apaga, HARNESS §F17)."""
+    q = json.loads(path.read_text('utf8'))
+    c = q.get('commentary') or {}
+    if validar_ce(c.get('certo_errado')) is None: return 'pronta'
+    base = {'questao': {k: q.get(k) for k in ('stem', 'options', 'correct')},
+            'comentario': {k: c.get(k) for k in ('summary', 'alternatives', 'lessons', 'traps', 'mindmap', 'laws', 'jurisprudence')}}
+    texto = json.dumps(base, ensure_ascii=False)[:60000]
+    _MEDIDA.atual = {'chamadas': 0, 'tokens_entrada': 0, 'tokens_saida': 0}; t0 = time.time()
+    itens = call_model(CE_SYS, texto, provider, CE_SCHEMA).get('certo_errado')
+    err = validar_ce(itens)
+    if err:
+        itens = call_model(CE_SYS, 'Corrija especificamente: ' + err + '\n' + texto, provider, CE_SCHEMA).get('certo_errado')
+        err = validar_ce(itens)
+    if err: raise RuntimeError(err)
+    q2 = json.loads(path.read_text('utf8'))  # relê: o arquivo pode ter mudado durante a chamada
+    c2 = q2.setdefault('commentary', {})
+    c2['aula_original'] = {k: c2.pop(k) for k in ('lessons', 'traps', 'mindmap', 'mindmap_titulo') if k in c2}
+    c2['certo_errado'] = itens
+    q2['metricas_conversao'] = dict(_MEDIDA.atual, duracao_s=round(time.time() - t0, 1), provider=provider,
+                                    convertida_em=time.strftime('%d/%m/%Y %H:%M'))
+    tmp = path.with_suffix('.tmp'); tmp.write_text(json.dumps(q2, ensure_ascii=False, indent=2), encoding='utf8'); os.replace(tmp, path)
+    return 'pronta'
+
+
+def _job_conversao(path, provider):
+    try: CONVERSOES[str(path)] = converter_ce(path, provider)
+    except Exception as exc: CONVERSOES[str(path)] = 'erro: ' + str(exc)[:300]
+
+
+def pedir_conversoes(provider: str) -> dict:
+    """Enfileira a conversão de toda questão do cache que ainda não tem Certo/Errado."""
+    novas = 0
+    for f in sorted(CACHE.glob('*_R*.json')):
+        try: c = json.loads(f.read_text('utf8')).get('commentary') or {}
+        except Exception: continue
+        if validar_ce(c.get('certo_errado')) is None: CONVERSOES[str(f)] = 'pronta'; continue
+        if CONVERSOES.get(str(f)) == 'na_fila': continue
+        CONVERSOES[str(f)] = 'na_fila'; novas += 1
+        WORKERS.submit(_job_conversao, f, provider)
+    return estado_conversoes(novas)
+
+
+def estado_conversoes(novas: int = 0) -> dict:
+    est = Counter('erro' if v.startswith('erro') else v for v in CONVERSOES.values())
+    erros = {pathlib.Path(k).name: v for k, v in CONVERSOES.items() if v.startswith('erro')}
+    return {'novas_na_fila': novas, 'contagem': dict(est), 'erros': erros}
 
 
 def jobkey(i, r): return f'{i}|{r}'
@@ -988,6 +1060,8 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             if q: return self.send_json({'status': 'ready', 'question': public_q(q)})
             st, err = task_status(jobkey(i, r))
             return self.send_json({'status': st, **({'error': err} if err else {})})
+        if p.path == '/api/converter_ce':
+            return self.send_json(estado_conversoes())
         if p.path == '/api/bloco':
             try: r = int((z.get('round') or ['1'])[0] or 1)
             except ValueError: r = 1
@@ -1011,12 +1085,18 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 
     def do_POST(self):
         p = urllib.parse.urlparse(self.path).path
-        if p not in ['/api/prefetch', '/api/generate', '/api/reveal', '/api/bloco', '/api/historico']:
+        if p not in ['/api/prefetch', '/api/generate', '/api/reveal', '/api/bloco', '/api/historico', '/api/converter_ce']:
             self.descartar_corpo(); return self.send_json({'error': 'Endpoint inexistente'}, 404)
         if not self.local_only():
             # 31/10/2026: recusar SEM ler o corpo fazia o Windows derrubar a conexão (ConnectionReset) antes
             # de a recusa chegar — intermitente, medido no testar_servidor.py. Lê e descarta antes de responder.
             self.descartar_corpo(); return self.send_json({'error': 'Origem não permitida'}, 403)
+        if p == '/api/converter_ce':
+            # D-008: converte para Certo/Errado as questões já geradas (1 chamada ao modelo por questão).
+            provider = str(self.read_json().get('provider', 'openai'))
+            if provider not in ('openai', 'claude'): return self.send_json({'error': 'Provedor inválido'}, 400)
+            if not has_key(provider): return self.send_json({'error': 'API não configurada no .env'}, 400)
+            return self.send_json(pedir_conversoes(provider))
         if p == '/api/historico':
             # D-006: um único arquivo, regravado a cada bloco SEMPRE com tudo (a tela manda o histórico inteiro).
             html_txt = self.read_json(limite=HIST_MAX).get('html')

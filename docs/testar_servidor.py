@@ -46,6 +46,22 @@ def prova(desc: str, ok: bool, detalhe: str = "") -> None:
         falhas.append(desc)
 
 
+def itens_ce(n: int = 10) -> list[dict]:
+    """Itens Certo/Errado válidos (v9, 31/10/2026): metade C, metade E, três tipos."""
+    tipos = ["doutrina", "lei_seca", "jurisprudencia"]
+    return [
+        {
+            "afirmacao": f"Afirmação {i} de prova sobre o instituto, com extensão suficiente para julgar.",
+            "gabarito": "C" if i % 2 else "E",
+            "tipo": tipos[i % 3],
+            "comentario": f"Comentário {i}: explica por que a afirmação está certa ou errada, "
+            "com a versão correta.",
+            "fundamento": "CP, art. 1º",
+        }
+        for i in range(n)
+    ]
+
+
 def questao_valida(correlatos: list[str]) -> dict:
     """Uma questão que passa no validate() do servidor."""
     alt = {
@@ -60,26 +76,6 @@ def questao_valida(correlatos: list[str]) -> dict:
         }
         for L in "ABCDE"
     }
-    corpo = "Bloco de aula com conteúdo suficiente para a validação de extensão mínima. " * 6
-    blocos = [
-        {"type": "conceito", "heading": "Conceito", "body": corpo, "columns": [], "rows": [], "timeline": []},
-        {
-            "type": "pegadinha",
-            "heading": "Pegadinha",
-            "body": corpo,
-            "columns": [],
-            "rows": [],
-            "timeline": [],
-        },
-        {
-            "type": "tabela",
-            "heading": "Quadro",
-            "body": "",
-            "columns": ["A", "B"],
-            "rows": [["x", "y"]],
-            "timeline": [],
-        },
-    ]
     return {
         "formato": "direta",
         "stem": "Enunciado de teste com extensão suficiente para a validação formal do servidor do Trilha.\n"
@@ -92,12 +88,9 @@ def questao_valida(correlatos: list[str]) -> dict:
         "commentary": {
             "summary": "s",
             "alternatives": com_alt,
-            "lessons": [{"title": "1. Um", "blocks": blocos}, {"title": "2. Dois", "blocks": blocos}],
+            "certo_errado": itens_ce(),
             "laws": [],
             "jurisprudence": [],
-            "traps": ["t"],
-            "mindmap_titulo": "m",
-            "mindmap": [],
             "gaps": [],
             "itens_correlatos": correlatos,
             "auditoria": {"checklist": [], "cobertura": "c", "fundamento_edital": "f"},
@@ -133,6 +126,8 @@ def main() -> int:
             sistema = str(payload.get("instructions") or payload.get("system") or "")
             if sistema.startswith("Você é auditor"):
                 texto = json.dumps({"approved": True, "problems": [], "reason": "ok"})
+            elif sistema.startswith("Você é professor de cursinho"):  # conversão para Certo/Errado (v9)
+                texto = json.dumps({"certo_errado": itens_ce(12)}, ensure_ascii=False)
             else:
                 texto = json.dumps(questao_valida(correlatos_brutos), ensure_ascii=False)
             uso = {"input_tokens": 1000, "output_tokens": 300}
@@ -162,6 +157,37 @@ def main() -> int:
             str(q["commentary"]["itens_correlatos"]),
         )
         prova("arquivo da questão gravado no cache", srv.file_for(alvo, 1).exists())
+        prova(
+            "a questão nova já nasce com Certo/Errado",
+            srv.validar_ce(q["commentary"].get("certo_errado")) is None,
+        )
+
+        # 1b. regras do Certo/Errado (v9)
+        prova("C/E: 7 itens é pouco", srv.validar_ce(itens_ce(7)) is not None)
+        so_certos = [dict(x, gabarito="C") for x in itens_ce(10)]
+        prova("C/E: só certos é recusado (tem de misturar)", srv.validar_ce(so_certos) is not None)
+        um_tipo = [dict(x, tipo="doutrina") for x in itens_ce(10)]
+        prova("C/E: um tipo só é recusado", srv.validar_ce(um_tipo) is not None)
+
+        # 1c. conversão de questão ANTIGA: a questão não muda, a aula fica guardada
+        antiga = questao_valida([])
+        antiga["commentary"].pop("certo_errado")
+        antiga["commentary"].update({"lessons": [{"title": "1. Aula", "blocks": []}], "traps": ["p"]})
+        arq_antigo = srv.file_for(outro, 2)
+        arq_antigo.write_text(json.dumps(antiga, ensure_ascii=False), encoding="utf8")
+        srv.converter_ce(arq_antigo, "openai")
+        conv = json.loads(arq_antigo.read_text("utf8"))
+        prova("conversão: ganha 12 itens Certo/Errado", len(conv["commentary"].get("certo_errado", [])) == 12)
+        prova(
+            "conversão: enunciado, alternativas e gabarito INTACTOS",
+            all(conv[k] == antiga[k] for k in ("stem", "options", "correct")),
+        )
+        prova(
+            "conversão: a aula antiga fica guardada em aula_original (nada se apaga)",
+            conv["commentary"].get("aula_original", {}).get("lessons") == antiga["commentary"]["lessons"]
+            and "lessons" not in conv["commentary"],
+        )
+        prova("conversão: mede a chamada", conv.get("metricas_conversao", {}).get("chamadas") == 1)
 
         # 2 e 3. HTTP
         httpd = srv.http.server.ThreadingHTTPServer(("127.0.0.1", porta), srv.Handler)
@@ -180,7 +206,12 @@ def main() -> int:
                 with urllib.request.urlopen(req, timeout=10) as r:
                     return r.status, json.loads(r.read())
             except urllib.error.HTTPError as e:
-                return e.code, json.loads(e.read() or b"{}")
+                # O STATUS é o que se confere. Ler o corpo do erro de uma requisição GRANDE recusada travou
+                # 2 vezes em 15 no Windows (31/10/2026) com o 403 já recebido — causa exata não identificada.
+                try:
+                    return e.code, json.loads(e.read() or b"{}")
+                except (TimeoutError, OSError, ValueError):
+                    return e.code, {}
 
         st, r = chamar(
             "/api/bloco", {"ids": [vizinho, outro, "INVENTADO-1"], "round": 1, "provider": "openai"}

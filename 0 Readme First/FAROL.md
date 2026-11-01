@@ -45,8 +45,14 @@
      Provas: `testar_servidor.py` (11+1 casos, API simulada), `testar_blocos.mjs` (13 casos, script
      real), `testar_pagina.cjs` (página real carrega sem erro). ⚠️ `testar_servidor.py` passou em 29
      de 30 execuções locais: 1 falha intermitente não reproduzida.
-   - ⏳ **Falta a prova real:** o 1º bloco com a API de verdade mede tempo, chamadas e tokens. Ler as
-     `metricas` em `cache/*.json` depois dele.
+   - ✅ **Prova real (31/10/2026, 20h10):** 1º bloco gerado com a API — 49,9 s por questão em média,
+     2 chamadas (geração + auditoria, nenhuma reprovada), 18.127 tokens de entrada e 3.830 de saída
+     por questão (12 primeiras medidas); bloco de 30 ≈ 12 a 13 min com 2 geradores.
+   - ✅ **31/10/2026, 21h40 — Certo/Errado (D-008, servidor v9):** a aula, as pegadinhas e o mapa
+     mental viram 8 a 15 itens C/E comentados (doutrina, lei seca, jurisprudência), com comentário
+     oculto até julgar; lei seca e jurisprudência recolhidas; questão sem grifo azul. Rota
+     `/api/converter_ce` converte as já geradas (questão intacta; aula guardada em `aula_original`).
+     ⏳ **Falta:** o titular reiniciar o servidor e a conversão das 33 questões do cache rodar.
    - ✅ **31/10/2026, 19h38 — acervo grande indexado** (`ferramentas/ampliar_acervo.py`): índice de
      744 → **9.356 páginas** (+8.612, inclusive os 42 resumos dos ZIPs PCPR; PCPR-3 e 4 eram cópia).
      ⚠️ Camada: o **arquivo** do índice mudou; o servidor só usa o índice novo ao ser **reiniciado**.
