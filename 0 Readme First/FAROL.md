@@ -2,9 +2,13 @@
 
 > Estado, tarefas e o que ficou rodando. Atualizado a cada ~15 min de trabalho e no fechamento.
 
-**Última atualização:** 01/11/2026, 21h34.
+**Última atualização:** 02/11/2026, 18h26.
 
 ## Estado
+
+- 🆕 **02/11/2026, 18h26 — Treino de Discursiva** (D-011): `discursiva/Treino_Discursiva.html` — 8 peças passo a passo,
+  8 estudos de caso, 74 cartões de artigos em repetição espaçada + Certo/Errado. Abre com duplo clique (sem servidor).
+  Próximo: mais peças/casos por disciplina do edital e a Lei 15.358/2026 depois de conferida.
 
 - 🆕 **01/11/2026, 21h34 — bloco de UMA disciplina** (D-010, complemento do titular): seletor "Bloco de:" no painel
   e no diálogo (todas intercaladas ou só uma). ⚠️ Disciplina pequena dá bloco menor que 30 (Processo Civil: 12 pontos).

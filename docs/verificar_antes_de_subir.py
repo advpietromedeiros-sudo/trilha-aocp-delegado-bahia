@@ -51,6 +51,10 @@ PORTAS: list[tuple[str, list[str], str]] = [
      "bloco repetindo ponto; baixa por correlação de id inventado; histórico com <script> vivo"),
     ("a página carrega sem erro de JavaScript", ["node", "docs/testar_pagina.cjs"],
      "tela inteira em branco por nome errado ou script na ordem errada"),
+    ("treino de discursiva: comportamento", ["node", "docs/testar_discursiva.cjs"],
+     "peça sem modelo ou checklist; cartão sem artigo; nota fora das Tabelas 7.3/7.4; sem reagendar"),
+    ("o teste da discursiva acusa", ["node", "docs/testar_discursiva.cjs", "--autoteste"],
+     "teste que passa com a nota técnica da peça estragada (verde falso)"),
 ]
 
 # Régua de segredo (31/10/2026): exige VALOR de 20+ caracteres depois do `=` — o LEIA_PRIMEIRO cita

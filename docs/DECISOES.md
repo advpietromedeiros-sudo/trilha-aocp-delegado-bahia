@@ -120,3 +120,19 @@ legislalção aplicada. Prazos... qualificadoras, aumento de pena..."*
 - **Complemento, 01/11/2026, 21h34** — titular, textual: *"FALTOU COLOCAR A OPÇÃO DE EU ESCOLHER SE QUERO QUE ELABORE DE UMA SO
   DISCIPLINA... SE EU QUISER FAZER LOGO UM BLOCO SOMENTE DE PROCESSO CIVIL AI FAZ"*. Seletor "Bloco de:" (painel e diálogo),
   em `state.blocoDisc`. O bloco leva os pendentes da disciplina, até 30 — uma questão por ponto e rodada, como sempre.
+
+### D-011 — Treino de Discursiva: peça e estudo de caso passo a passo, com memorização dos artigos (02/11/2026, titular)
+
+Ordem do titular, 02/11/2026, textual (trecho): *"CRIAR UMA APLICAÇÃO PRÁTICA PARA EU FAZER AS PEÇAS PRÁTICAS E DECORAR TODA A
+NUMERAÇÃO DAS LEIS E OS ARTIGOS... COM UM PASSO A PASSO EU VOU CRIAR A PEÇA EU MESMO... DA MESMA FORMA PARA AS QUESTÕES
+SUBJETIVAS... AO FINAL DE CADA QUESTÃO E PEÇA TEREMOS ALI UMA FORMA... PARA MEMORIZAR... FAÇA COM BASE NO EDITAL DA BA"*.
+
+- `discursiva/Treino_Discursiva.html` + `discursiva/conteudo.js`: arquivo único, sem servidor, dados no navegador.
+- Regras do edital conferidas no PDF oficial (itens 7.2.9 e 7.2.11, Tabelas 7.3 e 7.4, Anexo III): peça 60 (técnico 40,
+  sistematização 10, português 10), estudo de caso 20 (15 + 5), mínimo 70, peça até 90 linhas, caso de 10 a 25.
+- 8 peças (preventiva, temporária, busca e apreensão, interceptação, Maria da Penha, sequestro de bens, infiltração,
+  portaria de IP) em passos com orientação, artigos, modelo e checklist; 8 estudos de caso com espelho; 74 cartões
+  (artigo + Certo/Errado para a objetiva) em repetição espaçada de 5 caixas (1, 3, 7, 15, 30 dias).
+- Conteúdo **autoral**, escrito a partir da lei (texto público); não transcreve o material de terceiro da pasta
+  DELEGADO BA (D-002). ⚠️ A Lei 15.358/2026 **não** entrou: o texto não foi conferido nesta sessão.
+- Estimativa de linhas: 72 caracteres por linha manuscrita (leitura da sessão; ajustar se a folha da AOCP for outra).

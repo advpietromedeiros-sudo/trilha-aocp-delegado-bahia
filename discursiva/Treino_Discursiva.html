@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Treino de Discursiva · Delegado PC-BA</title>
+<style>
+:root{--bg:#f6f4ef;--papel:#fff;--tinta:#1f2433;--suave:#5d6577;--linha:#ddd8cc;--azul:#24508f;--azul2:#e7eef9;--verde:#1f7a4d;--verde2:#e3f3ea;--vermelho:#b3261e;--vermelho2:#fbe9e7;--ouro:#9a6b00;--ouro2:#fff4d6}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tinta);font:16px/1.55 "Segoe UI",system-ui,sans-serif}
+header{background:var(--azul);color:#fff;padding:12px 18px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+header h1{margin:0;font-size:20px}header small{opacity:.85}
+nav.abas{display:flex;gap:6px;flex-wrap:wrap;margin-left:auto}nav.abas button{background:transparent;border:1px solid #ffffff66;color:#fff;border-radius:999px;padding:6px 14px;font:inherit;cursor:pointer}nav.abas button.on{background:#fff;color:var(--azul);font-weight:700}
+main{max-width:1180px;margin:0 auto;padding:18px}
+.card{background:var(--papel);border:1px solid var(--linha);border-radius:12px;padding:16px 18px;margin-bottom:14px}
+h2{margin:.2em 0 .5em;font-size:22px}h3{margin:.8em 0 .4em;font-size:17px}
+table{border-collapse:collapse;width:100%}td,th{border-bottom:1px solid var(--linha);padding:7px 8px;text-align:left;vertical-align:top}th{background:#f0ede5}
+.grade{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.item{background:var(--papel);border:1px solid var(--linha);border-radius:12px;padding:14px;cursor:pointer;text-align:left;font:inherit;color:inherit}.item:hover{border-color:var(--azul)}
+.item b{display:block;font-size:17px}.item small{color:var(--suave)}.selo{display:inline-block;font-size:12px;font-weight:700;border-radius:999px;padding:2px 9px;margin-top:6px}
+.feito{background:var(--verde2);color:var(--verde)}.pend{background:#eee;color:#666}
+.bt{background:var(--papel);border:1px solid var(--linha);border-radius:9px;padding:8px 14px;font:inherit;cursor:pointer}.bt.pri{background:var(--azul);border-color:var(--azul);color:#fff;font-weight:700}.bt.ok{background:var(--verde);border-color:var(--verde);color:#fff}.bt:disabled{opacity:.5;cursor:default}
+.linha-bts{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.enun{background:#f1f1ef;border-left:4px solid #888;padding:10px 14px;border-radius:6px;white-space:pre-wrap}
+.orient{background:var(--azul2);border-left:4px solid var(--azul);padding:10px 14px;border-radius:6px}
+.modelo{background:var(--verde2);border-left:4px solid var(--verde);padding:10px 14px;border-radius:6px;white-space:pre-wrap;font-family:Georgia,serif}
+.mnem{background:var(--ouro2);border-left:4px solid var(--ouro);padding:10px 14px;border-radius:6px}
+.alerta{background:var(--vermelho2);border-left:4px solid var(--vermelho);padding:10px 14px;border-radius:6px}
+.arts{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}.arts span{background:#fff;border:1px solid var(--azul);color:var(--azul);border-radius:999px;padding:2px 10px;font-size:14px}
+textarea{width:100%;min-height:150px;border:1px solid var(--linha);border-radius:8px;padding:10px;font:16px/1.6 Georgia,serif;resize:vertical}
+.cont{font-size:14px;color:var(--suave);margin-top:4px}.cont.ruim{color:var(--vermelho);font-weight:700}
+.passos{display:flex;gap:4px;flex-wrap:wrap;margin:8px 0 14px}.passos button{border:1px solid var(--linha);background:#fff;border-radius:6px;padding:4px 9px;font-size:13px;cursor:pointer}.passos button.at{background:var(--azul);color:#fff;border-color:var(--azul)}.passos button.ok{background:var(--verde2);border-color:var(--verde);color:var(--verde)}
+.check label{display:block;padding:3px 0}
+.flash{text-align:center;padding:26px 18px}.flash .p{font-size:20px;font-weight:700}.flash .r{font-size:18px;margin-top:12px}.flash .a{color:var(--azul);font-weight:700;margin-top:6px}
+.flash input{font:inherit;padding:8px;border:1px solid var(--linha);border-radius:8px;width:min(520px,100%);margin-top:12px}
+.placar{display:flex;gap:10px;flex-wrap:wrap}.placar div{background:#fff;border:1px solid var(--linha);border-radius:10px;padding:8px 14px}.placar b{font-size:20px;display:block}
+.caixas{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}.caixas div{background:#fff;border:1px solid var(--linha);border-radius:8px;padding:8px;text-align:center}.caixas b{display:block;font-size:20px}
+.peca-final{white-space:pre-wrap;font-family:Georgia,serif;background:#fffef8;border:1px solid var(--linha);padding:14px;border-radius:8px}
+@media(max-width:700px){main{padding:10px}.caixas{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body>
+<header><h1>⚖️ Treino de Discursiva</h1><small>Delegado PC-BA 2026 · Instituto AOCP · peça + estudos de caso + memorização da lei</small>
+<nav class="abas" id="abas"></nav></header>
+<main id="tela"></main>
+<script src="conteudo.js"></script>
+<script>
+/* Treino de Discursiva (02/11/2026, pedido do titular): fazer a peça e os estudos de caso PASSO A PASSO, sob orientação,
+   e memorizar os artigos de cada um (cartões com repetição espaçada + Certo/Errado para a objetiva).
+   Tudo fica no navegador (localStorage); o conteúdo está em conteudo.js. */
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const CHAVE='disc-pcba:v1';
+let st={pecas:{},casos:{},cartoes:{},hist:[]};try{st=Object.assign(st,JSON.parse(localStorage.getItem(CHAVE)||'{}'))}catch(e){}
+const salvar=()=>{try{localStorage.setItem(CHAVE,JSON.stringify(st))}catch(e){}};
+const hoje=()=>{const d=new Date();d.setHours(0,0,0,0);return d.getTime()};
+const DIA=864e5,INTERVALO=[0,1,3,7,15,30];
+/* linhas manuscritas: ~72 caracteres por linha da folha de resposta (estimativa) */
+const LARG=72;const linhas=t=>String(t||'').split('\n').reduce((n,l)=>n+Math.max(1,Math.ceil(l.length/LARG)),0)-(t?0:1);
+
+/* ---------- todos os cartões, com id estável ---------- */
+const CARTOES=[];
+for(const p of PECAS)p.cards.forEach((c,i)=>CARTOES.push({...c,id:p.id+'#'+i,orig:p.titulo}));
+for(const c of CASOS)c.cards.forEach((k,i)=>CARTOES.push({...k,id:c.id+'#'+i,orig:c.titulo}));
+const cx=id=>st.cartoes[id]||{caixa:0,prox:0};
+
+/* ---------- passos de uma peça ---------- */
+function passosDe(p){
+ if(p.tipo==='inquerito')return[
+  {t:'Cabeçalho',orient:'Identifique a unidade policial e o número da portaria. Sem nomes do candidato.',arts:['Edital PC-BA, item 7.2.11.3'],check:['Unidade policial com lacunas','Nada que identifique o candidato'],modelo:'POLÍCIA CIVIL DO ESTADO DA BAHIA\nDelegacia Territorial de …\nPortaria nº …/…'},
+  {t:'Preâmbulo',orient:'Quem instaura, com qual atribuição e fundamento (art. 5º, I, CPP: de ofício).',arts:p.pre_arts,check:['Citei a atribuição constitucional e a Lei 12.830','Fundamentei a instauração de ofício (art. 5º, I)'],modelo:p.preambulo},
+  {t:'Dos fatos',orient:'Narre só o que o enunciado traz, no condicional ("teria"), sem juízo definitivo.',arts:[],check:['Narrei sem inventar dados','Usei o condicional (fase de apuração)'],modelo:p.fatos},
+  ...p.direito,
+  {...BASE.fecho,orient:'Local, data e "Delegado de Polícia Civil".',modelo:'…/BA, … de … de ….\n\nDelegado de Polícia Civil'}];
+ return[
+  {...BASE.enderecamento,modelo:'EXCELENTÍSSIMO(A) SENHOR(A) JUIZ(ÍZA) DE DIREITO DA … VARA CRIMINAL DA COMARCA DE …/BA\n(ou: JUIZ DAS GARANTIAS, onde implantado)'},
+  BASE.referencia,
+  {t:'Preâmbulo',orient:'Quem representa, com que atribuição, com que fundamento legal, pelo quê e contra quem. É aqui que o examinador vê se você sabe A PEÇA.',arts:p.pre_arts,check:['Usei o verbo correto (REPRESENTAR)','Citei os artigos do pedido','Identifiquei o representado (qualificação nos autos)'],modelo:p.preambulo},
+  {t:'Dos fatos',orient:'Síntese objetiva SÓ com o que o enunciado traz. Nunca invente dados (nomes, datas, números).',arts:[],check:['Síntese curta e fiel ao enunciado','Nenhum dado inventado','Indiquei o IP de origem'],modelo:p.fatos},
+  ...p.direito,
+  {t:'Dos pedidos',orient:'Pedidos NUMERADOS: o principal, os acessórios (mandado, BNMP, acesso a dados…), oitiva do MP, sigilo e urgência. A AOCP pontua CADA pleito.',arts:[],check:p.pedidos_check,modelo:p.pedidos},
+  BASE.fecho];
+}
+
+/* ---------- abas ---------- */
+const ABAS=[['edital','🗺️ Edital'],['pecas','📜 Peças'],['casos','✍️ Estudos de caso'],['memoria','🧠 Memorizar'],['progresso','📊 Progresso']];
+let aba='edital';
+const marcarAba=a=>{aba=a;$('abas').innerHTML=ABAS.map(([k,n])=>`<button class="${k===a?'on':''}" data-aba="${k}">${n}</button>`).join('')};
+function ir(a){aba=a;$('abas').innerHTML=ABAS.map(([k,n])=>`<button class="${k===a?'on':''}" data-aba="${k}">${n}</button>`).join('');({edital,pecas:listaPecas,casos:listaCasos,memoria:memorizar,progresso})[a]();scrollTo(0,0)}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-aba]');if(b)ir(b.dataset.aba)});
+
+function edital(){
+ const due=CARTOES.filter(c=>cx(c.id).prox<=Date.now()).length;
+ $('tela').innerHTML=`<div class="card"><h2>A discursiva de Delegado PC-BA 2026</h2><p>Regras conferidas no <b>Edital SAEB nº 02/2026</b> (o PDF está na pasta DELEGADO BA). Treine sempre dentro delas.</p>
+ <table><tr><th>Item</th><th>Regra</th><th>Edital</th></tr>${EDITAL.regras.map(r=>`<tr><td><b>${esc(r[0])}</b></td><td>${esc(r[1])}</td><td>${esc(r[2])}</td></tr>`).join('')}</table></div>
+ <div class="card"><h2>Como usar</h2><ol><li><b>Peças</b>: escolha uma e faça passo a passo — escreva cada parte, depois compare com o modelo e marque o checklist (é como a banca corrige).</li><li><b>Estudos de caso</b>: responda em 10 a 25 linhas e corrija pelo espelho.</li><li>No fim de cada um, <b>memorize</b>: cartões com o artigo de cada regra, em repetição espaçada, e itens Certo/Errado — que servem também para a objetiva.</li><li>Volte todo dia à aba <b>Memorizar</b>: ${due} cartão(ões) para hoje.</li></ol>
+ <div class="alerta"><b>Atenção:</b> a peça vale 60 dos 100 pontos e a nota mínima é 70 — a peça decide a discursiva. Assine sempre só "Delegado de Polícia Civil".</div></div>
+ <div class="card"><h2>O que pode cair (Conhecimentos Específicos)</h2><p>${EDITAL.disciplinas.map(esc).join(' · ')}</p></div>`;
+}
+
+function listaPecas(){
+ $('tela').innerHTML=`<div class="card"><h2>📜 Peças práticas</h2><p>Representações e peça de inquérito — os tipos que o edital admite (item 7.2.9.1). Comece pelas mais cobradas.</p></div><div class="grade">${PECAS.map(p=>{const s=st.pecas[p.id];return `<button class="item" data-peca="${p.id}"><b>${esc(p.titulo)}</b><small>${esc(p.freq)}</small><br><span class="selo ${s&&s.nota!=null?'feito':'pend'}">${s&&s.nota!=null?'Feita · '+s.nota+'/60':'A fazer'}</span></button>`}).join('')}</div>`;
+}
+function listaCasos(){
+ $('tela').innerHTML=`<div class="card"><h2>✍️ Estudos de caso</h2><p>Cada um vale 20 pontos: 15 de conhecimento técnico e 5 de Língua Portuguesa. Entre 10 e 25 linhas.</p></div><div class="grade">${CASOS.map(c=>{const s=st.casos[c.id];return `<button class="item" data-caso="${c.id}"><b>${esc(c.titulo)}</b><small>${esc(c.disc)}</small><br><span class="selo ${s&&s.nota!=null?'feito':'pend'}">${s&&s.nota!=null?'Feito · '+s.nota+'/20':'A fazer'}</span></button>`}).join('')}</div>`;
+}
+document.addEventListener('click',e=>{const p=e.target.closest('[data-peca]');if(p)abrirPeca(p.dataset.peca);const c=e.target.closest('[data-caso]');if(c)abrirCaso(c.dataset.caso)});
+
+/* ---------- peça passo a passo ---------- */
+let peca=null,passo=0;
+function abrirPeca(id){marcarAba('pecas');peca=PECAS.find(p=>p.id===id);st.pecas[id]=st.pecas[id]||{txt:{},chk:{}};passo=0;telaPeca()}
+function telaPeca(){
+ const ps=passosDe(peca),s=st.pecas[peca.id],P=ps[passo],ultimo=passo===ps.length;
+ const barra=`<div class="passos">${ps.map((x,i)=>`<button class="${i===passo?'at':(s.txt[i]?'ok':'')}" data-passo="${i}">${i+1}. ${esc(x.t)}</button>`).join('')}<button class="${ultimo?'at':''}" data-passo="${ps.length}">✔ Peça completa</button></div>`;
+ let corpo;
+ if(ultimo){
+  const texto=ps.map((x,i)=>s.txt[i]||'').filter(Boolean).join('\n\n'),n=linhas(texto);
+  const totChk=ps.reduce((a,x)=>a+(x.check||[]).length,0),feitos=ps.reduce((a,x,i)=>a+(x.check||[]).filter((_,j)=>s.chk[i+'.'+j]).length,0);
+  const tec=Math.round(40*feitos/Math.max(1,totChk)),sis=Math.round(10*ps.filter((x,i)=>s.txt[i]).length/ps.length);
+  corpo=`<h3>Sua peça montada</h3><div class="cont ${n>90?'ruim':''}">≈ ${n} linhas manuscritas (máximo 90${n>90?' — o excesso seria DESCONSIDERADO':''})</div><div class="peca-final">${esc(texto)||'(nada escrito ainda)'}</div>
+  <h3>Autoavaliação pela Tabela 7.3</h3><table><tr><td>Conhecimento técnico (checklist ${feitos}/${totChk})</td><td><b>${tec}</b>/40</td></tr><tr><td>Sistematização lógica (partes escritas)</td><td><b>${sis}</b>/10</td></tr><tr><td>Língua Portuguesa — sua nota honesta</td><td><input type="number" id="lp" min="0" max="10" value="${s.lp??8}" style="width:70px"> /10</td></tr></table>
+  ${n>90?'<div class="alerta">Corte texto: a banca desconsidera o que passar de 90 linhas (item 7.2.9.5).</div>':''}
+  <div class="mnem"><b>Para gravar:</b> ${esc(peca.mnemonico)}</div>
+  <div class="linha-bts"><button class="bt ok" id="salvarNota">Registrar nota e ir memorizar →</button><button class="bt" id="refazer">Refazer do zero</button></div>`;
+ }else{
+  corpo=`<h3>Passo ${passo+1} de ${ps.length}: ${esc(P.t)}</h3><div class="orient">${esc(P.orient)}</div>
+  ${P.arts&&P.arts.length?`<div class="arts">${P.arts.map(a=>`<span>${esc(a)}</span>`).join('')}</div>`:''}
+  <textarea id="txt" placeholder="Escreva aqui este trecho da peça, como faria na folha de resposta…">${esc(s.txt[passo]||'')}</textarea><div class="cont" id="cont"></div>
+  <div class="linha-bts"><button class="bt" id="verModelo">👁 Comparar com o modelo</button>${passo>0?'<button class="bt" id="ant">◀ Anterior</button>':''}<button class="bt pri" id="prox">Próximo passo ▶</button></div>
+  <div id="area-modelo" ${s['m'+passo]?'':'hidden'}><h3>Modelo deste passo</h3><div class="modelo">${esc(P.modelo||'')}</div>
+  ${P.check&&P.check.length?`<h3>Checklist (marque o que VOCÊ fez)</h3><div class="check">${P.check.map((c,j)=>`<label><input type="checkbox" data-chk="${passo}.${j}" ${s.chk[passo+'.'+j]?'checked':''}> ${esc(c)}</label>`).join('')}</div>`:''}</div>`;
+ }
+ $('tela').innerHTML=`<div class="card"><div class="linha-bts" style="margin-top:0"><button class="bt" data-aba="pecas">← Peças</button></div><h2>${esc(peca.titulo)}</h2><details ${passo===0?'open':''}><summary><b>Enunciado</b></summary><div class="enun">${esc(peca.enunciado)}</div></details>${barra}${corpo}</div>`;
+ const t=$('txt');if(t){const upd=()=>{s.txt[passo]=t.value;salvar();$('cont').textContent='≈ '+linhas(t.value)+' linha(s) neste trecho'};t.oninput=upd;upd();t.focus()}
+ const on=(id,f)=>{const e=$(id);if(e)e.onclick=f};
+ on('verModelo',()=>{s['m'+passo]=1;salvar();$('area-modelo').hidden=false});
+ on('prox',()=>{passo++;telaPeca()});on('ant',()=>{passo--;telaPeca()});
+ on('salvarNota',()=>{const ps2=passosDe(peca),tot=ps2.reduce((a,x)=>a+(x.check||[]).length,0),f=ps2.reduce((a,x,i)=>a+(x.check||[]).filter((_,j)=>s.chk[i+'.'+j]).length,0);
+  const tec=Math.round(40*f/Math.max(1,tot)),sis=Math.round(10*ps2.filter((x,i)=>s.txt[i]).length/ps2.length);let lp=Math.max(0,Math.min(10,+$('lp').value||0));if(tec===0&&sis===0)lp=0;
+  s.lp=lp;s.nota=tec+sis+lp;st.hist.push({t:'peca',id:peca.id,nota:s.nota,max:60,em:new Date().toISOString()});salvar();sessao(peca.cards.map((_,i)=>peca.id+'#'+i),'Memorize: '+peca.titulo)});
+ on('refazer',()=>{if(confirm('Apagar o que você escreveu nesta peça e recomeçar? A nota registrada fica no histórico.')){st.pecas[peca.id]={txt:{},chk:{}};salvar();passo=0;telaPeca()}});
+ document.querySelectorAll('[data-passo]').forEach(b=>b.onclick=()=>{passo=+b.dataset.passo;telaPeca()});
+ document.querySelectorAll('[data-chk]').forEach(c=>c.onchange=()=>{s.chk[c.dataset.chk]=c.checked;salvar()});
+}
+
+/* ---------- estudo de caso ---------- */
+let caso=null;
+function abrirCaso(id){marcarAba('casos');caso=CASOS.find(c=>c.id===id);st.casos[id]=st.casos[id]||{txt:'',chk:{}};telaCaso()}
+function telaCaso(){
+ const s=st.casos[caso.id],corrigido=!!s.corrigido;
+ $('tela').innerHTML=`<div class="card"><div class="linha-bts" style="margin-top:0"><button class="bt" data-aba="casos">← Estudos de caso</button></div><h2>${esc(caso.titulo)}</h2><small>${esc(caso.disc)} · 10 a 25 linhas · 20 pontos</small>
+ <h3>Enunciado</h3><div class="enun">${esc(caso.enunciado)}</div>
+ <details><summary><b>🧭 Roteiro (abra se travar)</b></summary><ol>${caso.roteiro.map(r=>`<li>${esc(r)}</li>`).join('')}</ol></details>
+ <h3>Sua resposta</h3><textarea id="txt" style="min-height:260px" ${corrigido?'readonly':''}>${esc(s.txt)}</textarea><div class="cont" id="cont"></div>
+ <div class="linha-bts">${corrigido?'<button class="bt" id="reabrir">Reescrever</button>':'<button class="bt pri" id="corrigir">Corrigir pelo espelho</button>'}</div>
+ <div id="corr" ${corrigido?'':'hidden'}><h3>Espelho (marque o que sua resposta TEM)</h3><div class="check">${caso.espelho.map((e,j)=>`<label><input type="checkbox" data-esp="${j}" ${s.chk[j]?'checked':''}> ${esc(e[0])} <b>(${e[1]} pts)</b></label>`).join('')}</div>
+ <p>Língua Portuguesa (sua nota honesta): <input type="number" id="lp" min="0" max="5" value="${s.lp??4}" style="width:60px"> /5</p>
+ <h3>Resposta-modelo</h3><div class="modelo">${esc(caso.modelo)}</div>
+ <div class="linha-bts"><button class="bt ok" id="salvarNota">Registrar nota e ir memorizar →</button></div></div></div>`;
+ const t=$('txt'),upd=()=>{s.txt=t.value;salvar();const n=linhas(t.value),c=$('cont');c.textContent='≈ '+n+' linha(s) — o edital exige de 10 a 25';c.className='cont'+((n&&n<10)||n>25?' ruim':'')};t.oninput=upd;upd();
+ const on=(id,f)=>{const e=$(id);if(e)e.onclick=f};
+ on('corrigir',()=>{s.corrigido=true;salvar();telaCaso()});on('reabrir',()=>{s.corrigido=false;salvar();telaCaso()});
+ document.querySelectorAll('[data-esp]').forEach(c=>c.onchange=()=>{s.chk[c.dataset.esp]=c.checked;salvar()});
+ on('salvarNota',()=>{const n=linhas(s.txt);let tec=caso.espelho.reduce((a,e,j)=>a+(s.chk[j]?e[1]:0),0);let lp=Math.max(0,Math.min(5,+$('lp').value||0));if(tec===0)lp=0;
+  s.lp=lp;s.nota=tec+lp;st.hist.push({t:'caso',id:caso.id,nota:s.nota,max:20,linhas:n,em:new Date().toISOString()});salvar();
+  if(n<10||n>25)alert('Atenção: sua resposta tem ≈ '+n+' linhas. O edital exige de 10 a 25 (item 7.2.9.5) — fora disso há perda de pontos.');
+  sessao(caso.cards.map((_,i)=>caso.id+'#'+i),'Memorize: '+caso.titulo)});
+}
+
+/* ---------- memorização: cartões (recordação ativa) + Certo/Errado ---------- */
+let fila=[],qi=0,modo='cartao',titSessao='',acertosCE=0;
+function sessao(ids,tit){fila=ids.map(id=>CARTOES.find(c=>c.id===id)).filter(Boolean);qi=0;modo='cartao';titSessao=tit;acertosCE=0;aba='memoria';$('abas').innerHTML=ABAS.map(([k,n])=>`<button class="${k==='memoria'?'on':''}" data-aba="${k}">${n}</button>`).join('');telaCartao()}
+function memorizar(){
+ const agora=Date.now(),due=CARTOES.filter(c=>cx(c.id).prox<=agora),novos=due.filter(c=>!st.cartoes[c.id]).length;
+ const por=[0,0,0,0,0,0];CARTOES.forEach(c=>por[cx(c.id).caixa]++);
+ $('tela').innerHTML=`<div class="card"><h2>🧠 Memorizar artigos</h2><p>Repetição espaçada: acertou, o cartão sobe de caixa e volta em 1, 3, 7, 15 e 30 dias; errou, volta para a caixa 1. Primeiro você tenta lembrar (e digita o artigo); depois confere.</p>
+ <div class="caixas">${por.slice(0,5).map((n,i)=>`<div>Caixa ${i}<b>${n}</b></div>`).join('')}</div><p>Dominados (caixa 5): <b>${por[5]}</b> de ${CARTOES.length}</p>
+ <div class="linha-bts"><button class="bt pri" id="revHoje" ${due.length?'':'disabled'}>Revisar hoje (${due.length}${novos?' · '+novos+' novos':''})</button><button class="bt" id="ceTudo">Treino Certo/Errado da objetiva (${CARTOES.length} itens)</button></div></div>`;
+ $('revHoje').onclick=()=>sessao(due.sort(()=>Math.random()-.5).slice(0,30).map(c=>c.id),'Revisão do dia');
+ $('ceTudo').onclick=()=>{fila=CARTOES.slice().sort(()=>Math.random()-.5).slice(0,20);qi=0;modo='ce';titSessao='Certo ou Errado — objetiva';acertosCE=0;telaCE()};
+}
+function telaCartao(){
+ if(qi>=fila.length){modo='ce';qi=0;fila=fila.slice().sort(()=>Math.random()-.5);return telaCE()}
+ const c=fila[qi];
+ $('tela').innerHTML=`<div class="card"><h2>${esc(titSessao)}</h2><small>Cartão ${qi+1} de ${fila.length} · depois vem o Certo/Errado</small>
+ <div class="flash"><div class="p">${esc(c.p)}</div><input id="resp" placeholder="Responda e diga o artigo (ex.: CPP, art. 313, I)" autocomplete="off"><div class="linha-bts" style="justify-content:center"><button class="bt pri" id="virar">Conferir</button></div><div id="verso" hidden><div class="r">${esc(c.r)}</div><div class="a">📌 ${esc(c.a)}</div>
+ <p>Como foi?</p><div class="linha-bts" style="justify-content:center"><button class="bt" data-nota="0">❌ Errei</button><button class="bt" data-nota="1">🤏 Quase (sabia a regra, não o artigo)</button><button class="bt ok" data-nota="2">✅ Acertei regra e artigo</button></div></div></div></div>`;
+ $('resp').focus();$('resp').onkeydown=e=>{if(e.key==='Enter')$('virar').click()};
+ $('virar').onclick=()=>{$('verso').hidden=false;$('virar').hidden=true};
+ document.querySelectorAll('[data-nota]').forEach(b=>b.onclick=()=>{const n=+b.dataset.nota,k=cx(c.id);k.caixa=n===2?Math.min(5,k.caixa+1):n===1?Math.max(1,k.caixa):1;k.prox=hoje()+INTERVALO[k.caixa]*DIA+(n===0?0:1);if(n===0)k.prox=Date.now();st.cartoes[c.id]=k;salvar();qi++;telaCartao()});
+}
+function telaCE(){
+ if(qi>=fila.length){st.hist.push({t:'ce',nota:acertosCE,max:fila.length,em:new Date().toISOString()});salvar();
+  $('tela').innerHTML=`<div class="card"><h2>Fim da sessão</h2><p>Certo/Errado: <b>${acertosCE} de ${fila.length}</b>.</p><div class="linha-bts"><button class="bt pri" data-aba="memoria">Voltar à memorização</button><button class="bt" data-aba="pecas">Outra peça</button><button class="bt" data-aba="casos">Outro estudo de caso</button></div></div>`;return}
+ const c=fila[qi],[af,gab,com]=c.ce;
+ $('tela').innerHTML=`<div class="card"><h2>${esc(titSessao)} · Certo ou Errado</h2><small>Item ${qi+1} de ${fila.length} · estilo objetiva AOCP (uma palavra muda tudo)</small>
+ <div class="flash"><div class="p" style="font-weight:600">${esc(af)}</div><div class="linha-bts" style="justify-content:center"><button class="bt" data-ce="C">Certo</button><button class="bt" data-ce="E">Errado</button></div><div id="res" hidden></div></div></div>`;
+ document.querySelectorAll('[data-ce]').forEach(b=>b.onclick=()=>{const ok=b.dataset.ce===gab;if(ok)acertosCE++;document.querySelectorAll('[data-ce]').forEach(x=>x.disabled=true);
+  const r=$('res');r.hidden=false;r.innerHTML=`<div class="${ok?'modelo':'alerta'}" style="text-align:left;margin-top:12px"><b>${ok?'✔ Acertou':'✘ Errou'} — gabarito: ${gab==='C'?'CERTO':'ERRADO'}</b><br>${esc(com)}<br><b>📌 ${esc(c.a)}</b></div><div class="linha-bts" style="justify-content:center"><button class="bt pri" id="seg">Próximo ▶</button></div>`;
+  if(!ok){const k=cx(c.id);k.caixa=1;k.prox=Date.now();st.cartoes[c.id]=k;salvar()}$('seg').onclick=()=>{qi++;telaCE()};$('seg').focus()});
+}
+
+function progresso(){
+ const h=st.hist.slice().reverse(),nome=x=>x.t==='peca'?(PECAS.find(p=>p.id===x.id)||{}).titulo:x.t==='caso'?(CASOS.find(c=>c.id===x.id)||{}).titulo:'Certo/Errado';
+ const pf=PECAS.filter(p=>st.pecas[p.id]&&st.pecas[p.id].nota!=null).length,cf=CASOS.filter(c=>st.casos[c.id]&&st.casos[c.id].nota!=null).length,dom=CARTOES.filter(c=>cx(c.id).caixa>=4).length;
+ $('tela').innerHTML=`<div class="card"><h2>📊 Progresso</h2><div class="placar"><div>Peças feitas<b>${pf}/${PECAS.length}</b></div><div>Estudos de caso<b>${cf}/${CASOS.length}</b></div><div>Artigos firmes (caixa 4+)<b>${dom}/${CARTOES.length}</b></div></div>
+ <h3>Histórico</h3>${h.length?`<table><tr><th>Quando</th><th>O quê</th><th>Nota</th></tr>${h.slice(0,60).map(x=>`<tr><td>${new Date(x.em).toLocaleString('pt-BR')}</td><td>${esc(nome(x))}</td><td>${x.nota}/${x.max}${x.t!=='ce'&&x.nota<x.max*.7?' ⚠️':''}</td></tr>`).join('')}</table>`:'<p>Nada ainda.</p>'}
+ <p><small>⚠️ = abaixo de 70% (a nota mínima da discursiva é 70 de 100). Os dados ficam só neste navegador.</small></p>
+ <div class="linha-bts"><button class="bt" id="exp">↓ Baixar backup (JSON)</button><label class="bt">↑ Restaurar backup <input type="file" id="imp" accept=".json" hidden></label></div></div>`;
+ $('exp').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(st)],{type:'application/json'}));a.download='treino_discursiva_backup.json';a.click()};
+ $('imp').onchange=e=>{const f=e.target.files[0];if(!f)return;f.text().then(t=>{try{st=Object.assign({pecas:{},casos:{},cartoes:{},hist:[]},JSON.parse(t));salvar();progresso()}catch(_){alert('Arquivo inválido.')}})};
+}
+window.discAPI={PECAS,CASOS,CARTOES,passosDe,linhas,st:()=>st,abrirPeca,abrirCaso,ir};
+ir('edital');
+</script>
+</body>
+</html>
