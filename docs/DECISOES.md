@@ -117,3 +117,6 @@ legislalção aplicada. Prazos... qualificadoras, aumento de pena..."*
   quóruns, penas, qualificadoras, majorantes e minorantes com frações exatas, exceções, "poderá" × "deverá").
 - ⚠️ Limite: a escolha vale para pontos **ainda não gerados**. O que já está pronto no cache (ou no banco
   inicial) não é gerado de novo — regerar gasta API e é decisão do titular, ponto a ponto.
+- **Complemento, 01/11/2026, 21h34** — titular, textual: *"FALTOU COLOCAR A OPÇÃO DE EU ESCOLHER SE QUERO QUE ELABORE DE UMA SO
+  DISCIPLINA... SE EU QUISER FAZER LOGO UM BLOCO SOMENTE DE PROCESSO CIVIL AI FAZ"*. Seletor "Bloco de:" (painel e diálogo),
+  em `state.blocoDisc`. O bloco leva os pendentes da disciplina, até 30 — uma questão por ponto e rodada, como sempre.

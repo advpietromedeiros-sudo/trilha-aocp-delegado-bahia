@@ -110,6 +110,13 @@ const pen = ITEMS.filter((x) => x.discipline === "DIREITO PENAL");
   prova("'fora do bloco' tira os pontos; só a disciplina escolhida entra", b.ids.length === Math.min(30, civ.length) && b.ids.every((i) => BY_ID[i].discipline === civ[0].discipline), `${b.ids.length} pontos`);
   prova("o modo de cada ponto vai ao servidor (C/E rápido = 'ce', o resto 'obj')", ctx.modos && ctx.modos[civ[1].id] === "ce" && ctx.modos[civ[0].id] === "obj", JSON.stringify(ctx.modos && ctx.modos[civ[1].id]));
 }
+{
+  const { ctx, f } = ambiente();
+  ctx.state.blocoDisc = "DIREITO PROCESSUAL CIVIL";
+  const b = await f.criarBloco();
+  const n = ITEMS.filter((x) => x.discipline === "DIREITO PROCESSUAL CIVIL").length;
+  prova("bloco de UMA disciplina (Processo Civil): só pontos dela, todos os pendentes", b.ids.length === n && b.ids.every((i) => BY_ID[i].discipline === "DIREITO PROCESSUAL CIVIL"), `${b.ids.length} de ${n}`);
+}
 function discs0() { return [...new Set(ITEMS.map((x) => x.discipline))]; }
 
 // 3. histórico

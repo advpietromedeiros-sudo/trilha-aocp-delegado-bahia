@@ -2,9 +2,12 @@
 
 > Estado, tarefas e o que ficou rodando. Atualizado a cada ~15 min de trabalho e no fechamento.
 
-**Última atualização:** 01/11/2026, 20h23.
+**Última atualização:** 01/11/2026, 21h34.
 
 ## Estado
+
+- 🆕 **01/11/2026, 21h34 — bloco de UMA disciplina** (D-010, complemento do titular): seletor "Bloco de:" no painel
+  e no diálogo (todas intercaladas ou só uma). ⚠️ Disciplina pequena dá bloco menor que 30 (Processo Civil: 12 pontos).
 
 - 🆕 **01/11/2026, 20h23 — bloco montado por disciplina e assunto, revisão rápida C/E e letra da lei**
   (D-010, servidor v10): diálogo 🎯 no painel de blocos (Objetiva · C/E rápido · Fora do bloco, por ponto ou
