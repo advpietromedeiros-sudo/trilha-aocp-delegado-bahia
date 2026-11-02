@@ -9,7 +9,8 @@ const AUTO = process.argv.includes("--autoteste");
 const dir = path.join(__dirname, "..", "discursiva");
 let html = fs.readFileSync(path.join(dir, "Treino_Discursiva.html"), "utf8");
 const conteudo = fs.readFileSync(path.join(dir, "conteudo.js"), "utf8");
-html = html.replace('<script src="conteudo.js"></script>', () => "<script>" + conteudo + "</script>");
+const leis = fs.readFileSync(path.join(dir, "leis.js"), "utf8");
+html = html.replace('<script src="conteudo.js"></script>', () => "<script>" + conteudo + "</script>").replace('<script src="leis.js"></script>', () => "<script>" + leis + "</script>");
 if (AUTO) { const s = html.replace("const tec=Math.round(40*f/Math.max(1,tot))", "const tec=Math.round(4*f/Math.max(1,tot))"); if (s === html) { console.log("AUTOTESTE: não plantou"); process.exit(1); } html = s; }
 const erros = [], vc = new VirtualConsole();
 vc.on("jsdomError", e => erros.push(String(e.message || e)));
@@ -57,6 +58,10 @@ const t = d.getElementById("txt"); t.value = Array.from({ length: 12 }, (_, i) =
 clicar("corrigir"); d.querySelectorAll("[data-esp]").forEach(c => { c.checked = true; c.dispatchEvent(new w.Event("change")); });
 d.getElementById("lp").value = "5"; clicar("salvarNota");
 prova("estudo de caso: 12 linhas, espelho completo → 20/20 na Tabela 7.4", A.st().casos["c-fianca"].nota === 20 && A.st().hist.some(h => h.t === "caso" && h.linhas === 12), JSON.stringify(A.st().casos["c-fianca"].nota));
+// cartões por lei (leis.js, conferidos no texto legal)
+prova(`${A.LEIS.length} leis do edital com cartões, e a peça da Lei Antifacção está na lista`, A.LEIS.length >= 8 && A.LEIS.every(l => l.cards.length >= 5) && A.PECAS.some(p => p.id === "faccao") && A.CASOS.some(c => c.id === "c-tco"));
+A.ir("memoria"); d.querySelector('[data-lei="l15358"]').click();
+prova("tocar numa lei abre a memorização só dela", /Memorize: Lei 15\.358/.test(d.body.textContent) && !!d.getElementById("resp"));
 // Certo/Errado
 A.ir("memoria"); clicar("ceTudo");
 const item = d.querySelector(".flash .p").textContent, cart = A.CARTOES.find(c => c.ce[0] === item);

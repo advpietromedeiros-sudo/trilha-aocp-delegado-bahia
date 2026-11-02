@@ -136,3 +136,15 @@ SUBJETIVAS... AO FINAL DE CADA QUESTÃO E PEÇA TEREMOS ALI UMA FORMA... PARA ME
 - Conteúdo **autoral**, escrito a partir da lei (texto público); não transcreve o material de terceiro da pasta
   DELEGADO BA (D-002). ⚠️ A Lei 15.358/2026 **não** entrou: o texto não foi conferido nesta sessão.
 - Estimativa de linhas: 72 caracteres por linha manuscrita (leitura da sessão; ajustar se a folha da AOCP for outra).
+
+### D-012 — Cartões por lei e a Lei 15.358/2026 no Treino de Discursiva (02/11/2026, 20h46, titular)
+
+Ordem do titular, textual: *"SUBIR LOGO ESSA LEGISLAÇÃO PARA CONFERÊNCIA DO QUE CAI PARA DELEGADO BA E SERVIR DE BASE PARA O
+APLICATIVO"*, com 9 PDFs de lei seca comentada (Leis 9.099, 9.807, 11.340, 12.527, 12.830, 12.850, 13.431, 14.735 e 15.358).
+
+- Os PDFs vieram **só pelo chat** (não estão no disco) e são material de terceiro: **não entram no repositório** (D-002).
+  Serviram para **conferir o texto das leis**, que é público. Perguntas, comentários e modelos do app são autorais.
+- `discursiva/leis.js`: 8 baralhos por lei (87 cartões com Certo/Errado), a peça **Facção: preventiva + medidas
+  assecuratórias (Lei 15.358/2026)** e o caso **TCO × violência doméstica**. Total: 9 peças, 9 casos, 161 cartões.
+- Correção que a conferência mostrou: a peça de Maria da Penha agora pede a **monitoração eletrônica** (art. 22, VIII,
+  prioritária pelo descumprimento anterior, § 6º — Lei 15.383/2026).

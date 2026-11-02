@@ -43,6 +43,7 @@ textarea{width:100%;min-height:150px;border:1px solid var(--linha);border-radius
 <nav class="abas" id="abas"></nav></header>
 <main id="tela"></main>
 <script src="conteudo.js"></script>
+<script src="leis.js"></script>
 <script>
 /* Treino de Discursiva (02/11/2026, pedido do titular): fazer a peça e os estudos de caso PASSO A PASSO, sob orientação,
    e memorizar os artigos de cada um (cartões com repetição espaçada + Certo/Errado para a objetiva).
@@ -61,6 +62,7 @@ const LARG=72;const linhas=t=>String(t||'').split('\n').reduce((n,l)=>n+Math.max
 const CARTOES=[];
 for(const p of PECAS)p.cards.forEach((c,i)=>CARTOES.push({...c,id:p.id+'#'+i,orig:p.titulo}));
 for(const c of CASOS)c.cards.forEach((k,i)=>CARTOES.push({...k,id:c.id+'#'+i,orig:c.titulo}));
+if(typeof LEIS!=='undefined')for(const l of LEIS)l.cards.forEach((c,i)=>CARTOES.push({...c,id:l.id+'#'+i,orig:l.titulo}));
 const cx=id=>st.cartoes[id]||{caixa:0,prox:0};
 
 /* ---------- passos de uma peça ---------- */
@@ -169,12 +171,15 @@ function telaCaso(){
 /* ---------- memorização: cartões (recordação ativa) + Certo/Errado ---------- */
 let fila=[],qi=0,modo='cartao',titSessao='',acertosCE=0;
 function sessao(ids,tit){fila=ids.map(id=>CARTOES.find(c=>c.id===id)).filter(Boolean);qi=0;modo='cartao';titSessao=tit;acertosCE=0;aba='memoria';$('abas').innerHTML=ABAS.map(([k,n])=>`<button class="${k==='memoria'?'on':''}" data-aba="${k}">${n}</button>`).join('');telaCartao()}
+/* cartões por lei do edital (leis.js, conferidos no texto legal em 02/11/2026) */
+const blocoLeis=()=>typeof LEIS==='undefined'?'':`<div class="card"><h2>📚 Por lei do edital</h2><p>Cartões e Certo/Errado de cada lei, conferidos no texto legal. Toque numa lei para treinar só ela.</p><div class="grade">${LEIS.map(l=>{const n=l.cards.length,f=l.cards.filter((_,i)=>cx(l.id+'#'+i).caixa>=4).length;return `<button class="item" data-lei="${l.id}"><b>${esc(l.titulo)}</b><small>${esc(l.sub||'')}</small><br><span class="selo ${f===n?'feito':'pend'}">${f}/${n} firmes</span></button>`}).join('')}</div></div>`;
+document.addEventListener('click',e=>{const b=e.target.closest('[data-lei]');if(!b)return;const l=LEIS.find(x=>x.id===b.dataset.lei);sessao(l.cards.map((_,i)=>l.id+'#'+i),'Memorize: '+l.titulo)});
 function memorizar(){
  const agora=Date.now(),due=CARTOES.filter(c=>cx(c.id).prox<=agora),novos=due.filter(c=>!st.cartoes[c.id]).length;
  const por=[0,0,0,0,0,0];CARTOES.forEach(c=>por[cx(c.id).caixa]++);
  $('tela').innerHTML=`<div class="card"><h2>🧠 Memorizar artigos</h2><p>Repetição espaçada: acertou, o cartão sobe de caixa e volta em 1, 3, 7, 15 e 30 dias; errou, volta para a caixa 1. Primeiro você tenta lembrar (e digita o artigo); depois confere.</p>
  <div class="caixas">${por.slice(0,5).map((n,i)=>`<div>Caixa ${i}<b>${n}</b></div>`).join('')}</div><p>Dominados (caixa 5): <b>${por[5]}</b> de ${CARTOES.length}</p>
- <div class="linha-bts"><button class="bt pri" id="revHoje" ${due.length?'':'disabled'}>Revisar hoje (${due.length}${novos?' · '+novos+' novos':''})</button><button class="bt" id="ceTudo">Treino Certo/Errado da objetiva (${CARTOES.length} itens)</button></div></div>`;
+ <div class="linha-bts"><button class="bt pri" id="revHoje" ${due.length?'':'disabled'}>Revisar hoje (${due.length}${novos?' · '+novos+' novos':''})</button><button class="bt" id="ceTudo">Treino Certo/Errado da objetiva (${CARTOES.length} itens)</button></div></div>${blocoLeis()}`;
  $('revHoje').onclick=()=>sessao(due.sort(()=>Math.random()-.5).slice(0,30).map(c=>c.id),'Revisão do dia');
  $('ceTudo').onclick=()=>{fila=CARTOES.slice().sort(()=>Math.random()-.5).slice(0,20);qi=0;modo='ce';titSessao='Certo ou Errado — objetiva';acertosCE=0;telaCE()};
 }
@@ -209,7 +214,7 @@ function progresso(){
  $('exp').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(st)],{type:'application/json'}));a.download='treino_discursiva_backup.json';a.click()};
  $('imp').onchange=e=>{const f=e.target.files[0];if(!f)return;f.text().then(t=>{try{st=Object.assign({pecas:{},casos:{},cartoes:{},hist:[]},JSON.parse(t));salvar();progresso()}catch(_){alert('Arquivo inválido.')}})};
 }
-window.discAPI={PECAS,CASOS,CARTOES,passosDe,linhas,st:()=>st,abrirPeca,abrirCaso,ir};
+window.discAPI={PECAS,CASOS,CARTOES,LEIS:typeof LEIS==='undefined'?[]:LEIS,passosDe,linhas,st:()=>st,abrirPeca,abrirCaso,ir};
 ir('edital');
 </script>
 </body>

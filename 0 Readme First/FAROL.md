@@ -6,6 +6,9 @@
 
 ## Estado
 
+- 🆕 **02/11/2026, 20h46 — Treino de Discursiva ampliado (D-012):** 8 baralhos por lei conferidos no texto legal
+  (inclui Lei 15.358/2026), peça de facção e caso de TCO. 9 peças, 9 casos, 161 cartões.
+
 - 🆕 **02/11/2026, 18h26 — Treino de Discursiva** (D-011): `discursiva/Treino_Discursiva.html` — 8 peças passo a passo,
   8 estudos de caso, 74 cartões de artigos em repetição espaçada + Certo/Errado. Abre com duplo clique (sem servidor).
   Próximo: mais peças/casos por disciplina do edital e a Lei 15.358/2026 depois de conferida.

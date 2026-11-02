@@ -1,7 +1,8 @@
 /* Conteúdo do Treino de Discursiva — Delegado PC-BA 2026 (Instituto AOCP).
    Escrito pela sessão de 02/11/2026 a partir do Edital SAEB nº 02/2026 (itens 7.2.9 e 7.2.11, Tabelas 7.3 e 7.4,
    Anexo I) e da lei federal (texto público). NÃO transcreve material de terceiro (D-002): os modelos são autorais.
-   Artigos marcados com "confira" não foram conferidos no texto oficial nesta sessão. */
+   Artigos marcados com "confira" não foram conferidos no texto oficial nesta sessão. Em 02/11/2026 (20h) a Lei Maria da Penha,
+   a Lei 12.850 e a Lei 12.830 foram conferidas no texto que o titular enviou; os cartões por lei estão em leis.js. */
 
 /* Partes que se repetem em toda representação: o motor monta o passo a passo com elas. */
 const BASE = {
@@ -170,16 +171,16 @@ const PECAS = [
     fatos: 'Em 20/10/2026, a ofendida foi agredida com socos pelo ex-companheiro, conforme laudo de lesão corporal, e passou a receber mensagens com ameaças de morte. O agressor já descumpriu medida protetiva anterior e foi visto rondando a residência da vítima. A ofendida pediu medidas protetivas.',
     direito: [
       { t: 'Violência doméstica e medidas protetivas', orient: 'Caracterize a violência doméstica (art. 5º e 7º) e diga que o pedido da ofendida é encaminhado em 48 h (art. 12, III). Indique as medidas do art. 22 adequadas ao caso.',
-        arts: ['Lei 11.340/06, art. 5º, III (relação íntima de afeto, independe de coabitação)', 'Lei 11.340/06, art. 7º, I e II (violência física e psicológica)', 'Lei 11.340/06, art. 12, III (expediente apartado em 48 h)', 'Lei 11.340/06, art. 22, II e III (afastamento do lar; proibição de aproximação e contato)'],
-        check: ['Caracterizei a violência doméstica (arts. 5º e 7º)', 'Citei o encaminhamento em 48 h (art. 12, III)', 'Escolhi as medidas do art. 22 adequadas'],
-        modelo: 'DA VIOLÊNCIA DOMÉSTICA E DAS MEDIDAS PROTETIVAS\nOs fatos configuram violência doméstica e familiar contra a mulher praticada em relação íntima de afeto (art. 5º, III), nas formas física e psicológica (art. 7º, I e II). Encaminha-se, no prazo de 48 horas, o pedido da ofendida (art. 12, III), para a concessão das medidas do art. 22, III, "a" e "b": proibição de aproximação da ofendida, fixado limite mínimo de distância, e de contato com ela por qualquer meio.' },
+        arts: ['Lei 11.340/06, art. 5º, III (relação íntima de afeto, independe de coabitação)', 'Lei 11.340/06, art. 7º, I e II (violência física e psicológica)', 'Lei 11.340/06, art. 12, III (expediente apartado em 48 h)', 'Lei 11.340/06, art. 22, II e III (afastamento do lar; proibição de aproximação e contato)', 'Lei 11.340/06, art. 22, VIII, e § 6º (monitoração eletrônica: prioritária se houve descumprimento anterior)'],
+        check: ['Caracterizei a violência doméstica (arts. 5º e 7º)', 'Citei o encaminhamento em 48 h (art. 12, III)', 'Escolhi as medidas do art. 22 adequadas', 'Pedi a monitoração eletrônica (art. 22, VIII), prioritária pelo descumprimento anterior (§ 6º)'],
+        modelo: 'DA VIOLÊNCIA DOMÉSTICA E DAS MEDIDAS PROTETIVAS\nOs fatos configuram violência doméstica e familiar contra a mulher praticada em relação íntima de afeto (art. 5º, III), nas formas física e psicológica (art. 7º, I e II). Encaminha-se, no prazo de 48 horas, o pedido da ofendida (art. 12, III), para a concessão das medidas do art. 22, III, "a" e "b": proibição de aproximação da ofendida, fixado limite mínimo de distância, e de contato com ela por qualquer meio, além da monitoração eletrônica do agressor (art. 22, VIII), prioritária porque ele já descumpriu medida anterior (art. 22, § 6º).' },
       { t: 'Preventiva na violência doméstica', orient: 'A preventiva cabe para garantir a execução das protetivas (CPP, art. 313, III) e pode ser representada pelo delegado em qualquer fase (Lei 11.340, art. 20). O descumprimento anterior mostra o perigo concreto.',
         arts: ['Lei 11.340/06, art. 20 (preventiva em qualquer fase)', 'CPP, art. 313, III (garantir a execução das protetivas)', 'Lei 11.340/06, art. 24-A (crime de descumprimento de protetiva)'],
         check: ['Citei o art. 313, III, do CPP', 'Usei o descumprimento anterior como perigo concreto', 'Mencionei o art. 24-A'],
         modelo: 'DA PRISÃO PREVENTIVA\nA prisão preventiva é cabível para garantir a execução das medidas protetivas (art. 313, III, do CPP; art. 20 da Lei nº 11.340/2006). O representado já descumpriu medida protetiva anterior — conduta que configura o crime do art. 24-A da Lei Maria da Penha —, ameaça a vítima de morte e ronda sua residência, o que revela perigo concreto e atual à integridade da ofendida (art. 312, § 2º, CPP), insuficientes as cautelares diversas (art. 282, § 6º).' },
     ],
-    pedidos: 'DOS PEDIDOS\na) a concessão das MEDIDAS PROTETIVAS DE URGÊNCIA pedidas pela ofendida, especialmente as do art. 22, III, "a" e "b", da Lei nº 11.340/2006;\nb) a decretação da PRISÃO PREVENTIVA de ROBERTO;\nc) a intimação da ofendida e do agressor (art. 21) e a ciência ao Ministério Público (art. 18, III);\nd) a tramitação em sigilo e com urgência.',
-    pedidos_check: ['Medidas protetivas específicas (art. 22)', 'Preventiva', 'Ciência ao MP (art. 18, III)', 'Sigilo e urgência'],
+    pedidos: 'DOS PEDIDOS\na) a concessão das MEDIDAS PROTETIVAS DE URGÊNCIA pedidas pela ofendida, especialmente as do art. 22, III, "a" e "b", e VIII (monitoração eletrônica), da Lei nº 11.340/2006;\nb) a decretação da PRISÃO PREVENTIVA de ROBERTO;\nc) a intimação da ofendida e do agressor (art. 21) e a ciência ao Ministério Público (art. 18, III);\nd) a tramitação em sigilo e com urgência.',
+    pedidos_check: ['Medidas protetivas específicas (art. 22)', 'Monitoração eletrônica (art. 22, VIII)', 'Preventiva', 'Ciência ao MP (art. 18, III)', 'Sigilo e urgência'],
     cards: [
       { p: 'Prazo para o delegado remeter ao juiz o pedido de medidas protetivas', r: '48 horas, em expediente apartado.', a: 'Lei 11.340/06, art. 12, III', ce: ['O delegado deve remeter ao juiz o pedido de medidas protetivas em 24 horas.', 'E', 'São 48 horas (art. 12, III).'] },
       { p: 'Prazo para o juiz decidir sobre as medidas protetivas', r: '48 horas.', a: 'Lei 11.340/06, art. 18', ce: ['Recebido o pedido, o juiz decidirá sobre as medidas protetivas em 48 horas.', 'C', 'Art. 18, caput.'] },
@@ -375,5 +376,5 @@ const EDITAL = {
     ['Nota zero também', 'Fuga ao tema, letra ilegível, lápis ou tinta que não seja azul/preta, folha em branco, identificação', '7.2.11.1'],
     ['Data e duração', '06/12/2026 · discursiva à tarde, 4h30', 'Anexo III e item 8'],
   ],
-  disciplinas: ['Direito Penal', 'Direito Processual Penal', 'Legislação Penal e Processual Penal Extravagante (inclui Lei 15.358/2026)', 'Direito Constitucional', 'Direito Administrativo (com Leis estaduais 11.370/2009 e 6.677/1994)', 'Direito Civil e Empresarial', 'Direito Processual Civil', 'Direito Tributário', 'Direito Ambiental', 'Criminologia'],
+  disciplinas: ['Direito Penal', 'Direito Processual Penal', 'Legislação Penal e Processual Penal Extravagante (inclui Lei 15.358/2026 — peça e cartões no app)', 'Direito Constitucional', 'Direito Administrativo (com Leis estaduais 11.370/2009 e 6.677/1994)', 'Direito Civil e Empresarial', 'Direito Processual Civil', 'Direito Tributário', 'Direito Ambiental', 'Criminologia'],
 };

@@ -70,3 +70,9 @@ se o número de CPF ou o rodapé escaparem, com `--autoteste`.
 
 ⚠️ Material atualizado em 10/09/2026 pode trazer regra posterior ao marco do edital (29/07/2026); o
 prompt do servidor já manda não aplicar norma posterior.
+
+## 02/11/2026, 20h46 — Lei seca comentada usada só para conferência (Treino de Discursiva)
+
+- **O quê:** 9 PDFs de lei seca comentada de curso preparatório, enviados pelo titular no chat.
+- **Uso:** só para conferir o texto legal (público, Lei 9.610/98, art. 8º, IV) ao escrever `discursiva/leis.js`.
+- **Não entrou:** nenhum comentário, quadro, esquema ou marca do material. Os PDFs não estão no repositório.
