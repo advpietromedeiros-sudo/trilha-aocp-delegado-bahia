@@ -10,7 +10,8 @@ const dir = path.join(__dirname, "..", "discursiva");
 let html = fs.readFileSync(path.join(dir, "Treino_Discursiva.html"), "utf8");
 const conteudo = fs.readFileSync(path.join(dir, "conteudo.js"), "utf8");
 const leis = fs.readFileSync(path.join(dir, "leis.js"), "utf8");
-html = html.replace('<script src="conteudo.js"></script>', () => "<script>" + conteudo + "</script>").replace('<script src="leis.js"></script>', () => "<script>" + leis + "</script>");
+const compl = fs.readFileSync(path.join(dir, "pecas_complementares.js"), "utf8");
+html = html.replace('<script src="conteudo.js"></script>', () => "<script>" + conteudo + "</script>").replace('<script src="leis.js"></script>', () => "<script>" + leis + "</script>").replace('<script src="pecas_complementares.js"></script>', () => "<script>" + compl + "</script>");
 if (AUTO) { const s = html.replace("const tec=Math.round(40*f/Math.max(1,tot))", "const tec=Math.round(4*f/Math.max(1,tot))"); if (s === html) { console.log("AUTOTESTE: não plantou"); process.exit(1); } html = s; }
 const erros = [], vc = new VirtualConsole();
 vc.on("jsdomError", e => erros.push(String(e.message || e)));
@@ -62,6 +63,15 @@ prova("estudo de caso: 12 linhas, espelho completo → 20/20 na Tabela 7.4", A.s
 prova(`${A.LEIS.length} leis do edital com cartões, e a peça da Lei Antifacção está na lista`, A.LEIS.length >= 8 && A.LEIS.every(l => l.cards.length >= 5) && A.PECAS.some(p => p.id === "faccao") && A.CASOS.some(c => c.id === "c-tco"));
 A.ir("memoria"); d.querySelector('[data-lei="l15358"]').click();
 prova("tocar numa lei abre a memorização só dela", /Memorize: Lei 15\.358/.test(d.body.textContent) && !!d.getElementById("resp"));
+// peças complementares (03/11/2026): 14 peças, e a de inquérito usa cabeçalho e preâmbulo próprios
+const novas = ["apf", "cautelar-diversa", "afastamento", "requisicao", "relatorio"];
+prova("as 5 peças complementares estão na lista (14 no total)", A.PECAS.length === 14 && novas.every(id => A.PECAS.some(p => p.id === id)), A.PECAS.map(p => p.id).join(","));
+const apf = A.passosDe(A.PECAS.find(p => p.id === "apf"));
+prova("despacho do flagrante: cabeçalho do APF (não de portaria) e checklist próprio do preâmbulo", /Auto de Prisão em Flagrante/.test(apf[0].modelo) && !/Portaria/.test(apf[0].modelo) && apf[1].check.some(c => /301 a 306/.test(c)));
+A.abrirPeca("apf");
+for (let i = 0; i < apf.length; i++) { const tx = d.getElementById("txt"); tx.value = "Parte " + (i + 1) + " do despacho."; tx.dispatchEvent(new w.Event("input")); clicar("verModelo"); d.querySelectorAll("[data-chk]").forEach(c => { c.checked = true; c.dispatchEvent(new w.Event("change")); }); clicar("prox"); }
+d.getElementById("lp").value = "10"; clicar("salvarNota");
+prova("despacho do flagrante feito passo a passo até a nota 60/60", A.st().pecas.apf && A.st().pecas.apf.nota === 60, JSON.stringify(A.st().pecas.apf));
 // Certo/Errado
 A.ir("memoria"); clicar("ceTudo");
 const item = d.querySelector(".flash .p").textContent, cart = A.CARTOES.find(c => c.ce[0] === item);

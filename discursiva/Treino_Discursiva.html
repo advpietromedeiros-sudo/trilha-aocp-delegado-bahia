@@ -43,6 +43,7 @@ textarea{width:100%;min-height:150px;border:1px solid var(--linha);border-radius
 <nav class="abas" id="abas"></nav></header>
 <main id="tela"></main>
 <script src="conteudo.js"></script>
+<script src="pecas_complementares.js"></script>
 <script src="leis.js"></script>
 <script>
 /* Treino de Discursiva (02/11/2026, pedido do titular): fazer a peça e os estudos de caso PASSO A PASSO, sob orientação,
@@ -68,8 +69,8 @@ const cx=id=>st.cartoes[id]||{caixa:0,prox:0};
 /* ---------- passos de uma peça ---------- */
 function passosDe(p){
  if(p.tipo==='inquerito')return[
-  {t:'Cabeçalho',orient:'Identifique a unidade policial e o número da portaria. Sem nomes do candidato.',arts:['Edital PC-BA, item 7.2.11.3'],check:['Unidade policial com lacunas','Nada que identifique o candidato'],modelo:'POLÍCIA CIVIL DO ESTADO DA BAHIA\nDelegacia Territorial de …\nPortaria nº …/…'},
-  {t:'Preâmbulo',orient:'Quem instaura, com qual atribuição e fundamento (art. 5º, I, CPP: de ofício).',arts:p.pre_arts,check:['Citei a atribuição constitucional e a Lei 12.830','Fundamentei a instauração de ofício (art. 5º, I)'],modelo:p.preambulo},
+  {t:'Cabeçalho',orient:'Identifique a unidade policial e o número da portaria. Sem nomes do candidato.',arts:['Edital PC-BA, item 7.2.11.3'],check:['Unidade policial com lacunas','Nada que identifique o candidato'],modelo:p.cabecalho||'POLÍCIA CIVIL DO ESTADO DA BAHIA\nDelegacia Territorial de …\nPortaria nº …/…'},
+  {t:'Preâmbulo',orient:p.pre_orient||'Quem instaura, com qual atribuição e fundamento (art. 5º, I, CPP: de ofício).',arts:p.pre_arts,check:p.pre_check||['Citei a atribuição constitucional e a Lei 12.830','Fundamentei a instauração de ofício (art. 5º, I)'],modelo:p.preambulo},
   {t:'Dos fatos',orient:'Narre só o que o enunciado traz, no condicional ("teria"), sem juízo definitivo.',arts:[],check:['Narrei sem inventar dados','Usei o condicional (fase de apuração)'],modelo:p.fatos},
   ...p.direito,
   {...BASE.fecho,orient:'Local, data e "Delegado de Polícia Civil".',modelo:'…/BA, … de … de ….\n\nDelegado de Polícia Civil'}];

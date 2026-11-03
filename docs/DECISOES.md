@@ -148,3 +148,20 @@ APLICATIVO"*, com 9 PDFs de lei seca comentada (Leis 9.099, 9.807, 11.340, 12.52
   assecuratórias (Lei 15.358/2026)** e o caso **TCO × violência doméstica**. Total: 9 peças, 9 casos, 161 cartões.
 - Correção que a conferência mostrou: a peça de Maria da Penha agora pede a **monitoração eletrônica** (art. 22, VIII,
   prioritária pelo descumprimento anterior, § 6º — Lei 15.383/2026).
+
+### D-013 — Peças complementares no Treino de Discursiva (03/11/2026, 08h39, titular)
+
+Ordem do titular, textual: *"VERIFIQUE ESSE ARQUIVO QUE TEM TUDO SOBRE AS PEÇAS PRÁTICAS O QUE VAI DIFERENCIAR AI SERIA ALGUMA
+ATUALIZAÇÃO LEGISLATIVA. VEJA SE ESTÁ TUDO NO PADRÃO E SE FOR O CASO ATUALIZE A APLICAÇÃO."*, com um PDF de modelos de peça
+de curso preparatório.
+
+- O PDF veio **só pelo chat** e é material de terceiro: **não entra no repositório** (D-002). Serviu de **lista de
+  conferência** (que tipos de peça existem e o que os espelhos pontuam). Nada do texto, dos modelos ou dos quadros foi copiado.
+- **Atualização legislativa:** as 9 peças que já existiam estavam em dia (art. 24-A com reclusão de 2 a 5 anos; arts. 12-C e
+  12-D; Lei 15.358/2026). O PDF é que está desatualizado em pontos: o art. 12-C fala só em risco à vida/integridade física,
+  não traz o art. 12-D, nem a Lei 14.994/2024 (feminicídio autônomo no art. 121-A; ameaça contra a mulher, art. 147, §§ 1º e 2º).
+- **Acrescentado** (`discursiva/pecas_complementares.js`, texto autoral): despacho de conclusão do flagrante com representação
+  pela conversão; cautelares diversas (suspensão da função, art. 319, VI); despacho do delegado de afastamento do lar
+  (art. 12-C, II); ofício de requisição (art. 13-A); relatório final. Total: 14 peças, 188 cartões. O motor aceita
+  cabeçalho e preâmbulo próprios nas peças que não são portaria.
+

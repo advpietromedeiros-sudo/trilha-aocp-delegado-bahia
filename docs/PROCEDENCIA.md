@@ -76,3 +76,10 @@ prompt do servidor já manda não aplicar norma posterior.
 - **O quê:** 9 PDFs de lei seca comentada de curso preparatório, enviados pelo titular no chat.
 - **Uso:** só para conferir o texto legal (público, Lei 9.610/98, art. 8º, IV) ao escrever `discursiva/leis.js`.
 - **Não entrou:** nenhum comentário, quadro, esquema ou marca do material. Os PDFs não estão no repositório.
+
+## 03/11/2026, 08h39 — Modelos de peça prática de curso preparatório usados só para conferência (Treino de Discursiva)
+
+- **O quê:** 1 PDF de modelos de peças práticas de Delegado, enviado pelo titular no chat.
+- **Uso:** só como lista de conferência dos tipos de peça e do que os espelhos pontuam (D-013); o texto legal foi conferido na lei.
+- **Não entrou:** nenhum modelo, comentário, quadro, esquema ou marca do material. O PDF não está no repositório.
+
