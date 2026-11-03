@@ -186,3 +186,27 @@ DELEGADO BA AS PEÇAS QUE CAEM E DEIXE SOMENTE ELAS. ATUALIZE A APLICAÇÃO"*.
   de tipificação completa nos fatos e os pedidos do 282, § 3º, e do 289-A; a peça pode trazer endereçamento próprio.
 - ⚠️ **Declarado:** a sessão anterior deixou o motor com erro de sintaxe (quebra de linha dentro de uma string), e a página
   não carregava; corrigido nesta.
+
+### D-015 — Condução "Entender o caso" e "Estudo completo" em toda peça (03/11/2026, 16h26 e 16h29, titular)
+
+Ordens do titular, textuais: *"QUANDO EU LER O CASO TERIA TIPO UM BOTÃO OU ALGO DO TIPO PARA DE FORMA CONDUZIDA APRENDER A
+IDENTIFICAR AS PEÇA... FAZER ESSA MESMA CONDUÇÃO PARA TODOS OS TÓPICOS... COMPPETÊNCIA... ENDEREÇAMENTO... NOS CRIMES... COM
+RELAÇÃO AOS ARTIGOS DE CADA PEÇA É INTERESSANTE QUE NESSA CONDUÇÃO A MEDIDA QUE FOR AVANÇANDO EU VÁ LENDO TAMBÉM OS ARTIGOS JÁ
+ATUALIZADOS"* e *"QUALQUER ASSUNTO QUE CAIU NAQUELA PEÇA DEVE TER UM LOCAL PRA AO FINAL EU ESTUDAR TODO O CONTEÚDO... TANTO A
+LETRA DA LEI, DOUTRINA E JURISPRUDENCIA.. AI IDEIA É FAZER UM ESTUDO COMPLETO TANTO DA SUBJETIVA QUANDO DA OBJETIVA"*.
+
+- **Condução** (`discursiva/conducao.js`): o método de identificação de qualquer peça (4 perguntas + mapa "o caso traz… → a
+  peça é…") e, nas 18 peças, 5 etapas — a peça, competência e endereçamento, o crime, a lógica dos fundamentos, os pedidos —
+  com perguntas de alternativa (cada uma com o porquê), a lógica da etapa e os artigos. As pistas do enunciado ficam em destaque.
+  A peça abre na condução até ela ser concluída; depois, direto na escrita. Base: o caso de Ilhéus (preventiva).
+- **Artigos atualizados** (`discursiva/artigos.js`, gerado por `ferramentas/gerar_artigos_discursiva.py`): redação OFICIAL do
+  Planalto baixada em 03/11/2026 (16 leis; LC 105 e Lei 7.960 entraram no catálogo), com a data e o selo "alterado em 2026";
+  súmulas do acervo oficial. Também os artigos dos passos de escrita abrem o texto oficial com um toque.
+- **Estudo completo** (`discursiva/estudo.js`): 40 temas reaproveitáveis em 6 áreas (Constitucional, Penal, Processo Penal,
+  Legislação Especial, Medicina Legal, Criminologia), cada um com lei oficial, doutrina (síntese autoral), jurisprudência
+  (súmulas oficiais + precedentes citados por número) e pegadinhas da objetiva; leva aos cartões e ao Certo/Errado da peça.
+- ⚠️ **O texto oficial trouxe mudanças que o app não conhecia:** roubo com pena de 6 a 10 anos (Lei 15.397/2026); CPP,
+  art. 312, § 3º (Lei 15.272/2025); art. 313, V (Lei 15.358/2026) e VI (Lei 15.487/2026); art. 157, § 2º-A, III (Lei
+  15.517/2026). Nenhum modelo do app afirmava a pena antiga; a condução e o estudo mostram a redação nova.
+- ⚠️ **Pendente:** a Lei 11.340 não baixou (o Planalto derrubou a conexão nas 4 tentativas e a página mistura codificações);
+  12 artigos dela aparecem só com o link oficial. Rodar `atualizar_lei_seca.bat L11340` e o gerador de novo.

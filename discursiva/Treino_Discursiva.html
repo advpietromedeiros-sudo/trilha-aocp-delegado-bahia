@@ -35,6 +35,14 @@ textarea{width:100%;min-height:150px;border:1px solid var(--linha);border-radius
 .placar{display:flex;gap:10px;flex-wrap:wrap}.placar div{background:#fff;border:1px solid var(--linha);border-radius:10px;padding:8px 14px}.placar b{font-size:20px;display:block}
 .caixas{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}.caixas div{background:#fff;border:1px solid var(--linha);border-radius:8px;padding:8px;text-align:center}.caixas b{display:block;font-size:20px}
 .peca-final{white-space:pre-wrap;font-family:Georgia,serif;background:#fffef8;border:1px solid var(--linha);padding:14px;border-radius:8px}
+.modos{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 12px}.modos button{border:1px solid var(--azul);background:#fff;color:var(--azul);border-radius:999px;padding:6px 14px;font:inherit;cursor:pointer}.modos button.on{background:var(--azul);color:#fff;font-weight:700}
+mark{background:#fff0a8;padding:0 2px;border-radius:3px}
+.op{display:block;width:100%;text-align:left;margin:6px 0}.op.certa{background:var(--verde2);border-color:var(--verde)}.op.errada{background:var(--vermelho2);border-color:var(--vermelho)}
+.fb{margin:4px 0 10px;padding:8px 12px;border-radius:6px}.fb.ok{background:var(--verde2)}.fb.no{background:var(--vermelho2)}
+details.lei{border:1px solid var(--linha);border-radius:8px;margin:6px 0;background:#fff}details.lei summary{cursor:pointer;padding:7px 10px;color:var(--azul);font-weight:600}
+.leitxt{white-space:pre-wrap;font:15px/1.6 Georgia,serif;padding:4px 12px 10px}.leitxt small{color:var(--suave);font:12px "Segoe UI",sans-serif}.leifonte{font-size:12px;color:var(--suave);padding:0 12px 8px}
+.n26{color:var(--vermelho);font-weight:700}.arts span[data-art]{cursor:pointer}.arts span[data-art]:hover{background:var(--azul2)}
+.tema{border-top:1px solid var(--linha);padding-top:10px;margin-top:12px}.rot{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--suave);margin-top:10px}
 @media(max-width:700px){main{padding:10px}.caixas{grid-template-columns:repeat(3,1fr)}}
 </style>
 </head>
@@ -45,6 +53,9 @@ textarea{width:100%;min-height:150px;border:1px solid var(--linha);border-radius
 <script src="conteudo.js"></script>
 <script src="leis.js"></script>
 <script src="pecas_complementares.js"></script>
+<script src="conducao.js"></script>
+<script src="estudo.js"></script>
+<script src="artigos.js"></script>
 <script>
 /* Treino de Discursiva (02/11/2026, pedido do titular): fazer a peça e os estudos de caso PASSO A PASSO, sob orientação,
    e memorizar os artigos de cada um (cartões com repetição espaçada + Certo/Errado para a objetiva).
@@ -110,8 +121,75 @@ function listaCasos(){
 document.addEventListener('click',e=>{const p=e.target.closest('[data-peca]');if(p)abrirPeca(p.dataset.peca);const c=e.target.closest('[data-caso]');if(c)abrirCaso(c.dataset.caso)});
 
 /* ---------- peça passo a passo ---------- */
-let peca=null,passo=0;
-function abrirPeca(id){marcarAba('pecas');peca=PECAS.find(p=>p.id===id);st.pecas[id]=st.pecas[id]||{txt:{},chk:{}};passo=0;telaPeca()}
+let peca=null,passo=0,modoPeca='escrever';
+/* abre na condução enquanto ela não foi concluída (D-015: entender o caso ANTES de escrever) */
+function abrirPeca(id,modo){marcarAba('pecas');peca=PECAS.find(p=>p.id===id);st.pecas[id]=st.pecas[id]||{txt:{},chk:{}};passo=0;
+ const c=st.cond&&st.cond[id];modoPeca=modo||(typeof CONDUCAO!=='undefined'&&CONDUCAO[id]&&!(c&&c.fim)?'conduzir':'escrever');mostrarPeca()}
+function mostrarPeca(){({conduzir:telaConduzir,escrever:telaPeca,estudo:telaEstudo})[modoPeca]()}
+const barraModos=()=>`<div class="modos">${[['conduzir','🧭 Entender o caso'],['escrever','✍️ Escrever a peça'],['estudo','📚 Estudo completo']].filter(([k])=>k==='escrever'||(k==='conduzir'?typeof CONDUCAO!=='undefined'&&CONDUCAO[peca.id]:typeof ESTUDO!=='undefined'&&ESTUDO[peca.id])).map(([k,n])=>`<button class="${k===modoPeca?'on':''}" data-modo="${k}">${n}</button>`).join('')}</div>`;
+document.addEventListener('click',e=>{const b=e.target.closest('[data-modo]');if(b&&peca){modoPeca=b.dataset.modo;mostrarPeca();scrollTo(0,0)}});
+
+/* ---------- artigos: texto oficial (artigos.js, gerado do Planalto) ---------- */
+const SIGLA={CF:'CF',CP:'CP',CPP:'CPP',ECA:'L8069',LEP:'L7210',CTN:'L5172'};
+/* 'CPP, art. 313, I (…)' → 'CPP:313' — o mesmo parser do gerador */
+function chaveDe(s){const m=String(s).match(/^(CF|CPP|CP|ECA|LEP|CTN|LC\s*(\d+)(?:\/\d+)?|Lei\s*([\d.]+)\/\d+)\s*,\s*arts?\.\s*(\d+)\s*(?:º|°|o)?\s*(-[A-Z])?/);if(!m)return null;
+ const sig=m[2]?'LC'+m[2]:m[3]?'L'+m[3].replace(/\./g,''):SIGLA[m[1]];return sig+':'+m[4]+(m[5]||'')}
+function rotulo(ref){if(/^(SUM|SV)/.test(ref)){const j=typeof JURIS!=='undefined'&&JURIS[ref];return ref.startsWith('SV')?'STF, Súmula Vinculante '+ref.slice(3):(j?j.tri:ref.split('-')[1])+', Súmula '+ref.split('-').pop()}
+ const [sig,art,fr]=ref.split(':'),a=typeof ARTIGOS!=='undefined'&&ARTIGOS[ref],d=a?a.d:sig,n=/^\d$/.test(art)?art+'º':art;
+ const f=!fr?'':fr==='pu'?', parágrafo único':fr.startsWith('§')?', § '+fr.slice(1)+(/^\d$/.test(fr.slice(1))?'º':''):', '+fr;return d+', art. '+n+f}
+const notas=t=>esc(t).replace(/\((Reda[çc][ãa]o dada|Inclu[íi]d[oa]|Revogad[oa]|Vide|Vig[êe]ncia|Acrescid[oa]|Renumerad[oa])[^)]*\)/g,m=>`<small>${m}</small>`);
+function leiHTML(ref,aberto){
+ if(/^(SUM|SV)/.test(ref)){const j=typeof JURIS!=='undefined'&&JURIS[ref];return `<details class="lei" ${aberto?'open':''}><summary>⚖️ ${esc(rotulo(ref))}</summary><div class="leitxt">${j?esc(j.t):'(texto não está no acervo)'}</div><div class="leifonte">Texto oficial do acervo de súmulas.</div></details>`}
+ const a=typeof ARTIGOS!=='undefined'&&ARTIGOS[ref];
+ if(!a||a.falta)return `<details class="lei"><summary>📖 ${esc(rotulo(ref))}</summary><div class="leifonte">Texto oficial ainda não baixado. ${a&&a.u?`<a href="${esc(a.u)}" target="_blank" rel="noopener">Abrir no Planalto</a>`:''}</div></details>`;
+ return `<details class="lei" ${aberto?'open':''}><summary>📖 ${esc(rotulo(ref))}${a.n26?' <span class="n26">⚠️ alterado em 2026</span>':''}</summary><div class="leitxt">${notas(a.t)}</div><div class="leifonte">Redação oficial do Planalto${a.b?', baixada em '+esc(a.b):''}. <a href="${esc(a.u)}" target="_blank" rel="noopener">Conferir na fonte</a></div></details>`}
+/* toque num artigo da lista de um passo: abre o texto oficial logo abaixo */
+document.addEventListener('click',e=>{const s=e.target.closest('[data-art]');if(!s)return;const alvo=s.closest('.arts').nextElementSibling;
+ if(alvo&&alvo.classList.contains('lei-aberta')){alvo.innerHTML=alvo.dataset.ref===s.dataset.art?'':leiHTML(s.dataset.art,1);alvo.dataset.ref=alvo.innerHTML?s.dataset.art:''}});
+const chips=arts=>arts&&arts.length?`<div class="arts">${arts.map(a=>{const k=chaveDe(a);return k&&typeof ARTIGOS!=='undefined'&&ARTIGOS[k]&&!ARTIGOS[k].falta?`<span data-art="${k}" title="Ler o texto oficial">📖 ${esc(a)}</span>`:`<span>${esc(a)}</span>`}).join('')}</div><div class="lei-aberta"></div>`:'';
+
+/* ---------- condução: entender o caso antes de escrever ---------- */
+function enunMarcado(p,pistas){let h=esc(p.enunciado);for(const x of pistas||[])h=h.split(esc(x)).join(`<mark>${esc(x)}</mark>`);return h}
+function telaConduzir(){
+ const C=CONDUCAO[peca.id];st.cond=st.cond||{};const c=st.cond[peca.id]=st.cond[peca.id]||{e:0,r:{}};const E=C.etapas,fim=c.e>=E.length;
+ const barra=`<div class="passos">${E.map((x,i)=>`<button class="${i===c.e?'at':(i<c.e?'ok':'')}" data-etapa="${i}">${i+1}. ${esc(x.t)}</button>`).join('')}<button class="${fim?'at':''}" data-etapa="${E.length}">✔ Entendi</button></div>`;
+ let corpo;
+ if(fim){corpo=`<h3>Você entendeu o caso</h3><div class="mnem"><b>A lógica desta peça, em uma frase:</b> ${esc(E[0].logica)}</div>
+  <p>Agora escreva a peça passo a passo — o roteiro é este: ${passosDe(peca).map(x=>esc(x.t)).join(' → ')}.</p>
+  <div class="linha-bts"><button class="bt ok" id="irEscrever">✍️ Escrever a peça →</button><button class="bt" id="irEstudo">📚 Estudo completo</button><button class="bt" id="recond">Refazer a condução</button></div>`}
+ else{const et=E[c.e];let tudoCerto=true;
+  const qs=et.qs.map((q,qi)=>{const k=c.e+'.'+qi,esc0=c.r[k],certo=esc0!=null&&q.op[esc0][1];if(!certo)tudoCerto=false;
+   return `<div class="orient"><b>${esc(q.p)}</b></div>${q.op.map((o,oi)=>`<button class="bt op ${esc0===oi?(o[1]?'certa':'errada'):''}" data-op="${k}:${oi}" ${certo?'disabled':''}>${esc(o[0])}</button>${esc0===oi?`<div class="fb ${o[1]?'ok':'no'}">${o[1]?'✅':'❌'} ${esc(o[2])}${o[1]?'':' Tente outra.'}</div>`:''}`).join('')}`}).join('');
+  const extra=c.e===3?`<h3>O roteiro desta peça</h3><ol>${passosDe(peca).map(x=>`<li><b>${esc(x.t)}</b> — ${esc(x.orient)}</li>`).join('')}</ol>`:c.e===4&&peca.pedidos_check&&peca.pedidos_check.length?`<h3>O que a banca procura nos pedidos</h3><ul>${peca.pedidos_check.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:'';
+  corpo=`${c.e===0?`<details ${Object.keys(c.r).length?'':'open'}><summary><b>🧭 O método para identificar QUALQUER peça</b></summary><ol>${METODO.passos.map(([a,b])=>`<li><b>${esc(a)}</b> ${esc(b)}</li>`).join('')}</ol><table><tr><th>O caso traz…</th><th>A peça é…</th></tr>${METODO.mapa.map(([a,b])=>`<tr><td>${esc(a)}</td><td>${esc(b)}</td></tr>`).join('')}</table></details>`:''}
+  <h3>Etapa ${c.e+1} de ${E.length}: ${esc(et.t)}</h3>${qs}
+  ${tudoCerto?`<div class="mnem"><b>A lógica:</b> ${esc(et.logica)}</div>${extra}<h3>Leia os artigos (redação oficial atualizada)</h3>${et.arts.map(r=>leiHTML(r)).join('')}`:''}
+  <div class="linha-bts">${c.e>0?'<button class="bt" id="etAnt">◀ Anterior</button>':''}<button class="bt pri" id="etProx" ${tudoCerto?'':'disabled'}>Próxima etapa ▶</button></div>`}
+ $('tela').innerHTML=`<div class="card"><div class="linha-bts" style="margin-top:0"><button class="bt" data-aba="pecas">← Peças</button></div><h2>${esc(peca.titulo)}</h2>${barraModos()}<div class="enun">${enunMarcado(peca,C.pistas)}</div><p class="cont">Em destaque: as pistas do enunciado que decidem a peça.</p>${barra}${corpo}</div>`;
+ const on=(id,f)=>{const e=$(id);if(e)e.onclick=f};
+ document.querySelectorAll('[data-op]').forEach(b=>b.onclick=()=>{const [k,oi]=b.dataset.op.split(':');c.r[k]=+oi;salvar();telaConduzir()});
+ document.querySelectorAll('[data-etapa]').forEach(b=>b.onclick=()=>{c.e=+b.dataset.etapa;if(c.e>=E.length)c.fim=1;salvar();telaConduzir()});
+ on('etProx',()=>{c.e++;if(c.e>=E.length)c.fim=1;salvar();telaConduzir();scrollTo(0,0)});on('etAnt',()=>{c.e--;salvar();telaConduzir()});
+ on('irEscrever',()=>{modoPeca='escrever';passo=0;telaPeca();scrollTo(0,0)});on('irEstudo',()=>{modoPeca='estudo';telaEstudo();scrollTo(0,0)});
+ on('recond',()=>{st.cond[peca.id]={e:0,r:{}};salvar();telaConduzir()});
+}
+
+/* ---------- estudo completo: lei, doutrina, jurisprudência e objetiva de tudo o que caiu na peça ---------- */
+const AREAS=['Direito Constitucional','Direito Penal','Direito Processual Penal','Legislação Especial','Medicina Legal','Criminologia'];
+function telaEstudo(){
+ const ts=(ESTUDO[peca.id]||[]).map(k=>({k,...TEMAS[k]})).filter(t=>t.t);
+ const porArea=AREAS.map(a=>[a,ts.filter(t=>t.area===a)]).filter(([,l])=>l.length);
+ $('tela').innerHTML=`<div class="card"><div class="linha-bts" style="margin-top:0"><button class="bt" data-aba="pecas">← Peças</button></div><h2>${esc(peca.titulo)}</h2>${barraModos()}
+ <p>Tudo o que caiu nesta peça, para a <b>discursiva</b> e para a <b>objetiva</b>: letra da lei (redação oficial atualizada), doutrina, jurisprudência e pegadinhas. Áreas: ${porArea.map(([a,l])=>`<a href="#ar-${AREAS.indexOf(a)}">${esc(a)} (${l.length})</a>`).join(' · ')}.</p>
+ <div class="linha-bts"><button class="bt pri" id="estCartoes">🧠 Cartões e Certo/Errado desta peça</button></div></div>
+ ${porArea.map(([a,l])=>`<div class="card" id="ar-${AREAS.indexOf(a)}"><h2>${esc(a)}</h2>${l.map(t=>`<div class="tema"><h3>${esc(t.t)}</h3>
+  ${t.lei&&t.lei.length?`<div class="rot">📖 Letra da lei</div>${t.lei.map(r=>leiHTML(r)).join('')}`:''}
+  <div class="rot">🎓 Doutrina</div><p>${esc(t.dout)}</p>
+  ${(t.jur&&t.jur.length)||(t.jtxt&&t.jtxt.length)?`<div class="rot">⚖️ Jurisprudência</div>${(t.jur||[]).map(r=>leiHTML(r)).join('')}${(t.jtxt||[]).length?`<ul>${t.jtxt.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:''}`:''}
+  ${t.obj&&t.obj.length?`<div class="rot">🎯 Para a objetiva</div><ul>${t.obj.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:''}</div>`).join('')}</div>`).join('')}`;
+ const b=$('estCartoes');if(b)b.onclick=()=>sessao(peca.cards.map((_,i)=>peca.id+'#'+i),'Memorize: '+peca.titulo);
+}
+
 function telaPeca(){
  const ps=passosDe(peca),s=st.pecas[peca.id],P=ps[passo],ultimo=passo===ps.length;
  const barra=`<div class="passos">${ps.map((x,i)=>`<button class="${i===passo?'at':(s.txt[i]?'ok':'')}" data-passo="${i}">${i+1}. ${esc(x.t)}</button>`).join('')}<button class="${ultimo?'at':''}" data-passo="${ps.length}">✔ Peça completa</button></div>`;
@@ -127,13 +205,13 @@ function telaPeca(){
   <div class="linha-bts"><button class="bt ok" id="salvarNota">Registrar nota e ir memorizar →</button><button class="bt" id="refazer">Refazer do zero</button></div>`;
  }else{
   corpo=`<h3>Passo ${passo+1} de ${ps.length}: ${esc(P.t)}</h3><div class="orient">${esc(P.orient)}</div>
-  ${P.arts&&P.arts.length?`<div class="arts">${P.arts.map(a=>`<span>${esc(a)}</span>`).join('')}</div>`:''}
+  ${chips(P.arts)}
   <textarea id="txt" placeholder="Escreva aqui este trecho da peça, como faria na folha de resposta…">${esc(s.txt[passo]||'')}</textarea><div class="cont" id="cont"></div>
   <div class="linha-bts"><button class="bt" id="verModelo">👁 Comparar com o modelo</button>${passo>0?'<button class="bt" id="ant">◀ Anterior</button>':''}<button class="bt pri" id="prox">Próximo passo ▶</button></div>
   <div id="area-modelo" ${s['m'+passo]?'':'hidden'}><h3>Modelo deste passo</h3><div class="modelo">${esc(P.modelo||'')}</div>
   ${P.check&&P.check.length?`<h3>Checklist (marque o que VOCÊ fez)</h3><div class="check">${P.check.map((c,j)=>`<label><input type="checkbox" data-chk="${passo}.${j}" ${s.chk[passo+'.'+j]?'checked':''}> ${esc(c)}</label>`).join('')}</div>`:''}</div>`;
  }
- $('tela').innerHTML=`<div class="card"><div class="linha-bts" style="margin-top:0"><button class="bt" data-aba="pecas">← Peças</button></div><h2>${esc(peca.titulo)}</h2><details ${passo===0?'open':''}><summary><b>Enunciado</b></summary><div class="enun">${esc(peca.enunciado)}</div></details>${barra}${corpo}</div>`;
+ $('tela').innerHTML=`<div class="card"><div class="linha-bts" style="margin-top:0"><button class="bt" data-aba="pecas">← Peças</button></div><h2>${esc(peca.titulo)}</h2>${barraModos()}<details ${passo===0?'open':''}><summary><b>Enunciado</b></summary><div class="enun">${esc(peca.enunciado)}</div></details>${barra}${corpo}</div>`;
  const t=$('txt');if(t){const upd=()=>{s.txt[passo]=t.value;salvar();$('cont').textContent='≈ '+linhas(t.value)+' linha(s) neste trecho'};t.oninput=upd;upd();t.focus()}
  const on=(id,f)=>{const e=$(id);if(e)e.onclick=f};
  on('verModelo',()=>{s['m'+passo]=1;salvar();$('area-modelo').hidden=false});
@@ -216,7 +294,8 @@ function progresso(){
  $('exp').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(st)],{type:'application/json'}));a.download='treino_discursiva_backup.json';a.click()};
  $('imp').onchange=e=>{const f=e.target.files[0];if(!f)return;f.text().then(t=>{try{st=Object.assign({pecas:{},casos:{},cartoes:{},hist:[]},JSON.parse(t));salvar();progresso()}catch(_){alert('Arquivo inválido.')}})};
 }
-window.discAPI={PECAS,CASOS,CARTOES,LEIS:typeof LEIS==='undefined'?[]:LEIS,passosDe,linhas,st:()=>st,abrirPeca,abrirCaso,ir};
+window.discAPI={PECAS,CASOS,CARTOES,LEIS:typeof LEIS==='undefined'?[]:LEIS,passosDe,linhas,st:()=>st,abrirPeca,abrirCaso,ir,
+ CONDUCAO:typeof CONDUCAO==='undefined'?{}:CONDUCAO,TEMAS:typeof TEMAS==='undefined'?{}:TEMAS,ESTUDO:typeof ESTUDO==='undefined'?{}:ESTUDO,ARTIGOS:typeof ARTIGOS==='undefined'?{}:ARTIGOS,JURIS:typeof JURIS==='undefined'?{}:JURIS,chaveDe,rotulo};
 ir('edital');
 </script>
 </body>

@@ -90,3 +90,11 @@ prompt do servidor já manda não aplicar norma posterior.
 - **O que entrou:** a estrutura das representações (sequência de tópicos e o tópico "inexistência de direitos fundamentais
   absolutos") e trechos de redação dos modelos, reescritos e corrigidos na lei. Enunciados, cartões e mnemônicos são autorais.
 - **Não entrou:** quadros, comentários, marca, links e o PDF em si, que segue fora do repositório.
+
+## 03/11/2026, 16h40 — Lei seca oficial do Planalto e súmulas oficiais no Treino de Discursiva (D-015)
+
+- **O quê:** redação oficial de 16 leis federais, baixada de planalto.gov.br por `ferramentas/atualizar_lei_seca.py`, e o
+  texto das súmulas do acervo oficial (`assets/sumulas.json`). Texto de lei e de ato oficial não tem proteção autoral
+  (Lei 9.610/98, art. 8º, IV).
+- **Onde:** `discursiva/artigos.js` (só os artigos e súmulas citados). O arquivo completo baixado fica fora do Git.
+- **Material de terceiro:** nenhum. Doutrina, condução e pegadinhas são texto autoral desta sessão.

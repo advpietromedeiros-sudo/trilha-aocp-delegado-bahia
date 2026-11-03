@@ -12,6 +12,8 @@ const conteudo = fs.readFileSync(path.join(dir, "conteudo.js"), "utf8");
 const leis = fs.readFileSync(path.join(dir, "leis.js"), "utf8");
 const compl = fs.readFileSync(path.join(dir, "pecas_complementares.js"), "utf8");
 html = html.replace('<script src="conteudo.js"></script>', () => "<script>" + conteudo + "</script>").replace('<script src="leis.js"></script>', () => "<script>" + leis + "</script>").replace('<script src="pecas_complementares.js"></script>', () => "<script>" + compl + "</script>");
+// condução, estudo completo e texto oficial dos artigos (03/11/2026, D-015)
+for (const f of ["conducao.js", "estudo.js", "artigos.js"]) { const src = fs.readFileSync(path.join(dir, f), "utf8"); const tag = `<script src="${f}"></script>`; if (!html.includes(tag)) { console.log("falta a tag de " + f); process.exit(1); } html = html.replace(tag, () => "<script>" + src + "</script>"); }
 if (AUTO) { const s = html.replace("const tec=Math.round(40*f/Math.max(1,tot))", "const tec=Math.round(4*f/Math.max(1,tot))"); if (s === html) { console.log("AUTOTESTE: não plantou"); process.exit(1); } html = s; }
 const erros = [], vc = new VirtualConsole();
 vc.on("jsdomError", e => erros.push(String(e.message || e)));
@@ -34,7 +36,7 @@ prova("cada estudo de caso tem espelho somando 15 pontos (Tabela 7.4)", A.CASOS.
 prova("contador de linhas: 72 caracteres = 1 linha; 73 = 2; vazio = 0", A.linhas("x".repeat(72)) === 1 && A.linhas("x".repeat(73)) === 2 && A.linhas("") === 0);
 
 // peça passo a passo, do início ao fim
-A.abrirPeca("preventiva");
+A.abrirPeca("preventiva", "escrever");
 const nPassos = A.passosDe(A.PECAS[0]).length;
 for (let i = 0; i < nPassos; i++) {
   const t = d.getElementById("txt"); t.value = "Trecho " + (i + 1) + " da peça. ".repeat(3); t.dispatchEvent(new w.Event("input"));
@@ -70,10 +72,35 @@ const intern = A.passosDe(A.PECAS.find(p => p.id === "internacao"));
 prova("internação provisória: endereçada à Vara da Infância e com o passo dos direitos fundamentais", /INFÂNCIA E JUVENTUDE/.test(intern[0].modelo) && intern.some(s => /direito fundamental absoluto/.test(s.t)));
 const apf = A.passosDe(A.PECAS.find(p => p.id === "apf"));
 prova("despacho do flagrante: cabeçalho do APF (não de portaria) e checklist próprio do preâmbulo", /Auto de Prisão em Flagrante/.test(apf[0].modelo) && !/Portaria/.test(apf[0].modelo) && apf[1].check.some(c => /301 a 306/.test(c)));
-A.abrirPeca("apf");
+A.abrirPeca("apf", "escrever");
 for (let i = 0; i < apf.length; i++) { const tx = d.getElementById("txt"); tx.value = "Parte " + (i + 1) + " do despacho."; tx.dispatchEvent(new w.Event("input")); clicar("verModelo"); d.querySelectorAll("[data-chk]").forEach(c => { c.checked = true; c.dispatchEvent(new w.Event("change")); }); clicar("prox"); }
 d.getElementById("lp").value = "10"; clicar("salvarNota");
 prova("despacho do flagrante feito passo a passo até a nota 60/60", A.st().pecas.apf && A.st().pecas.apf.nota === 60, JSON.stringify(A.st().pecas.apf));
+// condução "Entender o caso" (D-015): toda peça tem 5 etapas, cada pergunta com uma só alternativa certa, pistas que existem no enunciado
+const semCond = A.PECAS.filter(p => { const c = A.CONDUCAO[p.id]; return !c || c.etapas.length !== 5 || c.etapas.some(e => !e.logica || !e.arts.length || e.qs.some(q => q.op.filter(o => o[1] === 1).length !== 1 || q.op.some(o => !o[2]))) || c.pistas.some(x => !p.enunciado.includes(x)); });
+prova("toda peça tem condução em 5 etapas, perguntas com uma só certa e pistas tiradas do enunciado", semCond.length === 0, semCond.map(p => p.id).join(","));
+const refs = [...new Set(Object.values(A.CONDUCAO).flatMap(c => c.etapas.flatMap(e => e.arts)).concat(Object.values(A.TEMAS).flatMap(t => (t.lei || []).concat(t.jur || []))))];
+const semTexto = refs.filter(r => /^(SUM|SV)/.test(r) ? !A.JURIS[r] : !A.ARTIGOS[r]);
+const semOficial = refs.filter(r => A.ARTIGOS[r] && A.ARTIGOS[r].falta);
+prova(`${refs.length} artigos e súmulas citados: todos no artigos.js (${semOficial.length} só com link do Planalto)`, semTexto.length === 0, semTexto.join(","));
+A.abrirPeca("preventiva");
+prova("peça não conduzida abre na condução, com as pistas do enunciado em destaque", /Etapa 1 de 5/.test(d.body.textContent) && d.querySelectorAll(".enun mark").length === A.CONDUCAO.preventiva.pistas.length);
+d.querySelector('[data-op="0.0:1"]').click();
+prova("alternativa errada mostra o porquê e não libera a etapa", /Temporária|não decreta|Tente outra/.test(d.body.textContent) && d.querySelector(".op.errada") && d.getElementById("etProx").disabled);
+for (let e = 0; e < 5; e++) { A.CONDUCAO.preventiva.etapas[e].qs.forEach((q, qi) => { const oi = q.op.findIndex(o => o[1] === 1); d.querySelector(`[data-op="${e}.${qi}:${oi}"]`).click(); }); if (e === 0) prova("acertando, aparece a lógica e o artigo oficial (CPP, art. 312, com a data do Planalto)", /A lógica:/.test(d.body.textContent) && /Redação oficial do Planalto, baixada em/.test(d.body.textContent) && /prisão preventiva poderá ser decretada/.test(d.body.textContent)); clicar("etProx"); }
+prova("ao fim da condução, libera escrever a peça; e a peça já conduzida abre direto na escrita", /Você entendeu o caso/.test(d.body.textContent) && A.st().cond.preventiva.fim === 1 && (clicar("irEscrever"), !!d.getElementById("txt")) && (A.abrirPeca("preventiva"), !!d.getElementById("txt")));
+const chip = d.querySelector('.arts [data-art]');
+if (chip) chip.click();
+prova("no passo da escrita, tocar no artigo abre o texto oficial", !!chip && /Redação oficial do Planalto/.test(d.querySelector(".lei-aberta").textContent));
+// estudo completo
+const semEstudo = A.PECAS.filter(p => !(A.ESTUDO[p.id] || []).length || A.ESTUDO[p.id].some(k => !A.TEMAS[k]));
+const areas = new Set(Object.values(A.TEMAS).map(t => t.area));
+prova("toda peça tem estudo completo, com temas existentes, e há Medicina Legal e Criminologia", semEstudo.length === 0 && areas.has("Medicina Legal") && areas.has("Criminologia"), semEstudo.map(p => p.id).join(","));
+d.querySelector('[data-modo="estudo"]').click();
+prova("estudo completo da peça: lei, doutrina, jurisprudência e objetiva, por área", ["Letra da lei", "Doutrina", "Jurisprudência", "Para a objetiva", "Medicina Legal", "Criminologia"].every(s => d.body.textContent.includes(s)) && /Súmula 676/.test(d.body.textContent));
+clicar("estCartoes");
+prova("do estudo, vai aos cartões e ao Certo/Errado da peça", /Memorize: Representação por prisão preventiva/.test(d.body.textContent));
+prova("rótulos: 'CPP:312:§2' → CPP, art. 312, § 2º; 'CF:5:LXI' → CF, art. 5º, LXI; chave de 'Lei 9.296/96, art. 8º-A'", A.rotulo("CPP:312:§2") === "CPP, art. 312, § 2º" && A.rotulo("CF:5:LXI") === "CF, art. 5º, LXI" && A.chaveDe("Lei 9.296/96, art. 8º-A, I") === "L9296:8-A" && A.chaveDe("ECA, art. 108") === "L8069:108", [A.rotulo("CPP:312:§2"), A.rotulo("CF:5:LXI"), A.chaveDe("Lei 9.296/96, art. 8º-A, I")].join(" | "));
 // Certo/Errado
 A.ir("memoria"); clicar("ceTudo");
 const item = d.querySelector(".flash .p").textContent, cart = A.CARTOES.find(c => c.ce[0] === item);

@@ -6,6 +6,7 @@
 
 ## Estado
 
+- 🆕 **03/11/2026, 17h — Treino de Discursiva: condução "Entender o caso" e "Estudo completo" nas 18 peças (D-015):** 5 etapas por peça (peça, competência, crime, fundamentos, pedidos) com os artigos na redação oficial do Planalto (`discursiva/artigos.js`, gerado por `ferramentas/gerar_artigos_discursiva.py`); estudo por tema com lei, doutrina, jurisprudência, Medicina Legal e Criminologia. ⚠️ Lei 11.340 sem texto oficial (Planalto fora): rodar `atualizar_lei_seca.bat L11340` e o gerador.
 - 🆕 **03/11/2026, 11h — Treino de Discursiva só com o que o edital admite (D-014):** saem 12-C e 13-A (viram cartões), entram 6 representações (captação ambiental, sigilo bancário e fiscal, 13-B, alienação antecipada, perfil genético, internação provisória); 18 peças, 215 cartões.
 - 🆕 **03/11/2026, 09h — Treino de Discursiva: 5 peças complementares (D-013):** despacho do flagrante + conversão, cautelares diversas (319, VI), afastamento do lar pelo delegado (12-C), ofício do art. 13-A e relatório final — `discursiva/pecas_complementares.js`; 14 peças, 188 cartões.
 - 🆕 **02/11/2026, 20h46 — Treino de Discursiva ampliado (D-012):** 8 baralhos por lei conferidos no texto legal

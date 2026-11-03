@@ -14,3 +14,6 @@ assets/fontes_paginas.json
 assets/lei_seca_material.json
 assets/juris_aocp.json
 assets/exemplo_aocp.json
+
+# Lei seca oficial baixada do Planalto (atualizar_lei_seca.bat): refaz-se a qualquer hora; o Treino de Discursiva usa o derivado discursiva/artigos.js (D-015)
+assets/lei_seca_oficial.json
