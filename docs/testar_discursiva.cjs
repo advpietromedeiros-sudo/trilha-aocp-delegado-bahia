@@ -63,9 +63,11 @@ prova("estudo de caso: 12 linhas, espelho completo → 20/20 na Tabela 7.4", A.s
 prova(`${A.LEIS.length} leis do edital com cartões, e a peça da Lei Antifacção está na lista`, A.LEIS.length >= 8 && A.LEIS.every(l => l.cards.length >= 5) && A.PECAS.some(p => p.id === "faccao") && A.CASOS.some(c => c.id === "c-tco"));
 A.ir("memoria"); d.querySelector('[data-lei="l15358"]').click();
 prova("tocar numa lei abre a memorização só dela", /Memorize: Lei 15\.358/.test(d.body.textContent) && !!d.getElementById("resp"));
-// peças complementares (03/11/2026): 14 peças, e a de inquérito usa cabeçalho e preâmbulo próprios
-const novas = ["apf", "cautelar-diversa", "afastamento", "requisicao", "relatorio"];
-prova("as 5 peças complementares estão na lista (14 no total)", A.PECAS.length === 14 && novas.every(id => A.PECAS.some(p => p.id === id)), A.PECAS.map(p => p.id).join(","));
+// peças complementares (03/11/2026): 18 peças, e a de inquérito usa cabeçalho e preâmbulo próprios
+const novas = ["apf", "cautelar-diversa", "relatorio", "captacao", "sigilo-bancario", "localizacao-13b", "alienacao", "perfil-genetico", "internacao"];
+prova("as 9 peças complementares estão na lista (18 no total; 12-C e 13-A viraram cartões)", A.PECAS.length === 18 && !A.PECAS.some(p => ["afastamento", "requisicao"].includes(p.id)) && novas.every(id => A.PECAS.some(p => p.id === id)), A.PECAS.map(p => p.id).join(","));
+const intern = A.passosDe(A.PECAS.find(p => p.id === "internacao"));
+prova("internação provisória: endereçada à Vara da Infância e com o passo dos direitos fundamentais", /INFÂNCIA E JUVENTUDE/.test(intern[0].modelo) && intern.some(s => /direito fundamental absoluto/.test(s.t)));
 const apf = A.passosDe(A.PECAS.find(p => p.id === "apf"));
 prova("despacho do flagrante: cabeçalho do APF (não de portaria) e checklist próprio do preâmbulo", /Auto de Prisão em Flagrante/.test(apf[0].modelo) && !/Portaria/.test(apf[0].modelo) && apf[1].check.some(c => /301 a 306/.test(c)));
 A.abrirPeca("apf");

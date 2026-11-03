@@ -83,3 +83,10 @@ prompt do servidor já manda não aplicar norma posterior.
 - **Uso:** só como lista de conferência dos tipos de peça e do que os espelhos pontuam (D-013); o texto legal foi conferido na lei.
 - **Não entrou:** nenhum modelo, comentário, quadro, esquema ou marca do material. O PDF não está no repositório.
 
+## 03/11/2026, 10h05 — O mesmo PDF de modelos de peça: uso do texto autorizado pelo titular (D-014)
+
+- **Autorização:** do titular, por escrito no chat (texto em D-014). ⚠️ É autorização **do titular**, não do autor do
+  material; o app é de uso pessoal, só nesta máquina e no repositório privado (D-009), e **não vai para o portal**.
+- **O que entrou:** a estrutura das representações (sequência de tópicos e o tópico "inexistência de direitos fundamentais
+  absolutos") e trechos de redação dos modelos, reescritos e corrigidos na lei. Enunciados, cartões e mnemônicos são autorais.
+- **Não entrou:** quadros, comentários, marca, links e o PDF em si, que segue fora do repositório.

@@ -165,3 +165,24 @@ de curso preparatório.
   (art. 12-C, II); ofício de requisição (art. 13-A); relatório final. Total: 14 peças, 188 cartões. O motor aceita
   cabeçalho e preâmbulo próprios nas peças que não são portaria.
 
+### D-014 — Só as peças que o edital admite; texto do PDF autorizado (03/11/2026, 10h05, titular)
+
+Ordem do titular, textual: *"PODE USAR SE ESTIVER CORRETO OU ATÉ MELHOR O TEXTO DAS PEÇAS DO PDF E VERIFIQUE NO EDITAL
+DELEGADO BA AS PEÇAS QUE CAEM E DEIXE SOMENTE ELAS. ATUALIZE A APLICAÇÃO"*.
+
+- **Edital, item 7.2.9.1:** a peça é "peça cautelar (representações) ou peça de inquérito policial". Saíram da lista de
+  peças o despacho de afastamento do lar (12-C) e o ofício do art. 13-A, que não são nem uma nem outra; os 11 cartões deles
+  viraram o baralho "Atos do Delegado sem o juiz".
+- **Entraram 6 representações** que o PDF traz e o app não tinha: captação ambiental (Lei 9.296, 8º-A), quebra de sigilo
+  bancário e fiscal (LC 105, 1º, § 4º), meios técnicos de localização (CPP, 13-B), alienação antecipada (CPP, 144-A),
+  identificação criminal com perfil genético e acesso aos bancos (Lei 12.037; LEP, 9º-A) e internação provisória (ECA, 108).
+  Total: 18 peças, 215 cartões.
+- **Ficaram de fora**, por serem variantes de peça existente ou de cobrança marginal: utilização de bem sequestrado,
+  infiltração do ECA (190-A), suspensão da CNH (CTB, 294) e entrega vigiada. Viram peça se o titular pedir.
+- **Correções feitas sobre o PDF:** art. 5º, XXXIII → XXII (propriedade); "Lei 9.096" → 9.296; o § 2º do 8º-A (instalação
+  disfarçada ou noturna, exceto na casa); o art. 1º, § 4º, da LC 105 como fundamento; o procedimento do adolescente não é
+  inquérito (ECA, 173); o art. 108, parágrafo único (necessidade imperiosa); o art. 3º, IV, da Lei 12.037 no perfil genético.
+- **Motor:** toda representação ganhou o passo "não há direito fundamental absoluto" (com o inciso do art. 5º), o checklist
+  de tipificação completa nos fatos e os pedidos do 282, § 3º, e do 289-A; a peça pode trazer endereçamento próprio.
+- ⚠️ **Declarado:** a sessão anterior deixou o motor com erro de sintaxe (quebra de linha dentro de uma string), e a página
+  não carregava; corrigido nesta.

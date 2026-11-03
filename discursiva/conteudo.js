@@ -8,8 +8,8 @@
 const BASE = {
   enderecamento: {
     t: 'Endereçamento',
-    orient: 'Dirija ao JUÍZO competente. Onde houver Juiz das Garantias implantado, a ele (art. 3º-B, CPP). Se o enunciado não disser a vara, use lacunas: nunca invente.',
-    arts: ['CPP, art. 3º-B (juiz das garantias)', 'CF, art. 5º, LIII (juiz natural)'],
+    orient: 'Dirija ao JUÍZO competente. Regra: Vara Criminal da Comarca (ou Juiz das Garantias, onde implantado — CPP, art. 3º-B). Confira o juízo ESPECIALIZADO: violência doméstica contra a mulher → Vara/Juizado de Violência Doméstica; crime doloso contra a vida → Vara do Júri; vítima criança ou adolescente → em Salvador, Vara de crimes contra a criança e o adolescente, qualquer que seja o crime (STJ, HC 807.617-BA; Lei 13.431/17, art. 23); adolescente autor → Vara da Infância e Juventude; prefeito → Tribunal de Justiça (CF, art. 29, X). Sem dado no enunciado, use lacunas: nunca invente.',
+    arts: ['CPP, art. 3º-B (juiz das garantias)', 'CF, art. 5º, LIII (juiz natural)', 'Lei 13.431/17, art. 23 (vara especializada de crimes contra criança e adolescente)', 'CF, art. 29, X (prefeito: TJ)'],
     check: ['Dirigi ao Juízo (não ao MP nem à Chefia de Polícia)', 'Usei lacunas (…) para o que o enunciado não deu', 'Não inventei nome de juiz nem número de vara'],
   },
   referencia: {
@@ -31,7 +31,7 @@ const BASE = {
 const PECAS = [
   /* ---------------------------------------------------------------- 1 */
   {
-    id: 'preventiva', titulo: 'Representação por prisão preventiva', freq: 'A mais cobrada: 7 de 14 peças de Delegado (2020–2026)',
+    id: 'preventiva', dirfund: { bem: 'liberdade de locomoção', inc: 'LXI' }, titulo: 'Representação por prisão preventiva', freq: 'A mais cobrada: 7 de 14 peças de Delegado (2020–2026)',
     enunciado: 'Em 10/10/2026, na Comarca de Ilhéus/BA, Marcos e um comparsa não identificado, armados com revólver, subtraíram o celular e a carteira de Júlia em ponto de ônibus. Marcos foi reconhecido pela vítima em procedimento formal (art. 226, CPP) e as imagens de câmera o mostram empunhando a arma. Instaurado o IP nº 123/2026, testemunhas relataram que Marcos passou a procurá-las, ameaçando-as de morte caso "falassem com a polícia". Marcos tem condenação definitiva anterior por furto e não foi localizado no endereço informado. Na condição de Delegado de Polícia Civil, elabore a peça cabível.',
     mnemonico: 'Requisitos da preventiva = "PROVA + INDÍCIO + PERIGO" (art. 312) e as 4 finalidades "O-E-I-A": Ordem pública, ordem Econômica, Instrução criminal, Aplicação da lei penal. Cabimento (art. 313): "4-R-V" — pena máxima > 4 anos, Reincidente em doloso, Violência doméstica.',
     preambulo: 'O DELEGADO DE POLÍCIA CIVIL que esta subscreve, no exercício das atribuições do art. 144, § 4º, da Constituição Federal e do art. 2º da Lei nº 12.830/2013, com fundamento nos arts. 282, 311, 312 e 313, I, do Código de Processo Penal, vem, respeitosamente, REPRESENTAR pela decretação da PRISÃO PREVENTIVA de MARCOS (qualificação nos autos), pelos fatos e fundamentos a seguir expostos.',
@@ -70,7 +70,7 @@ const PECAS = [
   },
   /* ---------------------------------------------------------------- 2 */
   {
-    id: 'temporaria', titulo: 'Representação por prisão temporária', freq: 'Cobrada na PC-PI 2026 e na PC-RS 2026',
+    id: 'temporaria', dirfund: { bem: 'liberdade de locomoção', inc: 'LXI' }, titulo: 'Representação por prisão temporária', freq: 'Cobrada na PC-PI 2026 e na PC-RS 2026',
     enunciado: 'Em 02/09/2026, Rafael foi morto com disparos de arma de fogo em Feira de Santana/BA. No IP nº 88/2026, testemunhas apontaram "Neguinho" como autor; a investigação o identificou como Paulo, que não tem residência fixa e se recusou a fornecer dados de identificação quando abordado. A oitiva de Paulo e o reconhecimento por testemunhas são imprescindíveis para avançar, e há notícia de que ele pretende deixar o Estado. Elabore a peça cabível.',
     mnemonico: 'Temporária = "IMPRESCINDÍVEL + ROL" (Lei 7.960/89, art. 1º, I e III — STF exige os dois juntos). Prazos: "5+5" comum, "30+30" hediondo (Lei 8.072/90, art. 2º, § 4º). Juiz decide em 24 h.',
     preambulo: 'O DELEGADO DE POLÍCIA CIVIL que esta subscreve, no exercício das atribuições do art. 144, § 4º, da Constituição Federal e do art. 2º da Lei nº 12.830/2013, com fundamento nos arts. 1º, I, II e III, "a", e 2º da Lei nº 7.960/1989 e no art. 2º, § 4º, da Lei nº 8.072/1990, vem REPRESENTAR pela decretação da PRISÃO TEMPORÁRIA de PAULO, vulgo "Neguinho" (qualificação nos autos).',
@@ -100,7 +100,7 @@ const PECAS = [
   },
   /* ---------------------------------------------------------------- 3 */
   {
-    id: 'busca', titulo: 'Representação por busca e apreensão domiciliar', freq: '4 de 14 peças; quase sempre cumulada com a preventiva',
+    id: 'busca', dirfund: { bem: 'inviolabilidade do domicílio e da intimidade', inc: 'X e XI' }, titulo: 'Representação por busca e apreensão domiciliar', freq: '4 de 14 peças; quase sempre cumulada com a preventiva',
     enunciado: 'Em 15/09/2026, no IP nº 210/2026 (Vitória da Conquista/BA), relatórios de investigação, fotografias e o depoimento de um usuário indicam que Carla guarda e vende cocaína na casa situada na Rua das Flores, nº 45, Bairro Centro, onde reside, e que mantém ali anotações da contabilidade do tráfico e um aparelho celular usado nas negociações. Elabore a peça cabível.',
     mnemonico: 'Busca domiciliar = CF 5º XI (casa é asilo inviolável: de DIA, com ordem judicial) + CPP 240, § 1º (fundadas razões; alíneas a–h) + 243 (o mandado indica a CASA, o MOTIVO e os FINS). Celular: peça também o ACESSO AOS DADOS.',
     preambulo: 'O DELEGADO DE POLÍCIA CIVIL que esta subscreve, com fundamento no art. 5º, XI, da Constituição Federal e nos arts. 240, § 1º, 241, 242 e 243 do Código de Processo Penal, vem REPRESENTAR pela expedição de MANDADO DE BUSCA E APREENSÃO DOMICILIAR no imóvel situado na Rua das Flores, nº 45, Bairro Centro, nesta cidade, residência de CARLA (qualificação nos autos).',
@@ -133,7 +133,7 @@ const PECAS = [
   },
   /* ---------------------------------------------------------------- 4 */
   {
-    id: 'interceptacao', titulo: 'Representação por interceptação telefônica', freq: 'Clássica de Delegado; base da Lei 9.296/96 (edital)',
+    id: 'interceptacao', dirfund: { bem: 'inviolabilidade das comunicações telefônicas e da intimidade', inc: 'X e XII' }, titulo: 'Representação por interceptação telefônica', freq: 'Clássica de Delegado; base da Lei 9.296/96 (edital)',
     enunciado: 'No IP nº 301/2026 (Salvador/BA), apura-se associação para o tráfico entre Diego, Lucas e Ana. Campanas e monitoramento de redes sociais mostram que eles combinam entregas por ligações telefônicas, em códigos, nos números (71) 9XXXX-1111 e (71) 9XXXX-2222. Buscas anteriores não alcançaram o fornecedor, e os investigados mudam de ponto constantemente. Elabore a peça cabível.',
     mnemonico: 'Interceptação = "JUIZ da AÇÃO + SEGREDO" (art. 1º); NÃO cabe (art. 2º) sem indício de autoria, se a prova puder ser feita de outro modo ou se o crime tiver pena máxima de DETENÇÃO; prazo de "15 + 15…" (art. 5º); juiz decide em 24 h (art. 4º, § 2º).',
     preambulo: 'O DELEGADO DE POLÍCIA CIVIL que esta subscreve, com fundamento no art. 5º, XII, da Constituição Federal e nos arts. 1º a 5º da Lei nº 9.296/1996, vem REPRESENTAR pela INTERCEPTAÇÃO DAS COMUNICAÇÕES TELEFÔNICAS dos terminais (71) 9XXXX-1111 e (71) 9XXXX-2222, utilizados por DIEGO, LUCAS e ANA (qualificação nos autos).',
@@ -163,7 +163,7 @@ const PECAS = [
   },
   /* ---------------------------------------------------------------- 5 */
   {
-    id: 'maria-penha', titulo: 'Maria da Penha: pedido de medidas protetivas + preventiva', freq: 'Cobrada na PC-RO 2022; Lei Maria da Penha está no edital',
+    id: 'maria-penha', dirfund: { bem: 'liberdade de locomoção', inc: 'LXI' }, titulo: 'Maria da Penha: pedido de medidas protetivas + preventiva', freq: 'Cobrada na PC-RO 2022; Lei Maria da Penha está no edital',
     enunciado: 'Em 20/10/2026, em Juazeiro/BA, Bianca compareceu à Delegacia relatando que o ex-companheiro, Roberto, a agrediu com socos (laudo de lesão corporal confirma) e, desde então, envia mensagens dizendo que "vai acabar com ela". Bianca pediu medidas protetivas. Roberto já descumpriu medida protetiva anterior, deferida em outro processo, e foi visto rondando a casa da vítima. Elabore a peça cabível.',
     mnemonico: 'Na Maria da Penha o delegado ENCAMINHA o PEDIDO DA OFENDIDA em 48 h (art. 12, III) — quem "requer" a protetiva é a vítima ou o MP (art. 19). A preventiva cabe por REPRESENTAÇÃO do delegado (art. 20; CPP, art. 313, III). Descumprimento de protetiva = crime do art. 24-A, e só o JUIZ concede fiança (§ 2º).',
     preambulo: 'O DELEGADO DE POLÍCIA CIVIL que esta subscreve, com fundamento nos arts. 12, III, 18, 19, 20 e 22 da Lei nº 11.340/2006 e nos arts. 311, 312 e 313, III, do Código de Processo Penal, vem ENCAMINHAR o PEDIDO DE MEDIDAS PROTETIVAS DE URGÊNCIA formulado pela ofendida BIANCA e REPRESENTAR pela PRISÃO PREVENTIVA de ROBERTO (qualificação nos autos).',
@@ -193,7 +193,7 @@ const PECAS = [
   },
   /* ---------------------------------------------------------------- 6 */
   {
-    id: 'sequestro', titulo: 'Representação por sequestro de bens (medidas assecuratórias)', freq: 'PC-PA 2021 (AOCP) cumulou sequestro com preventiva e busca',
+    id: 'sequestro', dirfund: { bem: 'propriedade', inc: 'XXII' }, titulo: 'Representação por sequestro de bens (medidas assecuratórias)', freq: 'PC-PA 2021 (AOCP) cumulou sequestro com preventiva e busca',
     enunciado: 'No IP nº 77/2026 (Salvador/BA), apura-se lavagem de dinheiro por Sérgio: valores do tráfico foram usados para comprar, em nome dele, um apartamento na Av. Oceânica, nº 900, e uma caminhonete placa ABC-1D23, sem renda lícita compatível (relatório do COAF e declarações de IR). Há notícia de que ele anunciou os bens para venda. Elabore a peça cabível.',
     mnemonico: 'Sequestro = bens ADQUIRIDOS com os PROVENTOS do crime (CPP, art. 125 imóveis; art. 132 móveis) + basta "INDÍCIOS VEEMENTES" da origem ilícita (art. 126) + delegado REPRESENTA (art. 127). Na lavagem: Lei 9.613, art. 4º (bens do investigado, inclusive em nome de interpostas pessoas).',
     preambulo: 'O DELEGADO DE POLÍCIA CIVIL que esta subscreve, com fundamento nos arts. 125, 126, 127 e 132 do Código de Processo Penal e no art. 4º da Lei nº 9.613/1998, vem REPRESENTAR pelo SEQUESTRO dos bens de SÉRGIO (qualificação nos autos).',
@@ -222,7 +222,7 @@ const PECAS = [
   },
   /* ---------------------------------------------------------------- 7 */
   {
-    id: 'infiltracao', titulo: 'Representação por infiltração de agentes', freq: 'PF 2021 (infiltração virtual); Lei 12.850/13 no edital',
+    id: 'infiltracao', dirfund: { bem: 'intimidade e vida privada', inc: 'X' }, titulo: 'Representação por infiltração de agentes', freq: 'PF 2021 (infiltração virtual); Lei 12.850/13 no edital',
     enunciado: 'No IP nº 500/2026 (Camaçari/BA), apura-se organização criminosa estruturada, com divisão de tarefas, que pratica roubos de carga e receptação, liderada por "Tio Zé". Interceptações anteriores mostraram que o grupo usa comunicação presencial e mudou seus integrantes; a identificação da cúpula e dos receptadores depende de um agente inserido no grupo. Elabore a peça cabível.',
     mnemonico: 'Infiltração (Lei 12.850) = "CIRCUNSTANCIADA, MOTIVADA e SIGILOSA" autorização judicial (art. 10); só se a prova NÃO puder ser obtida por outros meios (§ 2º); até 6 meses, renováveis (§ 3º); o pedido traz NECESSIDADE, ALCANCE das tarefas, NOMES/APELIDOS e LOCAL (art. 11).',
     preambulo: 'O DELEGADO DE POLÍCIA CIVIL que esta subscreve, com fundamento nos arts. 3º, VII, 10 e 11 da Lei nº 12.850/2013, vem REPRESENTAR pela autorização de INFILTRAÇÃO DE AGENTE DE POLÍCIA em organização criminosa investigada no IP nº 500/2026.',

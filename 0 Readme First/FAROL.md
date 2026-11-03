@@ -6,6 +6,7 @@
 
 ## Estado
 
+- 🆕 **03/11/2026, 11h — Treino de Discursiva só com o que o edital admite (D-014):** saem 12-C e 13-A (viram cartões), entram 6 representações (captação ambiental, sigilo bancário e fiscal, 13-B, alienação antecipada, perfil genético, internação provisória); 18 peças, 215 cartões.
 - 🆕 **03/11/2026, 09h — Treino de Discursiva: 5 peças complementares (D-013):** despacho do flagrante + conversão, cautelares diversas (319, VI), afastamento do lar pelo delegado (12-C), ofício do art. 13-A e relatório final — `discursiva/pecas_complementares.js`; 14 peças, 188 cartões.
 - 🆕 **02/11/2026, 20h46 — Treino de Discursiva ampliado (D-012):** 8 baralhos por lei conferidos no texto legal
   (inclui Lei 15.358/2026), peça de facção e caso de TCO. 9 peças, 9 casos, 161 cartões.

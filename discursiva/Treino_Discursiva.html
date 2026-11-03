@@ -43,8 +43,8 @@ textarea{width:100%;min-height:150px;border:1px solid var(--linha);border-radius
 <nav class="abas" id="abas"></nav></header>
 <main id="tela"></main>
 <script src="conteudo.js"></script>
-<script src="pecas_complementares.js"></script>
 <script src="leis.js"></script>
+<script src="pecas_complementares.js"></script>
 <script>
 /* Treino de Discursiva (02/11/2026, pedido do titular): fazer a peça e os estudos de caso PASSO A PASSO, sob orientação,
    e memorizar os artigos de cada um (cartões com repetição espaçada + Certo/Errado para a objetiva).
@@ -75,12 +75,13 @@ function passosDe(p){
   ...p.direito,
   {...BASE.fecho,orient:'Local, data e "Delegado de Polícia Civil".',modelo:'…/BA, … de … de ….\n\nDelegado de Polícia Civil'}];
  return[
-  {...BASE.enderecamento,modelo:'EXCELENTÍSSIMO(A) SENHOR(A) JUIZ(ÍZA) DE DIREITO DA … VARA CRIMINAL DA COMARCA DE …/BA\n(ou: JUIZ DAS GARANTIAS, onde implantado)'},
+  {...BASE.enderecamento,modelo:p.enderecamento||'EXCELENTÍSSIMO(A) SENHOR(A) JUIZ(ÍZA) DE DIREITO DA … VARA CRIMINAL DA COMARCA DE …/BA\n(ou: JUIZ DAS GARANTIAS, onde implantado)'},
   BASE.referencia,
   {t:'Preâmbulo',orient:'Quem representa, com que atribuição, com que fundamento legal, pelo quê e contra quem. É aqui que o examinador vê se você sabe A PEÇA.',arts:p.pre_arts,check:['Usei o verbo correto (REPRESENTAR)','Citei os artigos do pedido','Identifiquei o representado (qualificação nos autos)'],modelo:p.preambulo},
-  {t:'Dos fatos',orient:'Síntese objetiva SÓ com o que o enunciado traz. Nunca invente dados (nomes, datas, números).',arts:[],check:['Síntese curta e fiel ao enunciado','Nenhum dado inventado','Indiquei o IP de origem'],modelo:p.fatos},
+  {t:'Dos fatos',orient:'Síntese objetiva SÓ com o que o enunciado traz. Nunca invente dados. Tipificação completa: (1) consumado ou tentado (art. 14, II)? (2) qualificadora, majorante, agravante? (3) vários agentes: concurso de pessoas (art. 29), associação (art. 288) ou orcrim (Lei 12.850, art. 2º)? (4) vários crimes: concurso material (69), formal (70) ou continuado (71)? (5) adolescente: ato infracional análogo.',arts:['CP, arts. 14, 29, 69, 70 e 71','CP, art. 288; Lei 12.850/13, art. 2º'],check:['Síntese curta e fiel ao enunciado','Nenhum dado inventado','Indiquei o IP de origem','Tipifiquei completo (tentativa, qualificadora/majorante, concurso de pessoas e de crimes)'],modelo:p.fatos},
+  ...(p.dirfund?[{t:'Dos fundamentos: não há direito fundamental absoluto',orient:'Diga QUAL direito fundamental a medida relativiza e o inciso do art. 5º da CF: liberdade (LXI), casa (XI), intimidade e vida privada (X), comunicações (XII), propriedade (XXII). A relativização é excepcional e está sob reserva de jurisdição.',arts:['CF, art. 5º, '+p.dirfund.inc],check:['Nomeei o direito fundamental relativizado','Citei o inciso do art. 5º ('+p.dirfund.inc+')','Disse que a medida está sob reserva de jurisdição'],modelo:'DOS FUNDAMENTOS — DA INEXISTÊNCIA DE DIREITOS FUNDAMENTAIS ABSOLUTOS\nA relativização de direito fundamental é medida excepcional, sujeita à reserva de jurisdição. Contudo, a garantia da '+p.dirfund.bem+' (CF, art. 5º, '+p.dirfund.inc+') não pode servir de escudo para a prática de ilícitos, em detrimento da segurança pública e da ordem pública, igualmente tuteladas: não há direito fundamental absoluto, admitindo-se sua restrição excepcional, por ordem judicial fundamentada.'}]:[]),
   ...p.direito,
-  {t:'Dos pedidos',orient:'Pedidos NUMERADOS: o principal, os acessórios (mandado, BNMP, acesso a dados…), oitiva do MP, sigilo e urgência. A AOCP pontua CADA pleito.',arts:[],check:p.pedidos_check,modelo:p.pedidos},
+  {t:'Dos pedidos',orient:'Pedidos NUMERADOS: o principal, os acessórios (mandado e registro no BNMP — art. 289-A; acesso a dados…), oitiva do MP, decisão sem intimação prévia do investigado (art. 282, § 3º), sigilo e urgência. Nas prisões, lembre a revisão a cada 90 dias (art. 316, parágrafo único). A banca pontua CADA pleito.',arts:[],check:p.pedidos_check,modelo:p.pedidos},
   BASE.fecho];
 }
 
