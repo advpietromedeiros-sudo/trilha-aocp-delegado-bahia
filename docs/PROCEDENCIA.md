@@ -108,3 +108,11 @@ prompt do servidor já manda não aplicar norma posterior.
 - **O que sai:** `Treino_Discursiva_Delegado_PCBA.html` (650.864 bytes), gerado por `ferramentas/empacotar_discursiva.py`
   a partir de `discursiva/`. Não leva o PDF, nem marca, nem dado pessoal. O envio é feito pelo titular, fora do repositório.
 - ⚠️ A responsabilidade pelo trecho de terceiro no envio é do titular. O app continua fora do portal (D-009).
+
+## 04/11/2026, 16h36 — Simulados DPC-BA comentados (Projeto em Delta), só na máquina do titular (D-017)
+
+- **O quê:** questões objetivas e comentários dos Simulados 1 a 4 DPC-BA, curso preparatório de terceiro, transcritos
+  dos PDFs por `ferramentas/importar_simulados_delta.py` para `discursiva/simulados_delta.js`.
+- **Autorização:** ordem escrita do titular no chat, para seu estudo pessoal. **Sem** autorização do autor para
+  distribuição: o arquivo fica **fora do Git** (`.gitignore`) e **fora do arquivo único de envio**.
+- **Dado pessoal:** a marca d'água com CPF e código do comprador é retirada na importação; nada dela entra em arquivo do app.

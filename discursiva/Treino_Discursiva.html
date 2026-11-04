@@ -43,6 +43,9 @@ details.lei{border:1px solid var(--linha);border-radius:8px;margin:6px 0;backgro
 .leitxt{white-space:pre-wrap;font:15px/1.6 Georgia,serif;padding:4px 12px 10px}.leitxt small{color:var(--suave);font:12px "Segoe UI",sans-serif}.leifonte{font-size:12px;color:var(--suave);padding:0 12px 8px}
 .n26{color:var(--vermelho);font-weight:700}.arts span[data-art]{cursor:pointer}.arts span[data-art]:hover{background:var(--azul2)}
 .tema{border-top:1px solid var(--linha);padding-top:10px;margin-top:12px}.rot{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--suave);margin-top:10px}
+.nums{display:grid;grid-template-columns:repeat(auto-fill,minmax(38px,1fr));gap:4px;margin:8px 0}.nums button{border:1px solid var(--linha);background:#fff;border-radius:6px;padding:5px 0;font:13px "Segoe UI",sans-serif;cursor:pointer}.nums button.at{outline:2px solid var(--azul)}.nums button.resp{background:var(--azul2);border-color:var(--azul)}.nums button.cer{background:var(--verde2);border-color:var(--verde)}.nums button.err{background:var(--vermelho2);border-color:var(--vermelho)}
+.op:disabled{opacity:1;cursor:default;color:var(--tinta)}.op.marcada{background:var(--azul2);border-color:var(--azul);font-weight:600}.sq p{margin:.45em 0}pre.tab{overflow-x:auto;font:13px/1.45 Consolas,monospace;background:#fafaf7;border:1px solid var(--linha);border-radius:6px;padding:8px;white-space:pre}
+img.fig{display:block;max-width:100%;margin:10px auto;border:1px solid var(--linha);border-radius:6px}.com{background:#fffef8;border:1px solid var(--linha);border-left:4px solid var(--ouro);padding:8px 14px;border-radius:6px;margin-top:10px}
 @media(max-width:700px){main{padding:10px}.caixas{grid-template-columns:repeat(3,1fr)}}
 </style>
 </head>
@@ -56,6 +59,7 @@ details.lei{border:1px solid var(--linha);border-radius:8px;margin:6px 0;backgro
 <script src="conducao.js"></script>
 <script src="estudo.js"></script>
 <script src="artigos.js"></script>
+<script src="simulados_delta.js" data-local="terceiro"></script>
 <script>
 /* Treino de Discursiva (02/11/2026, pedido do titular): fazer a peça e os estudos de caso PASSO A PASSO, sob orientação,
    e memorizar os artigos de cada um (cartões com repetição espaçada + Certo/Errado para a objetiva).
@@ -97,10 +101,10 @@ function passosDe(p){
 }
 
 /* ---------- abas ---------- */
-const ABAS=[['edital','🗺️ Edital'],['pecas','📜 Peças'],['casos','✍️ Estudos de caso'],['memoria','🧠 Memorizar'],['progresso','📊 Progresso']];
+const ABAS=[['edital','🗺️ Edital'],['pecas','📜 Peças'],['casos','✍️ Estudos de caso'],['simulados','📝 Simulados'],['memoria','🧠 Memorizar'],['progresso','📊 Progresso']];
 let aba='edital';
 const marcarAba=a=>{aba=a;$('abas').innerHTML=ABAS.map(([k,n])=>`<button class="${k===a?'on':''}" data-aba="${k}">${n}</button>`).join('')};
-function ir(a){aba=a;$('abas').innerHTML=ABAS.map(([k,n])=>`<button class="${k===a?'on':''}" data-aba="${k}">${n}</button>`).join('');({edital,pecas:listaPecas,casos:listaCasos,memoria:memorizar,progresso})[a]();scrollTo(0,0)}
+function ir(a){aba=a;$('abas').innerHTML=ABAS.map(([k,n])=>`<button class="${k===a?'on':''}" data-aba="${k}">${n}</button>`).join('');({edital,pecas:listaPecas,casos:listaCasos,simulados:listaSimulados,memoria:memorizar,progresso})[a]();scrollTo(0,0)}
 document.addEventListener('click',e=>{const b=e.target.closest('[data-aba]');if(b)ir(b.dataset.aba)});
 
 function edital(){
@@ -285,17 +289,79 @@ function telaCE(){
 }
 
 function progresso(){
- const h=st.hist.slice().reverse(),nome=x=>x.t==='peca'?(PECAS.find(p=>p.id===x.id)||{}).titulo:x.t==='caso'?(CASOS.find(c=>c.id===x.id)||{}).titulo:'Certo/Errado';
+ const h=st.hist.slice().reverse(),nome=x=>x.t==='peca'?(PECAS.find(p=>p.id===x.id)||{}).titulo:x.t==='caso'?(CASOS.find(c=>c.id===x.id)||{}).titulo:x.t==='sim'?((SIMS.find(s=>s.id===x.id)||{}).titulo||x.id)+' (objetiva)':'Certo/Errado';
  const pf=PECAS.filter(p=>st.pecas[p.id]&&st.pecas[p.id].nota!=null).length,cf=CASOS.filter(c=>st.casos[c.id]&&st.casos[c.id].nota!=null).length,dom=CARTOES.filter(c=>cx(c.id).caixa>=4).length;
  $('tela').innerHTML=`<div class="card"><h2>📊 Progresso</h2><div class="placar"><div>Peças feitas<b>${pf}/${PECAS.length}</b></div><div>Estudos de caso<b>${cf}/${CASOS.length}</b></div><div>Artigos firmes (caixa 4+)<b>${dom}/${CARTOES.length}</b></div></div>
- <h3>Histórico</h3>${h.length?`<table><tr><th>Quando</th><th>O quê</th><th>Nota</th></tr>${h.slice(0,60).map(x=>`<tr><td>${new Date(x.em).toLocaleString('pt-BR')}</td><td>${esc(nome(x))}</td><td>${x.nota}/${x.max}${x.t!=='ce'&&x.nota<x.max*.7?' ⚠️':''}</td></tr>`).join('')}</table>`:'<p>Nada ainda.</p>'}
+ <h3>Histórico</h3>${h.length?`<table><tr><th>Quando</th><th>O quê</th><th>Nota</th></tr>${h.slice(0,60).map(x=>`<tr><td>${new Date(x.em).toLocaleString('pt-BR')}</td><td>${esc(nome(x))}</td><td>${x.nota}/${x.max}${x.t!=='ce'&&x.t!=='sim'&&x.nota<x.max*.7?' ⚠️':''}</td></tr>`).join('')}</table>`:'<p>Nada ainda.</p>'}
  <p><small>⚠️ = abaixo de 70% (a nota mínima da discursiva é 70 de 100). Os dados ficam só neste navegador.</small></p>
  <div class="linha-bts"><button class="bt" id="exp">↓ Baixar backup (JSON)</button><label class="bt">↑ Restaurar backup <input type="file" id="imp" accept=".json" hidden></label></div></div>`;
  $('exp').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(st)],{type:'application/json'}));a.download='treino_discursiva_backup.json';a.click()};
  $('imp').onchange=e=>{const f=e.target.files[0];if(!f)return;f.text().then(t=>{try{st=Object.assign({pecas:{},casos:{},cartoes:{},hist:[]},JSON.parse(t));salvar();progresso()}catch(_){alert('Arquivo inválido.')}})};
 }
+/* ---------- simulados objetivos comentados (04/11/2026, pedido do titular; D-017) ----------
+   Os dados (simulados_delta.js) são material de TERCEIRO: ficam só no disco, fora do Git e do arquivo único (D-002).
+   Dois modos: PROVA (marca tudo, entrega e só então vê nota e comentários) e ESTUDO (comentário a cada resposta).
+   Questão anulada conta como acerto para todos, como faz a banca. */
+const SIMS=typeof SIMULADOS==='undefined'?[]:SIMULADOS;
+let sim=null,sq=1,soErros=false;
+const ss=id=>(st.sim=st.sim||{},st.sim[id]=st.sim[id]||{resp:{},entregue:false,modo:'prova',atual:1});
+const acertou=(q,r)=>q.anulada||r===q.gab;
+const blocosHTML=b=>(b||[]).map(([t,x])=>t==='pre'?`<pre class="tab">${esc(x)}</pre>`:t==='p'?`<p>${esc(x)}</p>`:'').join('');
+/* nota: no modo prova só conta depois de entregue; anulada conta para todos */
+function notaSim(s){const e=ss(s.id);return s.questoes.reduce((n,q)=>n+((q.anulada&&(e.entregue||e.resp[q.n]))||(e.resp[q.n]&&e.resp[q.n]===q.gab)?1:0),0)}
+function listaSimulados(){
+ if(!SIMS.length){$('tela').innerHTML=`<div class="card"><h2>📝 Simulados objetivos</h2><div class="alerta">Os simulados não estão nesta cópia. São material de terceiro e ficam só na máquina do titular: gere com <b>python -I ferramentas/importar_simulados_delta.py</b> (lê os PDFs da pasta Downloads).</div></div>`;return}
+ $('tela').innerHTML=`<div class="card"><h2>📝 Simulados objetivos comentados</h2><p>Os 4 simulados DPC-BA, montados como nos PDFs: Bloco I (Conhecimentos Gerais) e Bloco II (Conhecimentos Específicos), 100 questões cada, com o comentário de cada alternativa e o gabarito.</p>
+ <ul><li><b>Prova</b>: marque todas, entregue e veja a nota por disciplina; depois, revise com os comentários.</li><li><b>Estudo</b>: o comentário aparece logo depois de cada resposta.</li></ul><p><small>Fonte: Projeto em Delta (material de terceiro, uso pessoal; não sai desta máquina). Questão anulada conta como acerto.</small></p></div>
+ <div class="grade">${SIMS.map(s=>{const e=ss(s.id),r=Object.keys(e.resp).length;return `<div class="item"><b>${esc(s.titulo)}</b><small>${r}/100 respondidas${e.entregue?' · entregue':''}</small><br><span class="selo ${e.entregue?'feito':'pend'}">${e.entregue?'Nota: '+notaSim(s)+'/100':r&&e.modo==='estudo'?'Em estudo · '+notaSim(s)+' acertos':r?'Prova em andamento':'A fazer'}</span>
+ <div class="linha-bts"><button class="bt pri" data-simabre="${s.id}" data-simmodo="prova">${e.entregue?'Revisar':'Prova'}</button>${e.entregue?'':`<button class="bt" data-simabre="${s.id}" data-simmodo="estudo">Estudo</button>`}${r?`<button class="bt" data-simzera="${s.id}">Recomeçar</button>`:''}</div></div>`}).join('')}</div>`;
+}
+function abrirSim(id,modo){sim=SIMS.find(s=>s.id===id);const e=ss(id);if(!e.entregue&&modo&&modo!==e.modo&&Object.keys(e.resp).length&&!confirm('Trocar de modo mantém as respostas já marcadas. Continuar?'))return;marcarAba('simulados');if(!e.entregue&&modo)e.modo=modo;soErros=false;sq=e.atual||1;salvar();telaQuestao()}
+function telaQuestao(){
+ const e=ss(sim.id),q=sim.questoes.find(x=>x.n===sq),r=e.resp[q.n],ver=e.entregue||(e.modo==='estudo'&&!!r);
+ const tb=sim.textos.find(t=>q.n>=t.de&&q.n<=t.ate);
+ const lista=soErros?sim.questoes.filter(x=>!acertou(x,e.resp[x.n])).map(x=>x.n):sim.questoes.map(x=>x.n);
+ const pos=lista.indexOf(q.n),ant=lista[pos-1],prox=lista[pos+1];
+ const cls=x=>{const rx=e.resp[x.n];if(e.entregue||(e.modo==='estudo'&&rx))return acertou(x,rx)?'cer':'err';return rx?'resp':''};
+ const alts='ABCDE'.split('').map(k=>{let c='bt op';if(ver){if(k===q.gab)c+=' certa';else if(k===r)c+=' errada'}else if(k===r)c+=' marcada';return `<button class="${c}" data-simalt="${k}" ${e.entregue||(e.modo==='estudo'&&r)?'disabled':''}><b>${k})</b> ${esc(q.alts[k])}</button>`}).join('');
+ const fig=q.fig?`<img class="fig" src="${q.fig.src}" alt="Figura da questão ${q.n}">`:'';
+ $('tela').innerHTML=`<div class="card sq"><div class="linha-bts" style="margin-top:0"><button class="bt" data-aba="simulados">← Simulados</button>${!e.entregue&&e.modo==='prova'?'<button class="bt pri" id="entregar">Entregar a prova</button>':''}${e.entregue?'<button class="bt" id="resultado">Ver resultado</button>':''}</div>
+ <h2>${esc(sim.titulo)} · ${e.entregue?'revisão':e.modo==='prova'?'prova':'estudo'}${soErros?' · só os erros':''}</h2>
+ <div class="rot">${esc(q.bloco||'')} · ${esc(q.disc||'')}</div>
+ <details class="lei"><summary>Mapa das questões (${Object.keys(e.resp).length}/100 respondidas)</summary><div class="nums">${sim.questoes.map(x=>`<button class="${cls(x)}${x.n===q.n?' at':''}" data-simir="${x.n}">${x.n}</button>`).join('')}</div></details>
+ ${tb?`<details class="lei" ${q.n===tb.de?'open':''}><summary>Texto base (questões ${tb.de} a ${tb.ate})</summary><div style="padding:4px 12px">${blocosHTML(tb.blocos)}</div></details>`:''}
+ <p class="cont"><b>Tema:</b> ${esc(q.tema)}</p><h3>Questão ${q.n} <small style="font-weight:400;color:var(--suave)">(${esc(q.origem||'')})</small>${q.anulada&&ver?' <span class="selo" style="background:var(--vermelho2);color:var(--vermelho)">ANULADA</span>':''}</h3>
+ <div>${blocosHTML(q.enun)}</div>${q.fig&&q.fig.onde==='enun'?fig:''}${alts}
+ ${q.nota?`<p class="cont">⚠️ ${esc(q.nota)}</p>`:''}
+ ${ver?`<div class="fb ${acertou(q,r)?'ok':'no'}">${!r?'Sem resposta. ':acertou(q,r)?(q.anulada?'Anulada: conta como acerto. ':'Você acertou. '):'Você marcou '+r+'. '}<b>Gabarito: ${q.gab}${q.anulada?' (anulada em recurso)':''}</b></div><div class="com"><div class="rot" style="margin-top:2px">Comentários</div>${q.fig&&q.fig.onde==='com'?fig:''}${blocosHTML(q.com)}</div>`:''}
+ <div class="linha-bts"><button class="bt" id="simAnt" ${ant?'':'disabled'}>← Anterior</button><button class="bt pri" id="simProx" ${prox?'':'disabled'}>Próxima →</button></div></div>`;
+ if(ant)$('simAnt').onclick=()=>{sq=ant;telaQuestao();scrollTo(0,0)};
+ if(prox)$('simProx').onclick=()=>{sq=prox;telaQuestao();scrollTo(0,0)};
+ if($('entregar'))$('entregar').onclick=()=>{const f=100-Object.keys(e.resp).length;if(!confirm(f?`Faltam ${f} questões sem resposta. Entregar assim mesmo?`:'Entregar a prova?'))return;entregarSim()};
+ if($('resultado'))$('resultado').onclick=resultadoSim;
+ e.atual=q.n;salvar();
+}
+function entregarSim(){const e=ss(sim.id);e.entregue=true;e.em=Date.now();salvar();st.hist.push({t:'sim',id:sim.id,nota:notaSim(sim),max:100,em:Date.now()});salvar();resultadoSim()}
+function resultadoSim(){
+ const e=ss(sim.id),por={},blo={};
+ for(const q of sim.questoes){const k=q.disc||'—',b=q.bloco||'—',ok=acertou(q,e.resp[q.n])?1:0;por[k]=por[k]||[0,0];por[k][0]+=ok;por[k][1]++;blo[b]=blo[b]||[0,0];blo[b][0]+=ok;blo[b][1]++}
+ const n=notaSim(sim),erros=sim.questoes.filter(q=>!acertou(q,e.resp[q.n])).length;
+ $('tela').innerHTML=`<div class="card"><div class="linha-bts" style="margin-top:0"><button class="bt" data-aba="simulados">← Simulados</button></div><h2>${esc(sim.titulo)}: resultado</h2>
+ <div class="placar"><div>Acertos<b id="simNota">${n}/100</b></div><div>Erros e em branco<b>${erros}</b></div>${Object.entries(blo).map(([b,[a,t]])=>`<div>${esc(b.replace(/^BLOCO\s+/,'Bloco '))}<b>${a}/${t}</b></div>`).join('')}</div>
+ <h3>Por disciplina</h3><table><tr><th>Disciplina</th><th>Acertos</th><th>%</th></tr>${Object.entries(por).map(([k,[a,t]])=>`<tr><td>${esc(k)}</td><td>${a}/${t}</td><td>${Math.round(100*a/t)}%${a<t*.6?' ⚠️':''}</td></tr>`).join('')}</table>
+ <p><small>⚠️ = abaixo de 60% na disciplina.</small></p>
+ <div class="linha-bts"><button class="bt pri" id="revTodas">Revisar todas, com comentários</button><button class="bt" id="revErros" ${erros?'':'disabled'}>Revisar só os erros (${erros})</button></div></div>`;
+ $('revTodas').onclick=()=>{soErros=false;sq=1;telaQuestao();scrollTo(0,0)};
+ if(erros)$('revErros').onclick=()=>{soErros=true;sq=sim.questoes.find(q=>!acertou(q,e.resp[q.n])).n;telaQuestao();scrollTo(0,0)};
+}
+document.addEventListener('click',ev=>{
+ const a=ev.target.closest('[data-simabre]');if(a){abrirSim(a.dataset.simabre,a.dataset.simmodo);return}
+ const z=ev.target.closest('[data-simzera]');if(z){if(confirm('Apagar as respostas deste simulado e começar de novo?')){delete st.sim[z.dataset.simzera];salvar();listaSimulados()}return}
+ const i=ev.target.closest('[data-simir]');if(i){sq=+i.dataset.simir;soErros=false;telaQuestao();return}
+ const k=ev.target.closest('[data-simalt]');if(k&&sim){const e=ss(sim.id);if(e.entregue||(e.modo==='estudo'&&e.resp[sq]))return;e.resp[sq]=k.dataset.simalt;salvar();telaQuestao()}
+});
 window.discAPI={PECAS,CASOS,CARTOES,LEIS:typeof LEIS==='undefined'?[]:LEIS,passosDe,linhas,st:()=>st,abrirPeca,abrirCaso,ir,
- CONDUCAO:typeof CONDUCAO==='undefined'?{}:CONDUCAO,TEMAS:typeof TEMAS==='undefined'?{}:TEMAS,ESTUDO:typeof ESTUDO==='undefined'?{}:ESTUDO,ARTIGOS:typeof ARTIGOS==='undefined'?{}:ARTIGOS,JURIS:typeof JURIS==='undefined'?{}:JURIS,chaveDe,rotulo};
+ CONDUCAO:typeof CONDUCAO==='undefined'?{}:CONDUCAO,TEMAS:typeof TEMAS==='undefined'?{}:TEMAS,ESTUDO:typeof ESTUDO==='undefined'?{}:ESTUDO,ARTIGOS:typeof ARTIGOS==='undefined'?{}:ARTIGOS,JURIS:typeof JURIS==='undefined'?{}:JURIS,chaveDe,rotulo,SIMS,abrirSim,listaSimulados};
 ir('edital');
 </script>
 </body>

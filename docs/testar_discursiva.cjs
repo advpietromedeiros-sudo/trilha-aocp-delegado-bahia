@@ -15,6 +15,12 @@ html = html.replace('<script src="conteudo.js"></script>', () => "<script>" + co
 // condução, estudo completo e texto oficial dos artigos (03/11/2026, D-015)
 for (const f of ["conducao.js", "estudo.js", "artigos.js"]) { const src = fs.readFileSync(path.join(dir, f), "utf8"); const tag = `<script src="${f}"></script>`; if (!html.includes(tag)) { console.log("falta a tag de " + f); process.exit(1); } html = html.replace(tag, () => "<script>" + src + "</script>"); }
 // arquivo único para envio (04/11/2026): DISC_UNICO=caminho prova a versão empacotada por ferramentas/empacotar_discursiva.py
+// simulados objetivos (04/11/2026, D-017): dados de terceiro só no disco; sem eles a aba avisa e o resto funciona
+const htmlSemSim = html;
+const arqSim = path.join(dir, "simulados_delta.js"), TEM_SIM = fs.existsSync(arqSim);
+const tagSim = '<script src="simulados_delta.js" data-local="terceiro"></script>';
+if (!html.includes(tagSim)) { console.log("falta a tag de simulados_delta.js"); process.exit(1); }
+if (TEM_SIM) html = html.replace(tagSim, () => "<script>" + fs.readFileSync(arqSim, "utf8") + "</script>");
 if (process.env.DISC_UNICO) html = fs.readFileSync(process.env.DISC_UNICO, "utf8");
 if (AUTO) { const s = html.replace("const tec=Math.round(40*f/Math.max(1,tot))", "const tec=Math.round(4*f/Math.max(1,tot))"); if (s === html) { console.log("AUTOTESTE: não plantou"); process.exit(1); } html = s; }
 const erros = [], vc = new VirtualConsole();
@@ -25,7 +31,7 @@ const w = dom.window, d = w.document, A = w.discAPI;
 let falhas = 0; const prova = (n, ok, det = "") => { console.log(`  ${ok ? "✅" : "❌"} ${n}${!ok && det ? " — " + det : ""}`); if (!ok) falhas++; };
 const clicar = id => d.getElementById(id).click();
 
-prova("página carrega com as 5 abas e sem erro de JavaScript", d.querySelectorAll("#abas button").length === 5 && erros.length === 0, erros.join(" | "));
+prova("página carrega com as 6 abas e sem erro de JavaScript", d.querySelectorAll("#abas button").length === 6 && erros.length === 0, erros.join(" | "));
 // conteúdo
 const ruins = [];
 for (const p of A.PECAS) A.passosDe(p).forEach((s, i) => { if (!s.t || !s.orient || !String(s.modelo || "").trim() || !Array.isArray(s.check) || !s.check.length) ruins.push(p.id + " passo " + (i + 1)); });
@@ -108,6 +114,34 @@ A.ir("memoria"); clicar("ceTudo");
 const item = d.querySelector(".flash .p").textContent, cart = A.CARTOES.find(c => c.ce[0] === item);
 d.querySelector(`[data-ce="${cart.ce[1]}"]`).click();
 prova("Certo/Errado: responder o gabarito certo mostra o comentário e o artigo", /Acertou/.test(d.getElementById("res").textContent) && d.getElementById("res").textContent.includes(cart.a));
+// simulados objetivos comentados
+if (process.env.DISC_UNICO) prova("arquivo único de envio NÃO leva os simulados (material de terceiro)", A.SIMS.length === 0 && !/const SIMULADOS\s*=/.test(html) && !/Projeto em Delta/.test(html.replace(/Fonte: Projeto em Delta/, "")));
+else if (TEM_SIM) {
+  const S = A.SIMS, mal = [];
+  for (const sm of S) sm.questoes.forEach((q, i) => { if (q.n !== i + 1 || Object.keys(q.alts).join("") !== "ABCDE" || !"ABCDE".includes(q.gab) || !q.com.length || !q.disc || !q.enun.length) mal.push(sm.id + "#" + q.n); });
+  prova(`${S.length} simulados × 100 questões: numeração, 5 alternativas, gabarito, comentário e disciplina`, S.length === 4 && mal.length === 0, mal.slice(0, 8).join(","));
+  prova("nenhum número com forma de CPF nos dados (marca d'água retirada)", !/\d{3}\.?\d{3}\.?\d{3}-\d{2}/.test(JSON.stringify(S)));
+  w.confirm = () => true;
+  A.ir("simulados"); d.querySelector('[data-simabre="dpcba-1"][data-simmodo="prova"]').click();
+  const q1 = S[0].questoes[0];
+  d.querySelector(`[data-simalt="${q1.gab}"]`).click();
+  prova("modo prova: marcar não mostra gabarito nem comentário", !d.querySelector(".com") && !!d.querySelector(".op.marcada"));
+  const errada = "ABCDE".split("").find(k => k !== S[0].questoes[1].gab);
+  clicar("simProx"); d.querySelector(`[data-simalt="${errada}"]`).click();
+  clicar("entregar");
+  const anul = S[0].questoes.filter(q => q.anulada).length;
+  prova(`entregar: nota = 1 acerto + ${anul} anulada(s), no placar e no histórico`, d.getElementById("simNota").textContent === `${1 + anul}/100` && A.st().hist.some(h => h.t === "sim" && h.nota === 1 + anul), d.getElementById("simNota").textContent);
+  clicar("revErros");
+  prova("revisão só dos erros abre a questão 2 com gabarito e comentário", /Questão 2/.test(d.body.textContent) && !!d.querySelector(".com") && d.querySelector(".op.errada")?.dataset.simalt === errada);
+  A.abrirSim("dpcba-2", "estudo"); const q2 = S[1].questoes[0];
+  d.querySelector(`[data-simalt="${q2.gab}"]`).click();
+  prova("modo estudo: responder mostra na hora o comentário e o gabarito", !!d.querySelector(".com") && d.querySelector(".fb.ok") && d.body.textContent.includes("Gabarito: " + q2.gab));
+} else console.log("  ⚠️ simulados_delta.js ausente (material local): testes de conteúdo dos simulados pulados");
+{
+  const d2 = new JSDOM(htmlSemSim, { runScripts: "dangerously", url: "http://localhost/", pretendToBeVisual: true, beforeParse(w) { w.scrollTo = () => {}; } });
+  d2.window.discAPI.ir("simulados");
+  prova("sem os dados de terceiro, a aba Simulados avisa e não quebra", /não estão nesta cópia/.test(d2.window.document.body.textContent));
+}
 prova("nenhum erro de JavaScript em todo o fluxo", erros.length === 0, erros.join(" | "));
 
 if (AUTO) { console.log(falhas ? "AUTOTESTE OK: o defeito plantado foi acusado" : "AUTOTESTE FALHOU: o defeito passou"); process.exit(falhas ? 0 : 1); }

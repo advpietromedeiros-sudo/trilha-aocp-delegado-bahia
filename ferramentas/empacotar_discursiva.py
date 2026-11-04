@@ -20,6 +20,10 @@ SAIDA_PADRAO = RAIZ / ".scratch" / "Treino_Discursiva_Delegado_PCBA.html"
 
 def empacotar() -> str:
     html = (PASTA / "Treino_Discursiva.html").read_text(encoding="utf-8")
+    # material de terceiro só local (data-local, D-017): NUNCA vai no arquivo de envio
+    html, n_local = re.subn(r'<script src="[^"]+" data-local="[^"]*"></script>\n?', "", html)
+    if n_local:
+        print(f"retirado(s) do envio: {n_local} script(s) de uso local (material de terceiro)")
     tags = re.findall(r'<script src="([^"]+)"></script>', html)
     if not tags:
         sys.exit("ERRO: nenhum <script src> achado; o HTML mudou de formato")

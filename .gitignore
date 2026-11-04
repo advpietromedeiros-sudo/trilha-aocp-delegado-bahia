@@ -14,6 +14,8 @@ assets/fontes_paginas.json
 assets/lei_seca_material.json
 assets/juris_aocp.json
 assets/exemplo_aocp.json
+# Simulados DPC-BA do Projeto em Delta (questões e comentários de terceiro), gerados por ferramentas/importar_simulados_delta.py (D-017)
+discursiva/simulados_delta.js
 
 # Lei seca oficial baixada do Planalto (atualizar_lei_seca.bat): refaz-se a qualquer hora; o Treino de Discursiva usa o derivado discursiva/artigos.js (D-015)
 assets/lei_seca_oficial.json

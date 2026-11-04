@@ -2,10 +2,11 @@
 
 > Estado, tarefas e o que ficou rodando. Atualizado a cada ~15 min de trabalho e no fechamento.
 
-**Última atualização:** 02/11/2026, 18h26.
+**Última atualização:** 04/11/2026, 16h52.
 
 ## Estado
 
+- 🆕 **04/11/2026, 16h52 — Simulados objetivos comentados DPC-BA no Treino de Discursiva (D-017):** aba 📝 Simulados com 4 × 100 questões dos PDFs (modo Prova e modo Estudo, nota por bloco e disciplina, revisão dos erros). Dados de terceiro só no disco (`discursiva/simulados_delta.js`, fora do Git e do arquivo de envio); refaz-se com `python -I ferramentas/importar_simulados_delta.py`.
 - 🆕 **03/11/2026, 17h — Treino de Discursiva: condução "Entender o caso" e "Estudo completo" nas 18 peças (D-015):** 5 etapas por peça (peça, competência, crime, fundamentos, pedidos) com os artigos na redação oficial do Planalto (`discursiva/artigos.js`, gerado por `ferramentas/gerar_artigos_discursiva.py`); estudo por tema com lei, doutrina, jurisprudência, Medicina Legal e Criminologia. ⚠️ Lei 11.340 sem texto oficial (Planalto fora): rodar `atualizar_lei_seca.bat L11340` e o gerador.
 - 🆕 **03/11/2026, 11h — Treino de Discursiva só com o que o edital admite (D-014):** saem 12-C e 13-A (viram cartões), entram 6 representações (captação ambiental, sigilo bancário e fiscal, 13-B, alienação antecipada, perfil genético, internação provisória); 18 peças, 215 cartões.
 - 🆕 **03/11/2026, 09h — Treino de Discursiva: 5 peças complementares (D-013):** despacho do flagrante + conversão, cautelares diversas (319, VI), afastamento do lar pelo delegado (12-C), ofício do art. 13-A e relatório final — `discursiva/pecas_complementares.js`; 14 peças, 188 cartões.

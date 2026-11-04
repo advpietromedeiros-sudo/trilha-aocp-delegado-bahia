@@ -210,3 +210,24 @@ LETRA DA LEI, DOUTRINA E JURISPRUDENCIA.. AI IDEIA É FAZER UM ESTUDO COMPLETO T
   15.517/2026). Nenhum modelo do app afirmava a pena antiga; a condução e o estudo mostram a redação nova.
 - ⚠️ **Pendente:** a Lei 11.340 não baixou (o Planalto derrubou a conexão nas 4 tentativas e a página mistura codificações);
   12 artigos dela aparecem só com o link oficial. Rodar `atualizar_lei_seca.bat L11340` e o gerador de novo.
+
+### D-017 — Simulados objetivos comentados DPC-BA no Treino de Discursiva (04/11/2026, 16h36, titular)
+
+Ordem do titular, textual: *"RODE ESSES SIMULADOS NA APLICAÇÃO TRILHA AOCP DISCURSIVA ... E MONTE CONFORME ESTÃO NOS DPF´S DOS
+SIMULADOS A PARTE DAS QUESTÕES OBJETIVAS TODAS COMENTADAS"*. Os PDFs: Simulados 1 a 4 DPC-BA (versões comentadas), baixados
+na pasta Downloads em 04/11/2026, entre 16h02 e 16h04.
+
+- **Material de terceiro, uso pessoal (D-002):** as questões e os comentários são transcritos como estão nos PDFs, mas o
+  arquivo gerado, `discursiva/simulados_delta.js`, fica **só no disco** (`.gitignore`) e **não vai** no arquivo único de
+  envio (`empacotar_discursiva.py` retira toda tag `data-local`; o teste prova). No Git só entra o importador autoral,
+  `ferramentas/importar_simulados_delta.py`, que reconstrói a base a partir dos PDFs.
+- 🔴 **Marca d'água com CPF:** toda página dos PDFs traz o CPF e um código do comprador. O importador os retira e **recusa
+  gravar** se sobrar número com forma de CPF; o teste confere de novo.
+- **Aba 📝 Simulados:** 4 × 100 questões, Bloco I e Bloco II, disciplina, tema, texto-base, alternativas, comentário e
+  gabarito. Modo **Prova** (entrega e nota por bloco e disciplina, revisão de todas ou só dos erros) e modo **Estudo**
+  (comentário a cada resposta). Anulada conta como acerto (S1: 89 e 99; S3: 14), com a explicação do recurso.
+- **Ajustes da importação, conferidos no PDF:** S1, questão 51: a 1ª alternativa veio sem letra e as demais rotuladas A–D;
+  a ordem segue o comentário e o gabarito (a–e), com nota na tela. Figuras: gráfico do enunciado (S3, q14) e diagrama do
+  comentário (S4, q13).
+- ⚠️ **Limite:** fórmulas de Raciocínio Lógico e tabelas largas vêm do PDF como texto posicionado: aparecem em bloco
+  alinhado, com rolagem lateral, e frações podem sair em duas linhas. O conteúdo está completo.
