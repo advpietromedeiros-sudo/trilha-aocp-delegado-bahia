@@ -98,3 +98,13 @@ prompt do servidor já manda não aplicar norma posterior.
   (Lei 9.610/98, art. 8º, IV).
 - **Onde:** `discursiva/artigos.js` (só os artigos e súmulas citados). O arquivo completo baixado fica fora do Git.
 - **Material de terceiro:** nenhum. Doutrina, condução e pegadinhas são texto autoral desta sessão.
+
+## 04/11/2026, 11h54 — Envio do Treino de Discursiva a um colega do titular, em arquivo único
+
+- **Decisão do titular, por escrito no chat:** pediu *"um HTML para eu enviar para um colega aqui mas que funcione tudo
+  localmente"*. Avisado de que o app contém a estrutura e trechos reescritos do PDF de modelos de peça (entrada de
+  03/11/2026, 10h05, D-014), cuja autorização é dele e não do autor do material, escolheu a opção 1: **enviar completo,
+  como está**, para uso pessoal do colega no estudo.
+- **O que sai:** `Treino_Discursiva_Delegado_PCBA.html` (650.864 bytes), gerado por `ferramentas/empacotar_discursiva.py`
+  a partir de `discursiva/`. Não leva o PDF, nem marca, nem dado pessoal. O envio é feito pelo titular, fora do repositório.
+- ⚠️ A responsabilidade pelo trecho de terceiro no envio é do titular. O app continua fora do portal (D-009).

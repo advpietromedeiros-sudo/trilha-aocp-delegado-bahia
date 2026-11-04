@@ -14,6 +14,8 @@ const compl = fs.readFileSync(path.join(dir, "pecas_complementares.js"), "utf8")
 html = html.replace('<script src="conteudo.js"></script>', () => "<script>" + conteudo + "</script>").replace('<script src="leis.js"></script>', () => "<script>" + leis + "</script>").replace('<script src="pecas_complementares.js"></script>', () => "<script>" + compl + "</script>");
 // condução, estudo completo e texto oficial dos artigos (03/11/2026, D-015)
 for (const f of ["conducao.js", "estudo.js", "artigos.js"]) { const src = fs.readFileSync(path.join(dir, f), "utf8"); const tag = `<script src="${f}"></script>`; if (!html.includes(tag)) { console.log("falta a tag de " + f); process.exit(1); } html = html.replace(tag, () => "<script>" + src + "</script>"); }
+// arquivo único para envio (04/11/2026): DISC_UNICO=caminho prova a versão empacotada por ferramentas/empacotar_discursiva.py
+if (process.env.DISC_UNICO) html = fs.readFileSync(process.env.DISC_UNICO, "utf8");
 if (AUTO) { const s = html.replace("const tec=Math.round(40*f/Math.max(1,tot))", "const tec=Math.round(4*f/Math.max(1,tot))"); if (s === html) { console.log("AUTOTESTE: não plantou"); process.exit(1); } html = s; }
 const erros = [], vc = new VirtualConsole();
 vc.on("jsdomError", e => erros.push(String(e.message || e)));
