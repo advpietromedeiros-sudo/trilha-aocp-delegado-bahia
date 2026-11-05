@@ -46,7 +46,29 @@ details.lei{border:1px solid var(--linha);border-radius:8px;margin:6px 0;backgro
 .nums{display:grid;grid-template-columns:repeat(auto-fill,minmax(38px,1fr));gap:4px;margin:8px 0}.nums button{border:1px solid var(--linha);background:#fff;border-radius:6px;padding:5px 0;font:13px "Segoe UI",sans-serif;cursor:pointer}.nums button.at{outline:2px solid var(--azul)}.nums button.resp{background:var(--azul2);border-color:var(--azul)}.nums button.cer{background:var(--verde2);border-color:var(--verde)}.nums button.err{background:var(--vermelho2);border-color:var(--vermelho)}
 .op:disabled{opacity:1;cursor:default;color:var(--tinta)}.op.marcada{background:var(--azul2);border-color:var(--azul);font-weight:600}.sq p{margin:.45em 0}pre.tab{overflow-x:auto;font:13px/1.45 Consolas,monospace;background:#fafaf7;border:1px solid var(--linha);border-radius:6px;padding:8px;white-space:pre}
 img.fig{display:block;max-width:100%;margin:10px auto;border:1px solid var(--linha);border-radius:6px}.com{background:#fffef8;border:1px solid var(--linha);border-left:4px solid var(--ouro);padding:8px 14px;border-radius:6px;margin-top:10px}
-@media(max-width:700px){main{padding:10px}.caixas{grid-template-columns:repeat(3,1fr)}}
+/* Simulados: leitura e alternativas no padrão da Trilha (index.html, V4) — 05/11/2026, pedido do titular */
+.sq{--zq:1}.sq h3{font-size:calc(17px * var(--zq))}
+.sq .texto,.sq .com{font-size:calc(16px * var(--zq));line-height:1.85;text-align:justify;text-justify:inter-word;hyphens:auto;overflow-wrap:break-word}
+.sq .texto p,.sq .com p{margin:.55em 0}
+.bl-item{padding-left:1.4em;text-indent:-1.4em}.bl-centro{text-align:center!important;font-weight:700;margin-top:1em!important}
+.bl-conta{text-align:center!important;font-family:Cambria,"Cambria Math",Georgia,serif;background:#f7f6f1;border-radius:6px;padding:4px 8px}
+.bl-formula{text-align:center;font-family:"Cambria Math",Cambria,Georgia,serif;font-size:1.05em;line-height:1.6;background:#f7f6f1;border-radius:8px;padding:8px 10px;margin:10px 0}
+.bl-tab{overflow-x:auto;margin:12px 0;border:1px solid var(--linha);border-radius:8px}.bl-tab table{font-size:.9em;line-height:1.5;text-align:left}.bl-tab th{background:#efeadf}.bl-tab td,.bl-tab th{text-align:left;hyphens:manual}
+.op-hint{background:var(--azul2);color:var(--azul);border-radius:10px;padding:8px 12px;margin:14px 0 10px;font-size:13px;font-weight:700}
+.opts{display:flex;flex-direction:column;gap:10px;margin-bottom:6px}
+.option-row{display:grid;grid-template-columns:minmax(0,1fr) 84px;gap:8px;align-items:stretch}.option-row.sem-tesoura{grid-template-columns:minmax(0,1fr)}
+.sq .op{display:flex;gap:12px;align-items:flex-start;margin:0;padding:12px 14px;border-radius:12px;font-size:calc(16px * var(--zq));line-height:1.7;text-align:left}
+.sq .op .letra{flex:0 0 34px;height:34px;border:1px solid var(--linha);border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:800;background:#fff}
+.sq .op .otx{min-width:0;text-align:justify;hyphens:auto;overflow-wrap:break-word}
+.sq .op.marcada .letra{background:var(--azul);border-color:var(--azul);color:#fff}.sq .op.certa .letra{background:var(--verde);border-color:var(--verde);color:#fff}.sq .op.errada .letra{background:var(--vermelho);border-color:var(--vermelho);color:#fff}
+.scissor{background:#fff;border:1px solid var(--linha);border-radius:12px;color:var(--suave);font-size:20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;cursor:pointer;font-family:inherit}
+.scissor:hover{border-color:var(--azul);background:var(--azul2);color:var(--azul)}.scissor:focus-visible,.sq .op:focus-visible{outline:3px solid var(--azul);outline-offset:2px}
+.scissor .cut-label{font-size:11px;font-weight:800}
+.option-row.eliminated .op{opacity:.55;background:#f3f1ec}.option-row.eliminated .otx{text-decoration:line-through;text-decoration-thickness:2px;text-decoration-color:var(--vermelho)}
+.option-row.eliminated .scissor{background:var(--vermelho2);color:var(--vermelho);border-color:var(--vermelho)}
+.aviso-sim{min-height:1.2em;font-size:13px;color:var(--vermelho);font-weight:700}
+.zoomq{display:inline-flex;gap:4px;align-items:center;margin-left:auto}.zoomq .bt{padding:4px 10px}
+@media(max-width:700px){main{padding:10px}.caixas{grid-template-columns:repeat(3,1fr)}.option-row{grid-template-columns:minmax(0,1fr) 58px}.scissor .cut-label{font-size:9px}}
 </style>
 </head>
 <body>
@@ -59,6 +81,7 @@ img.fig{display:block;max-width:100%;margin:10px auto;border:1px solid var(--lin
 <script src="conducao.js"></script>
 <script src="estudo.js"></script>
 <script src="artigos.js"></script>
+<script src="blocos.js"></script>
 <script src="simulados_delta.js" data-local="terceiro"></script>
 <script>
 /* Treino de Discursiva (02/11/2026, pedido do titular): fazer a peça e os estudos de caso PASSO A PASSO, sob orientação,
@@ -306,7 +329,10 @@ const SIMS=typeof SIMULADOS==='undefined'?[]:SIMULADOS;
 let sim=null,sq=1,soErros=false;
 const ss=id=>(st.sim=st.sim||{},st.sim[id]=st.sim[id]||{resp:{},entregue:false,modo:'prova',atual:1});
 const acertou=(q,r)=>q.anulada||r===q.gab;
-const blocosHTML=b=>(b||[]).map(([t,x])=>t==='pre'?`<pre class="tab">${esc(x)}</pre>`:t==='p'?`<p>${esc(x)}</p>`:'').join('');
+/* blocos dos PDFs → HTML legível (blocos.js): texto corrido, tabela de verdade e fórmula; nada em letra de máquina */
+const blocosHTML=b=>BLOCOS.html(b);
+let selSim=null;/* alternativa escolhida no modo estudo, antes de confirmar (como no app principal) */
+const cortesDe=(e,n)=>((e.cut=e.cut||{})[n]||[]);
 /* nota: no modo prova só conta depois de entregue; anulada conta para todos */
 function notaSim(s){const e=ss(s.id);return s.questoes.reduce((n,q)=>n+((q.anulada&&(e.entregue||e.resp[q.n]))||(e.resp[q.n]&&e.resp[q.n]===q.gab)?1:0),0)}
 function listaSimulados(){
@@ -316,27 +342,31 @@ function listaSimulados(){
  <div class="grade">${SIMS.map(s=>{const e=ss(s.id),r=Object.keys(e.resp).length;return `<div class="item"><b>${esc(s.titulo)}</b><small>${r}/100 respondidas${e.entregue?' · entregue':''}${(k=>k?` · ${k} com nota de atualização`:'')(s.questoes.filter(q=>q.atual).length)}</small><br><span class="selo ${e.entregue?'feito':'pend'}">${e.entregue?'Nota: '+notaSim(s)+'/100':r&&e.modo==='estudo'?'Em estudo · '+notaSim(s)+' acertos':r?'Prova em andamento':'A fazer'}</span>
  <div class="linha-bts"><button class="bt pri" data-simabre="${s.id}" data-simmodo="prova">${e.entregue?'Revisar':'Prova'}</button>${e.entregue?'':`<button class="bt" data-simabre="${s.id}" data-simmodo="estudo">Estudo</button>`}${r?`<button class="bt" data-simzera="${s.id}">Recomeçar</button>`:''}</div></div>`}).join('')}</div>`;
 }
-function abrirSim(id,modo){sim=SIMS.find(s=>s.id===id);const e=ss(id);if(!e.entregue&&modo&&modo!==e.modo&&Object.keys(e.resp).length&&!confirm('Trocar de modo mantém as respostas já marcadas. Continuar?'))return;marcarAba('simulados');if(!e.entregue&&modo)e.modo=modo;soErros=false;sq=e.atual||1;salvar();telaQuestao()}
+function abrirSim(id,modo){sim=SIMS.find(s=>s.id===id);const e=ss(id);if(!e.entregue&&modo&&modo!==e.modo&&Object.keys(e.resp).length&&!confirm('Trocar de modo mantém as respostas já marcadas. Continuar?'))return;marcarAba('simulados');if(!e.entregue&&modo)e.modo=modo;soErros=false;selSim=null;sq=e.atual||1;salvar();telaQuestao()}
 function telaQuestao(){
  const e=ss(sim.id),q=sim.questoes.find(x=>x.n===sq),r=e.resp[q.n],ver=e.entregue||(e.modo==='estudo'&&!!r);
  const tb=sim.textos.find(t=>q.n>=t.de&&q.n<=t.ate);
  const lista=soErros?sim.questoes.filter(x=>!acertou(x,e.resp[x.n])).map(x=>x.n):sim.questoes.map(x=>x.n);
  const pos=lista.indexOf(q.n),ant=lista[pos-1],prox=lista[pos+1];
  const cls=x=>{const rx=e.resp[x.n];if(e.entregue||(e.modo==='estudo'&&rx))return acertou(x,rx)?'cer':'err';return rx?'resp':''};
- const alts='ABCDE'.split('').map(k=>{let c='bt op';if(ver){if(k===q.gab)c+=' certa';else if(k===r)c+=' errada'}else if(k===r)c+=' marcada';return `<button class="${c}" data-simalt="${k}" ${e.entregue||(e.modo==='estudo'&&r)?'disabled':''}><b>${k})</b> ${esc(q.alts[k])}</button>`}).join('');
+ const fechada=e.entregue||(e.modo==='estudo'&&!!r),cortes=cortesDe(e,q.n),esc0=e.modo==='estudo'&&!r?selSim:r;
+ const alts=`${fechada?'':'<div class="op-hint">✂ Use a tesoura para eliminar alternativas sem responder. Clique de novo para repor. Atalhos: A a E marcam; ← → trocam de questão.</div>'}<div class="opts" role="group" aria-label="Alternativas da questão ${q.n}">${'ABCDE'.split('').map(k=>{const fora=cortes.includes(k);let c='bt op';if(ver){if(k===q.gab)c+=' certa';else if(k===r)c+=' errada'}else if(k===esc0)c+=' marcada';
+  return `<div class="option-row ${fora?'eliminated':''} ${fechada?'sem-tesoura':''}"><button class="${c}" data-simalt="${k}" ${fechada?'disabled':''} ${fora&&!fechada?'aria-disabled="true"':''}><span class="letra">${k}</span><span class="otx">${esc(q.alts[k])}</span></button>${fechada?'':`<button type="button" class="scissor" data-simcut="${k}" title="${fora?'Repor':'Eliminar'} a alternativa ${k}" aria-label="${fora?'Repor':'Eliminar'} a alternativa ${k}" aria-pressed="${fora}">✂<span class="cut-label">${fora?'Repor':'Eliminar'}</span></button>`}</div>`}).join('')}</div><div class="aviso-sim" id="avisoSim" role="status" aria-live="polite"></div>
+ ${e.modo==='estudo'&&!e.entregue&&!r?`<div class="linha-bts"><button class="bt ok" id="simConfirma" ${selSim?'':'disabled'}>✓ Confirmar e ver o comentário</button></div>`:''}`;
  const fig=q.fig?`<img class="fig" src="${q.fig.src}" alt="Figura da questão ${q.n}">`:'';
- $('tela').innerHTML=`<div class="card sq"><div class="linha-bts" style="margin-top:0"><button class="bt" data-aba="simulados">← Simulados</button>${!e.entregue&&e.modo==='prova'?'<button class="bt pri" id="entregar">Entregar a prova</button>':''}${e.entregue?'<button class="bt" id="resultado">Ver resultado</button>':''}</div>
+ $('tela').innerHTML=`<div class="card sq" style="--zq:${(st.zq||100)/100}"><div class="linha-bts" style="margin-top:0"><button class="bt" data-aba="simulados">← Simulados</button>${!e.entregue&&e.modo==='prova'?'<button class="bt pri" id="entregar">Entregar a prova</button>':''}${e.entregue?'<button class="bt" id="resultado">Ver resultado</button>':''}<span class="zoomq"><button class="bt" data-zq="-10" title="Diminuir a letra" aria-label="Diminuir a letra">A−</button><small>${st.zq||100}%</small><button class="bt" data-zq="10" title="Aumentar a letra" aria-label="Aumentar a letra">A+</button></span></div>
  <h2>${esc(sim.titulo)} · ${e.entregue?'revisão':e.modo==='prova'?'prova':'estudo'}${soErros?' · só os erros':''}</h2>
  <div class="rot">${esc(q.bloco||'')} · ${esc(q.disc||'')}</div>
  <details class="lei"><summary>Mapa das questões (${Object.keys(e.resp).length}/100 respondidas)</summary><div class="nums">${sim.questoes.map(x=>`<button class="${cls(x)}${x.n===q.n?' at':''}" data-simir="${x.n}">${x.n}</button>`).join('')}</div></details>
- ${tb?`<details class="lei" ${q.n===tb.de?'open':''}><summary>Texto base (questões ${tb.de} a ${tb.ate})</summary><div style="padding:4px 12px">${blocosHTML(tb.blocos)}</div></details>`:''}
+ ${tb?`<details class="lei" ${q.n===tb.de?'open':''}><summary>Texto base (questões ${tb.de} a ${tb.ate})</summary><div class="texto" style="padding:4px 12px">${blocosHTML(tb.blocos)}</div></details>`:''}
  <p class="cont"><b>Tema:</b> ${esc(q.tema)}</p><h3>Questão ${q.n} <small style="font-weight:400;color:var(--suave)">(${esc(q.origem||'')})</small>${q.anulada&&ver?' <span class="selo" style="background:var(--vermelho2);color:var(--vermelho)">ANULADA</span>':''}</h3>
- <div>${blocosHTML(q.enun)}</div>${q.fig&&q.fig.onde==='enun'?fig:''}${alts}
+ <div class="texto">${blocosHTML(q.enun)}</div>${q.fig&&q.fig.onde==='enun'?fig:''}${alts}
  ${q.nota?`<p class="cont">⚠️ ${esc(q.nota)}</p>`:''}
  ${ver?`<div class="fb ${acertou(q,r)?'ok':'no'}">${!r?'Sem resposta. ':acertou(q,r)?(q.anulada?'Anulada: conta como acerto. ':'Você acertou. '):'Você marcou '+r+'. '}<b>Gabarito: ${q.gab}${q.anulada?' (anulada em recurso)':''}</b></div>${q.atual?`<div class="${q.atual.nivel==='red'?'alerta':q.atual.nivel==='ajustada'?'orient':'mnem'}" style="margin-top:10px"><b>${q.atual.nivel==='red'?'🔴 Desatualizada pela lei vigente':q.atual.nivel==='ajustada'?'🔄 Questão atualizada para a lei vigente':'🟡 Atualização'} (auditoria de ${esc(q.atual.em)})</b><br>${esc(q.atual.texto)}${q.alt_orig?Object.entries(q.alt_orig).map(([k,v])=>`<br><small><b>Texto original da alternativa ${k} no curso:</b> ${esc(v)}</small>`).join(''):''}<br><small>Nota nossa; o texto do curso segue abaixo como está no PDF.</small></div>`:''}<div class="com"><div class="rot" style="margin-top:2px">Comentários</div>${q.fig&&q.fig.onde==='com'?fig:''}${blocosHTML(q.com)}</div>`:''}
  <div class="linha-bts"><button class="bt" id="simAnt" ${ant?'':'disabled'}>← Anterior</button><button class="bt pri" id="simProx" ${prox?'':'disabled'}>Próxima →</button></div></div>`;
- if(ant)$('simAnt').onclick=()=>{sq=ant;telaQuestao();scrollTo(0,0)};
- if(prox)$('simProx').onclick=()=>{sq=prox;telaQuestao();scrollTo(0,0)};
+ if(ant)$('simAnt').onclick=()=>{sq=ant;selSim=null;telaQuestao();scrollTo(0,0)};
+ if(prox)$('simProx').onclick=()=>{sq=prox;selSim=null;telaQuestao();scrollTo(0,0)};
+ if($('simConfirma'))$('simConfirma').onclick=()=>{if(!selSim)return;e.resp[q.n]=selSim;selSim=null;salvar();telaQuestao()};
  if($('entregar'))$('entregar').onclick=()=>{const f=100-Object.keys(e.resp).length;if(!confirm(f?`Faltam ${f} questões sem resposta. Entregar assim mesmo?`:'Entregar a prova?'))return;entregarSim()};
  if($('resultado'))$('resultado').onclick=resultadoSim;
  e.atual=q.n;salvar();
@@ -357,9 +387,21 @@ function resultadoSim(){
 document.addEventListener('click',ev=>{
  const a=ev.target.closest('[data-simabre]');if(a){abrirSim(a.dataset.simabre,a.dataset.simmodo);return}
  const z=ev.target.closest('[data-simzera]');if(z){if(confirm('Apagar as respostas deste simulado e começar de novo?')){delete st.sim[z.dataset.simzera];salvar();listaSimulados()}return}
- const i=ev.target.closest('[data-simir]');if(i){sq=+i.dataset.simir;soErros=false;telaQuestao();return}
- const k=ev.target.closest('[data-simalt]');if(k&&sim){const e=ss(sim.id);if(e.entregue||(e.modo==='estudo'&&e.resp[sq]))return;e.resp[sq]=k.dataset.simalt;salvar();telaQuestao()}
+ const i=ev.target.closest('[data-simir]');if(i){sq=+i.dataset.simir;soErros=false;selSim=null;telaQuestao();return}
+ const zq=ev.target.closest('[data-zq]');if(zq){st.zq=Math.max(80,Math.min(160,(st.zq||100)+ +zq.dataset.zq));salvar();telaQuestao();return}
+ const cu=ev.target.closest('[data-simcut]');if(cu&&sim){const e=ss(sim.id);if(e.entregue||(e.modo==='estudo'&&e.resp[sq]))return;
+  const s=new Set(cortesDe(e,sq)),L=cu.dataset.simcut;if(s.has(L))s.delete(L);else{s.add(L);if(selSim===L)selSim=null;if(e.modo==='prova'&&e.resp[sq]===L)delete e.resp[sq]}e.cut[sq]=[...s];salvar();telaQuestao();return}
+ const k=ev.target.closest('[data-simalt]');if(k&&sim)marcarSim(k.dataset.simalt);
 });
+/* marcar uma alternativa: prova = marca (pode trocar até entregar); estudo = escolhe e confirma. Eliminada não se marca. */
+function marcarSim(L){const e=ss(sim.id);if(e.entregue||(e.modo==='estudo'&&e.resp[sq]))return;
+ if(cortesDe(e,sq).includes(L)){const a=$('avisoSim');if(a)a.textContent='Alternativa '+L+' eliminada. Use a tesoura para repô-la.';return}
+ if(e.modo==='estudo')selSim=L;else e.resp[sq]=L;salvar();telaQuestao()}
+/* atalhos só na tela de questão, sem Ctrl/Alt/Cmd e fora de campo de texto (mesma regra do app principal, R-02) */
+document.addEventListener('keydown',ev=>{if(aba!=='simulados'||!sim||!$('simProx')||ev.ctrlKey||ev.metaKey||ev.altKey||/^(INPUT|TEXTAREA|SELECT)$/.test(ev.target.tagName))return;
+ const L=ev.key.toUpperCase();if('ABCDE'.includes(L)&&L.length===1){ev.preventDefault();marcarSim(L)}
+ else if(ev.key==='ArrowRight'&&!$('simProx').disabled)$('simProx').click();else if(ev.key==='ArrowLeft'&&!$('simAnt').disabled)$('simAnt').click();
+ else if(ev.key==='Enter'&&$('simConfirma')&&!$('simConfirma').disabled)$('simConfirma').click()});
 window.discAPI={PECAS,CASOS,CARTOES,LEIS:typeof LEIS==='undefined'?[]:LEIS,passosDe,linhas,st:()=>st,abrirPeca,abrirCaso,ir,
  CONDUCAO:typeof CONDUCAO==='undefined'?{}:CONDUCAO,TEMAS:typeof TEMAS==='undefined'?{}:TEMAS,ESTUDO:typeof ESTUDO==='undefined'?{}:ESTUDO,ARTIGOS:typeof ARTIGOS==='undefined'?{}:ARTIGOS,JURIS:typeof JURIS==='undefined'?{}:JURIS,chaveDe,rotulo,SIMS,abrirSim,listaSimulados};
 ir('edital');

@@ -2,9 +2,17 @@
 
 > Estado, tarefas e o que ficou rodando. Atualizado a cada ~15 min de trabalho e no fechamento.
 
-**Última atualização:** 04/11/2026, 16h52.
+**Última atualização:** 05/11/2026, 11h17.
 
 ## Estado
+
+- 🆕 **05/11/2026, 11h17 — Simulados do Treino de Discursiva: leitura corrigida e tesoura.** O importador marcava como
+  "tabela" (letra de máquina, rolagem lateral) 239 blocos; 89 eram texto corrido, e parágrafos saíam partidos ao meio.
+  Novo leitor `discursiva/blocos.js` (texto → parágrafo e item; colunas → tabela HTML; fórmula → linhas centralizadas;
+  emenda o parágrafo partido), provado em `docs/testar_blocos_simulados.cjs` (0 caractere perdido em 804 listas; porta
+  no portão). Questões no padrão da Trilha: letra em selo, tesoura Eliminar/Repor salva por questão, texto
+  justificado, A–E e ← →, zoom A−/A+ e, no modo Estudo, escolher e depois **Confirmar**. ⚠️ Limite conhecido: linhas
+  de tabela em que o próprio PDF perdeu o espaço entre colunas saem como parágrafo (ex.: Simulado 3, Q85).
 
 - 🆕 **04/11/2026, 16h52 — Simulados objetivos comentados DPC-BA no Treino de Discursiva (D-017):** aba 📝 Simulados com 4 × 100 questões dos PDFs (modo Prova e modo Estudo, nota por bloco e disciplina, revisão dos erros). Dados de terceiro só no disco (`discursiva/simulados_delta.js`, fora do Git e do arquivo de envio); refaz-se com `python -I ferramentas/importar_simulados_delta.py`.
 - 🆕 **03/11/2026, 17h — Treino de Discursiva: condução "Entender o caso" e "Estudo completo" nas 18 peças (D-015):** 5 etapas por peça (peça, competência, crime, fundamentos, pedidos) com os artigos na redação oficial do Planalto (`discursiva/artigos.js`, gerado por `ferramentas/gerar_artigos_discursiva.py`); estudo por tema com lei, doutrina, jurisprudência, Medicina Legal e Criminologia. ⚠️ Lei 11.340 sem texto oficial (Planalto fora): rodar `atualizar_lei_seca.bat L11340` e o gerador.

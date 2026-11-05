@@ -55,6 +55,10 @@ PORTAS: list[tuple[str, list[str], str]] = [
      "peça sem modelo ou checklist; cartão sem artigo; nota fora das Tabelas 7.3/7.4; sem reagendar"),
     ("o teste da discursiva acusa", ["node", "docs/testar_discursiva.cjs", "--autoteste"],
      "teste que passa com a nota técnica da peça estragada (verde falso)"),
+    ("simulados: leitor de blocos dos PDFs", ["node", "docs/testar_blocos_simulados.cjs"],
+     "comentário em letra de máquina com rolagem lateral; parágrafo partido; caractere do PDF perdido"),
+    ("o teste do leitor de blocos acusa", ["node", "docs/testar_blocos_simulados.cjs", "--autoteste"],
+     "teste que passa com caractere perdido (verde falso)"),
 ]
 
 # Régua de segredo (31/10/2026): exige VALOR de 20+ caracteres depois do `=` — o LEIA_PRIMEIRO cita

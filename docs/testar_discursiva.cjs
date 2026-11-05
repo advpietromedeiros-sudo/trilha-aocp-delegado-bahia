@@ -13,7 +13,7 @@ const leis = fs.readFileSync(path.join(dir, "leis.js"), "utf8");
 const compl = fs.readFileSync(path.join(dir, "pecas_complementares.js"), "utf8");
 html = html.replace('<script src="conteudo.js"></script>', () => "<script>" + conteudo + "</script>").replace('<script src="leis.js"></script>', () => "<script>" + leis + "</script>").replace('<script src="pecas_complementares.js"></script>', () => "<script>" + compl + "</script>");
 // condução, estudo completo e texto oficial dos artigos (03/11/2026, D-015)
-for (const f of ["conducao.js", "estudo.js", "artigos.js"]) { const src = fs.readFileSync(path.join(dir, f), "utf8"); const tag = `<script src="${f}"></script>`; if (!html.includes(tag)) { console.log("falta a tag de " + f); process.exit(1); } html = html.replace(tag, () => "<script>" + src + "</script>"); }
+for (const f of ["conducao.js", "estudo.js", "artigos.js", "blocos.js"]) { const src = fs.readFileSync(path.join(dir, f), "utf8"); const tag = `<script src="${f}"></script>`; if (!html.includes(tag)) { console.log("falta a tag de " + f); process.exit(1); } html = html.replace(tag, () => "<script>" + src + "</script>"); }
 // arquivo único para envio (04/11/2026): DISC_UNICO=caminho prova a versão empacotada por ferramentas/empacotar_discursiva.py
 // simulados objetivos (04/11/2026, D-017): dados de terceiro só no disco; sem eles a aba avisa e o resto funciona
 const htmlSemSim = html;
@@ -133,11 +133,20 @@ else if (TEM_SIM) {
   prova(`entregar: nota = 1 acerto + ${anul} anulada(s), no placar e no histórico`, d.getElementById("simNota").textContent === `${1 + anul}/100` && A.st().hist.some(h => h.t === "sim" && h.nota === 1 + anul), d.getElementById("simNota").textContent);
   clicar("revErros");
   prova("revisão só dos erros abre a questão 2 com gabarito e comentário", /Questão 2/.test(d.body.textContent) && !!d.querySelector(".com") && d.querySelector(".op.errada")?.dataset.simalt === errada);
+  // tesoura (05/11/2026): elimina sem responder, a eliminada não se marca, e "Repor" desfaz; fica salva por questão
+  A.abrirSim("dpcba-3", "prova"); const q3 = S[2].questoes[0], fora = "ABCDE".split("").find(k => k !== q3.gab);
+  d.querySelector(`[data-simcut="${fora}"]`).click(); d.querySelector(`[data-simalt="${fora}"]`).click();
+  prova("tesoura: alternativa eliminada fica riscada, não é marcada e o aviso diz como repor", d.querySelector(`[data-simalt="${fora}"]`).closest(".option-row").classList.contains("eliminated") && !A.st().sim["dpcba-3"].resp[1] && /eliminada/.test(d.getElementById("avisoSim").textContent));
+  d.querySelector(`[data-simcut="${fora}"]`).click();
+  prova("tesoura: 'Repor' devolve a alternativa", !d.querySelector(".option-row.eliminated") && JSON.stringify(A.st().sim["dpcba-3"].cut[1]) === "[]");
+  prova("questão sem bloco de largura fixa (nenhum <pre> nos simulados)", !d.querySelector(".sq pre"));
   A.abrirSim("dpcba-2", "estudo"); const q2 = S[1].questoes[0];
   d.querySelector(`[data-simalt="${q2.gab}"]`).click();
+  prova("modo estudo: escolher NÃO revela; só o botão Confirmar revela", !d.querySelector(".com") && !!d.getElementById("simConfirma"));
+  clicar("simConfirma");
   { const red = S.flatMap(s => s.questoes.filter(q => q.atual && q.atual.nivel === "ajustada" && q.alt_orig).map(q => s.id + "#" + q.n));
     prova("auditoria de 04/11/2026: as 3 questões que a lei vigente deixou sem resposta única foram reescritas, com o original guardado", red.join(",") === "dpcba-1#85,dpcba-2#34,dpcba-4#94" && /multa consolidada/.test(S[0].questoes[84].alts.A) && /15\.487/.test(S[3].questoes[93].alts.C), red.join(",")); }
-  A.abrirSim("dpcba-4", "estudo"); d.querySelector('[data-simir="94"]').click(); d.querySelector('[data-simalt="A"]').click();
+  A.abrirSim("dpcba-4", "estudo"); d.querySelector('[data-simir="94"]').click(); d.querySelector('[data-simalt="A"]').click(); clicar("simConfirma");
   prova("a nota de atualização aparece com o comentário (art. 241-D, Lei 15.487/2026)", /Questão atualizada para a lei vigente/.test(d.body.textContent) && /Texto original da alternativa C/.test(d.body.textContent));
   A.abrirSim("dpcba-2", "estudo"); d.querySelector('[data-simir="1"]').click();
   prova("modo estudo: responder mostra na hora o comentário e o gabarito", !!d.querySelector(".com") && d.querySelector(".fb.ok") && d.body.textContent.includes("Gabarito: " + q2.gab));
