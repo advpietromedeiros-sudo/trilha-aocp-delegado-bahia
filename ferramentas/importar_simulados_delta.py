@@ -27,13 +27,21 @@ SAIDA = RAIZ / "discursiva" / "simulados_delta.js"
 PASTA_PADRAO = Path.home() / "Downloads"
 
 # Notas de ATUALIZAÇÃO (texto autoral), da auditoria de 04/11/2026 contra o texto oficial (Planalto e legislabahia).
-# "red" = pela lei vigente o gabarito não se sustenta (conferido pessoalmente na fonte oficial); "amarela" = comentário
+# Nova redação de alternativa, só nas 3 questões que a lei vigente deixou sem resposta única (ordem do titular,
+# 04/11/2026, 21h39: "se vc não conseguir ajustar para que elas fiquem totalmente atualizadas e com resposta pode fazer
+# caso contrário ficam como anuladas"). Conferido no texto oficial; o original fica em q["alt_orig"].
+ALTERNATIVAS_ATUALIZADAS = {
+    (1, 85): {"A": "Consideram-se infrações administrativas de menor lesividade ao meio ambiente aquelas em que a multa consolidada não ultrapasse o valor de R$ 1.000,00 (mil reais) ou, na hipótese de multa por unidade de medida, não exceda o valor referido."},
+    (2, 34): {"C": "Delegado-Geral Adjunto da Polícia Civil indicar ao Delegado-Geral da Polícia Civil as providências necessárias ao aperfeiçoamento e à eficiência dos serviços prestados pela Polícia Civil do Estado da Bahia;"},
+    (4, 94): {"C": "O entendimento do STJ de que a expressão \"por qualquer meio de comunicação\", do art. 241-D do ECA, não abrangia a comunicação oral direta e presencial perdeu a base legal: a Lei nº 15.487/2026 passou a punir quem alicia, assedia, convida, instiga ou constrange, \"por qualquer meio\", menor de 14 anos, com o fim de praticar ato libidinoso."},
+}
+# "ajustada" = alternativa reescrita para a lei vigente (acima); "red" = pela lei vigente o gabarito não se sustenta (conferido pessoalmente na fonte oficial); "amarela" = comentário
 # desatualizado ou com remissão errada, gabarito mantido. O texto do curso NÃO é alterado: a nota aparece ao lado.
 ATUALIZACOES = {
-    (1, 85): ("red", "Pela redação vigente, a questão tem duas respostas (A e B). Desde o Decreto 11.080/2022, o art. 5º, § 1º, do Decreto 6.514/2008 fala em \"multa consolidada\", não em \"multa máxima cominada\": a alternativa A também é incorreta. Obs.: a alternativa C (5 anos) segue o decreto (Decreto 12.189/2024), mas a Lei 9.605, art. 72, § 8º, V, ainda diz 3 anos."),
+    (1, 85): ("ajustada", "Alternativa A atualizada para a redação vigente; o gabarito B continua o único INCORRETO (a vedação de nova advertência é de 3 anos, contados do julgamento da defesa da última advertência ou de outra penalidade: art. 7º). Motivo: desde o Decreto 11.080/2022, o art. 5º, § 1º, do Decreto 6.514/2008 fala em \"multa consolidada\", não em \"multa máxima cominada\"; com a redação antiga, a A também seria incorreta e a questão teria duas respostas. Obs.: a alternativa C (5 anos) segue o decreto (Decreto 12.189/2024), mas a Lei 9.605, art. 72, § 8º, V, ainda diz 3 anos."),
     (1, 84): ("amarela", "A LC 236/2026 incluiu no art. 151 do CTN os incisos VII a X (arbitragem, proposta de transação aceita, mediação, seguro-garantia ou fiança) e no art. 156 os incisos XII e XIII. O comentário usa o rol antigo; o gabarito se mantém."),
     (1, 26): ("amarela", "Lei 12.288/2010, art. 1º, parágrafo único: discriminação racial (I), desigualdade racial (II), desigualdade de gênero e raça (III), população negra (IV). O comentário troca a numeração; o gabarito se mantém."),
-    (2, 34): ("red", "Pela lei vigente, nenhuma alternativa está correta (questão a anular). A Lei 14.580/2023 mudou o art. 22, III, da Lei 11.370/2009: hoje o Delegado-Geral Adjunto \"indica ao Delegado-Geral as providências necessárias ao aperfeiçoamento e à eficiência dos serviços\". \"Coordenar e supervisionar a execução dos serviços das unidades\" (alternativa C) é a redação original, revogada. E \"acompanhar projetos na Assembleia Legislativa\" está hoje no art. 21, V."),
+    (2, 34): ("ajustada", "Alternativa C atualizada para a redação vigente; o gabarito C se mantém. Motivo: a Lei 14.580/2023 mudou o art. 22, III, da Lei 11.370/2009: hoje o Delegado-Geral Adjunto \"indica ao Delegado-Geral as providências necessárias ao aperfeiçoamento e à eficiência dos serviços\". \"Coordenar e supervisionar a execução dos serviços das unidades\" (alternativa C) era a redação original, revogada. As demais continuam erradas pela lei vigente: plano anual de metas (A), assessorar o Secretário (D) e avocar inquéritos (E) são do Delegado-Geral (art. 19, XI, X e VI); \"acompanhar projetos na Assembleia Legislativa\" (B) é do Gabinete, hoje no art. 21, V (o comentário cita o art. 20, V, numeração anterior)."),
     (2, 18): ("amarela", "Atualidades: a nota sobre 2026 está superada, segundo notícias (não conferido em fonte oficial). O adicional de 40% sobre café, carne e frutas caiu em 20/11/2025, e a Suprema Corte dos EUA derrubou as tarifas baseadas na IEEPA em fevereiro de 2026. O gabarito vale como fato histórico."),
     (2, 19): ("amarela", "Atualidades, segundo notícias (não conferido em fonte oficial): a vacina do Butantan contra a dengue já foi registrada pela Anvisa (26/11/2025; DOU de 08/12/2025), com previsão divulgada de mais de 30 milhões de doses. O gabarito se mantém."),
     (2, 36): ("amarela", "O enunciado manda responder à luz da Lei 12.209/2011, mas o conteúdo é da Lei 6.677/1994 (arts. 10, 11, 13 e 16). O gabarito E só está certo pela 6.677."),
@@ -44,7 +52,7 @@ ATUALIZACOES = {
     (3, 40): ("amarela", "O art. 42 da Lei 6.677/1994 só prevê a recondução pela reintegração do anterior ocupante; a recondução por inabilitação em estágio probatório é da Lei 8.112/1990 (art. 29, I). O próprio simulado descreve o art. 42 corretamente na questão 43. O gabarito C se mantém, mas a alternativa E é discutível em recurso."),
     (3, 42): ("amarela", "A dispensa de licitação ligada à Lei 12.850 está no art. 75, IV, \"l\", da Lei 14.133/2021, e não no art. 75, XVI. O gabarito se mantém."),
     (3, 89): ("amarela", "A tortura \"mediante sequestro\" é causa de aumento do art. 1º, § 4º, III, da Lei 9.455/1997 (o parágrafo não tem inciso IV). O gabarito se mantém."),
-    (4, 94): ("red", "Pela lei vigente, nenhuma alternativa está correta (questão a anular). A Lei 15.487/2026 deu nova redação ao art. 241-D do ECA: \"aliciar, assediar, convidar, instigar ou constranger, por qualquer meio, menor de 14 (quatorze) anos, com o fim de praticar ato libidinoso\". Saiu a expressão \"meio de comunicação\", que era justamente a interpretada pelo STJ no julgado do Informativo 860: hoje também o contato pessoal e presencial está no tipo."),
+    (4, 94): ("ajustada", "Alternativa C atualizada; o gabarito C se mantém. Motivo: a Lei 15.487/2026 deu nova redação ao art. 241-D do ECA: \"aliciar, assediar, convidar, instigar ou constranger, por qualquer meio, menor de 14 (quatorze) anos, com o fim de praticar ato libidinoso\". Saiu a expressão \"meio de comunicação\", que era justamente a interpretada pelo STJ no julgado do Informativo 860: a redação original da alternativa ensinava uma regra superada. O comentário original da C, abaixo, descreve o entendimento anterior à lei."),
     (4, 79): ("amarela", "Sentença de improbidade não se sujeita a reexame necessário: \"Não haverá remessa necessária\" (Lei 8.429/1992, art. 17-C, § 3º, incluído em 2021). O comentário diz o contrário; o gabarito se mantém."),
 }
 
@@ -254,6 +262,9 @@ def ler_simulado(pdf: Path, n: int) -> dict:
         if (n, q.get("n")) in ATUALIZACOES:
             nivel, texto = ATUALIZACOES[(n, q.get("n"))]
             q["atual"] = {"nivel": nivel, "texto": texto, "em": "04/11/2026"}
+        for letra, nova in ALTERNATIVAS_ATUALIZADAS.get((n, q.get("n")), {}).items():
+            q.setdefault("alt_orig", {})[letra] = q["alts"][letra]
+            q["alts"][letra] = nova
         q["enun"] = blocos(q["enun"])
         q["com"] = blocos(q["com"])
         for (sn, pg), (qn, onde) in FIGURAS.items():

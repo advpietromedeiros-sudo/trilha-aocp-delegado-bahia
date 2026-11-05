@@ -237,6 +237,11 @@ na pasta Downloads em 04/11/2026, entre 16h02 e 16h04.
   (Decreto 6.514, art. 5º, § 1º: "multa consolidada", Decreto 11.080/2022), S2 q34 (Lei 11.370/2009, art. 22, III, Lei
   14.580/2023) e S4 q94 (ECA, art. 241-D, Lei 15.487/2026). 🟡 13 comentários desatualizados ou com remissão errada, sem
   mudar o gabarito. O texto do curso **não** foi alterado: cada achado vira uma nota autoral (`ATUALIZACOES` no
-  importador), mostrada ao lado do comentário. ⚠️ **Em aberto, do titular:** contar as 3 🔴 como anuladas na nota?
-  (hoje contam pelo gabarito do curso). Não confirmados: S1 q59; S2 q57, q60 e q62; S4 q27 e q39; Atualidades da Bahia
+  importador), mostrada ao lado do comentário.
+- **As 3 🔴 foram atualizadas, não anuladas (04/11/2026, 21h39, titular):** *"se vc não conseguir ajustar para que elas
+  fiquem totalmente atualizadas e com resposta pode fazer caso contrário ficam como anuladas"*. As três fecharam com
+  resposta única, conferida alternativa por alternativa no texto oficial: S1 q85 (A passa a "multa consolidada"; B segue
+  a única INCORRETA, art. 7º: 3 anos do julgamento), S2 q34 (C passa à redação vigente do art. 22, III; B é do Gabinete,
+  art. 21, V; A, D e E do Delegado-Geral, art. 19) e S4 q94 (C passa a dizer que o entendimento do STJ perdeu a base com a
+  Lei 15.487/2026). Gabaritos mantidos (B, C, C); a tela mostra o texto original da alternativa (`alt_orig`). Não confirmados: S1 q59; S2 q57, q60 e q62; S4 q27 e q39; Atualidades da Bahia
   e julgados de 2026 que os auditores não acharam em fonte oficial.

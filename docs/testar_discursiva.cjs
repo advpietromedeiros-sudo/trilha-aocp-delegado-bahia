@@ -135,10 +135,10 @@ else if (TEM_SIM) {
   prova("revisão só dos erros abre a questão 2 com gabarito e comentário", /Questão 2/.test(d.body.textContent) && !!d.querySelector(".com") && d.querySelector(".op.errada")?.dataset.simalt === errada);
   A.abrirSim("dpcba-2", "estudo"); const q2 = S[1].questoes[0];
   d.querySelector(`[data-simalt="${q2.gab}"]`).click();
-  { const red = S.flatMap(s => s.questoes.filter(q => q.atual && q.atual.nivel === "red").map(q => s.id + "#" + q.n));
-    prova("auditoria de 04/11/2026: 3 questões desatualizadas pela lei vigente marcadas em vermelho", red.join(",") === "dpcba-1#85,dpcba-2#34,dpcba-4#94", red.join(",")); }
+  { const red = S.flatMap(s => s.questoes.filter(q => q.atual && q.atual.nivel === "ajustada" && q.alt_orig).map(q => s.id + "#" + q.n));
+    prova("auditoria de 04/11/2026: as 3 questões que a lei vigente deixou sem resposta única foram reescritas, com o original guardado", red.join(",") === "dpcba-1#85,dpcba-2#34,dpcba-4#94" && /multa consolidada/.test(S[0].questoes[84].alts.A) && /15\.487/.test(S[3].questoes[93].alts.C), red.join(",")); }
   A.abrirSim("dpcba-4", "estudo"); d.querySelector('[data-simir="94"]').click(); d.querySelector('[data-simalt="A"]').click();
-  prova("a nota de atualização aparece com o comentário (art. 241-D, Lei 15.487/2026)", /Desatualizada pela lei vigente/.test(d.body.textContent) && /15\.487/.test(d.querySelector(".alerta")?.textContent || ""));
+  prova("a nota de atualização aparece com o comentário (art. 241-D, Lei 15.487/2026)", /Questão atualizada para a lei vigente/.test(d.body.textContent) && /Texto original da alternativa C/.test(d.body.textContent));
   A.abrirSim("dpcba-2", "estudo"); d.querySelector('[data-simir="1"]').click();
   prova("modo estudo: responder mostra na hora o comentário e o gabarito", !!d.querySelector(".com") && d.querySelector(".fb.ok") && d.body.textContent.includes("Gabarito: " + q2.gab));
 } else console.log("  ⚠️ simulados_delta.js ausente (material local): testes de conteúdo dos simulados pulados");
