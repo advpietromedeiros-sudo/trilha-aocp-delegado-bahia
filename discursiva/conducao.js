@@ -57,7 +57,7 @@ const CONDUCAO = {
             ['Ao Juiz de Direito da Vara Criminal da Comarca de Ilhéus/BA', 1, 'Certo: justiça estadual, pelo lugar da infração (CPP, art. 70). Use lacuna para o número da vara.'],
             ['Ao Juiz Federal da Subseção de Ilhéus', 0, 'Não há bem, serviço ou interesse da União (CF, art. 109, IV): a competência é da Justiça Estadual.'],
             ['Ao Juiz Presidente do Tribunal do Júri', 0, 'O Júri julga crimes dolosos contra a VIDA (CF, art. 5º, XXXVIII, "d"). Roubo é crime contra o patrimônio.'],
-            ['Ao Promotor de Justiça da Comarca', 0, 'Representação vai ao JUIZ; o MP é ouvido depois (art. 282, § 3º, e pedido de oitiva).'],
+            ['Ao Promotor de Justiça da Comarca', 0, 'Representação vai ao JUIZ; o MP é ouvido depois (pedido de oitiva na própria representação).'],
           ] },
         ],
         logica: 'Três perguntas, nessa ordem: (1) Justiça Federal ou Estadual? (CF, art. 109); (2) há juízo especializado? (Júri, violência doméstica, infância, tóxicos); (3) qual comarca? (lugar da consumação, CPP, art. 70). Onde houver juiz das garantias, é ele o competente na fase do inquérito (art. 3º-B). Nunca invente número de vara nem nome de juiz.',
@@ -110,7 +110,7 @@ const CONDUCAO = {
             ['Condução coercitiva para interrogatório', 0, 'O STF vedou a condução coercitiva para interrogatório (ADPFs 395 e 444). E o reconhecimento exige a pessoa disponível por mais tempo.'],
           ] },
         ],
-        logica: 'A temporária é a prisão da FASE DE INVESTIGAÇÃO. O STF (ADIs 3360 e 4109) fixou os requisitos cumulativos: imprescindível às investigações (inciso I) OU falta de residência/identidade (inciso II), sempre com fundadas razões de autoria em crime do rol (inciso III), além de fatos contemporâneos e de insuficiência das cautelares.',
+        logica: 'A temporária é a prisão da FASE DE INVESTIGAÇÃO. O STF (ADIs 3360 e 4109) fixou os requisitos cumulativos: imprescindível às investigações (inciso I) E fundadas razões de autoria em crime do rol (inciso III), além de fatos contemporâneos, adequação à gravidade e insuficiência das cautelares. O inciso II (sem residência ou identidade) só reforça: sozinho, não basta.',
         arts: ['L7960:1', 'L7960:2', 'L8072:2'] },
       { t: 'Competência e endereçamento', qs: [
           { p: 'Homicídio doloso em Feira de Santana. A quem vai a representação?', op: [
@@ -130,8 +130,8 @@ const CONDUCAO = {
         arts: ['CP:121', 'L8072:1'] },
       { t: 'A lógica dos fundamentos', qs: [
           { p: 'Qual combinação de incisos do art. 1º da Lei 7.960 você demonstra?', op: [
-            ['Inciso III (homicídio doloso) + inciso I (imprescindível) e/ou inciso II (sem residência ou identidade)', 1, 'Certo: o inciso III é sempre necessário; com ele, o I ou o II (STF, ADI 4109).'],
-            ['Só o inciso II: basta não ter residência fixa', 0, 'Sozinho, o inciso II não basta: falta a fundada razão de autoria em crime do rol (inciso III).'],
+            ['Inciso III (homicídio doloso) + inciso I (imprescindível), com o inciso II (sem residência ou identidade) como reforço', 1, 'Certo: I e III são obrigatórios, cumulativamente; o II só reforça (STF, ADIs 3360 e 4109).'],
+            ['Inciso III + inciso II: basta não ter residência fixa', 0, 'Não basta: o STF exige a imprescindibilidade para as investigações (inciso I), com fatos concretos; o inciso II, mesmo com o III, não sustenta a temporária.'],
           ] },
         ],
         logica: 'Monte assim: o crime está no rol (III) → há fundadas razões de autoria (testemunhas + identificação de "Neguinho") → a prisão é imprescindível (I: oitiva e reconhecimento) e ele não tem residência nem identificação (II) → há risco atual (vai deixar o Estado).',
@@ -177,7 +177,7 @@ const CONDUCAO = {
         arts: ['L11343:33'] },
       { t: 'A lógica dos fundamentos', qs: [
           { p: 'O que o juiz precisa ver para expedir o mandado?', op: [
-            ['Fundadas razões ligadas às finalidades do art. 240, § 1º, e o endereço exato', 1, 'Certo: alíneas "b" (coisas obtidas por meios criminosos), "e" (instrumentos), "h" (elementos de convicção), entre outras, com o imóvel individualizado.'],
+            ['Fundadas razões ligadas às finalidades do art. 240, § 1º, e o endereço exato', 1, 'Certo: alíneas "b" (coisas obtidas por meios criminosos), "d" (instrumentos), "e" (objetos necessários à prova), "h" (elementos de convicção), entre outras, com o imóvel individualizado.'],
             ['Só a denúncia anônima', 0, 'Denúncia anônima isolada não basta; aqui há relatórios, fotos e depoimento.'],
           ] },
         ],
