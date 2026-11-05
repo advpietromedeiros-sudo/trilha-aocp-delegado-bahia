@@ -231,3 +231,12 @@ na pasta Downloads em 04/11/2026, entre 16h02 e 16h04.
   comentário (S4, q13).
 - ⚠️ **Limite:** fórmulas de Raciocínio Lógico e tabelas largas vêm do PDF como texto posicionado: aparecem em bloco
   alinhado, com rolagem lateral, e frações podem sair em duas linhas. O conteúdo está completo.
+- **Auditoria de atualização (04/11/2026, 21h33, pedido do titular: "faça isso"):** as 320 questões de Direito,
+  Legislação, Atualidades, Medicina Legal e Criminologia foram conferidas contra o texto oficial (Planalto, baixado em
+  03/11/2026, e legislabahia). 🔴 **3 desatualizadas pela lei vigente**, conferidas pessoalmente na fonte oficial: S1 q85
+  (Decreto 6.514, art. 5º, § 1º: "multa consolidada", Decreto 11.080/2022), S2 q34 (Lei 11.370/2009, art. 22, III, Lei
+  14.580/2023) e S4 q94 (ECA, art. 241-D, Lei 15.487/2026). 🟡 13 comentários desatualizados ou com remissão errada, sem
+  mudar o gabarito. O texto do curso **não** foi alterado: cada achado vira uma nota autoral (`ATUALIZACOES` no
+  importador), mostrada ao lado do comentário. ⚠️ **Em aberto, do titular:** contar as 3 🔴 como anuladas na nota?
+  (hoje contam pelo gabarito do curso). Não confirmados: S1 q59; S2 q57, q60 e q62; S4 q27 e q39; Atualidades da Bahia
+  e julgados de 2026 que os auditores não acharam em fonte oficial.
