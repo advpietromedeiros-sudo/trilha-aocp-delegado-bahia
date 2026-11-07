@@ -1,0 +1,42 @@
+{
+ "conferida_em": "06/11/2026, 21h58",
+ "como": "python ferramentas/classificar_incidencia.py --amostra 30 (semente fixa 20261106, sobre as questões classificadas); cada classificação lida à mão contra o enunciado, as alternativas e o assunto dado pela plataforma de questões. Só ids e veredito: o texto das questões fica fora do Git.",
+ "casos": [
+  {"id_qc": "Q1992072", "item": "DBA26-CPP-8.5", "veredito": "errada", "certo_seria": "DBA26-CPP-8.4", "por_que": "prisão preventiva; o assunto-pai 'Da Prisão e da Liberdade Provisória' puxou para liberdade provisória"},
+  {"id_qc": "Q4217350", "item": "DBA26-POR-6", "veredito": "certa"},
+  {"id_qc": "Q4118194", "item": "DBA26-POR-4", "veredito": "certa"},
+  {"id_qc": "Q4159375", "item": "DBA26-POR-2", "veredito": "certa"},
+  {"id_qc": "Q4219971", "item": "DBA26-INF-2.1", "veredito": "certa"},
+  {"id_qc": "Q4218195", "item": "DBA26-POR-1", "veredito": "errada", "certo_seria": "DBA26-POR-4", "por_que": "orações coordenadas e conectivos; o assunto genérico 'Compreensão e Interpretação' venceu"},
+  {"id_qc": "Q1992118", "item": "DBA26-CIV-5", "veredito": "certa"},
+  {"id_qc": "Q1761815", "item": "DBA26-CIV-1", "veredito": "certa", "nota": "domicílio está no Livro I (Das pessoas) do CC"},
+  {"id_qc": "Q4090562", "item": "DBA26-POR-1", "veredito": "certa"},
+  {"id_qc": "Q1761800", "item": "DBA26-PEN-3.1", "veredito": "certa", "nota": "questão multitema (conduta, nexo, tipo, dolo, culpa); o item 3.1 cobre conduta e tipicidade — discutível"},
+  {"id_qc": "Q1992058", "item": "DBA26-PEN-10.10", "veredito": "certa"},
+  {"id_qc": "Q4090560", "item": "DBA26-POR-1", "veredito": "errada", "certo_seria": "DBA26-POR-2", "por_que": "denotação e conotação; o sinônimo curado era 'conotativo', não 'conotacao'"},
+  {"id_qc": "Q4212874", "item": "DBA26-POR-2", "veredito": "certa"},
+  {"id_qc": "Q4217347", "item": "DBA26-POR-4", "veredito": "certa"},
+  {"id_qc": "Q4247444", "item": "DBA26-RAC-10.5", "veredito": "certa", "nota": "Venn com contagem também caberia em RAC-13 (conjuntos)"},
+  {"id_qc": "Q4218755", "item": "DBA26-INF-3.6", "veredito": "certa", "nota": "procedimento de segurança e backup: 3.6 ou 3.7"},
+  {"id_qc": "Q1992117", "item": "DBA26-CIV-7", "veredito": "certa"},
+  {"id_qc": "Q4247015", "item": "DBA26-POR-6", "veredito": "certa"},
+  {"id_qc": "Q4215983", "item": "DBA26-RAC-10.5", "veredito": "certa"},
+  {"id_qc": "Q4251222", "item": "DBA26-INF-3.3", "veredito": "certa"},
+  {"id_qc": "Q4118202", "item": "DBA26-POR-3", "veredito": "certa"},
+  {"id_qc": "Q4118232", "item": "DBA26-INF-3.7", "veredito": "errada", "certo_seria": null, "por_que": "hardware e memórias não estão no edital; devia ficar não classificada"},
+  {"id_qc": "Q4212875", "item": "DBA26-POR-7", "veredito": "certa"},
+  {"id_qc": "Q4218191", "item": "DBA26-POR-1", "veredito": "certa"},
+  {"id_qc": "Q1761842", "item": "DBA26-CRI-3.1", "veredito": "certa"},
+  {"id_qc": "Q4159383", "item": "DBA26-POR-1", "veredito": "certa", "nota": "tipos de discurso: interpretação/tipologia"},
+  {"id_qc": "Q4221125", "item": "DBA26-INF-2.2", "veredito": "certa"},
+  {"id_qc": "Q1761848", "item": "DBA26-MLE-4", "veredito": "certa"},
+  {"id_qc": "Q1992114", "item": "DBA26-CRI-3.1", "veredito": "certa"},
+  {"id_qc": "Q1761817", "item": "DBA26-CIV-4-B2", "veredito": "certa"}
+ ],
+ "amostra_anterior": {
+  "conferida_em": "06/11/2026, 21h53",
+  "conferidas": 30,
+  "certas": 21,
+  "nota": "primeira régua (limiar 1,0; cabeçalho da prova vazando para o enunciado; 'princípios' como palavra vazia; atalhos de teclado presos ao Windows). Os 9 erros guiaram os ajustes; a amostra acima foi sorteada DEPOIS e tem 25 questões que não estavam na primeira — é a medida que vale. Ela não foi usada para ajustar nada."
+ }
+}

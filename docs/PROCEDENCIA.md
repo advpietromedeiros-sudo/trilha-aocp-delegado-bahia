@@ -116,3 +116,21 @@ prompt do servidor já manda não aplicar norma posterior.
 - **Autorização:** ordem escrita do titular no chat, para seu estudo pessoal. **Sem** autorização do autor para
   distribuição: o arquivo fica **fora do Git** (`.gitignore`) e **fora do arquivo único de envio**.
 - **Dado pessoal:** a marca d'água com CPF e código do comprador é retirada na importação; nada dela entra em arquivo do app.
+
+## 06/11/2026, 22h07 — Provas AOCP e edital da PC-BA na revisão por prioridade (D-018, Fase 0)
+
+- **Autorização:** pedido escrito do titular no chat (texto em D-018), para este material de estudo pessoal, que não vai
+  para o portal (D-009).
+- **Provas AOCP:** 24 cadernos em PDF na pasta Downloads do titular (`AOCP 01` a `06`, `AOCP INFO 01` a `06`, `AOCP
+  PORTUGUES 01` a `08` e `DELEGADO`, `AOCP RAC LOG 01` a `03`), exportados de uma plataforma comercial de questões
+  (marca e endereço dela em cada página). As questões são de provas públicas da banca; a seleção, a classificação por
+  assunto e a montagem dos cadernos são da plataforma — por isso tratadas como **material de terceiro**.
+  - **Onde ficou:** `revisao/dados/` (questões, gabaritos, texto bruto e OCR por página), **fora do Git** (`.gitignore`).
+    No Git entram só o extrator autoral (`ferramentas/extrair_provas_aocp.py`) e os números agregados: ids do edital,
+    contagens e ids das questões na plataforma em `revisao/mapa_prioridade.json` e `docs/REVISAO_PRIORIDADE.md`. Nenhum
+    enunciado, alternativa ou comentário entra no Git.
+  - **Dado pessoal:** nenhum encontrado nos cadernos (não há marca d'água de comprador).
+- **Edital:** `../DELEGADO BA/EDITAL DELEGADO BAHIA.pdf` (edital do concurso, ato oficial, Lei 9.610/98, art. 8º, IV).
+  Usados a Tabela 7.1 (p. 10) e a divisão do Anexo I (pp. 26–31). O PDF não está no repositório.
+- **Estimativa de peso por disciplina:** média das contagens por disciplina dos 4 simulados DPC-BA (D-017). Entra no Git
+  **só a contagem** (números), não questão nem comentário.

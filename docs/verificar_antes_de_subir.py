@@ -19,6 +19,9 @@ PY = [
     "servidor.py",
     "ferramentas/atualizar_lei_seca.py",
     "ferramentas/construir_base.py",
+    "ferramentas/extrair_provas_aocp.py",
+    "ferramentas/classificar_incidencia.py",
+    "ferramentas/verificar_atualidade.py",
 ]
 
 # (nome, comando, o erro que esta porta impede)
@@ -59,6 +62,17 @@ PORTAS: list[tuple[str, list[str], str]] = [
      "comentário em letra de máquina com rolagem lateral; parágrafo partido; caractere do PDF perdido"),
     ("o teste do leitor de blocos acusa", ["node", "docs/testar_blocos_simulados.cjs", "--autoteste"],
      "teste que passa com caractere perdido (verde falso)"),
+    # Revisão por prioridade (D-018, 06/11/2026)
+    ("o verificador de atualidade acusa",
+     [sys.executable, "ferramentas/verificar_atualidade.py", "--autoteste"],
+     "artigo citado fora do texto vigente, súmula cancelada, jurisprudência sem fonte e data (verde falso)"),
+    ("lei seca oficial com menos de 30 dias",
+     [sys.executable, "ferramentas/verificar_atualidade.py", "--estado"],
+     "módulo gerado sobre lei seca velha; sai 2 (pulada) onde a base não existe — fica fora do Git (D-015)"),
+    ("a régua de incidência acusa", [sys.executable, "ferramentas/classificar_incidencia.py", "--autoteste"],
+     "régua que casa 'tor' dentro de 'torre', perde o plural em -ões ou classifica sem termo (06/11/2026)"),
+    ("o leitor das provas AOCP acusa", [sys.executable, "ferramentas/extrair_provas_aocp.py", "--autoteste"],
+     "gabarito ou cabeçalho da prova lidos errado em silêncio"),
 ]
 
 # Régua de segredo (31/10/2026): exige VALOR de 20+ caracteres depois do `=` — o LEIA_PRIMEIRO cita
@@ -120,7 +134,10 @@ def main() -> int:
             print(f"  [OK ] {nome}")
         elif r.returncode == 2:
             puladas.append(nome)
+            porque = (r.stdout + r.stderr).strip().splitlines()
             print(f"  [PUL] {nome} — pulada, e isto não é verde")
+            if porque:
+                print(f"        │ {porque[-1].strip()}")
         else:
             falhas.append(nome)
             print(f"  [ X ] {nome}\n        impede: {motivo}")

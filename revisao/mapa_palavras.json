@@ -1,0 +1,8367 @@
+{
+ "versao": "1 (06/11/2026)",
+ "origem": "semente gerada em 06/11/2026: 'termos_do_rotulo' saem do rótulo de cada item (palavras de 4+ letras, sem as vazias, e os números de lei); 'sinonimos' foram escritos à mão. Daqui em diante ESTE arquivo é a fonte: edita-se aqui e roda-se ferramentas/classificar_incidencia.py.",
+ "itens_sem_termo": "os itens 'Jurisprudência aplicada…' e os títulos sem conteúdo próprio (ex.: 'Conceito.', 'Tipos.') ficam sem termo e não recebem questão — declarado em docs/REVISAO_PRIORIDADE.md",
+ "como_casa": "texto normalizado (minúsculas, sem acento); cada termo casa no início de palavra (prefixo), então 'prescricao' também casa 'prescricoes'.",
+ "peso": {
+  "assunto_qc": 3,
+  "enunciado_e_alternativas": 1,
+  "sinonimo_multipalavra": 2
+ },
+ "disciplinas_plataforma": {
+  "direito penal": [
+   "DIREITO PENAL",
+   "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE"
+  ],
+  "direito processual penal": [
+   "DIREITO PROCESSUAL PENAL",
+   "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE"
+  ],
+  "legislacao penal especial": [
+   "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE"
+  ],
+  "leis penais especiais": [
+   "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE"
+  ],
+  "legislacao federal": [
+   "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE",
+   "PROMOÇÃO DA IGUALDADE RACIAL E DE GÊNERO",
+   "LEGISLAÇÃO GERAL"
+  ],
+  "legislacao estadual": [
+   "LEGISLAÇÃO GERAL",
+   "PROMOÇÃO DA IGUALDADE RACIAL E DE GÊNERO"
+  ],
+  "direito constitucional": [
+   "DIREITO CONSTITUCIONAL"
+  ],
+  "direito administrativo": [
+   "DIREITO ADMINISTRATIVO",
+   "LEGISLAÇÃO GERAL"
+  ],
+  "direito tributario": [
+   "DIREITO TRIBUTÁRIO"
+  ],
+  "direito ambiental": [
+   "DIREITO AMBIENTAL"
+  ],
+  "direito civil": [
+   "DIREITO CIVIL E EMPRESARIAL"
+  ],
+  "direito empresarial (comercial)": [
+   "DIREITO CIVIL E EMPRESARIAL"
+  ],
+  "direito do consumidor": [
+   "DIREITO CIVIL E EMPRESARIAL"
+  ],
+  "direito processual civil - novo codigo de processo civil - cpc 2015": [
+   "DIREITO PROCESSUAL CIVIL"
+  ],
+  "direito processual civil": [
+   "DIREITO PROCESSUAL CIVIL"
+  ],
+  "criminologia": [
+   "CRIMINOLOGIA"
+  ],
+  "medicina legal": [
+   "MEDICINA LEGAL"
+  ],
+  "direitos humanos": [
+   "PROMOÇÃO DA IGUALDADE RACIAL E DE GÊNERO",
+   "DIREITO CONSTITUCIONAL"
+  ],
+  "portugues": [
+   "LÍNGUA PORTUGUESA"
+  ],
+  "lingua portuguesa": [
+   "LÍNGUA PORTUGUESA"
+  ],
+  "nocoes de informatica": [
+   "INFORMÁTICA"
+  ],
+  "informatica": [
+   "INFORMÁTICA"
+  ],
+  "seguranca da informacao": [
+   "INFORMÁTICA"
+  ],
+  "raciocinio logico": [
+   "RACIOCÍNIO LÓGICO"
+  ],
+  "matematica": [
+   "RACIOCÍNIO LÓGICO"
+  ],
+  "atualidades": [
+   "ATUALIDADES"
+  ],
+  "estatuto da crianca e do adolescente - lei no 8.069 de 1990": [
+   "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE"
+  ]
+ },
+ "itens": {
+  "DBA26-PEN-1": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "1",
+   "rotulo": "Introdução ao direito penal.",
+   "termos_do_rotulo": [
+    "penal"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-CPP-1": {
+   "disciplina": "DIREITO PROCESSUAL PENAL",
+   "numero": "1",
+   "rotulo": "Direito processual penal.",
+   "termos_do_rotulo": [
+    "processual",
+    "penal"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-CON-1": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "1",
+   "rotulo": "Direito Constitucional, natureza, conceito e objeto.",
+   "termos_do_rotulo": [
+    "constitucional"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-LPE-1": {
+   "disciplina": "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE",
+   "numero": "1",
+   "rotulo": "Lei Federal nº 10.826/2003 - Estatuto do Desarmamento.",
+   "termos_do_rotulo": [
+    "10.826",
+    "10826",
+    "estatuto",
+    "desarmamento"
+   ],
+   "sinonimos": [
+    "10.826",
+    "10826",
+    "estatuto do desarmamento",
+    "porte ilegal",
+    "posse irregular",
+    "arma de fogo",
+    "municao",
+    "acessorio"
+   ]
+  },
+  "DBA26-POR-1": {
+   "disciplina": "LÍNGUA PORTUGUESA",
+   "numero": "1",
+   "rotulo": "Compreensão e interpretação de texto; tipologia e gêneros textuais; elementos da comunicação e funções da linguagem.",
+   "termos_do_rotulo": [
+    "compreensao",
+    "interpretacao",
+    "texto",
+    "tipologia",
+    "generos",
+    "textuais",
+    "elementos",
+    "comunicacao",
+    "linguagem"
+   ],
+   "sinonimos": [
+    "interpretacao",
+    "compreensao",
+    "de acordo com o texto",
+    "infere-se",
+    "segundo o texto",
+    "genero textual",
+    "tipologia",
+    "funcao da linguagem",
+    "funcoes da linguagem",
+    "ideia central",
+    "o autor"
+   ]
+  },
+  "DBA26-ADM-1": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "1",
+   "rotulo": "Regime jurídico administrativo: princípios do direito administrativo.",
+   "termos_do_rotulo": [
+    "regime",
+    "juridico",
+    "administrativo",
+    "principios"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-PEN-1.1": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "1.1",
+   "rotulo": "Conceito, caracteres e função do direito penal.",
+   "termos_do_rotulo": [
+    "caracteres",
+    "penal"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-MLE-1": {
+   "disciplina": "MEDICINA LEGAL",
+   "numero": "1",
+   "rotulo": "Conceito, importância e divisões.",
+   "termos_do_rotulo": [],
+   "sinonimos": []
+  },
+  "DBA26-RAC-1": {
+   "disciplina": "RACIOCÍNIO LÓGICO",
+   "numero": "1",
+   "rotulo": "Conjuntos numéricos:",
+   "termos_do_rotulo": [
+    "conjuntos",
+    "numericos"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-CPP-1.1": {
+   "disciplina": "DIREITO PROCESSUAL PENAL",
+   "numero": "1.1",
+   "rotulo": "Princípios gerais, conceito, finalidade, características.",
+   "termos_do_rotulo": [
+    "principios"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-LPE-2": {
+   "disciplina": "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE",
+   "numero": "2",
+   "rotulo": "Lei Federal nº 8.072/1990 - Crimes Hediondos.",
+   "termos_do_rotulo": [
+    "8.072",
+    "8072",
+    "hediondos"
+   ],
+   "sinonimos": [
+    "8.072",
+    "8072",
+    "hediondo",
+    "hediondos",
+    "equiparados a hediondos"
+   ]
+  },
+  "DBA26-CRI-1": {
+   "disciplina": "CRIMINOLOGIA",
+   "numero": "1",
+   "rotulo": "O conceito, método, objeto, sistema e funções da Criminologia.",
+   "termos_do_rotulo": [
+    "metodo",
+    "criminologia"
+   ],
+   "sinonimos": [
+    "criminologia",
+    "ciencia empirica",
+    "interdisciplinar"
+   ]
+  },
+  "DBA26-PEN-1.2": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "1.2",
+   "rotulo": "Princípios do direito penal.",
+   "termos_do_rotulo": [
+    "principios",
+    "penal"
+   ],
+   "sinonimos": [
+    "poder punitivo",
+    "principios limitadores",
+    "insignificancia",
+    "bagatela",
+    "lesividade",
+    "ofensividade",
+    "intervencao minima",
+    "fragmentariedade",
+    "subsidiariedade",
+    "adequacao social",
+    "humanidade das penas",
+    "legalidade penal",
+    "anterioridade"
+   ]
+  },
+  "DBA26-INF-1": {
+   "disciplina": "INFORMÁTICA",
+   "numero": "1",
+   "rotulo": "Sistema Operacional Windows 11 em português:",
+   "termos_do_rotulo": [
+    "operacional",
+    "windows",
+    "portugues"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-LGE-1": {
+   "disciplina": "LEGISLAÇÃO GERAL",
+   "numero": "1",
+   "rotulo": "Lei Estadual nº 6.677/1994 - Estatuto do Servidor Público do Estado da Bahia.",
+   "termos_do_rotulo": [
+    "6.677",
+    "6677",
+    "estatuto",
+    "servidor",
+    "bahia"
+   ],
+   "sinonimos": [
+    "6.677",
+    "estatuto do servidor publico do estado da bahia",
+    "servidor publico civil do estado da bahia",
+    "licenca",
+    "estagio probatorio",
+    "vantagens",
+    "penalidades"
+   ]
+  },
+  "DBA26-CPP-1.2": {
+   "disciplina": "DIREITO PROCESSUAL PENAL",
+   "numero": "1.2",
+   "rotulo": "Fontes.",
+   "termos_do_rotulo": [
+    "fontes"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-CON-2": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "2",
+   "rotulo": "Perspectiva sociológica, política e jurídica.",
+   "termos_do_rotulo": [
+    "perspectiva",
+    "sociologica",
+    "politica",
+    "juridica"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-PRG-1": {
+   "disciplina": "PROMOÇÃO DA IGUALDADE RACIAL E DE GÊNERO",
+   "numero": "1",
+   "rotulo": "Constituição da República Federativa do Brasil de 1988 (Artigos 1º, 3º, 4° e 5°).",
+   "termos_do_rotulo": [
+    "constituicao",
+    "republica",
+    "federativa"
+   ],
+   "sinonimos": [
+    "art. 3",
+    "art. 4",
+    "art. 5",
+    "repudio ao racismo",
+    "objetivos fundamentais",
+    "promover o bem de todos"
+   ]
+  },
+  "DBA26-LPE-3": {
+   "disciplina": "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE",
+   "numero": "3",
+   "rotulo": "Lei Federal nº 7.716/1989 - Crimes resultantes de preconceito de raça, cor, etnia, religião ou procedência nacional.",
+   "termos_do_rotulo": [
+    "7.716",
+    "7716",
+    "resultantes",
+    "preconceito",
+    "raca",
+    "etnia",
+    "religiao",
+    "procedencia"
+   ],
+   "sinonimos": [
+    "7.716",
+    "7716",
+    "preconceito de raca",
+    "discriminacao",
+    "injuria racial",
+    "racismo"
+   ]
+  },
+  "DBA26-PEN-1.3": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "1.3",
+   "rotulo": "Relações com outros ramos do direito.",
+   "termos_do_rotulo": [
+    "ramos"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-ADM-1.2": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "1.2",
+   "rotulo": "Princípios da Administração Pública.",
+   "termos_do_rotulo": [
+    "principios"
+   ],
+   "sinonimos": [
+    "legalidade",
+    "impessoalidade",
+    "moralidade",
+    "publicidade",
+    "eficiencia",
+    "limpe",
+    "razoabilidade",
+    "proporcionalidade",
+    "autotutela",
+    "seguranca juridica",
+    "continuidade"
+   ]
+  },
+  "DBA26-CPP-1.3": {
+   "disciplina": "DIREITO PROCESSUAL PENAL",
+   "numero": "1.3",
+   "rotulo": "Lei processual penal: fontes, eficácia, interpretação, analogia, imunidades.",
+   "termos_do_rotulo": [
+    "processual",
+    "penal",
+    "fontes",
+    "eficacia",
+    "interpretacao",
+    "analogia",
+    "imunidades"
+   ],
+   "sinonimos": [
+    "lei processual penal no tempo",
+    "tempus regit actum",
+    "aplicacao imediata"
+   ]
+  },
+  "DBA26-ATU-1": {
+   "disciplina": "ATUALIDADES",
+   "numero": "1",
+   "rotulo": "Atualidades em âmbito internacional, nacional e do Estado da Bahia: Conflitos geopolíticos, relações internacionais, direitos humanos, democracia, cidadania, desigualdades sociais, meio ambiente, mudanças climáticas, saúde pública, educação, trabalho, economia, violência, tecnologia de informação, cultura, problemas urbanos, segurança pública.",
+   "termos_do_rotulo": [
+    "atualidades",
+    "internacional",
+    "bahia",
+    "conflitos",
+    "geopoliticos",
+    "internacionais",
+    "humanos",
+    "democracia",
+    "cidadania",
+    "desigualdades",
+    "sociais",
+    "meio",
+    "ambiente",
+    "mudancas",
+    "climaticas",
+    "saude",
+    "educacao",
+    "trabalho",
+    "economia",
+    "violencia",
+    "tecnologia",
+    "informacao",
+    "cultura",
+    "problemas",
+    "urbanos",
+    "seguranca"
+   ],
+   "sinonimos": [
+    "geopolitic",
+    "relacoes internacionais",
+    "conflito",
+    "guerra",
+    "democracia",
+    "cidadania",
+    "meio ambiente",
+    "sustentabilidade",
+    "clima",
+    "economia",
+    "bahia",
+    "eleicoes",
+    "onu"
+   ]
+  },
+  "DBA26-MLE-1.1": {
+   "disciplina": "MEDICINA LEGAL",
+   "numero": "1.1",
+   "rotulo": "Corpo de Delito, perícia e peritos.",
+   "termos_do_rotulo": [
+    "corpo",
+    "delito",
+    "pericia",
+    "peritos"
+   ],
+   "sinonimos": [
+    "corpo de delito",
+    "pericia",
+    "perito",
+    "peritos",
+    "exame direto",
+    "exame indireto"
+   ]
+  },
+  "DBA26-LPE-4": {
+   "disciplina": "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE",
+   "numero": "4",
+   "rotulo": "Lei Federal nº 13.869/2019 - Crimes de Abuso de Autoridade.",
+   "termos_do_rotulo": [
+    "13.869",
+    "13869",
+    "abuso",
+    "autoridade"
+   ],
+   "sinonimos": [
+    "13.869",
+    "13869",
+    "abuso de autoridade"
+   ]
+  },
+  "DBA26-CRI-1.1": {
+   "disciplina": "CRIMINOLOGIA",
+   "numero": "1.1",
+   "rotulo": "Métodos: empirismo e interdisciplinaridade",
+   "termos_do_rotulo": [
+    "metodos",
+    "empirismo",
+    "interdisciplinaridade"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-CIV-1": {
+   "disciplina": "DIREITO CIVIL E EMPRESARIAL",
+   "numero": "1",
+   "rotulo": "Das pessoas (CC, Parte Geral, Livro I).",
+   "termos_do_rotulo": [
+    "pessoas"
+   ],
+   "sinonimos": [
+    "personalidade",
+    "capacidade civil",
+    "incapaz",
+    "pessoa natural",
+    "pessoa juridica",
+    "direitos da personalidade",
+    "ausencia",
+    "emancipacao",
+    "domicilio",
+    "desconsideracao da personalidade"
+   ]
+  },
+  "DBA26-PEN-1.4": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "1.4",
+   "rotulo": "Direito penal e política criminal.",
+   "termos_do_rotulo": [
+    "penal",
+    "politica",
+    "criminal"
+   ],
+   "sinonimos": [
+    "politica criminal",
+    "direito penal do inimigo",
+    "funcionalismo",
+    "garantismo"
+   ]
+  },
+  "DBA26-CPP-1.4": {
+   "disciplina": "DIREITO PROCESSUAL PENAL",
+   "numero": "1.4",
+   "rotulo": "Sistemas de processo penal, estrutura acusatória e juiz das garantias.",
+   "termos_do_rotulo": [
+    "penal",
+    "estrutura",
+    "acusatoria",
+    "juiz",
+    "garantias"
+   ],
+   "sinonimos": [
+    "juiz das garantias",
+    "sistema acusatorio",
+    "sistema inquisitivo",
+    "sistema misto"
+   ]
+  },
+  "DBA26-LGE-2": {
+   "disciplina": "LEGISLAÇÃO GERAL",
+   "numero": "2",
+   "rotulo": "Lei Estadual nº 14.634/2023 - Normas de licitações e contratos administrativos aplicáveis no âmbito da Administração Pública do Estado da Bahia.",
+   "termos_do_rotulo": [
+    "14.634",
+    "14634",
+    "normas",
+    "licitacoes",
+    "contratos",
+    "administrativos",
+    "aplicaveis",
+    "bahia"
+   ],
+   "sinonimos": [
+    "14.634",
+    "licitacoes e contratos administrativos aplicaveis",
+    "administracao publica do estado da bahia"
+   ]
+  },
+  "DBA26-LPE-5": {
+   "disciplina": "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE",
+   "numero": "5",
+   "rotulo": "Lei Federal nº 9.455/1997 - Crimes de Tortura.",
+   "termos_do_rotulo": [
+    "9.455",
+    "9455",
+    "tortura"
+   ],
+   "sinonimos": [
+    "9.455",
+    "9455",
+    "tortura"
+   ]
+  },
+  "DBA26-CPC-1": {
+   "disciplina": "DIREITO PROCESSUAL CIVIL",
+   "numero": "1",
+   "rotulo": "Das normas fundamentais e da aplicação das normas processuais.",
+   "termos_do_rotulo": [
+    "normas",
+    "fundamentais",
+    "processuais"
+   ],
+   "sinonimos": [
+    "normas fundamentais",
+    "cooperacao",
+    "contraditorio",
+    "vedacao a decisao surpresa",
+    "boa-fe processual"
+   ]
+  },
+  "DBA26-CON-3": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "3",
+   "rotulo": "Fontes formais e concepções positivas.",
+   "termos_do_rotulo": [
+    "fontes",
+    "formais",
+    "concepcoes",
+    "positivas"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-PEN-2": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "2",
+   "rotulo": "A lei penal.",
+   "termos_do_rotulo": [
+    "penal"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-ADM-2": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "2",
+   "rotulo": "Atos administrativos.",
+   "termos_do_rotulo": [
+    "atos",
+    "administrativos"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-TRI-1": {
+   "disciplina": "DIREITO TRIBUTÁRIO",
+   "numero": "1",
+   "rotulo": "O Estado e o poder de tributar.",
+   "termos_do_rotulo": [
+    "poder",
+    "tributar"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-CPP-2": {
+   "disciplina": "DIREITO PROCESSUAL PENAL",
+   "numero": "2",
+   "rotulo": "Inquérito policial.",
+   "termos_do_rotulo": [
+    "inquerito",
+    "policial"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-LPE-6": {
+   "disciplina": "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE",
+   "numero": "6",
+   "rotulo": "Lei Federal nº 8.069/1990 - Estatuto da Criança e do Adolescente.",
+   "termos_do_rotulo": [
+    "8.069",
+    "8069",
+    "estatuto",
+    "crianca",
+    "adolescente"
+   ],
+   "sinonimos": [
+    "8.069",
+    "8069",
+    "estatuto da crianca",
+    "eca",
+    "ato infracional",
+    "medida socioeducativa",
+    "adolescente infrator",
+    "conselho tutelar"
+   ]
+  },
+  "DBA26-MLE-2": {
+   "disciplina": "MEDICINA LEGAL",
+   "numero": "2",
+   "rotulo": "Documentos médico-legais.",
+   "termos_do_rotulo": [
+    "documentos"
+   ],
+   "sinonimos": [
+    "laudo",
+    "atestado",
+    "parecer medico-legal",
+    "notificacao compulsoria",
+    "relatorio medico-legal",
+    "documentos medico-legais",
+    "auto"
+   ]
+  },
+  "DBA26-PEN-2.1": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "2.1",
+   "rotulo": "Características, fontes, interpretação, vigência e aplicação.",
+   "termos_do_rotulo": [
+    "fontes",
+    "interpretacao",
+    "vigencia"
+   ],
+   "sinonimos": [
+    "norma penal em branco",
+    "analogia in malam partem",
+    "interpretacao extensiva",
+    "vigencia da lei penal"
+   ]
+  },
+  "DBA26-AMB-1": {
+   "disciplina": "DIREITO AMBIENTAL",
+   "numero": "1",
+   "rotulo": "Princípios do Direito Ambiental.",
+   "termos_do_rotulo": [
+    "principios",
+    "ambiental"
+   ],
+   "sinonimos": [
+    "prevencao",
+    "precaucao",
+    "poluidor-pagador",
+    "poluidor pagador",
+    "usuario-pagador",
+    "desenvolvimento sustentavel",
+    "vedacao do retrocesso"
+   ]
+  },
+  "DBA26-CRI-1.2": {
+   "disciplina": "CRIMINOLOGIA",
+   "numero": "1.2",
+   "rotulo": "Objetos da Criminologia: delito, delinquente, vítima, controle social.",
+   "termos_do_rotulo": [
+    "criminologia",
+    "delito",
+    "delinquente",
+    "vitima",
+    "controle",
+    "social"
+   ],
+   "sinonimos": [
+    "delito",
+    "delinquente",
+    "vitima",
+    "controle social"
+   ]
+  },
+  "DBA26-CPP-2.1": {
+   "disciplina": "DIREITO PROCESSUAL PENAL",
+   "numero": "2.1",
+   "rotulo": "Histórico; natureza; conceito; finalidade; características; fundamento; titularidade; grau de cognição; valor probatório; formas de instauração; notitia criminis; delatio criminis; procedimentos investigativos; indiciamento; garantias do investigado; conclusão; prazos.",
+   "termos_do_rotulo": [
+    "historico",
+    "titularidade",
+    "grau",
+    "cognicao",
+    "valor",
+    "probatorio",
+    "instauracao",
+    "notitia",
+    "criminis",
+    "delatio",
+    "investigativos",
+    "indiciamento",
+    "garantias",
+    "investigado",
+    "conclusao",
+    "prazos"
+   ],
+   "sinonimos": [
+    "inquerito policial",
+    "inquerito",
+    "notitia criminis",
+    "delatio criminis",
+    "indiciamento",
+    "arquivamento",
+    "autoridade policial",
+    "delegado de policia",
+    "requisicao",
+    "requerimento do ofendido",
+    "incomunicabilidade",
+    "sigilo do inquerito",
+    "sumula vinculante 14",
+    "relatorio final",
+    "trancamento"
+   ]
+  },
+  "DBA26-LGE-3": {
+   "disciplina": "LEGISLAÇÃO GERAL",
+   "numero": "3",
+   "rotulo": "Lei Estadual nº 12.209/2011 - Dispõe sobre o processo administrativo, no âmbito da Administração direta e das entidades da Administração indireta, regidas pelo regime de direito público, do Estado da Bahia, e dá outras providências.",
+   "termos_do_rotulo": [
+    "12.209",
+    "12209",
+    "administrativo",
+    "direta",
+    "entidades",
+    "indireta",
+    "regidas",
+    "pelo",
+    "regime",
+    "bahia",
+    "providencias"
+   ],
+   "sinonimos": [
+    "12.209",
+    "processo administrativo no ambito da administracao",
+    "estado da bahia"
+   ]
+  },
+  "DBA26-POR-2": {
+   "disciplina": "LÍNGUA PORTUGUESA",
+   "numero": "2",
+   "rotulo": "Semântica: significação de palavras e expressões; relações de sinonímia e de antonímia; figuras de linguagem; reescrita de frases (substituição, deslocamento, paralelismo).",
+   "termos_do_rotulo": [
+    "semantica",
+    "significacao",
+    "palavras",
+    "expressoes",
+    "sinonimia",
+    "antonimia",
+    "figuras",
+    "linguagem",
+    "reescrita",
+    "frases"
+   ],
+   "sinonimos": [
+    "sinonimo",
+    "antonimo",
+    "sentido",
+    "significado",
+    "figura de linguagem",
+    "metafora",
+    "metonimia",
+    "ironia",
+    "hiperbole",
+    "conotativo",
+    "denotativo",
+    "polissemia"
+   ]
+  },
+  "DBA26-LPE-7": {
+   "disciplina": "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE",
+   "numero": "7",
+   "rotulo": "Lei Federal nº 10.741/2003 - Estatuto da Pessoa Idosa.",
+   "termos_do_rotulo": [
+    "10.741",
+    "10741",
+    "estatuto",
+    "pessoa",
+    "idosa"
+   ],
+   "sinonimos": [
+    "10.741",
+    "10741",
+    "estatuto da pessoa idosa",
+    "estatuto do idoso",
+    "pessoa idosa",
+    "idoso"
+   ]
+  },
+  "DBA26-PEN-2.2": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "2.2",
+   "rotulo": "Lei penal no tempo e no espaço.",
+   "termos_do_rotulo": [
+    "penal",
+    "tempo",
+    "espaco"
+   ],
+   "sinonimos": [
+    "retroatividade",
+    "ultratividade",
+    "abolitio criminis",
+    "novatio legis",
+    "lei mais benefica",
+    "extraterritorialidade",
+    "territorialidade",
+    "lei excepcional",
+    "lei temporaria",
+    "ubiquidade"
+   ]
+  },
+  "DBA26-CON-4": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "4",
+   "rotulo": "Constituição; sentido sociológico, político e jurídico.",
+   "termos_do_rotulo": [
+    "constituicao",
+    "sentido",
+    "sociologico",
+    "politico",
+    "juridico"
+   ],
+   "sinonimos": [
+    "fatores reais do poder",
+    "lassalle",
+    "sentido sociologico",
+    "sentido politico",
+    "sentido juridico",
+    "schmitt",
+    "kelsen",
+    "conceito de constituicao"
+   ]
+  },
+  "DBA26-CPP-2.2": {
+   "disciplina": "DIREITO PROCESSUAL PENAL",
+   "numero": "2.2",
+   "rotulo": "Jurisdição; competência; conexão e continência; prevenção; questões e procedimentos incidentes.",
+   "termos_do_rotulo": [
+    "jurisdicao",
+    "competencia",
+    "conexao",
+    "continencia",
+    "prevencao",
+    "questoes",
+    "incidentes"
+   ],
+   "sinonimos": [
+    "competencia",
+    "conexao",
+    "continencia",
+    "prevencao",
+    "foro por prerrogativa",
+    "excecao de",
+    "questoes prejudiciais",
+    "restituicao de coisas apreendidas",
+    "incidente de insanidade",
+    "incidente de falsidade",
+    "competencia territorial",
+    "justica federal",
+    "justica estadual"
+   ]
+  },
+  "DBA26-RAC-1.1": {
+   "disciplina": "RACIOCÍNIO LÓGICO",
+   "numero": "1.1",
+   "rotulo": "Números inteiros, racionais e reais.",
+   "termos_do_rotulo": [
+    "numeros",
+    "inteiros",
+    "racionais",
+    "reais"
+   ],
+   "sinonimos": [
+    "numeros inteiros",
+    "numeros racionais",
+    "numeros reais",
+    "fracao",
+    "fracoes",
+    "mmc",
+    "mdc",
+    "divisores",
+    "multiplos",
+    "decimal"
+   ]
+  },
+  "DBA26-ADM-2.1": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "2.1",
+   "rotulo": "Conceitos, requisitos, elementos, pressupostos e classificação.",
+   "termos_do_rotulo": [
+    "requisitos",
+    "elementos",
+    "pressupostos"
+   ],
+   "sinonimos": [
+    "competencia",
+    "finalidade",
+    "forma",
+    "motivo",
+    "objeto",
+    "presuncao de legitimidade",
+    "imperatividade",
+    "autoexecutoriedade",
+    "tipicidade",
+    "atributos do ato"
+   ]
+  },
+  "DBA26-LPE-8": {
+   "disciplina": "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE",
+   "numero": "8",
+   "rotulo": "Lei Federal nº 12.850/2013 - Organizações Criminosas.",
+   "termos_do_rotulo": [
+    "12.850",
+    "12850",
+    "organizacoes",
+    "criminosas"
+   ],
+   "sinonimos": [
+    "12.850",
+    "12850",
+    "organizacao criminosa",
+    "colaboracao premiada",
+    "infiltracao de agentes",
+    "acao controlada",
+    "agente infiltrado"
+   ]
+  },
+  "DBA26-MLE-2.1": {
+   "disciplina": "MEDICINA LEGAL",
+   "numero": "2.1",
+   "rotulo": "Conceitos de identidade, de identificação e de reconhecimento.",
+   "termos_do_rotulo": [
+    "identidade",
+    "identificacao",
+    "reconhecimento"
+   ],
+   "sinonimos": [
+    "identidade",
+    "identificacao",
+    "reconhecimento"
+   ]
+  },
+  "DBA26-INF-1.1": {
+   "disciplina": "INFORMÁTICA",
+   "numero": "1.1",
+   "rotulo": "Fundamentos do Windows; operações com janelas, menus, barra de tarefas e área de trabalho.",
+   "termos_do_rotulo": [
+    "windows",
+    "operacoes",
+    "janelas",
+    "menus",
+    "barra",
+    "tarefas",
+    "area",
+    "trabalho"
+   ],
+   "sinonimos": [
+    "windows",
+    "menu iniciar",
+    "barra de tarefas",
+    "area de trabalho",
+    "janela",
+    "windows 10",
+    "windows 11",
+    "lixeira"
+   ]
+  },
+  "DBA26-PEN-2.3": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "2.3",
+   "rotulo": "Imunidade.",
+   "termos_do_rotulo": [
+    "imunidade"
+   ],
+   "sinonimos": [
+    "imunidade parlamentar",
+    "imunidade diplomatica",
+    "inviolabilidade"
+   ]
+  },
+  "DBA26-CPP-3": {
+   "disciplina": "DIREITO PROCESSUAL PENAL",
+   "numero": "3",
+   "rotulo": "Processo criminal: finalidade, pressupostos e sistemas.",
+   "termos_do_rotulo": [
+    "criminal",
+    "pressupostos"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-CRI-2": {
+   "disciplina": "CRIMINOLOGIA",
+   "numero": "2",
+   "rotulo": "Funções da Criminologia.",
+   "termos_do_rotulo": [
+    "criminologia"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-LPE-9": {
+   "disciplina": "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE",
+   "numero": "9",
+   "rotulo": "Lei Federal nº 9.296/1996 - Interceptação das Comunicações Telefônicas.",
+   "termos_do_rotulo": [
+    "9.296",
+    "9296",
+    "interceptacao",
+    "comunicacoes",
+    "telefonicas"
+   ],
+   "sinonimos": [
+    "9.296",
+    "9296",
+    "interceptacao telefonica",
+    "interceptacao das comunicacoes",
+    "escuta ambiental",
+    "captacao ambiental"
+   ]
+  },
+  "DBA26-PRG-2": {
+   "disciplina": "PROMOÇÃO DA IGUALDADE RACIAL E DE GÊNERO",
+   "numero": "2",
+   "rotulo": "Constituição do Estado da Bahia (Capítulo XXIII - “Do Negro”).",
+   "termos_do_rotulo": [
+    "constituicao",
+    "bahia"
+   ],
+   "sinonimos": [
+    "constituicao do estado da bahia",
+    "do negro",
+    "constituicao baiana"
+   ]
+  },
+  "DBA26-LGE-4": {
+   "disciplina": "LEGISLAÇÃO GERAL",
+   "numero": "4",
+   "rotulo": "Lei Estadual nº 11.370/2009 - Lei Orgânica da Polícia Civil do Estado da Bahia e alterações.",
+   "termos_do_rotulo": [
+    "11.370",
+    "11370",
+    "organica",
+    "policia",
+    "civil",
+    "bahia"
+   ],
+   "sinonimos": [
+    "11.370",
+    "lei organica da policia civil",
+    "policia civil do estado da bahia",
+    "delegado-geral",
+    "conselho superior da policia civil",
+    "corregedoria"
+   ]
+  },
+  "DBA26-PEN-2.4": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "2.4",
+   "rotulo": "Condições de punibilidade.",
+   "termos_do_rotulo": [
+    "condicoes",
+    "punibilidade"
+   ],
+   "sinonimos": [
+    "condicao objetiva de punibilidade"
+   ]
+  },
+  "DBA26-CON-5": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "5",
+   "rotulo": "Conceito, objeto e elementos. Classificação das Constituições.",
+   "termos_do_rotulo": [
+    "elementos",
+    "constituicoes"
+   ],
+   "sinonimos": [
+    "classificacao das constituicoes",
+    "constituicao rigida",
+    "constituicao flexivel",
+    "outorgada",
+    "promulgada",
+    "semirrigida"
+   ]
+  },
+  "DBA26-ATU-2": {
+   "disciplina": "ATUALIDADES",
+   "numero": "2",
+   "rotulo": "Comunicação: conceitos, efeitos e implicações sociais, econômicas, políticas e culturais.",
+   "termos_do_rotulo": [
+    "comunicacao",
+    "implicacoes",
+    "sociais",
+    "economicas",
+    "politicas",
+    "culturais"
+   ],
+   "sinonimos": [
+    "comunicacao",
+    "redes sociais",
+    "fake news",
+    "desinformacao",
+    "midia",
+    "inteligencia artificial"
+   ]
+  },
+  "DBA26-CPP-4": {
+   "disciplina": "DIREITO PROCESSUAL PENAL",
+   "numero": "4",
+   "rotulo": "Ação penal.",
+   "termos_do_rotulo": [
+    "acao",
+    "penal"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-LPE-10": {
+   "disciplina": "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE",
+   "numero": "10",
+   "rotulo": "Lei Federal nº 7.492/1986 - Crimes contra o Sistema Financeiro Nacional.",
+   "termos_do_rotulo": [
+    "7.492",
+    "7492",
+    "contra",
+    "financeiro"
+   ],
+   "sinonimos": [
+    "7.492",
+    "7492",
+    "sistema financeiro nacional",
+    "gestao fraudulenta",
+    "gestao temeraria",
+    "evasao de divisas"
+   ]
+  },
+  "DBA26-ADM-2.2": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "2.2",
+   "rotulo": "Fato e ato administrativo.",
+   "termos_do_rotulo": [
+    "fato",
+    "administrativo"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-PEN-2.5": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "2.5",
+   "rotulo": "Concurso aparente de normas.",
+   "termos_do_rotulo": [
+    "concurso",
+    "aparente",
+    "normas"
+   ],
+   "sinonimos": [
+    "especialidade",
+    "consuncao",
+    "subsidiariedade",
+    "alternatividade",
+    "conflito aparente",
+    "ante factum",
+    "post factum"
+   ]
+  },
+  "DBA26-CIV-2": {
+   "disciplina": "DIREITO CIVIL E EMPRESARIAL",
+   "numero": "2",
+   "rotulo": "Dos bens (CC, Parte Geral, Livro II).",
+   "termos_do_rotulo": [
+    "bens"
+   ],
+   "sinonimos": [
+    "bens",
+    "pertencas",
+    "benfeitorias",
+    "bens acessorios",
+    "bens principais",
+    "partes integrantes",
+    "frutos"
+   ]
+  },
+  "DBA26-MLE-3": {
+   "disciplina": "MEDICINA LEGAL",
+   "numero": "3",
+   "rotulo": "Principais métodos de identificação.",
+   "termos_do_rotulo": [
+    "metodos",
+    "identificacao"
+   ],
+   "sinonimos": [
+    "datiloscopia",
+    "impressao digital",
+    "papiloscopia",
+    "dna",
+    "arcada dentaria",
+    "odontolegal",
+    "sistema de vucetich",
+    "antropometria"
+   ]
+  },
+  "DBA26-CPP-4.1": {
+   "disciplina": "DIREITO PROCESSUAL PENAL",
+   "numero": "4.1",
+   "rotulo": "Conceito, características, espécies e condições.",
+   "termos_do_rotulo": [
+    "condicoes"
+   ],
+   "sinonimos": [
+    "acao penal publica",
+    "acao penal privada",
+    "representacao",
+    "queixa-crime",
+    "queixa crime",
+    "condicoes da acao",
+    "justa causa",
+    "perdao do ofendido",
+    "acao penal privada subsidiaria",
+    "denuncia"
+   ]
+  },
+  "DBA26-CRI-2.1": {
+   "disciplina": "CRIMINOLOGIA",
+   "numero": "2.1",
+   "rotulo": "Criminologia e controle social.",
+   "termos_do_rotulo": [
+    "criminologia",
+    "controle",
+    "social"
+   ],
+   "sinonimos": [
+    "controle social formal",
+    "controle social informal",
+    "instancias formais"
+   ]
+  },
+  "DBA26-CPC-2": {
+   "disciplina": "DIREITO PROCESSUAL CIVIL",
+   "numero": "2",
+   "rotulo": "Da função jurisdicional.",
+   "termos_do_rotulo": [
+    "jurisdicional"
+   ],
+   "sinonimos": [
+    "jurisdicao",
+    "competencia",
+    "jurisdicao voluntaria"
+   ]
+  },
+  "DBA26-LPE-11": {
+   "disciplina": "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE",
+   "numero": "11",
+   "rotulo": "Lei Federal nº 4.737/1965, nº 6.091/1974 e nº 9.504/1997 - Crimes Eleitorais.",
+   "termos_do_rotulo": [
+    "4.737",
+    "6.091",
+    "9.504",
+    "4737",
+    "6091",
+    "9504",
+    "eleitorais"
+   ],
+   "sinonimos": [
+    "4.737",
+    "6.091",
+    "9.504",
+    "crimes eleitorais",
+    "codigo eleitoral",
+    "eleitoral"
+   ]
+  },
+  "DBA26-PEN-3": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "3",
+   "rotulo": "Teoria geral do crime.",
+   "termos_do_rotulo": [],
+   "sinonimos": []
+  },
+  "DBA26-LGE-5": {
+   "disciplina": "LEGISLAÇÃO GERAL",
+   "numero": "5",
+   "rotulo": "Lei Federal nº 8.906/1994 – Estatuto da Advocacia.",
+   "termos_do_rotulo": [
+    "8.906",
+    "8906",
+    "estatuto",
+    "advocacia"
+   ],
+   "sinonimos": [
+    "8.906",
+    "estatuto da advocacia",
+    "oab",
+    "advogado"
+   ]
+  },
+  "DBA26-CPP-4.2": {
+   "disciplina": "DIREITO PROCESSUAL PENAL",
+   "numero": "4.2",
+   "rotulo": "Acordo de não persecução penal.",
+   "termos_do_rotulo": [
+    "acordo",
+    "persecucao",
+    "penal"
+   ],
+   "sinonimos": [
+    "acordo de nao persecucao",
+    "anpp"
+   ]
+  },
+  "DBA26-TRI-2": {
+   "disciplina": "DIREITO TRIBUTÁRIO",
+   "numero": "2",
+   "rotulo": "Direito Tributário: conceito e princípios.",
+   "termos_do_rotulo": [
+    "tributario",
+    "principios"
+   ],
+   "sinonimos": [
+    "principios tributarios",
+    "legalidade tributaria",
+    "anterioridade",
+    "noventena",
+    "irretroatividade",
+    "isonomia tributaria",
+    "vedacao ao confisco"
+   ]
+  },
+  "DBA26-CON-6": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "6",
+   "rotulo": "Constituições Material e Formal, Constituição- Garantia e Constituição Dirigente.",
+   "termos_do_rotulo": [
+    "constituicoes",
+    "material",
+    "formal",
+    "constituicao-",
+    "garantia",
+    "constituicao",
+    "dirigente"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-LPE-12": {
+   "disciplina": "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE",
+   "numero": "12",
+   "rotulo": "Lei Federal nº 9.503/1997 - Crimes de Trânsito.",
+   "termos_do_rotulo": [
+    "9.503",
+    "9503",
+    "transito"
+   ],
+   "sinonimos": [
+    "9.503",
+    "9503",
+    "codigo de transito",
+    "ctb",
+    "embriaguez ao volante",
+    "direcao sem habilitacao",
+    "racha",
+    "homicidio culposo na direcao",
+    "veiculo automotor"
+   ]
+  },
+  "DBA26-ADM-2.3": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "2.3",
+   "rotulo": "Atos administrativos em espécie.",
+   "termos_do_rotulo": [
+    "atos",
+    "administrativos",
+    "especie"
+   ],
+   "sinonimos": [
+    "decreto",
+    "portaria",
+    "resolucao",
+    "alvara",
+    "licenca",
+    "autorizacao",
+    "permissao",
+    "admissao",
+    "homologacao",
+    "parecer"
+   ]
+  },
+  "DBA26-AMB-2": {
+   "disciplina": "DIREITO AMBIENTAL",
+   "numero": "2",
+   "rotulo": "A Constituição Federal e o meio ambiente.",
+   "termos_do_rotulo": [
+    "constituicao",
+    "meio",
+    "ambiente"
+   ],
+   "sinonimos": [
+    "art. 225",
+    "meio ambiente ecologicamente equilibrado"
+   ]
+  },
+  "DBA26-PEN-3.1": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "3.1",
+   "rotulo": "Conceito, objeto, sujeitos, conduta, tipicidade, culpabilidade.",
+   "termos_do_rotulo": [
+    "sujeitos",
+    "conduta",
+    "tipicidade",
+    "culpabilidade"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-CPP-4.2-B2": {
+   "disciplina": "DIREITO PROCESSUAL PENAL",
+   "numero": "4.2",
+   "rotulo": "Sujeitos do processo: juiz, Ministério Público, acusado e seu defensor, assistente, curador do réu menor, auxiliares da justiça, assistentes, peritos e intérpretes, serventuários da justiça, impedimentos e suspeições.",
+   "termos_do_rotulo": [
+    "sujeitos",
+    "juiz",
+    "ministerio",
+    "acusado",
+    "defensor",
+    "assistente",
+    "curador",
+    "menor",
+    "auxiliares",
+    "justica",
+    "assistentes",
+    "peritos",
+    "interpretes",
+    "serventuarios",
+    "impedimentos",
+    "suspeicoes"
+   ],
+   "sinonimos": [
+    "assistente de acusacao",
+    "assistente do ministerio publico",
+    "curador",
+    "peritos",
+    "interpretes",
+    "defensor"
+   ]
+  },
+  "DBA26-MLE-4": {
+   "disciplina": "MEDICINA LEGAL",
+   "numero": "4",
+   "rotulo": "Lesões e mortes por ação contundente, por instrumentos cortantes, perfurantes, perfurocortantes e corto contundentes; Lesões e mortes por projéteis de arma de fogo, incluindo aspectos médico-legais dos orifícios de entrada e saída, trajetória, distância de disparo e efeitos lesionais relacionados à energia do projétil.",
+   "termos_do_rotulo": [
+    "lesoes",
+    "mortes",
+    "acao",
+    "contundente",
+    "instrumentos",
+    "cortantes",
+    "perfurantes",
+    "perfurocortantes",
+    "corto",
+    "contundentes",
+    "projeteis",
+    "arma",
+    "fogo",
+    "incluindo",
+    "orificios",
+    "entrada",
+    "saida",
+    "trajetoria",
+    "distancia",
+    "disparo",
+    "lesionais",
+    "relacionados",
+    "energia",
+    "projetil"
+   ],
+   "sinonimos": [
+    "contundente",
+    "cortante",
+    "perfurante",
+    "perfurocortante",
+    "cortocontundente",
+    "projetil",
+    "arma de fogo",
+    "orla de escoriacao",
+    "zona de tatuagem",
+    "esfumacamento",
+    "equimose",
+    "hematoma",
+    "escoriacao",
+    "tiro encostado",
+    "orificio de entrada",
+    "ferimento"
+   ]
+  },
+  "DBA26-LPE-13": {
+   "disciplina": "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE",
+   "numero": "13",
+   "rotulo": "Lei Federal nº 7.210/1984 - Execução Penal.",
+   "termos_do_rotulo": [
+    "7.210",
+    "7210",
+    "execucao",
+    "penal"
+   ],
+   "sinonimos": [
+    "7.210",
+    "7210",
+    "execucao penal",
+    "lep",
+    "remicao",
+    "falta grave",
+    "regime disciplinar diferenciado",
+    "rdd",
+    "saida temporaria",
+    "progressao"
+   ]
+  },
+  "DBA26-POR-3": {
+   "disciplina": "LÍNGUA PORTUGUESA",
+   "numero": "3",
+   "rotulo": "Morfologia: estrutura e formação de palavras; ortografia; acentuação gráfica; classes de palavras variáveis e invariáveis e seus empregos no texto.",
+   "termos_do_rotulo": [
+    "morfologia",
+    "estrutura",
+    "formacao",
+    "palavras",
+    "ortografia",
+    "acentuacao",
+    "grafica",
+    "classes",
+    "variaveis",
+    "invariaveis",
+    "empregos",
+    "texto"
+   ],
+   "sinonimos": [
+    "classe gramatical",
+    "classe de palavra",
+    "substantivo",
+    "adjetivo",
+    "adverbio",
+    "pronome",
+    "preposicao",
+    "conjuncao",
+    "verbo",
+    "formacao de palavras",
+    "derivacao",
+    "composicao",
+    "ortografia",
+    "acentuacao",
+    "acento grafico",
+    "prefixo",
+    "sufixo",
+    "tempo verbal",
+    "modo verbal"
+   ]
+  },
+  "DBA26-CRI-2.2": {
+   "disciplina": "CRIMINOLOGIA",
+   "numero": "2.2",
+   "rotulo": "Direito Penal e política criminal: Tipificação, Ilicitude, aplicação de pena, culpabilidade.",
+   "termos_do_rotulo": [
+    "penal",
+    "politica",
+    "criminal",
+    "tipificacao",
+    "ilicitude",
+    "pena",
+    "culpabilidade"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-PEN-3.2": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "3.2",
+   "rotulo": "Bem jurídico.",
+   "termos_do_rotulo": [
+    "juridico"
+   ],
+   "sinonimos": [
+    "bem juridico"
+   ]
+  },
+  "DBA26-CON-7": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "7",
+   "rotulo": "Aplicabilidade das normas Constitucionais.",
+   "termos_do_rotulo": [
+    "aplicabilidade",
+    "normas",
+    "constitucionais"
+   ],
+   "sinonimos": [
+    "eficacia plena",
+    "eficacia contida",
+    "eficacia limitada",
+    "normas programaticas",
+    "aplicabilidade"
+   ]
+  },
+  "DBA26-RAC-2": {
+   "disciplina": "RACIOCÍNIO LÓGICO",
+   "numero": "2",
+   "rotulo": "Sistema Legal de medidas.",
+   "termos_do_rotulo": [
+    "medidas"
+   ],
+   "sinonimos": [
+    "metros",
+    "litros",
+    "quilometros",
+    "centimetros",
+    "unidade de medida",
+    "gramas",
+    "hectare"
+   ]
+  },
+  "DBA26-CPP-5": {
+   "disciplina": "DIREITO PROCESSUAL PENAL",
+   "numero": "5",
+   "rotulo": "Juizados especiais criminais.",
+   "termos_do_rotulo": [
+    "juizados",
+    "especiais",
+    "criminais"
+   ],
+   "sinonimos": [
+    "juizado especial criminal",
+    "transacao penal",
+    "composicao civil",
+    "menor potencial ofensivo",
+    "suspensao condicional do processo",
+    "termo circunstanciado"
+   ]
+  },
+  "DBA26-LPE-14": {
+   "disciplina": "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE",
+   "numero": "14",
+   "rotulo": "Lei Federal nº 9.099/1995 - Juizados Especiais Criminais.",
+   "termos_do_rotulo": [
+    "9.099",
+    "9099",
+    "juizados",
+    "especiais",
+    "criminais"
+   ],
+   "sinonimos": [
+    "9.099",
+    "9099",
+    "juizados especiais",
+    "transacao penal",
+    "menor potencial ofensivo",
+    "suspensao condicional do processo"
+   ]
+  },
+  "DBA26-ADM-2.4": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "2.4",
+   "rotulo": "O silêncio no direito administrativo.",
+   "termos_do_rotulo": [
+    "silencio",
+    "administrativo"
+   ],
+   "sinonimos": [
+    "silencio administrativo"
+   ]
+  },
+  "DBA26-PEN-3.3": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "3.3",
+   "rotulo": "Tempo e lugar do crime.",
+   "termos_do_rotulo": [
+    "tempo",
+    "lugar"
+   ],
+   "sinonimos": [
+    "teoria da atividade",
+    "ubiquidade",
+    "tempo do crime",
+    "lugar do crime"
+   ]
+  },
+  "DBA26-INF-1.2": {
+   "disciplina": "INFORMÁTICA",
+   "numero": "1.2",
+   "rotulo": "Trabalho com pastas e arquivos: localização de arquivos e pastas; movimentação e cópia de arquivos e pastas; criação e exclusão de arquivos e pastas.",
+   "termos_do_rotulo": [
+    "trabalho",
+    "pastas",
+    "arquivos",
+    "localizacao",
+    "movimentacao",
+    "copia",
+    "criacao",
+    "exclusao"
+   ],
+   "sinonimos": [
+    "pasta",
+    "pastas",
+    "arquivo",
+    "arquivos",
+    "copiar",
+    "mover",
+    "excluir",
+    "extensao"
+   ]
+  },
+  "DBA26-MLE-5": {
+   "disciplina": "MEDICINA LEGAL",
+   "numero": "5",
+   "rotulo": "Conceito e diagnóstico da morte.",
+   "termos_do_rotulo": [
+    "diagnostico",
+    "morte"
+   ],
+   "sinonimos": [
+    "diagnostico de morte",
+    "morte encefalica",
+    "morte cerebral",
+    "sinais de morte"
+   ]
+  },
+  "DBA26-CPP-6": {
+   "disciplina": "DIREITO PROCESSUAL PENAL",
+   "numero": "6",
+   "rotulo": "Termo circunstanciado de ocorrências; atos processuais; forma, lugar e tempo.",
+   "termos_do_rotulo": [
+    "termo",
+    "circunstanciado",
+    "ocorrencias",
+    "atos",
+    "processuais",
+    "lugar",
+    "tempo"
+   ],
+   "sinonimos": [
+    "termo circunstanciado",
+    "atos processuais",
+    "prazo processual"
+   ]
+  },
+  "DBA26-CRI-3": {
+   "disciplina": "CRIMINOLOGIA",
+   "numero": "3",
+   "rotulo": "Modelos teóricos da Criminologia.",
+   "termos_do_rotulo": [
+    "teoricos",
+    "criminologia"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-PRG-3": {
+   "disciplina": "PROMOÇÃO DA IGUALDADE RACIAL E DE GÊNERO",
+   "numero": "3",
+   "rotulo": "Lei Federal n° 12.288/2010 - Estatuto da Igualdade Racial.",
+   "termos_do_rotulo": [
+    "12.288",
+    "12288",
+    "estatuto",
+    "igualdade",
+    "racial"
+   ],
+   "sinonimos": [
+    "12.288",
+    "estatuto da igualdade racial",
+    "populacao negra",
+    "acoes afirmativas",
+    "desigualdade racial",
+    "sinapir",
+    "comunidades quilombolas"
+   ]
+  },
+  "DBA26-LPE-15": {
+   "disciplina": "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE",
+   "numero": "15",
+   "rotulo": "Lei Federal nº 8.137/1990 - Crimes contra a ordem tributária, econômica e contra as relações de consumo.",
+   "termos_do_rotulo": [
+    "8.137",
+    "8137",
+    "contra",
+    "ordem",
+    "tributaria",
+    "economica",
+    "consumo"
+   ],
+   "sinonimos": [
+    "8.137",
+    "8137",
+    "ordem tributaria",
+    "sonegacao",
+    "supressao de tributo"
+   ]
+  },
+  "DBA26-PEN-3.4": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "3.4",
+   "rotulo": "Punibilidade.",
+   "termos_do_rotulo": [
+    "punibilidade"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-CON-8": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "8",
+   "rotulo": "Poder Constituinte.",
+   "termos_do_rotulo": [
+    "poder",
+    "constituinte"
+   ],
+   "sinonimos": [
+    "poder constituinte"
+   ]
+  },
+  "DBA26-CPP-7": {
+   "disciplina": "DIREITO PROCESSUAL PENAL",
+   "numero": "7",
+   "rotulo": "Provas.",
+   "termos_do_rotulo": [
+    "provas"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-CIV-3": {
+   "disciplina": "DIREITO CIVIL E EMPRESARIAL",
+   "numero": "3",
+   "rotulo": "Dos fatos jurídicos (CC, Parte Geral, Livro III).",
+   "termos_do_rotulo": [
+    "fatos",
+    "juridicos"
+   ],
+   "sinonimos": [
+    "negocio juridico",
+    "fatos juridicos",
+    "defeitos do negocio",
+    "erro",
+    "dolo",
+    "coacao",
+    "lesao",
+    "fraude contra credores",
+    "prescricao",
+    "decadencia",
+    "nulidade",
+    "anulabilidade"
+   ]
+  },
+  "DBA26-ADM-2.5": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "2.5",
+   "rotulo": "Cassação.",
+   "termos_do_rotulo": [
+    "cassacao"
+   ],
+   "sinonimos": [
+    "cassacao"
+   ]
+  },
+  "DBA26-LPE-16": {
+   "disciplina": "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE",
+   "numero": "16",
+   "rotulo": "Lei Federal nº 11.340/2006 - Violência Doméstica e Familiar contra a Mulher.",
+   "termos_do_rotulo": [
+    "11.340",
+    "11340",
+    "violencia",
+    "domestica",
+    "familiar",
+    "contra",
+    "mulher"
+   ],
+   "sinonimos": [
+    "11.340",
+    "11340",
+    "maria da penha",
+    "violencia domestica",
+    "medida protetiva",
+    "medidas protetivas"
+   ]
+  },
+  "DBA26-MLE-5.1": {
+   "disciplina": "MEDICINA LEGAL",
+   "numero": "5.1",
+   "rotulo": "Fenômenos cadavéricos.",
+   "termos_do_rotulo": [
+    "fenomenos",
+    "cadavericos"
+   ],
+   "sinonimos": [
+    "fenomenos cadavericos",
+    "rigidez cadaverica",
+    "livores",
+    "hipostase",
+    "putrefacao",
+    "algor mortis",
+    "rigor mortis",
+    "autolise",
+    "saponificacao",
+    "mumificacao",
+    "maceracao"
+   ]
+  },
+  "DBA26-CPC-3": {
+   "disciplina": "DIREITO PROCESSUAL CIVIL",
+   "numero": "3",
+   "rotulo": "Dos sujeitos do processo.",
+   "termos_do_rotulo": [
+    "sujeitos"
+   ],
+   "sinonimos": [
+    "partes",
+    "litisconsorcio",
+    "intervencao de terceiros",
+    "amicus curiae",
+    "assistencia",
+    "denunciacao da lide",
+    "chamamento ao processo"
+   ]
+  },
+  "DBA26-PEN-3.5": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "3.5",
+   "rotulo": "Concurso de crimes e crime continuado.",
+   "termos_do_rotulo": [
+    "concurso",
+    "continuado"
+   ],
+   "sinonimos": [
+    "concurso material",
+    "concurso formal",
+    "crime continuado",
+    "continuidade delitiva",
+    "designios autonomos",
+    "designios autonomos"
+   ]
+  },
+  "DBA26-CPP-7.1": {
+   "disciplina": "DIREITO PROCESSUAL PENAL",
+   "numero": "7.1",
+   "rotulo": "Conceito, objeto, classificação e sistemas de avaliação.",
+   "termos_do_rotulo": [
+    "avaliacao"
+   ],
+   "sinonimos": [
+    "livre convencimento",
+    "persuasao racional",
+    "intima conviccao",
+    "sistema de avaliacao"
+   ]
+  },
+  "DBA26-CRI-3.1": {
+   "disciplina": "CRIMINOLOGIA",
+   "numero": "3.1",
+   "rotulo": "Teorias sociológicas.",
+   "termos_do_rotulo": [
+    "sociologicas"
+   ],
+   "sinonimos": [
+    "escola de chicago",
+    "associacao diferencial",
+    "anomia",
+    "subcultura",
+    "labelling",
+    "etiquetamento",
+    "criminologia critica",
+    "teoria do conflito",
+    "ecologia criminal",
+    "janelas quebradas",
+    "tecnicas de neutralizacao",
+    "neutralizacao",
+    "sutherland",
+    "merton",
+    "cohen",
+    "becker"
+   ]
+  },
+  "DBA26-LPE-17": {
+   "disciplina": "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE",
+   "numero": "17",
+   "rotulo": "Lei Federal nº 11.343/2006 - Lei de Drogas.",
+   "termos_do_rotulo": [
+    "11.343",
+    "11343",
+    "drogas"
+   ],
+   "sinonimos": [
+    "11.343",
+    "11343",
+    "lei de drogas",
+    "trafico de drogas",
+    "trafico privilegiado",
+    "usuario",
+    "entorpecente",
+    "associacao para o trafico",
+    "droga"
+   ]
+  },
+  "DBA26-TRI-3": {
+   "disciplina": "DIREITO TRIBUTÁRIO",
+   "numero": "3",
+   "rotulo": "Tributo: conceito e espécies.",
+   "termos_do_rotulo": [
+    "tributo"
+   ],
+   "sinonimos": [
+    "tributo",
+    "imposto",
+    "taxa",
+    "contribuicao de melhoria",
+    "emprestimo compulsorio",
+    "contribuicoes especiais",
+    "especies tributarias"
+   ]
+  },
+  "DBA26-CON-9": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "9",
+   "rotulo": "Poder Constituinte Originário, derivado e decorrente.",
+   "termos_do_rotulo": [
+    "poder",
+    "constituinte",
+    "originario",
+    "derivado",
+    "decorrente"
+   ],
+   "sinonimos": [
+    "poder constituinte originario",
+    "poder constituinte derivado",
+    "poder constituinte decorrente",
+    "poder reformador"
+   ]
+  },
+  "DBA26-PEN-3.6": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "3.6",
+   "rotulo": "Conduta, resultado, relação de causalidade e imputação.",
+   "termos_do_rotulo": [
+    "conduta",
+    "resultado",
+    "relacao",
+    "causalidade",
+    "imputacao"
+   ],
+   "sinonimos": [
+    "nexo causal",
+    "causalidade",
+    "concausa",
+    "imputacao objetiva",
+    "superveniente",
+    "conditio sine qua non",
+    "risco proibido"
+   ]
+  },
+  "DBA26-ADM-2.6": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "2.6",
+   "rotulo": "Revogação e anulação.",
+   "termos_do_rotulo": [
+    "revogacao",
+    "anulacao"
+   ],
+   "sinonimos": [
+    "revogacao",
+    "anulacao",
+    "sumula 473",
+    "sumula 346"
+   ]
+  },
+  "DBA26-AMB-3": {
+   "disciplina": "DIREITO AMBIENTAL",
+   "numero": "3",
+   "rotulo": "Lei Federal nº 12.651/2012; nº 11.428/2006; nº 11.284/2006 e respectivos regulamentos - Legislação brasileira florestal.",
+   "termos_do_rotulo": [
+    "12.651",
+    "11.428",
+    "11.284",
+    "12651",
+    "11428",
+    "11284",
+    "florestal"
+   ],
+   "sinonimos": [
+    "12.651",
+    "codigo florestal",
+    "area de preservacao permanente",
+    "app",
+    "reserva legal",
+    "11.428",
+    "mata atlantica",
+    "11.284",
+    "florestas publicas"
+   ]
+  },
+  "DBA26-CPP-7.2": {
+   "disciplina": "DIREITO PROCESSUAL PENAL",
+   "numero": "7.2",
+   "rotulo": "Princípios gerais da prova, procedimento probatório.",
+   "termos_do_rotulo": [
+    "principios",
+    "prova",
+    "probatorio"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-LPE-18": {
+   "disciplina": "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE",
+   "numero": "18",
+   "rotulo": "Lei Federal nº 8.078/1990 - Crimes contra as Relações de Consumo.",
+   "termos_do_rotulo": [
+    "8.078",
+    "8078",
+    "contra",
+    "consumo"
+   ],
+   "sinonimos": [
+    "8.078",
+    "8078",
+    "relacoes de consumo",
+    "codigo de defesa do consumidor",
+    "consumidor"
+   ]
+  },
+  "DBA26-MLE-5.2": {
+   "disciplina": "MEDICINA LEGAL",
+   "numero": "5.2",
+   "rotulo": "Cronotanatognose, comoriência e premoriência.",
+   "termos_do_rotulo": [
+    "cronotanatognose",
+    "comoriencia",
+    "premoriencia"
+   ],
+   "sinonimos": [
+    "cronotanatognose",
+    "comoriencia",
+    "premoriencia",
+    "tempo de morte"
+   ]
+  },
+  "DBA26-PEN-4": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "4",
+   "rotulo": "Teoria do tipo e fato típico.",
+   "termos_do_rotulo": [
+    "tipo",
+    "fato",
+    "tipico"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-POR-4": {
+   "disciplina": "LÍNGUA PORTUGUESA",
+   "numero": "4",
+   "rotulo": "Sintaxe: termos da oração e relações sintático-semânticas estabelecidas entre termos, orações, períodos ou parágrafos (período simples e período composto por coordenação e por subordinação); concordância verbal e nominal; regência verbal e nominal; uso da crase; colocação pronominal; funções do “que” e do “se”.",
+   "termos_do_rotulo": [
+    "sintaxe",
+    "termos",
+    "oracao",
+    "sintatico-semanticas",
+    "estabelecidas",
+    "oracoes",
+    "periodos",
+    "paragrafos",
+    "concordancia",
+    "verbal",
+    "nominal",
+    "regencia",
+    "crase",
+    "colocacao",
+    "pronominal"
+   ],
+   "sinonimos": [
+    "sujeito",
+    "predicado",
+    "objeto direto",
+    "objeto indireto",
+    "adjunto adnominal",
+    "adjunto adverbial",
+    "complemento nominal",
+    "aposto",
+    "vocativo",
+    "oracao subordinada",
+    "oracao coordenada",
+    "periodo composto",
+    "concordancia",
+    "regencia",
+    "crase",
+    "colocacao pronominal",
+    "predicativo",
+    "funcao sintatica",
+    "transitivo",
+    "voz passiva"
+   ]
+  },
+  "DBA26-CRI-3.2": {
+   "disciplina": "CRIMINOLOGIA",
+   "numero": "3.2",
+   "rotulo": "Prevenção da infração penal no Estado Democrático de Direito.",
+   "termos_do_rotulo": [
+    "prevencao",
+    "infracao",
+    "penal",
+    "democratico"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-CPP-7.3": {
+   "disciplina": "DIREITO PROCESSUAL PENAL",
+   "numero": "7.3",
+   "rotulo": "Valoração.",
+   "termos_do_rotulo": [
+    "valoracao"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-CON-10": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "10",
+   "rotulo": "Reforma e Revisão Constitucionais.",
+   "termos_do_rotulo": [
+    "reforma",
+    "revisao",
+    "constitucionais"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-RAC-3": {
+   "disciplina": "RACIOCÍNIO LÓGICO",
+   "numero": "3",
+   "rotulo": "Razões e proporções.",
+   "termos_do_rotulo": [
+    "razoes",
+    "proporcoes"
+   ],
+   "sinonimos": [
+    "razao",
+    "proporcao",
+    "proporcional"
+   ]
+  },
+  "DBA26-LPE-19": {
+   "disciplina": "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE",
+   "numero": "19",
+   "rotulo": "Decreto-Lei nº 3.688/1941 - Contravenções Penais.",
+   "termos_do_rotulo": [
+    "3.688",
+    "3688",
+    "decreto-lei",
+    "contravencoes",
+    "penais"
+   ],
+   "sinonimos": [
+    "3.688",
+    "3688",
+    "contravencao",
+    "contravencoes penais",
+    "vias de fato",
+    "jogo do bicho"
+   ]
+  },
+  "DBA26-PEN-4.1": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "4.1",
+   "rotulo": "Crime doloso e crime culposo.",
+   "termos_do_rotulo": [
+    "doloso",
+    "culposo"
+   ],
+   "sinonimos": [
+    "dolo eventual",
+    "culpa consciente",
+    "imprudencia",
+    "negligencia",
+    "impericia",
+    "culposo",
+    "doloso",
+    "dolo direto"
+   ]
+  },
+  "DBA26-ADM-2.7": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "2.7",
+   "rotulo": "Processo administrativo.",
+   "termos_do_rotulo": [
+    "administrativo"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-CPP-7.4": {
+   "disciplina": "DIREITO PROCESSUAL PENAL",
+   "numero": "7.4",
+   "rotulo": "Ônus da prova.",
+   "termos_do_rotulo": [
+    "onus",
+    "prova"
+   ],
+   "sinonimos": [
+    "onus da prova"
+   ]
+  },
+  "DBA26-INF-1.3": {
+   "disciplina": "INFORMÁTICA",
+   "numero": "1.3",
+   "rotulo": "Configurações básicas do Windows: resolução da tela, cores, fontes, impressoras, aparência, plano de fundo e proteção de tela.",
+   "termos_do_rotulo": [
+    "configuracoes",
+    "basicas",
+    "windows",
+    "resolucao",
+    "tela",
+    "cores",
+    "fontes",
+    "impressoras",
+    "aparencia",
+    "plano",
+    "fundo",
+    "protecao"
+   ],
+   "sinonimos": [
+    "painel de controle",
+    "configuracoes",
+    "resolucao da tela",
+    "plano de fundo",
+    "protecao de tela",
+    "impressora"
+   ]
+  },
+  "DBA26-MLE-5.3": {
+   "disciplina": "MEDICINA LEGAL",
+   "numero": "5.3",
+   "rotulo": "Exumação.",
+   "termos_do_rotulo": [
+    "exumacao"
+   ],
+   "sinonimos": [
+    "exumacao"
+   ]
+  },
+  "DBA26-LPE-20": {
+   "disciplina": "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE",
+   "numero": "20",
+   "rotulo": "Lei Federal nº 9.605/1998 - Crimes Ambientais.",
+   "termos_do_rotulo": [
+    "9.605",
+    "9605",
+    "ambientais"
+   ],
+   "sinonimos": [
+    "9.605",
+    "9605",
+    "crimes ambientais",
+    "crime contra a fauna",
+    "crime contra a flora",
+    "poluicao"
+   ]
+  },
+  "DBA26-CRI-3.3": {
+   "disciplina": "CRIMINOLOGIA",
+   "numero": "3.3",
+   "rotulo": "Prevenção primária.",
+   "termos_do_rotulo": [
+    "prevencao",
+    "primaria"
+   ],
+   "sinonimos": [
+    "prevencao primaria"
+   ]
+  },
+  "DBA26-PRG-4": {
+   "disciplina": "PROMOÇÃO DA IGUALDADE RACIAL E DE GÊNERO",
+   "numero": "4",
+   "rotulo": "Lei Federal nº 7.716/1989 - Define os crimes resultantes de preconceito de raça ou de cor.",
+   "termos_do_rotulo": [
+    "7.716",
+    "7716",
+    "define",
+    "resultantes",
+    "preconceito",
+    "raca"
+   ],
+   "sinonimos": [
+    "7.716",
+    "preconceito de raca",
+    "racismo"
+   ]
+  },
+  "DBA26-PEN-4.2": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "4.2",
+   "rotulo": "Crime qualificado pelo resultado e crime preterdoloso.",
+   "termos_do_rotulo": [
+    "qualificado",
+    "pelo",
+    "resultado",
+    "preterdoloso"
+   ],
+   "sinonimos": [
+    "preterdoloso",
+    "preterintencional",
+    "qualificado pelo resultado"
+   ]
+  },
+  "DBA26-CPP-7.5": {
+   "disciplina": "DIREITO PROCESSUAL PENAL",
+   "numero": "7.5",
+   "rotulo": "Provas ilícitas e cadeia de custódia da prova.",
+   "termos_do_rotulo": [
+    "provas",
+    "ilicitas",
+    "cadeia",
+    "custodia",
+    "prova"
+   ],
+   "sinonimos": [
+    "prova ilicita",
+    "provas ilicitas",
+    "frutos da arvore envenenada",
+    "fonte independente",
+    "descoberta inevitavel",
+    "cadeia de custodia",
+    "vestigio"
+   ]
+  },
+  "DBA26-CON-11": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "11",
+   "rotulo": "Limitações do Poder de Revisão.",
+   "termos_do_rotulo": [
+    "limitacoes",
+    "poder",
+    "revisao"
+   ],
+   "sinonimos": [
+    "clausulas petreas",
+    "clausula petrea",
+    "limitacoes materiais",
+    "limitacoes circunstanciais"
+   ]
+  },
+  "DBA26-LPE-21": {
+   "disciplina": "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE",
+   "numero": "21",
+   "rotulo": "Lei Federal nº 12.037/2009 - Identificação Criminal.",
+   "termos_do_rotulo": [
+    "12.037",
+    "12037",
+    "identificacao",
+    "criminal"
+   ],
+   "sinonimos": [
+    "12.037",
+    "12037",
+    "identificacao criminal",
+    "identificacao datiloscopica",
+    "perfil genetico",
+    "civilmente identificado"
+   ]
+  },
+  "DBA26-CIV-4": {
+   "disciplina": "DIREITO CIVIL E EMPRESARIAL",
+   "numero": "4",
+   "rotulo": "Do direito das obrigações (CC, Parte Especial, Livro I).",
+   "termos_do_rotulo": [
+    "obrigacoes"
+   ],
+   "sinonimos": [
+    "obrigacoes",
+    "obrigacao de dar",
+    "obrigacao de fazer",
+    "mora",
+    "inadimplemento",
+    "pagamento",
+    "solidariedade",
+    "cessao de credito",
+    "juros"
+   ]
+  },
+  "DBA26-ADM-2.8": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "2.8",
+   "rotulo": "Fatos da administração pública: atos da administração pública e fatos administrativos.",
+   "termos_do_rotulo": [
+    "fatos",
+    "atos",
+    "administrativos"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-PEN-4.3": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "4.3",
+   "rotulo": "Erro de tipo.",
+   "termos_do_rotulo": [
+    "erro",
+    "tipo"
+   ],
+   "sinonimos": [
+    "erro de tipo",
+    "erro sobre a pessoa",
+    "aberratio ictus",
+    "aberratio criminis",
+    "descriminante putativa",
+    "erro provocado por terceiro"
+   ]
+  },
+  "DBA26-MLE-5.4": {
+   "disciplina": "MEDICINA LEGAL",
+   "numero": "5.4",
+   "rotulo": "Causa jurídica da morte.",
+   "termos_do_rotulo": [
+    "causa",
+    "juridica",
+    "morte"
+   ],
+   "sinonimos": [
+    "causa juridica da morte",
+    "homicidio, suicidio",
+    "acidente"
+   ]
+  },
+  "DBA26-CPC-4": {
+   "disciplina": "DIREITO PROCESSUAL CIVIL",
+   "numero": "4",
+   "rotulo": "Dos atos processuais.",
+   "termos_do_rotulo": [
+    "atos",
+    "processuais"
+   ],
+   "sinonimos": [
+    "atos processuais",
+    "prazos",
+    "negocio juridico processual",
+    "citacao",
+    "intimacao"
+   ]
+  },
+  "DBA26-CPP-7.6": {
+   "disciplina": "DIREITO PROCESSUAL PENAL",
+   "numero": "7.6",
+   "rotulo": "Meios de prova: perícias, interrogatório, confissão, testemunhas, reconhecimento de pessoas e coisas, acareação, documentos, indícios.",
+   "termos_do_rotulo": [
+    "meios",
+    "prova",
+    "pericias",
+    "interrogatorio",
+    "confissao",
+    "testemunhas",
+    "reconhecimento",
+    "pessoas",
+    "coisas",
+    "acareacao",
+    "documentos",
+    "indicios"
+   ],
+   "sinonimos": [
+    "pericia",
+    "exame de corpo de delito",
+    "interrogatorio",
+    "confissao",
+    "testemunha",
+    "reconhecimento de pessoas",
+    "acareacao",
+    "documentos",
+    "indicios",
+    "depoimento"
+   ]
+  },
+  "DBA26-LPE-22": {
+   "disciplina": "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE",
+   "numero": "22",
+   "rotulo": "Lei Federal nº 12.830/2013 - Investigação Criminal.",
+   "termos_do_rotulo": [
+    "12.830",
+    "12830",
+    "investigacao",
+    "criminal"
+   ],
+   "sinonimos": [
+    "12.830",
+    "12830",
+    "investigacao criminal conduzida pelo delegado",
+    "delegado de policia"
+   ]
+  },
+  "DBA26-CRI-3.4": {
+   "disciplina": "CRIMINOLOGIA",
+   "numero": "3.4",
+   "rotulo": "Prevenção secundária.",
+   "termos_do_rotulo": [
+    "prevencao",
+    "secundaria"
+   ],
+   "sinonimos": [
+    "prevencao secundaria"
+   ]
+  },
+  "DBA26-PEN-4.4": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "4.4",
+   "rotulo": "Classificação jurídica dos crimes.",
+   "termos_do_rotulo": [
+    "juridica"
+   ],
+   "sinonimos": [
+    "crime proprio",
+    "crime de mao propria",
+    "crime formal",
+    "crime material",
+    "crime de mera conduta",
+    "crime habitual",
+    "crime permanente",
+    "crime instantaneo",
+    "crime vago",
+    "plurissubsistente"
+   ]
+  },
+  "DBA26-TRI-4": {
+   "disciplina": "DIREITO TRIBUTÁRIO",
+   "numero": "4",
+   "rotulo": "O Código Tributário Nacional.",
+   "termos_do_rotulo": [
+    "codigo",
+    "tributario"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-CON-12": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "12",
+   "rotulo": "Emendas à Constituição.",
+   "termos_do_rotulo": [
+    "emendas",
+    "constituicao"
+   ],
+   "sinonimos": [
+    "emenda constitucional",
+    "proposta de emenda",
+    "pec"
+   ]
+  },
+  "DBA26-CPP-7.7": {
+   "disciplina": "DIREITO PROCESSUAL PENAL",
+   "numero": "7.7",
+   "rotulo": "Busca e apreensão: pessoal, domiciliar, requisitos, restrições, horários.",
+   "termos_do_rotulo": [
+    "busca",
+    "apreensao",
+    "pessoal",
+    "domiciliar",
+    "requisitos",
+    "restricoes",
+    "horarios"
+   ],
+   "sinonimos": [
+    "busca e apreensao",
+    "busca pessoal",
+    "busca domiciliar",
+    "mandado de busca",
+    "fundada suspeita"
+   ]
+  },
+  "DBA26-ADM-2.9": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "2.9",
+   "rotulo": "Formação do ato administrativo: elementos, procedimento administrativo.",
+   "termos_do_rotulo": [
+    "formacao",
+    "administrativo",
+    "elementos"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-AMB-4": {
+   "disciplina": "DIREITO AMBIENTAL",
+   "numero": "4",
+   "rotulo": "Lei Federal nº 9.985/2000 e respectivos regulamentos - Legislação brasileira de unidades de conservação.",
+   "termos_do_rotulo": [
+    "9.985",
+    "9985",
+    "unidades",
+    "conservacao"
+   ],
+   "sinonimos": [
+    "9.985",
+    "snuc",
+    "unidade de conservacao",
+    "unidades de conservacao",
+    "protecao integral",
+    "uso sustentavel",
+    "plano de manejo"
+   ]
+  },
+  "DBA26-LPE-23": {
+   "disciplina": "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE",
+   "numero": "23",
+   "rotulo": "Lei Federal nº 1.521/1951 - Crimes contra a Economia Popular.",
+   "termos_do_rotulo": [
+    "1.521",
+    "1521",
+    "contra",
+    "economia",
+    "popular"
+   ],
+   "sinonimos": [
+    "1.521",
+    "1521",
+    "economia popular",
+    "usura"
+   ]
+  },
+  "DBA26-PEN-4.5": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "4.5",
+   "rotulo": "Crimes comissivos e omissivos.",
+   "termos_do_rotulo": [
+    "comissivos",
+    "omissivos"
+   ],
+   "sinonimos": [
+    "omissao impropria",
+    "omissivo improprio",
+    "comissivo por omissao",
+    "dever de agir",
+    "garantidor",
+    "omissivo proprio"
+   ]
+  },
+  "DBA26-MLE-5.5": {
+   "disciplina": "MEDICINA LEGAL",
+   "numero": "5.5",
+   "rotulo": "Morte súbita e morte suspeita.",
+   "termos_do_rotulo": [
+    "morte",
+    "subita",
+    "suspeita"
+   ],
+   "sinonimos": [
+    "morte subita",
+    "morte suspeita"
+   ]
+  },
+  "DBA26-CPP-8": {
+   "disciplina": "DIREITO PROCESSUAL PENAL",
+   "numero": "8",
+   "rotulo": "Prisão.",
+   "termos_do_rotulo": [
+    "prisao"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-POR-5": {
+   "disciplina": "LÍNGUA PORTUGUESA",
+   "numero": "5",
+   "rotulo": "Reescrita de orações, períodos, frases e parágrafos.",
+   "termos_do_rotulo": [
+    "reescrita",
+    "oracoes",
+    "periodos",
+    "frases",
+    "paragrafos"
+   ],
+   "sinonimos": [
+    "reescrita",
+    "reescrever",
+    "reescritura",
+    "substituicao",
+    "sem prejuizo",
+    "mantendo o sentido",
+    "alteracao de sentido"
+   ]
+  },
+  "DBA26-CRI-3.5": {
+   "disciplina": "CRIMINOLOGIA",
+   "numero": "3.5",
+   "rotulo": "Prevenção terciária.",
+   "termos_do_rotulo": [
+    "prevencao",
+    "terciaria"
+   ],
+   "sinonimos": [
+    "prevencao terciaria"
+   ]
+  },
+  "DBA26-LPE-24": {
+   "disciplina": "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE",
+   "numero": "24",
+   "rotulo": "Lei Federal nº 2.889/1956 - Crime de Genocídio.",
+   "termos_do_rotulo": [
+    "2.889",
+    "2889",
+    "genocidio"
+   ],
+   "sinonimos": [
+    "2.889",
+    "2889",
+    "genocidio"
+   ]
+  },
+  "DBA26-CON-13": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "13",
+   "rotulo": "Controle da Constitucionalidade: conceito, sistemas de controles, inconstitucionalidade por ação e por omissão, ação declaratória de constitucionalidade, arguição de descumprimento de preceito fundamental.",
+   "termos_do_rotulo": [
+    "controle",
+    "constitucionalidade",
+    "controles",
+    "inconstitucionalidade",
+    "acao",
+    "omissao",
+    "declaratoria",
+    "arguicao",
+    "descumprimento",
+    "preceito",
+    "fundamental"
+   ],
+   "sinonimos": [
+    "controle de constitucionalidade",
+    "acao direta de inconstitucionalidade",
+    "adi",
+    "adc",
+    "adpf",
+    "ado",
+    "controle difuso",
+    "controle concentrado",
+    "clausula de reserva de plenario",
+    "inconstitucionalidade por omissao"
+   ]
+  },
+  "DBA26-RAC-3.1": {
+   "disciplina": "RACIOCÍNIO LÓGICO",
+   "numero": "3.1",
+   "rotulo": "Divisão proporcional.",
+   "termos_do_rotulo": [
+    "divisao",
+    "proporcional"
+   ],
+   "sinonimos": [
+    "divisao proporcional",
+    "diretamente proporcional",
+    "inversamente proporcional"
+   ]
+  },
+  "DBA26-PEN-4.6": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "4.6",
+   "rotulo": "Crimes de dano e de perigo.",
+   "termos_do_rotulo": [
+    "dano",
+    "perigo"
+   ],
+   "sinonimos": [
+    "perigo abstrato",
+    "perigo concreto",
+    "crime de dano"
+   ]
+  },
+  "DBA26-CPP-8.1": {
+   "disciplina": "DIREITO PROCESSUAL PENAL",
+   "numero": "8.1",
+   "rotulo": "Conceito, espécies, mandado de prisão e cumprimento.",
+   "termos_do_rotulo": [
+    "mandado",
+    "prisao",
+    "cumprimento"
+   ],
+   "sinonimos": [
+    "mandado de prisao",
+    "uso de algemas",
+    "sumula vinculante 11"
+   ]
+  },
+  "DBA26-ADM-2.10": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "2.10",
+   "rotulo": "Validade, eficácia e auto executoriedade do ato administrativo.",
+   "termos_do_rotulo": [
+    "validade",
+    "eficacia",
+    "auto",
+    "executoriedade",
+    "administrativo"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-LPE-25": {
+   "disciplina": "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE",
+   "numero": "25",
+   "rotulo": "Lei Federal nº 8.176/1991 - Crimes contra a Ordem Econômica.",
+   "termos_do_rotulo": [
+    "8.176",
+    "8176",
+    "contra",
+    "ordem",
+    "economica"
+   ],
+   "sinonimos": [
+    "8.176",
+    "8176",
+    "ordem economica",
+    "combustiveis"
+   ]
+  },
+  "DBA26-INF-1.4": {
+   "disciplina": "INFORMÁTICA",
+   "numero": "1.4",
+   "rotulo": "Windows Explorer.",
+   "termos_do_rotulo": [
+    "windows",
+    "explorer"
+   ],
+   "sinonimos": [
+    "windows explorer",
+    "explorador de arquivos",
+    "explorer"
+   ]
+  },
+  "DBA26-MLE-6": {
+   "disciplina": "MEDICINA LEGAL",
+   "numero": "6",
+   "rotulo": "Exame e preservação de locais de crime; Aspectos médico-legais das toxicomanias e da embriaguez; Lesões e morte por ação térmica, por ação elétrica, por baropatias e por ação química.",
+   "termos_do_rotulo": [
+    "exame",
+    "preservacao",
+    "locais",
+    "toxicomanias",
+    "embriaguez",
+    "lesoes",
+    "morte",
+    "acao",
+    "termica",
+    "eletrica",
+    "baropatias",
+    "quimica"
+   ],
+   "sinonimos": [
+    "local de crime",
+    "toxicomania",
+    "embriaguez",
+    "termica",
+    "queimadura",
+    "eletrica",
+    "fulguracao",
+    "eletroplessao",
+    "baropatia",
+    "radiacao",
+    "explosao",
+    "geladura"
+   ]
+  },
+  "DBA26-PEN-4.7": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "4.7",
+   "rotulo": "Punibilidade: causas de extinção da punibilidade.",
+   "termos_do_rotulo": [
+    "punibilidade",
+    "causas",
+    "extincao"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-CRI-3.6": {
+   "disciplina": "CRIMINOLOGIA",
+   "numero": "3.6",
+   "rotulo": "Modelos de reação ao crime.",
+   "termos_do_rotulo": [
+    "reacao"
+   ],
+   "sinonimos": [
+    "modelo dissuasorio",
+    "modelo ressocializador",
+    "modelo restaurador",
+    "justica restaurativa",
+    "modelo integrador"
+   ]
+  },
+  "DBA26-PRG-5": {
+   "disciplina": "PROMOÇÃO DA IGUALDADE RACIAL E DE GÊNERO",
+   "numero": "5",
+   "rotulo": "Decreto Federal n° 65.810/1969 - Convenção internacional sobre a eliminação de todas as formas de discriminação racial.",
+   "termos_do_rotulo": [
+    "65.810",
+    "65810",
+    "convencao",
+    "internacional",
+    "eliminacao",
+    "todas",
+    "discriminacao",
+    "racial"
+   ],
+   "sinonimos": [
+    "65.810",
+    "discriminacao racial",
+    "convencao internacional"
+   ]
+  },
+  "DBA26-CPP-8.2": {
+   "disciplina": "DIREITO PROCESSUAL PENAL",
+   "numero": "8.2",
+   "rotulo": "prisão em flagrante.",
+   "termos_do_rotulo": [
+    "prisao",
+    "flagrante"
+   ],
+   "sinonimos": [
+    "flagrante",
+    "flagrante delito",
+    "auto de prisao",
+    "flagrante preparado",
+    "flagrante esperado",
+    "flagrante diferido",
+    "flagrante prorrogado",
+    "flagrante proprio",
+    "flagrante improprio",
+    "flagrante presumido",
+    "nota de culpa",
+    "audiencia de custodia"
+   ]
+  },
+  "DBA26-LPE-26": {
+   "disciplina": "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE",
+   "numero": "26",
+   "rotulo": "Lei Federal nº 9.279/1996 - Crimes contra a Propriedade Industrial.",
+   "termos_do_rotulo": [
+    "9.279",
+    "9279",
+    "contra",
+    "propriedade",
+    "industrial"
+   ],
+   "sinonimos": [
+    "9.279",
+    "9279",
+    "propriedade industrial",
+    "patente",
+    "marca registrada"
+   ]
+  },
+  "DBA26-CON-14": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "14",
+   "rotulo": "Sistema Brasileiro de Constitucionalidade.",
+   "termos_do_rotulo": [
+    "constitucionalidade"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-PEN-4.8": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "4.8",
+   "rotulo": "Iter criminis.",
+   "termos_do_rotulo": [
+    "iter",
+    "criminis"
+   ],
+   "sinonimos": [
+    "iter criminis",
+    "atos preparatorios",
+    "atos executorios",
+    "cogitacao"
+   ]
+  },
+  "DBA26-CIV-4-B2": {
+   "disciplina": "DIREITO CIVIL E EMPRESARIAL",
+   "numero": "4",
+   "rotulo": "Da responsabilidade civil (CC, Parte Especial, Livro I, Título IX).",
+   "termos_do_rotulo": [
+    "responsabilidade",
+    "civil"
+   ],
+   "sinonimos": [
+    "responsabilidade civil",
+    "dano moral",
+    "indenizacao",
+    "ato ilicito",
+    "dano material",
+    "responsabilidade objetiva"
+   ]
+  },
+  "DBA26-ADM-2.11": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "2.11",
+   "rotulo": "Atos administrativos simples, complexos e compostos.",
+   "termos_do_rotulo": [
+    "atos",
+    "administrativos",
+    "simples",
+    "complexos",
+    "compostos"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-CPP-8.3": {
+   "disciplina": "DIREITO PROCESSUAL PENAL",
+   "numero": "8.3",
+   "rotulo": "Prisão temporária.",
+   "termos_do_rotulo": [
+    "prisao",
+    "temporaria"
+   ],
+   "sinonimos": [
+    "prisao temporaria",
+    "7.960",
+    "7960"
+   ]
+  },
+  "DBA26-MLE-7": {
+   "disciplina": "MEDICINA LEGAL",
+   "numero": "7",
+   "rotulo": "Aspectos médico-legais dos crimes contra a dignidade sexual:",
+   "termos_do_rotulo": [
+    "contra",
+    "dignidade",
+    "sexual"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-CPC-5": {
+   "disciplina": "DIREITO PROCESSUAL CIVIL",
+   "numero": "5",
+   "rotulo": "Da tutela provisória.",
+   "termos_do_rotulo": [
+    "tutela",
+    "provisoria"
+   ],
+   "sinonimos": [
+    "tutela provisoria",
+    "tutela de urgencia",
+    "tutela de evidencia",
+    "tutela antecipada",
+    "tutela cautelar"
+   ]
+  },
+  "DBA26-LPE-27": {
+   "disciplina": "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE",
+   "numero": "27",
+   "rotulo": "Lei Federal nº 9.434/1997 - Lei de Transplantes.",
+   "termos_do_rotulo": [
+    "9.434",
+    "9434",
+    "transplantes"
+   ],
+   "sinonimos": [
+    "9.434",
+    "9434",
+    "transplante",
+    "orgaos, tecidos",
+    "remocao de orgaos"
+   ]
+  },
+  "DBA26-PEN-4.9": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "4.9",
+   "rotulo": "Consumação e tentativa.",
+   "termos_do_rotulo": [
+    "consumacao",
+    "tentativa"
+   ],
+   "sinonimos": [
+    "tentativa",
+    "consumacao",
+    "tentado",
+    "consumado"
+   ]
+  },
+  "DBA26-CRI-4": {
+   "disciplina": "CRIMINOLOGIA",
+   "numero": "4",
+   "rotulo": "Conceitos de crime, de criminoso e de pena nas diversas correntes do pensamento criminológico (nas Escolas Clássica, Positiva e Técnico-Jurídica e na Criminologia Crítica).",
+   "termos_do_rotulo": [
+    "criminoso",
+    "pena",
+    "diversas",
+    "correntes",
+    "pensamento",
+    "criminologico"
+   ],
+   "sinonimos": [
+    "escola classica",
+    "escola positiva",
+    "lombroso",
+    "ferri",
+    "garofalo",
+    "beccaria",
+    "carrara",
+    "escola tecnico-juridica",
+    "terza scuola"
+   ]
+  },
+  "DBA26-CPP-8.4": {
+   "disciplina": "DIREITO PROCESSUAL PENAL",
+   "numero": "8.4",
+   "rotulo": "Prisão preventiva.",
+   "termos_do_rotulo": [
+    "prisao",
+    "preventiva"
+   ],
+   "sinonimos": [
+    "prisao preventiva",
+    "garantia da ordem publica",
+    "conveniencia da instrucao",
+    "periculum libertatis",
+    "revisao a cada 90"
+   ]
+  },
+  "DBA26-TRI-5": {
+   "disciplina": "DIREITO TRIBUTÁRIO",
+   "numero": "5",
+   "rotulo": "Normas gerais de Direito Tributário.",
+   "termos_do_rotulo": [
+    "normas",
+    "tributario"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-CON-15": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "15",
+   "rotulo": "Princípios constitucionais do estado brasileiro.",
+   "termos_do_rotulo": [
+    "principios",
+    "constitucionais"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-LPE-28": {
+   "disciplina": "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE",
+   "numero": "28",
+   "rotulo": "Lei Federal nº 9.609/1998 - Crimes contra a Propriedade Intelectual de Programa de Computador.",
+   "termos_do_rotulo": [
+    "9.609",
+    "9609",
+    "contra",
+    "propriedade",
+    "intelectual",
+    "programa",
+    "computador"
+   ],
+   "sinonimos": [
+    "9.609",
+    "9609",
+    "programa de computador",
+    "software"
+   ]
+  },
+  "DBA26-ADM-2.12": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "2.12",
+   "rotulo": "Atos administrativos unilaterais, bilaterais e multilaterais.",
+   "termos_do_rotulo": [
+    "atos",
+    "administrativos",
+    "unilaterais",
+    "bilaterais",
+    "multilaterais"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-AMB-5": {
+   "disciplina": "DIREITO AMBIENTAL",
+   "numero": "5",
+   "rotulo": "Lei Federal nº 11.516/2007 - Proteção e conservação da biodiversidade.",
+   "termos_do_rotulo": [
+    "11.516",
+    "11516",
+    "protecao",
+    "conservacao",
+    "biodiversidade"
+   ],
+   "sinonimos": [
+    "11.516",
+    "instituto chico mendes",
+    "icmbio"
+   ]
+  },
+  "DBA26-PEN-4.10": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "4.10",
+   "rotulo": "Desistência voluntária e arrependimento eficaz.",
+   "termos_do_rotulo": [
+    "desistencia",
+    "voluntaria",
+    "arrependimento",
+    "eficaz"
+   ],
+   "sinonimos": [
+    "desistencia voluntaria",
+    "arrependimento eficaz",
+    "ponte de ouro"
+   ]
+  },
+  "DBA26-CPP-8.5": {
+   "disciplina": "DIREITO PROCESSUAL PENAL",
+   "numero": "8.5",
+   "rotulo": "Princípio da necessidade, prisão especial, liberdade provisória.",
+   "termos_do_rotulo": [
+    "principio",
+    "necessidade",
+    "prisao",
+    "liberdade",
+    "provisoria"
+   ],
+   "sinonimos": [
+    "liberdade provisoria",
+    "prisao especial"
+   ]
+  },
+  "DBA26-MLE-7.1": {
+   "disciplina": "MEDICINA LEGAL",
+   "numero": "7.1",
+   "rotulo": "Violência sexual, estupro, estupro de vulnerável, importunação sexual, assédio sexual e coleta/preservação de vestígios.",
+   "termos_do_rotulo": [
+    "violencia",
+    "sexual",
+    "estupro",
+    "vulneravel",
+    "importunacao",
+    "assedio",
+    "coleta",
+    "preservacao",
+    "vestigios"
+   ],
+   "sinonimos": [
+    "estupro",
+    "conjuncao carnal",
+    "himen",
+    "violencia sexual",
+    "vestigios",
+    "importunacao sexual"
+   ]
+  },
+  "DBA26-LPE-29": {
+   "disciplina": "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE",
+   "numero": "29",
+   "rotulo": "Lei Federal nº 9.613/1998 - Lavagem de Dinheiro.",
+   "termos_do_rotulo": [
+    "9.613",
+    "9613",
+    "lavagem",
+    "dinheiro"
+   ],
+   "sinonimos": [
+    "9.613",
+    "9613",
+    "lavagem de dinheiro",
+    "lavagem de capitais",
+    "ocultacao de bens",
+    "coaf"
+   ]
+  },
+  "DBA26-POR-6": {
+   "disciplina": "LÍNGUA PORTUGUESA",
+   "numero": "6",
+   "rotulo": "Emprego dos sinais de pontuação e sua função no texto.",
+   "termos_do_rotulo": [
+    "emprego",
+    "sinais",
+    "pontuacao",
+    "texto"
+   ],
+   "sinonimos": [
+    "virgula",
+    "pontuacao",
+    "ponto e virgula",
+    "dois-pontos",
+    "travessao",
+    "aspas",
+    "parenteses",
+    "sinal de pontuacao"
+   ]
+  },
+  "DBA26-CRI-5": {
+   "disciplina": "CRIMINOLOGIA",
+   "numero": "5",
+   "rotulo": "Vitimologia.",
+   "termos_do_rotulo": [
+    "vitimologia"
+   ],
+   "sinonimos": [
+    "vitimologia",
+    "vitimizacao primaria",
+    "vitimizacao secundaria",
+    "vitimizacao terciaria",
+    "mendelsohn",
+    "von hentig",
+    "sobrevitimizacao",
+    "heterovitimizacao"
+   ]
+  },
+  "DBA26-PEN-4.11": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "4.11",
+   "rotulo": "Arrependimento posterior.",
+   "termos_do_rotulo": [
+    "arrependimento",
+    "posterior"
+   ],
+   "sinonimos": [
+    "arrependimento posterior",
+    "reparado o dano",
+    "restituida a coisa"
+   ]
+  },
+  "DBA26-CON-16": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "16",
+   "rotulo": "O Estado Brasileiro.",
+   "termos_do_rotulo": [],
+   "sinonimos": []
+  },
+  "DBA26-RAC-3.2": {
+   "disciplina": "RACIOCÍNIO LÓGICO",
+   "numero": "3.2",
+   "rotulo": "Regras de três simples e compostas.",
+   "termos_do_rotulo": [
+    "regras",
+    "tres",
+    "simples",
+    "compostas"
+   ],
+   "sinonimos": [
+    "regra de tres"
+   ]
+  },
+  "DBA26-CPP-8.6": {
+   "disciplina": "DIREITO PROCESSUAL PENAL",
+   "numero": "8.6",
+   "rotulo": "Fiança.",
+   "termos_do_rotulo": [
+    "fianca"
+   ],
+   "sinonimos": [
+    "fianca",
+    "afiancavel",
+    "inafiancavel"
+   ]
+  },
+  "DBA26-LPE-30": {
+   "disciplina": "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE",
+   "numero": "30",
+   "rotulo": "Lei Federal nº 9.807/1999 - Proteção a Vítimas e Testemunhas.",
+   "termos_do_rotulo": [
+    "9.807",
+    "9807",
+    "protecao",
+    "vitimas",
+    "testemunhas"
+   ],
+   "sinonimos": [
+    "9.807",
+    "9807",
+    "protecao a vitimas",
+    "testemunhas ameacadas",
+    "provita",
+    "colaborador"
+   ]
+  },
+  "DBA26-ADM-2.13": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "2.13",
+   "rotulo": "Atos administrativos gerais e individuais.",
+   "termos_do_rotulo": [
+    "atos",
+    "administrativos",
+    "individuais"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-PEN-4.12": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "4.12",
+   "rotulo": "Crime impossível.",
+   "termos_do_rotulo": [
+    "impossivel"
+   ],
+   "sinonimos": [
+    "crime impossivel",
+    "ineficacia absoluta",
+    "impropriedade absoluta",
+    "flagrante preparado",
+    "sumula 145"
+   ]
+  },
+  "DBA26-INF-2": {
+   "disciplina": "INFORMÁTICA",
+   "numero": "2",
+   "rotulo": "Pacote office 365 em português:",
+   "termos_do_rotulo": [
+    "pacote",
+    "office",
+    "portugues"
+   ],
+   "sinonimos": [
+    "office 365",
+    "microsoft 365",
+    "office",
+    "libreoffice",
+    "broffice"
+   ]
+  },
+  "DBA26-MLE-8": {
+   "disciplina": "MEDICINA LEGAL",
+   "numero": "8",
+   "rotulo": "Asfixias por constrição cervical, por sufocação, por restrição aos movimentos do tórax e por modificações do meio ambiente.",
+   "termos_do_rotulo": [
+    "asfixias",
+    "constricao",
+    "cervical",
+    "sufocacao",
+    "restricao",
+    "movimentos",
+    "torax",
+    "modificacoes",
+    "meio",
+    "ambiente"
+   ],
+   "sinonimos": [
+    "asfixia",
+    "enforcamento",
+    "estrangulamento",
+    "esganadura",
+    "sufocacao",
+    "afogamento",
+    "soterramento",
+    "confinamento",
+    "sulco"
+   ]
+  },
+  "DBA26-CPP-9": {
+   "disciplina": "DIREITO PROCESSUAL PENAL",
+   "numero": "9",
+   "rotulo": "Sentença criminal.",
+   "termos_do_rotulo": [
+    "sentenca",
+    "criminal"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-CRI-6": {
+   "disciplina": "CRIMINOLOGIA",
+   "numero": "6",
+   "rotulo": "O homem delinquente. Teorias bioantropológicas, psicodinâmicas, psicológicas e psicopatológicas.",
+   "termos_do_rotulo": [
+    "homem",
+    "delinquente",
+    "bioantropologicas",
+    "psicodinamicas",
+    "psicologicas",
+    "psicopatologicas"
+   ],
+   "sinonimos": [
+    "homem delinquente",
+    "bioantropologica",
+    "psicopatia",
+    "criminoso nato",
+    "teorias biologicas"
+   ]
+  },
+  "DBA26-PRG-6": {
+   "disciplina": "PROMOÇÃO DA IGUALDADE RACIAL E DE GÊNERO",
+   "numero": "6",
+   "rotulo": "Decreto Federal n° 4.377/2002 - Convenção sobre a eliminação de todas as formas de discriminação contra a mulher.",
+   "termos_do_rotulo": [
+    "4.377",
+    "4377",
+    "convencao",
+    "eliminacao",
+    "todas",
+    "discriminacao",
+    "contra",
+    "mulher"
+   ],
+   "sinonimos": [
+    "4.377",
+    "cedaw",
+    "discriminacao contra a mulher"
+   ]
+  },
+  "DBA26-LPE-31": {
+   "disciplina": "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE",
+   "numero": "31",
+   "rotulo": "Lei Federal nº 14.597/2023 - Lei Geral do Esporte.",
+   "termos_do_rotulo": [
+    "14.597",
+    "14597",
+    "esporte"
+   ],
+   "sinonimos": [
+    "14.597",
+    "14597",
+    "lei geral do esporte",
+    "torcida",
+    "evento esportivo",
+    "estatuto do torcedor"
+   ]
+  },
+  "DBA26-PEN-5": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "5",
+   "rotulo": "Ilicitude.",
+   "termos_do_rotulo": [
+    "ilicitude"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-CON-17": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "17",
+   "rotulo": "Estado democrático de direito.",
+   "termos_do_rotulo": [
+    "democratico"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-CPP-9.1": {
+   "disciplina": "DIREITO PROCESSUAL PENAL",
+   "numero": "9.1",
+   "rotulo": "Juiz, Ministério Público, acusado e defensor, assistentes e auxiliares da justiça.",
+   "termos_do_rotulo": [
+    "juiz",
+    "ministerio",
+    "acusado",
+    "defensor",
+    "assistentes",
+    "auxiliares",
+    "justica"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-CIV-5": {
+   "disciplina": "DIREITO CIVIL E EMPRESARIAL",
+   "numero": "5",
+   "rotulo": "Do direito de empresa (CC, Parte Especial, Livro II).",
+   "termos_do_rotulo": [
+    "empresa"
+   ],
+   "sinonimos": [
+    "empresario",
+    "direito de empresa",
+    "sociedade",
+    "estabelecimento",
+    "sociedade limitada",
+    "sociedade em conta de participacao",
+    "registro publico de empresas",
+    "nome empresarial"
+   ]
+  },
+  "DBA26-ADM-2.14": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "2.14",
+   "rotulo": "Atos administrativos vinculados e discricionários.",
+   "termos_do_rotulo": [
+    "atos",
+    "administrativos",
+    "vinculados",
+    "discricionarios"
+   ],
+   "sinonimos": [
+    "ato vinculado",
+    "ato discricionario",
+    "discricionariedade",
+    "vinculado"
+   ]
+  },
+  "DBA26-LPE-32": {
+   "disciplina": "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE",
+   "numero": "32",
+   "rotulo": "Lei Federal nº 11.101/2005 - Crimes Falimentares.",
+   "termos_do_rotulo": [
+    "11.101",
+    "11101",
+    "falimentares"
+   ],
+   "sinonimos": [
+    "11.101",
+    "crimes falimentares",
+    "falencia fraudulenta"
+   ]
+  },
+  "DBA26-MLE-9": {
+   "disciplina": "MEDICINA LEGAL",
+   "numero": "9",
+   "rotulo": "Aspectos médico-legais do aborto, infanticídio e abandono de recém-nascido.",
+   "termos_do_rotulo": [
+    "aborto",
+    "infanticidio",
+    "abandono",
+    "recem-nascido"
+   ],
+   "sinonimos": [
+    "aborto",
+    "infanticidio",
+    "estado puerperal",
+    "recem-nascido",
+    "docimasia",
+    "nascido vivo"
+   ]
+  },
+  "DBA26-CPC-6": {
+   "disciplina": "DIREITO PROCESSUAL CIVIL",
+   "numero": "6",
+   "rotulo": "Da formação, da suspensão e da extinção do processo.",
+   "termos_do_rotulo": [
+    "formacao",
+    "suspensao",
+    "extincao"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-PEN-5.1": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "5.1",
+   "rotulo": "Causas de exclusão da ilicitude: estado de necessidade, legítima defesa, estrito cumprimento do dever legal e exercício regular de direito; causas supralegais de exclusão da ilicitude.",
+   "termos_do_rotulo": [
+    "causas",
+    "exclusao",
+    "ilicitude",
+    "necessidade",
+    "legitima",
+    "defesa",
+    "estrito",
+    "cumprimento",
+    "dever",
+    "exercicio",
+    "regular",
+    "supralegais"
+   ],
+   "sinonimos": [
+    "legitima defesa",
+    "estado de necessidade",
+    "estrito cumprimento",
+    "exercicio regular",
+    "consentimento do ofendido",
+    "excludente de ilicitude",
+    "excesso punivel"
+   ]
+  },
+  "DBA26-CPP-9.2": {
+   "disciplina": "DIREITO PROCESSUAL PENAL",
+   "numero": "9.2",
+   "rotulo": "Citação, intimação, interdição de direito.",
+   "termos_do_rotulo": [
+    "citacao",
+    "intimacao",
+    "interdicao"
+   ],
+   "sinonimos": [
+    "citacao",
+    "intimacao",
+    "citacao por edital",
+    "citacao por hora certa"
+   ]
+  },
+  "DBA26-CRI-8": {
+   "disciplina": "CRIMINOLOGIA",
+   "numero": "8",
+   "rotulo": "A sociedade criminógena; Sociologia Criminal e Desorganização Social. 9 Teorias da subcultura delinquente e da anomia; A perspectiva interacionista.",
+   "termos_do_rotulo": [
+    "sociedade",
+    "criminogena",
+    "sociologia",
+    "criminal",
+    "desorganizacao",
+    "social",
+    "subcultura",
+    "delinquente",
+    "anomia",
+    "perspectiva",
+    "interacionista"
+   ],
+   "sinonimos": [
+    "sociedade criminogena",
+    "desorganizacao social",
+    "subcultura delinquente",
+    "anomia",
+    "interacionismo",
+    "interacionista"
+   ]
+  },
+  "DBA26-LPE-33": {
+   "disciplina": "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE",
+   "numero": "33",
+   "rotulo": "Lei Federal nº 11.105/2005 - Lei de Biossegurança.",
+   "termos_do_rotulo": [
+    "11.105",
+    "11105",
+    "biosseguranca"
+   ],
+   "sinonimos": [
+    "11.105",
+    "11105",
+    "biosseguranca",
+    "organismo geneticamente modificado",
+    "ctnbio",
+    "clonagem",
+    "celulas-tronco"
+   ]
+  },
+  "DBA26-TRI-6": {
+   "disciplina": "DIREITO TRIBUTÁRIO",
+   "numero": "6",
+   "rotulo": "Obrigação tributária.",
+   "termos_do_rotulo": [
+    "obrigacao",
+    "tributaria"
+   ],
+   "sinonimos": [
+    "obrigacao tributaria",
+    "obrigacao principal",
+    "obrigacao acessoria"
+   ]
+  },
+  "DBA26-CON-18": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "18",
+   "rotulo": "A República Federativa do Brasil.",
+   "termos_do_rotulo": [
+    "republica",
+    "federativa"
+   ],
+   "sinonimos": [
+    "fundamentos da republica",
+    "objetivos fundamentais",
+    "art. 1",
+    "dignidade da pessoa humana",
+    "pluralismo politico",
+    "soberania"
+   ]
+  },
+  "DBA26-PEN-6": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "6",
+   "rotulo": "Teoria geral da culpabilidade.",
+   "termos_do_rotulo": [
+    "culpabilidade"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-ADM-2.15": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "2.15",
+   "rotulo": "Mérito do ato administrativo, discricionariedade.",
+   "termos_do_rotulo": [
+    "merito",
+    "administrativo",
+    "discricionariedade"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-AMB-5-B2": {
+   "disciplina": "DIREITO AMBIENTAL",
+   "numero": "5",
+   "rotulo": "Lei Federal nº 9.605/1998 e respectivos regulamentos - Poder de Polícia Ambiental. Crimes e infrações administrativas contra o meio ambiente.",
+   "termos_do_rotulo": [
+    "9.605",
+    "9605",
+    "poder",
+    "policia",
+    "ambiental",
+    "infracoes",
+    "administrativas",
+    "contra",
+    "meio",
+    "ambiente"
+   ],
+   "sinonimos": [
+    "9.605",
+    "poder de policia ambiental",
+    "infracao administrativa ambiental",
+    "crime ambiental",
+    "crimes ambientais",
+    "fauna",
+    "flora"
+   ]
+  },
+  "DBA26-CPP-9.3": {
+   "disciplina": "DIREITO PROCESSUAL PENAL",
+   "numero": "9.3",
+   "rotulo": "Sentença: efeitos, coisa julgada, habeas corpus, mandado de segurança em matéria criminal.",
+   "termos_do_rotulo": [
+    "sentenca",
+    "coisa",
+    "julgada",
+    "habeas",
+    "corpus",
+    "mandado",
+    "seguranca",
+    "materia",
+    "criminal"
+   ],
+   "sinonimos": [
+    "coisa julgada",
+    "habeas corpus",
+    "mandado de seguranca em materia criminal",
+    "emendatio libelli",
+    "mutatio libelli",
+    "sentenca absolutoria",
+    "sentenca condenatoria"
+   ]
+  },
+  "DBA26-LPE-34": {
+   "disciplina": "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE",
+   "numero": "34",
+   "rotulo": "Decreto-Lei Federal nº 201/1967 - Crimes de Responsabilidade.",
+   "termos_do_rotulo": [
+    "decreto-lei",
+    "responsabilidade"
+   ],
+   "sinonimos": [
+    "decreto-lei 201",
+    "201/1967",
+    "201/67",
+    "crimes de responsabilidade",
+    "prefeito"
+   ]
+  },
+  "DBA26-MLE-10": {
+   "disciplina": "MEDICINA LEGAL",
+   "numero": "10",
+   "rotulo": "Modificadores e avaliação pericial da imputabilidade penal e da capacidade civil; Doença mental, desenvolvimento mental incompleto ou retardado, perturbação mental.",
+   "termos_do_rotulo": [
+    "modificadores",
+    "avaliacao",
+    "pericial",
+    "imputabilidade",
+    "penal",
+    "capacidade",
+    "civil",
+    "doenca",
+    "mental",
+    "desenvolvimento",
+    "incompleto",
+    "retardado",
+    "perturbacao"
+   ],
+   "sinonimos": [
+    "imputabilidade",
+    "capacidade civil",
+    "doenca mental",
+    "psicopatia",
+    "semi-imputabilidade",
+    "oligofrenia",
+    "psiquiatria forense"
+   ]
+  },
+  "DBA26-PEN-6.1": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "6.1",
+   "rotulo": "Fundamentos, conceito, elementos e conteúdo.",
+   "termos_do_rotulo": [
+    "elementos",
+    "conteudo"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-POR-7": {
+   "disciplina": "LÍNGUA PORTUGUESA",
+   "numero": "7",
+   "rotulo": "Elementos de coesão e suas funções no texto (referenciação, sequenciação).",
+   "termos_do_rotulo": [
+    "elementos",
+    "coesao",
+    "texto"
+   ],
+   "sinonimos": [
+    "coesao e coerencia",
+    "refere-se",
+    "pronomes demonstrativos",
+    "coesao",
+    "referenciacao",
+    "retoma",
+    "retomada",
+    "elemento coesivo",
+    "anafora",
+    "catafora",
+    "conectivo",
+    "sequenciacao",
+    "refere-se"
+   ]
+  },
+  "DBA26-CRI-10": {
+   "disciplina": "CRIMINOLOGIA",
+   "numero": "10",
+   "rotulo": "A Criminologia e o Paradigma da Reação Social.",
+   "termos_do_rotulo": [
+    "criminologia",
+    "paradigma",
+    "reacao",
+    "social"
+   ],
+   "sinonimos": [
+    "reacao social",
+    "labelling approach",
+    "etiquetamento",
+    "rotulacao",
+    "desvio secundario"
+   ]
+  },
+  "DBA26-CPP-10": {
+   "disciplina": "DIREITO PROCESSUAL PENAL",
+   "numero": "10",
+   "rotulo": "Processo criminal de crimes comuns.",
+   "termos_do_rotulo": [
+    "criminal",
+    "comuns"
+   ],
+   "sinonimos": [
+    "tribunal do juri",
+    "pronuncia",
+    "impronuncia",
+    "plenario do juri",
+    "jurados"
+   ]
+  },
+  "DBA26-CON-19": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "19",
+   "rotulo": "Poder e divisão de poderes.",
+   "termos_do_rotulo": [
+    "poder",
+    "divisao",
+    "poderes"
+   ],
+   "sinonimos": [
+    "separacao de poderes",
+    "freios e contrapesos",
+    "triparticao"
+   ]
+  },
+  "DBA26-RAC-3.3": {
+   "disciplina": "RACIOCÍNIO LÓGICO",
+   "numero": "3.3",
+   "rotulo": "Porcentagens. Equações e inequações de 1 0 e de 2 0 graus.",
+   "termos_do_rotulo": [
+    "porcentagens",
+    "equacoes",
+    "inequacoes",
+    "graus"
+   ],
+   "sinonimos": [
+    "porcentagem",
+    "percentual",
+    "%",
+    "equacao",
+    "inequacao",
+    "desconto",
+    "aumento de"
+   ]
+  },
+  "DBA26-LPE-35": {
+   "disciplina": "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE",
+   "numero": "35",
+   "rotulo": "Lei Federal nº 13.146/2015 - Crimes contra a Pessoa com Deficiência.",
+   "termos_do_rotulo": [
+    "13.146",
+    "13146",
+    "contra",
+    "pessoa",
+    "deficiencia"
+   ],
+   "sinonimos": [
+    "13.146",
+    "13146",
+    "pessoa com deficiencia",
+    "estatuto da pessoa com deficiencia"
+   ]
+  },
+  "DBA26-PEN-6.2": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "6.2",
+   "rotulo": "Princípio de culpabilidade.",
+   "termos_do_rotulo": [
+    "principio",
+    "culpabilidade"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-ADM-2.16": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "2.16",
+   "rotulo": "Ato administrativo inexistente.",
+   "termos_do_rotulo": [
+    "administrativo",
+    "inexistente"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-CPP-11": {
+   "disciplina": "DIREITO PROCESSUAL PENAL",
+   "numero": "11",
+   "rotulo": "Medidas Assecuratórias.",
+   "termos_do_rotulo": [
+    "medidas",
+    "assecuratorias"
+   ],
+   "sinonimos": [
+    "sequestro de bens",
+    "arresto",
+    "hipoteca legal",
+    "medidas assecuratorias",
+    "alienacao antecipada"
+   ]
+  },
+  "DBA26-INF-2.1": {
+   "disciplina": "INFORMÁTICA",
+   "numero": "2.1",
+   "rotulo": "Processador de Textos Word: área de trabalho, barras de ferramentas, botões e menus do Word.",
+   "termos_do_rotulo": [
+    "processador",
+    "textos",
+    "word",
+    "area",
+    "trabalho",
+    "barras",
+    "ferramentas",
+    "botoes",
+    "menus"
+   ],
+   "sinonimos": [
+    "word",
+    "writer",
+    "processador de texto",
+    "documento"
+   ]
+  },
+  "DBA26-MLE-11": {
+   "disciplina": "MEDICINA LEGAL",
+   "numero": "11",
+   "rotulo": "Aspectos médico-legais do testemunho, da confissão e da acareação.",
+   "termos_do_rotulo": [
+    "testemunho",
+    "confissao",
+    "acareacao"
+   ],
+   "sinonimos": [
+    "testemunho",
+    "confissao",
+    "acareacao",
+    "psicologia do testemunho"
+   ]
+  },
+  "DBA26-LPE-36": {
+   "disciplina": "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE",
+   "numero": "36",
+   "rotulo": "Lei Federal nº 13.260/2016 - Terrorismo.",
+   "termos_do_rotulo": [
+    "13.260",
+    "13260",
+    "terrorismo"
+   ],
+   "sinonimos": [
+    "13.260",
+    "13260",
+    "terrorismo",
+    "terrorista"
+   ]
+  },
+  "DBA26-CRI-11": {
+   "disciplina": "CRIMINOLOGIA",
+   "numero": "11",
+   "rotulo": "Criminologia na América Latina e as agências de controle.",
+   "termos_do_rotulo": [
+    "criminologia",
+    "america",
+    "latina",
+    "agencias",
+    "controle"
+   ],
+   "sinonimos": [
+    "america latina",
+    "agencias de controle",
+    "realismo marginal",
+    "zaffaroni"
+   ]
+  },
+  "DBA26-PRG-7": {
+   "disciplina": "PROMOÇÃO DA IGUALDADE RACIAL E DE GÊNERO",
+   "numero": "7",
+   "rotulo": "Lei Federal nº 11.340/2006 - Lei Maria da Penha.",
+   "termos_do_rotulo": [
+    "11.340",
+    "11340",
+    "maria",
+    "penha"
+   ],
+   "sinonimos": [
+    "11.340",
+    "maria da penha",
+    "violencia domestica"
+   ]
+  },
+  "DBA26-PEN-6.3": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "6.3",
+   "rotulo": "Culpabilidade e pena.",
+   "termos_do_rotulo": [
+    "culpabilidade",
+    "pena"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-CPP-12": {
+   "disciplina": "DIREITO PROCESSUAL PENAL",
+   "numero": "12",
+   "rotulo": "Prisão Domiciliar.",
+   "termos_do_rotulo": [
+    "prisao",
+    "domiciliar"
+   ],
+   "sinonimos": [
+    "prisao domiciliar"
+   ]
+  },
+  "DBA26-CON-20": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "20",
+   "rotulo": "Federalismo e descentralização do Estado brasileiro.",
+   "termos_do_rotulo": [
+    "federalismo",
+    "descentralizacao"
+   ],
+   "sinonimos": [
+    "federalismo",
+    "federacao",
+    "autonomia dos entes"
+   ]
+  },
+  "DBA26-LPE-37": {
+   "disciplina": "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE",
+   "numero": "37",
+   "rotulo": "Lei Federal nº 14.344/2022 - Violência Doméstica e Familiar contra a Criança e o Adolescente.",
+   "termos_do_rotulo": [
+    "14.344",
+    "14344",
+    "violencia",
+    "domestica",
+    "familiar",
+    "contra",
+    "crianca",
+    "adolescente"
+   ],
+   "sinonimos": [
+    "14.344",
+    "14344",
+    "henry borel"
+   ]
+  },
+  "DBA26-CIV-5-B2": {
+   "disciplina": "DIREITO CIVIL E EMPRESARIAL",
+   "numero": "5",
+   "rotulo": "Da posse (CC, Parte Especial, Livro III, Título I).",
+   "termos_do_rotulo": [
+    "posse"
+   ],
+   "sinonimos": [
+    "posse",
+    "possuidor",
+    "esbulho",
+    "turbacao",
+    "interditos possessorios"
+   ]
+  },
+  "DBA26-ADM-2.17": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "2.17",
+   "rotulo": "Teoria das nulidades no direito administrativo.",
+   "termos_do_rotulo": [
+    "nulidades",
+    "administrativo"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-PEN-6.4": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "6.4",
+   "rotulo": "Causas de exclusão da culpabilidade.",
+   "termos_do_rotulo": [
+    "causas",
+    "exclusao",
+    "culpabilidade"
+   ],
+   "sinonimos": [
+    "coacao moral irresistivel",
+    "obediencia hierarquica",
+    "inexigibilidade de conduta diversa",
+    "excludente de culpabilidade"
+   ]
+  },
+  "DBA26-MLE-12": {
+   "disciplina": "MEDICINA LEGAL",
+   "numero": "12",
+   "rotulo": "Cadeia de custódia, vestígios e evidências.",
+   "termos_do_rotulo": [
+    "cadeia",
+    "custodia",
+    "vestigios",
+    "evidencias"
+   ],
+   "sinonimos": [
+    "cadeia de custodia",
+    "vestigio",
+    "evidencia",
+    "158-a",
+    "158-b"
+   ]
+  },
+  "DBA26-CPC-7": {
+   "disciplina": "DIREITO PROCESSUAL CIVIL",
+   "numero": "7",
+   "rotulo": "Do processo de conhecimento e do cumprimento de sentença.",
+   "termos_do_rotulo": [
+    "conhecimento",
+    "cumprimento",
+    "sentenca"
+   ],
+   "sinonimos": [
+    "peticao inicial",
+    "contestacao",
+    "reconvencao",
+    "saneamento",
+    "sentenca",
+    "cumprimento de sentenca",
+    "revelia"
+   ]
+  },
+  "DBA26-CPP-13": {
+   "disciplina": "DIREITO PROCESSUAL PENAL",
+   "numero": "13",
+   "rotulo": "Outras Medidas Cautelares.",
+   "termos_do_rotulo": [
+    "medidas",
+    "cautelares"
+   ],
+   "sinonimos": [
+    "medidas cautelares diversas",
+    "monitoracao eletronica",
+    "comparecimento periodico",
+    "proibicao de ausentar",
+    "recolhimento domiciliar",
+    "art. 319"
+   ]
+  },
+  "DBA26-LPE-38": {
+   "disciplina": "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE",
+   "numero": "38",
+   "rotulo": "Lei Federal nº 13.431/2017 e Decreto Federal nº 9.603/2018 - Escuta especializada e depoimento especial de criança ou adolescente vítima ou testemunha de violência.",
+   "termos_do_rotulo": [
+    "13.431",
+    "9.603",
+    "13431",
+    "9603",
+    "escuta",
+    "especializada",
+    "depoimento",
+    "crianca",
+    "adolescente",
+    "vitima",
+    "testemunha",
+    "violencia"
+   ],
+   "sinonimos": [
+    "13.431",
+    "13431",
+    "9.603",
+    "escuta especializada",
+    "depoimento especial"
+   ]
+  },
+  "DBA26-CRI-12": {
+   "disciplina": "CRIMINOLOGIA",
+   "numero": "12",
+   "rotulo": "Criminologia e proposta Política Criminal.",
+   "termos_do_rotulo": [
+    "criminologia",
+    "proposta",
+    "politica",
+    "criminal"
+   ],
+   "sinonimos": [
+    "politica criminal"
+   ]
+  },
+  "DBA26-PEN-6.5": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "6.5",
+   "rotulo": "Imputabilidade.",
+   "termos_do_rotulo": [
+    "imputabilidade"
+   ],
+   "sinonimos": [
+    "inimputavel",
+    "semi-imputavel",
+    "imputabilidade",
+    "embriaguez",
+    "actio libera in causa",
+    "doenca mental",
+    "menores de 18",
+    "menor de 18"
+   ]
+  },
+  "DBA26-TRI-6.1": {
+   "disciplina": "DIREITO TRIBUTÁRIO",
+   "numero": "6.1",
+   "rotulo": "Conceito e espécies.",
+   "termos_do_rotulo": [],
+   "sinonimos": []
+  },
+  "DBA26-CON-21": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "21",
+   "rotulo": "Fundamentos constitucionais dos direitos e deveres fundamentais.",
+   "termos_do_rotulo": [
+    "constitucionais",
+    "deveres",
+    "fundamentais"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-CPP-14": {
+   "disciplina": "DIREITO PROCESSUAL PENAL",
+   "numero": "14",
+   "rotulo": "Procedimento comum: ordinário, sumário e sumaríssimo.",
+   "termos_do_rotulo": [
+    "comum",
+    "ordinario",
+    "sumario",
+    "sumarissimo"
+   ],
+   "sinonimos": [
+    "procedimento comum",
+    "rito ordinario",
+    "rito sumario",
+    "sumarissimo",
+    "resposta a acusacao",
+    "absolvicao sumaria",
+    "audiencia de instrucao"
+   ]
+  },
+  "DBA26-ADM-2.18": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "2.18",
+   "rotulo": "Atos administrativos nulos e anuláveis.",
+   "termos_do_rotulo": [
+    "atos",
+    "administrativos",
+    "nulos",
+    "anulaveis"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-AMB-6": {
+   "disciplina": "DIREITO AMBIENTAL",
+   "numero": "6",
+   "rotulo": "Decreto nº 6.514/2008 - Procedimento administrativo para apuração de infrações ambientais.",
+   "termos_do_rotulo": [
+    "6.514",
+    "6514",
+    "administrativo",
+    "apuracao",
+    "infracoes",
+    "ambientais"
+   ],
+   "sinonimos": [
+    "6.514",
+    "infracoes administrativas ambientais",
+    "auto de infracao",
+    "embargo de obra",
+    "multa consolidada"
+   ]
+  },
+  "DBA26-LPE-39": {
+   "disciplina": "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE",
+   "numero": "39",
+   "rotulo": "Lei Federal nº 15.358/2026 - Marco Legal de Combate ao Crime Organizado no Brasil.",
+   "termos_do_rotulo": [
+    "15.358",
+    "15358",
+    "marco",
+    "combate",
+    "organizado"
+   ],
+   "sinonimos": [
+    "15.358",
+    "15358",
+    "marco legal de combate ao crime organizado",
+    "faccao criminosa",
+    "faccao"
+   ]
+  },
+  "DBA26-PEN-6.6": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "6.6",
+   "rotulo": "Erro de proibição.",
+   "termos_do_rotulo": [
+    "erro",
+    "proibicao"
+   ],
+   "sinonimos": [
+    "erro de proibicao",
+    "potencial consciencia da ilicitude",
+    "erro de proibicao indireto"
+   ]
+  },
+  "DBA26-MLE-13": {
+   "disciplina": "MEDICINA LEGAL",
+   "numero": "13",
+   "rotulo": "Aspectos médico- legais da violência doméstica e familiar e da violência contra mulheres, crianças, adolescentes, idosos e pessoas com deficiência.",
+   "termos_do_rotulo": [
+    "medico-",
+    "violencia",
+    "domestica",
+    "familiar",
+    "contra",
+    "mulheres",
+    "criancas",
+    "adolescentes",
+    "idosos",
+    "pessoas",
+    "deficiencia"
+   ],
+   "sinonimos": [
+    "violencia domestica",
+    "maus-tratos",
+    "sindrome da crianca espancada",
+    "sindrome de silverman",
+    "violencia contra a mulher",
+    "idoso"
+   ]
+  },
+  "DBA26-CPP-15": {
+   "disciplina": "DIREITO PROCESSUAL PENAL",
+   "numero": "15",
+   "rotulo": "Meios de impugnação e ações autônomas.",
+   "termos_do_rotulo": [
+    "meios",
+    "impugnacao",
+    "acoes",
+    "autonomas"
+   ],
+   "sinonimos": [
+    "apelacao",
+    "recurso em sentido estrito",
+    "embargos infringentes",
+    "embargos de declaracao",
+    "revisao criminal",
+    "carta testemunhavel",
+    "agravo em execucao",
+    "recurso especial",
+    "recurso extraordinario"
+   ]
+  },
+  "DBA26-POR-8": {
+   "disciplina": "LÍNGUA PORTUGUESA",
+   "numero": "8",
+   "rotulo": "Função textual dos vocábulos.",
+   "termos_do_rotulo": [
+    "textual",
+    "vocabulos"
+   ],
+   "sinonimos": [
+    "funcao textual",
+    "vocabulo",
+    "expressao destacada",
+    "termo destacado"
+   ]
+  },
+  "DBA26-CRI-13": {
+   "disciplina": "CRIMINOLOGIA",
+   "numero": "13",
+   "rotulo": "Criminologia e Ciências Criminais.",
+   "termos_do_rotulo": [
+    "criminologia",
+    "ciencias",
+    "criminais"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-LPE-40": {
+   "disciplina": "LEGISLAÇÃO PENAL E PROCESSUAL PENAL EXTRAVAGANTE",
+   "numero": "40",
+   "rotulo": "Jurisprudência aplicada dos tribunais superiores e legislação aplicável a cada um dos tópicos do edital.",
+   "termos_do_rotulo": [],
+   "sinonimos": []
+  },
+  "DBA26-CON-22": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "22",
+   "rotulo": "Direitos e deveres individuais e coletivos.",
+   "termos_do_rotulo": [
+    "deveres",
+    "individuais",
+    "coletivos"
+   ],
+   "sinonimos": [
+    "direitos individuais",
+    "art. 5",
+    "inviolabilidade do domicilio",
+    "liberdade de expressao",
+    "sigilo de correspondencia",
+    "devido processo legal",
+    "contraditorio",
+    "ampla defesa",
+    "juiz natural",
+    "presuncao de inocencia",
+    "direito ao silencio"
+   ]
+  },
+  "DBA26-RAC-4": {
+   "disciplina": "RACIOCÍNIO LÓGICO",
+   "numero": "4",
+   "rotulo": "Sistemas lineares.",
+   "termos_do_rotulo": [
+    "lineares"
+   ],
+   "sinonimos": [
+    "sistema linear",
+    "sistemas lineares",
+    "incognitas"
+   ]
+  },
+  "DBA26-PEN-7": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "7",
+   "rotulo": "Concurso de agentes: autoria, coautoria e participação; conduta delituosa; resultado; relação de causalidade; imputação; comunicabilidade e incomunicabilidade de elementares e circunstâncias.",
+   "termos_do_rotulo": [
+    "concurso",
+    "agentes",
+    "autoria",
+    "coautoria",
+    "participacao",
+    "conduta",
+    "delituosa",
+    "resultado",
+    "relacao",
+    "causalidade",
+    "imputacao",
+    "comunicabilidade",
+    "incomunicabilidade",
+    "elementares",
+    "circunstancias"
+   ],
+   "sinonimos": [
+    "concurso de pessoas",
+    "coautoria",
+    "coautor",
+    "participe",
+    "participacao de menor importancia",
+    "autoria mediata",
+    "dominio do fato",
+    "comunicabilidade",
+    "elementares"
+   ]
+  },
+  "DBA26-CPP-15-B2": {
+   "disciplina": "DIREITO PROCESSUAL PENAL",
+   "numero": "15",
+   "rotulo": "Jurisprudência aplicada dos tribunais superiores e legislação aplicável a cada um dos tópicos do edital.",
+   "termos_do_rotulo": [],
+   "sinonimos": []
+  },
+  "DBA26-ADM-2.19": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "2.19",
+   "rotulo": "Vícios do ato administrativo.",
+   "termos_do_rotulo": [
+    "vicios",
+    "administrativo"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-PEN-8": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "8",
+   "rotulo": "Teoria geral da pena.",
+   "termos_do_rotulo": [
+    "pena"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-INF-2.1.1": {
+   "disciplina": "INFORMÁTICA",
+   "numero": "2.1.1",
+   "rotulo": "Formatação de documentos: recursos de margens, tabulação, recuo e espaçamento horizontal, espaçamento vertical, fontes e estilos (negrito, sublinhado, itálico, subscrito, sobrescrito etc.).",
+   "termos_do_rotulo": [
+    "formatacao",
+    "documentos",
+    "recursos",
+    "margens",
+    "tabulacao",
+    "recuo",
+    "espacamento",
+    "horizontal",
+    "vertical",
+    "fontes",
+    "estilos"
+   ],
+   "sinonimos": [
+    "margens",
+    "tabulacao",
+    "recuo",
+    "espacamento",
+    "negrito",
+    "italico",
+    "sublinhado",
+    "fonte",
+    "paragrafo"
+   ]
+  },
+  "DBA26-CRI-14": {
+   "disciplina": "CRIMINOLOGIA",
+   "numero": "14",
+   "rotulo": "Criminologia e o Sistema de Justiça Criminal.",
+   "termos_do_rotulo": [
+    "criminologia",
+    "justica",
+    "criminal"
+   ],
+   "sinonimos": [
+    "sistema de justica criminal",
+    "seletividade",
+    "cifra negra",
+    "cifra oculta",
+    "cifras"
+   ]
+  },
+  "DBA26-PEN-8.1": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "8.1",
+   "rotulo": "Cominação das penas.",
+   "termos_do_rotulo": [
+    "cominacao",
+    "penas"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-CON-23": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "23",
+   "rotulo": "Direito à vida, à liberdade, à igualdade, à segurança e à propriedade.",
+   "termos_do_rotulo": [
+    "vida",
+    "liberdade",
+    "igualdade",
+    "seguranca",
+    "propriedade"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-PRG-8": {
+   "disciplina": "PROMOÇÃO DA IGUALDADE RACIAL E DE GÊNERO",
+   "numero": "8",
+   "rotulo": "Código Penal Brasileiro (Artigo 140).",
+   "termos_do_rotulo": [
+    "codigo",
+    "penal"
+   ],
+   "sinonimos": [
+    "art. 140",
+    "injuria",
+    "injuria racial"
+   ]
+  },
+  "DBA26-PEN-8.2": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "8.2",
+   "rotulo": "Penas privativas de liberdade.",
+   "termos_do_rotulo": [
+    "penas",
+    "privativas",
+    "liberdade"
+   ],
+   "sinonimos": [
+    "reclusao",
+    "detencao",
+    "pena privativa"
+   ]
+  },
+  "DBA26-PEN-8.3": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "8.3",
+   "rotulo": "Penas restritivas de direitos.",
+   "termos_do_rotulo": [
+    "penas",
+    "restritivas"
+   ],
+   "sinonimos": [
+    "penas restritivas",
+    "prestacao de servicos a comunidade",
+    "interdicao temporaria",
+    "limitacao de fim de semana",
+    "prestacao pecuniaria",
+    "perda de bens"
+   ]
+  },
+  "DBA26-ADM-2.20": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "2.20",
+   "rotulo": "Teoria dos motivos determinantes.",
+   "termos_do_rotulo": [
+    "motivos",
+    "determinantes"
+   ],
+   "sinonimos": [
+    "motivos determinantes"
+   ]
+  },
+  "DBA26-PEN-8.4": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "8.4",
+   "rotulo": "Regimes de pena.",
+   "termos_do_rotulo": [
+    "regimes",
+    "pena"
+   ],
+   "sinonimos": [
+    "regime fechado",
+    "regime semiaberto",
+    "regime aberto",
+    "regime inicial",
+    "progressao de regime"
+   ]
+  },
+  "DBA26-CIV-6": {
+   "disciplina": "DIREITO CIVIL E EMPRESARIAL",
+   "numero": "6",
+   "rotulo": "Da propriedade (CC, Parte Especial, Livro III, Título III).",
+   "termos_do_rotulo": [
+    "propriedade"
+   ],
+   "sinonimos": [
+    "propriedade",
+    "usucapiao",
+    "condominio",
+    "direito de vizinhanca",
+    "aquisicao da propriedade"
+   ]
+  },
+  "DBA26-CRI-15": {
+   "disciplina": "CRIMINOLOGIA",
+   "numero": "15",
+   "rotulo": "Criminologia e o papel da Polícia Judiciária.",
+   "termos_do_rotulo": [
+    "criminologia",
+    "papel",
+    "policia",
+    "judiciaria"
+   ],
+   "sinonimos": [
+    "policia judiciaria",
+    "policiamento"
+   ]
+  },
+  "DBA26-PEN-8.5": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "8.5",
+   "rotulo": "Pena pecuniária.",
+   "termos_do_rotulo": [
+    "pena",
+    "pecuniaria"
+   ],
+   "sinonimos": [
+    "pena de multa",
+    "dias-multa",
+    "dias multa"
+   ]
+  },
+  "DBA26-CON-24": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "24",
+   "rotulo": "Direitos sociais.",
+   "termos_do_rotulo": [
+    "sociais"
+   ],
+   "sinonimos": [
+    "direitos sociais",
+    "art. 6",
+    "art. 7",
+    "direito ao trabalho",
+    "sindical",
+    "greve"
+   ]
+  },
+  "DBA26-CPC-8": {
+   "disciplina": "DIREITO PROCESSUAL CIVIL",
+   "numero": "8",
+   "rotulo": "Do processo de execução.",
+   "termos_do_rotulo": [
+    "execucao"
+   ],
+   "sinonimos": [
+    "processo de execucao",
+    "titulo executivo",
+    "penhora",
+    "embargos a execucao"
+   ]
+  },
+  "DBA26-PEN-8.6": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "8.6",
+   "rotulo": "Medidas de segurança.",
+   "termos_do_rotulo": [
+    "medidas",
+    "seguranca"
+   ],
+   "sinonimos": [
+    "medida de seguranca",
+    "internacao",
+    "tratamento ambulatorial",
+    "periculosidade"
+   ]
+  },
+  "DBA26-PEN-8.7": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "8.7",
+   "rotulo": "Aplicação da pena.",
+   "termos_do_rotulo": [
+    "pena"
+   ],
+   "sinonimos": [
+    "dosimetria",
+    "circunstancias judiciais",
+    "art. 59",
+    "agravante",
+    "atenuante",
+    "reincidencia",
+    "pena-base",
+    "trifasico"
+   ]
+  },
+  "DBA26-ADM-2.21": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "2.21",
+   "rotulo": "Revogação, anulação e convalidação do ato administrativo.",
+   "termos_do_rotulo": [
+    "revogacao",
+    "anulacao",
+    "convalidacao",
+    "administrativo"
+   ],
+   "sinonimos": [
+    "convalidacao",
+    "revogacao",
+    "anulacao"
+   ]
+  },
+  "DBA26-PEN-8.8": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "8.8",
+   "rotulo": "Elementares e circunstâncias.",
+   "termos_do_rotulo": [
+    "elementares",
+    "circunstancias"
+   ],
+   "sinonimos": [
+    "elementares",
+    "circunstancias",
+    "incomunicabilidade"
+   ]
+  },
+  "DBA26-TRI-6.2": {
+   "disciplina": "DIREITO TRIBUTÁRIO",
+   "numero": "6.2",
+   "rotulo": "Fato gerador e hipótese de incidência.",
+   "termos_do_rotulo": [
+    "fato",
+    "gerador",
+    "hipotese",
+    "incidencia"
+   ],
+   "sinonimos": [
+    "fato gerador",
+    "hipotese de incidencia"
+   ]
+  },
+  "DBA26-CRI-16": {
+   "disciplina": "CRIMINOLOGIA",
+   "numero": "16",
+   "rotulo": "A criminologia no Estado Democrático de Direito.",
+   "termos_do_rotulo": [
+    "criminologia",
+    "democratico"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-PEN-8.9": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "8.9",
+   "rotulo": "Causas de aumento e de diminuição das penas.",
+   "termos_do_rotulo": [
+    "causas",
+    "aumento",
+    "diminuicao",
+    "penas"
+   ],
+   "sinonimos": [
+    "causa de aumento",
+    "causa de diminuicao",
+    "majorante",
+    "minorante"
+   ]
+  },
+  "DBA26-CON-25": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "25",
+   "rotulo": "Nacionalidade.",
+   "termos_do_rotulo": [
+    "nacionalidade"
+   ],
+   "sinonimos": [
+    "nacionalidade",
+    "brasileiro nato",
+    "naturalizado",
+    "naturalizacao",
+    "extradicao",
+    "perda da nacionalidade"
+   ]
+  },
+  "DBA26-AMB-7": {
+   "disciplina": "DIREITO AMBIENTAL",
+   "numero": "7",
+   "rotulo": "Lei Federal nº 15.190/2025 - Lei Geral do Licenciamento Ambiental.",
+   "termos_do_rotulo": [
+    "15.190",
+    "15190",
+    "licenciamento",
+    "ambiental"
+   ],
+   "sinonimos": [
+    "15.190",
+    "licenciamento ambiental",
+    "licenca previa",
+    "licenca de instalacao",
+    "licenca de operacao",
+    "licenca por adesao"
+   ]
+  },
+  "DBA26-PEN-8.10": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "8.10",
+   "rotulo": "Fins da pena.",
+   "termos_do_rotulo": [
+    "fins",
+    "pena"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-PEN-8.11": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "8.11",
+   "rotulo": "Livramento condicional e suspensão condicional da pena.",
+   "termos_do_rotulo": [
+    "livramento",
+    "condicional",
+    "suspensao",
+    "pena"
+   ],
+   "sinonimos": [
+    "livramento condicional",
+    "sursis",
+    "suspensao condicional da pena"
+   ]
+  },
+  "DBA26-ADM-3": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "3",
+   "rotulo": "Poderes da administração pública.",
+   "termos_do_rotulo": [
+    "poderes"
+   ],
+   "sinonimos": [
+    "poderes administrativos",
+    "poder vinculado",
+    "poder discricionario"
+   ]
+  },
+  "DBA26-PEN-8.12": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "8.12",
+   "rotulo": "Efeitos da condenação.",
+   "termos_do_rotulo": [
+    "condenacao"
+   ],
+   "sinonimos": [
+    "efeitos da condenacao",
+    "perda do cargo",
+    "efeito extrapenal",
+    "confisco",
+    "reabilitacao"
+   ]
+  },
+  "DBA26-POR-9": {
+   "disciplina": "LÍNGUA PORTUGUESA",
+   "numero": "9",
+   "rotulo": "Redação Oficial (conforme Manual de Redação da Presidência da República): aspectos gerais, gêneros textuais, finalidade dos principais modelos; níveis de linguagem, adequação linguística, análise de atos oficiais.",
+   "termos_do_rotulo": [
+    "redacao",
+    "oficial",
+    "generos",
+    "textuais",
+    "niveis",
+    "linguagem",
+    "adequacao",
+    "linguistica",
+    "analise",
+    "atos",
+    "oficiais"
+   ],
+   "sinonimos": [
+    "redacao oficial",
+    "manual de redacao",
+    "oficio",
+    "pronomes de tratamento",
+    "vossa excelencia",
+    "vossa senhoria",
+    "padrao oficio",
+    "comunicacoes oficiais"
+   ]
+  },
+  "DBA26-CON-26": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "26",
+   "rotulo": "Cidadania e direitos políticos.",
+   "termos_do_rotulo": [
+    "cidadania",
+    "politicos"
+   ],
+   "sinonimos": [
+    "direitos politicos",
+    "inelegibilidade",
+    "inelegivel",
+    "alistamento eleitoral",
+    "elegibilidade",
+    "suspensao dos direitos politicos"
+   ]
+  },
+  "DBA26-PEN-8.13": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "8.13",
+   "rotulo": "Execução penal.",
+   "termos_do_rotulo": [
+    "execucao",
+    "penal"
+   ],
+   "sinonimos": [
+    "execucao penal",
+    "remicao",
+    "lep"
+   ]
+  },
+  "DBA26-ADM-3.1": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "3.1",
+   "rotulo": "Hierarquia: poder hierárquico e suas manifestações.",
+   "termos_do_rotulo": [
+    "hierarquia",
+    "poder",
+    "hierarquico",
+    "manifestacoes"
+   ],
+   "sinonimos": [
+    "poder hierarquico",
+    "delegacao",
+    "avocacao",
+    "hierarquia"
+   ]
+  },
+  "DBA26-RAC-5": {
+   "disciplina": "RACIOCÍNIO LÓGICO",
+   "numero": "5",
+   "rotulo": "Funções e gráficos.",
+   "termos_do_rotulo": [
+    "graficos"
+   ],
+   "sinonimos": [
+    "funcao",
+    "grafico",
+    "funcao afim",
+    "funcao quadratica"
+   ]
+  },
+  "DBA26-PEN-9": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "9",
+   "rotulo": "Extinção da punibilidade.",
+   "termos_do_rotulo": [
+    "extincao",
+    "punibilidade"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-PEN-9.1": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "9.1",
+   "rotulo": "Conceito, causas gerais e específicas, momentos de ocorrência.",
+   "termos_do_rotulo": [
+    "causas",
+    "especificas",
+    "momentos",
+    "ocorrencia"
+   ],
+   "sinonimos": [
+    "extincao da punibilidade",
+    "perdao judicial",
+    "decadencia",
+    "perempcao",
+    "renuncia",
+    "anistia",
+    "graca",
+    "indulto",
+    "retratacao"
+   ]
+  },
+  "DBA26-CON-27": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "27",
+   "rotulo": "Partidos políticos.",
+   "termos_do_rotulo": [
+    "partidos",
+    "politicos"
+   ],
+   "sinonimos": [
+    "partidos politicos",
+    "fidelidade partidaria"
+   ]
+  },
+  "DBA26-PEN-9.2": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "9.2",
+   "rotulo": "Prescrição: conceito, teorias, prazos para o cálculo da prescrição, termos iniciais, causas suspensivas ou impeditivas, causas interruptivas.",
+   "termos_do_rotulo": [
+    "prescricao",
+    "prazos",
+    "calculo",
+    "termos",
+    "iniciais",
+    "causas",
+    "suspensivas",
+    "impeditivas",
+    "interruptivas"
+   ],
+   "sinonimos": [
+    "prescricao",
+    "prescricional",
+    "pretensao punitiva",
+    "pretensao executoria",
+    "prescricao retroativa",
+    "prescricao intercorrente"
+   ]
+  },
+  "DBA26-INF-2.1.2": {
+   "disciplina": "INFORMÁTICA",
+   "numero": "2.1.2",
+   "rotulo": "Organização do texto em listas e colunas.",
+   "termos_do_rotulo": [
+    "organizacao",
+    "texto",
+    "listas",
+    "colunas"
+   ],
+   "sinonimos": [
+    "listas",
+    "colunas",
+    "marcadores",
+    "numeracao"
+   ]
+  },
+  "DBA26-ADM-3.2": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "3.2",
+   "rotulo": "Poder disciplinar.",
+   "termos_do_rotulo": [
+    "poder",
+    "disciplinar"
+   ],
+   "sinonimos": [
+    "poder disciplinar",
+    "sancao disciplinar"
+   ]
+  },
+  "DBA26-PEN-10": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "10",
+   "rotulo": "Crimes.",
+   "termos_do_rotulo": [],
+   "sinonimos": []
+  },
+  "DBA26-CON-28": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "28",
+   "rotulo": "Garantias constitucionais individuais.",
+   "termos_do_rotulo": [
+    "garantias",
+    "constitucionais",
+    "individuais"
+   ],
+   "sinonimos": [
+    "garantias individuais",
+    "garantias constitucionais"
+   ]
+  },
+  "DBA26-PRG-9": {
+   "disciplina": "PROMOÇÃO DA IGUALDADE RACIAL E DE GÊNERO",
+   "numero": "9",
+   "rotulo": "Lei Federal n° 9.455/1997 - Crimes de Tortura.",
+   "termos_do_rotulo": [
+    "9.455",
+    "9455",
+    "tortura"
+   ],
+   "sinonimos": [
+    "9.455",
+    "tortura"
+   ]
+  },
+  "DBA26-PEN-10.1": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "10.1",
+   "rotulo": "Crimes contra a pessoa.",
+   "termos_do_rotulo": [
+    "contra",
+    "pessoa"
+   ],
+   "sinonimos": [
+    "homicidio",
+    "feminicidio",
+    "lesao corporal",
+    "infanticidio",
+    "aborto",
+    "induzimento",
+    "instigacao",
+    "rixa",
+    "calunia",
+    "difamacao",
+    "injuria",
+    "constrangimento ilegal",
+    "ameaca",
+    "sequestro",
+    "carcere privado",
+    "reducao a condicao analoga",
+    "violacao de domicilio",
+    "perseguicao",
+    "stalking",
+    "maus-tratos",
+    "omissao de socorro",
+    "periclitacao",
+    "abandono de incapaz",
+    "trafico de pessoas",
+    "violencia psicologica"
+   ]
+  },
+  "DBA26-PEN-10.2": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "10.2",
+   "rotulo": "Crimes contra o patrimônio.",
+   "termos_do_rotulo": [
+    "contra",
+    "patrimonio"
+   ],
+   "sinonimos": [
+    "furto",
+    "roubo",
+    "extorsao",
+    "latrocinio",
+    "estelionato",
+    "apropriacao indebita",
+    "receptacao",
+    "dano",
+    "usurpacao",
+    "esbulho",
+    "fraude eletronica",
+    "escusa absolutoria"
+   ]
+  },
+  "DBA26-ADM-3.3": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "3.3",
+   "rotulo": "Poder de polícia.",
+   "termos_do_rotulo": [
+    "poder",
+    "policia"
+   ],
+   "sinonimos": [
+    "poder de policia",
+    "policia administrativa",
+    "atributos do poder de policia",
+    "coercibilidade"
+   ]
+  },
+  "DBA26-PEN-10.3": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "10.3",
+   "rotulo": "Crimes contra a propriedade imaterial.",
+   "termos_do_rotulo": [
+    "contra",
+    "propriedade",
+    "imaterial"
+   ],
+   "sinonimos": [
+    "propriedade imaterial",
+    "violacao de direito autoral"
+   ]
+  },
+  "DBA26-CIV-7": {
+   "disciplina": "DIREITO CIVIL E EMPRESARIAL",
+   "numero": "7",
+   "rotulo": "Lei de Introdução às normas do Direito Brasileiro.",
+   "termos_do_rotulo": [
+    "normas"
+   ],
+   "sinonimos": [
+    "lindb",
+    "lei de introducao",
+    "4.657",
+    "vigencia da lei",
+    "vacatio legis",
+    "repristinacao",
+    "antinomia"
+   ]
+  },
+  "DBA26-CON-29": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "29",
+   "rotulo": "Garantias dos direitos coletivos, sociais e políticos.",
+   "termos_do_rotulo": [
+    "garantias",
+    "coletivos",
+    "sociais",
+    "politicos"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-PEN-10.4": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "10.4",
+   "rotulo": "Crimes contra a propriedade intelectual.",
+   "termos_do_rotulo": [
+    "contra",
+    "propriedade",
+    "intelectual"
+   ],
+   "sinonimos": [
+    "direito autoral",
+    "propriedade intelectual"
+   ]
+  },
+  "DBA26-ADM-3.4": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "3.4",
+   "rotulo": "Liberdades públicas e poder de polícia.",
+   "termos_do_rotulo": [
+    "liberdades",
+    "publicas",
+    "poder",
+    "policia"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-CPC-9": {
+   "disciplina": "DIREITO PROCESSUAL CIVIL",
+   "numero": "9",
+   "rotulo": "Dos processos nos Tribunais e dos meios de impugnação das decisões judiciais.",
+   "termos_do_rotulo": [
+    "processos",
+    "meios",
+    "impugnacao",
+    "decisoes",
+    "judiciais"
+   ],
+   "sinonimos": [
+    "apelacao",
+    "agravo de instrumento",
+    "recurso especial",
+    "recurso extraordinario",
+    "incidente de resolucao de demandas repetitivas",
+    "irdr",
+    "acao rescisoria",
+    "embargos de declaracao"
+   ]
+  },
+  "DBA26-PEN-10.5": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "10.5",
+   "rotulo": "Crimes contra a organização do trabalho.",
+   "termos_do_rotulo": [
+    "contra",
+    "organizacao",
+    "trabalho"
+   ],
+   "sinonimos": [
+    "organizacao do trabalho",
+    "atentado contra a liberdade de trabalho",
+    "frustracao de direito"
+   ]
+  },
+  "DBA26-PEN-10.6": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "10.6",
+   "rotulo": "Crimes contra o sentimento religioso e contra o respeito aos mortos.",
+   "termos_do_rotulo": [
+    "contra",
+    "sentimento",
+    "religioso",
+    "respeito",
+    "mortos"
+   ],
+   "sinonimos": [
+    "sentimento religioso",
+    "respeito aos mortos",
+    "vilipendio",
+    "destruicao de cadaver",
+    "ultraje a culto"
+   ]
+  },
+  "DBA26-CON-30": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "30",
+   "rotulo": "Remédios de Direito Constitucional.",
+   "termos_do_rotulo": [
+    "remedios",
+    "constitucional"
+   ],
+   "sinonimos": [
+    "habeas corpus",
+    "mandado de seguranca",
+    "mandado de injuncao",
+    "habeas data",
+    "acao popular",
+    "remedios constitucionais"
+   ]
+  },
+  "DBA26-PEN-10.7": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "10.7",
+   "rotulo": "Crimes contra a dignidade sexual.",
+   "termos_do_rotulo": [
+    "contra",
+    "dignidade",
+    "sexual"
+   ],
+   "sinonimos": [
+    "estupro",
+    "estupro de vulneravel",
+    "importunacao sexual",
+    "assedio sexual",
+    "dignidade sexual",
+    "favorecimento da prostituicao",
+    "registro nao autorizado",
+    "violacao sexual mediante fraude"
+   ]
+  },
+  "DBA26-TRI-6.3": {
+   "disciplina": "DIREITO TRIBUTÁRIO",
+   "numero": "6.3",
+   "rotulo": "Sujeitos ativo e passivo.",
+   "termos_do_rotulo": [
+    "sujeitos",
+    "ativo",
+    "passivo"
+   ],
+   "sinonimos": [
+    "sujeito ativo",
+    "sujeito passivo",
+    "contribuinte",
+    "responsavel tributario"
+   ]
+  },
+  "DBA26-ADM-3.5": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "3.5",
+   "rotulo": "Poder Regulamentar.",
+   "termos_do_rotulo": [
+    "poder",
+    "regulamentar"
+   ],
+   "sinonimos": [
+    "poder regulamentar",
+    "decreto autonomo",
+    "decreto regulamentar"
+   ]
+  },
+  "DBA26-PEN-10.8": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "10.8",
+   "rotulo": "Crimes contra a família.",
+   "termos_do_rotulo": [
+    "contra",
+    "familia"
+   ],
+   "sinonimos": [
+    "bigamia",
+    "abandono material",
+    "abandono intelectual",
+    "crimes contra a familia",
+    "registro de nascimento inexistente",
+    "parto suposto"
+   ]
+  },
+  "DBA26-CON-31": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "31",
+   "rotulo": "Organização do Estado Brasileiro.",
+   "termos_do_rotulo": [
+    "organizacao"
+   ],
+   "sinonimos": [
+    "organizacao do estado",
+    "competencia privativa",
+    "competencia comum",
+    "competencia concorrente",
+    "bens da uniao"
+   ]
+  },
+  "DBA26-AMB-8": {
+   "disciplina": "DIREITO AMBIENTAL",
+   "numero": "8",
+   "rotulo": "Lei Federal Complementar nº 140/2011.",
+   "termos_do_rotulo": [
+    "complementar"
+   ],
+   "sinonimos": [
+    "lei complementar 140",
+    "lc 140",
+    "competencia ambiental",
+    "cooperacao"
+   ]
+  },
+  "DBA26-PEN-10.9": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "10.9",
+   "rotulo": "Crimes contra a incolumidade pública.",
+   "termos_do_rotulo": [
+    "contra",
+    "incolumidade"
+   ],
+   "sinonimos": [
+    "incendio",
+    "explosao",
+    "incolumidade publica",
+    "perigo comum",
+    "envenenamento de agua"
+   ]
+  },
+  "DBA26-PEN-10.10": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "10.10",
+   "rotulo": "Crimes contra a paz pública.",
+   "termos_do_rotulo": [
+    "contra"
+   ],
+   "sinonimos": [
+    "associacao criminosa",
+    "incitacao ao crime",
+    "apologia",
+    "constituicao de milicia",
+    "paz publica"
+   ]
+  },
+  "DBA26-ADM-4": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "4",
+   "rotulo": "Serviços públicos: regulação, concessão, permissão e autorização do serviço público.",
+   "termos_do_rotulo": [
+    "servicos",
+    "publicos",
+    "regulacao",
+    "concessao",
+    "permissao",
+    "autorizacao",
+    "servico"
+   ],
+   "sinonimos": [
+    "servico publico",
+    "servicos publicos",
+    "concessao",
+    "permissao de servico",
+    "8.987",
+    "concessionaria",
+    "tarifa"
+   ]
+  },
+  "DBA26-PEN-10.11": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "10.11",
+   "rotulo": "Crimes contra a fé pública.",
+   "termos_do_rotulo": [
+    "contra"
+   ],
+   "sinonimos": [
+    "moeda falsa",
+    "falsidade ideologica",
+    "falsificacao de documento",
+    "uso de documento falso",
+    "falsa identidade",
+    "fe publica",
+    "falsidade material"
+   ]
+  },
+  "DBA26-POR-10": {
+   "disciplina": "LÍNGUA PORTUGUESA",
+   "numero": "10",
+   "rotulo": "Variação linguística: norma culta.",
+   "termos_do_rotulo": [
+    "variacao",
+    "linguistica",
+    "norma",
+    "culta"
+   ],
+   "sinonimos": [
+    "variacao linguistica",
+    "norma culta",
+    "norma-padrao",
+    "linguagem informal",
+    "coloquial",
+    "variedade"
+   ]
+  },
+  "DBA26-CON-32": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "32",
+   "rotulo": "Organização Política Administrativa.",
+   "termos_do_rotulo": [
+    "organizacao",
+    "politica",
+    "administrativa"
+   ],
+   "sinonimos": [
+    "organizacao politico-administrativa",
+    "uniao, estados",
+    "municipios",
+    "distrito federal",
+    "territorios"
+   ]
+  },
+  "DBA26-PEN-10.12": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "10.12",
+   "rotulo": "Crimes contra a administração pública.",
+   "termos_do_rotulo": [
+    "contra"
+   ],
+   "sinonimos": [
+    "peculato",
+    "concussao",
+    "corrupcao passiva",
+    "corrupcao ativa",
+    "prevaricacao",
+    "condescendencia criminosa",
+    "advocacia administrativa",
+    "desacato",
+    "resistencia",
+    "desobediencia",
+    "trafico de influencia",
+    "contrabando",
+    "descaminho",
+    "denunciacao caluniosa",
+    "falso testemunho",
+    "fraude processual",
+    "favorecimento pessoal",
+    "favorecimento real",
+    "excesso de exacao",
+    "emprego irregular",
+    "abandono de funcao",
+    "violacao de sigilo funcional",
+    "exercicio arbitrario",
+    "comunicacao falsa",
+    "coacao no curso do processo",
+    "funcionario publico"
+   ]
+  },
+  "DBA26-ADM-5": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "5",
+   "rotulo": "Intervenção do Estado sobre a propriedade privada e Intervenção do Estado no domínio econômico.",
+   "termos_do_rotulo": [
+    "intervencao",
+    "propriedade",
+    "privada",
+    "dominio",
+    "economico"
+   ],
+   "sinonimos": [
+    "desapropriacao",
+    "servidao administrativa",
+    "requisicao administrativa",
+    "ocupacao temporaria",
+    "tombamento",
+    "limitacao administrativa",
+    "intervencao no dominio economico"
+   ]
+  },
+  "DBA26-RAC-6": {
+   "disciplina": "RACIOCÍNIO LÓGICO",
+   "numero": "6",
+   "rotulo": "Princípios de contagem.",
+   "termos_do_rotulo": [
+    "principios",
+    "contagem"
+   ],
+   "sinonimos": [
+    "principio fundamental da contagem",
+    "anagrama",
+    "permutacao",
+    "arranjo",
+    "combinacao",
+    "de quantas maneiras",
+    "quantas formas"
+   ]
+  },
+  "DBA26-PEN-10.13": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "10.13",
+   "rotulo": "Crimes contra as finanças públicas.",
+   "termos_do_rotulo": [
+    "contra",
+    "financas",
+    "publicas"
+   ],
+   "sinonimos": [
+    "financas publicas",
+    "ordenacao de despesa",
+    "assuncao de obrigacao"
+   ]
+  },
+  "DBA26-PEN-10.14": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "10.14",
+   "rotulo": "Crimes contra o Estado Democrático de Direito.",
+   "termos_do_rotulo": [
+    "contra",
+    "democratico"
+   ],
+   "sinonimos": [
+    "estado democratico de direito",
+    "golpe de estado",
+    "abolicao violenta",
+    "atentado a soberania",
+    "sabotagem"
+   ]
+  },
+  "DBA26-CON-33": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "33",
+   "rotulo": "Intervenção do Estado e Municípios.",
+   "termos_do_rotulo": [
+    "intervencao",
+    "municipios"
+   ],
+   "sinonimos": [
+    "intervencao federal",
+    "intervencao estadual"
+   ]
+  },
+  "DBA26-PEN-11": {
+   "disciplina": "DIREITO PENAL",
+   "numero": "11",
+   "rotulo": "Jurisprudência aplicada dos tribunais superiores e legislação aplicável a cada um dos tópicos do edital.",
+   "termos_do_rotulo": [],
+   "sinonimos": []
+  },
+  "DBA26-INF-2.1.3": {
+   "disciplina": "INFORMÁTICA",
+   "numero": "2.1.3",
+   "rotulo": "Estilos e modelos.",
+   "termos_do_rotulo": [
+    "estilos"
+   ],
+   "sinonimos": [
+    "estilos",
+    "modelos"
+   ]
+  },
+  "DBA26-ADM-6": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "6",
+   "rotulo": "Bens públicos.",
+   "termos_do_rotulo": [
+    "bens",
+    "publicos"
+   ],
+   "sinonimos": [
+    "bens publicos",
+    "bens dominicais",
+    "bens de uso comum",
+    "bens de uso especial",
+    "imprescritibilidade",
+    "impenhorabilidade",
+    "afetacao",
+    "desafetacao"
+   ]
+  },
+  "DBA26-CON-34": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "34",
+   "rotulo": "A Administração Pública.",
+   "termos_do_rotulo": [],
+   "sinonimos": [
+    "art. 37",
+    "concurso publico",
+    "acumulacao de cargos",
+    "teto remuneratorio",
+    "estabilidade"
+   ]
+  },
+  "DBA26-PRG-10": {
+   "disciplina": "PROMOÇÃO DA IGUALDADE RACIAL E DE GÊNERO",
+   "numero": "10",
+   "rotulo": "Lei Federal n° 2.889/1956 - Define e pune o Crime de Genocídio.",
+   "termos_do_rotulo": [
+    "2.889",
+    "2889",
+    "define",
+    "pune",
+    "genocidio"
+   ],
+   "sinonimos": [
+    "2.889",
+    "genocidio"
+   ]
+  },
+  "DBA26-ADM-6.1": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "6.1",
+   "rotulo": "Regime jurídico.",
+   "termos_do_rotulo": [
+    "regime",
+    "juridico"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-CIV-8": {
+   "disciplina": "DIREITO CIVIL E EMPRESARIAL",
+   "numero": "8",
+   "rotulo": "Lei Federal nº 8.078/1990 - Código de Defesa do Consumidor.",
+   "termos_do_rotulo": [
+    "8.078",
+    "8078",
+    "codigo",
+    "defesa",
+    "consumidor"
+   ],
+   "sinonimos": [
+    "8.078",
+    "codigo de defesa do consumidor",
+    "consumidor",
+    "fornecedor",
+    "relacao de consumo",
+    "vicio do produto",
+    "fato do produto"
+   ]
+  },
+  "DBA26-CON-35": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "35",
+   "rotulo": "Servidores Civis e Militares.",
+   "termos_do_rotulo": [
+    "servidores",
+    "civis",
+    "militares"
+   ],
+   "sinonimos": [
+    "servidores publicos",
+    "militares dos estados",
+    "regime proprio",
+    "aposentadoria"
+   ]
+  },
+  "DBA26-ADM-6.2": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "6.2",
+   "rotulo": "Aquisição e alienação dos bens públicos.",
+   "termos_do_rotulo": [
+    "aquisicao",
+    "alienacao",
+    "bens",
+    "publicos"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-CPC-10": {
+   "disciplina": "DIREITO PROCESSUAL CIVIL",
+   "numero": "10",
+   "rotulo": "Ação civil pública, ação popular e mandado de segurança.",
+   "termos_do_rotulo": [
+    "acao",
+    "civil",
+    "popular",
+    "mandado",
+    "seguranca"
+   ],
+   "sinonimos": [
+    "acao civil publica",
+    "acao popular",
+    "mandado de seguranca",
+    "7.347",
+    "4.717",
+    "12.016"
+   ]
+  },
+  "DBA26-CON-36": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "36",
+   "rotulo": "Organização dos Poderes.",
+   "termos_do_rotulo": [
+    "organizacao",
+    "poderes"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-TRI-6.4": {
+   "disciplina": "DIREITO TRIBUTÁRIO",
+   "numero": "6.4",
+   "rotulo": "Solidariedade.",
+   "termos_do_rotulo": [
+    "solidariedade"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-ADM-6.3": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "6.3",
+   "rotulo": "Formas de utilização dos bens públicos pelos particulares.",
+   "termos_do_rotulo": [
+    "utilizacao",
+    "bens",
+    "publicos",
+    "pelos",
+    "particulares"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-CON-37": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "37",
+   "rotulo": "Poderes da União.",
+   "termos_do_rotulo": [
+    "poderes",
+    "uniao"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-AMB-9": {
+   "disciplina": "DIREITO AMBIENTAL",
+   "numero": "9",
+   "rotulo": "Lei Federal nº 6.938/1981 - Política Nacional do Meio Ambiente.",
+   "termos_do_rotulo": [
+    "6.938",
+    "6938",
+    "politica",
+    "meio",
+    "ambiente"
+   ],
+   "sinonimos": [
+    "6.938",
+    "politica nacional do meio ambiente",
+    "sisnama",
+    "conama",
+    "estudo de impacto",
+    "eia",
+    "rima"
+   ]
+  },
+  "DBA26-ADM-7": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "7",
+   "rotulo": "Lei Federal nº 14.133/2021 - Licitações e Contratos Administrativos.",
+   "termos_do_rotulo": [
+    "14.133",
+    "14133",
+    "licitacoes",
+    "contratos",
+    "administrativos"
+   ],
+   "sinonimos": [
+    "14.133",
+    "14133",
+    "licitacao",
+    "licitacoes",
+    "pregao",
+    "concorrencia",
+    "dialogo competitivo",
+    "leilao",
+    "concurso",
+    "dispensa de licitacao",
+    "inexigibilidade",
+    "contratacao direta",
+    "contrato administrativo",
+    "clausulas exorbitantes",
+    "agente de contratacao"
+   ]
+  },
+  "DBA26-RAC-7": {
+   "disciplina": "RACIOCÍNIO LÓGICO",
+   "numero": "7",
+   "rotulo": "Progressões aritméticas e geométricas.",
+   "termos_do_rotulo": [
+    "progressoes",
+    "aritmeticas",
+    "geometricas"
+   ],
+   "sinonimos": [
+    "progressao aritmetica",
+    "progressao geometrica",
+    "sequencia",
+    "termo geral",
+    "razao da progressao"
+   ]
+  },
+  "DBA26-CON-38": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "38",
+   "rotulo": "Sistema de Governo.",
+   "termos_do_rotulo": [
+    "governo"
+   ],
+   "sinonimos": [
+    "presidencialismo",
+    "parlamentarismo",
+    "sistema de governo"
+   ]
+  },
+  "DBA26-ADM-8": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "8",
+   "rotulo": "Lei nº 11.079/2004 - Institui normas gerais para licitação e contratação de parceria público-privada no âmbito da administração pública.",
+   "termos_do_rotulo": [
+    "11.079",
+    "11079",
+    "institui",
+    "normas",
+    "licitacao",
+    "contratacao",
+    "parceria",
+    "publico-privada"
+   ],
+   "sinonimos": [
+    "11.079",
+    "parceria publico-privada",
+    "ppp",
+    "concessao patrocinada",
+    "concessao administrativa"
+   ]
+  },
+  "DBA26-INF-2.1.4": {
+   "disciplina": "INFORMÁTICA",
+   "numero": "2.1.4",
+   "rotulo": "Cabeçalhos e rodapés.",
+   "termos_do_rotulo": [
+    "cabecalhos",
+    "rodapes"
+   ],
+   "sinonimos": [
+    "cabecalho",
+    "rodape"
+   ]
+  },
+  "DBA26-CON-39": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "39",
+   "rotulo": "Poder Legislativo: fundamento, atribuições, garantias de independência.",
+   "termos_do_rotulo": [
+    "poder",
+    "legislativo",
+    "atribuicoes",
+    "garantias",
+    "independencia"
+   ],
+   "sinonimos": [
+    "poder legislativo",
+    "congresso nacional",
+    "camara dos deputados",
+    "senado federal",
+    "cpi",
+    "comissao parlamentar de inquerito",
+    "imunidade parlamentar",
+    "tribunal de contas"
+   ]
+  },
+  "DBA26-PRG-11": {
+   "disciplina": "PROMOÇÃO DA IGUALDADE RACIAL E DE GÊNERO",
+   "numero": "11",
+   "rotulo": "Lei Federal nº 7.437/1985 - Lei Caó.",
+   "termos_do_rotulo": [
+    "7.437",
+    "7437"
+   ],
+   "sinonimos": [
+    "7.437",
+    "lei cao"
+   ]
+  },
+  "DBA26-ADM-9": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "9",
+   "rotulo": "Convênios administrativos e consórcios públicos.",
+   "termos_do_rotulo": [
+    "convenios",
+    "administrativos",
+    "consorcios",
+    "publicos"
+   ],
+   "sinonimos": [
+    "convenio",
+    "consorcio publico",
+    "consorcios publicos",
+    "11.107"
+   ]
+  },
+  "DBA26-CON-40": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "40",
+   "rotulo": "Processo Legislativo: conceito, objeto, espécies de atos normativos e procedimentos.",
+   "termos_do_rotulo": [
+    "legislativo",
+    "atos",
+    "normativos"
+   ],
+   "sinonimos": [
+    "processo legislativo",
+    "medida provisoria",
+    "lei complementar",
+    "lei ordinaria",
+    "lei delegada",
+    "decreto legislativo",
+    "resolucao",
+    "sancao",
+    "veto",
+    "iniciativa"
+   ]
+  },
+  "DBA26-CIV-9": {
+   "disciplina": "DIREITO CIVIL E EMPRESARIAL",
+   "numero": "9",
+   "rotulo": "Lei Federal nº 10.741/2003 - Estatuto da Pessoa Idosa.",
+   "termos_do_rotulo": [
+    "10.741",
+    "10741",
+    "estatuto",
+    "pessoa",
+    "idosa"
+   ],
+   "sinonimos": [
+    "10.741",
+    "estatuto da pessoa idosa",
+    "idoso"
+   ]
+  },
+  "DBA26-ADM-10": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "10",
+   "rotulo": "Controle e responsabilização da administração: controle administrativo, controle judicial, controle legislativo.",
+   "termos_do_rotulo": [
+    "controle",
+    "responsabilizacao",
+    "administrativo",
+    "judicial",
+    "legislativo"
+   ],
+   "sinonimos": [
+    "controle administrativo",
+    "controle judicial",
+    "controle legislativo",
+    "tribunal de contas",
+    "controle externo",
+    "controle interno"
+   ]
+  },
+  "DBA26-CPC-11": {
+   "disciplina": "DIREITO PROCESSUAL CIVIL",
+   "numero": "11",
+   "rotulo": "Juizados Especiais Cíveis e da Fazenda Pública.",
+   "termos_do_rotulo": [
+    "juizados",
+    "especiais",
+    "civeis",
+    "fazenda"
+   ],
+   "sinonimos": [
+    "juizados especiais civeis",
+    "fazenda publica",
+    "12.153"
+   ]
+  },
+  "DBA26-CON-41": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "41",
+   "rotulo": "Poder Executivo.",
+   "termos_do_rotulo": [
+    "poder",
+    "executivo"
+   ],
+   "sinonimos": [
+    "poder executivo",
+    "presidente da republica",
+    "vice-presidente",
+    "ministros de estado"
+   ]
+  },
+  "DBA26-ADM-11": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "11",
+   "rotulo": "Agentes públicos: espécies e classificação.",
+   "termos_do_rotulo": [
+    "agentes",
+    "publicos"
+   ],
+   "sinonimos": [
+    "agentes publicos",
+    "agentes politicos",
+    "servidores publicos",
+    "empregados publicos",
+    "particulares em colaboracao"
+   ]
+  },
+  "DBA26-TRI-6.5": {
+   "disciplina": "DIREITO TRIBUTÁRIO",
+   "numero": "6.5",
+   "rotulo": "Capacidade tributária.",
+   "termos_do_rotulo": [
+    "capacidade",
+    "tributaria"
+   ],
+   "sinonimos": [
+    "capacidade tributaria"
+   ]
+  },
+  "DBA26-CON-42": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "42",
+   "rotulo": "Forma e Sistema de Governo.",
+   "termos_do_rotulo": [
+    "governo"
+   ],
+   "sinonimos": [
+    "forma de governo",
+    "republica",
+    "monarquia"
+   ]
+  },
+  "DBA26-AMB-10": {
+   "disciplina": "DIREITO AMBIENTAL",
+   "numero": "10",
+   "rotulo": "Resolução CONAMA nº 428/2010 e respectivos regulamentos.",
+   "termos_do_rotulo": [
+    "resolucao",
+    "conama"
+   ],
+   "sinonimos": [
+    "conama 428",
+    "resolucao conama"
+   ]
+  },
+  "DBA26-ADM-11.1": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "11.1",
+   "rotulo": "Cargo, emprego e função públicos.",
+   "termos_do_rotulo": [
+    "cargo",
+    "emprego",
+    "publicos"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-CON-43": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "43",
+   "rotulo": "Chefia de Estado e de Governo.",
+   "termos_do_rotulo": [
+    "chefia",
+    "governo"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-RAC-8": {
+   "disciplina": "RACIOCÍNIO LÓGICO",
+   "numero": "8",
+   "rotulo": "Compreensão de estruturas lógicas.",
+   "termos_do_rotulo": [
+    "compreensao",
+    "estruturas",
+    "logicas"
+   ],
+   "sinonimos": [
+    "estrutura logica",
+    "estruturas logicas",
+    "sequencia logica",
+    "sequencias logicas",
+    "padrao"
+   ]
+  },
+  "DBA26-ADM-11.2": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "11.2",
+   "rotulo": "Formas de provimento e vacância dos cargos públicos.",
+   "termos_do_rotulo": [
+    "provimento",
+    "vacancia",
+    "cargos",
+    "publicos"
+   ],
+   "sinonimos": [
+    "provimento",
+    "vacancia",
+    "nomeacao",
+    "readaptacao",
+    "reversao",
+    "aproveitamento",
+    "reintegracao",
+    "reconducao",
+    "exoneracao",
+    "demissao"
+   ]
+  },
+  "DBA26-INF-2.1.5": {
+   "disciplina": "INFORMÁTICA",
+   "numero": "2.1.5",
+   "rotulo": "Configuração de página.",
+   "termos_do_rotulo": [
+    "configuracao",
+    "pagina"
+   ],
+   "sinonimos": [
+    "configuracao de pagina",
+    "orientacao",
+    "retrato",
+    "paisagem",
+    "tamanho do papel"
+   ]
+  },
+  "DBA26-CON-44": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "44",
+   "rotulo": "Atribuições e responsabilidade do Presidente da República.",
+   "termos_do_rotulo": [
+    "atribuicoes",
+    "responsabilidade",
+    "presidente",
+    "republica"
+   ],
+   "sinonimos": [
+    "crime de responsabilidade",
+    "impeachment",
+    "responsabilidade do presidente"
+   ]
+  },
+  "DBA26-ADM-11.3": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "11.3",
+   "rotulo": "Responsabilidade civil, penal e administrativa.",
+   "termos_do_rotulo": [
+    "responsabilidade",
+    "civil",
+    "penal",
+    "administrativa"
+   ],
+   "sinonimos": [
+    "responsabilidade civil do estado",
+    "responsabilidade objetiva",
+    "art. 37, 6",
+    "acao regressiva",
+    "risco administrativo",
+    "responsabilidade do servidor"
+   ]
+  },
+  "DBA26-PRG-12": {
+   "disciplina": "PROMOÇÃO DA IGUALDADE RACIAL E DE GÊNERO",
+   "numero": "12",
+   "rotulo": "Lei Estadual n° 14.521/2022 - Secretaria de Promoção da Igualdade Racial e dos Povos e Comunidades Tradicionais.",
+   "termos_do_rotulo": [
+    "14.521",
+    "14521",
+    "secretaria",
+    "promocao",
+    "igualdade",
+    "racial",
+    "povos",
+    "comunidades",
+    "tradicionais"
+   ],
+   "sinonimos": [
+    "14.521",
+    "sepromi",
+    "povos e comunidades tradicionais"
+   ]
+  },
+  "DBA26-CON-45": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "45",
+   "rotulo": "Poder Judiciário e organização da Justiça Brasileira.",
+   "termos_do_rotulo": [
+    "poder",
+    "judiciario",
+    "organizacao",
+    "justica"
+   ],
+   "sinonimos": [
+    "poder judiciario",
+    "supremo tribunal federal",
+    "superior tribunal de justica",
+    "cnj",
+    "conselho nacional de justica",
+    "quinto constitucional",
+    "sumula vinculante"
+   ]
+  },
+  "DBA26-CIV-10": {
+   "disciplina": "DIREITO CIVIL E EMPRESARIAL",
+   "numero": "10",
+   "rotulo": "Lei Federal nº 13.146/2015 - Estatuto da Pessoa com Deficiência.",
+   "termos_do_rotulo": [
+    "13.146",
+    "13146",
+    "estatuto",
+    "pessoa",
+    "deficiencia"
+   ],
+   "sinonimos": [
+    "13.146",
+    "estatuto da pessoa com deficiencia",
+    "pessoa com deficiencia",
+    "tomada de decisao apoiada",
+    "curatela"
+   ]
+  },
+  "DBA26-ADM-12": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "12",
+   "rotulo": "Sistemas administrativos: sistema inglês, sistema francês e sistema adotado no Brasil.",
+   "termos_do_rotulo": [
+    "administrativos",
+    "ingles",
+    "frances",
+    "adotado"
+   ],
+   "sinonimos": [
+    "sistema ingles",
+    "sistema frances",
+    "jurisdicao una",
+    "contencioso administrativo"
+   ]
+  },
+  "DBA26-CON-46": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "46",
+   "rotulo": "Garantias do Poder Judiciário.",
+   "termos_do_rotulo": [
+    "garantias",
+    "poder",
+    "judiciario"
+   ],
+   "sinonimos": [
+    "vitaliciedade",
+    "inamovibilidade",
+    "irredutibilidade de subsidios"
+   ]
+  },
+  "DBA26-CPC-12": {
+   "disciplina": "DIREITO PROCESSUAL CIVIL",
+   "numero": "12",
+   "rotulo": "Jurisprudência aplicada dos tribunais superiores e legislação aplicável a cada um dos tópicos do edital.",
+   "termos_do_rotulo": [],
+   "sinonimos": []
+  },
+  "DBA26-ADM-12.1": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "12.1",
+   "rotulo": "Administração Pública.",
+   "termos_do_rotulo": [],
+   "sinonimos": []
+  },
+  "DBA26-TRI-6.6": {
+   "disciplina": "DIREITO TRIBUTÁRIO",
+   "numero": "6.6",
+   "rotulo": "Domicílio tributário.",
+   "termos_do_rotulo": [
+    "domicilio",
+    "tributario"
+   ],
+   "sinonimos": [
+    "domicilio tributario"
+   ]
+  },
+  "DBA26-CON-47": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "47",
+   "rotulo": "Funções essenciais da Justiça.",
+   "termos_do_rotulo": [
+    "essenciais",
+    "justica"
+   ],
+   "sinonimos": [
+    "ministerio publico",
+    "defensoria publica",
+    "advocacia publica",
+    "advocacia",
+    "funcoes essenciais"
+   ]
+  },
+  "DBA26-ADM-12.2": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "12.2",
+   "rotulo": "Administração Pública em sentido amplo e em sentido estrito.",
+   "termos_do_rotulo": [
+    "sentido",
+    "amplo",
+    "estrito"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-AMB-11": {
+   "disciplina": "DIREITO AMBIENTAL",
+   "numero": "11",
+   "rotulo": "Organização dos Sistemas Nacionais de Meio Ambiente e de Unidades de Conservação (SISNAMA e SNUC): Proteção e conservação da biodiversidade; Legislação e tratados para a proteção das espécies ameaçadas; Biossegurança e controle de Organismos Geneticamente Modificados (OGM); Lei Federal nº 13.123/2015.",
+   "termos_do_rotulo": [
+    "13.123",
+    "13123",
+    "organizacao",
+    "nacionais",
+    "meio",
+    "ambiente",
+    "unidades",
+    "conservacao",
+    "protecao",
+    "biodiversidade",
+    "tratados",
+    "ameacadas",
+    "biosseguranca",
+    "controle",
+    "organismos",
+    "geneticamente",
+    "modificados"
+   ],
+   "sinonimos": [
+    "sisnama",
+    "snuc",
+    "biodiversidade",
+    "patrimonio genetico"
+   ]
+  },
+  "DBA26-CON-48": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "48",
+   "rotulo": "Defesa do Estado e das instituições Democráticas.",
+   "termos_do_rotulo": [
+    "defesa",
+    "instituicoes",
+    "democraticas"
+   ],
+   "sinonimos": [
+    "estado de defesa",
+    "estado de sitio",
+    "defesa do estado"
+   ]
+  },
+  "DBA26-RAC-9": {
+   "disciplina": "RACIOCÍNIO LÓGICO",
+   "numero": "9",
+   "rotulo": "Lógica de argumentação: analogias, inferências, deduções e conclusões.",
+   "termos_do_rotulo": [
+    "logica",
+    "argumentacao",
+    "analogias",
+    "inferencias",
+    "deducoes",
+    "conclusoes"
+   ],
+   "sinonimos": [
+    "argumento",
+    "argumento valido",
+    "premissas",
+    "conclusao",
+    "inferencia",
+    "deducao",
+    "silogismo",
+    "analogia"
+   ]
+  },
+  "DBA26-ADM-13": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "13",
+   "rotulo": "Administração Pública em sentido objetivo e em sentido subjetivo.",
+   "termos_do_rotulo": [
+    "sentido",
+    "objetivo",
+    "subjetivo"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-CON-49": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "49",
+   "rotulo": "Forças Armadas e destinação constitucional.",
+   "termos_do_rotulo": [
+    "forcas",
+    "armadas",
+    "destinacao",
+    "constitucional"
+   ],
+   "sinonimos": [
+    "forcas armadas"
+   ]
+  },
+  "DBA26-INF-2.2": {
+   "disciplina": "INFORMÁTICA",
+   "numero": "2.2",
+   "rotulo": "Planilha Eletrônica - Excel: área de trabalho, barras de ferramentas, botões e menus do Excel; deslocamento do cursor na planilha; seleção de células, linhas e colunas.",
+   "termos_do_rotulo": [
+    "planilha",
+    "eletronica",
+    "excel",
+    "area",
+    "trabalho",
+    "barras",
+    "ferramentas",
+    "botoes",
+    "menus",
+    "deslocamento",
+    "cursor",
+    "selecao",
+    "celulas",
+    "linhas",
+    "colunas"
+   ],
+   "sinonimos": [
+    "excel",
+    "calc",
+    "planilha",
+    "celula",
+    "celulas",
+    "pasta de trabalho"
+   ]
+  },
+  "DBA26-ADM-14": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "14",
+   "rotulo": "Regime jurídico-administrativo.",
+   "termos_do_rotulo": [
+    "regime",
+    "juridico-administrativo"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-PRG-13": {
+   "disciplina": "PROMOÇÃO DA IGUALDADE RACIAL E DE GÊNERO",
+   "numero": "13",
+   "rotulo": "Lei Estadual nº 13.182/2014 - Estatuto da Igualdade Racial e de Combate à Intolerância Religiosa do Estado da Bahia.",
+   "termos_do_rotulo": [
+    "13.182",
+    "13182",
+    "estatuto",
+    "igualdade",
+    "racial",
+    "combate",
+    "intolerancia",
+    "religiosa",
+    "bahia"
+   ],
+   "sinonimos": [
+    "13.182",
+    "intolerancia religiosa",
+    "estatuto da igualdade racial e de combate"
+   ]
+  },
+  "DBA26-CON-50": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "50",
+   "rotulo": "Organização da Segurança Pública.",
+   "termos_do_rotulo": [
+    "organizacao",
+    "seguranca"
+   ],
+   "sinonimos": [
+    "seguranca publica",
+    "art. 144",
+    "policia civil",
+    "policia federal",
+    "policia militar",
+    "policias penais",
+    "guardas municipais"
+   ]
+  },
+  "DBA26-ADM-15": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "15",
+   "rotulo": "Administração Pública: organização, descentralização, desconcentração, órgãos públicos.",
+   "termos_do_rotulo": [
+    "organizacao",
+    "descentralizacao",
+    "desconcentracao",
+    "orgaos",
+    "publicos"
+   ],
+   "sinonimos": [
+    "descentralizacao",
+    "desconcentracao",
+    "orgaos publicos",
+    "teoria do orgao"
+   ]
+  },
+  "DBA26-CIV-11": {
+   "disciplina": "DIREITO CIVIL E EMPRESARIAL",
+   "numero": "11",
+   "rotulo": "Lei Federal nº 11.101/2005.",
+   "termos_do_rotulo": [
+    "11.101",
+    "11101"
+   ],
+   "sinonimos": [
+    "11.101",
+    "recuperacao judicial",
+    "recuperacao extrajudicial",
+    "falencia",
+    "administrador judicial"
+   ]
+  },
+  "DBA26-CON-51": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "51",
+   "rotulo": "Sistema Tributário Nacional, princípios e limitações do poder de tributar.",
+   "termos_do_rotulo": [
+    "tributario",
+    "principios",
+    "limitacoes",
+    "poder",
+    "tributar"
+   ],
+   "sinonimos": [
+    "limitacoes ao poder de tributar",
+    "imunidade tributaria"
+   ]
+  },
+  "DBA26-TRI-7": {
+   "disciplina": "DIREITO TRIBUTÁRIO",
+   "numero": "7",
+   "rotulo": "Crédito tributário:",
+   "termos_do_rotulo": [
+    "credito",
+    "tributario"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-ADM-16": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "16",
+   "rotulo": "Administração indireta e entidades paralelas.",
+   "termos_do_rotulo": [
+    "indireta",
+    "entidades",
+    "paralelas"
+   ],
+   "sinonimos": [
+    "administracao indireta",
+    "autarquia",
+    "fundacao publica",
+    "empresa publica",
+    "sociedade de economia mista",
+    "terceiro setor",
+    "organizacoes sociais",
+    "oscip",
+    "entidades paraestatais",
+    "servicos sociais autonomos"
+   ]
+  },
+  "DBA26-CON-52": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "52",
+   "rotulo": "Finanças Públicas: planos, diretrizes orçamentárias e orçamentos.",
+   "termos_do_rotulo": [
+    "financas",
+    "publicas",
+    "planos",
+    "diretrizes",
+    "orcamentarias",
+    "orcamentos"
+   ],
+   "sinonimos": [
+    "orcamento",
+    "lei orcamentaria",
+    "diretrizes orcamentarias",
+    "plano plurianual"
+   ]
+  },
+  "DBA26-AMB-12": {
+   "disciplina": "DIREITO AMBIENTAL",
+   "numero": "12",
+   "rotulo": "Responsabilidade ambiental: conceito de dano, reparação ambiental e responsabilidade civil, administrativa e penal ambiental.",
+   "termos_do_rotulo": [
+    "responsabilidade",
+    "ambiental",
+    "dano",
+    "reparacao",
+    "civil",
+    "administrativa",
+    "penal"
+   ],
+   "sinonimos": [
+    "responsabilidade ambiental",
+    "dano ambiental",
+    "reparacao",
+    "responsabilidade objetiva",
+    "risco integral",
+    "propter rem",
+    "responsabilidade administrativa ambiental"
+   ]
+  },
+  "DBA26-ADM-17": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "17",
+   "rotulo": "Conceito.",
+   "termos_do_rotulo": [],
+   "sinonimos": []
+  },
+  "DBA26-RAC-10": {
+   "disciplina": "RACIOCÍNIO LÓGICO",
+   "numero": "10",
+   "rotulo": "Lógica sentencial (ou proposicional).",
+   "termos_do_rotulo": [
+    "logica",
+    "sentencial"
+   ],
+   "sinonimos": [
+    "proposicao",
+    "logica proposicional",
+    "logica sentencial",
+    "conectivo"
+   ]
+  },
+  "DBA26-CON-53": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "53",
+   "rotulo": "Sistema Financeiro Nacional: fundamento legal, instituições e funcionamento.",
+   "termos_do_rotulo": [
+    "financeiro",
+    "instituicoes",
+    "funcionamento"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-ADM-17.1": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "17.1",
+   "rotulo": "Conteúdo: supremacia do interesse público sobre o privado e indisponibilidade, pela Administração, dos interesses púbicos.",
+   "termos_do_rotulo": [
+    "conteudo",
+    "supremacia",
+    "interesse",
+    "privado",
+    "indisponibilidade",
+    "pela",
+    "interesses",
+    "pubicos"
+   ],
+   "sinonimos": [
+    "supremacia do interesse publico",
+    "indisponibilidade do interesse publico"
+   ]
+  },
+  "DBA26-INF-2.2.1": {
+   "disciplina": "INFORMÁTICA",
+   "numero": "2.2.1",
+   "rotulo": "Introdução de números, textos, fórmulas e datas na planilha; referência absoluta e relativa.",
+   "termos_do_rotulo": [
+    "numeros",
+    "textos",
+    "formulas",
+    "datas",
+    "planilha",
+    "referencia",
+    "absoluta",
+    "relativa"
+   ],
+   "sinonimos": [
+    "referencia absoluta",
+    "referencia relativa",
+    "formula",
+    "$",
+    "=a1",
+    "intervalo"
+   ]
+  },
+  "DBA26-CON-54": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "54",
+   "rotulo": "Ordem social, base e objetivos.",
+   "termos_do_rotulo": [
+    "ordem",
+    "social",
+    "base",
+    "objetivos"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-PRG-14": {
+   "disciplina": "PROMOÇÃO DA IGUALDADE RACIAL E DE GÊNERO",
+   "numero": "14",
+   "rotulo": "Lei Federal nº 10.678/2003 e suas alterações.",
+   "termos_do_rotulo": [
+    "10.678",
+    "10678"
+   ],
+   "sinonimos": [
+    "10.678",
+    "secretaria especial de politicas de promocao da igualdade racial",
+    "seppir"
+   ]
+  },
+  "DBA26-ADM-17.2": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "17.2",
+   "rotulo": "Princípios expressos e implícitos da administração pública.",
+   "termos_do_rotulo": [
+    "principios",
+    "expressos",
+    "implicitos"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-CON-55": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "55",
+   "rotulo": "Seguridade Social.",
+   "termos_do_rotulo": [
+    "seguridade",
+    "social"
+   ],
+   "sinonimos": [
+    "seguridade social",
+    "previdencia social",
+    "assistencia social",
+    "saude"
+   ]
+  },
+  "DBA26-CIV-12": {
+   "disciplina": "DIREITO CIVIL E EMPRESARIAL",
+   "numero": "12",
+   "rotulo": "Jurisprudência aplicada dos tribunais superiores e legislação aplicável a cada um dos tópicos do edital.",
+   "termos_do_rotulo": [],
+   "sinonimos": []
+  },
+  "DBA26-ADM-18": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "18",
+   "rotulo": "Agências reguladoras.",
+   "termos_do_rotulo": [
+    "agencias",
+    "reguladoras"
+   ],
+   "sinonimos": [
+    "agencias reguladoras",
+    "agencia reguladora"
+   ]
+  },
+  "DBA26-TRI-7.1": {
+   "disciplina": "DIREITO TRIBUTÁRIO",
+   "numero": "7.1",
+   "rotulo": "Conceito.",
+   "termos_do_rotulo": [],
+   "sinonimos": []
+  },
+  "DBA26-CON-56": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "56",
+   "rotulo": "Educação, Cultura e Desporto.",
+   "termos_do_rotulo": [
+    "educacao",
+    "cultura",
+    "desporto"
+   ],
+   "sinonimos": [
+    "educacao",
+    "cultura",
+    "desporto"
+   ]
+  },
+  "DBA26-ADM-19": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "19",
+   "rotulo": "Processo administrativo.",
+   "termos_do_rotulo": [
+    "administrativo"
+   ],
+   "sinonimos": [
+    "processo administrativo",
+    "9.784",
+    "9784"
+   ]
+  },
+  "DBA26-AMB-13": {
+   "disciplina": "DIREITO AMBIENTAL",
+   "numero": "13",
+   "rotulo": "Lei Federal nº 9.433/1997 - Política Nacional de Recursos Hídricos.",
+   "termos_do_rotulo": [
+    "9.433",
+    "9433",
+    "politica",
+    "recursos",
+    "hidricos"
+   ],
+   "sinonimos": [
+    "9.433",
+    "recursos hidricos",
+    "outorga",
+    "bacia hidrografica"
+   ]
+  },
+  "DBA26-CON-57": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "57",
+   "rotulo": "Ciência, Tecnologia e inovação.",
+   "termos_do_rotulo": [
+    "ciencia",
+    "tecnologia",
+    "inovacao"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-RAC-10.1": {
+   "disciplina": "RACIOCÍNIO LÓGICO",
+   "numero": "10.1",
+   "rotulo": "Proposições simples e compostas.",
+   "termos_do_rotulo": [
+    "proposicoes",
+    "simples",
+    "compostas"
+   ],
+   "sinonimos": [
+    "proposicao simples",
+    "proposicao composta",
+    "conjuncao",
+    "disjuncao",
+    "condicional",
+    "bicondicional",
+    "se ... entao",
+    "negacao"
+   ]
+  },
+  "DBA26-ADM-20": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "20",
+   "rotulo": "Poderes e deveres da administração pública.",
+   "termos_do_rotulo": [
+    "poderes",
+    "deveres"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-CON-58": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "58",
+   "rotulo": "Comunicação Social.",
+   "termos_do_rotulo": [
+    "comunicacao",
+    "social"
+   ],
+   "sinonimos": [
+    "comunicacao social",
+    "liberdade de imprensa"
+   ]
+  },
+  "DBA26-INF-2.2.2": {
+   "disciplina": "INFORMÁTICA",
+   "numero": "2.2.2",
+   "rotulo": "Principais funções do Excel: matemáticas, estatísticas, data e hora, financeiras e de texto.",
+   "termos_do_rotulo": [
+    "excel",
+    "matematicas",
+    "estatisticas",
+    "data",
+    "hora",
+    "financeiras",
+    "texto"
+   ],
+   "sinonimos": [
+    "funcao soma",
+    "=soma",
+    "=se",
+    "media",
+    "procv",
+    "cont.se",
+    "somase",
+    "=hoje",
+    "=agora",
+    "concatenar",
+    "maximo",
+    "minimo",
+    "funcoes do excel"
+   ]
+  },
+  "DBA26-ADM-21": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "21",
+   "rotulo": "Poder regulamentar.",
+   "termos_do_rotulo": [
+    "poder",
+    "regulamentar"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-PRG-15": {
+   "disciplina": "PROMOÇÃO DA IGUALDADE RACIAL E DE GÊNERO",
+   "numero": "15",
+   "rotulo": "Lei Federal nº 13.341/2016.",
+   "termos_do_rotulo": [
+    "13.341",
+    "13341"
+   ],
+   "sinonimos": [
+    "13.341"
+   ]
+  },
+  "DBA26-CON-59": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "59",
+   "rotulo": "Meio Ambiente.",
+   "termos_do_rotulo": [
+    "meio",
+    "ambiente"
+   ],
+   "sinonimos": [
+    "meio ambiente",
+    "art. 225"
+   ]
+  },
+  "DBA26-ADM-21.1": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "21.1",
+   "rotulo": "Dever de agir.",
+   "termos_do_rotulo": [
+    "dever",
+    "agir"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-TRI-7.2": {
+   "disciplina": "DIREITO TRIBUTÁRIO",
+   "numero": "7.2",
+   "rotulo": "Natureza.",
+   "termos_do_rotulo": [],
+   "sinonimos": []
+  },
+  "DBA26-CON-60": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "60",
+   "rotulo": "Família, criança, adolescente, jovem e idoso.",
+   "termos_do_rotulo": [
+    "familia",
+    "crianca",
+    "adolescente",
+    "jovem",
+    "idoso"
+   ],
+   "sinonimos": [
+    "familia",
+    "crianca",
+    "adolescente",
+    "jovem",
+    "idoso",
+    "art. 227"
+   ]
+  },
+  "DBA26-AMB-14": {
+   "disciplina": "DIREITO AMBIENTAL",
+   "numero": "14",
+   "rotulo": "Lei Federal nº 12.305/2010 - Política Nacional de Resíduos Sólidos.",
+   "termos_do_rotulo": [
+    "12.305",
+    "12305",
+    "politica",
+    "residuos",
+    "solidos"
+   ],
+   "sinonimos": [
+    "12.305",
+    "residuos solidos",
+    "logistica reversa"
+   ]
+  },
+  "DBA26-ADM-21.2": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "21.2",
+   "rotulo": "Dever de eficiência.",
+   "termos_do_rotulo": [
+    "dever",
+    "eficiencia"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-CON-61": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "61",
+   "rotulo": "Decreto Federal nº 678/1992 - Convenção Americana sobre Direitos Humanos (Pacto de São José da Costa Rica).",
+   "termos_do_rotulo": [
+    "convencao",
+    "americana",
+    "humanos"
+   ],
+   "sinonimos": [
+    "convencao americana",
+    "pacto de sao jose",
+    "corte interamericana",
+    "678/1992"
+   ]
+  },
+  "DBA26-RAC-10.2": {
+   "disciplina": "RACIOCÍNIO LÓGICO",
+   "numero": "10.2",
+   "rotulo": "Tabelas-verdade.",
+   "termos_do_rotulo": [
+    "tabelas-verdade"
+   ],
+   "sinonimos": [
+    "tabela-verdade",
+    "tabela verdade",
+    "tautologia",
+    "contradicao",
+    "contingencia",
+    "valor logico"
+   ]
+  },
+  "DBA26-ADM-21.3": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "21.3",
+   "rotulo": "Dever de probidade.",
+   "termos_do_rotulo": [
+    "dever",
+    "probidade"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-INF-2.2.3": {
+   "disciplina": "INFORMÁTICA",
+   "numero": "2.2.3",
+   "rotulo": "Formatação de planilhas: número, alinhamento, bordas, fontes e padrões.",
+   "termos_do_rotulo": [
+    "formatacao",
+    "planilhas",
+    "numero",
+    "alinhamento",
+    "bordas",
+    "fontes",
+    "padroes"
+   ],
+   "sinonimos": [
+    "formatacao condicional",
+    "formatar celulas",
+    "bordas",
+    "alinhamento"
+   ]
+  },
+  "DBA26-CON-62": {
+   "disciplina": "DIREITO CONSTITUCIONAL",
+   "numero": "62",
+   "rotulo": "Jurisprudência aplicada dos tribunais superiores e legislação aplicável a cada um dos tópicos do edital.",
+   "termos_do_rotulo": [],
+   "sinonimos": []
+  },
+  "DBA26-ADM-21.4": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "21.4",
+   "rotulo": "Dever de prestação de contas.",
+   "termos_do_rotulo": [
+    "dever",
+    "prestacao",
+    "contas"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-PRG-16": {
+   "disciplina": "PROMOÇÃO DA IGUALDADE RACIAL E DE GÊNERO",
+   "numero": "16",
+   "rotulo": "Lei Federal 14.600/2023.",
+   "termos_do_rotulo": [
+    "14.600",
+    "14600"
+   ],
+   "sinonimos": [
+    "14.600",
+    "ministerio da igualdade racial",
+    "ministerio das mulheres"
+   ]
+  },
+  "DBA26-ADM-21.5": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "21.5",
+   "rotulo": "Uso e abuso do poder.",
+   "termos_do_rotulo": [
+    "abuso",
+    "poder"
+   ],
+   "sinonimos": [
+    "abuso de poder",
+    "excesso de poder",
+    "desvio de finalidade",
+    "desvio de poder"
+   ]
+  },
+  "DBA26-TRI-7.3": {
+   "disciplina": "DIREITO TRIBUTÁRIO",
+   "numero": "7.3",
+   "rotulo": "Lançamento.",
+   "termos_do_rotulo": [
+    "lancamento"
+   ],
+   "sinonimos": [
+    "lancamento",
+    "lancamento de oficio",
+    "lancamento por homologacao",
+    "lancamento por declaracao",
+    "modalidades de lancamento"
+   ]
+  },
+  "DBA26-ADM-22": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "22",
+   "rotulo": "Modalidades.",
+   "termos_do_rotulo": [
+    "modalidades"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-ADM-23": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "23",
+   "rotulo": "Tipos.",
+   "termos_do_rotulo": [],
+   "sinonimos": []
+  },
+  "DBA26-AMB-15": {
+   "disciplina": "DIREITO AMBIENTAL",
+   "numero": "15",
+   "rotulo": "Jurisprudência aplicada dos tribunais superiores e legislação aplicável a cada um dos tópicos do edital.",
+   "termos_do_rotulo": [],
+   "sinonimos": []
+  },
+  "DBA26-ADM-24": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "24",
+   "rotulo": "Procedimento.",
+   "termos_do_rotulo": [],
+   "sinonimos": []
+  },
+  "DBA26-RAC-10.3": {
+   "disciplina": "RACIOCÍNIO LÓGICO",
+   "numero": "10.3",
+   "rotulo": "Equivalências.",
+   "termos_do_rotulo": [
+    "equivalencias"
+   ],
+   "sinonimos": [
+    "equivalencia",
+    "equivalente",
+    "logicamente equivalente"
+   ]
+  },
+  "DBA26-ADM-25": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "25",
+   "rotulo": "Anulação e revogação.",
+   "termos_do_rotulo": [
+    "anulacao",
+    "revogacao"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-ADM-26": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "26",
+   "rotulo": "Improbidade administrativa.",
+   "termos_do_rotulo": [
+    "improbidade",
+    "administrativa"
+   ],
+   "sinonimos": [
+    "improbidade",
+    "8.429",
+    "8429",
+    "14.230",
+    "enriquecimento ilicito",
+    "dano ao erario",
+    "ato de improbidade"
+   ]
+  },
+  "DBA26-INF-2.2.4": {
+   "disciplina": "INFORMÁTICA",
+   "numero": "2.2.4",
+   "rotulo": "Edição da planilha: operações de copiar, colar, recortar, limpar e selecionar.",
+   "termos_do_rotulo": [
+    "edicao",
+    "planilha",
+    "operacoes",
+    "copiar",
+    "colar",
+    "recortar",
+    "limpar",
+    "selecionar"
+   ],
+   "sinonimos": [
+    "copiar",
+    "colar",
+    "recortar",
+    "colar especial",
+    "alca de preenchimento"
+   ]
+  },
+  "DBA26-ADM-27": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "27",
+   "rotulo": "Processo Administrativo Disciplinar. 28 Lei Estadual nº 11.370/2009 - Lei Orgânica da Polícia Civil do Estado da Bahia e alterações.",
+   "termos_do_rotulo": [
+    "11.370",
+    "11370",
+    "administrativo",
+    "disciplinar",
+    "organica",
+    "policia",
+    "civil",
+    "bahia"
+   ],
+   "sinonimos": [
+    "processo administrativo disciplinar",
+    "pad",
+    "sindicancia",
+    "11.370",
+    "lei organica da policia civil"
+   ]
+  },
+  "DBA26-PRG-17": {
+   "disciplina": "PROMOÇÃO DA IGUALDADE RACIAL E DE GÊNERO",
+   "numero": "17",
+   "rotulo": "Decreto Federal nº 4.886/03.",
+   "termos_do_rotulo": [
+    "4.886",
+    "4886"
+   ],
+   "sinonimos": [
+    "4.886",
+    "politica nacional de promocao da igualdade racial",
+    "pnpir"
+   ]
+  },
+  "DBA26-ADM-29": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "29",
+   "rotulo": "Lei Estadual nº 6.677/1994 - Estatuto do Servidor Público do Estado da Bahia.",
+   "termos_do_rotulo": [
+    "6.677",
+    "6677",
+    "estatuto",
+    "servidor",
+    "bahia"
+   ],
+   "sinonimos": [
+    "6.677",
+    "6677",
+    "estatuto do servidor publico do estado da bahia"
+   ]
+  },
+  "DBA26-ADM-30": {
+   "disciplina": "DIREITO ADMINISTRATIVO",
+   "numero": "30",
+   "rotulo": "Jurisprudência aplicada dos tribunais superiores e legislação aplicável a cada um dos tópicos do edital.",
+   "termos_do_rotulo": [],
+   "sinonimos": []
+  },
+  "DBA26-TRI-7.4": {
+   "disciplina": "DIREITO TRIBUTÁRIO",
+   "numero": "7.4",
+   "rotulo": "Revisão.",
+   "termos_do_rotulo": [
+    "revisao"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-RAC-10.4": {
+   "disciplina": "RACIOCÍNIO LÓGICO",
+   "numero": "10.4",
+   "rotulo": "Leis de Morgan.",
+   "termos_do_rotulo": [
+    "leis",
+    "morgan"
+   ],
+   "sinonimos": [
+    "morgan",
+    "negacao de",
+    "a negacao"
+   ]
+  },
+  "DBA26-INF-2.2.5": {
+   "disciplina": "INFORMÁTICA",
+   "numero": "2.2.5",
+   "rotulo": "Classificação de dados nas planilhas.",
+   "termos_do_rotulo": [
+    "dados",
+    "planilhas"
+   ],
+   "sinonimos": [
+    "classificar",
+    "classificacao de dados",
+    "filtro",
+    "ordenar"
+   ]
+  },
+  "DBA26-PRG-18": {
+   "disciplina": "PROMOÇÃO DA IGUALDADE RACIAL E DE GÊNERO",
+   "numero": "18",
+   "rotulo": "Jurisprudência aplicada dos tribunais superiores e legislação aplicável a cada um dos tópicos do edital.",
+   "termos_do_rotulo": [],
+   "sinonimos": []
+  },
+  "DBA26-TRI-7.5": {
+   "disciplina": "DIREITO TRIBUTÁRIO",
+   "numero": "7.5",
+   "rotulo": "Suspensão, extinção e exclusão.",
+   "termos_do_rotulo": [
+    "suspensao",
+    "extincao",
+    "exclusao"
+   ],
+   "sinonimos": [
+    "suspensao do credito",
+    "extincao do credito",
+    "exclusao do credito",
+    "moratoria",
+    "parcelamento",
+    "compensacao",
+    "transacao",
+    "remissao",
+    "isencao",
+    "anistia",
+    "deposito do montante integral"
+   ]
+  },
+  "DBA26-RAC-10.5": {
+   "disciplina": "RACIOCÍNIO LÓGICO",
+   "numero": "10.5",
+   "rotulo": "Diagramas lógicos.",
+   "termos_do_rotulo": [
+    "diagramas",
+    "logicos"
+   ],
+   "sinonimos": [
+    "diagrama",
+    "diagramas logicos",
+    "venn",
+    "todo",
+    "nenhum",
+    "algum"
+   ]
+  },
+  "DBA26-INF-2.2.6": {
+   "disciplina": "INFORMÁTICA",
+   "numero": "2.2.6",
+   "rotulo": "Gráficos.",
+   "termos_do_rotulo": [
+    "graficos"
+   ],
+   "sinonimos": [
+    "grafico",
+    "graficos"
+   ]
+  },
+  "DBA26-TRI-7.6": {
+   "disciplina": "DIREITO TRIBUTÁRIO",
+   "numero": "7.6",
+   "rotulo": "Prescrição e decadência.",
+   "termos_do_rotulo": [
+    "prescricao",
+    "decadencia"
+   ],
+   "sinonimos": [
+    "prescricao tributaria",
+    "decadencia",
+    "prescricao"
+   ]
+  },
+  "DBA26-RAC-11": {
+   "disciplina": "RACIOCÍNIO LÓGICO",
+   "numero": "11",
+   "rotulo": "Lógica de primeira ordem.",
+   "termos_do_rotulo": [
+    "logica",
+    "primeira",
+    "ordem"
+   ],
+   "sinonimos": [
+    "quantificador",
+    "para todo",
+    "existe",
+    "logica de primeira ordem"
+   ]
+  },
+  "DBA26-INF-2.3": {
+   "disciplina": "INFORMÁTICA",
+   "numero": "2.3",
+   "rotulo": "Software de Apresentação PowerPoint.",
+   "termos_do_rotulo": [
+    "software",
+    "apresentacao",
+    "powerpoint"
+   ],
+   "sinonimos": [
+    "powerpoint",
+    "impress",
+    "apresentacao",
+    "apresentacoes",
+    "slide",
+    "slides"
+   ]
+  },
+  "DBA26-TRI-7.7": {
+   "disciplina": "DIREITO TRIBUTÁRIO",
+   "numero": "7.7",
+   "rotulo": "Repetição do indébito.",
+   "termos_do_rotulo": [
+    "repeticao",
+    "indebito"
+   ],
+   "sinonimos": [
+    "repeticao do indebito",
+    "restituicao"
+   ]
+  },
+  "DBA26-RAC-12": {
+   "disciplina": "RACIOCÍNIO LÓGICO",
+   "numero": "12",
+   "rotulo": "Princípios de contagem e probabilidade.",
+   "termos_do_rotulo": [
+    "principios",
+    "contagem",
+    "probabilidade"
+   ],
+   "sinonimos": [
+    "probabilidade",
+    "chance",
+    "evento",
+    "aleatoriamente",
+    "sortead"
+   ]
+  },
+  "DBA26-INF-2.3.1": {
+   "disciplina": "INFORMÁTICA",
+   "numero": "2.3.1",
+   "rotulo": "Barras de ferramentas, botões e menus do PowerPoint.",
+   "termos_do_rotulo": [
+    "barras",
+    "ferramentas",
+    "botoes",
+    "menus",
+    "powerpoint"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-TRI-8": {
+   "disciplina": "DIREITO TRIBUTÁRIO",
+   "numero": "8",
+   "rotulo": "Responsabilidade tributária.",
+   "termos_do_rotulo": [
+    "responsabilidade",
+    "tributaria"
+   ],
+   "sinonimos": [
+    "responsabilidade tributaria",
+    "responsabilidade dos sucessores",
+    "responsabilidade de terceiros",
+    "substituicao tributaria"
+   ]
+  },
+  "DBA26-RAC-13": {
+   "disciplina": "RACIOCÍNIO LÓGICO",
+   "numero": "13",
+   "rotulo": "Operações com conjuntos.",
+   "termos_do_rotulo": [
+    "operacoes",
+    "conjuntos"
+   ],
+   "sinonimos": [
+    "conjunto",
+    "conjuntos",
+    "uniao",
+    "intersecao",
+    "interseccao",
+    "complementar",
+    "elementos"
+   ]
+  },
+  "DBA26-INF-2.3.2": {
+   "disciplina": "INFORMÁTICA",
+   "numero": "2.3.2",
+   "rotulo": "Criação de apresentações e inserção de slides; elementos da tela e modos de visualização.",
+   "termos_do_rotulo": [
+    "criacao",
+    "apresentacoes",
+    "insercao",
+    "slides",
+    "elementos",
+    "tela",
+    "modos",
+    "visualizacao"
+   ],
+   "sinonimos": [
+    "modo de exibicao",
+    "modos de visualizacao",
+    "classificacao de slides",
+    "novo slide"
+   ]
+  },
+  "DBA26-TRI-8.1": {
+   "disciplina": "DIREITO TRIBUTÁRIO",
+   "numero": "8.1",
+   "rotulo": "Responsabilidade por dívida própria e por dívida de outrem.",
+   "termos_do_rotulo": [
+    "responsabilidade",
+    "divida",
+    "propria",
+    "outrem"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-RAC-14": {
+   "disciplina": "RACIOCÍNIO LÓGICO",
+   "numero": "14",
+   "rotulo": "Raciocínio lógico envolvendo problemas aritméticos, geométricos e matriciais.",
+   "termos_do_rotulo": [
+    "raciocinio",
+    "logico",
+    "envolvendo",
+    "problemas",
+    "aritmeticos",
+    "geometricos",
+    "matriciais"
+   ],
+   "sinonimos": [
+    "geometri",
+    "area",
+    "perimetro",
+    "triangulo",
+    "matriz",
+    "matrizes",
+    "determinante",
+    "retangulo",
+    "circunferencia"
+   ]
+  },
+  "DBA26-INF-2.3.3": {
+   "disciplina": "INFORMÁTICA",
+   "numero": "2.3.3",
+   "rotulo": "Objetos de texto: formatar, mover, copiar e excluir objetos.",
+   "termos_do_rotulo": [
+    "texto",
+    "formatar",
+    "mover",
+    "copiar",
+    "excluir"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-TRI-8.2": {
+   "disciplina": "DIREITO TRIBUTÁRIO",
+   "numero": "8.2",
+   "rotulo": "Solidariedade e sucessão.",
+   "termos_do_rotulo": [
+    "solidariedade",
+    "sucessao"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-INF-2.3.4": {
+   "disciplina": "INFORMÁTICA",
+   "numero": "2.3.4",
+   "rotulo": "Listas numeradas, listas com marcadores e objetos de desenho.",
+   "termos_do_rotulo": [
+    "listas",
+    "numeradas",
+    "marcadores",
+    "desenho"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-TRI-8.3": {
+   "disciplina": "DIREITO TRIBUTÁRIO",
+   "numero": "8.3",
+   "rotulo": "Responsabilidade pessoal e de terceiros.",
+   "termos_do_rotulo": [
+    "responsabilidade",
+    "pessoal",
+    "terceiros"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-INF-2.3.5": {
+   "disciplina": "INFORMÁTICA",
+   "numero": "2.3.5",
+   "rotulo": "Uso de tabelas, gráficos, planilhas e organogramas; layout, esquema de cores, segundo plano e slide mestre; montagem de slides animados.",
+   "termos_do_rotulo": [
+    "tabelas",
+    "graficos",
+    "planilhas",
+    "organogramas",
+    "layout",
+    "esquema",
+    "cores",
+    "segundo",
+    "plano",
+    "slide",
+    "mestre",
+    "montagem",
+    "slides",
+    "animados"
+   ],
+   "sinonimos": [
+    "slide mestre",
+    "animacao",
+    "transicao",
+    "layout"
+   ]
+  },
+  "DBA26-TRI-8.4": {
+   "disciplina": "DIREITO TRIBUTÁRIO",
+   "numero": "8.4",
+   "rotulo": "Responsabilidade supletiva.",
+   "termos_do_rotulo": [
+    "responsabilidade",
+    "supletiva"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-INF-2.3.6": {
+   "disciplina": "INFORMÁTICA",
+   "numero": "2.3.6",
+   "rotulo": "Integração com Word e Excel.",
+   "termos_do_rotulo": [
+    "integracao",
+    "word",
+    "excel"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-TRI-9": {
+   "disciplina": "DIREITO TRIBUTÁRIO",
+   "numero": "9",
+   "rotulo": "Sistema Tributário Nacional.",
+   "termos_do_rotulo": [
+    "tributario"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-INF-3": {
+   "disciplina": "INFORMÁTICA",
+   "numero": "3",
+   "rotulo": "Redes de Computadores:",
+   "termos_do_rotulo": [
+    "redes",
+    "computadores"
+   ],
+   "sinonimos": [
+    "redes de computadores",
+    "rede",
+    "lan",
+    "wan",
+    "protocolo",
+    "tcp/ip",
+    "endereco ip",
+    "roteador",
+    "switch",
+    "wi-fi"
+   ]
+  },
+  "DBA26-TRI-9.1": {
+   "disciplina": "DIREITO TRIBUTÁRIO",
+   "numero": "9.1",
+   "rotulo": "Princípios gerais.",
+   "termos_do_rotulo": [
+    "principios"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-INF-3.1": {
+   "disciplina": "INFORMÁTICA",
+   "numero": "3.1",
+   "rotulo": "conceitos básicos, ferramentas, aplicativos e procedimentos de Internet e Intranet.",
+   "termos_do_rotulo": [
+    "basicos",
+    "ferramentas",
+    "aplicativos",
+    "internet",
+    "intranet"
+   ],
+   "sinonimos": [
+    "internet",
+    "intranet",
+    "extranet",
+    "url",
+    "dns",
+    "http",
+    "https",
+    "ftp",
+    "navegador",
+    "buscador",
+    "site",
+    "pagina web",
+    "google"
+   ]
+  },
+  "DBA26-TRI-9.2": {
+   "disciplina": "DIREITO TRIBUTÁRIO",
+   "numero": "9.2",
+   "rotulo": "Limitações ao poder de tributar, competência tributária e repartição constitucional de receitas tributárias.",
+   "termos_do_rotulo": [
+    "limitacoes",
+    "poder",
+    "tributar",
+    "competencia",
+    "tributaria",
+    "reparticao",
+    "constitucional",
+    "receitas",
+    "tributarias"
+   ],
+   "sinonimos": [
+    "imunidade",
+    "competencia tributaria",
+    "reparticao de receitas",
+    "limitacoes ao poder de tributar"
+   ]
+  },
+  "DBA26-INF-3.2": {
+   "disciplina": "INFORMÁTICA",
+   "numero": "3.2",
+   "rotulo": "Conceitos básicos de computação em nuvem.",
+   "termos_do_rotulo": [
+    "basicos",
+    "computacao",
+    "nuvem"
+   ],
+   "sinonimos": [
+    "computacao em nuvem",
+    "nuvem",
+    "cloud",
+    "saas",
+    "iaas",
+    "paas",
+    "onedrive",
+    "google drive",
+    "dropbox"
+   ]
+  },
+  "DBA26-TRI-10": {
+   "disciplina": "DIREITO TRIBUTÁRIO",
+   "numero": "10",
+   "rotulo": "Os tributos da União, dos Estados, do Distrito Federal e dos Municípios.",
+   "termos_do_rotulo": [
+    "tributos",
+    "uniao",
+    "estados",
+    "distrito",
+    "municipios"
+   ],
+   "sinonimos": [
+    "icms",
+    "ipva",
+    "itcmd",
+    "iptu",
+    "iss",
+    "itbi",
+    "ipi",
+    "iof",
+    "itr",
+    "imposto de renda",
+    "grandes fortunas"
+   ]
+  },
+  "DBA26-INF-3.3": {
+   "disciplina": "INFORMÁTICA",
+   "numero": "3.3",
+   "rotulo": "Programas de navegação: Edge, Chrome e Firefox.",
+   "termos_do_rotulo": [
+    "programas",
+    "navegacao",
+    "edge",
+    "chrome",
+    "firefox"
+   ],
+   "sinonimos": [
+    "edge",
+    "chrome",
+    "firefox",
+    "navegacao anonima",
+    "navegacao privada",
+    "historico",
+    "cookies",
+    "favoritos",
+    "abas"
+   ]
+  },
+  "DBA26-TRI-11": {
+   "disciplina": "DIREITO TRIBUTÁRIO",
+   "numero": "11",
+   "rotulo": "Processo judicial tributário.",
+   "termos_do_rotulo": [
+    "judicial",
+    "tributario"
+   ],
+   "sinonimos": []
+  },
+  "DBA26-INF-3.4": {
+   "disciplina": "INFORMÁTICA",
+   "numero": "3.4",
+   "rotulo": "Deep Web e Dark Web.",
+   "termos_do_rotulo": [
+    "deep",
+    "dark"
+   ],
+   "sinonimos": [
+    "deep web",
+    "dark web",
+    "tor",
+    "surface web"
+   ]
+  },
+  "DBA26-TRI-11.1": {
+   "disciplina": "DIREITO TRIBUTÁRIO",
+   "numero": "11.1",
+   "rotulo": "Execução fiscal.",
+   "termos_do_rotulo": [
+    "execucao",
+    "fiscal"
+   ],
+   "sinonimos": [
+    "execucao fiscal",
+    "6.830",
+    "certidao de divida ativa",
+    "divida ativa"
+   ]
+  },
+  "DBA26-INF-3.5": {
+   "disciplina": "INFORMÁTICA",
+   "numero": "3.5",
+   "rotulo": "Correio eletrônico: endereços, utilização e recursos típicos.",
+   "termos_do_rotulo": [
+    "correio",
+    "eletronico",
+    "enderecos",
+    "utilizacao",
+    "recursos",
+    "tipicos"
+   ],
+   "sinonimos": [
+    "correio eletronico",
+    "e-mail",
+    "email",
+    "outlook",
+    "thunderbird",
+    "cco",
+    "cc",
+    "webmail",
+    "smtp",
+    "pop3",
+    "imap",
+    "anexo"
+   ]
+  },
+  "DBA26-TRI-11.1.1": {
+   "disciplina": "DIREITO TRIBUTÁRIO",
+   "numero": "11.1.1",
+   "rotulo": "Exceção de préexecutividade.",
+   "termos_do_rotulo": [
+    "excecao",
+    "preexecutividade"
+   ],
+   "sinonimos": [
+    "excecao de pre-executividade"
+   ]
+  },
+  "DBA26-INF-3.6": {
+   "disciplina": "INFORMÁTICA",
+   "numero": "3.6",
+   "rotulo": "Conceitos de segurança da informação: procedimentos de segurança; programas maliciosos, ferramentas antivírus e criptografia.",
+   "termos_do_rotulo": [
+    "seguranca",
+    "informacao",
+    "programas",
+    "maliciosos",
+    "ferramentas",
+    "antivirus",
+    "criptografia"
+   ],
+   "sinonimos": [
+    "seguranca da informacao",
+    "virus",
+    "malware",
+    "worm",
+    "trojan",
+    "cavalo de troia",
+    "ransomware",
+    "spyware",
+    "phishing",
+    "antivirus",
+    "firewall",
+    "criptografia",
+    "backdoor",
+    "keylogger",
+    "adware",
+    "rootkit",
+    "bot",
+    "assinatura digital",
+    "certificado digital",
+    "autenticacao"
+   ]
+  },
+  "DBA26-TRI-11.1.2": {
+   "disciplina": "DIREITO TRIBUTÁRIO",
+   "numero": "11.1.2",
+   "rotulo": "Embargos do executado.",
+   "termos_do_rotulo": [
+    "embargos",
+    "executado"
+   ],
+   "sinonimos": [
+    "embargos do executado",
+    "embargos a execucao",
+    "embargos"
+   ]
+  },
+  "DBA26-INF-3.7": {
+   "disciplina": "INFORMÁTICA",
+   "numero": "3.7",
+   "rotulo": "Procedimentos de backup; armazenamento de dados em nuvem.",
+   "termos_do_rotulo": [
+    "backup",
+    "armazenamento",
+    "dados",
+    "nuvem"
+   ],
+   "sinonimos": [
+    "backup",
+    "copia de seguranca",
+    "backup incremental",
+    "backup diferencial",
+    "backup completo",
+    "armazenamento em nuvem"
+   ]
+  },
+  "DBA26-TRI-11.2": {
+   "disciplina": "DIREITO TRIBUTÁRIO",
+   "numero": "11.2",
+   "rotulo": "Ação anulatória de débito fiscal.",
+   "termos_do_rotulo": [
+    "acao",
+    "anulatoria",
+    "debito",
+    "fiscal"
+   ],
+   "sinonimos": [
+    "acao anulatoria"
+   ]
+  },
+  "DBA26-TRI-12": {
+   "disciplina": "DIREITO TRIBUTÁRIO",
+   "numero": "12",
+   "rotulo": "Do ilícito tributário: ilícito administrativo tributário, ilícito tributário, direito penal tributário e crimes contra a ordem tributária.",
+   "termos_do_rotulo": [
+    "ilicito",
+    "tributario",
+    "administrativo",
+    "penal",
+    "contra",
+    "ordem",
+    "tributaria"
+   ],
+   "sinonimos": [
+    "ilicito tributario",
+    "crimes contra a ordem tributaria",
+    "infracao tributaria"
+   ]
+  },
+  "DBA26-TRI-13": {
+   "disciplina": "DIREITO TRIBUTÁRIO",
+   "numero": "13",
+   "rotulo": "Jurisprudência aplicada dos tribunais superiores e legislação aplicável a cada um dos tópicos do edital.",
+   "termos_do_rotulo": [],
+   "sinonimos": []
+  }
+ }
+}

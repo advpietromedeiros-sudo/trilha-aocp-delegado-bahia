@@ -6,6 +6,14 @@
 
 ## Estado
 
+- ⏳ **06/11/2026, 21h09 — Revisão de todo o edital por prioridade, estilo caderno (D-018), EM CONSTRUÇÃO.** Plano em
+  `docs/REVISAO_PLANO.md`. Rodando em paralelo: **Fase 0** (provas AOCP extraídas para `revisao/dados/`, pesos do
+  edital, mapa de prioridade dos 503 pontos em `revisao/mapa_prioridade.json`, verificador
+  `ferramentas/verificar_atualidade.py`) e o **motor do caderno** (`revisao/molde/`, `ferramentas/gerar_revisao.py`).
+  Depois: módulo piloto para aprovação do titular; ondas de 2 módulos. Módulos e conteúdo fora do Git (material de
+  terceiro). ⚠️ O agendamento semanal da rotina foi recusado pelo sistema de permissões: fica para o titular decidir.
+  📅 **Prova objetiva: 06/12/2026** (titular, 06/11/2026, 21h09) — **30 dias** contados de 06/11. Calendário em
+  `docs/REVISAO_PLANO.md` (§Prazo): todos os módulos gerados até 13/11.
 - 🆕 **05/11/2026, 11h17 — Simulados do Treino de Discursiva: leitura corrigida e tesoura.** O importador marcava como
   "tabela" (letra de máquina, rolagem lateral) 239 blocos; 89 eram texto corrido, e parágrafos saíam partidos ao meio.
   Novo leitor `discursiva/blocos.js` (texto → parágrafo e item; colunas → tabela HTML; fórmula → linhas centralizadas;

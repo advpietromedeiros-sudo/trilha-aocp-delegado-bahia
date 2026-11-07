@@ -19,3 +19,11 @@ discursiva/simulados_delta.js
 
 # Lei seca oficial baixada do Planalto (atualizar_lei_seca.bat): refaz-se a qualquer hora; o Treino de Discursiva usa o derivado discursiva/artigos.js (D-015)
 assets/lei_seca_oficial.json
+
+# Revisão por prioridade (D-018): os módulos e os dados extraídos usam material de terceiro e ficam só no disco
+revisao/saida/
+revisao/dados/
+# Relatórios datados da rotina de atualidade (ferramentas/rotina_atualidade.bat): refazem-se a cada execução
+revisao/relatorios/
+# Conteúdo dos módulos (JSON lido por ferramentas/gerar_revisao.py): usa material de terceiro (D-018)
+revisao/conteudo/

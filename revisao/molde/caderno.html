@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="conferido-em" content="{{CONFERIDO_EM}}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Professor Pietro Medeiros">
+<meta name="modulo" content="{{MODULO}}">
+<meta name="gerado-em" content="{{GERADO_EM}}">
+<title>{{TITULO_PAGINA}}</title>
+<style>
+:root{--avatar:url(data:image/jpeg;base64,{{AVATAR_B64}})}
+{{CSS}}
+</style>
+</head>
+<body>
+<div class="progress-bar" id="progressBar"></div>
+<header class="topbar">
+  <div class="logo av" role="img" aria-label="Professor Pietro Medeiros"></div>
+  <div class="topbar-title">
+    <div class="t1">{{TITULO}}</div>
+    <div class="t2">Revisão Delegado PC-BA · {{SUBTITULO}} · Professor Pietro Medeiros</div>
+  </div>
+  <span class="quiz-score" id="studyCount">0 pontos</span>
+  <button class="icon-btn" id="themeBtn" type="button" title="Paleta de cores" aria-label="Paleta de cores">🎨</button>
+</header>
+<nav class="tabbar">
+  <button class="tab active" data-tab="conteudo" type="button">✏️ Caderno da Aula</button>
+  <button class="tab" data-tab="leiseca" type="button">🗂️ Fichário · Lei Seca</button>
+</nav>
+<div class="theme-pop" id="themePop"><h5>Escolha o caderno</h5></div>
+<section class="panel active" id="panel-conteudo">
+<div class="layout">
+  <aside class="sidebar">
+    <input class="toc-search" type="search" placeholder="Buscar ponto…" aria-label="Buscar ponto no índice">
+    <nav class="toc" id="tocNav">
+{{TOC}}
+    </nav>
+  </aside>
+  <main>
+    <div class="hero">
+      <div class="kicker">Revisão Delegado PC-BA · {{KICKER}}</div>
+      <h1>{{TITULO}}</h1>
+      <div class="prof-card"><button class="av av-lg" type="button" aria-label="Falar com o Professor Pietro Medeiros" onclick="document.getElementById('avBtn').click()"></button><div><span class="prof-name">Professor Pietro Medeiros</span><span class="prof-quote">“Direito é sobre pessoas. E para pessoas.”</span><span class="prof-hint">Clique no meu avatar (aqui ou no canto da tela) para dicas e para eu tomar a sua lição.</span></div></div>
+      <p class="subt">{{APRESENTACAO}}</p>
+      <div class="carimbo">🔎 Conferido em {{CONFERIDO_EM}}<small>{{CARIMBO_DETALHE}}</small></div>
+      <div class="stat-row">
+        <div class="stat"><span class="v">{{N_PONTOS}}</span><span class="l">pontos do edital</span></div>
+        <div class="stat"><span class="v">{{N_FICHAS}}</span><span class="l">fichas C/E</span></div>
+        <div class="stat"><span class="v">{{N_QUESTOES}}</span><span class="l">questões A–E</span></div>
+        <div class="stat"><span class="v">{{N_LEI}}</span><span class="l">dispositivos no fichário</span></div>
+      </div>
+      <div class="rev-painel">
+        <div class="rev-ctrl">
+          <button class="rev-btn js-essencial" type="button" aria-pressed="false">⚡ Só o essencial</button>
+          <button class="rev-btn js-erros" type="button" aria-pressed="false">↺ Fichas que errei</button>
+          <span class="rev-prog" id="revProg">✔ 0 de {{N_PONTOS}} pontos revisados</span>
+        </div>
+        <div class="rev-barra" aria-hidden="true"><i id="revBarra"></i></div>
+        <h2 class="ls-capitulo" id="indice-prioridade">📈 Índice por prioridade</h2>
+        <ol class="prio-lista">
+{{INDICE_PRIORIDADE}}
+        </ol>
+{{SENSIVEL}}
+      </div>
+    </div>
+    <div class="alert alert-warn erros-aviso"><div class="alt-label">↺ Fichas que errei</div><p>Mostrando só as <b id="errosN">0</b> ficha(s) que você errou neste aparelho, zeradas para responder de novo. Acertou, ela sai da lista.</p><button class="rev-btn" id="errosSair" type="button">✕ Voltar ao módulo inteiro</button></div>
+{{BLOCOS}}
+    <div class="footer"><div class="prof-sign"><span class="av av-sm" role="img" aria-label="Professor Pietro Medeiros"></span><b>Professor Pietro Medeiros</b></div><span class="sign">revise, marque e volte ao que errou!</span><small>Revisão Delegado PC-BA · {{TITULO}} · Professor Pietro Medeiros · conferido em {{CONFERIDO_EM}} · lei seca: texto oficial do Planalto · uso pessoal de estudo</small></div>
+  </main>
+</div>
+</section>
+<section class="panel" id="panel-leiseca">
+<div class="layout">
+  <aside class="sidebar">
+    <input class="toc-search" type="search" placeholder="Filtrar índice…" aria-label="Filtrar índice da lei seca">
+    <nav class="toc" id="lsToc">
+{{LS_TOC}}
+    </nav>
+  </aside>
+  <main>
+    <div class="ls-search-wrap">
+      <input class="ls-search" id="lsSearch" type="search" placeholder="🔎 Buscar na lei seca deste módulo…" aria-label="Buscar na lei seca">
+      <div class="ls-count" id="lsCount"></div>
+    </div>
+    <div id="lsContent">
+{{LS_CONTEUDO}}
+    </div>
+    <div class="footer"><small>Fichário · Lei Seca · trechos citados no módulo, conferidos contra o texto oficial do Planalto ({{LS_BAIXADO}}) · Professor Pietro Medeiros</small></div>
+  </main>
+</div>
+</section>
+
+<div class="av-wrap" id="avWrap"><div class="av-bubble" id="avBubble" role="status" aria-live="polite"><span class="av-who">Professor Pietro Medeiros</span><span id="avText"></span><div class="av-actions"><button type="button" id="avNext" class="tb-btn">💡 Outra dica</button><button type="button" id="avQuiz" class="tb-btn">❓ Me teste</button><button type="button" id="avClose" class="tb-btn" aria-label="Fechar">✕</button></div></div><button class="av av-float" id="avBtn" type="button" aria-label="Dicas do Professor Pietro Medeiros" title="Professor Pietro Medeiros: clique para uma dica"></button></div>
+
+<!-- ======================= OVERLAYS ======================= -->
+<div class="quadro-overlay" id="quadroOverlay"><button class="quadro-exit" id="quadroExit" type="button">Q — voltar à aula</button></div>
+<div class="laser-overlay" id="laserOverlay"></div>
+<div class="laser-cursor" id="laserCursor"></div>
+
+<div class="slide-overlay" id="slideOverlay">
+  <div class="slide-prog"><i id="slideBar"></i></div>
+  <div class="slide-stage" id="slideStage"></div>
+  <div class="slide-nav">
+    <button class="tb-btn" id="slidePrev" type="button">← Anterior</button>
+    <div class="slide-dots" id="slideDots"></div>
+    <span class="slide-count" id="slideCount"></span>
+    <button class="tb-btn" id="slideNext" type="button">Próximo →</button>
+    <button class="tb-btn" id="slideClose" type="button">✕ Sair (Esc)</button>
+  </div>
+</div>
+
+<div class="modal-bg" id="modalBg"><div class="modal"><h4 id="modalTitle"></h4><p id="modalMsg"></p><button class="tb-btn" id="modalOk" type="button">OK</button></div></div>
+
+<!-- ======================= BARRA DO ESTOJO ======================= -->
+<div class="teach-bar">
+  <button class="tb-btn js-essencial" type="button" aria-pressed="false" title="Mostra só o que cai, a lei e as pegadinhas">⚡ Essencial</button>
+  <button class="tb-btn js-erros" type="button" aria-pressed="false">↺ Errei</button>
+  <span class="tb-sep"></span>
+  <div class="tb-zoom">
+    <button class="tb-btn" id="zoomOut" type="button" title="Zoom − (tecla -)">A−</button>
+    <input type="range" id="zoomSlider" min="70" max="180" step="5" value="100" aria-label="Zoom">
+    <button class="tb-btn" id="zoomIn" type="button" title="Zoom + (tecla +)">A+</button>
+    <span class="zd" id="zoomDisplay">100%</span>
+  </div>
+  <span class="tb-sep"></span>
+  <button class="tb-btn" id="tbFocus" type="button" title="F9">🎯 Foco</button>
+  <button class="tb-btn" id="tbLaser" type="button" title="L">🔴 Laser</button>
+  <button class="tb-btn" id="tbQuadro" type="button" title="Q">⬜ Quadro</button>
+  <button class="tb-btn" id="tbTheme" type="button">🎨 Caderno</button>
+  <button class="tb-btn" id="tbFont" type="button">✍️ Letra de caderno</button>
+  <span class="tb-sep"></span>
+  <select class="tb-select" id="timerPreset" aria-label="Cronômetro">
+    <option value="0">⏱ Cronômetro</option><option value="25">🍅 Pomodoro 25</option><option value="5">5 min</option><option value="10">10 min</option><option value="15">15 min</option><option value="20">20 min</option><option value="30">30 min</option><option value="45">45 min</option>
+  </select>
+  <button class="tb-btn" id="timerStart" type="button" aria-label="Iniciar ou pausar">▶</button>
+  <button class="tb-btn" id="timerReset" type="button" aria-label="Zerar">↺</button>
+  <span class="tb-timer" id="timerDisplay">00:00</span>
+  <span class="tb-sep"></span>
+  <button class="tb-btn" id="tbSlides" type="button" title="P">▶ Slides</button>
+  <button class="tb-btn" id="tbFull" type="button">⛶ Tela cheia</button>
+  <span class="quiz-score" id="quizScore">Fichas: 0 ✓ · 0 ✗</span>
+  <span class="tb-hint">P slides · Q quadro · L laser · F9 foco · +/−/0 zoom</span>
+</div>
+<script>window.REV_CFG={{CFG_JSON}};</script>
+<script>
+{{JS}}
+</script>
+</body>
+</html>

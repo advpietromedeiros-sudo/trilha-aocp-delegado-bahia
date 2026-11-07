@@ -245,3 +245,18 @@ na pasta Downloads em 04/11/2026, entre 16h02 e 16h04.
   art. 21, V; A, D e E do Delegado-Geral, art. 19) e S4 q94 (C passa a dizer que o entendimento do STJ perdeu a base com a
   Lei 15.487/2026). Gabaritos mantidos (B, C, C); a tela mostra o texto original da alternativa (`alt_orig`). Não confirmados: S1 q59; S2 q57, q60 e q62; S4 q27 e q39; Atualidades da Bahia
   e julgados de 2026 que os auditores não acharam em fonte oficial.
+
+### D-018 — Revisão de todo o edital por prioridade, no estilo caderno (06/11/2026, 20h55, titular)
+
+Pedido textual: *"gere um material naquele estilo do caderno da aula de maria da penha e de crimes contra a
+administração publica... você pega todas as questões da trilha aocp... questões objetivas dele e que tem na aplicação
+subjetiva que lá tem vários simulados... pega o edital veriticalizado... pega todas as provas da AOCP... E EM CADA
+TÓPICO OU CONJUNTOS DE TÓPICOS... COLOCA POR ORDEM DE PRIORIDADE NO CONCUROS DE DELEGADO BA E MONTA UMA REVISÃO.. EU
+TENHO QUE PASSAR POR TODOS OS PONTOS DO EDITAL DA FORMA MAIS RAPIDA POSSÍVEL E COM MUITA QUALIDADE PARA ABSORVER MAIS
+O CONTEÚDO... CASO FIQUE GRANDE UM ARQUIVO UNICO... FAÇA EM MODULOS CORRELATIVOS... USE TAMBÉM TODA A BASE DE
+MATERIAL QUE ESTÁ NA PASTA DELEGADO BA... DEIXE O MATERIAL EM UM NIVEL DE DELEGADO E COLOQUE SEMPRE UMA ROTINA PRA
+QUE NÃO COLOQUE NADA DESATUALIZADO"*.
+
+Vale como **autorização escrita do titular** (§G8.3) para usar a pasta DELEGADO BA, os simulados e as provas AOCP
+**neste material de estudo pessoal**. Os módulos gerados ficam **fora do Git** (mesma solução da D-017); o gerador,
+o mapa de prioridade e o verificador de atualidade entram. Plano em `docs/REVISAO_PLANO.md`.
