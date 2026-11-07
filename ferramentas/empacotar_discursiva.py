@@ -24,6 +24,15 @@ def empacotar() -> str:
     html, n_local = re.subn(r'<script src="[^"]+" data-local="[^"]*"></script>\n?', "", html)
     if n_local:
         print(f"retirado(s) do envio: {n_local} script(s) de uso local (material de terceiro)")
+    # conteúdo opcional (data-opcional, 07/11/2026: Pente Fino): entra se o arquivo existir; se não, a tag sai e a
+    # aba mostra "conteúdo ainda não gerado"
+    for nome in re.findall(r'<script src="([^"]+)" data-opcional="1"></script>', html):
+        tag = f'<script src="{nome}" data-opcional="1"></script>'
+        if (PASTA / nome).is_file():
+            html = html.replace(tag, f'<script src="{nome}"></script>')
+        else:
+            html = html.replace(tag + "\n", "").replace(tag, "")
+            print(f"opcional ausente, fora do envio: {nome}")
     tags = re.findall(r'<script src="([^"]+)"></script>', html)
     if not tags:
         sys.exit("ERRO: nenhum <script src> achado; o HTML mudou de formato")

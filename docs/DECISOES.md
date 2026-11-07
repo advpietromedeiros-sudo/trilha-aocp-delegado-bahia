@@ -288,3 +288,14 @@ pontos, ele se divide em Parte Geral (tópicos 1 a 9 e 11) e Parte Especial (tó
 3. Penal — Parte Especial · 4. Processo Penal e inquérito · 5. Legislação penal extravagante ·
 6. Criminologia e Medicina Legal · 7. Civil, Empresarial e Processo Civil · 8. Constitucional · 9. Administrativo ·
 10. Ambiental · 11. Tributário · 12. Língua Portuguesa · 13. Informática e Raciocínio Lógico.
+
+### D-021 — Pente Fino de Processo Civil e comentários em quadros aprovados (07/11/2026, 17h2x, titular)
+
+Pedido de 07/11/2026, 16h41: melhorar o layout dos comentários dos simulados (exceções em vermelho, quadros,
+palavras-chave em negrito, visual moderno) e criar a aba **PENTE FINO** ao lado de Simulados, com certo ou errado
+comentado — Rodada 1 (o básico de todos os pontos) e Rodada 2 (aprofundamento, liberada depois da 1) —, começando
+por Processo Civil. Resposta textual do titular ao testar: *"FICOU BEM LEGAL O PENTE FINO DE PROCESSO CIVIL"*.
+Aprovados a tela e o conteúdo de Processo Civil (142 + 112 assertivas, 12 pontos, `discursiva/pente_fino_cpc.js`,
+gerado por `ferramentas/pente_fino/`). Esquema em `docs/PENTE_FINO_ESQUEMA.md`. ⚠️ A pasta DELEGADO BA não tem
+material de Processo Civil (medido em 07/11/2026): a base foi a lei seca oficial e a jurisprudência conferida no
+STF/STJ. Próxima disciplina: a definir pelo titular.

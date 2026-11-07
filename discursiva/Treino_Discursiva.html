@@ -50,7 +50,7 @@ img.fig{display:block;max-width:100%;margin:10px auto;border:1px solid var(--lin
 .sq{--zq:1}.sq h3{font-size:calc(17px * var(--zq))}
 .sq .texto,.sq .com{font-size:calc(16px * var(--zq));line-height:1.8;text-align:justify;text-justify:inter-word;hyphens:auto;overflow-wrap:break-word}
 .sq .texto p,.sq .com p{margin:.55em 0}
-.sq .com{background:#fff;border:1px solid #d7dfeb;border-left:4px solid var(--azul);border-radius:12px;padding:0 18px 16px;margin-top:18px;box-shadow:0 6px 18px #1f24330c}
+.sq .com{background:#f7f9fc;border:1px solid #d7dfeb;border-left:4px solid var(--azul);border-radius:12px;padding:0 18px 16px;margin-top:18px;box-shadow:0 6px 18px #1f24330c}
 .sq .com>.rot{color:var(--azul);font-size:12px;letter-spacing:.09em;margin:0 0 12px;padding:14px 0 10px;border-bottom:1px solid var(--linha)}
 .sq .com p{text-align:left;line-height:1.75}
 .sq .com .destaque-chave{font-weight:750;color:#1b3558}
@@ -80,7 +80,66 @@ img.fig{display:block;max-width:100%;margin:10px auto;border:1px solid var(--lin
 .option-row.eliminated .scissor{background:var(--vermelho2);color:var(--vermelho);border-color:var(--vermelho)}
 .aviso-sim{min-height:1.2em;font-size:13px;color:var(--vermelho);font-weight:700}
 .zoomq{display:inline-flex;gap:4px;align-items:center;margin-left:auto}.zoomq .bt{padding:4px 10px}
-@media(max-width:700px){header{padding:12px}main{padding:12px}.card{padding:16px}.caixas{grid-template-columns:repeat(3,1fr)}.option-row{grid-template-columns:minmax(0,1fr) 58px}.scissor .cut-label{font-size:9px}.sq .com{padding:0 12px 12px}.sq .com .bl-tab td,.sq .com .bl-tab th{padding:8px 9px}}
+/* Comentário em QUADROS (07/11/2026, pedido do titular): um quadro por função, exceção em vermelho, chave em negrito */
+.cm{display:flex;flex-direction:column;gap:12px}
+.cm-q{--cor:#24508f;--tinta-q:#1b3f73;--fundo-q:#edf3fc;background:#fff;border:1px solid #e3e8f0;border-left:4px solid var(--cor);border-radius:14px;padding:0 16px 10px;box-shadow:0 2px 10px #1f24330a;overflow:hidden}
+.cm-q>.cm-rot{display:flex;align-items:center;gap:6px;margin:0 -16px 8px;padding:9px 16px;background:var(--fundo-q);color:var(--tinta-q);font-size:12.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.cm-q p{margin:.5em 0}
+.cm-lei{--cor:#6b4fa0;--tinta-q:#4b3477;--fundo-q:#f3effa}
+.cm-juris{--cor:#9a6b00;--tinta-q:#6e4c00;--fundo-q:#fff6df}
+.cm-atencao,.cm-resumo-exc{--cor:#b3261e;--tinta-q:#8f1d17;--fundo-q:#fdeceb}
+.cm-alts{--cor:#5d6577;--tinta-q:#3b4352;--fundo-q:#f2f4f7}
+.cm-regra{--cor:#1f7a4d;--tinta-q:#145c39;--fundo-q:#e8f5ee}
+.cm-pegadinha{--cor:#c2410c;--tinta-q:#8a2e08;--fundo-q:#fff1e6}
+.cm-resumo-exc ul,.cm-exc-lista{margin:.4em 0;padding-left:1.2em}.cm-resumo-exc li,.cm-exc-lista li{margin:.3em 0}
+.cm-exc-lista li{color:#8f1d17}
+.cm-chave{font-weight:750;color:#13294b}
+.cm-exc{color:#a3211a;background:#fdecea;border-radius:4px;padding:0 .15em;box-decoration-break:clone;-webkit-box-decoration-break:clone;font-weight:600}
+.cm-exc strong{font-weight:800}.cm-exc .cm-chave{color:#8f1d17}
+.cm-alt{background:#fafbfc;border:1px solid #e4e8ee;border-radius:12px;padding:10px 12px;margin:8px 0;color:#3b4352}
+.cm-alt-cab{display:flex;align-items:center;flex-wrap:wrap;gap:2px 6px;margin-bottom:2px}
+.cm-letra{display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:30px;padding:0 8px;border-radius:9px;background:#e8ebf0;color:#3b4352;font-weight:800;text-transform:uppercase}
+.cm-sep{color:#525a6b;font-size:.9em}.cm-sep:empty{display:none}
+.cm-ver{font-size:12.5px;font-weight:800;border-radius:999px;padding:3px 10px;text-transform:uppercase;letter-spacing:.04em}
+.cm-ver-ok{background:#dff1e7;color:#145c39}.cm-ver-no{background:#eef0f3;color:#525a6b}
+.cm-gab{margin-left:auto;background:#1f7a4d;color:#fff;font-size:12px;font-weight:800;border-radius:999px;padding:3px 10px}
+.cm-alt-gab{background:#eef8f2;border-color:#a9d8bb;border-left:4px solid #1f7a4d;color:var(--tinta);box-shadow:0 3px 12px #1f7a4d14}
+.cm-alt-gab .cm-letra{background:#1f7a4d;color:#fff}
+.cm-assert.cm-ok .cm-letra{background:#dff1e7;color:#145c39}
+.cm-alt-corpo .bl-item{padding-left:0;text-indent:0}.cm-alt-corpo p:first-child{margin-top:.2em}
+.cm-cit{margin:8px 0;border:1px solid #e6e0f2;border-radius:10px;background:#fbfaff;overflow:hidden}.cm-cit figcaption{padding:6px 12px;font-size:13px;font-weight:800;color:#4b3477;background:#f3effa}
+.cm-cit blockquote{margin:0;padding:8px 14px 10px;font:15.5px/1.7 Georgia,serif;color:var(--tinta)}
+.cm-jur{border:1px solid #f0e2bb;border-radius:10px;background:#fffcf3;padding:8px 12px;margin:8px 0}.cm-jur-fonte{font-size:13px;color:#6e4c00}
+.cm-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}.cm-tags span{background:#e7eef9;color:#1b3f73;border-radius:999px;padding:3px 11px;font-size:13px;font-weight:700}
+/* ---------- Pente Fino ---------- */
+.pf-topo{display:flex;flex-wrap:wrap;gap:10px;align-items:center}.pf-topo h2{margin:0}
+.pf-discs{display:flex;flex-wrap:wrap;gap:6px}.pf-discs button{border:1px solid var(--azul);background:#fff;color:var(--azul);border-radius:999px;padding:6px 14px;min-height:40px;font:inherit;cursor:pointer}.pf-discs button.on{background:var(--azul);color:#fff;font-weight:700}
+.pf-rodadas{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin:14px 0}
+.pf-rod{display:flex;flex-direction:column;gap:6px;text-align:left;background:#fff;border:2px solid var(--linha);border-radius:14px;padding:14px 16px;font:inherit;color:inherit;cursor:pointer;transition:border-color .15s,box-shadow .15s}
+.pf-rod:hover:not(:disabled){border-color:var(--azul);box-shadow:0 4px 14px #24508f16}.pf-rod.on{border-color:var(--azul);background:#f5f8fd;box-shadow:0 4px 14px #24508f1f}
+.pf-rod b{font-size:17px}.pf-rod small{color:var(--suave)}.pf-rod:disabled{cursor:not-allowed;background:#f4f4f2;color:#525a6b}.pf-rod .pf-cad{font-weight:700;color:#8f1d17}
+.pf-barra{height:10px;background:#e8ebf0;border-radius:999px;overflow:hidden}.pf-barra i{display:block;height:100%;background:linear-gradient(90deg,#24508f,#3d73c2);border-radius:999px}
+.pf-barra.ok i{background:linear-gradient(90deg,#1f7a4d,#2f9d66)}
+.pf-pontos summary{cursor:pointer;font-weight:700;color:var(--azul);padding:6px 0}
+.pf-ponto{display:grid;grid-template-columns:minmax(0,1fr) 120px 64px;gap:10px;align-items:center;width:100%;text-align:left;background:#fff;border:1px solid var(--linha);border-radius:10px;padding:8px 12px;margin:6px 0;font:inherit;color:inherit;cursor:pointer}
+.pf-ponto:hover{border-color:var(--azul)}.pf-ponto.at{border-color:var(--azul);background:#f5f8fd}.pf-ponto span{font-size:14px;line-height:1.4}.pf-ponto small{text-align:right;color:var(--suave);font-weight:700}
+.pf-item{border:1px solid #d7dfeb;border-radius:16px;padding:18px 20px;background:linear-gradient(180deg,#fbfcfe,#fff);box-shadow:0 6px 18px #1f24330c}
+.pf-meta{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;font-size:13px;color:var(--suave)}.pf-meta .selo{margin:0;background:var(--azul2);color:#1b3f73}
+.pf-assertiva{font-size:19px;line-height:1.65;font-weight:600;margin:12px 0 16px;color:var(--tinta)}
+.pf-ce{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.pf-ce button{min-height:64px;border-radius:14px;font:800 18px/1.2 "Segoe UI",system-ui,sans-serif;letter-spacing:.06em;cursor:pointer;border:2px solid;transition:transform .1s,box-shadow .15s}
+.pf-ce button:not(:disabled):hover{transform:translateY(-1px);box-shadow:0 6px 16px #1f243320}
+.pf-ce [data-pfr="C"]{background:#eef8f2;border-color:#1f7a4d;color:#145c39}.pf-ce [data-pfr="E"]{background:#fdeceb;border-color:#b3261e;color:#8f1d17}
+.pf-ce button:disabled{cursor:default;opacity:.55}.pf-ce button.escolhida{opacity:1;box-shadow:inset 0 0 0 3px currentColor}
+.pf-ce button:focus-visible,.pf-rod:focus-visible,.pf-ponto:focus-visible{outline:3px solid var(--azul);outline-offset:2px}
+.pf-fb{margin:14px 0 10px;padding:12px 14px;border-radius:12px;font-weight:700}.pf-fb.ok{background:var(--verde2);color:#145c39}.pf-fb.no{background:var(--vermelho2);color:#8f1d17}
+.pf-confirma{background:#fff8e7;border:1px solid #f0e2bb;border-radius:12px;padding:12px 14px;margin-top:10px}
+.pf-vazio{background:#f4f6f9;border:1px dashed #b9c2d0;border-radius:14px;padding:22px;text-align:center;color:#3b4352}
+.pf-fim{background:var(--verde2);border:1px solid #b9ddc7;border-radius:14px;padding:14px 16px;margin:12px 0;color:#145c39}
+.pf-atalhos{font-size:13px;color:var(--suave);margin-top:10px}
+@media(max-width:700px){header{padding:12px}main{padding:12px}.card{padding:16px}.caixas{grid-template-columns:repeat(3,1fr)}.option-row{grid-template-columns:minmax(0,1fr) 58px}.scissor .cut-label{font-size:9px}.sq .com{padding:0 12px 12px}.sq .com .bl-tab td,.sq .com .bl-tab th{padding:8px 9px}
+ .sq .com{padding:0 8px 10px}.cm-q{padding:0 10px 8px;border-radius:12px}.cm-q>.cm-rot{margin:0 -10px 8px;padding:8px 10px}.cm-alts{padding:0 6px 6px}.cm-alts>.cm-rot{margin:0 -6px 6px}.cm-alt{padding:8px 9px;margin:6px 0}
+ .pf-item{padding:14px}.pf-assertiva{font-size:17px}.pf-ponto{grid-template-columns:minmax(0,1fr) 54px}.pf-ponto .pf-barra{grid-column:1/-1;grid-row:2}}
 </style>
 </head>
 <body>
@@ -95,6 +154,7 @@ img.fig{display:block;max-width:100%;margin:10px auto;border:1px solid var(--lin
 <script src="artigos.js"></script>
 <script src="blocos.js"></script>
 <script src="simulados_delta.js" data-local="terceiro"></script>
+<script src="pente_fino_cpc.js" data-opcional="1"></script>
 <script>
 /* Treino de Discursiva (02/11/2026, pedido do titular): fazer a peça e os estudos de caso PASSO A PASSO, sob orientação,
    e memorizar os artigos de cada um (cartões com repetição espaçada + Certo/Errado para a objetiva).
@@ -136,10 +196,10 @@ function passosDe(p){
 }
 
 /* ---------- abas ---------- */
-const ABAS=[['edital','🗺️ Edital'],['pecas','📜 Peças'],['casos','✍️ Estudos de caso'],['simulados','📝 Simulados'],['memoria','🧠 Memorizar'],['progresso','📊 Progresso']];
+const ABAS=[['edital','🗺️ Edital'],['pecas','📜 Peças'],['casos','✍️ Estudos de caso'],['simulados','📝 Simulados'],['pente','🔍 Pente Fino'],['memoria','🧠 Memorizar'],['progresso','📊 Progresso']];
 let aba='edital';
 const marcarAba=a=>{aba=a;$('abas').innerHTML=ABAS.map(([k,n])=>`<button class="${k===a?'on':''}" data-aba="${k}">${n}</button>`).join('')};
-function ir(a){aba=a;$('abas').innerHTML=ABAS.map(([k,n])=>`<button class="${k===a?'on':''}" data-aba="${k}">${n}</button>`).join('');({edital,pecas:listaPecas,casos:listaCasos,simulados:listaSimulados,memoria:memorizar,progresso})[a]();scrollTo(0,0)}
+function ir(a){aba=a;$('abas').innerHTML=ABAS.map(([k,n])=>`<button class="${k===a?'on':''}" data-aba="${k}">${n}</button>`).join('');({edital,pecas:listaPecas,casos:listaCasos,simulados:listaSimulados,pente:telaPente,memoria:memorizar,progresso})[a]();scrollTo(0,0)}
 document.addEventListener('click',e=>{const b=e.target.closest('[data-aba]');if(b)ir(b.dataset.aba)});
 
 function edital(){
@@ -374,7 +434,7 @@ function telaQuestao(){
  <p class="cont"><b>Tema:</b> ${esc(q.tema)}</p><h3>Questão ${q.n} <small style="font-weight:400;color:var(--suave)">(${esc(q.origem||'')})</small>${q.anulada&&ver?' <span class="selo" style="background:var(--vermelho2);color:var(--vermelho)">ANULADA</span>':''}</h3>
  <div class="texto">${blocosHTML(q.enun)}</div>${q.fig&&q.fig.onde==='enun'?fig:''}${alts}
  ${q.nota?`<p class="cont">⚠️ ${esc(q.nota)}</p>`:''}
- ${ver?`<div class="fb ${acertou(q,r)?'ok':'no'}">${!r?'Sem resposta. ':acertou(q,r)?(q.anulada?'Anulada: conta como acerto. ':'Você acertou. '):'Você marcou '+r+'. '}<b>Gabarito: ${q.gab}${q.anulada?' (anulada em recurso)':''}</b></div>${q.atual?`<div class="${q.atual.nivel==='red'?'alerta':q.atual.nivel==='ajustada'?'orient':'mnem'}" style="margin-top:10px"><b>${q.atual.nivel==='red'?'🔴 Desatualizada pela lei vigente':q.atual.nivel==='ajustada'?'🔄 Questão atualizada para a lei vigente':'🟡 Atualização'} (auditoria de ${esc(q.atual.em)})</b><br>${esc(q.atual.texto)}${q.alt_orig?Object.entries(q.alt_orig).map(([k,v])=>`<br><small><b>Texto original da alternativa ${k} no curso:</b> ${esc(v)}</small>`).join(''):''}<br><small>Nota nossa; o texto do curso segue abaixo como está no PDF.</small></div>`:''}<div class="com"><div class="rot" style="margin-top:2px">Comentários</div>${q.fig&&q.fig.onde==='com'?fig:''}${blocosHTML(q.com,{destacar:true})}</div>`:''}
+ ${ver?`<div class="fb ${acertou(q,r)?'ok':'no'}">${!r?'Sem resposta. ':acertou(q,r)?(q.anulada?'Anulada: conta como acerto. ':'Você acertou. '):'Você marcou '+r+'. '}<b>Gabarito: ${q.gab}${q.anulada?' (anulada em recurso)':''}</b></div>${q.atual?`<div class="${q.atual.nivel==='red'?'alerta':q.atual.nivel==='ajustada'?'orient':'mnem'}" style="margin-top:10px"><b>${q.atual.nivel==='red'?'🔴 Desatualizada pela lei vigente':q.atual.nivel==='ajustada'?'🔄 Questão atualizada para a lei vigente':'🟡 Atualização'} (auditoria de ${esc(q.atual.em)})</b><br>${esc(q.atual.texto)}${q.alt_orig?Object.entries(q.alt_orig).map(([k,v])=>`<br><small><b>Texto original da alternativa ${k} no curso:</b> ${esc(v)}</small>`).join(''):''}<br><small>Nota nossa; o texto do curso segue abaixo como está no PDF.</small></div>`:''}<div class="com"><div class="rot" style="margin-top:2px">Comentários</div>${q.fig&&q.fig.onde==='com'?fig:''}${BLOCOS.comentario(q.com,{gab:q.anulada?'':q.gab})}</div>`:''}
  <div class="linha-bts"><button class="bt" id="simAnt" ${ant?'':'disabled'}>← Anterior</button><button class="bt pri" id="simProx" ${prox?'':'disabled'}>Próxima →</button></div></div>`;
  if(ant)$('simAnt').onclick=()=>{sq=ant;selSim=null;telaQuestao();scrollTo(0,0)};
  if(prox)$('simProx').onclick=()=>{sq=prox;selSim=null;telaQuestao();scrollTo(0,0)};
@@ -414,7 +474,92 @@ document.addEventListener('keydown',ev=>{if(aba!=='simulados'||!sim||!$('simProx
  const L=ev.key.toUpperCase();if('ABCDE'.includes(L)&&L.length===1){ev.preventDefault();marcarSim(L)}
  else if(ev.key==='ArrowRight'&&!$('simProx').disabled)$('simProx').click();else if(ev.key==='ArrowLeft'&&!$('simAnt').disabled)$('simAnt').click();
  else if(ev.key==='Enter'&&$('simConfirma')&&!$('simConfirma').disabled)$('simConfirma').click()});
-window.discAPI={PECAS,CASOS,CARTOES,LEIS:typeof LEIS==='undefined'?[]:LEIS,passosDe,linhas,st:()=>st,abrirPeca,abrirCaso,ir,
+/* ---------- PENTE FINO (07/11/2026, pedido do titular) ----------
+   Assertivas de Certo ou Errado comentadas, ponto a ponto do edital. Rodada 1 = o essencial de TODOS os pontos;
+   Rodada 2 = aprofundamento, liberada só quando todas as assertivas da Rodada 1 forem respondidas.
+   Dados: window.PENTE_FINO.<DISC> (discursiva/pente_fino_<disc>.js; formato em docs/PENTE_FINO_ESQUEMA.md).
+   Progresso em chave própria do localStorage, à prova de falha (navegador sem armazenamento segue funcionando). */
+const PF_CHAVE='pente-fino:v1';
+let pf={disc:null,d:{}};try{const x=JSON.parse(localStorage.getItem(PF_CHAVE)||'null');if(x&&typeof x==='object')pf=Object.assign(pf,x,{d:x.d&&typeof x.d==='object'?x.d:{}})}catch(e){}
+const pfSalvar=()=>{try{localStorage.setItem(PF_CHAVE,JSON.stringify(pf))}catch(e){}};
+let pfConfirma=false;
+const pfDados=()=>{const P=typeof window.PENTE_FINO==='object'&&window.PENTE_FINO?window.PENTE_FINO:{};return Object.keys(P).filter(k=>P[k]&&Array.isArray(P[k].rodadas)).map(k=>[k,P[k]])};
+const pfEst=k=>{const e=pf.d[k]=pf.d[k]||{};e.rod=e.rod||1;e.pos=e.pos||{};e.resp=e.resp||{};e.so=e.so||{};return e};
+const pfRod=(D,n)=>D.rodadas.find(r=>r.n===n)||{n,titulo:'Rodada '+n,itens:[]};
+const pfFeitas=(e,itens)=>itens.filter(i=>e.resp[i.id]).length;
+const pfAcertos=(e,itens)=>itens.filter(i=>e.resp[i.id]&&e.resp[i.id]===i.gabarito).length;
+const pfConcluida=(D,e,n)=>{const it=pfRod(D,n).itens;return it.length>0&&pfFeitas(e,it)===it.length};
+const pfLiberada=(D,e,n)=>n<=1||pfConcluida(D,e,n-1);
+const pfLista=(D,e,n)=>{const it=pfRod(D,n).itens;return e.so[n]?it.filter(i=>e.resp[i.id]&&e.resp[i.id]!==i.gabarito):it};
+const pfBarra=(a,t)=>`<div class="pf-barra${t&&a===t?' ok':''}" role="progressbar" aria-valuemin="0" aria-valuemax="${t}" aria-valuenow="${a}"><i style="width:${t?Math.round(100*a/t):0}%"></i></div>`;
+function pfComentario(it){
+ const c=it.comentario||{},M=x=>BLOCOS.marcado(x),lista=v=>Array.isArray(v)?v.filter(Boolean):v?[v]:[];
+ const exc=lista(c.excecoes),lei=lista(c.lei),jur=lista(c.juris),pc=lista(c.palavras_chave);
+ return `<div class="cm pf-com">
+ ${c.resumo?`<section class="cm-q cm-porque"><header class="cm-rot">💡 Por quê</header><p>${M(c.resumo)}</p></section>`:''}
+ ${c.regra?`<section class="cm-q cm-regra"><header class="cm-rot">📌 Regra</header><p>${M(c.regra)}</p></section>`:''}
+ ${exc.length?`<section class="cm-q cm-atencao"><header class="cm-rot">⛔ Exceções</header><ul class="cm-exc-lista">${exc.map(x=>`<li>${M(x)}</li>`).join('')}</ul></section>`:''}
+ ${lei.length?`<section class="cm-q cm-lei"><header class="cm-rot">📖 Letra da lei</header>${lei.map(l=>`<figure class="cm-cit"><figcaption>${esc(l.rotulo||[l.lei,l.art&&'art. '+l.art,l.par,l.inc].filter(Boolean).join(', '))}</figcaption><blockquote>${M(l.texto)}</blockquote></figure>`).join('')}</section>`:''}
+ ${jur.length?`<section class="cm-q cm-juris"><header class="cm-rot">⚖️ Jurisprudência</header>${jur.map(j=>`<div class="cm-jur"><div class="cm-jur-fonte"><b>${esc(j.tribunal||'')}</b>${j.fonte?' · '+esc(j.fonte):''}${j.data?' · '+esc(j.data):''}</div><p>${M(j.texto)}</p></div>`).join('')}</section>`:''}
+ ${c.pegadinha?`<section class="cm-q cm-pegadinha"><header class="cm-rot">🎯 Pegadinha da banca</header><p>${M(c.pegadinha)}</p></section>`:''}
+ ${pc.length?`<div class="cm-tags" aria-label="Palavras-chave">${pc.map(x=>`<span>#${esc(x)}</span>`).join('')}</div>`:''}</div>`}
+function telaPente(){
+ const ds=pfDados();
+ if(!ds.length){$('tela').innerHTML=`<div class="card"><h2>🔍 Pente Fino</h2><div class="pf-vazio"><b>Conteúdo ainda não gerado.</b><br>As assertivas de Certo ou Errado comentadas aparecem aqui assim que o arquivo da disciplina (ex.: <code>pente_fino_cpc.js</code>) estiver na pasta <code>discursiva</code>.</div></div>`;return}
+ if(!ds.some(([k])=>k===pf.disc))pf.disc=ds[0][0];
+ const D=ds.find(([k])=>k===pf.disc)[1],e=pfEst(pf.disc);
+ if(!pfLiberada(D,e,e.rod))e.rod=1;
+ const n=e.rod,R=pfRod(D,n),L=pfLista(D,e,n),tot=R.itens.length,feitas=pfFeitas(e,R.itens),acertos=pfAcertos(e,R.itens),erradas=feitas-acertos;
+ let i=Math.max(0,Math.min(e.pos[n]||0,L.length-1));e.pos[n]=i;const it=L[i];pfSalvar();
+ const nomePonto=id=>{const p=(D.pontos||[]).find(x=>x.id===id);return p?p.titulo:id};
+ const numPonto=id=>{const k=(D.pontos||[]).findIndex(x=>x.id===id);return k<0?'':k+1};
+ const rods=D.rodadas.map(r=>r.n).sort((a,b)=>a-b);
+ const tiles=rods.map(k=>{const Rk=pfRod(D,k),lib=pfLiberada(D,e,k),f=pfFeitas(e,Rk.itens),t=Rk.itens.length,falta=pfRod(D,k-1).itens.length-pfFeitas(e,pfRod(D,k-1).itens);
+  return `<button class="pf-rod ${k===n?'on':''}" data-pfrod="${k}" ${lib?'':'disabled aria-disabled="true"'}><b>${lib?'':'🔒 '}${esc(Rk.titulo||'Rodada '+k)}</b>${lib?`<small>${f} de ${t} respondidas${f?' · '+pfAcertos(e,Rk.itens)+' acertos':''}</small>${pfBarra(f,t)}`:`<span class="pf-cad">Conclua a Rodada ${k-1} para liberar</span><small>faltam ${falta} assertiva(s) na Rodada ${k-1}</small>`}</button>`}).join('');
+ const pontos=(D.pontos||[]).map(p=>{const its=R.itens.filter(x=>x.ponto===p.id);if(!its.length)return '';const f=pfFeitas(e,its);
+  return `<button class="pf-ponto ${it&&it.ponto===p.id?'at':''}" data-pfponto="${esc(p.id)}" title="Ir para este ponto"><span><b>${numPonto(p.id)}.</b> ${esc(p.titulo)}</span>${pfBarra(f,its.length)}<small>${f} de ${its.length}</small></button>`}).join('');
+ const r=it&&e.resp[it.id],ok=r&&r===it.gabarito;
+ const fimRod=feitas===tot&&tot>0,prox=rods.find(k=>k>n);
+ let corpo;
+ if(!tot)corpo=`<div class="pf-vazio">Esta rodada ainda não tem assertivas.</div>`;
+ else if(!it)corpo=`<div class="pf-vazio">Nenhuma assertiva errada nesta rodada. 👏<div class="linha-bts" style="justify-content:center"><button class="bt pri" id="pfSoSai">Voltar a todas</button></div></div>`;
+ else corpo=`<div class="pf-item">
+  <div class="pf-meta"><span class="selo">Ponto ${numPonto(it.ponto)} · ${esc(nomePonto(it.ponto))}</span><span>${esc(it.tema||'')}</span><span style="margin-left:auto"><b>Assertiva ${i+1} de ${L.length}</b>${e.so[n]?' · só as que errei':''}</span></div>
+  <p class="pf-assertiva" id="pfAssertiva">${esc(it.assertiva)}</p>
+  <div class="pf-ce" role="group" aria-label="Julgue a assertiva"><button data-pfr="C" ${r?'disabled':''} class="${r==='C'?'escolhida':''}">✔ CERTO</button><button data-pfr="E" ${r?'disabled':''} class="${r==='E'?'escolhida':''}">✘ ERRADO</button></div>
+  ${r?`<div class="pf-fb ${ok?'ok':'no'}" role="status">${ok?'✔ Acertou':'✘ Errou'} — gabarito: ${it.gabarito==='C'?'CERTO':'ERRADO'}</div>${pfComentario(it)}`:''}
+  <div class="linha-bts"><button class="bt" id="pfAnt" ${i>0?'':'disabled'}>← Anterior</button><button class="bt pri" id="pfProx" ${i<L.length-1?'':'disabled'}>Próxima →</button></div></div>`;
+ $('tela').innerHTML=`<div class="card"><div class="pf-topo"><h2>🔍 Pente Fino</h2>${ds.length>1?`<div class="pf-discs">${ds.map(([k,x])=>`<button class="${k===pf.disc?'on':''}" data-pfdisc="${esc(k)}">${esc(x.disciplina||k)}</button>`).join('')}</div>`:`<span class="selo" style="margin:0;background:var(--azul2);color:#1b3f73">${esc(D.disciplina||pf.disc)}</span>`}</div>
+ <p>Assertivas de <b>Certo ou Errado</b> comentadas, ponto a ponto do edital. A <b>Rodada 1</b> passa pelo essencial de todos os pontos; a <b>Rodada 2</b> aprofunda e abre quando a 1 estiver concluída.${D.conferido_em?` <small>Lei e jurisprudência conferidas em ${esc(D.conferido_em)}.</small>`:''}</p>
+ <div class="pf-rodadas">${tiles}</div>
+ <div class="pf-meta"><span><b>Geral da ${esc(R.titulo||'Rodada '+n)}:</b> ${feitas} de ${tot} respondidas · ${acertos} acertos${feitas?' ('+Math.round(100*acertos/feitas)+'%)':''}</span></div>${pfBarra(feitas,tot)}
+ ${fimRod?`<div class="pf-fim" role="status"><b>🎉 ${esc(R.titulo||'Rodada '+n)} concluída:</b> ${acertos} de ${tot} acertos.${prox?` A Rodada ${prox} está liberada.`:''}<div class="linha-bts">${prox?`<button class="bt ok" data-pfrod="${prox}">Ir para a Rodada ${prox} →</button>`:''}${erradas?`<button class="bt" id="pfSoErros2">Rever as ${erradas} que errei</button>`:''}</div></div>`:''}
+ <details class="pf-pontos"><summary>Progresso por ponto do edital (ir para um ponto)</summary>${pontos}</details></div>
+ <div class="card">${corpo}
+ <div class="linha-bts"><button class="bt" id="pfSoErros" aria-pressed="${!!e.so[n]}" ${erradas||e.so[n]?'':'disabled'}>${e.so[n]?'Ver todas as assertivas':`↺ Rever as que errei (${erradas})`}</button><button class="bt" id="pfReset" ${feitas?'':'disabled'}>Reiniciar a rodada</button></div>
+ ${pfConfirma?`<div class="pf-confirma" role="alertdialog" aria-label="Confirmar reinício"><b>Apagar as ${feitas} resposta(s) da ${esc(R.titulo||'Rodada '+n)}?</b>${n===1&&rods.length>1?' A Rodada 2 volta a ficar bloqueada até você concluir a 1 de novo.':''}<div class="linha-bts"><button class="bt pri" id="pfResetSim">Sim, reiniciar</button><button class="bt" id="pfResetNao">Cancelar</button></div></div>`:''}
+ <p class="pf-atalhos">Atalhos: <b>C</b> = Certo · <b>E</b> = Errado · <b>←</b> <b>→</b> = anterior e próxima.</p></div>`;
+ const on=(id,f)=>{const x=$(id);if(x)x.onclick=f};
+ on('pfAnt',()=>{e.pos[n]=i-1;pfSalvar();telaPente()});on('pfProx',()=>{e.pos[n]=i+1;pfSalvar();telaPente();scrollTo(0,0)});
+ const soErros=()=>{e.so[n]=!e.so[n];e.pos[n]=0;pfSalvar();telaPente()};on('pfSoErros',soErros);on('pfSoErros2',soErros);on('pfSoSai',soErros);
+ on('pfReset',()=>{pfConfirma=true;telaPente();const b=$('pfResetNao');if(b)b.focus()});on('pfResetNao',()=>{pfConfirma=false;telaPente()});
+ on('pfResetSim',()=>{R.itens.forEach(x=>delete e.resp[x.id]);e.pos[n]=0;e.so[n]=false;pfConfirma=false;pfSalvar();telaPente()});
+}
+function pfResponder(v){const ds=pfDados(),par=ds.find(([k])=>k===pf.disc);if(!par)return;const D=par[1],e=pfEst(pf.disc),L=pfLista(D,e,e.rod),it=L[e.pos[e.rod]||0];
+ if(!it||e.resp[it.id])return;e.resp[it.id]=v;pfSalvar();telaPente()}
+document.addEventListener('click',ev=>{
+ const r=ev.target.closest('[data-pfr]');if(r&&!r.disabled){pfResponder(r.dataset.pfr);return}
+ const ro=ev.target.closest('[data-pfrod]');if(ro&&!ro.disabled){const e=pfEst(pf.disc);e.rod=+ro.dataset.pfrod;pfConfirma=false;pfSalvar();telaPente();scrollTo(0,0);return}
+ const di=ev.target.closest('[data-pfdisc]');if(di){pf.disc=di.dataset.pfdisc;pfConfirma=false;pfSalvar();telaPente();return}
+ const po=ev.target.closest('[data-pfponto]');if(po){const ds=pfDados(),D=ds.find(([k])=>k===pf.disc)[1],e=pfEst(pf.disc);e.so[e.rod]=false;const L=pfLista(D,e,e.rod),id=po.dataset.pfponto;
+  let k=L.findIndex(x=>x.ponto===id&&!e.resp[x.id]);if(k<0)k=L.findIndex(x=>x.ponto===id);if(k>=0)e.pos[e.rod]=k;pfSalvar();telaPente();const a=$('pfAssertiva');if(a&&a.scrollIntoView)a.scrollIntoView({block:'center'})}
+});
+document.addEventListener('keydown',ev=>{if(aba!=='pente'||ev.ctrlKey||ev.metaKey||ev.altKey||/^(INPUT|TEXTAREA|SELECT)$/.test(ev.target.tagName))return;
+ const k=ev.key.toLowerCase();
+ if(k==='c'||k==='e'){const b=document.querySelector(`[data-pfr="${k.toUpperCase()}"]`);if(b&&!b.disabled){ev.preventDefault();b.click()}}
+ else if(ev.key==='ArrowRight'&&$('pfProx')&&!$('pfProx').disabled){ev.preventDefault();$('pfProx').click()}
+ else if(ev.key==='ArrowLeft'&&$('pfAnt')&&!$('pfAnt').disabled){ev.preventDefault();$('pfAnt').click()}});
+window.discAPI={pente:{tela:telaPente,st:()=>pf,responder:pfResponder,CHAVE:PF_CHAVE},PECAS,CASOS,CARTOES,LEIS:typeof LEIS==='undefined'?[]:LEIS,passosDe,linhas,st:()=>st,abrirPeca,abrirCaso,ir,
  CONDUCAO:typeof CONDUCAO==='undefined'?{}:CONDUCAO,TEMAS:typeof TEMAS==='undefined'?{}:TEMAS,ESTUDO:typeof ESTUDO==='undefined'?{}:ESTUDO,ARTIGOS:typeof ARTIGOS==='undefined'?{}:ARTIGOS,JURIS:typeof JURIS==='undefined'?{}:JURIS,chaveDe,rotulo,SIMS,abrirSim,listaSimulados};
 ir('edital');
 </script>

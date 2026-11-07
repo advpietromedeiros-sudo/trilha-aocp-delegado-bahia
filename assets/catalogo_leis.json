@@ -649,6 +649,39 @@
         "Sigilo bancário"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp105.htm"
+    },
+    {
+      "sigla": "L7347",
+      "nome": "Ação Civil Pública — Lei 7.347/1985",
+      "apelidos": [
+        "Lei da Ação Civil Pública",
+        "LACP"
+      ],
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l7347compilada.htm"
+    },
+    {
+      "sigla": "L4717",
+      "nome": "Ação Popular — Lei 4.717/1965",
+      "apelidos": [
+        "Lei da Ação Popular"
+      ],
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l4717.htm"
+    },
+    {
+      "sigla": "L12016",
+      "nome": "Mandado de Segurança — Lei 12.016/2009",
+      "apelidos": [
+        "Lei do Mandado de Segurança"
+      ],
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12016.htm"
+    },
+    {
+      "sigla": "L12153",
+      "nome": "Juizados Especiais da Fazenda Pública — Lei 12.153/2009",
+      "apelidos": [
+        "Lei dos Juizados da Fazenda Pública"
+      ],
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12153.htm"
     }
   ]
 }

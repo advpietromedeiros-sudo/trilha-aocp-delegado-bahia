@@ -31,7 +31,7 @@ const w = dom.window, d = w.document, A = w.discAPI;
 let falhas = 0; const prova = (n, ok, det = "") => { console.log(`  ${ok ? "✅" : "❌"} ${n}${!ok && det ? " — " + det : ""}`); if (!ok) falhas++; };
 const clicar = id => d.getElementById(id).click();
 
-prova("página carrega com as 6 abas e sem erro de JavaScript", d.querySelectorAll("#abas button").length === 6 && erros.length === 0, erros.join(" | "));
+prova("página carrega com as 7 abas (Pente Fino desde 07/11/2026) e sem erro de JavaScript", d.querySelectorAll("#abas button").length === 7 && erros.length === 0, erros.join(" | "));
 // conteúdo
 const ruins = [];
 for (const p of A.PECAS) A.passosDe(p).forEach((s, i) => { if (!s.t || !s.orient || !String(s.modelo || "").trim() || !Array.isArray(s.check) || !s.check.length) ruins.push(p.id + " passo " + (i + 1)); });
