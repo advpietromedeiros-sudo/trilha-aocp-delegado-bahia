@@ -26,6 +26,14 @@ const tab = analisar([["pre", "Aspecto          Informação\nPrazo            A
 prova("tabela de colunas vira <table>, com a linha de continuação na célula de cima", tab[0].t === "tab" && tab[0].linhas.length === 3 && tab[0].linhas[1][1] === "Até 60 dias do recebimento", JSON.stringify(tab));
 prova("o HTML nunca usa <pre>", !/<pre/.test(html(parte)) && !/<pre/.test(html([["pre", "a  b\nc  d"]])));
 prova("nenhum caractere perdido nos casos fixos", sem(parte.map(b => b[1]).join("")) === sem(r1.map(texto).join("")));
+const exemploDestaque = [["p", "<texto> O prazo exige análise, exceto nas hipóteses legais; à exceção de urgência, a competência define a autoridade."]];
+const htmlDestaque = html(exemploDestaque, { destacar: true });
+prova("comentário destaca conceito e regra em negrito e exceções em vermelho", /class="destaque-chave">prazo<\/strong>/.test(htmlDestaque)
+  && /class="destaque-chave">exige<\/strong>/.test(htmlDestaque)
+  && /class="destaque-excecao">exceto<\/strong>/.test(htmlDestaque)
+  && /class="destaque-excecao">à exceção de<\/strong>/.test(htmlDestaque));
+prova("texto destacado continua escapado e o padrão permanece sem destaque", htmlDestaque.includes("&lt;texto&gt;")
+  && !html(exemploDestaque).includes("destaque-chave"));
 
 const arq = path.join(__dirname, "..", "discursiva", "simulados_delta.js");
 if (fs.existsSync(arq)) {

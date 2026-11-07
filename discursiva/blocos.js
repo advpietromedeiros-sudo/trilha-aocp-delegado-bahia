@@ -6,13 +6,47 @@
      · linhas de fórmula centralizadas, quando há símbolos matemáticos;
      · parágrafos e itens de lista, nos demais casos.
    Depois, parágrafo que começa em minúscula e cujo anterior não terminou a frase é EMENDADO ao anterior (quebra de página
-   do PDF). Nada do texto é descartado: só muda a forma. Uso: BLOCOS.html(lista)  ·  BLOCOS.analisar(lista) (para teste). */
+   do PDF). Nada do texto é descartado: só muda a forma. Uso: BLOCOS.html(lista[, { destacar: true }])  ·  BLOCOS.analisar(lista) (para teste). */
 (function (raiz) {
   'use strict';
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const MAT = /[\u{1D400}-\u{1D7FF}∑∫√≤≥≠±∞]/u;
   const ITEM = /^([•●▪◦\-–*]\s|\d{1,2}[.)]\s|[a-z]\)\s|[IVX]{1,4}\s?[-–.)]\s|Passo\s\d|Alternativa\s[A-E]\b|[A-E]\)\s)/;
   const FIM = /[.!?:;]["”')\]]?$/;
+  const EXCECOES = ['à exceção de', 'com exceção de', 'a não ser que', 'a menos que', 'desde que',
+    'não se aplica', 'não incide', 'não cabe',
+    'não autoriza', 'não constitui', 'não configura', 'não se confunde', 'não é obrigatório',
+    'não impede', 'não podem', 'não pode', 'ressalvados', 'ressalvadas', 'ressalvado', 'ressalvada',
+    'exclusivamente', 'incorretas', 'incorreta', 'dispensado', 'dispensada', 'proibida', 'proibido',
+    'vedada', 'vedado', 'exceções', 'exceção', 'erradas', 'errada', 'falsas', 'falsa', 'somente',
+    'apenas', 'exceto', 'salvo'];
+  const CHAVES = ['reserva de jurisdição', 'concurso de pessoas', 'concurso material', 'concurso formal',
+    'prisão preventiva', 'prova ilícita', 'ação penal', 'competências', 'competência', 'requisitos',
+    'requisito', 'fundamentos', 'fundamento', 'qualificadoras', 'qualificadora', 'majorantes',
+    'majorante', 'minorantes', 'minorante', 'prescrição', 'decadência', 'representação',
+    'responsabilidade penal', 'excludente de ilicitude', 'legítima defesa', 'estado de necessidade',
+    'consumado', 'tentativa', 'flagrante', 'prazos', 'prazo', 'tipicidade', 'necessária',
+    'necessário', 'obrigatória', 'obrigatório', 'deverão', 'deverá', 'devem', 'deve',
+    'exigem', 'exige', 'dolo', 'culpa'];
+  const alternancia = termos => termos.slice().sort((a, b) => b.length - a.length)
+    .map(x => x.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|');
+  const PADRAO_DESTAQUE = new RegExp(`(^|[^\\p{L}\\p{N}_])(${alternancia([...EXCECOES, ...CHAVES])})(?=$|[^\\p{L}\\p{N}_])`, 'giu');
+  const PADRAO_EXCECAO = new RegExp(`^(?:${alternancia(EXCECOES)})$`, 'i');
+
+  function textoHTML(valor, destacar) {
+    const texto = String(valor ?? '');
+    if (!destacar) return esc(texto);
+    let html = '', cursor = 0, m;
+    PADRAO_DESTAQUE.lastIndex = 0;
+    while ((m = PADRAO_DESTAQUE.exec(texto))) {
+      const inicio = m.index + m[1].length;
+      html += esc(texto.slice(cursor, inicio));
+      const classe = PADRAO_EXCECAO.test(m[2]) ? 'destaque-excecao' : 'destaque-chave';
+      html += `<strong class="${classe}">${esc(m[2])}</strong>`;
+      cursor = inicio + m[2].length;
+    }
+    return html + esc(texto.slice(cursor));
+  }
 
   function dedent(x) {
     const ls = String(x).replace(/\t/g, '    ').split('\n');
@@ -106,16 +140,17 @@
     return fim;
   }
 
-  function html(lista) {
+  function html(lista, opcoes = {}) {
+    const destacar = Boolean(opcoes && opcoes.destacar);
     return analisar(lista).map(r => {
-      if (r.t === 'p') return `<p>${esc(r.x)}</p>`;
-      if (r.t === 'item') return `<p class="bl-item">${esc(r.x)}</p>`;
-      if (r.t === 'centro') return `<p class="bl-centro">${esc(r.x)}</p>`;
-      if (r.t === 'conta') return `<p class="bl-conta">${esc(r.x)}</p>`;
-      if (r.t === 'formula') return `<div class="bl-formula">${r.linhas.map(l => `<div>${esc(l)}</div>`).join('')}</div>`;
+      if (r.t === 'p') return `<p>${textoHTML(r.x, destacar)}</p>`;
+      if (r.t === 'item') return `<p class="bl-item">${textoHTML(r.x, destacar)}</p>`;
+      if (r.t === 'centro') return `<p class="bl-centro">${textoHTML(r.x, destacar)}</p>`;
+      if (r.t === 'conta') return `<p class="bl-conta">${textoHTML(r.x, destacar)}</p>`;
+      if (r.t === 'formula') return `<div class="bl-formula">${r.linhas.map(l => `<div>${textoHTML(l, destacar)}</div>`).join('')}</div>`;
       if (r.t === 'tab') {
         const cab = r.linhas.length > 1 && r.linhas[0].every(c => c.length <= 60);
-        const tr = (c, tag) => `<tr>${c.map(x => `<${tag}>${esc(x)}</${tag}>`).join('')}</tr>`;
+        const tr = (c, tag) => `<tr>${c.map(x => `<${tag}>${textoHTML(x, destacar)}</${tag}>`).join('')}</tr>`;
         return `<div class="bl-tab"><table>${cab ? `<thead>${tr(r.linhas[0], 'th')}</thead>` : ''}<tbody>${r.linhas.slice(cab ? 1 : 0).map(c => tr(c, 'td')).join('')}</tbody></table></div>`;
       }
       return '';

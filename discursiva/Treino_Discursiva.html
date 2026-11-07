@@ -53,6 +53,8 @@ img.fig{display:block;max-width:100%;margin:10px auto;border:1px solid var(--lin
 .sq .com{background:#fff;border:1px solid #d7dfeb;border-left:4px solid var(--azul);border-radius:12px;padding:0 18px 16px;margin-top:18px;box-shadow:0 6px 18px #1f24330c}
 .sq .com>.rot{color:var(--azul);font-size:12px;letter-spacing:.09em;margin:0 0 12px;padding:14px 0 10px;border-bottom:1px solid var(--linha)}
 .sq .com p{text-align:left;line-height:1.75}
+.sq .com .destaque-chave{font-weight:750;color:#1b3558}
+.sq .com .destaque-excecao{font-weight:750;color:#a3211a;background:#fff0ee;border-radius:3px;padding:0 2px}
 .bl-item{padding-left:1.4em;text-indent:-1.4em}.bl-centro{text-align:center!important;font-weight:700;margin-top:1em!important}
 .bl-conta{text-align:center!important;font-family:Cambria,"Cambria Math",Georgia,serif;background:#f7f6f1;border-radius:6px;padding:4px 8px}
 .bl-formula{text-align:center;font-family:"Cambria Math",Cambria,Georgia,serif;font-size:1.05em;line-height:1.6;background:#f7f6f1;border-radius:8px;padding:8px 10px;margin:10px 0}
@@ -340,7 +342,7 @@ let sim=null,sq=1,soErros=false;
 const ss=id=>(st.sim=st.sim||{},st.sim[id]=st.sim[id]||{resp:{},entregue:false,modo:'prova',atual:1});
 const acertou=(q,r)=>q.anulada||r===q.gab;
 /* blocos dos PDFs → HTML legível (blocos.js): texto corrido, tabela de verdade e fórmula; nada em letra de máquina */
-const blocosHTML=b=>BLOCOS.html(b);
+const blocosHTML=(b,opcoes)=>BLOCOS.html(b,opcoes);
 let selSim=null;/* alternativa escolhida no modo estudo, antes de confirmar (como no app principal) */
 const cortesDe=(e,n)=>((e.cut=e.cut||{})[n]||[]);
 /* nota: no modo prova só conta depois de entregue; anulada conta para todos */
@@ -372,7 +374,7 @@ function telaQuestao(){
  <p class="cont"><b>Tema:</b> ${esc(q.tema)}</p><h3>Questão ${q.n} <small style="font-weight:400;color:var(--suave)">(${esc(q.origem||'')})</small>${q.anulada&&ver?' <span class="selo" style="background:var(--vermelho2);color:var(--vermelho)">ANULADA</span>':''}</h3>
  <div class="texto">${blocosHTML(q.enun)}</div>${q.fig&&q.fig.onde==='enun'?fig:''}${alts}
  ${q.nota?`<p class="cont">⚠️ ${esc(q.nota)}</p>`:''}
- ${ver?`<div class="fb ${acertou(q,r)?'ok':'no'}">${!r?'Sem resposta. ':acertou(q,r)?(q.anulada?'Anulada: conta como acerto. ':'Você acertou. '):'Você marcou '+r+'. '}<b>Gabarito: ${q.gab}${q.anulada?' (anulada em recurso)':''}</b></div>${q.atual?`<div class="${q.atual.nivel==='red'?'alerta':q.atual.nivel==='ajustada'?'orient':'mnem'}" style="margin-top:10px"><b>${q.atual.nivel==='red'?'🔴 Desatualizada pela lei vigente':q.atual.nivel==='ajustada'?'🔄 Questão atualizada para a lei vigente':'🟡 Atualização'} (auditoria de ${esc(q.atual.em)})</b><br>${esc(q.atual.texto)}${q.alt_orig?Object.entries(q.alt_orig).map(([k,v])=>`<br><small><b>Texto original da alternativa ${k} no curso:</b> ${esc(v)}</small>`).join(''):''}<br><small>Nota nossa; o texto do curso segue abaixo como está no PDF.</small></div>`:''}<div class="com"><div class="rot" style="margin-top:2px">Comentários</div>${q.fig&&q.fig.onde==='com'?fig:''}${blocosHTML(q.com)}</div>`:''}
+ ${ver?`<div class="fb ${acertou(q,r)?'ok':'no'}">${!r?'Sem resposta. ':acertou(q,r)?(q.anulada?'Anulada: conta como acerto. ':'Você acertou. '):'Você marcou '+r+'. '}<b>Gabarito: ${q.gab}${q.anulada?' (anulada em recurso)':''}</b></div>${q.atual?`<div class="${q.atual.nivel==='red'?'alerta':q.atual.nivel==='ajustada'?'orient':'mnem'}" style="margin-top:10px"><b>${q.atual.nivel==='red'?'🔴 Desatualizada pela lei vigente':q.atual.nivel==='ajustada'?'🔄 Questão atualizada para a lei vigente':'🟡 Atualização'} (auditoria de ${esc(q.atual.em)})</b><br>${esc(q.atual.texto)}${q.alt_orig?Object.entries(q.alt_orig).map(([k,v])=>`<br><small><b>Texto original da alternativa ${k} no curso:</b> ${esc(v)}</small>`).join(''):''}<br><small>Nota nossa; o texto do curso segue abaixo como está no PDF.</small></div>`:''}<div class="com"><div class="rot" style="margin-top:2px">Comentários</div>${q.fig&&q.fig.onde==='com'?fig:''}${blocosHTML(q.com,{destacar:true})}</div>`:''}
  <div class="linha-bts"><button class="bt" id="simAnt" ${ant?'':'disabled'}>← Anterior</button><button class="bt pri" id="simProx" ${prox?'':'disabled'}>Próxima →</button></div></div>`;
  if(ant)$('simAnt').onclick=()=>{sq=ant;selSim=null;telaQuestao();scrollTo(0,0)};
  if(prox)$('simProx').onclick=()=>{sq=prox;selSim=null;telaQuestao();scrollTo(0,0)};
