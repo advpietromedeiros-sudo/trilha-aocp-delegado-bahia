@@ -61,6 +61,36 @@ I(P, 1, 'Estabelecimento',
   'Art. 1.142: **universalidade de fato** de bens organizados para a empresa; pode ser objeto unitário de negócios (art. 1.143).',
   lei=[(CC + '1142', 'Considera-se estabelecimento todo complexo de bens organizado', 'sociedade empresária.', 'CC, art. 1.142')],
   kw=['estabelecimento', 'complexo de bens'])
+# Acréscimo de 07/11/2026 (Livro II por inteiro).
+I(P, 1, 'Empresário casado e imóveis da empresa',
+  'Salvo se casado no regime da separação absoluta, o empresário precisa da anuência do cônjuge para vender ou hipotecar imóvel que integre o patrimônio da empresa.', 'E',
+  'Art. 978: o empresário casado aliena ou grava os imóveis da empresa **sem outorga conjugal**, **qualquer que seja o regime de bens** — exceção ao art. 1.647, I.',
+  lei=[(CC + '978', 'O empresário casado pode, sem necessidade de outorga conjugal', 'gravá-los de ônus real.', 'CC, art. 978')],
+  kw=['outorga conjugal', 'qualquer que seja o regime'])
+I(P, 1, 'Sociedade em conta de participação',
+  'Na sociedade em conta de participação, perante terceiros obrigam-se solidariamente o sócio ostensivo e o sócio participante, pois a inscrição do contrato no registro lhe confere personalidade jurídica.', 'E',
+  'Arts. 991 e 993: a atividade é exercida **só pelo sócio ostensivo**, em nome próprio; perante terceiro obriga-se **apenas o ostensivo**, e o participante só perante este. A sociedade é **despersonificada** — a eventual inscrição do contrato **não** lhe dá personalidade. O participante que intervier nas relações com terceiros responde solidariamente.',
+  lei=[(CC + '991', 'Obriga-se perante terceiro tão-somente o sócio ostensivo', 'nos termos do contrato social.', 'CC, art. 991, par. ún.'),
+       (CC + '993', 'O contrato social produz efeito somente entre os sócios', 'personalidade jurídica à sociedade.', 'CC, art. 993')],
+  kw=['sócio ostensivo', 'sócio participante', 'despersonificada'])
+I(P, 1, 'Sociedade em nome coletivo',
+  'Somente pessoas físicas podem tomar parte na sociedade em nome coletivo, e todos os sócios respondem solidária e ilimitadamente pelas obrigações sociais.', 'C',
+  'Art. 1.039: **só pessoas físicas** e responsabilidade **solidária e ilimitada** (subsidiária ao patrimônio social, art. 1.024). Entre si, os sócios podem limitar a responsabilidade, sem efeito perante terceiros. Na **comandita simples**, só os comanditados (pessoas físicas) respondem ilimitadamente; os comanditários, pelo valor da quota (art. 1.045).',
+  lei=[(CC + '1039', 'Somente pessoas físicas podem tomar parte na sociedade em nome coletivo', 'pelas obrigações sociais.', 'CC, art. 1.039'),
+       (CC + '1045', 'Na sociedade em comandita simples tomam parte sócios de duas categorias', 'valor de sua quota.', 'CC, art. 1.045')],
+  kw=['nome coletivo', 'pessoas físicas', 'comandita simples'])
+I(P, 1, 'Cooperativa',
+  'Na sociedade cooperativa, cada sócio tem direito a votos proporcionais ao valor de sua participação no capital social.', 'E',
+  'Art. 1.094, VI: **um só voto por sócio**, tenha ou não capital a sociedade e qualquer que seja a participação. O quórum da assembleia se funda no **número de sócios presentes**, não no capital (inciso V); as quotas são **intransferíveis** a estranhos, ainda que por herança (inciso IV).',
+  lei=[(CC + '1094', 'VI - direito de cada sócio a um só voto', 'valor de sua participação;', 'CC, art. 1.094, VI'),
+       (CC + '1094', 'IV - intransferibilidade das quotas do capital', 'ainda que por herança;', 'CC, art. 1.094, IV')],
+  kw=['cooperativa', 'um só voto'])
+I(P, 1, 'Sociedade dependente de autorização',
+  'Quando a sociedade depender de autorização do Poder Executivo para funcionar, a competência para concedê-la será sempre do Poder Executivo federal.', 'C',
+  'Art. 1.123, parágrafo único: a autorização é **sempre federal**. A sociedade **estrangeira** não pode funcionar no País sem autorização, embora possa ser acionista de S.A. brasileira (art. 1.134).',
+  lei=[(CC + '1123', 'A competência para a autorização será sempre do Poder Executivo federal.', None, 'CC, art. 1.123, par. ún.'),
+       (CC + '1134', 'A sociedade estrangeira, qualquer que seja o seu objeto', 'acionista de sociedade anônima brasileira.', 'CC, art. 1.134')],
+  kw=['autorização', 'Poder Executivo federal'])
 
 # ---------------- PONTO 5 — RODADA 2
 I(P, 2, 'Débitos no trespasse',
@@ -103,6 +133,44 @@ I(P, 2, 'Dissolução irregular',
   '**Súmula 435/STJ** — atenção: é regra da **execução fiscal**. Nas relações civis e empresariais o encerramento irregular, sozinho, não autoriza a desconsideração (Tema 1.210).',
   juris=[J['S435'], J['T1210']],
   kw=['dissolução irregular', 'sócio-gerente'])
+# Acréscimo de 07/11/2026 (Livro II por inteiro).
+I(P, 2, 'Sociedades coligadas',
+  'Diz-se coligada ou filiada a sociedade de cujo capital outra sociedade participa com cinco por cento ou mais, sem controlá-la.', 'E',
+  'Art. 1.099: o patamar da **filiada/coligada** é de **10% ou mais**, sem controle. Abaixo de 10% do capital votante, é de **simples participação** (art. 1.100); com maioria de votos e poder de eleger a maioria dos administradores, **controlada** (art. 1.098).',
+  lei=[(CC + '1099', 'Diz-se coligada ou filiada a sociedade', 'sem controlá-la.', 'CC, art. 1.099'),
+       (CC + '1100', 'É de simples participação a sociedade', 'capital com direito de voto.', 'CC, art. 1.100')],
+  kw=['coligada', 'dez por cento', 'simples participação'])
+I(P, 2, 'Transformação',
+  'A transformação de uma sociedade em outro tipo societário pressupõe a sua prévia dissolução e liquidação.', 'E',
+  'Art. 1.113: a transformação **independe de dissolução ou liquidação**; segue as regras de constituição do novo tipo. Depende do **consentimento de todos os sócios**, salvo previsão no ato constitutivo, caso em que o dissidente pode retirar-se (art. 1.114).',
+  lei=[(CC + '1113', 'O ato de transformação independe de dissolução ou liquidação da sociedade', 'em que vai converter-se.', 'CC, art. 1.113'),
+       (CC + '1114', 'A transformação depende do consentimento de todos os sócios', 'o disposto no art. 1.031.', 'CC, art. 1.114')],
+  kw=['transformação', 'independe de dissolução'])
+I(P, 2, 'Incorporação, fusão e cisão — credor prejudicado',
+  'Até noventa dias após publicados os atos relativos à incorporação, fusão ou cisão, o credor anterior por ela prejudicado poderá promover judicialmente a anulação deles.', 'C',
+  'Art. 1.122: **90 dias** da publicação. A **consignação em pagamento** prejudica a anulação; sendo ilíquida a dívida, a garantia da execução suspende o processo (§§ 1º e 2º). Na **incorporação** a incorporadora sucede as absorvidas (art. 1.116); na **fusão** todas se extinguem e nasce sociedade nova (art. 1.119).',
+  lei=[(CC + '1122', 'Até noventa dias após publicados os atos relativos à incorporação', 'promover judicialmente a anulação deles.', 'CC, art. 1.122'),
+       (CC + '1119', 'A fusão determina a extinção das sociedades que se unem', 'nos direitos e obrigações.', 'CC, art. 1.119')],
+  kw=['incorporação', 'fusão', 'cisão', 'noventa dias'])
+I(P, 2, 'Liquidação',
+  'Não designado no contrato social, o liquidante será eleito pelos sócios, podendo a escolha recair em pessoa estranha à sociedade.', 'C',
+  'Art. 1.038: o liquidante pode ser **estranho** à sociedade e destituído a todo tempo pelos sócios (se eleito por eles) ou, havendo **justa causa**, judicialmente. Em todos os atos usa a denominação seguida da cláusula **"em liquidação"** (art. 1.103, par. ún.).',
+  lei=[(CC + '1038', 'Se não estiver designado no contrato social, o liquidante será eleito', 'pessoa estranha à sociedade.', 'CC, art. 1.038'),
+       (CC + '1103', 'Em todos os atos, documentos ou publicações, o liquidante empregará', 'declaração de sua qualidade.', 'CC, art. 1.103, par. ún.')],
+  kw=['liquidante', 'pessoa estranha', 'em liquidação'])
+I(P, 2, 'Prepostos',
+  'Os preponentes são responsáveis pelos atos de quaisquer prepostos praticados nos seus estabelecimentos e relativos à atividade da empresa, ainda que não autorizados por escrito.', 'C',
+  'Art. 1.178: **dentro do estabelecimento**, o preponente responde mesmo sem autorização escrita; **fora dele**, só nos limites dos **poderes conferidos por escrito** (parágrafo único). O preposto responde ao preponente pelos atos **culposos** e, perante terceiros, solidariamente com ele pelos **dolosos** (art. 1.177, par. ún.).',
+  lei=[(CC + '1178', 'Os preponentes são responsáveis pelos atos de quaisquer prepostos', 'ainda que não autorizados por escrito.', 'CC, art. 1.178'),
+       (CC + '1177', 'No exercício de suas funções, os prepostos são pessoalmente responsáveis', 'pelos atos dolosos.', 'CC, art. 1.177, par. ún.')],
+  kw=['preponente', 'preposto', 'estabelecimento'])
+I(P, 2, 'Escrituração — sigilo dos livros',
+  'O juiz pode, de ofício e a qualquer tempo, determinar a exibição integral dos livros e papéis de escrituração do empresário, para verificar se observam as formalidades legais.', 'E',
+  'Arts. 1.190 e 1.191: vigora o **sigilo** — nenhuma autoridade, juiz ou tribunal pode ordenar diligência para verificar a regularidade dos livros, ressalvados os casos legais. A **exibição integral** só cabe em questões de **sucessão, comunhão ou sociedade, gestão à conta de outrem ou falência**; fora disso, cabe **exame parcial** (§ 1º).',
+  lei=[(CC + '1190', 'Ressalvados os casos previstos em lei, nenhuma autoridade', 'as formalidades prescritas em lei.', 'CC, art. 1.190'),
+       (CC + '1191', 'O juiz só poderá autorizar a exibição integral', 'ou em caso de falência.', 'CC, art. 1.191')],
+  exc=['O sigilo não vale perante as autoridades fazendárias no exercício da fiscalização tributária (art. 1.193).'],
+  kw=['exibição integral', 'sigilo', 'escrituração'])
 
 P = 'DBA26-CIV-5-B2'
 # ---------------- PONTO 5-B2 · Da posse — RODADA 1

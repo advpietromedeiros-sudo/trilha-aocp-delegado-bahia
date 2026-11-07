@@ -358,6 +358,8 @@ I(P, 1, 'Requisito temporal para a recuperação',
   'Pode requerer recuperação judicial o devedor que, no momento do pedido, exerça regularmente suas atividades há mais de um ano.', 'E',
   'Art. 48: exige-se exercício regular há **mais de 2 (dois) anos**, além de não ser falido e não ter obtido recuperação há menos de 5 anos, entre outros requisitos.',
   lei=[(RF + '48', 'Poderá requerer recuperação judicial o devedor que', 'mais de 2 (dois) anos', 'Lei 11.101/2005, art. 48')],
+  juris=[J['T1145']],
+  exc=['Produtor rural: basta estar inscrito na Junta Comercial no momento do pedido; os 2 anos de atividade empresarial podem ser anteriores ao registro (Tema 1.145/STJ; art. 48, §§ 2º e 3º).'],
   kw=['dois anos', 'requerer recuperação judicial'])
 I(P, 1, 'Créditos sujeitos',
   'Estão sujeitos à recuperação judicial todos os créditos existentes na data do pedido, ainda que não vencidos.', 'C',
@@ -379,6 +381,8 @@ I(P, 1, 'Classificação dos créditos',
   'Na classificação dos créditos na falência, os derivados da legislação trabalhista, limitados a cento e cinquenta salários mínimos por credor, e os decorrentes de acidentes de trabalho precedem os créditos gravados com direito real de garantia.', 'C',
   'Art. 83: **I — trabalhistas (até 150 s.m.) e acidentários**; **II — garantia real** até o valor do bem; **III — tributários**; depois, quirografários, multas e subordinados.',
   lei=[(RF + '83', 'I - os créditos derivados da legislação trabalhista', 'acidentes de trabalho;', 'Lei 11.101/2005, art. 83, I')],
+  juris=[J['T637']],
+  exc=['Honorários advocatícios equiparam-se aos trabalhistas, no limite do inciso I; os devidos por serviços à massa após a quebra são extraconcursais (Tema 637/STJ).'],
   kw=['classificação', 'cento e cinquenta salários'])
 I(P, 1, 'Prazo do plano de recuperação',
   'O plano de recuperação judicial será apresentado pelo devedor no prazo improrrogável de trinta dias da publicação da decisão que deferir o processamento, sob pena de convolação em falência.', 'E',
@@ -386,12 +390,44 @@ I(P, 1, 'Prazo do plano de recuperação',
   lei=[(RF + '53', 'O plano de recuperação será apresentado pelo devedor em juízo', 'convolação em falência', 'Lei 11.101/2005, art. 53')],
   kw=['plano de recuperação', 'sessenta dias'])
 
+# Acréscimo de 07/11/2026: classes, cram down, convolação, termo legal, extrajudicial.
+I(P, 1, 'Classes de credores na assembleia',
+  'Na assembleia-geral de credores, os titulares de créditos trabalhistas votam na classe própria apenas até o limite de cento e cinquenta salários mínimos, e pelo excedente na classe dos quirografários.', 'E',
+  'Art. 41, § 1º: o trabalhista vota na classe I **com o total do crédito, independentemente do valor** (o teto de 150 salários mínimos é regra de **classificação na falência**, art. 83, I). Quem vota dividido é o credor com **garantia real**: na classe II até o valor do bem e na III pelo restante (§ 2º). São quatro classes: trabalhista, garantia real, quirografários e ME/EPP.',
+  lei=[(RF + '41', 'A assembléia-geral será composta pelas seguintes classes de credores', 'microempresa ou empresa de pequeno porte.', 'Lei 11.101/2005, art. 41'),
+       (RF + '41', 'Os titulares de créditos derivados da legislação do trabalho votam', 'independentemente do valor.', 'Lei 11.101/2005, art. 41, § 1º')],
+  peg='Transplantar o teto de 150 salários mínimos do art. 83 para o voto na assembleia.',
+  kw=['classes de credores', 'total de seu crédito'])
+I(P, 1, 'Cram down',
+  'O juiz pode conceder a recuperação judicial com base em plano não aprovado por todas as classes, desde que, na mesma assembleia, tenha obtido voto favorável de credores que representem mais da metade de todos os créditos presentes, aprovação de três classes (ou de duas, se só houver três votantes) e, na classe que o rejeitou, voto favorável de mais de um terço dos credores.', 'C',
+  'Art. 58, § 1º: o ***cram down*** brasileiro exige requisitos **cumulativos** — maioria do valor total presente (independentemente de classes), aprovação da maioria das classes e **mais de 1/3** na classe dissidente. E só se o plano **não der tratamento diferenciado** aos credores da classe que o rejeitou (§ 2º).',
+  lei=[(RF + '58', 'O juiz poderá conceder a recuperação judicial com base em plano que não obteve aprovação', 'computados na forma dos §§ 1º e 2º do art. 45 desta Lei.', 'Lei 11.101/2005, art. 58, § 1º'),
+       (RF + '58', 'A recuperação judicial somente poderá ser concedida com base no § 1º', 'classe que o houver rejeitado.', 'Lei 11.101/2005, art. 58, § 2º')],
+  kw=['cram down', 'um terço', 'tratamento diferenciado'])
+I(P, 1, 'Convolação em falência',
+  'O juiz decretará a falência durante o processo de recuperação judicial se o devedor não apresentar o plano de recuperação no prazo legal.', 'C',
+  'Art. 73: a **convolação** ocorre por deliberação da assembleia, **não apresentação do plano** no prazo do art. 53, rejeição do plano dos credores, **descumprimento do plano** no período de fiscalização, descumprimento de parcelamento ou transação fiscal e **esvaziamento patrimonial** (incisos V e VI, Lei 14.112/2020).',
+  lei=[(RF + '73', 'O juiz decretará a falência durante o processo de recuperação judicial:', 'no prazo do art. 53 desta Lei;', 'Lei 11.101/2005, art. 73, I e II')],
+  kw=['convolação', 'não apresentação do plano'])
+I(P, 1, 'Termo legal da falência',
+  'A sentença que decreta a falência fixará o termo legal, podendo retrotraí-lo por até cento e oitenta dias contados do pedido de falência, do pedido de recuperação judicial ou do primeiro protesto por falta de pagamento.', 'E',
+  'Art. 99, II: o termo legal retroage **no máximo 90 dias** desses marcos (excluídos os protestos cancelados). Ele importa para a **ineficácia objetiva** de pagamentos e garantias feitos dentro dele (art. 129, I a III).',
+  lei=[(RF + '99', 'II – fixará o termo legal da falência', 'protestos que tenham sido cancelados;', 'Lei 11.101/2005, art. 99, II')],
+  peg='Trocar 90 por 180 dias — 180 é o stay period.',
+  kw=['termo legal', 'noventa dias'])
+I(P, 1, 'Recuperação extrajudicial — créditos abrangidos',
+  'Ficam fora da recuperação extrajudicial os créditos tributários e os do proprietário fiduciário, e a inclusão de créditos trabalhistas e por acidente de trabalho exige negociação coletiva com o sindicato da categoria.', 'C',
+  'Art. 161, § 1º (Lei 14.112/2020): estão fora os **tributários**, os do **art. 49, § 3º** (fiduciário, arrendador, promitente vendedor com irrevogabilidade) e os de **adiantamento de contrato de câmbio**; trabalhistas entram só com **negociação coletiva**. O devedor precisa preencher os requisitos do art. 48.',
+  lei=[(RF + '161', 'O devedor que preencher os requisitos do art. 48 desta Lei', 'plano de recuperação extrajudicial.', 'Lei 11.101/2005, art. 161'),
+       (RF + '161', 'Estão sujeitos à recuperação extrajudicial todos os créditos existentes na data do pedido', 'sindicato da respectiva categoria profissional.', 'Lei 11.101/2005, art. 161, § 1º')],
+  kw=['recuperação extrajudicial', 'negociação coletiva'])
+
 # ---------------- PONTO 11 — RODADA 2
 I(P, 2, 'Coobrigados e garantidores',
   'A recuperação judicial do devedor principal suspende as execuções movidas contra os avalistas e fiadores do crédito.', 'E',
   '**Súmula 581/STJ**: a recuperação **não impede o prosseguimento** das ações e execuções contra **devedores solidários e coobrigados** (garantia cambial, real ou fidejussória). Ver também art. 49, § 1º.',
   lei=[(RF + '49', 'Os credores do devedor em recuperação judicial conservam seus direitos e privilégios', 'obrigados de regresso.', 'Lei 11.101/2005, art. 49, § 1º')],
-  juris=[J['S581']],
+  juris=[J['S581'], J['T885']],
   kw=['coobrigados', 'avalistas'])
 I(P, 2, 'Bens fora do plano',
   'O juízo da recuperação judicial não é competente para decidir sobre a constrição de bens não abrangidos pelo plano de recuperação da empresa.', 'C',
@@ -433,6 +469,39 @@ I(P, 2, 'Protesto para requerer falência',
   '**Súmula 361/STJ**. E a duplicata não aceita, mas protestada e com prova da prestação dos serviços, instrui o pedido de falência (Súmula 248/STJ).',
   juris=[J['S361'], J['S248']],
   kw=['protesto', 'identificação'])
+
+# Acréscimo de 07/11/2026: ineficácia, revocatória, efeitos da falência, extrajudicial, estatais.
+I(P, 2, 'Ineficácia objetiva',
+  'Para que o pagamento de dívida não vencida feito pelo devedor dentro do termo legal seja declarado ineficaz perante a massa, é indispensável provar que o credor conhecia a crise econômico-financeira do devedor.', 'E',
+  'Art. 129: a ineficácia é **objetiva** — vale **tenha ou não o contratante conhecimento** da crise e **seja ou não** intenção do devedor fraudar. Pode ser declarada **de ofício**, alegada em defesa ou pleiteada em ação própria ou incidentalmente (parágrafo único). Atos gratuitos e renúncia a herança: até **2 anos** antes da quebra.',
+  lei=[(RF + '129', 'São ineficazes em relação à massa falida, tenha ou não o contratante conhecimento', 'ainda que pelo desconto do próprio título;', 'Lei 11.101/2005, art. 129, I'),
+       (RF + '129', 'A ineficácia poderá ser declarada de ofício pelo juiz', 'incidentalmente no curso do processo.', 'Lei 11.101/2005, art. 129, par. ún.')],
+  kw=['ineficácia', 'termo legal', 'de ofício'])
+I(P, 2, 'Ação revocatória',
+  'A ação revocatória, que exige prova do conluio fraudulento entre o devedor e o terceiro e do efetivo prejuízo à massa, deve ser proposta pelo administrador judicial, por qualquer credor ou pelo Ministério Público no prazo de dois anos contado da decretação da falência.', 'E',
+  'Arts. 130 e 132: o prazo é de **3 (três) anos** da decretação. Diferente do art. 129, a revocatória é **subjetiva**: exige **conluio fraudulento** e **efetivo prejuízo** à massa.',
+  lei=[(RF + '130', 'São revogáveis os atos praticados com a intenção de prejudicar credores', 'sofrido pela massa falida.', 'Lei 11.101/2005, art. 130'),
+       (RF + '132', 'A ação revocatória, de que trata o art. 130 desta Lei', 'contado da decretação da falência.', 'Lei 11.101/2005, art. 132')],
+  kw=['revocatória', 'conluio fraudulento', 'três anos'])
+I(P, 2, 'Contratos bilaterais na falência',
+  'A decretação da falência resolve de pleno direito os contratos bilaterais do falido, cabendo ao contratante habilitar o crédito correspondente.', 'E',
+  'Art. 117: os contratos bilaterais **não se resolvem** pela falência; o administrador judicial pode cumpri-los, com autorização do Comitê, se isso reduzir o passivo ou preservar ativos. Interpelado, tem 10 dias para declarar se cumpre; a recusa ou o silêncio gera **indenização como crédito quirografário** (§ 2º). A quebra, por outro lado, **antecipa o vencimento** das dívidas do devedor (art. 77).',
+  lei=[(RF + '117', 'Os contratos bilaterais não se resolvem pela falência', 'mediante autorização do Comitê.', 'Lei 11.101/2005, art. 117'),
+       (RF + '77', 'A decretação da falência determina o vencimento antecipado das dívidas', 'abatimento proporcional dos juros', 'Lei 11.101/2005, art. 77')],
+  kw=['contratos bilaterais', 'não se resolvem', 'vencimento antecipado'])
+I(P, 2, 'Recuperação extrajudicial — quórum',
+  'O devedor pode requerer a homologação de plano de recuperação extrajudicial que obrigue todos os credores por ele abrangidos, desde que assinado por credores que representem mais de três quintos dos créditos de cada espécie abrangida.', 'E',
+  'Art. 163 (Lei 14.112/2020): basta **mais da metade** dos créditos de cada espécie abrangida (antes eram 3/5). O pedido pode ser feito com **1/3** de adesão e compromisso de atingir o quórum em **90 dias improrrogáveis** (§ 7º), e o pedido já atrai a suspensão do art. 6º quanto às espécies abrangidas (§ 8º).',
+  lei=[(RF + '163', 'O devedor poderá também requerer a homologação de plano de recuperação extrajudicial que obriga', 'abrangidos pelo plano de recuperação extrajudicial.', 'Lei 11.101/2005, art. 163'),
+       (RF + '163', 'Aplica-se à recuperação extrajudicial, desde o respectivo pedido, a suspensão', 'exigido pelo § 7º deste artigo.', 'Lei 11.101/2005, art. 163, § 8º')],
+  peg='O quórum antigo (3/5) ainda aparece em questões desatualizadas.',
+  kw=['recuperação extrajudicial', 'mais da metade'])
+I(P, 2, 'Estatais em concorrência com a iniciativa privada',
+  'Para o STF, estatal que explora atividade econômica disputando mercado com empresas privadas continua fora da falência e da recuperação judicial, sendo válida a exclusão feita pela Lei 11.101/2005.', 'C',
+  '**Tema 1.101/RG (2025)**: é **constitucional** o art. 2º, I — pesa o interesse público na criação da estatal e o **paralelismo das formas** (se a criação depende de lei, a extinção também).',
+  lei=[(RF + '2', 'Esta Lei não se aplica a', 'sociedade de economia mista;', 'Lei 11.101/2005, art. 2º, I')],
+  juris=[J['RG1101']],
+  kw=['estatais', 'paralelismo das formas', 'concorrência'])
 
 P = 'DBA26-CIV-12'
 # ---------------- PONTO 12 · Jurisprudência aplicada — RODADA 1

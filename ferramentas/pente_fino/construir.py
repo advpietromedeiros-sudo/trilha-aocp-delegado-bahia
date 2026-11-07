@@ -1,8 +1,8 @@
 """Monta discursiva/pente_fino_<disc>.js a partir dos arquivos de conteúdo da disciplina.
   --disc CPC (padrão): c01_04.py, c05_08.py, c09_12.py (Processo Civil, aprovado — D-021);
-  --disc CIV: civ/*.py (Direito Civil e Empresarial).
+  --disc CIV: civ/*.py (Direito Civil e Empresarial); --disc MLE: mle/*.py (Medicina Legal).
 Cada lei é (chave, início, fim|None, rótulo): o texto é RECORTADO do oficial (assets/lei_seca_oficial.json),
-do início até o fim do trecho final — nada é digitado à mão. Uso: python construir.py [--disc CPC|CIV]"""
+do início até o fim do trecho final — nada é digitado à mão. Uso: python construir.py [--disc CPC|CIV|MLE]"""
 import argparse, importlib, json, pathlib, re, sys, collections
 
 AQUI = pathlib.Path(__file__).resolve().parent

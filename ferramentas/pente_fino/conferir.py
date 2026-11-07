@@ -2,9 +2,11 @@
   1. esquema (docs/PENTE_FINO_ESQUEMA.md): campos, ids únicos, gabarito C/E, pontos do edital na ordem;
   2. todo lei[].texto CONTIDO, letra por letra, em assets/lei_seca_oficial.json[<lei>:<art>];
   3. toda juris com tribunal, fonte e data dd/mm/aaaa;
-  4. volume (R1 8–12, R2 6–10 por ponto) e equilíbrio (40%–60% de E por rodada).
+  4. volume (R1 8–12, R2 6–10 por ponto; a disciplina pode fixar outro em disciplinas.py — MLE: 6–10 e 5–8) e
+     equilíbrio (40%–60% de E por rodada).
+Disciplina com doutrina_sem_fonte (MLE) admite assertiva sem lei nem juris (só doutrina), e o total delas é informado.
 Avisos (não param): artigo citado com redação dupla na base (texto antigo + novo) ou marcado alteracao_2026.
-Uso: python conferir.py [--disc CPC|CIV]   → imprime contagens; saída 0 = tudo certo."""
+Uso: python conferir.py [--disc CPC|CIV|MLE]   → imprime contagens; saída 0 = tudo certo."""
 import argparse, collections, json, pathlib, re, sys
 
 sys.stdout.reconfigure(encoding='utf-8')
@@ -32,6 +34,7 @@ if [p['id'] for p in D['pontos']] != edital: erros.append('pontos ≠ edital (ou
 for k in ['disciplina', 'fontes', 'pontos', 'rodadas']:
     if k not in D: erros.append(f'falta campo {k}')
 
+so_doutrina = 0
 ids = set(); leis = collections.Counter(); juris = {}; cont = collections.Counter(); e_cont = collections.Counter()
 for r in D['rodadas']:
     for it in r['itens']:
@@ -45,7 +48,9 @@ for r in D['rodadas']:
         c = it['comentario']
         if not c.get('resumo') or '**' not in c['resumo']: erros.append(f'{iid}: resumo sem negrito')
         if not c.get('palavras_chave'): erros.append(f'{iid}: sem palavras_chave')
-        if not c.get('lei') and not c.get('juris'): erros.append(f'{iid}: sem lei nem juris')
+        if not c.get('lei') and not c.get('juris'):
+            if CFG.get('doutrina_sem_fonte'): so_doutrina += 1
+            else: erros.append(f'{iid}: sem lei nem juris')
         if 'excecoes' in c and not (isinstance(c['excecoes'], list) and c['excecoes']): erros.append(f'{iid}: excecoes não é lista')
         for l in c.get('lei', []):
             chave = f"{l['lei']}:{l['art']}"
@@ -76,12 +81,13 @@ for r in D['rodadas']:
         cont[(r['n'], it['ponto'])] += 1
         if it['gabarito'] == 'E': e_cont[r['n']] += 1
 
+(V1a, V1b), (V2a, V2b) = CFG.get('volume', ((8, 12), (6, 10)))
 print('Assertivas por ponto (R1 / R2):')
 for p in edital:
     a, b = cont[(1, p)], cont[(2, p)]
     print(f'  {p:13s} {a:3d} / {b:3d}')
-    if not 8 <= a <= 12: erros.append(f'{p}: R1 com {a} (esperado 8–12)')
-    if not 6 <= b <= 10: erros.append(f'{p}: R2 com {b} (esperado 6–10)')
+    if not V1a <= a <= V1b: erros.append(f'{p}: R1 com {a} (esperado {V1a}–{V1b})')
+    if not V2a <= b <= V2b: erros.append(f'{p}: R2 com {b} (esperado {V2a}–{V2b})')
 for r in D['rodadas']:
     n = len(r['itens']); e = e_cont[r['n']]; pct = 100 * e / n
     print(f'Rodada {r["n"]}: {n} assertivas, {e} E ({pct:.1f}%)'.replace('.', ','))
@@ -89,6 +95,8 @@ for r in D['rodadas']:
 print(f'Total: {len(ids)} assertivas · {len(leis)} dispositivos de lei distintos ({sum(leis.values())} citações) · {len(juris)} julgados/súmulas distintos')
 por_lei = collections.Counter(k.split(':')[0] for k in leis)
 print('Dispositivos por diploma:', dict(por_lei))
+if CFG.get('doutrina_sem_fonte'):
+    print(f'Assertivas só de doutrina (sem lei nem juris): {so_doutrina}')
 if avisos:
     print(f'\n{len(avisos)} AVISO(S):'); print('\n'.join('  ' + a for a in avisos))
 if erros:

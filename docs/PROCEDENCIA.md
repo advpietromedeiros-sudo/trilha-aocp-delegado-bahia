@@ -147,3 +147,15 @@ prompt do servidor já manda não aplicar norma posterior.
   para o conteúdo, e as extrações de texto foram apagadas ao fim.
 - **Letra de lei:** `assets/lei_seca_oficial.json` (Planalto). **Jurisprudência:** SCON e repetitivos do STJ, PDF
   oficial de súmulas e notícias do STF, conferidos em 07/11/2026.
+
+## Pente Fino — reforço de Empresarial e Medicina Legal (07/11/2026, D-021)
+
+- **Empresarial (CIV-4 títulos de crédito, CIV-5, CIV-11):** guia de temas pelos PDFs de Empresarial que estão (salvos
+  por engano) em `DELEGADO BA/CRIMINOLOGIA/` — Títulos de crédito, Teoria Geral do Direito Empresarial, Espécies de
+  Empresário, Teoria Geral do Direito Societário, Tipos Societários, Estabelecimento Empresarial, Nome Empresarial,
+  Recuperação judicial e extrajudicial, Falência. Não usados: Sociedade Anônima, Marcas e Patentes, Trabalho do Preso.
+- **Medicina Legal:** guia de temas pelo `DELEGADO BA/RESUMO DESTACADO-MEDICINA LEGAL.pdf` e pela apostila do próprio
+  titular (`APOSTILA_TEORICA_VISUAL_MEDICINA_LEGAL_PIETRO_MEDEIROS.docx`, Downloads).
+- Material de terceiro, uso pessoal (D-018). Texto das assertivas e dos comentários é próprio: conferência de janelas
+  de 8 palavras contra o material (frases coincidentes reescritas; restam só enunciados oficiais e letra de lei).
+  ⚠️ Os PDFs trazem marca d'água com dados pessoais do comprador: nada disso entrou, e as extrações foram apagadas.

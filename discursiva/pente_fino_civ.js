@@ -1314,6 +1314,154 @@ window.PENTE_FINO.CIV = {
      }
     },
     {
+     "id": "CIV-4-R1-13",
+     "ponto": "DBA26-CIV-4",
+     "tema": "Títulos de crédito — conceito",
+     "assertiva": "Segundo o Código Civil, sem a apresentação da cártula não se exerce o direito nela mencionado, que é literal e autônomo; e o título só tem eficácia se atender aos requisitos fixados em lei.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 887: o conceito traz os três atributos clássicos — **cartularidade** (documento necessário), **literalidade** e **autonomia**. Leis especiais (cheque, duplicata, letra de câmbio) prevalecem; o CC é supletivo (art. 903).",
+      "lei": [
+       {
+        "lei": "L10406",
+        "art": "887",
+        "par": "",
+        "inc": "",
+        "rotulo": "CC, art. 887",
+        "texto": "O título de crédito, documento necessário ao exercício do direito literal e autônomo nele contido, somente produz efeito quando preencha os requisitos da lei."
+       },
+       {
+        "lei": "L10406",
+        "art": "903",
+        "par": "",
+        "inc": "",
+        "rotulo": "CC, art. 903",
+        "texto": "Salvo disposição diversa em lei especial, regem-se os títulos de crédito pelo disposto neste Código."
+       }
+      ],
+      "palavras_chave": [
+       "cartularidade",
+       "literalidade",
+       "autonomia"
+      ]
+     }
+    },
+    {
+     "id": "CIV-4-R1-14",
+     "ponto": "DBA26-CIV-4",
+     "tema": "Títulos de crédito — aval parcial",
+     "assertiva": "No regime do Código Civil, o pagamento de título que contenha obrigação de pagar soma determinada pode ser garantido por aval, admitindo-se o aval parcial.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 897, parágrafo único: o CC **veda o aval parcial**. Atenção: a Lei Uniforme de Genebra (letra de câmbio e nota promissória) e a Lei do Cheque o admitem — e a lei especial prevalece (art. 903).",
+      "lei": [
+       {
+        "lei": "L10406",
+        "art": "897",
+        "par": "",
+        "inc": "",
+        "rotulo": "CC, art. 897 e par. ún.",
+        "texto": "O pagamento de título de crédito, que contenha obrigação de pagar soma determinada, pode ser garantido por aval.\nParágrafo único. É vedado o aval parcial."
+       }
+      ],
+      "pegadinha": "Trocar \"vedado\" por \"admitido\", ou cobrar a regra do CC num título regido por lei especial.",
+      "palavras_chave": [
+       "aval parcial",
+       "vedado"
+      ]
+     }
+    },
+    {
+     "id": "CIV-4-R1-15",
+     "ponto": "DBA26-CIV-4",
+     "tema": "Títulos de crédito — vencimento e lugar",
+     "assertiva": "O título de crédito que não indique o vencimento é considerado à vista e, se omitir o lugar de emissão e de pagamento, considera-se como tal o domicílio do emitente.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 889, §§ 1º e 2º: requisitos mínimos são **data de emissão**, **direitos conferidos** e **assinatura do emitente**; a falta de vencimento faz o título **à vista**; a falta de lugar remete ao **domicílio do emitente**.",
+      "lei": [
+       {
+        "lei": "L10406",
+        "art": "889",
+        "par": "",
+        "inc": "",
+        "rotulo": "CC, art. 889",
+        "texto": "Deve o título de crédito conter a data da emissão, a indicação precisa dos direitos que confere, e a assinatura do emitente."
+       },
+       {
+        "lei": "L10406",
+        "art": "889",
+        "par": "",
+        "inc": "",
+        "rotulo": "CC, art. 889, §§ 1º e 2º",
+        "texto": "É à vista o título de crédito que não contenha indicação de vencimento.\n§ 2º Considera-se lugar de emissão e de pagamento, quando não indicado no título, o domicílio do emitente."
+       }
+      ],
+      "palavras_chave": [
+       "à vista",
+       "domicílio do emitente"
+      ]
+     }
+    },
+    {
+     "id": "CIV-4-R1-16",
+     "ponto": "DBA26-CIV-4",
+     "tema": "Títulos de crédito — cláusulas não escritas",
+     "assertiva": "É válida e eficaz a cláusula de juros inserida no título de crédito, desde que pactuada no momento da emissão.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 890: consideram-se **não escritas** a cláusula de **juros**, a **proibitiva de endosso**, a **excludente de responsabilidade** pelo pagamento ou despesas e a que dispense termos e formalidades. O título continua válido; só a cláusula é desconsiderada.",
+      "lei": [
+       {
+        "lei": "L10406",
+        "art": "890",
+        "par": "",
+        "inc": "",
+        "rotulo": "CC, art. 890",
+        "texto": "Consideram-se não escritas no título a cláusula de juros, a proibitiva de endosso, a excludente de responsabilidade pelo pagamento ou por despesas, a que dispense a observância de termos e formalidade prescritas, e a que, além dos limites fixados em lei, exclua ou restrinja direitos e obrigações."
+       }
+      ],
+      "palavras_chave": [
+       "cláusula de juros",
+       "não escritas"
+      ]
+     }
+    },
+    {
+     "id": "CIV-4-R1-17",
+     "ponto": "DBA26-CIV-4",
+     "tema": "Títulos de crédito — responsabilidade do endossante",
+     "assertiva": "Pelo Código Civil, o endossante responde, em regra, pelo cumprimento da prestação constante do título, salvo cláusula expressa que o exonere.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 914: a regra do CC é a **inversa** — o endossante **não responde**, salvo cláusula expressa em contrário; se assumir a responsabilidade, torna-se **devedor solidário** (§ 1º). Na letra de câmbio (lei especial), o endossante garante o pagamento.",
+      "lei": [
+       {
+        "lei": "L10406",
+        "art": "914",
+        "par": "",
+        "inc": "",
+        "rotulo": "CC, art. 914",
+        "texto": "Ressalvada cláusula expressa em contrário, constante do endosso, não responde o endossante pelo cumprimento da prestação constante do título."
+       },
+       {
+        "lei": "L10406",
+        "art": "914",
+        "par": "",
+        "inc": "",
+        "rotulo": "CC, art. 914, § 1º",
+        "texto": "Assumindo responsabilidade pelo pagamento, o endossante se torna devedor solidário."
+       }
+      ],
+      "pegadinha": "A troca típica é inverter a regra geral do endosso no CC.",
+      "palavras_chave": [
+       "endossante",
+       "não responde",
+       "devedor solidário"
+      ]
+     }
+    },
+    {
      "id": "CIV-4-B2-R1-01",
      "ponto": "DBA26-CIV-4-B2",
      "tema": "Ato ilícito",
@@ -1869,6 +2017,160 @@ window.PENTE_FINO.CIV = {
       "palavras_chave": [
        "estabelecimento",
        "complexo de bens"
+      ]
+     }
+    },
+    {
+     "id": "CIV-5-R1-12",
+     "ponto": "DBA26-CIV-5",
+     "tema": "Empresário casado e imóveis da empresa",
+     "assertiva": "Salvo se casado no regime da separação absoluta, o empresário precisa da anuência do cônjuge para vender ou hipotecar imóvel que integre o patrimônio da empresa.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 978: o empresário casado aliena ou grava os imóveis da empresa **sem outorga conjugal**, **qualquer que seja o regime de bens** — exceção ao art. 1.647, I.",
+      "lei": [
+       {
+        "lei": "L10406",
+        "art": "978",
+        "par": "",
+        "inc": "",
+        "rotulo": "CC, art. 978",
+        "texto": "O empresário casado pode, sem necessidade de outorga conjugal, qualquer que seja o regime de bens, alienar os imóveis que integrem o patrimônio da empresa ou gravá-los de ônus real."
+       }
+      ],
+      "palavras_chave": [
+       "outorga conjugal",
+       "qualquer que seja o regime"
+      ]
+     }
+    },
+    {
+     "id": "CIV-5-R1-13",
+     "ponto": "DBA26-CIV-5",
+     "tema": "Sociedade em conta de participação",
+     "assertiva": "Na sociedade em conta de participação, perante terceiros obrigam-se solidariamente o sócio ostensivo e o sócio participante, pois a inscrição do contrato no registro lhe confere personalidade jurídica.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Arts. 991 e 993: a atividade é exercida **só pelo sócio ostensivo**, em nome próprio; perante terceiro obriga-se **apenas o ostensivo**, e o participante só perante este. A sociedade é **despersonificada** — a eventual inscrição do contrato **não** lhe dá personalidade. O participante que intervier nas relações com terceiros responde solidariamente.",
+      "lei": [
+       {
+        "lei": "L10406",
+        "art": "991",
+        "par": "",
+        "inc": "",
+        "rotulo": "CC, art. 991, par. ún.",
+        "texto": "Obriga-se perante terceiro tão-somente o sócio ostensivo; e, exclusivamente perante este, o sócio participante, nos termos do contrato social."
+       },
+       {
+        "lei": "L10406",
+        "art": "993",
+        "par": "",
+        "inc": "",
+        "rotulo": "CC, art. 993",
+        "texto": "O contrato social produz efeito somente entre os sócios, e a eventual inscrição de seu instrumento em qualquer registro não confere personalidade jurídica à sociedade."
+       }
+      ],
+      "palavras_chave": [
+       "sócio ostensivo",
+       "sócio participante",
+       "despersonificada"
+      ]
+     }
+    },
+    {
+     "id": "CIV-5-R1-14",
+     "ponto": "DBA26-CIV-5",
+     "tema": "Sociedade em nome coletivo",
+     "assertiva": "Somente pessoas físicas podem tomar parte na sociedade em nome coletivo, e todos os sócios respondem solidária e ilimitadamente pelas obrigações sociais.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 1.039: **só pessoas físicas** e responsabilidade **solidária e ilimitada** (subsidiária ao patrimônio social, art. 1.024). Entre si, os sócios podem limitar a responsabilidade, sem efeito perante terceiros. Na **comandita simples**, só os comanditados (pessoas físicas) respondem ilimitadamente; os comanditários, pelo valor da quota (art. 1.045).",
+      "lei": [
+       {
+        "lei": "L10406",
+        "art": "1039",
+        "par": "",
+        "inc": "",
+        "rotulo": "CC, art. 1.039",
+        "texto": "Somente pessoas físicas podem tomar parte na sociedade em nome coletivo, respondendo todos os sócios, solidária e ilimitadamente, pelas obrigações sociais."
+       },
+       {
+        "lei": "L10406",
+        "art": "1045",
+        "par": "",
+        "inc": "",
+        "rotulo": "CC, art. 1.045",
+        "texto": "Na sociedade em comandita simples tomam parte sócios de duas categorias: os comanditados, pessoas físicas, responsáveis solidária e ilimitadamente pelas obrigações sociais; e os comanditários, obrigados somente pelo valor de sua quota."
+       }
+      ],
+      "palavras_chave": [
+       "nome coletivo",
+       "pessoas físicas",
+       "comandita simples"
+      ]
+     }
+    },
+    {
+     "id": "CIV-5-R1-15",
+     "ponto": "DBA26-CIV-5",
+     "tema": "Cooperativa",
+     "assertiva": "Na sociedade cooperativa, cada sócio tem direito a votos proporcionais ao valor de sua participação no capital social.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 1.094, VI: **um só voto por sócio**, tenha ou não capital a sociedade e qualquer que seja a participação. O quórum da assembleia se funda no **número de sócios presentes**, não no capital (inciso V); as quotas são **intransferíveis** a estranhos, ainda que por herança (inciso IV).",
+      "lei": [
+       {
+        "lei": "L10406",
+        "art": "1094",
+        "par": "",
+        "inc": "",
+        "rotulo": "CC, art. 1.094, VI",
+        "texto": "VI - direito de cada sócio a um só voto nas deliberações, tenha ou não capital a sociedade, e qualquer que seja o valor de sua participação;"
+       },
+       {
+        "lei": "L10406",
+        "art": "1094",
+        "par": "",
+        "inc": "",
+        "rotulo": "CC, art. 1.094, IV",
+        "texto": "IV - intransferibilidade das quotas do capital a terceiros estranhos à sociedade, ainda que por herança;"
+       }
+      ],
+      "palavras_chave": [
+       "cooperativa",
+       "um só voto"
+      ]
+     }
+    },
+    {
+     "id": "CIV-5-R1-16",
+     "ponto": "DBA26-CIV-5",
+     "tema": "Sociedade dependente de autorização",
+     "assertiva": "Quando a sociedade depender de autorização do Poder Executivo para funcionar, a competência para concedê-la será sempre do Poder Executivo federal.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 1.123, parágrafo único: a autorização é **sempre federal**. A sociedade **estrangeira** não pode funcionar no País sem autorização, embora possa ser acionista de S.A. brasileira (art. 1.134).",
+      "lei": [
+       {
+        "lei": "L10406",
+        "art": "1123",
+        "par": "",
+        "inc": "",
+        "rotulo": "CC, art. 1.123, par. ún.",
+        "texto": "A competência para a autorização será sempre do Poder Executivo federal."
+       },
+       {
+        "lei": "L10406",
+        "art": "1134",
+        "par": "",
+        "inc": "",
+        "rotulo": "CC, art. 1.134",
+        "texto": "A sociedade estrangeira, qualquer que seja o seu objeto, não pode, sem autorização do Poder Executivo, funcionar no País, ainda que por estabelecimentos subordinados, podendo, todavia, ressalvados os casos expressos em lei, ser acionista de sociedade anônima brasileira."
+       }
+      ],
+      "palavras_chave": [
+       "autorização",
+       "Poder Executivo federal"
       ]
      }
     },
@@ -3708,6 +4010,9 @@ window.PENTE_FINO.CIV = {
      "gabarito": "E",
      "comentario": {
       "resumo": "Art. 48: exige-se exercício regular há **mais de 2 (dois) anos**, além de não ser falido e não ter obtido recuperação há menos de 5 anos, entre outros requisitos.",
+      "excecoes": [
+       "Produtor rural: basta estar inscrito na Junta Comercial no momento do pedido; os 2 anos de atividade empresarial podem ser anteriores ao registro (Tema 1.145/STJ; art. 48, §§ 2º e 3º)."
+      ],
       "lei": [
        {
         "lei": "L11101",
@@ -3716,6 +4021,14 @@ window.PENTE_FINO.CIV = {
         "inc": "",
         "rotulo": "Lei 11.101/2005, art. 48",
         "texto": "Poderá requerer recuperação judicial o devedor que, no momento do pedido, exerça regularmente suas atividades há mais de 2 (dois) anos"
+       }
+      ],
+      "juris": [
+       {
+        "tribunal": "STJ",
+        "fonte": "Tema 1.145/STJ — REsp 1.905.573/MT e REsp 1.947.011/PR",
+        "data": "22/06/2022",
+        "texto": "Ao produtor rural que exerça sua atividade de forma empresarial há mais de dois anos é facultado requerer a recuperação judicial, desde que esteja inscrito na Junta Comercial no momento do pedido, independentemente do tempo de seu registro."
        }
       ],
       "palavras_chave": [
@@ -3812,6 +4125,9 @@ window.PENTE_FINO.CIV = {
      "gabarito": "C",
      "comentario": {
       "resumo": "Art. 83: **I — trabalhistas (até 150 s.m.) e acidentários**; **II — garantia real** até o valor do bem; **III — tributários**; depois, quirografários, multas e subordinados.",
+      "excecoes": [
+       "Honorários advocatícios equiparam-se aos trabalhistas, no limite do inciso I; os devidos por serviços à massa após a quebra são extraconcursais (Tema 637/STJ)."
+      ],
       "lei": [
        {
         "lei": "L11101",
@@ -3820,6 +4136,14 @@ window.PENTE_FINO.CIV = {
         "inc": "",
         "rotulo": "Lei 11.101/2005, art. 83, I",
         "texto": "I - os créditos derivados da legislação trabalhista, limitados a 150 (cento e cinquenta) salários-mínimos por credor, e aqueles decorrentes de acidentes de trabalho;"
+       }
+      ],
+      "juris": [
+       {
+        "tribunal": "STJ",
+        "fonte": "Tema 637/STJ — REsp 1.152.218/RS",
+        "data": "07/05/2014",
+        "texto": "Os honorários advocatícios têm natureza alimentar e equiparam-se aos créditos trabalhistas para habilitação em falência, observado o limite do art. 83, I, da Lei 11.101/2005; os honorários por trabalhos prestados à massa depois do decreto de falência são extraconcursais (arts. 84 e 149)."
        }
       ],
       "palavras_chave": [
@@ -3849,6 +4173,153 @@ window.PENTE_FINO.CIV = {
       "palavras_chave": [
        "plano de recuperação",
        "sessenta dias"
+      ]
+     }
+    },
+    {
+     "id": "CIV-11-R1-12",
+     "ponto": "DBA26-CIV-11",
+     "tema": "Classes de credores na assembleia",
+     "assertiva": "Na assembleia-geral de credores, os titulares de créditos trabalhistas votam na classe própria apenas até o limite de cento e cinquenta salários mínimos, e pelo excedente na classe dos quirografários.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 41, § 1º: o trabalhista vota na classe I **com o total do crédito, independentemente do valor** (o teto de 150 salários mínimos é regra de **classificação na falência**, art. 83, I). Quem vota dividido é o credor com **garantia real**: na classe II até o valor do bem e na III pelo restante (§ 2º). São quatro classes: trabalhista, garantia real, quirografários e ME/EPP.",
+      "lei": [
+       {
+        "lei": "L11101",
+        "art": "41",
+        "par": "",
+        "inc": "",
+        "rotulo": "Lei 11.101/2005, art. 41",
+        "texto": "A assembléia-geral será composta pelas seguintes classes de credores:\nI – titulares de créditos derivados da legislação do trabalho ou decorrentes de acidentes de trabalho;\nII – titulares de créditos com garantia real;\nIII – titulares de créditos quirografários, com privilégio especial, com privilégio geral ou subordinados.\nIV - titulares de créditos enquadrados como microempresa ou empresa de pequeno porte."
+       },
+       {
+        "lei": "L11101",
+        "art": "41",
+        "par": "",
+        "inc": "",
+        "rotulo": "Lei 11.101/2005, art. 41, § 1º",
+        "texto": "Os titulares de créditos derivados da legislação do trabalho votam com a classe prevista no inciso I do caput deste artigo com o total de seu crédito, independentemente do valor."
+       }
+      ],
+      "pegadinha": "Transplantar o teto de 150 salários mínimos do art. 83 para o voto na assembleia.",
+      "palavras_chave": [
+       "classes de credores",
+       "total de seu crédito"
+      ]
+     }
+    },
+    {
+     "id": "CIV-11-R1-13",
+     "ponto": "DBA26-CIV-11",
+     "tema": "Cram down",
+     "assertiva": "O juiz pode conceder a recuperação judicial com base em plano não aprovado por todas as classes, desde que, na mesma assembleia, tenha obtido voto favorável de credores que representem mais da metade de todos os créditos presentes, aprovação de três classes (ou de duas, se só houver três votantes) e, na classe que o rejeitou, voto favorável de mais de um terço dos credores.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 58, § 1º: o ***cram down*** brasileiro exige requisitos **cumulativos** — maioria do valor total presente (independentemente de classes), aprovação da maioria das classes e **mais de 1/3** na classe dissidente. E só se o plano **não der tratamento diferenciado** aos credores da classe que o rejeitou (§ 2º).",
+      "lei": [
+       {
+        "lei": "L11101",
+        "art": "58",
+        "par": "",
+        "inc": "",
+        "rotulo": "Lei 11.101/2005, art. 58, § 1º",
+        "texto": "O juiz poderá conceder a recuperação judicial com base em plano que não obteve aprovação na forma do art. 45 desta Lei, desde que, na mesma assembléia, tenha obtido, de forma cumulativa:\nI – o voto favorável de credores que representem mais da metade do valor de todos os créditos presentes à assembléia, independentemente de classes;\nII - a aprovação de 3 (três) das classes de credores ou, caso haja somente 3 (três) classes com credores votantes, a aprovação de pelo menos 2 (duas) das classes ou, caso haja somente 2 (duas) classes com credores votantes, a aprovação de pelo menos 1 (uma) delas, sempre nos termos do art. 45 desta Lei; (Redação dada pela Lei nº 14.112, de 2020) (Vigência)\nIII – na classe que o houver rejeitado, o voto favorável de mais de 1/3 (um terço) dos credores, computados na forma dos §§ 1º e 2º do art. 45 desta Lei."
+       },
+       {
+        "lei": "L11101",
+        "art": "58",
+        "par": "",
+        "inc": "",
+        "rotulo": "Lei 11.101/2005, art. 58, § 2º",
+        "texto": "A recuperação judicial somente poderá ser concedida com base no § 1º deste artigo se o plano não implicar tratamento diferenciado entre os credores da classe que o houver rejeitado."
+       }
+      ],
+      "palavras_chave": [
+       "cram down",
+       "um terço",
+       "tratamento diferenciado"
+      ]
+     }
+    },
+    {
+     "id": "CIV-11-R1-14",
+     "ponto": "DBA26-CIV-11",
+     "tema": "Convolação em falência",
+     "assertiva": "O juiz decretará a falência durante o processo de recuperação judicial se o devedor não apresentar o plano de recuperação no prazo legal.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 73: a **convolação** ocorre por deliberação da assembleia, **não apresentação do plano** no prazo do art. 53, rejeição do plano dos credores, **descumprimento do plano** no período de fiscalização, descumprimento de parcelamento ou transação fiscal e **esvaziamento patrimonial** (incisos V e VI, Lei 14.112/2020).",
+      "lei": [
+       {
+        "lei": "L11101",
+        "art": "73",
+        "par": "",
+        "inc": "",
+        "rotulo": "Lei 11.101/2005, art. 73, I e II",
+        "texto": "O juiz decretará a falência durante o processo de recuperação judicial:\nI – por deliberação da assembléia-geral de credores, na forma do art. 42 desta Lei;\nII – pela não apresentação, pelo devedor, do plano de recuperação no prazo do art. 53 desta Lei;"
+       }
+      ],
+      "palavras_chave": [
+       "convolação",
+       "não apresentação do plano"
+      ]
+     }
+    },
+    {
+     "id": "CIV-11-R1-15",
+     "ponto": "DBA26-CIV-11",
+     "tema": "Termo legal da falência",
+     "assertiva": "A sentença que decreta a falência fixará o termo legal, podendo retrotraí-lo por até cento e oitenta dias contados do pedido de falência, do pedido de recuperação judicial ou do primeiro protesto por falta de pagamento.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 99, II: o termo legal retroage **no máximo 90 dias** desses marcos (excluídos os protestos cancelados). Ele importa para a **ineficácia objetiva** de pagamentos e garantias feitos dentro dele (art. 129, I a III).",
+      "lei": [
+       {
+        "lei": "L11101",
+        "art": "99",
+        "par": "",
+        "inc": "",
+        "rotulo": "Lei 11.101/2005, art. 99, II",
+        "texto": "II – fixará o termo legal da falência, sem poder retrotraí-lo por mais de 90 (noventa) dias contados do pedido de falência, do pedido de recuperação judicial ou do 1º (primeiro) protesto por falta de pagamento, excluindo-se, para esta finalidade, os protestos que tenham sido cancelados;"
+       }
+      ],
+      "pegadinha": "Trocar 90 por 180 dias — 180 é o stay period.",
+      "palavras_chave": [
+       "termo legal",
+       "noventa dias"
+      ]
+     }
+    },
+    {
+     "id": "CIV-11-R1-16",
+     "ponto": "DBA26-CIV-11",
+     "tema": "Recuperação extrajudicial — créditos abrangidos",
+     "assertiva": "Ficam fora da recuperação extrajudicial os créditos tributários e os do proprietário fiduciário, e a inclusão de créditos trabalhistas e por acidente de trabalho exige negociação coletiva com o sindicato da categoria.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 161, § 1º (Lei 14.112/2020): estão fora os **tributários**, os do **art. 49, § 3º** (fiduciário, arrendador, promitente vendedor com irrevogabilidade) e os de **adiantamento de contrato de câmbio**; trabalhistas entram só com **negociação coletiva**. O devedor precisa preencher os requisitos do art. 48.",
+      "lei": [
+       {
+        "lei": "L11101",
+        "art": "161",
+        "par": "",
+        "inc": "",
+        "rotulo": "Lei 11.101/2005, art. 161",
+        "texto": "O devedor que preencher os requisitos do art. 48 desta Lei poderá propor e negociar com credores plano de recuperação extrajudicial."
+       },
+       {
+        "lei": "L11101",
+        "art": "161",
+        "par": "",
+        "inc": "",
+        "rotulo": "Lei 11.101/2005, art. 161, § 1º",
+        "texto": "Estão sujeitos à recuperação extrajudicial todos os créditos existentes na data do pedido, exceto os créditos de natureza tributária e aqueles previstos no § 3º do art. 49 e no inciso II do caput do art. 86 desta Lei, e a sujeição dos créditos de natureza trabalhista e por acidentes de trabalho exige negociação coletiva com o sindicato da respectiva categoria profissional."
+       }
+      ],
+      "palavras_chave": [
+       "recuperação extrajudicial",
+       "negociação coletiva"
       ]
      }
     },
@@ -5081,6 +5552,159 @@ window.PENTE_FINO.CIV = {
      }
     },
     {
+     "id": "CIV-4-R2-10",
+     "ponto": "DBA26-CIV-4",
+     "tema": "Títulos de crédito — aval após o vencimento",
+     "assertiva": "O aval lançado depois do vencimento do título não tem natureza cambial e produz apenas os efeitos de uma fiança.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 900: o aval **posterior ao vencimento** produz **os mesmos efeitos** do anterior. Lembre ainda: o avalista se equipara ao avalizado e, pagando, tem regresso contra ele e os coobrigados anteriores (art. 899).",
+      "excecoes": [
+       "Casado, salvo no regime da separação absoluta, precisa da autorização do cônjuge para prestar aval (CC, art. 1.647, III)."
+      ],
+      "lei": [
+       {
+        "lei": "L10406",
+        "art": "900",
+        "par": "",
+        "inc": "",
+        "rotulo": "CC, art. 900",
+        "texto": "O aval posterior ao vencimento produz os mesmos efeitos do anteriormente dado."
+       },
+       {
+        "lei": "L10406",
+        "art": "899",
+        "par": "",
+        "inc": "",
+        "rotulo": "CC, art. 899",
+        "texto": "O avalista equipara-se àquele cujo nome indicar; na falta de indicação, ao emitente ou devedor final."
+       }
+      ],
+      "palavras_chave": [
+       "aval posterior",
+       "mesmos efeitos"
+      ]
+     }
+    },
+    {
+     "id": "CIV-4-R2-11",
+     "ponto": "DBA26-CIV-4",
+     "tema": "Títulos de crédito — vício do título e negócio de origem",
+     "assertiva": "A omissão de requisito legal que retire do escrito a validade como título de crédito não implica a invalidade do negócio jurídico subjacente.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 888: cai a **eficácia cambial**, mas o **negócio de origem** permanece e pode ser provado e cobrado pelas vias comuns.",
+      "lei": [
+       {
+        "lei": "L10406",
+        "art": "888",
+        "par": "",
+        "inc": "",
+        "rotulo": "CC, art. 888",
+        "texto": "A omissão de qualquer requisito legal, que tire ao escrito a sua validade como título de crédito, não implica a invalidade do negócio jurídico que lhe deu origem."
+       }
+      ],
+      "palavras_chave": [
+       "requisito legal",
+       "negócio jurídico subjacente"
+      ]
+     }
+    },
+    {
+     "id": "CIV-4-R2-12",
+     "ponto": "DBA26-CIV-4",
+     "tema": "Títulos de crédito — inoponibilidade das exceções",
+     "assertiva": "As exceções fundadas na relação do devedor com portadores anteriores só podem ser opostas ao atual portador se este, ao adquirir o título, tiver agido de má-fé.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 916: o portador de boa-fé fica imune às defesas que o devedor teria contra quem o antecedeu (**inoponibilidade**), reflexo da **autonomia**. Ao portador o devedor sempre pode opor as exceções de forma, conteúdo literal, falsidade da própria assinatura, defeito de capacidade ou representação e falta de requisito da ação (art. 915).",
+      "lei": [
+       {
+        "lei": "L10406",
+        "art": "916",
+        "par": "",
+        "inc": "",
+        "rotulo": "CC, art. 916",
+        "texto": "As exceções, fundadas em relação do devedor com os portadores precedentes, somente poderão ser por ele opostas ao portador, se este, ao adquirir o título, tiver agido de má-fé."
+       },
+       {
+        "lei": "L10406",
+        "art": "915",
+        "par": "",
+        "inc": "",
+        "rotulo": "CC, art. 915",
+        "texto": "O devedor, além das exceções fundadas nas relações pessoais que tiver com o portador, só poderá opor a este as exceções relativas à forma do título e ao seu conteúdo literal, à falsidade da própria assinatura, a defeito de capacidade ou de representação no momento da subscrição, e à falta de requisito necessário ao exercício da ação."
+       }
+      ],
+      "palavras_chave": [
+       "exceções pessoais",
+       "má-fé",
+       "autonomia"
+      ]
+     }
+    },
+    {
+     "id": "CIV-4-R2-13",
+     "ponto": "DBA26-CIV-4",
+     "tema": "Títulos de crédito — endosso-mandato",
+     "assertiva": "Com a morte ou a incapacidade superveniente do endossante, o endosso-mandato perde a eficácia, como ocorre com o mandato comum.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 917, § 2º: o endosso-mandato **não perde eficácia** com a morte ou incapacidade superveniente do endossante — diferente do mandato civil (art. 682, II). O devedor só pode opor ao endossatário-mandatário as exceções que tiver contra o **endossante** (§ 3º).",
+      "lei": [
+       {
+        "lei": "L10406",
+        "art": "917",
+        "par": "",
+        "inc": "",
+        "rotulo": "CC, art. 917, § 2º",
+        "texto": "Com a morte ou a superveniente incapacidade do endossante, não perde eficácia o endosso-mandato."
+       },
+       {
+        "lei": "L10406",
+        "art": "917",
+        "par": "",
+        "inc": "",
+        "rotulo": "CC, art. 917, § 3º",
+        "texto": "Pode o devedor opor ao endossatário de endosso-mandato somente as exceções que tiver contra o endossante."
+       }
+      ],
+      "palavras_chave": [
+       "endosso-mandato",
+       "não perde eficácia"
+      ]
+     }
+    },
+    {
+     "id": "CIV-4-R2-14",
+     "ponto": "DBA26-CIV-4",
+     "tema": "Títulos de crédito — nota promissória vinculada a contrato",
+     "assertiva": "A nota promissória vinculada a contrato de abertura de crédito conserva sua autonomia e, por isso, é título executivo hábil, ainda que o contrato seja ilíquido.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "**Súmula 258/STJ**: a nota promissória vinculada a contrato de abertura de crédito **não goza de autonomia**, pela **iliquidez** do título que a originou. Já o avalista de título vinculado a contrato de mútuo responde pelo contrato se nele figurar como **devedor solidário** (Súmula 26/STJ).",
+      "juris": [
+       {
+        "tribunal": "STJ",
+        "fonte": "Súmula 258/STJ",
+        "data": "12/09/2001",
+        "texto": "A nota promissória vinculada a contrato de abertura de crédito não goza de autonomia em razão da iliquidez do título que a originou."
+       },
+       {
+        "tribunal": "STJ",
+        "fonte": "Súmula 26/STJ",
+        "data": "12/06/1991",
+        "texto": "O avalista do título de crédito vinculado a contrato de mútuo também responde pelas obrigações pactuadas, quando no contrato figurar como devedor solidário."
+       }
+      ],
+      "palavras_chave": [
+       "nota promissória",
+       "abertura de crédito",
+       "iliquidez"
+      ]
+     }
+    },
+    {
      "id": "CIV-4-B2-R2-01",
      "ponto": "DBA26-CIV-4-B2",
      "tema": "Correção e juros no dano moral",
@@ -5544,6 +6168,207 @@ window.PENTE_FINO.CIV = {
       "palavras_chave": [
        "dissolução irregular",
        "sócio-gerente"
+      ]
+     }
+    },
+    {
+     "id": "CIV-5-R2-09",
+     "ponto": "DBA26-CIV-5",
+     "tema": "Sociedades coligadas",
+     "assertiva": "Diz-se coligada ou filiada a sociedade de cujo capital outra sociedade participa com cinco por cento ou mais, sem controlá-la.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 1.099: o patamar da **filiada/coligada** é de **10% ou mais**, sem controle. Abaixo de 10% do capital votante, é de **simples participação** (art. 1.100); com maioria de votos e poder de eleger a maioria dos administradores, **controlada** (art. 1.098).",
+      "lei": [
+       {
+        "lei": "L10406",
+        "art": "1099",
+        "par": "",
+        "inc": "",
+        "rotulo": "CC, art. 1.099",
+        "texto": "Diz-se coligada ou filiada a sociedade de cujo capital outra sociedade participa com dez por cento ou mais, do capital da outra, sem controlá-la."
+       },
+       {
+        "lei": "L10406",
+        "art": "1100",
+        "par": "",
+        "inc": "",
+        "rotulo": "CC, art. 1.100",
+        "texto": "É de simples participação a sociedade de cujo capital outra sociedade possua menos de dez por cento do capital com direito de voto."
+       }
+      ],
+      "palavras_chave": [
+       "coligada",
+       "dez por cento",
+       "simples participação"
+      ]
+     }
+    },
+    {
+     "id": "CIV-5-R2-10",
+     "ponto": "DBA26-CIV-5",
+     "tema": "Transformação",
+     "assertiva": "A transformação de uma sociedade em outro tipo societário pressupõe a sua prévia dissolução e liquidação.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 1.113: a transformação **independe de dissolução ou liquidação**; segue as regras de constituição do novo tipo. Depende do **consentimento de todos os sócios**, salvo previsão no ato constitutivo, caso em que o dissidente pode retirar-se (art. 1.114).",
+      "lei": [
+       {
+        "lei": "L10406",
+        "art": "1113",
+        "par": "",
+        "inc": "",
+        "rotulo": "CC, art. 1.113",
+        "texto": "O ato de transformação independe de dissolução ou liquidação da sociedade, e obedecerá aos preceitos reguladores da constituição e inscrição próprios do tipo em que vai converter-se."
+       },
+       {
+        "lei": "L10406",
+        "art": "1114",
+        "par": "",
+        "inc": "",
+        "rotulo": "CC, art. 1.114",
+        "texto": "A transformação depende do consentimento de todos os sócios, salvo se prevista no ato constitutivo, caso em que o dissidente poderá retirar-se da sociedade, aplicando-se, no silêncio do estatuto ou do contrato social, o disposto no art. 1.031."
+       }
+      ],
+      "palavras_chave": [
+       "transformação",
+       "independe de dissolução"
+      ]
+     }
+    },
+    {
+     "id": "CIV-5-R2-11",
+     "ponto": "DBA26-CIV-5",
+     "tema": "Incorporação, fusão e cisão — credor prejudicado",
+     "assertiva": "Até noventa dias após publicados os atos relativos à incorporação, fusão ou cisão, o credor anterior por ela prejudicado poderá promover judicialmente a anulação deles.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 1.122: **90 dias** da publicação. A **consignação em pagamento** prejudica a anulação; sendo ilíquida a dívida, a garantia da execução suspende o processo (§§ 1º e 2º). Na **incorporação** a incorporadora sucede as absorvidas (art. 1.116); na **fusão** todas se extinguem e nasce sociedade nova (art. 1.119).",
+      "lei": [
+       {
+        "lei": "L10406",
+        "art": "1122",
+        "par": "",
+        "inc": "",
+        "rotulo": "CC, art. 1.122",
+        "texto": "Até noventa dias após publicados os atos relativos à incorporação, fusão ou cisão, o credor anterior, por ela prejudicado, poderá promover judicialmente a anulação deles."
+       },
+       {
+        "lei": "L10406",
+        "art": "1119",
+        "par": "",
+        "inc": "",
+        "rotulo": "CC, art. 1.119",
+        "texto": "A fusão determina a extinção das sociedades que se unem, para formar sociedade nova, que a elas sucederá nos direitos e obrigações."
+       }
+      ],
+      "palavras_chave": [
+       "incorporação",
+       "fusão",
+       "cisão",
+       "noventa dias"
+      ]
+     }
+    },
+    {
+     "id": "CIV-5-R2-12",
+     "ponto": "DBA26-CIV-5",
+     "tema": "Liquidação",
+     "assertiva": "Não designado no contrato social, o liquidante será eleito pelos sócios, podendo a escolha recair em pessoa estranha à sociedade.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 1.038: o liquidante pode ser **estranho** à sociedade e destituído a todo tempo pelos sócios (se eleito por eles) ou, havendo **justa causa**, judicialmente. Em todos os atos usa a denominação seguida da cláusula **\"em liquidação\"** (art. 1.103, par. ún.).",
+      "lei": [
+       {
+        "lei": "L10406",
+        "art": "1038",
+        "par": "",
+        "inc": "",
+        "rotulo": "CC, art. 1.038",
+        "texto": "Se não estiver designado no contrato social, o liquidante será eleito por deliberação dos sócios, podendo a escolha recair em pessoa estranha à sociedade."
+       },
+       {
+        "lei": "L10406",
+        "art": "1103",
+        "par": "",
+        "inc": "",
+        "rotulo": "CC, art. 1.103, par. ún.",
+        "texto": "Em todos os atos, documentos ou publicações, o liquidante empregará a firma ou denominação social sempre seguida da cláusula \"em liquidação\" e de sua assinatura individual, com a declaração de sua qualidade."
+       }
+      ],
+      "palavras_chave": [
+       "liquidante",
+       "pessoa estranha",
+       "em liquidação"
+      ]
+     }
+    },
+    {
+     "id": "CIV-5-R2-13",
+     "ponto": "DBA26-CIV-5",
+     "tema": "Prepostos",
+     "assertiva": "Os preponentes são responsáveis pelos atos de quaisquer prepostos praticados nos seus estabelecimentos e relativos à atividade da empresa, ainda que não autorizados por escrito.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 1.178: **dentro do estabelecimento**, o preponente responde mesmo sem autorização escrita; **fora dele**, só nos limites dos **poderes conferidos por escrito** (parágrafo único). O preposto responde ao preponente pelos atos **culposos** e, perante terceiros, solidariamente com ele pelos **dolosos** (art. 1.177, par. ún.).",
+      "lei": [
+       {
+        "lei": "L10406",
+        "art": "1178",
+        "par": "",
+        "inc": "",
+        "rotulo": "CC, art. 1.178",
+        "texto": "Os preponentes são responsáveis pelos atos de quaisquer prepostos, praticados nos seus estabelecimentos e relativos à atividade da empresa, ainda que não autorizados por escrito."
+       },
+       {
+        "lei": "L10406",
+        "art": "1177",
+        "par": "",
+        "inc": "",
+        "rotulo": "CC, art. 1.177, par. ún.",
+        "texto": "No exercício de suas funções, os prepostos são pessoalmente responsáveis, perante os preponentes, pelos atos culposos; e, perante terceiros, solidariamente com o preponente, pelos atos dolosos."
+       }
+      ],
+      "palavras_chave": [
+       "preponente",
+       "preposto",
+       "estabelecimento"
+      ]
+     }
+    },
+    {
+     "id": "CIV-5-R2-14",
+     "ponto": "DBA26-CIV-5",
+     "tema": "Escrituração — sigilo dos livros",
+     "assertiva": "O juiz pode, de ofício e a qualquer tempo, determinar a exibição integral dos livros e papéis de escrituração do empresário, para verificar se observam as formalidades legais.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Arts. 1.190 e 1.191: vigora o **sigilo** — nenhuma autoridade, juiz ou tribunal pode ordenar diligência para verificar a regularidade dos livros, ressalvados os casos legais. A **exibição integral** só cabe em questões de **sucessão, comunhão ou sociedade, gestão à conta de outrem ou falência**; fora disso, cabe **exame parcial** (§ 1º).",
+      "excecoes": [
+       "O sigilo não vale perante as autoridades fazendárias no exercício da fiscalização tributária (art. 1.193)."
+      ],
+      "lei": [
+       {
+        "lei": "L10406",
+        "art": "1190",
+        "par": "",
+        "inc": "",
+        "rotulo": "CC, art. 1.190",
+        "texto": "Ressalvados os casos previstos em lei, nenhuma autoridade, juiz ou tribunal, sob qualquer pretexto, poderá fazer ou ordenar diligência para verificar se o empresário ou a sociedade empresária observam, ou não, em seus livros e fichas, as formalidades prescritas em lei."
+       },
+       {
+        "lei": "L10406",
+        "art": "1191",
+        "par": "",
+        "inc": "",
+        "rotulo": "CC, art. 1.191",
+        "texto": "O juiz só poderá autorizar a exibição integral dos livros e papéis de escrituração quando necessária para resolver questões relativas a sucessão, comunhão ou sociedade, administração ou gestão à conta de outrem, ou em caso de falência."
+       }
+      ],
+      "palavras_chave": [
+       "exibição integral",
+       "sigilo",
+       "escrituração"
       ]
      }
     },
@@ -6915,6 +7740,12 @@ window.PENTE_FINO.CIV = {
         "fonte": "Súmula 581/STJ",
         "data": "14/09/2016",
         "texto": "A recuperação judicial do devedor principal não impede o prosseguimento das ações e execuções contra terceiros devedores solidários ou coobrigados em geral, por garantia cambial, real ou fidejussória."
+       },
+       {
+        "tribunal": "STJ",
+        "fonte": "Tema 885/STJ — REsp 1.333.349/SP",
+        "data": "26/11/2014",
+        "texto": "A recuperação judicial do devedor principal não impede o prosseguimento das execuções nem induz suspensão ou extinção das ações ajuizadas contra terceiros devedores solidários ou coobrigados em geral, por garantia cambial, real ou fidejussória (originou a Súmula 581)."
        }
       ],
       "palavras_chave": [
@@ -7118,6 +7949,171 @@ window.PENTE_FINO.CIV = {
       "palavras_chave": [
        "protesto",
        "identificação"
+      ]
+     }
+    },
+    {
+     "id": "CIV-11-R2-10",
+     "ponto": "DBA26-CIV-11",
+     "tema": "Ineficácia objetiva",
+     "assertiva": "Para que o pagamento de dívida não vencida feito pelo devedor dentro do termo legal seja declarado ineficaz perante a massa, é indispensável provar que o credor conhecia a crise econômico-financeira do devedor.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 129: a ineficácia é **objetiva** — vale **tenha ou não o contratante conhecimento** da crise e **seja ou não** intenção do devedor fraudar. Pode ser declarada **de ofício**, alegada em defesa ou pleiteada em ação própria ou incidentalmente (parágrafo único). Atos gratuitos e renúncia a herança: até **2 anos** antes da quebra.",
+      "lei": [
+       {
+        "lei": "L11101",
+        "art": "129",
+        "par": "",
+        "inc": "",
+        "rotulo": "Lei 11.101/2005, art. 129, I",
+        "texto": "São ineficazes em relação à massa falida, tenha ou não o contratante conhecimento do estado de crise econômico-financeira do devedor, seja ou não intenção deste fraudar credores:\nI – o pagamento de dívidas não vencidas realizado pelo devedor dentro do termo legal, por qualquer meio extintivo do direito de crédito, ainda que pelo desconto do próprio título;"
+       },
+       {
+        "lei": "L11101",
+        "art": "129",
+        "par": "",
+        "inc": "",
+        "rotulo": "Lei 11.101/2005, art. 129, par. ún.",
+        "texto": "A ineficácia poderá ser declarada de ofício pelo juiz, alegada em defesa ou pleiteada mediante ação própria ou incidentalmente no curso do processo."
+       }
+      ],
+      "palavras_chave": [
+       "ineficácia",
+       "termo legal",
+       "de ofício"
+      ]
+     }
+    },
+    {
+     "id": "CIV-11-R2-11",
+     "ponto": "DBA26-CIV-11",
+     "tema": "Ação revocatória",
+     "assertiva": "A ação revocatória, que exige prova do conluio fraudulento entre o devedor e o terceiro e do efetivo prejuízo à massa, deve ser proposta pelo administrador judicial, por qualquer credor ou pelo Ministério Público no prazo de dois anos contado da decretação da falência.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Arts. 130 e 132: o prazo é de **3 (três) anos** da decretação. Diferente do art. 129, a revocatória é **subjetiva**: exige **conluio fraudulento** e **efetivo prejuízo** à massa.",
+      "lei": [
+       {
+        "lei": "L11101",
+        "art": "130",
+        "par": "",
+        "inc": "",
+        "rotulo": "Lei 11.101/2005, art. 130",
+        "texto": "São revogáveis os atos praticados com a intenção de prejudicar credores, provando-se o conluio fraudulento entre o devedor e o terceiro que com ele contratar e o efetivo prejuízo sofrido pela massa falida."
+       },
+       {
+        "lei": "L11101",
+        "art": "132",
+        "par": "",
+        "inc": "",
+        "rotulo": "Lei 11.101/2005, art. 132",
+        "texto": "A ação revocatória, de que trata o art. 130 desta Lei, deverá ser proposta pelo administrador judicial, por qualquer credor ou pelo Ministério Público no prazo de 3 (três) anos contado da decretação da falência."
+       }
+      ],
+      "palavras_chave": [
+       "revocatória",
+       "conluio fraudulento",
+       "três anos"
+      ]
+     }
+    },
+    {
+     "id": "CIV-11-R2-12",
+     "ponto": "DBA26-CIV-11",
+     "tema": "Contratos bilaterais na falência",
+     "assertiva": "A decretação da falência resolve de pleno direito os contratos bilaterais do falido, cabendo ao contratante habilitar o crédito correspondente.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 117: os contratos bilaterais **não se resolvem** pela falência; o administrador judicial pode cumpri-los, com autorização do Comitê, se isso reduzir o passivo ou preservar ativos. Interpelado, tem 10 dias para declarar se cumpre; a recusa ou o silêncio gera **indenização como crédito quirografário** (§ 2º). A quebra, por outro lado, **antecipa o vencimento** das dívidas do devedor (art. 77).",
+      "lei": [
+       {
+        "lei": "L11101",
+        "art": "117",
+        "par": "",
+        "inc": "",
+        "rotulo": "Lei 11.101/2005, art. 117",
+        "texto": "Os contratos bilaterais não se resolvem pela falência e podem ser cumpridos pelo administrador judicial se o cumprimento reduzir ou evitar o aumento do passivo da massa falida ou for necessário à manutenção e preservação de seus ativos, mediante autorização do Comitê."
+       },
+       {
+        "lei": "L11101",
+        "art": "77",
+        "par": "",
+        "inc": "",
+        "rotulo": "Lei 11.101/2005, art. 77",
+        "texto": "A decretação da falência determina o vencimento antecipado das dívidas do devedor e dos sócios ilimitada e solidariamente responsáveis, com o abatimento proporcional dos juros"
+       }
+      ],
+      "palavras_chave": [
+       "contratos bilaterais",
+       "não se resolvem",
+       "vencimento antecipado"
+      ]
+     }
+    },
+    {
+     "id": "CIV-11-R2-13",
+     "ponto": "DBA26-CIV-11",
+     "tema": "Recuperação extrajudicial — quórum",
+     "assertiva": "O devedor pode requerer a homologação de plano de recuperação extrajudicial que obrigue todos os credores por ele abrangidos, desde que assinado por credores que representem mais de três quintos dos créditos de cada espécie abrangida.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 163 (Lei 14.112/2020): basta **mais da metade** dos créditos de cada espécie abrangida (antes eram 3/5). O pedido pode ser feito com **1/3** de adesão e compromisso de atingir o quórum em **90 dias improrrogáveis** (§ 7º), e o pedido já atrai a suspensão do art. 6º quanto às espécies abrangidas (§ 8º).",
+      "lei": [
+       {
+        "lei": "L11101",
+        "art": "163",
+        "par": "",
+        "inc": "",
+        "rotulo": "Lei 11.101/2005, art. 163",
+        "texto": "O devedor poderá também requerer a homologação de plano de recuperação extrajudicial que obriga todos os credores por ele abrangidos, desde que assinado por credores que representem mais da metade dos créditos de cada espécie abrangidos pelo plano de recuperação extrajudicial."
+       },
+       {
+        "lei": "L11101",
+        "art": "163",
+        "par": "",
+        "inc": "",
+        "rotulo": "Lei 11.101/2005, art. 163, § 8º",
+        "texto": "Aplica-se à recuperação extrajudicial, desde o respectivo pedido, a suspensão de que trata o art. 6º desta Lei, exclusivamente em relação às espécies de crédito por ele abrangidas, e somente deverá ser ratificada pelo juiz se comprovado o quórum inicial exigido pelo § 7º deste artigo."
+       }
+      ],
+      "pegadinha": "O quórum antigo (3/5) ainda aparece em questões desatualizadas.",
+      "palavras_chave": [
+       "recuperação extrajudicial",
+       "mais da metade"
+      ]
+     }
+    },
+    {
+     "id": "CIV-11-R2-14",
+     "ponto": "DBA26-CIV-11",
+     "tema": "Estatais em concorrência com a iniciativa privada",
+     "assertiva": "Para o STF, estatal que explora atividade econômica disputando mercado com empresas privadas continua fora da falência e da recuperação judicial, sendo válida a exclusão feita pela Lei 11.101/2005.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "**Tema 1.101/RG (2025)**: é **constitucional** o art. 2º, I — pesa o interesse público na criação da estatal e o **paralelismo das formas** (se a criação depende de lei, a extinção também).",
+      "lei": [
+       {
+        "lei": "L11101",
+        "art": "2",
+        "par": "",
+        "inc": "",
+        "rotulo": "Lei 11.101/2005, art. 2º, I",
+        "texto": "Esta Lei não se aplica a:\nI – empresa pública e sociedade de economia mista;"
+       }
+      ],
+      "juris": [
+       {
+        "tribunal": "STF",
+        "fonte": "Tema 1.101/RG — RE 1.249.945/MG (julgamento virtual finalizado em 17/10/2025)",
+        "data": "17/10/2025",
+        "texto": "É constitucional o art. 2º, I, da Lei 11.101/2005: o regime falimentar não se aplica às empresas públicas e sociedades de economia mista, ainda que atuem em concorrência com a iniciativa privada (interesse público na criação e paralelismo das formas)."
+       }
+      ],
+      "palavras_chave": [
+       "estatais",
+       "paralelismo das formas",
+       "concorrência"
       ]
      }
     },

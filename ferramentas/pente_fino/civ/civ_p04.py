@@ -68,6 +68,37 @@ I(P, 1, 'Contrato de adesão',
   'Art. 423: a interpretação favorece o **aderente**. E são nulas as cláusulas que estipulem a renúncia antecipada do aderente a direito resultante da natureza do negócio (art. 424).',
   lei=[(CC + '423', 'Quando houver no contrato de adesão', 'mais favorável ao aderente.', 'CC, art. 423')],
   kw=['adesão', 'aderente'])
+# Títulos de crédito (CC, arts. 887 a 926 — Parte Especial, Livro I): acréscimo de 07/11/2026.
+I(P, 1, 'Títulos de crédito — conceito',
+  'Segundo o Código Civil, sem a apresentação da cártula não se exerce o direito nela mencionado, que é literal e autônomo; e o título só tem eficácia se atender aos requisitos fixados em lei.', 'C',
+  'Art. 887: o conceito traz os três atributos clássicos — **cartularidade** (documento necessário), **literalidade** e **autonomia**. Leis especiais (cheque, duplicata, letra de câmbio) prevalecem; o CC é supletivo (art. 903).',
+  lei=[(CC + '887', 'O título de crédito, documento necessário', 'requisitos da lei.', 'CC, art. 887'),
+       (CC + '903', 'Salvo disposição diversa em lei especial', 'neste Código.', 'CC, art. 903')],
+  kw=['cartularidade', 'literalidade', 'autonomia'])
+I(P, 1, 'Títulos de crédito — aval parcial',
+  'No regime do Código Civil, o pagamento de título que contenha obrigação de pagar soma determinada pode ser garantido por aval, admitindo-se o aval parcial.', 'E',
+  'Art. 897, parágrafo único: o CC **veda o aval parcial**. Atenção: a Lei Uniforme de Genebra (letra de câmbio e nota promissória) e a Lei do Cheque o admitem — e a lei especial prevalece (art. 903).',
+  lei=[(CC + '897', 'O pagamento de título de crédito, que contenha obrigação de pagar soma determinada', 'É vedado o aval parcial.', 'CC, art. 897 e par. ún.')],
+  peg='Trocar "vedado" por "admitido", ou cobrar a regra do CC num título regido por lei especial.',
+  kw=['aval parcial', 'vedado'])
+I(P, 1, 'Títulos de crédito — vencimento e lugar',
+  'O título de crédito que não indique o vencimento é considerado à vista e, se omitir o lugar de emissão e de pagamento, considera-se como tal o domicílio do emitente.', 'C',
+  'Art. 889, §§ 1º e 2º: requisitos mínimos são **data de emissão**, **direitos conferidos** e **assinatura do emitente**; a falta de vencimento faz o título **à vista**; a falta de lugar remete ao **domicílio do emitente**.',
+  lei=[(CC + '889', 'Deve o título de crédito conter a data da emissão', 'assinatura do emitente.', 'CC, art. 889'),
+       (CC + '889', 'É à vista o título de crédito que não contenha indicação de vencimento.', 'o domicílio do emitente.', 'CC, art. 889, §§ 1º e 2º')],
+  kw=['à vista', 'domicílio do emitente'])
+I(P, 1, 'Títulos de crédito — cláusulas não escritas',
+  'É válida e eficaz a cláusula de juros inserida no título de crédito, desde que pactuada no momento da emissão.', 'E',
+  'Art. 890: consideram-se **não escritas** a cláusula de **juros**, a **proibitiva de endosso**, a **excludente de responsabilidade** pelo pagamento ou despesas e a que dispense termos e formalidades. O título continua válido; só a cláusula é desconsiderada.',
+  lei=[(CC + '890', 'Consideram-se não escritas no título a cláusula de juros', 'restrinja direitos e obrigações.', 'CC, art. 890')],
+  kw=['cláusula de juros', 'não escritas'])
+I(P, 1, 'Títulos de crédito — responsabilidade do endossante',
+  'Pelo Código Civil, o endossante responde, em regra, pelo cumprimento da prestação constante do título, salvo cláusula expressa que o exonere.', 'E',
+  'Art. 914: a regra do CC é a **inversa** — o endossante **não responde**, salvo cláusula expressa em contrário; se assumir a responsabilidade, torna-se **devedor solidário** (§ 1º). Na letra de câmbio (lei especial), o endossante garante o pagamento.',
+  lei=[(CC + '914', 'Ressalvada cláusula expressa em contrário', 'prestação constante do título.', 'CC, art. 914'),
+       (CC + '914', 'Assumindo responsabilidade pelo pagamento', 'devedor solidário.', 'CC, art. 914, § 1º')],
+  peg='A troca típica é inverter a regra geral do endosso no CC.',
+  kw=['endossante', 'não responde', 'devedor solidário'])
 
 # ---------------- PONTO 4 — RODADA 2
 I(P, 2, 'Arras confirmatórias',
@@ -119,6 +150,36 @@ I(P, 2, 'Doação verbal',
   lei=[(CC + '541', 'A doação far-se-á por escritura pública ou instrumento particular.', None, 'CC, art. 541'),
        (CC + '541', 'A doação verbal será válida', 'incontinenti a tradição.', 'CC, art. 541, par. ún.')],
   kw=['doação verbal', 'pequeno valor'])
+# Títulos de crédito — Rodada 2 (acréscimo de 07/11/2026).
+I(P, 2, 'Títulos de crédito — aval após o vencimento',
+  'O aval lançado depois do vencimento do título não tem natureza cambial e produz apenas os efeitos de uma fiança.', 'E',
+  'Art. 900: o aval **posterior ao vencimento** produz **os mesmos efeitos** do anterior. Lembre ainda: o avalista se equipara ao avalizado e, pagando, tem regresso contra ele e os coobrigados anteriores (art. 899).',
+  lei=[(CC + '900', 'O aval posterior ao vencimento produz os mesmos efeitos do anteriormente dado.', None, 'CC, art. 900'),
+       (CC + '899', 'O avalista equipara-se àquele cujo nome indicar', 'ao emitente ou devedor final.', 'CC, art. 899')],
+  exc=['Casado, salvo no regime da separação absoluta, precisa da autorização do cônjuge para prestar aval (CC, art. 1.647, III).'],
+  kw=['aval posterior', 'mesmos efeitos'])
+I(P, 2, 'Títulos de crédito — vício do título e negócio de origem',
+  'A omissão de requisito legal que retire do escrito a validade como título de crédito não implica a invalidade do negócio jurídico subjacente.', 'C',
+  'Art. 888: cai a **eficácia cambial**, mas o **negócio de origem** permanece e pode ser provado e cobrado pelas vias comuns.',
+  lei=[(CC + '888', 'A omissão de qualquer requisito legal', 'negócio jurídico que lhe deu origem.', 'CC, art. 888')],
+  kw=['requisito legal', 'negócio jurídico subjacente'])
+I(P, 2, 'Títulos de crédito — inoponibilidade das exceções',
+  'As exceções fundadas na relação do devedor com portadores anteriores só podem ser opostas ao atual portador se este, ao adquirir o título, tiver agido de má-fé.', 'C',
+  'Art. 916: o portador de boa-fé fica imune às defesas que o devedor teria contra quem o antecedeu (**inoponibilidade**), reflexo da **autonomia**. Ao portador o devedor sempre pode opor as exceções de forma, conteúdo literal, falsidade da própria assinatura, defeito de capacidade ou representação e falta de requisito da ação (art. 915).',
+  lei=[(CC + '916', 'As exceções, fundadas em relação do devedor com os portadores precedentes', 'tiver agido de má-fé.', 'CC, art. 916'),
+       (CC + '915', 'O devedor, além das exceções fundadas nas relações pessoais', 'necessário ao exercício da ação.', 'CC, art. 915')],
+  kw=['exceções pessoais', 'má-fé', 'autonomia'])
+I(P, 2, 'Títulos de crédito — endosso-mandato',
+  'Com a morte ou a incapacidade superveniente do endossante, o endosso-mandato perde a eficácia, como ocorre com o mandato comum.', 'E',
+  'Art. 917, § 2º: o endosso-mandato **não perde eficácia** com a morte ou incapacidade superveniente do endossante — diferente do mandato civil (art. 682, II). O devedor só pode opor ao endossatário-mandatário as exceções que tiver contra o **endossante** (§ 3º).',
+  lei=[(CC + '917', 'Com a morte ou a superveniente incapacidade do endossante, não perde eficácia o endosso-mandato.', None, 'CC, art. 917, § 2º'),
+       (CC + '917', 'Pode o devedor opor ao endossatário de endosso-mandato somente as exceções que tiver contra o endossante.', None, 'CC, art. 917, § 3º')],
+  kw=['endosso-mandato', 'não perde eficácia'])
+I(P, 2, 'Títulos de crédito — nota promissória vinculada a contrato',
+  'A nota promissória vinculada a contrato de abertura de crédito conserva sua autonomia e, por isso, é título executivo hábil, ainda que o contrato seja ilíquido.', 'E',
+  '**Súmula 258/STJ**: a nota promissória vinculada a contrato de abertura de crédito **não goza de autonomia**, pela **iliquidez** do título que a originou. Já o avalista de título vinculado a contrato de mútuo responde pelo contrato se nele figurar como **devedor solidário** (Súmula 26/STJ).',
+  juris=[J['S258'], J['S26']],
+  kw=['nota promissória', 'abertura de crédito', 'iliquidez'])
 
 P = 'DBA26-CIV-4-B2'
 # ---------------- PONTO 4-B2 · Responsabilidade civil — RODADA 1

@@ -48,3 +48,10 @@ window.PENTE_FINO.CPC = {
 Regras de conteúdo: `lei[].texto` tem de estar contido, letra por letra, no artigo de `assets/lei_seca_oficial.json`
 (chave `<lei>:<art>`); jurisprudência só com fonte e data conferidas em fonte oficial (STF/STJ) — data nunca da
 memória; nada de texto copiado de material de terceiro e nenhum nome de curso, autor ou material.
+
+## Medicina Legal (07/11/2026)
+
+`pente_fino_mle.js` (`--disc MLE`, conteúdo em `ferramentas/pente_fino/mle/`): os pontos têm subitem
+(`DBA26-MLE-5.1` → ids `MLE-5.1-R1-01`); volume próprio (R1 6–10, R2 5–8, `volume` em `disciplinas.py`) e
+`doutrina_sem_fonte`: assertiva só de doutrina (sinais, fenômenos, classificações) entra sem `lei` nem `juris` — o
+conferidor conta quantas são. Prazos de fenômenos cadavéricos divergem entre autores: o comentário diz quando.
