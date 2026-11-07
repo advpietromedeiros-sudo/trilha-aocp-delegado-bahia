@@ -2,10 +2,11 @@
 
 > Estado, tarefas e o que ficou rodando. Atualizado a cada ~15 min de trabalho e no fechamento.
 
-**Última atualização:** 05/11/2026, 11h17.
+**Última atualização:** 07/11/2026, 16h15.
 
 ## Estado
 
+- ✅ **07/11/2026, 16h15 — Layout das abas da aplicação Discursiva:** hierarquia visual, leitura de enunciados, orientações, modelos e comentários mais claros; etapas, cartões e progresso com maior destaque; responsividade conferida sem rolagem horizontal em viewport móvel. Fluxos, dados e respostas não mudaram. Storybook compilado e portão aprovado nas 26 portas.
 - ✅ **07/11/2026, 08h01 — Módulo 1 (piloto) PRONTO, aguardando a aprovação do formato pelo titular:**
   `revisao/saida/m01_igualdade_legislacao_atualidades.html` (+ PDF, 161 páginas), 25 de 25 pontos, 119 fichas,
   51 questões, 107 trechos de lei conferidos, 24 jurisprudências com data conferida na fonte; gerador, verificador
