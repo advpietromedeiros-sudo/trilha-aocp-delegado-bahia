@@ -6,6 +6,11 @@
 
 ## Estado
 
+- ⏳ **07/11/2026, 06h32 — Revisão (D-018):** Fase 0 e motor do caderno **prontos e no Git** (commit `522bfad`,
+  CI verde). Ordem dos módulos **por rendimento** (D-019); discursiva no mesmo dia (06/12). **Gerando o piloto,
+  Módulo 1** (Igualdade racial e de gênero, Legislação Geral da Bahia e Atualidades, 25 pontos), junto com o
+  conserto da lei seca (chave `CP:3-A`, Lei 11.340 que não baixou, leis estaduais da Bahia). Próximo: o titular
+  aprova o formato do piloto; depois os módulos 2 a 12, até 13/11.
 - ⏳ **06/11/2026, 21h09 — Revisão de todo o edital por prioridade, estilo caderno (D-018), EM CONSTRUÇÃO.** Plano em
   `docs/REVISAO_PLANO.md`. Rodando em paralelo: **Fase 0** (provas AOCP extraídas para `revisao/dados/`, pesos do
   edital, mapa de prioridade dos 503 pontos em `revisao/mapa_prioridade.json`, verificador

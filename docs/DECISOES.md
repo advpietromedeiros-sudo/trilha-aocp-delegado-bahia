@@ -260,3 +260,19 @@ QUE NÃO COLOQUE NADA DESATUALIZADO"*.
 Vale como **autorização escrita do titular** (§G8.3) para usar a pasta DELEGADO BA, os simulados e as provas AOCP
 **neste material de estudo pessoal**. Os módulos gerados ficam **fora do Git** (mesma solução da D-017); o gerador,
 o mapa de prioridade e o verificador de atualidade entram. Plano em `docs/REVISAO_PLANO.md`.
+
+### D-019 — Ordem dos módulos da revisão: por rendimento; discursiva no mesmo dia (06/11/2026, respondida até 07/11/2026, 06h31, titular)
+
+Respostas do titular às duas perguntas da D-018: **"Por rendimento"** — a opção dizia *"Primeiro o que dá mais
+questão por hora estudada: Legislação Geral, Igualdade e Atualidades; Português; Raciocínio Lógico e Informática.
+Depois os específicos, começando por Penal e Processo Penal"* — e **"Sim, no mesmo dia"** para a discursiva em
+06/12/2026. Ordem adotada (medida em `revisao/mapa_prioridade.json`, questões esperadas por ponto entre parênteses):
+
+1. Igualdade racial e de gênero, Legislação geral e Atualidades (0,640) · 2. Língua Portuguesa (0,800) ·
+3. Informática e Raciocínio Lógico (0,210) · 4. Penal (0,098) · 5. Processo Penal e inquérito (0,189) ·
+6. Legislação penal extravagante (0,175; tem peças da discursiva) · 7. Criminologia e Medicina Legal (0,222) ·
+8. Civil, Empresarial e Processo Civil (0,385) · 9. Constitucional (0,129) · 10. Administrativo (0,113) ·
+11. Ambiental (0,188) · 12. Tributário (0,083).
+
+⚠️ A divisão das 40 + 60 questões por disciplina é **estimada** (média dos 4 simulados; o edital só traz os blocos,
+Tabela 7.1, p. 10). Discursiva no mesmo dia: todo módulo de específicos leva a ponte com as 18 peças.

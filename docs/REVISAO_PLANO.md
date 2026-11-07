@@ -29,7 +29,13 @@ medida: **peso da disciplina na prova** (quantas questões o edital dá a ela) �
 AOCP** (quantas vezes ele aparece), com a prioridade antiga como desempate. O método e a tabela ficam em
 `docs/REVISAO_PRIORIDADE.md`, com o que a régua não conseguiu classificar **contado e listado** (§F10).
 
-## Módulos correlatos (a ordem final sai da prioridade medida)
+## Módulos correlatos
+
+**Ordem decidida (D-019, por rendimento):** 1. Igualdade racial e de gênero, Legislação geral e Atualidades ·
+2. Língua Portuguesa · 3. Informática e Raciocínio Lógico · 4. Penal · 5. Processo Penal e inquérito ·
+6. Legislação penal extravagante · 7. Criminologia e Medicina Legal · 8. Civil, Empresarial e Processo Civil ·
+9. Constitucional · 10. Administrativo · 11. Ambiental · 12. Tributário. A medida está em
+`docs/REVISAO_PRIORIDADE.md`. A lista abaixo é a do plano original, agrupada por assunto:
 
 Penal (geral e especial) · Processo Penal e inquérito · Legislação penal extravagante · Constitucional ·
 Administrativo · Criminologia e Medicina Legal · Tributário · Civil, Empresarial e Processo Civil · Ambiental ·
