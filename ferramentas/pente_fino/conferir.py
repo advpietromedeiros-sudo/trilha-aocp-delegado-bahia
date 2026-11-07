@@ -1,23 +1,29 @@
-"""Conferidor do Pente Fino de CPC: lê discursiva/pente_fino_cpc.js e PARA (saída 1) se algo não bater.
+"""Conferidor do Pente Fino: lê discursiva/pente_fino_<disc>.js (--disc CPC, padrão, ou CIV) e PARA (saída 1) se algo não bater.
   1. esquema (docs/PENTE_FINO_ESQUEMA.md): campos, ids únicos, gabarito C/E, pontos do edital na ordem;
   2. todo lei[].texto CONTIDO, letra por letra, em assets/lei_seca_oficial.json[<lei>:<art>];
   3. toda juris com tribunal, fonte e data dd/mm/aaaa;
   4. volume (R1 8–12, R2 6–10 por ponto) e equilíbrio (40%–60% de E por rodada).
 Avisos (não param): artigo citado com redação dupla na base (texto antigo + novo) ou marcado alteracao_2026.
-Uso: python conferir.py   → imprime contagens; saída 0 = tudo certo."""
-import collections, json, pathlib, re, sys
+Uso: python conferir.py [--disc CPC|CIV]   → imprime contagens; saída 0 = tudo certo."""
+import argparse, collections, json, pathlib, re, sys
 
 sys.stdout.reconfigure(encoding='utf-8')
 RAIZ = pathlib.Path(__file__).resolve().parent.parent.parent
-src = (RAIZ / 'discursiva' / 'pente_fino_cpc.js').read_text(encoding='utf-8')
-m = re.search(r'window\.PENTE_FINO\.CPC\s*=\s*(\{.*\});\s*$', src, re.S)
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import disciplinas
+ap = argparse.ArgumentParser()
+ap.add_argument('--disc', default='CPC', choices=sorted(disciplinas.DISC))
+DISC = ap.parse_args().disc
+CFG = disciplinas.DISC[DISC]
+src = (RAIZ / 'discursiva' / f'pente_fino_{DISC.lower()}.js').read_text(encoding='utf-8')
+m = re.search(r'window\.PENTE_FINO\.' + DISC + r'\s*=\s*(\{.*\});\s*$', src, re.S)
 if not m:
-    print('ERRO: não achei "window.PENTE_FINO.CPC = {...};"'); sys.exit(1)
+    print(f'ERRO: não achei "window.PENTE_FINO.{DISC} = {{...}};"'); sys.exit(1)
 D = json.loads(m.group(1))
 OF = json.load(open(RAIZ / 'assets' / 'lei_seca_oficial.json', encoding='utf-8'))
 IT = json.load(open(RAIZ / 'assets' / 'items.json', encoding='utf-8'))
 IT = IT if isinstance(IT, list) else IT.get('items', [])
-edital = sorted([x['id'] for x in IT if str(x.get('id', '')).startswith('DBA26-CPC-')], key=lambda s: int(s.rsplit('-', 1)[1]))
+edital = sorted([x['id'] for x in IT if str(x.get('id', '')).startswith(CFG['prefixo'])], key=disciplinas.ordem_ponto)
 
 erros, avisos = [], []
 DATA = re.compile(r'^\d{2}/\d{2}/\d{4}$')

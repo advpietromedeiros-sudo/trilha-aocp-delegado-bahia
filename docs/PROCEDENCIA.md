@@ -134,3 +134,16 @@ prompt do servidor já manda não aplicar norma posterior.
   Usados a Tabela 7.1 (p. 10) e a divisão do Anexo I (pp. 26–31). O PDF não está no repositório.
 - **Estimativa de peso por disciplina:** média das contagens por disciplina dos 4 simulados DPC-BA (D-017). Entra no Git
   **só a contagem** (números), não questão nem comentário.
+
+## Pente Fino de Direito Civil e Empresarial (07/11/2026, D-021)
+
+- **Guia de temas e profundidade (sem cópia de texto):** PDFs de `DELEGADO BA/DIREITO CIVIL/` — Pessoas Naturais,
+  Pessoas Jurídicas, Domicílio, Bens jurídicos, Direitos Reais, Fatos e negócios jurídicos, Prescrição e Decadência,
+  Atos unilaterais e contratos, Contratos em espécie, Prova. Responsabilidade civil (partes 01 e 02), Direito das
+  coisas e posse, LINDB, Aspectos cíveis na tutela das minorias…, Est. Pessoa com Deficiência (partes 01 e 02).
+  Material de terceiro, uso pessoal, autorizado pelo titular na D-018; as assertivas e os comentários de
+  `discursiva/pente_fino_civ.js` são texto próprio (conferido em janelas de 8 palavras: as coincidências são só
+  enunciados oficiais e letra de lei). ⚠️ Os PDFs trazem marca d'água com dados pessoais do comprador: nada disso foi
+  para o conteúdo, e as extrações de texto foram apagadas ao fim.
+- **Letra de lei:** `assets/lei_seca_oficial.json` (Planalto). **Jurisprudência:** SCON e repetitivos do STJ, PDF
+  oficial de súmulas e notícias do STF, conferidos em 07/11/2026.

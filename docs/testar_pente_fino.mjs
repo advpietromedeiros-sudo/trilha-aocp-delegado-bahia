@@ -29,6 +29,9 @@ if (!original.includes(TAG_PF)) { console.log('FALHA: a página não tem a tag d
 // cópia da página com <base> na pasta discursiva/ (os scripts reais carregam de lá) e o Pente Fino trocado
 const pagina = (nome, srcPF, sabotar = null) => {
   let h = original.replace('<head>', `<head><base href="${pathToFileURL(DISC).href}/">`).replace(TAG_PF, `<script src="${srcPF}"></script>`);
+  // 07/11/2026: com mais de uma disciplina na página (pente_fino_civ.js...), as outras saem da cópia de teste,
+  // para que a suíte veja só o exemplo (ou nenhum dado, no T23).
+  h = h.replace(/<script src="pente_fino_[a-z]+\.js" data-opcional="1"><\/script>\n?/g, '');
   if (sabotar) { const h2 = sabotar(h); if (h2 === h) throw new Error('não plantou: ' + nome); h = h2; }
   const arq = join(PF, nome); writeFileSync(arq, h); return arq;
 };
