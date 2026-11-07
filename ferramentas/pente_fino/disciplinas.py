@@ -2,7 +2,8 @@
 CPC: aprovado pelo titular (D-021) — os valores abaixo reproduzem, letra por letra, o arquivo já gerado.
 CIV: Direito Civil e Empresarial (07/11/2026).
 MLE: Medicina Legal (07/11/2026) — pontos com subitem (DBA26-MLE-5.1); volume próprio (R1 6–10, R2 5–8) e
-assertiva só de doutrina admitida (a disciplina é doutrinária: nem todo sinal ou fenômeno tem lei por trás)."""
+assertiva só de doutrina admitida (a disciplina é doutrinária: nem todo sinal ou fenômeno tem lei por trás).
+CRI: Criminologia (07/11/2026) — mesmo volume e mesma regra de doutrina sem fonte da MLE (disciplina doutrinária)."""
 import re
 
 
@@ -61,4 +62,20 @@ DISC = {
                 'Súmulas do STF — PDF oficial "Enunciados das Súmulas do STF 1 a 736" (stf.jus.br)',
                 'STJ — HC 653.515/RJ (Informativo 720, processo.stj.jus.br)',
                 'Doutrina médico-legal: redação própria, posição majoritária; divergências declaradas no comentário']),
+    'CRI': dict(
+        prefixo='DBA26-CRI-',
+        pasta='cri',
+        modulos=['cri_p01_02', 'cri_p03', 'cri_p04_06', 'cri_p08_16'],
+        disciplina='Criminologia',
+        conferido_em='07/11/2026',
+        volume=((6, 10), (5, 8)),
+        doutrina_sem_fonte=True,
+        cabecalho='// Pente Fino — Criminologia (DBA26-CRI-1 a 16, com os subitens; o CRI-8 traz também o tópico 9 do edital). Gerado por ferramentas/pente_fino/construir.py --disc CRI em 07/11/2026.',
+        fontes=['Constituição Federal de 1988 — Planalto', 'Decreto-Lei 2.848/1940 (Código Penal) — Planalto',
+                'Decreto-Lei 3.689/1941 (CPP) — Planalto', 'Lei 7.210/1984 (LEP) — Planalto',
+                'Lei 9.099/1995 (Juizados Especiais) — Planalto', 'Lei 11.340/2006 (Maria da Penha) — Planalto',
+                'Lei 12.830/2013 (investigação criminal pelo delegado de polícia) — Planalto',
+                'Lei 13.431/2017 (escuta especializada e depoimento especial) — Planalto',
+                'Lei 13.869/2019 (Abuso de Autoridade), art. 15-A incluído pela Lei 14.321/2022 — Planalto',
+                'Doutrina criminológica: redação própria, posição mais cobrada em concurso; divergências declaradas no comentário']),
 }

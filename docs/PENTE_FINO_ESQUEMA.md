@@ -55,3 +55,11 @@ memória; nada de texto copiado de material de terceiro e nenhum nome de curso, 
 (`DBA26-MLE-5.1` → ids `MLE-5.1-R1-01`); volume próprio (R1 6–10, R2 5–8, `volume` em `disciplinas.py`) e
 `doutrina_sem_fonte`: assertiva só de doutrina (sinais, fenômenos, classificações) entra sem `lei` nem `juris` — o
 conferidor conta quantas são. Prazos de fenômenos cadavéricos divergem entre autores: o comentário diz quando.
+
+## Criminologia (07/11/2026)
+
+`pente_fino_cri.js` (`--disc CRI`, conteúdo em `ferramentas/pente_fino/cri/`): 24 pontos (`DBA26-CRI-1` a `CRI-16`, com
+subitens; o `CRI-8` traz no rótulo também o tópico 9 do edital, subcultura e anomia). Mesmo volume e mesma
+`doutrina_sem_fonte` da MLE: a disciplina é doutrinária, e a lei entra só onde o tema tem base (vítima no CPP, Lei
+13.431/2017, Lei 9.099/1995, LEP, CF art. 144, Lei 12.830/2013). Classificações com divergência (escolas, vitimização
+terciária, velocidades do Direito Penal) seguem a posição mais cobrada, e o comentário declara a divergência.
