@@ -93,13 +93,23 @@ def squash(s: str) -> str:
 
 
 # ======================================================================= base de lei seca
+FONTES_OFICIAIS = {'planalto': 'Planalto', 'legislabahia': 'Legisla Bahia'}
+
+
+def oficial(v):
+    """Texto oficial (Planalto ou, para as leis estaduais, o Legisla Bahia) — e não o material do curso."""
+    return v.get('fonte') in FONTES_OFICIAIS
+
+
 def merged_lei():
     out = {}
     for k, v in LEI_MAT.items():
         out[k] = dict(v, fonte='material')
     for k, v in LEI_OF.items():
         base = out.get(k, {})
-        out[k] = dict(v, fonte='planalto', anotacoes=base.get('anotacoes', ''), rubrica=base.get('rubrica', ''),
+        # A fonte vem da própria base oficial: as leis da Bahia são do Legisla Bahia, não do Planalto (07/11/2026).
+        fonte = v.get('fonte') if v.get('fonte') in FONTES_OFICIAIS else 'planalto'
+        out[k] = dict(v, fonte=fonte, anotacoes=base.get('anotacoes', ''), rubrica=base.get('rubrica', ''),
                       material_pagina=base.get('pagina'), material_arquivo=base.get('arquivo'))
     return out
 
@@ -234,8 +244,8 @@ def lei_lookup(sigla: str, alvo: dict):
 
 
 def fonte_label(v):
-    if v.get('fonte') == 'planalto':
-        return f"Texto oficial — Planalto (baixado em {v.get('baixado_em', '?')})"
+    if oficial(v):
+        return f"Texto oficial — {FONTES_OFICIAIS[v['fonte']]} (baixado em {v.get('baixado_em', '?')})"
     return f"Lei seca do material do curso — {v.get('arquivo', '')}, p. {v.get('pagina', '?')} (destaques em CAIXA ALTA são do material)"
 
 
@@ -269,8 +279,8 @@ def enrich_law(raw) -> list[dict]:
                      'dispositivo': ref.get('dispositivo') if len(alvos) == 1 and ref.get('dispositivo') else f"Art. {alvo['art']}",
                      'texto_literal': excerpt, 'texto_artigo': v['texto'] if excerpt != v['texto'] else '',
                      'anotacoes': (v.get('anotacoes') or '')[:3500], 'rubrica': v.get('rubrica', ''),
-                     'extensao': label if v.get('fonte') == 'planalto' else label.replace('integral', '').replace('integrais', '').strip() + ' — conforme o material (pode omitir trechos)',
-                     'status': 'oficial' if v.get('fonte') == 'planalto' else 'material',
+                     'extensao': label if oficial(v) else label.replace('integral', '').replace('integrais', '').strip() + ' — conforme o material (pode omitir trechos)',
+                     'status': 'oficial' if oficial(v) else 'material',
                      'fonte': fonte_label(v), 'base_id': v['id'], 'alteracao_2026': bool(v.get('alteracao_2026')),
                      'url': v.get('url') or DIPLOMA_URL.get(v['sigla'], '') or ref.get('url', '')})
         out.append(card)
@@ -470,7 +480,7 @@ def rank_articles(item, k=8, frags=None):
     for kk in list(dict.fromkeys(keys))[:k]:
         v = LEI[kk]
         out.append({'ref': kk, 'rotulo': f"{DIPLOMA_NOME.get(v['sigla'], v['sigla'])}, art. {v['art']}" + (f" ({v['rubrica']})" if v.get('rubrica') else ''),
-                    'texto': v['texto'][:1800], 'fonte': 'Planalto' if v.get('fonte') == 'planalto' else 'material do curso'})
+                    'texto': v['texto'][:1800], 'fonte': FONTES_OFICIAIS.get(v.get('fonte'), 'material do curso')})
     return out
 
 
@@ -1082,7 +1092,8 @@ def base_search(q: str, tipo: str = 'todos', limit: int = 30):
 
 def base_stats():
     fontes = Counter(v.get('fonte') for v in LEI.values())
-    return {'artigos': len(LEI), 'artigos_planalto': fontes.get('planalto', 0), 'artigos_material': fontes.get('material', 0),
+    return {'artigos': len(LEI), 'artigos_planalto': fontes.get('planalto', 0) + fontes.get('legislabahia', 0),
+            'artigos_legislabahia': fontes.get('legislabahia', 0), 'artigos_material': fontes.get('material', 0),
             'diplomas': sorted({v['sigla'] for v in LEI.values()}), 'sumulas': len(SUMULAS), 'teses_rg': len(TESES),
             'precedentes_ld_juris': len(JURIS), 'paginas_doutrina': len(PAGES)}
 
