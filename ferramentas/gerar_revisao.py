@@ -400,8 +400,9 @@ def html_lei(L, lei):
     of = lei.get(f"{L['lei']}:{L['art']}", {})
     url = of.get("url")
     fonte = f'<span class="lei-fonte">texto oficial · baixado em {esc(of.get("baixado_em", "?"))}'
+    casa = "Legisla Bahia" if of.get("fonte") == "legislabahia" else "Planalto"
     fonte += (
-        f' · <a href="{esc(url)}" target="_blank" rel="noopener">Planalto</a></span>' if url else "</span>"
+        f' · <a href="{esc(url)}" target="_blank" rel="noopener">{casa}</a></span>' if url else "</span>"
     )
     com = f'<p class="lei-com">{rico(L["comentario"])}</p>' if L.get("comentario") else ""
     return (
@@ -654,7 +655,9 @@ def montar(mod, itens, lei, sumulas, b64, avisos):
                 f'<div class="ls-art-group" id="{gid}"><div class="ls-art-head"><span class="ls-art-num">{esc(onde)}</span>'
                 f'<span class="ls-art-name">{esc(ponto)}</span></div><div class="ls-art-body"><p class="ls-caput">{esc(Lc["texto"].strip())}</p>'
                 + (
-                    f'<p class="ls-tagnote">texto oficial baixado em {esc(of.get("baixado_em", "?"))} · <a href="{esc(of["url"])}" target="_blank" rel="noopener">Planalto</a></p>'
+                    f'<p class="ls-tagnote">texto oficial baixado em {esc(of.get("baixado_em", "?"))} · '
+                    f'<a href="{esc(of["url"])}" target="_blank" rel="noopener">'
+                    f'{"Legisla Bahia" if of.get("fonte") == "legislabahia" else "Planalto"}</a></p>'
                     if of.get("url")
                     else ""
                 )
@@ -676,7 +679,7 @@ def montar(mod, itens, lei, sumulas, b64, avisos):
         for p in b["pontos"]:
             for Lc in lista(p.get("lei_seca")):
                 if lei.get(f"{Lc['lei']}:{Lc['art']}", {}).get("alteracao_2026"):
-                    s = f"{esc(rotulo_lei(Lc, lei))}: redação alterada em 2026 (conferir no Planalto antes da prova)"
+                    s = f"{esc(rotulo_lei(Lc, lei))}: redação alterada em 2026 (conferir na fonte oficial antes da prova)"
                     if s not in sens:
                         sens.append(s)
     sens_html = (

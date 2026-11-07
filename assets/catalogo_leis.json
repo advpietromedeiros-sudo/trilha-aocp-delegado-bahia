@@ -1,5 +1,5 @@
 {
-  "_comentario": "Diplomas do edital SAEB 02/2026 (Delegado PC-BA). sigla = identificador usado pelo servidor. Se um link falhar, corrija a URL aqui e rode novamente atualizar_lei_seca.bat. Leis estaduais da Bahia: preencha a URL do legislabahia.ba.gov.br se quiser incluí-las.",
+  "_comentario": "Diplomas do edital SAEB 02/2026 (Delegado PC-BA). sigla = identificador usado pelo servidor. fonte: planalto (padrão) ou legislabahia (Portal de Legislação do Estado da Bahia, Casa Civil). anexo: sigla dos 'Artigo N' da convenção promulgada pelo decreto; sigla_decreto: sigla dos artigos do próprio decreto, quando diferente. Se um link falhar, corrija a URL aqui e rode novamente atualizar_lei_seca.bat.",
   "diplomas": [
     {
       "sigla": "CF",
@@ -403,7 +403,8 @@
       "sigla": "D65810",
       "nome": "Convenção sobre Discriminação Racial — Decreto 65.810/1969",
       "apelidos": [],
-      "url": "https://www.planalto.gov.br/ccivil_03/decreto/1950-1969/d65810.html"
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto/1950-1969/d65810.html",
+      "anexo": "D65810"
     },
     {
       "sigla": "D4377",
@@ -411,7 +412,8 @@
       "apelidos": [
         "CEDAW"
       ],
-      "url": "https://www.planalto.gov.br/ccivil_03/decreto/2002/d4377.htm"
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto/2002/d4377.htm",
+      "anexo": "CEDAW"
     },
     {
       "sigla": "L10678",
@@ -556,7 +558,9 @@
         "Pacto de São José",
         "CADH"
       ],
-      "url": "https://www.planalto.gov.br/ccivil_03/decreto/d0678.htm"
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto/d0678.htm",
+      "anexo": "CADH",
+      "sigla_decreto": "D678"
     },
     {
       "sigla": "L9868",
@@ -577,40 +581,56 @@
       "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12063.htm"
     },
     {
+      "sigla": "CEBA",
+      "nome": "Constituição do Estado da Bahia de 1989",
+      "apelidos": [
+        "Constituição do Estado da Bahia",
+        "Constituição Estadual da Bahia"
+      ],
+      "url": "https://www.legislabahia.ba.gov.br/documentos/constituicao-do-estado-da-bahia-de-05-de-outubro-de-1989",
+      "fonte": "legislabahia"
+    },
+    {
       "sigla": "BA6677",
       "nome": "Estatuto do Servidor Público da Bahia — Lei Estadual 6.677/1994",
       "apelidos": [],
-      "url": ""
+      "url": "https://www.legislabahia.ba.gov.br/documentos/lei-no-6677-de-26-de-setembro-de-1994",
+      "fonte": "legislabahia"
     },
     {
       "sigla": "BA11370",
       "nome": "Lei Orgânica da Polícia Civil da Bahia — Lei Estadual 11.370/2009",
       "apelidos": [],
-      "url": ""
+      "url": "https://www.legislabahia.ba.gov.br/documentos/lei-no-11370-de-04-de-fevereiro-de-2009",
+      "fonte": "legislabahia"
     },
     {
       "sigla": "BA12209",
       "nome": "Processo Administrativo da Bahia — Lei Estadual 12.209/2011",
       "apelidos": [],
-      "url": ""
+      "url": "https://www.legislabahia.ba.gov.br/documentos/lei-no-12209-de-20-de-abril-de-2011",
+      "fonte": "legislabahia"
     },
     {
       "sigla": "BA14634",
       "nome": "Licitações da Bahia — Lei Estadual 14.634/2023",
       "apelidos": [],
-      "url": ""
+      "url": "https://www.legislabahia.ba.gov.br/documentos/lei-no-14634-de-28-de-novembro-de-2023",
+      "fonte": "legislabahia"
     },
     {
       "sigla": "BA13182",
       "nome": "Estatuto da Igualdade Racial da Bahia — Lei Estadual 13.182/2014",
       "apelidos": [],
-      "url": ""
+      "url": "https://www.legislabahia.ba.gov.br/documentos/lei-no-13182-de-06-de-junho-de-2014",
+      "fonte": "legislabahia"
     },
     {
       "sigla": "BA14521",
       "nome": "Lei Estadual 14.521/2022 — SEPROMI",
       "apelidos": [],
-      "url": ""
+      "url": "https://www.legislabahia.ba.gov.br/documentos/lei-no-14521-de-15-de-dezembro-de-2022",
+      "fonte": "legislabahia"
     },
     {
       "sigla": "L7960",
