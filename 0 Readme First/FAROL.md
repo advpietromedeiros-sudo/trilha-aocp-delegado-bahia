@@ -6,6 +6,13 @@
 
 ## Estado
 
+- ✅ **07/11/2026, 08h01 — Módulo 1 (piloto) PRONTO, aguardando a aprovação do formato pelo titular:**
+  `revisao/saida/m01_igualdade_legislacao_atualidades.html` (+ PDF, 161 páginas), 25 de 25 pontos, 119 fichas,
+  51 questões, 107 trechos de lei conferidos, 24 jurisprudências com data conferida na fonte; gerador, verificador
+  de atualidade e referências proibidas com saída 0. Lei seca consertada no commit `60a8e70` (63 chaves falsas;
+  Lei 11.340 voltou com 57 artigos; leis da Bahia pelo Legisla Bahia; 11.124 artigos de 87 diplomas).
+  ⚠️ `servidor.py` ainda mostra as leis da Bahia como "Planalto" (`merged_lei`) — corrigir.
+  ⚠️ `assets/sumulas.json` tem data trocada nas súmulas 641 e 645 do STJ.
 - ⏳ **07/11/2026, 06h32 — Revisão (D-018):** Fase 0 e motor do caderno **prontos e no Git** (commit `522bfad`,
   CI verde). Ordem dos módulos **por rendimento** (D-019); discursiva no mesmo dia (06/12). **Gerando o piloto,
   Módulo 1** (Igualdade racial e de gênero, Legislação Geral da Bahia e Atualidades, 25 pontos), junto com o
