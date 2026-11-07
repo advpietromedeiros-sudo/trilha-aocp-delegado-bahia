@@ -276,3 +276,15 @@ Depois os específicos, começando por Penal e Processo Penal"* — e **"Sim, no
 
 ⚠️ A divisão das 40 + 60 questões por disciplina é **estimada** (média dos 4 simulados; o edital só traz os blocos,
 Tabela 7.1, p. 10). Discursiva no mesmo dia: todo módulo de específicos leva a ponte com as 18 peças.
+
+### D-020 — Formato do Módulo 1 aprovado; Direito antes de Português e Informática (07/11/2026, 08h32, titular)
+
+Resposta textual do titular ao piloto: *"PODE CONTINUAR, MAS EU QUERIA LOGO A PARTE DE DIREITO AI DEPOIS FARIA A PARTE
+DE PORTUGUES E INFORMÁTICA"*. O **formato** do Módulo 1 fica aprovado e vale para os demais. A **ordem** da D-019 muda
+só nisto: os módulos de Direito vêm antes de Língua Portuguesa e de Informática e Raciocínio Lógico. Como Penal tem 74
+pontos, ele se divide em Parte Geral (tópicos 1 a 9 e 11) e Parte Especial (tópico 10). Ordem vigente:
+
+1. Igualdade racial e de gênero, Legislação geral e Atualidades (✅ pronto) · 2. Penal — Parte Geral ·
+3. Penal — Parte Especial · 4. Processo Penal e inquérito · 5. Legislação penal extravagante ·
+6. Criminologia e Medicina Legal · 7. Civil, Empresarial e Processo Civil · 8. Constitucional · 9. Administrativo ·
+10. Ambiental · 11. Tributário · 12. Língua Portuguesa · 13. Informática e Raciocínio Lógico.
