@@ -26,6 +26,14 @@ OF = json.load(open(RAIZ / 'assets' / 'lei_seca_oficial.json', encoding='utf-8')
 IT = json.load(open(RAIZ / 'assets' / 'items.json', encoding='utf-8'))
 IT = IT if isinstance(IT, list) else IT.get('items', [])
 edital = sorted([x['id'] for x in IT if str(x.get('id', '')).startswith(CFG['prefixo'])], key=disciplinas.ordem_ponto)
+if CFG.get('pontos_incluidos') is not None:
+    # Só a PEN (entrega em etapas: Parte Geral agora, Parte Especial depois). A lista explícita tem de estar toda no
+    # edital; os pontos de fora são informados, nunca escondidos. Sem a chave, vale o edital inteiro (CPC, CIV...).
+    fora = [p for p in CFG['pontos_incluidos'] if p not in edital]
+    if fora: print('ERRO: pontos_incluidos fora do edital:', fora); sys.exit(1)
+    pendentes = [p for p in edital if p not in set(CFG['pontos_incluidos'])]
+    edital = [p for p in edital if p in set(CFG['pontos_incluidos'])]
+    print(f'Entrega parcial: {len(edital)} pontos incluídos; {len(pendentes)} do edital ainda pendentes: {", ".join(pendentes)}')
 
 erros, avisos = [], []
 DATA = re.compile(r'^\d{2}/\d{2}/\d{4}$')

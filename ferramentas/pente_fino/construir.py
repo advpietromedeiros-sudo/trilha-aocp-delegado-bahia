@@ -1,9 +1,10 @@
 """Monta discursiva/pente_fino_<disc>.js a partir dos arquivos de conteúdo da disciplina.
   --disc CPC (padrão): c01_04.py, c05_08.py, c09_12.py (Processo Civil, aprovado — D-021);
   --disc CIV: civ/*.py (Direito Civil e Empresarial); --disc MLE: mle/*.py (Medicina Legal);
-  --disc CRI: cri/*.py (Criminologia); --disc CPP: cpp/*.py (Direito Processual Penal).
+  --disc CRI: cri/*.py (Criminologia); --disc CPP: cpp/*.py (Direito Processual Penal);
+  --disc PEN: pen/*.py (Direito Penal — por ora só a Parte Geral, filtrada por `pontos_incluidos`).
 Cada lei é (chave, início, fim|None, rótulo): o texto é RECORTADO do oficial (assets/lei_seca_oficial.json),
-do início até o fim do trecho final — nada é digitado à mão. Uso: python construir.py [--disc CPC|CIV|MLE|CRI|CPP]"""
+do início até o fim do trecho final — nada é digitado à mão. Uso: python construir.py [--disc CPC|CIV|MLE|CRI|CPP|PEN]"""
 import argparse, importlib, json, pathlib, re, sys, collections
 
 AQUI = pathlib.Path(__file__).resolve().parent
@@ -28,6 +29,8 @@ ITEMS = json.load(open(RAIZ / 'assets' / 'items.json', encoding='utf-8'))
 L = ITEMS if isinstance(ITEMS, list) else ITEMS.get('items', [])
 PONTOS = [dict(id=x['id'], titulo=x['label']) for x in L if str(x.get('id', '')).startswith(CFG['prefixo'])]
 PONTOS.sort(key=lambda p: disciplinas.ordem_ponto(p['id']))
+if CFG.get('pontos_incluidos') is not None:  # só a PEN (entrega em etapas): fica apenas a parte já feita
+    PONTOS = [p for p in PONTOS if p['id'] in set(CFG['pontos_incluidos'])]
 
 erros = []
 

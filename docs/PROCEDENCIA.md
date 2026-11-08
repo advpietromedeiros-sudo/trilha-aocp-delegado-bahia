@@ -181,3 +181,28 @@ prompt do servidor já manda não aplicar norma posterior.
   (11/02/2022), ADPFs 395 e 444 (14/06/2018), ADI 5.637 (11/03/2022) e HC 185.913 (18/09/2024); andamento dos Temas
   184 e 280/RG; Informativos 684, 735 e 818 do STJ (HC 598.886, RHC 158.580, HC 877.943). A `assets/sumulas.json` não
   foi usada como fonte.
+
+## Pente Fino de Direito Penal — Parte Geral (08/11/2026, D-021)
+
+- **Guia de temas e profundidade (sem cópia de texto):** `DELEGADO BA/RESUMO DESTACADO - DELEGADO PCPR - DIREITO PENAL
+  - PARTE GERAL.pdf` (lido só o sumário dos capítulos para calibrar o que cai e o nível) e a incidência AOCP de
+  `revisao/mapa_prioridade.json` (PEN-9.1, 1.1, 7, 1.2, 2.2, 3.1, 4.10, 6.6, 8.2, 8.3 e 8.11 à frente). Material de
+  terceiro, uso pessoal (D-018).
+- Texto das assertivas e dos comentários de `discursiva/pente_fino_pen.js` (gerado de `ferramentas/pente_fino/pen/`) é
+  próprio: conferência de janelas de 8 palavras contra o material — 7 frases doutrinárias coincidentes foram reescritas;
+  as que sobram fora da letra de lei e das súmulas/teses oficiais são paráfrase do texto legal ou de enunciado oficial
+  (ex.: redação anterior da Súmula 545) ou vocabulário técnico corrente ("imputabilidade, potencial consciência da
+  ilicitude e exigibilidade de conduta diversa"). ⚠️ O PDF traz marca d'água com dados pessoais do comprador: nada disso
+  entrou (busca por CPF no conteúdo: zero), e as extrações de texto foram apagadas ao fim.
+- **Letra de lei:** `assets/lei_seca_oficial.json` (Planalto), sem lei nova acrescentada. Citadas as redações de
+  2024–2026 já presentes na base: Lei 14.994/2024 (CP, art. 92, §§ 1º e 2º), Lei 15.159/2025 (CP, art. 61, II, m; Lei
+  8.072/1990, art. 1º, I-A), Lei 15.160/2025 (CP, arts. 65, I, e 115), Lei 15.358/2026 (CP, arts. 91-A, § 5º, e 92,
+  IV; LEP, art. 112, V, VI e VIII), Lei 15.402/2026 (LEP, arts. 112, caput, e 126, § 9º), Lei 15.438/2026 (CP, art.
+  103, par. ún.), Lei 15.487/2026 (CP, art. 92, § 2º) e Lei 14.843/2024 (LEP, arts. 112, § 1º, e 122, § 2º).
+- **Jurisprudência (conferida em 08/11/2026):** 43 súmulas do STJ no SCON (processo.stj.jus.br/SCON/sumstj; a 545, e a
+  630 só registrada em `pen_juris.py`, na redação revisada em 10/09/2025, Tema 1.194); 10 súmulas do STF no PDF
+  oficial; Temas 585, 931, 1.077, 1.100, 1.172, 1.194 e 1.205 na página de repetitivos do STJ; Súmulas Vinculantes 26
+  e 56 no portal do STF (data = publicação no DJe, a única que a página traz); notícias oficiais do STF para a ADPF
+  779 (01/08/2023), o HC 176.473 (sessão virtual de 17 a 24/04/2020) e o Tema 788/RG (sessão virtual encerrada em
+  30/06/2023); HC 84.412 (Segunda Turma, 19/10/2004, data citada nos acórdãos do STF). A `assets/sumulas.json` não foi
+  usada como fonte.

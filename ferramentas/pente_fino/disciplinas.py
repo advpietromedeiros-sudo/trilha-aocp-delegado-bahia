@@ -5,7 +5,14 @@ MLE: Medicina Legal (07/11/2026) — pontos com subitem (DBA26-MLE-5.1); volume 
 assertiva só de doutrina admitida (a disciplina é doutrinária: nem todo sinal ou fenômeno tem lei por trás).
 CRI: Criminologia (07/11/2026) — mesmo volume e mesma regra de doutrina sem fonte da MLE (disciplina doutrinária).
 CPP: Direito Processual Penal (08/11/2026) — 41 pontos com subitens; volume próprio (R1 5–12, R2 3–8) e, como no CPC,
-toda assertiva com lei ou jurisprudência (sem doutrina_sem_fonte)."""
+toda assertiva com lei ou jurisprudência (sem doutrina_sem_fonte).
+PEN: Direito Penal (08/11/2026) — entregue em DUAS etapas na mesma sigla. Nesta entrega, só a PARTE GERAL
+(DBA26-PEN-1 a PEN-9.2, 58 pontos), por isso a entrada traz `pontos_incluidos` (lista explícita): construir.py e
+conferir.py usam essa lista no lugar de "todos os ids do edital com o prefixo" — e SÓ para a PEN; as demais
+disciplinas, sem a chave, seguem exigindo todos os pontos. A PARTE ESPECIAL (PEN-10 a 10.14 e PEN-11) entra depois:
+o próximo agente (1) cria os arquivos de conteúdo em pen/ (ex.: pen_p10_01_04.py, pen_p10_05_11.py, pen_p10_12_14.py,
+pen_p11.py), (2) acrescenta os nomes em `modulos` e (3) acrescenta os ids em PEN_PARTE_ESPECIAL dentro de
+`pontos_incluidos` — quando os 74 estiverem feitos, a chave pode simplesmente sair (volta a valer o edital inteiro)."""
 import re
 
 
@@ -15,6 +22,21 @@ def ordem_ponto(pid):
     m = re.match(r'^DBA26-[A-Z]+-(\d+)(?:\.(\d+))?(?:-B(\d+))?$', pid)
     return (int(m.group(1)), int(m.group(2) or 0), int(m.group(3) or 0)) if m else (10 ** 6, 0, 0)
 
+
+# Direito Penal — Parte Geral (entregue em 08/11/2026): títulos 1 a 9 do edital, com os subitens.
+PEN_PARTE_GERAL = [
+    'DBA26-PEN-1', 'DBA26-PEN-1.1', 'DBA26-PEN-1.2', 'DBA26-PEN-1.3', 'DBA26-PEN-1.4',
+    'DBA26-PEN-2', 'DBA26-PEN-2.1', 'DBA26-PEN-2.2', 'DBA26-PEN-2.3', 'DBA26-PEN-2.4', 'DBA26-PEN-2.5',
+    'DBA26-PEN-3', 'DBA26-PEN-3.1', 'DBA26-PEN-3.2', 'DBA26-PEN-3.3', 'DBA26-PEN-3.4', 'DBA26-PEN-3.5', 'DBA26-PEN-3.6',
+    'DBA26-PEN-4'] + [f'DBA26-PEN-4.{i}' for i in range(1, 13)] + [
+    'DBA26-PEN-5', 'DBA26-PEN-5.1',
+    'DBA26-PEN-6'] + [f'DBA26-PEN-6.{i}' for i in range(1, 7)] + [
+    'DBA26-PEN-7',
+    'DBA26-PEN-8'] + [f'DBA26-PEN-8.{i}' for i in range(1, 14)] + [
+    'DBA26-PEN-9', 'DBA26-PEN-9.1', 'DBA26-PEN-9.2']
+# Parte Especial (a fazer): 'DBA26-PEN-10', 'DBA26-PEN-10.1' ... 'DBA26-PEN-10.14' e 'DBA26-PEN-11' (jurisprudência
+# aplicada e legislação de cada tópico). Ao fazê-la, preencher esta lista e somá-la em pontos_incluidos.
+PEN_PARTE_ESPECIAL = []
 
 DISC = {
     'CPC': dict(
@@ -98,4 +120,21 @@ DISC = {
                 'Súmulas do STF — PDF oficial "Enunciados das Súmulas do STF 1 a 736" (stf.jus.br) e Súmulas Vinculantes (portal.stf.jus.br)',
                 'STF — ADIs 6.298/6.299/6.300/6.305, ADIs 3.360 e 4.109, ADPFs 395 e 444, HC 185.913, Temas 184 e 280/RG (portal.stf.jus.br e notícias oficiais)',
                 'STJ — HC 598.886/SC e RHC 158.580/BA (Informativos 684 e 735)']),
+    'PEN': dict(
+        prefixo='DBA26-PEN-',
+        pasta='pen',
+        modulos=['pen_p01_02', 'pen_p03', 'pen_p04', 'pen_p05_07', 'pen_p08', 'pen_p09'],
+        # Parte Especial: acrescentar aqui os módulos novos (ver docstring do arquivo).
+        pontos_incluidos=PEN_PARTE_GERAL + PEN_PARTE_ESPECIAL,
+        disciplina='Direito Penal',
+        conferido_em='08/11/2026',
+        volume=((5, 12), (3, 8)),  # 58 pontos da Parte Geral: R1 5–6 e R2 3–4 na média; os de maior incidência AOCP (9.1, 1.1, 7, 1.2, 2.2...) vão além
+        cabecalho='// Pente Fino — Direito Penal, Parte Geral (DBA26-PEN-1 a PEN-9.2, com os subitens; a Parte Especial entra depois). Gerado por ferramentas/pente_fino/construir.py --disc PEN em 08/11/2026.',
+        fontes=['Decreto-Lei 2.848/1940 (Código Penal), Parte Geral, com as Leis 13.964/2019, 14.994/2024, 15.159/2025, 15.160/2025, 15.358/2026 e 15.438/2026 — Planalto',
+                'Constituição Federal de 1988 — Planalto', 'Lei 7.210/1984 (LEP) — Planalto',
+                'Lei 8.072/1990 (crimes hediondos), Lei 9.099/1995 e Decreto-Lei 3.688/1941 (LCP) — Planalto',
+                'Lei 9.605/1998 (crimes ambientais) e Lei 11.343/2006 (Drogas) — Planalto',
+                'Súmulas do STJ — processo.stj.jus.br/SCON/sumstj', 'Temas repetitivos do STJ — processo.stj.jus.br/repetitivos',
+                'Súmulas do STF — PDF oficial "Enunciados das Súmulas do STF 1 a 736" (stf.jus.br) e Súmulas Vinculantes (portal.stf.jus.br)',
+                'STF — ADPF 779, HC 176.473, HC 84.412 e Tema 788/RG (portal.stf.jus.br e notícias oficiais)']),
 }
