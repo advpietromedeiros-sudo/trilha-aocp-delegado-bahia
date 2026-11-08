@@ -239,3 +239,33 @@ prompt do servidor já manda não aplicar norma posterior.
   STF para a ADPF 54 (12/04/2012) e a ADPF 496 (sessão virtual finalizada em 19/06/2020); andamento do Tema 1.003/RG
   (mérito em 24/03/2021, tese readequada nos embargos, sessão virtual de 02 a 12/06/2023). A `assets/sumulas.json` não
   foi usada como fonte.
+
+## Pente Fino de Legislação Penal Extravagante (08/11/2026, D-021)
+
+- **Guia de temas e profundidade (sem cópia de texto):** `DELEGADO BA/RESUMO DESTACADO - DELEGADO PCPR - LEGISLAÇÃO
+  PENAL EXTRAVAGANTE.pdf` e `DELEGADO BA/Atualização - LPE - Lei 15.487 - 06 Ago 2026-1.pdf` (lidos só os títulos dos
+  capítulos para calibrar o que cai e o nível) e a incidência AOCP de `revisao/mapa_prioridade.json` (LPE-8 à frente;
+  LPE-4, 5, 9, 13, 16 e 30 com incidência; os demais, zero). Material de terceiro, uso pessoal (D-018).
+- Texto das 430 assertivas e dos comentários de `discursiva/pente_fino_lpe.js` (gerado de `ferramentas/pente_fino/lpe/`)
+  é próprio: conferência de janelas de 8 palavras contra os dois PDFs (11.237 janelas) — nenhuma frase doutrinária
+  coincidente; as 79 janelas que sobram fora da letra de lei e dos enunciados oficiais são paráfrase do texto legal
+  (penas escritas "reclusão de 2 a 5 anos e multa" × "2 (dois) a 5 (cinco) anos", tipos como "arma de fogo de uso
+  permitido", "nota de culpa assinada pela autoridade", "menor de 14 anos com o fim de praticar ato libidinoso").
+  ⚠️ Os PDFs trazem marca d'água com dados pessoais do comprador: nada disso entrou (busca por CPF e pelo nome do
+  material nos arquivos novos: zero), e as extrações de texto foram apagadas ao fim.
+- **Letra de lei:** `assets/lei_seca_oficial.json` (Planalto), **sem lei nova acrescentada** — as 40 leis do edital (e o
+  Decreto 9.603/2018) já estavam na base; 418 citações de 276 dispositivos, em 43 diplomas. Citadas as redações de
+  2025–2026 já presentes na base: Lei 15.358/2026, Lei 15.402/2026, Lei 15.487/2026, Leis 15.380, 15.383 e 15.384/2026,
+  Lei 15.410/2026, Lei 15.517/2026, Lei 15.348/2026, Lei 15.355/2026, Lei 15.295/2025, Lei 15.234/2025, Lei
+  15.163/2025, Lei 15.245/2025 e Lei Complementar 224/2025 (lista por dispositivo em `docs/PENTE_FINO_ESQUEMA.md`).
+- **Jurisprudência (conferida em 08/11/2026):** 52 julgados/súmulas distintos — 23 reaproveitados de `pen_juris.py` e
+  `cpp_juris.py` e 29 novos, em `lpe/lpe_juris.py`: Súmulas 108, 164, 265, 342, 492, 520, 533, 575, 587, 600, 605, 607 e
+  639 do STJ no SCON (processo.stj.jus.br/SCON/sumstj, data = "julgado em", nenhuma com indicação de cancelamento; a
+  439 também conferida, registrada e não usada); Súmulas 658, 660, 661 e 662 (notícia oficial do STJ de 15/09/2023,
+  sessão de 13/09/2023), 664 (notícia de 09/11/2023, aprovada em 08/11/2023), 667 e 668 (notícia de 22/04/2024, sessão
+  de 18/04/2024) e 669 (Livro de Súmulas do STJ, julgada em 12/06/2024); Súmulas 498, 703 e 720 do STF no PDF oficial;
+  Súmula Vinculante 24 no portal do STF (data = publicação no DJe) e **SV 63** (notícia oficial de 30/09/2025 e
+  Informativo 1.193 — PSV 125, sessão virtual finalizada em 25/09/2025); Tema 506/RG (Informativo 1.143, julgamento
+  finalizado em 26/06/2024); Inq 4.435 AgR-quarto (notícia oficial, Plenário, 14/03/2019); RE 548.181 (Informativo 714,
+  Primeira Turma, 06/08/2013). **Canceladas e não usadas como regra:** Súmula 512/STJ (SCON) e Súmula Vinculante 9
+  (Informativo STF 1.193, PSV 60). A `assets/sumulas.json` não foi usada como fonte.

@@ -12,7 +12,11 @@ pen_p10_02_06.py, pen_p10_07_10.py, pen_p10_11_14.py e pen_p11.py). A entrada tr
 explícita PEN_PARTE_GERAL + PEN_PARTE_ESPECIAL): construir.py e conferir.py usam essa lista no lugar de "todos os ids do
 edital com o prefixo" — e SÓ para a PEN; as demais disciplinas, sem a chave, seguem exigindo todos os pontos. Com a
 Parte Especial, a lista cobre os 74 pontos do edital (o conferidor informa 0 pendentes); a chave ficou como registro
-das duas etapas e pode sair sem mudar nada no arquivo gerado."""
+das duas etapas e pode sair sem mudar nada no arquivo gerado.
+LPE: Legislação Penal e Processual Penal Extravagante (08/11/2026) — 40 pontos (DBA26-LPE-1 a 40, uma lei por ponto e o
+LPE-40 de fechamento com jurisprudência transversal), conteúdo em lpe/ e jurisprudência em lpe/lpe_juris.py, que
+reaproveita as entradas de pen_juris.py e cpp_juris.py; volume da CPP/PEN (R1 5–12, R2 3–8) e toda assertiva com lei ou
+jurisprudência (sem doutrina_sem_fonte). Sem `pontos_incluidos`: exige os 40 pontos do edital."""
 import re
 
 
@@ -142,4 +146,18 @@ DISC = {
                 'Súmulas do STF — PDF oficial "Enunciados das Súmulas do STF 1 a 736" (stf.jus.br) e Súmulas Vinculantes (portal.stf.jus.br)',
                 'STF — ADPF 779, HC 176.473, HC 84.412 e Tema 788/RG (portal.stf.jus.br e notícias oficiais)',
                 'STF — ADPF 54, ADPF 496 e Tema 1.003/RG (notícias oficiais e andamento do tema); Súmulas 603 e 714 (página oficial de cada súmula, portal.stf.jus.br)']),
+    'LPE': dict(
+        prefixo='DBA26-LPE-',
+        pasta='lpe',
+        modulos=['lpe_p01_05', 'lpe_p06_09', 'lpe_p10_14', 'lpe_p15_20', 'lpe_p21_30', 'lpe_p31_40'],
+        disciplina='Legislação Penal e Processual Penal Extravagante',
+        conferido_em='08/11/2026',
+        volume=((5, 12), (3, 8)),  # 40 leis: as de maior incidência (drogas, armas, ECA, abuso, organização criminosa, LEP, Maria da Penha, marco do crime organizado) vão além de 5/3
+        cabecalho='// Pente Fino — Legislação Penal e Processual Penal Extravagante (DBA26-LPE-1 a 40). Gerado por ferramentas/pente_fino/construir.py --disc LPE em 08/11/2026.',
+        fontes=['Leis penais e processuais penais especiais do edital (LPE-1 a LPE-39), na redação vigente — Planalto (assets/lei_seca_oficial.json)',
+                'Lei 15.358/2026 (marco legal do combate ao crime organizado), Lei 15.487/2026 (ECA e crimes hediondos), Leis 15.383/2026, 15.380/2026, 15.384/2026 e 15.410/2026 (Maria da Penha, tortura e LEP), Lei 15.402/2026 (LEP) e Lei 15.517/2026 (Lei 8.176/1991) — Planalto',
+                'Constituição Federal de 1988, Código Penal e Código de Processo Penal — Planalto',
+                'Súmulas do STJ — processo.stj.jus.br/SCON/sumstj e notícias oficiais do STJ (Súmulas 658 a 669)',
+                'Súmulas do STF — PDF oficial "Enunciados das Súmulas do STF 1 a 736" (stf.jus.br) e Súmulas Vinculantes 24, 26, 35, 56 e 63 (portal.stf.jus.br)',
+                'STF — Tema 506/RG (Informativo 1.143), Inq 4.435 AgR-quarto, RE 548.181 (Informativo 714), Tema 184/RG, ADIs 3.360/4.109 e ADI 5.637 (portal.stf.jus.br e notícias oficiais)']),
 }

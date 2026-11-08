@@ -3,8 +3,9 @@
   --disc CIV: civ/*.py (Direito Civil e Empresarial); --disc MLE: mle/*.py (Medicina Legal);
   --disc CRI: cri/*.py (Criminologia); --disc CPP: cpp/*.py (Direito Processual Penal);
   --disc PEN: pen/*.py (Direito Penal — Parte Geral e Parte Especial, 74 pontos, listados em `pontos_incluidos`).
+  --disc LPE: lpe/*.py (Legislação Penal e Processual Penal Extravagante, 40 pontos; jurisprudência em lpe/lpe_juris.py).
 Cada lei é (chave, início, fim|None, rótulo): o texto é RECORTADO do oficial (assets/lei_seca_oficial.json),
-do início até o fim do trecho final — nada é digitado à mão. Uso: python construir.py [--disc CPC|CIV|MLE|CRI|CPP|PEN]"""
+do início até o fim do trecho final — nada é digitado à mão. Uso: python construir.py [--disc CPC|CIV|MLE|CRI|CPP|PEN|LPE]"""
 import argparse, importlib, json, pathlib, re, sys, collections
 
 AQUI = pathlib.Path(__file__).resolve().parent

@@ -124,3 +124,34 @@ item, as 553 assertivas da Parte Geral.
   na **redação revisada** (Tema 1.194, 10/09/2025) e a antiga aparece só como pegadinha; (4) divergências doutrinárias
   (teorias da conduta, da culpabilidade, natureza da desistência, ofendículos) são ditas como doutrina, sem atribuir a
   tribunal; posição de tribunal só com julgado conferido em `pen_juris.py`.
+
+## Legislação Extravagante (08/11/2026)
+
+`pente_fino_lpe.js` (`--disc LPE`, conteúdo em `ferramentas/pente_fino/lpe/`, jurisprudência em `lpe/lpe_juris.py`): os
+**40 pontos** do edital (`DBA26-LPE-1` a `LPE-40`, uma lei por ponto → ids `LPE-17-R1-03`), em `lpe_p01_05.py`,
+`lpe_p06_09.py`, `lpe_p10_14.py`, `lpe_p15_20.py`, `lpe_p21_30.py` e `lpe_p31_40.py` — 430 assertivas (R1 263, R2 167),
+entregues de uma vez (sem `pontos_incluidos`: o conferidor exige os 40).
+
+- Volume da CPP/PEN (R1 5–12, R2 3–8): leis menores com 5/3; as de maior incidência e peso (Lei de Drogas 11/7,
+  organizações criminosas 10/6, Estatuto do Desarmamento, abuso de autoridade, ECA, LEP, Maria da Penha e Lei
+  15.358/2026 com 9/6) vão além. Como no CPP e na PEN, **toda assertiva tem lei ou jurisprudência**.
+- `lpe_juris.py` **reaproveita** as entradas de `pen/pen_juris.py` e `cpp/cpp_juris.py` (importa os dois dicionários,
+  sem mudar uma letra) e acrescenta as novas; a PEN e o CPP não foram tocados (a reconstrução deles não muda).
+- **LPE-40** ("jurisprudência aplicada... de cada tópico") é ponto de **fechamento**, como o PEN-11: só jurisprudência
+  transversal conferida (busca pessoal, ingresso em domicílio, temporária, presídio federal, medidas socioeducativas).
+  LPE-26 e LPE-28 (Leis 9.279/1996 e 9.609/1998) evitam repetir os temas já cobertos em PEN-10.3 e 10.4.
+- Particularidades: (1) a lei seca guarda as redações de 2025–2026 e o item cita a linha vigente, com a antiga só como
+  pegadinha — Lei 15.358/2026 (marco do crime organizado: facção com **3** ou mais pessoas, pena de 20 a 40 anos; arma
+  a serviço do tráfico, Lei 10.826/2003, art. 21-A; Lei 11.343/2006, art. 40-A; LEP, arts. 41-A, 52, § 6º, e 112, V),
+  Lei 15.402/2026 (LEP, art. 112, caput: 1/6 como regra), Lei 15.487/2026 (ECA, arts. 240 a 241-E — "conteúdo de
+  violência sexual"; Lei 8.072/1990, art. 1º, par. ún., VII; Lei 12.850/2013, art. 2º, § 4º, I), Leis 15.380, 15.383 e
+  15.384/2026 (Maria da Penha, arts. 7º, VI, 12-D, 16, par. ún., 16-A e 24-A, § 4º), Lei 15.410/2026 (tortura, art.
+  1º, III), Lei 15.517/2026 (Lei 8.176/1991, arts. 1º-A a 1º-C), Lei 15.355/2026 (Lei 9.605/1998, art. 32, § 1º-C),
+  Lei 15.295/2025 (identificação criminal, art. 3º, VII) e Lei 15.163/2025 (ECA, art. 230, § 2º; Estatuto da Pessoa
+  Idosa, art. 94, par. ún., e 99; Lei 13.146/2015, art. 90); (2) **SV 9 cancelada** (Informativo STF 1.193) e **Súmula
+  512/STJ cancelada** aparecem só como pegadinha; o tráfico privilegiado segue a **SV 63** e o art. 112, § 5º, da LEP;
+  (3) a linha do I-B (feminicídio) do art. 1º da Lei 8.072/1990 é lida pelo conferidor como redação superada (vem
+  seguida do I-C): cita-se o art. 121-A do CP; a mesma linha guarda o "í" decomposto; (4) dispositivos com
+  inconstitucionalidade declarada e não conferida hoje (Lei 10.826/2003, art. 21; Lei 11.343/2006, art. 44, caput,
+  quanto à liberdade provisória e às restritivas; Lei 9.613/1998, art. 17-D) ficaram de fora; posição de tribunal só
+  com julgado conferido em `lpe_juris.py`.
