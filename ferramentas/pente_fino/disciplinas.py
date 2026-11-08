@@ -6,13 +6,13 @@ assertiva só de doutrina admitida (a disciplina é doutrinária: nem todo sinal
 CRI: Criminologia (07/11/2026) — mesmo volume e mesma regra de doutrina sem fonte da MLE (disciplina doutrinária).
 CPP: Direito Processual Penal (08/11/2026) — 41 pontos com subitens; volume próprio (R1 5–12, R2 3–8) e, como no CPC,
 toda assertiva com lei ou jurisprudência (sem doutrina_sem_fonte).
-PEN: Direito Penal (08/11/2026) — entregue em DUAS etapas na mesma sigla. Nesta entrega, só a PARTE GERAL
-(DBA26-PEN-1 a PEN-9.2, 58 pontos), por isso a entrada traz `pontos_incluidos` (lista explícita): construir.py e
-conferir.py usam essa lista no lugar de "todos os ids do edital com o prefixo" — e SÓ para a PEN; as demais
-disciplinas, sem a chave, seguem exigindo todos os pontos. A PARTE ESPECIAL (PEN-10 a 10.14 e PEN-11) entra depois:
-o próximo agente (1) cria os arquivos de conteúdo em pen/ (ex.: pen_p10_01_04.py, pen_p10_05_11.py, pen_p10_12_14.py,
-pen_p11.py), (2) acrescenta os nomes em `modulos` e (3) acrescenta os ids em PEN_PARTE_ESPECIAL dentro de
-`pontos_incluidos` — quando os 74 estiverem feitos, a chave pode simplesmente sair (volta a valer o edital inteiro)."""
+PEN: Direito Penal (08/11/2026) — entregue em DUAS etapas na mesma sigla: a PARTE GERAL (DBA26-PEN-1 a PEN-9.2,
+58 pontos, commit 89b701a) e depois a PARTE ESPECIAL (PEN-10 a 10.14 e PEN-11, 16 pontos, em pen_p10_01.py,
+pen_p10_02_06.py, pen_p10_07_10.py, pen_p10_11_14.py e pen_p11.py). A entrada traz `pontos_incluidos` (lista
+explícita PEN_PARTE_GERAL + PEN_PARTE_ESPECIAL): construir.py e conferir.py usam essa lista no lugar de "todos os ids do
+edital com o prefixo" — e SÓ para a PEN; as demais disciplinas, sem a chave, seguem exigindo todos os pontos. Com a
+Parte Especial, a lista cobre os 74 pontos do edital (o conferidor informa 0 pendentes); a chave ficou como registro
+das duas etapas e pode sair sem mudar nada no arquivo gerado."""
 import re
 
 
@@ -34,9 +34,9 @@ PEN_PARTE_GERAL = [
     'DBA26-PEN-7',
     'DBA26-PEN-8'] + [f'DBA26-PEN-8.{i}' for i in range(1, 14)] + [
     'DBA26-PEN-9', 'DBA26-PEN-9.1', 'DBA26-PEN-9.2']
-# Parte Especial (a fazer): 'DBA26-PEN-10', 'DBA26-PEN-10.1' ... 'DBA26-PEN-10.14' e 'DBA26-PEN-11' (jurisprudência
-# aplicada e legislação de cada tópico). Ao fazê-la, preencher esta lista e somá-la em pontos_incluidos.
-PEN_PARTE_ESPECIAL = []
+# Direito Penal — Parte Especial (entregue em 08/11/2026): título 10 do edital (crimes em espécie, 10.1 a 10.14) e o
+# ponto 11 (jurisprudência aplicada e legislação de cada tópico, tratado como fechamento com jurisprudência transversal).
+PEN_PARTE_ESPECIAL = ['DBA26-PEN-10'] + [f'DBA26-PEN-10.{i}' for i in range(1, 15)] + ['DBA26-PEN-11']
 
 DISC = {
     'CPC': dict(
@@ -123,18 +123,23 @@ DISC = {
     'PEN': dict(
         prefixo='DBA26-PEN-',
         pasta='pen',
-        modulos=['pen_p01_02', 'pen_p03', 'pen_p04', 'pen_p05_07', 'pen_p08', 'pen_p09'],
-        # Parte Especial: acrescentar aqui os módulos novos (ver docstring do arquivo).
+        modulos=['pen_p01_02', 'pen_p03', 'pen_p04', 'pen_p05_07', 'pen_p08', 'pen_p09',
+                 'pen_p10_01', 'pen_p10_02_06', 'pen_p10_07_10', 'pen_p10_11_14', 'pen_p11'],
+        # Com a Parte Especial, a lista cobre os 74 pontos do edital: a chave ficou só como registro explícito das duas
+        # etapas (construir.py e conferir.py a usam e o conferidor informa "0 pendentes").
         pontos_incluidos=PEN_PARTE_GERAL + PEN_PARTE_ESPECIAL,
         disciplina='Direito Penal',
         conferido_em='08/11/2026',
-        volume=((5, 12), (3, 8)),  # 58 pontos da Parte Geral: R1 5–6 e R2 3–4 na média; os de maior incidência AOCP (9.1, 1.1, 7, 1.2, 2.2...) vão além
-        cabecalho='// Pente Fino — Direito Penal, Parte Geral (DBA26-PEN-1 a PEN-9.2, com os subitens; a Parte Especial entra depois). Gerado por ferramentas/pente_fino/construir.py --disc PEN em 08/11/2026.',
+        volume=((5, 12), (3, 8)),  # 74 pontos: R1 5–6 e R2 3–4 na média; os de maior incidência (9.1, 1.1, 7, 9.2...) e os grandes da Parte Especial (10.1, 10.2, 10.7, 10.11, 10.12) vão além
+        cabecalho='// Pente Fino — Direito Penal (DBA26-PEN-1 a PEN-11, com os subitens: Parte Geral, PEN-1 a 9.2, e Parte Especial, PEN-10 a 11). Gerado por ferramentas/pente_fino/construir.py --disc PEN em 08/11/2026.',
         fontes=['Decreto-Lei 2.848/1940 (Código Penal), Parte Geral, com as Leis 13.964/2019, 14.994/2024, 15.159/2025, 15.160/2025, 15.358/2026 e 15.438/2026 — Planalto',
+                'Decreto-Lei 2.848/1940 (Código Penal), Parte Especial, com as Leis 14.532/2023, 14.811/2024, 14.994/2024, 15.035/2024, 15.245/2025, 15.280/2025, 15.353/2026, 15.358/2026, 15.384/2026, 15.397/2026, 15.402/2026, 15.425/2026 e a Lei Complementar 225/2026 — Planalto',
+                'Lei 9.279/1996 (Propriedade Industrial), Lei 9.609/1998 (programa de computador) e Lei 7.716/1989 — Planalto',
                 'Constituição Federal de 1988 — Planalto', 'Lei 7.210/1984 (LEP) — Planalto',
                 'Lei 8.072/1990 (crimes hediondos), Lei 9.099/1995 e Decreto-Lei 3.688/1941 (LCP) — Planalto',
                 'Lei 9.605/1998 (crimes ambientais) e Lei 11.343/2006 (Drogas) — Planalto',
                 'Súmulas do STJ — processo.stj.jus.br/SCON/sumstj', 'Temas repetitivos do STJ — processo.stj.jus.br/repetitivos',
                 'Súmulas do STF — PDF oficial "Enunciados das Súmulas do STF 1 a 736" (stf.jus.br) e Súmulas Vinculantes (portal.stf.jus.br)',
-                'STF — ADPF 779, HC 176.473, HC 84.412 e Tema 788/RG (portal.stf.jus.br e notícias oficiais)']),
+                'STF — ADPF 779, HC 176.473, HC 84.412 e Tema 788/RG (portal.stf.jus.br e notícias oficiais)',
+                'STF — ADPF 54, ADPF 496 e Tema 1.003/RG (notícias oficiais e andamento do tema); Súmulas 603 e 714 (página oficial de cada súmula, portal.stf.jus.br)']),
 }

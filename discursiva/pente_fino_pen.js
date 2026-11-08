@@ -1,4 +1,4 @@
-// Pente Fino — Direito Penal, Parte Geral (DBA26-PEN-1 a PEN-9.2, com os subitens; a Parte Especial entra depois). Gerado por ferramentas/pente_fino/construir.py --disc PEN em 08/11/2026.
+// Pente Fino — Direito Penal (DBA26-PEN-1 a PEN-11, com os subitens: Parte Geral, PEN-1 a 9.2, e Parte Especial, PEN-10 a 11). Gerado por ferramentas/pente_fino/construir.py --disc PEN em 08/11/2026.
 // Esquema: docs/PENTE_FINO_ESQUEMA.md. Lei recortada de assets/lei_seca_oficial.json; jurisprudência conferida em fonte oficial.
 window.PENTE_FINO = window.PENTE_FINO || {};
 window.PENTE_FINO.PEN = {
@@ -6,6 +6,8 @@ window.PENTE_FINO.PEN = {
  "conferido_em": "08/11/2026",
  "fontes": [
   "Decreto-Lei 2.848/1940 (Código Penal), Parte Geral, com as Leis 13.964/2019, 14.994/2024, 15.159/2025, 15.160/2025, 15.358/2026 e 15.438/2026 — Planalto",
+  "Decreto-Lei 2.848/1940 (Código Penal), Parte Especial, com as Leis 14.532/2023, 14.811/2024, 14.994/2024, 15.035/2024, 15.245/2025, 15.280/2025, 15.353/2026, 15.358/2026, 15.384/2026, 15.397/2026, 15.402/2026, 15.425/2026 e a Lei Complementar 225/2026 — Planalto",
+  "Lei 9.279/1996 (Propriedade Industrial), Lei 9.609/1998 (programa de computador) e Lei 7.716/1989 — Planalto",
   "Constituição Federal de 1988 — Planalto",
   "Lei 7.210/1984 (LEP) — Planalto",
   "Lei 8.072/1990 (crimes hediondos), Lei 9.099/1995 e Decreto-Lei 3.688/1941 (LCP) — Planalto",
@@ -13,7 +15,8 @@ window.PENTE_FINO.PEN = {
   "Súmulas do STJ — processo.stj.jus.br/SCON/sumstj",
   "Temas repetitivos do STJ — processo.stj.jus.br/repetitivos",
   "Súmulas do STF — PDF oficial \"Enunciados das Súmulas do STF 1 a 736\" (stf.jus.br) e Súmulas Vinculantes (portal.stf.jus.br)",
-  "STF — ADPF 779, HC 176.473, HC 84.412 e Tema 788/RG (portal.stf.jus.br e notícias oficiais)"
+  "STF — ADPF 779, HC 176.473, HC 84.412 e Tema 788/RG (portal.stf.jus.br e notícias oficiais)",
+  "STF — ADPF 54, ADPF 496 e Tema 1.003/RG (notícias oficiais e andamento do tema); Súmulas 603 e 714 (página oficial de cada súmula, portal.stf.jus.br)"
  ],
  "pontos": [
   {
@@ -247,6 +250,70 @@ window.PENTE_FINO.PEN = {
   {
    "id": "DBA26-PEN-9.2",
    "titulo": "Prescrição: conceito, teorias, prazos para o cálculo da prescrição, termos iniciais, causas suspensivas ou impeditivas, causas interruptivas."
+  },
+  {
+   "id": "DBA26-PEN-10",
+   "titulo": "Crimes."
+  },
+  {
+   "id": "DBA26-PEN-10.1",
+   "titulo": "Crimes contra a pessoa."
+  },
+  {
+   "id": "DBA26-PEN-10.2",
+   "titulo": "Crimes contra o patrimônio."
+  },
+  {
+   "id": "DBA26-PEN-10.3",
+   "titulo": "Crimes contra a propriedade imaterial."
+  },
+  {
+   "id": "DBA26-PEN-10.4",
+   "titulo": "Crimes contra a propriedade intelectual."
+  },
+  {
+   "id": "DBA26-PEN-10.5",
+   "titulo": "Crimes contra a organização do trabalho."
+  },
+  {
+   "id": "DBA26-PEN-10.6",
+   "titulo": "Crimes contra o sentimento religioso e contra o respeito aos mortos."
+  },
+  {
+   "id": "DBA26-PEN-10.7",
+   "titulo": "Crimes contra a dignidade sexual."
+  },
+  {
+   "id": "DBA26-PEN-10.8",
+   "titulo": "Crimes contra a família."
+  },
+  {
+   "id": "DBA26-PEN-10.9",
+   "titulo": "Crimes contra a incolumidade pública."
+  },
+  {
+   "id": "DBA26-PEN-10.10",
+   "titulo": "Crimes contra a paz pública."
+  },
+  {
+   "id": "DBA26-PEN-10.11",
+   "titulo": "Crimes contra a fé pública."
+  },
+  {
+   "id": "DBA26-PEN-10.12",
+   "titulo": "Crimes contra a administração pública."
+  },
+  {
+   "id": "DBA26-PEN-10.13",
+   "titulo": "Crimes contra as finanças públicas."
+  },
+  {
+   "id": "DBA26-PEN-10.14",
+   "titulo": "Crimes contra o Estado Democrático de Direito."
+  },
+  {
+   "id": "DBA26-PEN-11",
+   "titulo": "Jurisprudência aplicada dos tribunais superiores e legislação aplicável a cada um dos tópicos do edital."
   }
  ],
  "rodadas": [
@@ -8678,6 +8745,2845 @@ window.PENTE_FINO.PEN = {
        "Súmula 338/STJ"
       ]
      }
+    },
+    {
+     "id": "PEN-10-R1-01",
+     "ponto": "DBA26-PEN-10",
+     "tema": "Vicaricídio",
+     "assertiva": "O vicaricídio, crime autônomo incluído no Código Penal em 2026, consiste em matar descendente, ascendente, dependente, enteado ou pessoa sob guarda da mulher, com o fim de causar-lhe sofrimento, punição ou controle, no contexto de violência doméstica, e é hediondo.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 121-B (Lei 15.384/2026), pena de 20 a 40 anos, e **hediondo** pelo art. 1º, I-C, da Lei 8.072/1990.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "121-B",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 121-B, caput",
+        "texto": "Matar descendente, ascendente, dependente, enteado ou pessoa sob guarda ou responsabilidade direta da mulher, com o fim específico de causar-lhe sofrimento, punição ou controle, no contexto de violência doméstica e familiar"
+       },
+       {
+        "lei": "L8072",
+        "art": "1",
+        "par": "",
+        "inc": "",
+        "rotulo": "Lei 8.072/1990, art. 1º, I-C",
+        "texto": "I-C – vicaricídio (art. 121-B);"
+       }
+      ],
+      "palavras_chave": [
+       "vicaricídio",
+       "Lei 15.384/2026"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10-R1-02",
+     "ponto": "DBA26-PEN-10",
+     "tema": "Feminicídio autônomo",
+     "assertiva": "Desde a Lei 14.994/2024, o feminicídio segue como qualificadora do homicídio, prevista no inciso VI do § 2º do art. 121 do Código Penal.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "A Lei 14.994/2024 **revogou o inciso VI** e criou o **crime autônomo** do art. 121-A, com pena de 20 a 40 anos.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "121",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 121, § 2º, VI",
+        "texto": "VI - (Revogado pela Lei nº 14.994, de 2024)"
+       },
+       {
+        "lei": "CP",
+        "art": "121-A",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 121-A, caput",
+        "texto": "Art. 121-A. Matar mulher por razões da condição do sexo feminino:"
+       }
+      ],
+      "pegadinha": "Tratar o feminicídio como qualificadora.",
+      "palavras_chave": [
+       "crime autônomo",
+       "revogou o inciso VI"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10-R1-03",
+     "ponto": "DBA26-PEN-10",
+     "tema": "Roubo hediondo",
+     "assertiva": "São hediondos o roubo circunstanciado pela restrição de liberdade da vítima, o circunstanciado pelo emprego de arma de fogo e o qualificado pelo resultado lesão corporal grave ou morte.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Lei 8.072/1990, art. 1º, II, a a c (Lei 13.964/2019). O roubo com **arma branca** (art. 157, § 2º, VII) **não** está no rol.",
+      "lei": [
+       {
+        "lei": "L8072",
+        "art": "1",
+        "par": "",
+        "inc": "",
+        "rotulo": "Lei 8.072/1990, art. 1º, II",
+        "texto": "a) circunstanciado pela restrição de liberdade da vítima (art. 157, § 2º, inciso V); (Incluído pela Lei nº 13.964, de 2019)\nb) circunstanciado pelo emprego de arma de fogo (art. 157, § 2º-A, inciso I) ou pelo emprego de arma de fogo de uso proibido ou restrito (art. 157, § 2º-B); (Incluído pela Lei nº 13.964, de 2019)\nc) qualificado pelo resultado lesão corporal grave ou morte (art. 157, § 3º);"
+       }
+      ],
+      "palavras_chave": [
+       "hediondos",
+       "arma branca"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10-R1-04",
+     "ponto": "DBA26-PEN-10",
+     "tema": "Furto hediondo",
+     "assertiva": "O furto qualificado pelo concurso de duas ou mais pessoas é crime hediondo.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Só o furto qualificado pelo **emprego de explosivo** ou artefato análogo que cause perigo comum (art. 155, § 4º-A) é hediondo.",
+      "lei": [
+       {
+        "lei": "L8072",
+        "art": "1",
+        "par": "",
+        "inc": "",
+        "rotulo": "Lei 8.072/1990, art. 1º, IX",
+        "texto": "IX - furto qualificado pelo emprego de explosivo ou de artefato análogo que cause perigo comum (art. 155, § 4º-A)."
+       }
+      ],
+      "pegadinha": "Estender a hediondez a qualquer furto qualificado.",
+      "palavras_chave": [
+       "emprego de explosivo"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10-R1-05",
+     "ponto": "DBA26-PEN-10",
+     "tema": "Ação penal nos crimes sexuais",
+     "assertiva": "Nos crimes contra a liberdade sexual e nos crimes sexuais contra vulnerável, a ação penal é pública condicionada à representação quando a vítima é maior e capaz.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Desde a Lei 13.718/2018, a ação é **pública incondicionada** em todos os crimes dos Capítulos I e II do Título VI (art. 225).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "225",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 225, caput",
+        "texto": "Nos crimes definidos nos Capítulos I e II deste Título, procede-se mediante ação penal pública incondicionada."
+       }
+      ],
+      "pegadinha": "Cobrar a regra anterior a 2018.",
+      "palavras_chave": [
+       "pública incondicionada",
+       "Lei 13.718/2018"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.1-R1-01",
+     "ponto": "DBA26-PEN-10.1",
+     "tema": "Homicídio privilegiado",
+     "assertiva": "Para o privilégio da violenta emoção no homicídio, o agente precisa agir dominado por ela, logo após injusta provocação da vítima.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 121, § 1º: **domínio** (não mera influência, que é atenuante do art. 65, III, c) e **logo em seguida** à injusta provocação.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "121",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 121, § 1º",
+        "texto": "§ 1º Se o agente comete o crime impelido por motivo de relevante valor social ou moral, ou sob o domínio de violenta emoção, logo em seguida a injusta provocação da vítima, o juiz pode reduzir a pena de um sexto a um terço."
+       }
+      ],
+      "palavras_chave": [
+       "domínio",
+       "logo em seguida"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.1-R1-02",
+     "ponto": "DBA26-PEN-10.1",
+     "tema": "Pena do feminicídio",
+     "assertiva": "O feminicídio é punido com reclusão de 12 a 30 anos, a mesma pena do homicídio qualificado.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "O art. 121-A comina **20 a 40 anos** (Lei 14.994/2024). 12 a 30 é a pena do homicídio qualificado.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "121-A",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 121-A (pena)",
+        "texto": "Pena – reclusão, de 20 (vinte) a 40 (quarenta) anos."
+       }
+      ],
+      "pegadinha": "Usar a pena do homicídio qualificado.",
+      "palavras_chave": [
+       "20 a 40 anos"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.1-R1-03",
+     "ponto": "DBA26-PEN-10.1",
+     "tema": "Razões da condição do sexo feminino",
+     "assertiva": "Há razões da condição do sexo feminino quando o crime envolve violência doméstica e familiar ou menosprezo ou discriminação à condição de mulher.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 121-A, **§ 1º**, I e II — conceito que os arts. 129, § 13, 141, § 3º, e 147, § 1º, tomam emprestado.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "121-A",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 121-A, § 1º",
+        "texto": "§ 1º Considera-se que há razões da condição do sexo feminino quando o crime envolve: (Incluído pela Lei nº 14.994, de 2024)\nI – violência doméstica e familiar; (Incluído pela Lei nº 14.994, de 2024)\nII – menosprezo ou discriminação à condição de mulher."
+       }
+      ],
+      "palavras_chave": [
+       "§ 1º",
+       "violência doméstica e familiar"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.1-R1-04",
+     "ponto": "DBA26-PEN-10.1",
+     "tema": "Feminicídio e coautoria",
+     "assertiva": "As circunstâncias pessoais elementares do feminicídio não se comunicam ao coautor ou partícipe.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "O art. 121-A, § 3º, manda **comunicar** ao coautor ou partícipe as circunstâncias pessoais elementares do § 1º — coerente com o art. 30 do CP.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "121-A",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 121-A, § 3º",
+        "texto": "§ 3º Comunicam-se ao coautor ou partícipe as circunstâncias pessoais elementares do crime previstas no § 1º deste artigo."
+       }
+      ],
+      "pegadinha": "Negar a comunicação.",
+      "palavras_chave": [
+       "comunicam-se"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.1-R1-05",
+     "ponto": "DBA26-PEN-10.1",
+     "tema": "Perdão judicial no culposo",
+     "assertiva": "No homicídio culposo, o juiz pode deixar de aplicar a pena se as consequências da infração atingirem o próprio agente de forma tão grave que a sanção se torne desnecessária.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 121, § 5º: **perdão judicial** (sentença declaratória, Súmula 18/STJ). Vale também para a lesão culposa (art. 129, § 8º).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "121",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 121, § 5º",
+        "texto": "§ 5º - Na hipótese de homicídio culposo, o juiz poderá deixar de aplicar a pena, se as conseqüências da infração atingirem o próprio agente de forma tão grave que a sanção penal se torne desnecessária."
+       }
+      ],
+      "palavras_chave": [
+       "perdão judicial"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.1-R1-06",
+     "ponto": "DBA26-PEN-10.1",
+     "tema": "Infanticídio: tempo",
+     "assertiva": "Configura infanticídio matar, sob a influência do estado puerperal, o próprio filho a qualquer tempo depois do parto.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 123: **durante o parto ou logo após**. Fora desse lapso, homicídio.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "123",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 123",
+        "texto": "Art. 123 - Matar, sob a influência do estado puerperal, o próprio filho, durante o parto ou logo após:"
+       }
+      ],
+      "pegadinha": "Esticar o elemento temporal.",
+      "palavras_chave": [
+       "durante o parto ou logo após"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.1-R1-07",
+     "ponto": "DBA26-PEN-10.1",
+     "tema": "Aborto sentimental",
+     "assertiva": "Não se pune o aborto praticado por médico se a gravidez resulta de estupro e o aborto é precedido de consentimento da gestante ou, quando incapaz, de seu representante legal.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 128, II (aborto **sentimental** ou humanitário). O I é o aborto **necessário**.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "128",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 128, II",
+        "texto": "II - se a gravidez resulta de estupro e o aborto é precedido de consentimento da gestante"
+       }
+      ],
+      "palavras_chave": [
+       "sentimental",
+       "necessário"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.1-R1-08",
+     "ponto": "DBA26-PEN-10.1",
+     "tema": "Anencefalia",
+     "assertiva": "A interrupção da gravidez de feto anencéfalo é punida como aborto, nos arts. 124 e 126 do Código Penal, salvo risco de vida para a gestante.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Na **ADPF 54** (12/04/2012), o STF declarou inconstitucional enquadrar essa interrupção nos arts. 124, 126 e 128, I e II.",
+      "juris": [
+       {
+        "tribunal": "STF",
+        "fonte": "ADPF 54, Plenário (mérito)",
+        "data": "12/04/2012",
+        "texto": "É inconstitucional interpretar a interrupção da gravidez de feto anencéfalo como conduta tipificada nos arts. 124, 126 e 128, I e II, do CP."
+       }
+      ],
+      "pegadinha": "Punir a antecipação terapêutica do parto de anencéfalo.",
+      "palavras_chave": [
+       "ADPF 54"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.1-R1-09",
+     "ponto": "DBA26-PEN-10.1",
+     "tema": "Lesão grave: 30 dias",
+     "assertiva": "A lesão corporal que resulta incapacidade para as ocupações habituais por mais de trinta dias é de natureza grave.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 129, **§ 1º, I**: reclusão de 1 a 5 anos (prova por exame complementar, CPP, art. 168, § 2º).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "129",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 129, § 1º, I",
+        "texto": "I - Incapacidade para as ocupações habituais, por mais de trinta dias;"
+       }
+      ],
+      "palavras_chave": [
+       "§ 1º, I",
+       "trinta dias"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.1-R1-10",
+     "ponto": "DBA26-PEN-10.1",
+     "tema": "Aborto como resultado",
+     "assertiva": "Se da lesão corporal dolosa resulta aborto, a lesão é de natureza grave, com pena de reclusão de um a cinco anos.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Aborto é resultado da lesão **gravíssima** (§ 2º, V: reclusão de 2 a 8 anos). No § 1º está a **aceleração de parto** (IV).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "129",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 129, § 2º, I a V",
+        "texto": "§ 2° Se resulta:\nI - Incapacidade permanente para o trabalho;\nII - enfermidade incuravel;\nIII perda ou inutilização do membro, sentido ou função;\nIV - deformidade permanente;\nV - aborto:"
+       }
+      ],
+      "pegadinha": "Trocar aborto por aceleração de parto.",
+      "palavras_chave": [
+       "gravíssima",
+       "aceleração de parto"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.1-R1-11",
+     "ponto": "DBA26-PEN-10.1",
+     "tema": "Lesão na violência doméstica",
+     "assertiva": "A ação penal pela lesão corporal leve praticada com violência doméstica contra a mulher depende de representação da ofendida.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "**Súmula 542/STJ**: a ação é **pública incondicionada** (no mesmo sentido, o STF na ADI 4.424). Hoje, a lesão contra a mulher por razões da condição do sexo feminino tem pena de 2 a 5 anos (art. 129, § 13).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "129",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 129, § 13",
+        "texto": "§ 13. Se a lesão é praticada contra a mulher, por razões da condição do sexo feminino, nos termos do § 1º do art. 121-A deste Código: (Redação dada pela Lei nº 14.994, de 2024)\nPena – reclusão, de 2 (dois) a 5 (cinco) anos."
+       }
+      ],
+      "juris": [
+       {
+        "tribunal": "STJ",
+        "fonte": "Súmula 542/STJ",
+        "data": "26/08/2015",
+        "texto": "A ação penal relativa ao crime de lesão corporal resultante de violência doméstica contra a mulher é pública incondicionada."
+       }
+      ],
+      "pegadinha": "Exigir representação.",
+      "palavras_chave": [
+       "Súmula 542/STJ"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.1-R1-12",
+     "ponto": "DBA26-PEN-10.1",
+     "tema": "Calúnia contra os mortos",
+     "assertiva": "É punível a calúnia contra os mortos.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "**Art. 138, § 2º**. Os ofendidos, na prática, são os familiares; não há previsão igual para difamação e injúria.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "138",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 138, § 2º",
+        "texto": "§ 2º - É punível a calúnia contra os mortos."
+       }
+      ],
+      "palavras_chave": [
+       "calúnia contra os mortos"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.2-R1-01",
+     "ponto": "DBA26-PEN-10.2",
+     "tema": "Pena do furto simples",
+     "assertiva": "O furto simples é punido com reclusão de 1 a 4 anos, e multa.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "A **Lei 15.397/2026** elevou a pena do art. 155, caput, para **1 a 6 anos**, e multa. A pena de 1 a 4 anos é a antiga.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "155",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 155, caput (pena)",
+        "texto": "Pena – reclusão, de 1 (um) a 6 (seis) anos, e multa."
+       }
+      ],
+      "pegadinha": "Cobrar a pena anterior a 2026.",
+      "palavras_chave": [
+       "Lei 15.397/2026",
+       "1 a 6 anos"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.2-R1-02",
+     "ponto": "DBA26-PEN-10.2",
+     "tema": "Repouso noturno",
+     "assertiva": "A pena do furto aumenta-se de metade se o crime é praticado durante o repouso noturno.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 155, § 1º, na redação da **Lei 15.397/2026** (antes, um terço).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "155",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 155, § 1º",
+        "texto": "§ 1º A pena aumenta-se de metade, se o crime é praticado durante o repouso noturno."
+       }
+      ],
+      "palavras_chave": [
+       "de metade",
+       "repouso noturno"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.2-R1-03",
+     "ponto": "DBA26-PEN-10.2",
+     "tema": "Furto privilegiado-qualificado",
+     "assertiva": "É possível reconhecer o privilégio do § 2º do art. 155 no furto qualificado, se o agente é primário, a coisa é de pequeno valor e a qualificadora é de ordem objetiva.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "**Súmula 511/STJ**. Qualificadora subjetiva (abuso de confiança) afasta o privilégio.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "155",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 155, § 2º",
+        "texto": "§ 2º - Se o criminoso é primário, e é de pequeno valor a coisa furtada, o juiz pode substituir a pena de reclusão pela de detenção, diminuí-la de um a dois terços, ou aplicar somente a pena de multa."
+       }
+      ],
+      "juris": [
+       {
+        "tribunal": "STJ",
+        "fonte": "Súmula 511/STJ",
+        "data": "11/06/2014",
+        "texto": "É possível o privilégio do § 2º do art. 155 do CP no furto qualificado, se presentes a primariedade, o pequeno valor da coisa e a qualificadora for de ordem objetiva."
+       }
+      ],
+      "palavras_chave": [
+       "Súmula 511/STJ",
+       "ordem objetiva"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.2-R1-04",
+     "ponto": "DBA26-PEN-10.2",
+     "tema": "Consumação do furto",
+     "assertiva": "O furto só se consuma quando o agente obtém a posse mansa e pacífica da coisa, fora da esfera de vigilância da vítima.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "**Tema 934/STJ**: basta a **posse de fato**, ainda que por breve tempo e seguida de perseguição (teoria da *amotio*/*apprehensio*).",
+      "juris": [
+       {
+        "tribunal": "STJ",
+        "fonte": "Tema 934/STJ — REsp 1.524.450/RJ",
+        "data": "14/10/2015",
+        "texto": "Consuma-se o crime de furto com a posse de fato da res furtiva, ainda que por breve espaço de tempo e seguida de perseguição ao agente, sendo prescindível a posse mansa e pacífica ou desvigiada."
+       }
+      ],
+      "pegadinha": "Exigir posse mansa e pacífica.",
+      "palavras_chave": [
+       "Tema 934/STJ",
+       "posse de fato"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.2-R1-05",
+     "ponto": "DBA26-PEN-10.2",
+     "tema": "Vigilância eletrônica",
+     "assertiva": "A existência de sistema de vigilância eletrônica ou de segurança no estabelecimento comercial não torna, por si só, impossível o crime de furto.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "**Súmula 567/STJ**: a ineficácia do meio é só relativa — cabe tentativa, não crime impossível (art. 17).",
+      "juris": [
+       {
+        "tribunal": "STJ",
+        "fonte": "Súmula 567/STJ",
+        "data": "24/02/2016",
+        "texto": "Sistema de vigilância por monitoramento eletrônico ou segurança no interior de estabelecimento comercial, por si só, não torna impossível a configuração do crime de furto."
+       }
+      ],
+      "palavras_chave": [
+       "Súmula 567/STJ"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.2-R1-06",
+     "ponto": "DBA26-PEN-10.2",
+     "tema": "Concurso de pessoas no furto",
+     "assertiva": "No furto qualificado pelo concurso de pessoas, aplica-se a majorante do roubo, por ser mais favorável ao réu.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "**Súmula 442/STJ**: é **inadmissível** aplicar ao furto qualificado pelo concurso de agentes a majorante do roubo.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "155",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 155, § 4º, IV",
+        "texto": "IV - mediante concurso de duas ou mais pessoas."
+       }
+      ],
+      "juris": [
+       {
+        "tribunal": "STJ",
+        "fonte": "Súmula 442/STJ",
+        "data": "28/04/2010",
+        "texto": "É inadmissível aplicar, no furto qualificado, pelo concurso de agentes, a majorante do roubo."
+       }
+      ],
+      "pegadinha": "Combinar furto e roubo.",
+      "palavras_chave": [
+       "Súmula 442/STJ"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.2-R1-07",
+     "ponto": "DBA26-PEN-10.2",
+     "tema": "Roubo impróprio",
+     "assertiva": "Comete roubo impróprio quem, logo depois de subtraída a coisa, emprega violência ou grave ameaça para assegurar a impunidade do crime ou a detenção da coisa.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 157, § 1º: a violência vem **depois** da subtração; no roubo próprio, vem antes ou durante.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "157",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 157, § 1º",
+        "texto": "§ 1º - Na mesma pena incorre quem, logo depois de subtraída a coisa, emprega violência contra pessoa ou grave ameaça, a fim de assegurar a impunidade do crime ou a detenção da coisa para si ou para terceiro."
+       }
+      ],
+      "palavras_chave": [
+       "roubo impróprio",
+       "logo depois"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.2-R1-08",
+     "ponto": "DBA26-PEN-10.2",
+     "tema": "Pena do roubo",
+     "assertiva": "O roubo simples é punido com reclusão de 4 a 10 anos, e multa.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "A **Lei 15.397/2026** elevou a pena mínima: o art. 157, caput, comina **6 a 10 anos**, e multa.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "157",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 157, caput (pena)",
+        "texto": "Pena – reclusão, de 6 (seis) a 10 (dez) anos, e multa."
+       }
+      ],
+      "pegadinha": "Cobrar a pena anterior a 2026.",
+      "palavras_chave": [
+       "6 a 10 anos",
+       "Lei 15.397/2026"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.2-R1-09",
+     "ponto": "DBA26-PEN-10.2",
+     "tema": "Latrocínio consumado",
+     "assertiva": "Há latrocínio consumado quando o homicídio se consuma, ainda que o agente não realize a subtração dos bens da vítima.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "**Súmula 610/STF**. Na redação da Lei 15.397/2026, a pena do latrocínio é de **24 a 30 anos** (art. 157, § 3º, II).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "157",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 157, § 3º, II",
+        "texto": "II – morte, a pena é de reclusão, de 24 (vinte e quatro) a 30 (trinta) anos, e multa."
+       }
+      ],
+      "juris": [
+       {
+        "tribunal": "STF",
+        "fonte": "Súmula 610/STF",
+        "data": "17/10/1984",
+        "texto": "Há crime de latrocínio, quando o homicídio se consuma, ainda que não realize o agente a subtração de bens da vítima."
+       }
+      ],
+      "palavras_chave": [
+       "Súmula 610/STF",
+       "24 a 30 anos"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.2-R1-10",
+     "ponto": "DBA26-PEN-10.2",
+     "tema": "Latrocínio: competência",
+     "assertiva": "Por envolver morte dolosa, o latrocínio é julgado pelo Tribunal do Júri.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "**Súmula 603/STF**: compete ao **juiz singular**. O latrocínio é crime contra o patrimônio, não crime doloso contra a vida.",
+      "juris": [
+       {
+        "tribunal": "STF",
+        "fonte": "Súmula 603/STF (publicada no DJ de 31/10/1984)",
+        "data": "31/10/1984",
+        "texto": "A competência para o processo e julgamento de latrocínio é do juiz singular e não do tribunal do júri."
+       }
+      ],
+      "pegadinha": "Levar o latrocínio ao júri.",
+      "palavras_chave": [
+       "Súmula 603/STF",
+       "juiz singular"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.2-R1-11",
+     "ponto": "DBA26-PEN-10.2",
+     "tema": "Consumação da extorsão",
+     "assertiva": "A extorsão só se consuma com a obtenção da vantagem econômica indevida.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "**Súmula 96/STJ**: crime **formal** — consuma-se com o constrangimento, independentemente da obtenção da vantagem.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "158",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 158, caput",
+        "texto": "Constranger alguém, mediante violência ou grave ameaça, e com o intuito de obter para si ou para outrem indevida vantagem econômica"
+       }
+      ],
+      "juris": [
+       {
+        "tribunal": "STJ",
+        "fonte": "Súmula 96/STJ",
+        "data": "03/03/1994",
+        "texto": "O crime de extorsão consuma-se independentemente da obtenção da vantagem indevida."
+       }
+      ],
+      "pegadinha": "Tratar a extorsão como crime material.",
+      "palavras_chave": [
+       "Súmula 96/STJ",
+       "formal"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.2-R1-12",
+     "ponto": "DBA26-PEN-10.2",
+     "tema": "Estelionato contra o INSS",
+     "assertiva": "Ao estelionato em que figure como vítima entidade autárquica da Previdência Social aplica-se o aumento de um terço do § 3º do art. 171.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "**Súmula 24/STJ**: a autarquia previdenciária é entidade de direito público.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "171",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 171, § 3º",
+        "texto": "§ 3º - A pena aumenta-se de um terço, se o crime é cometido em detrimento de entidade de direito público"
+       }
+      ],
+      "juris": [
+       {
+        "tribunal": "STJ",
+        "fonte": "Súmula 24/STJ",
+        "data": "04/04/1991",
+        "texto": "Aplica-se ao crime de estelionato, em que figure como vítima entidade autárquica da Previdência Social, a qualificadora do § 3º do art. 171 do Código Penal."
+       }
+      ],
+      "palavras_chave": [
+       "Súmula 24/STJ"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.3-R1-01",
+     "ponto": "DBA26-PEN-10.3",
+     "tema": "Revogação no CP",
+     "assertiva": "Os crimes contra o privilégio de invenção e contra as marcas de indústria e comércio do Código Penal foram revogados pela Lei 9.279/1996, que passou a tipificá-los.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Arts. 187 a 196 do CP: **revogados** pela Lei de Propriedade Industrial (arts. 183 a 195). No Título III do CP sobrou o direito autoral (arts. 184 e 186).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "189",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 189",
+        "texto": "Art. 189. (Revogado pela Lei nº 9.279, de 14.5.1996)"
+       }
+      ],
+      "palavras_chave": [
+       "revogados",
+       "Lei de Propriedade Industrial"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.3-R1-02",
+     "ponto": "DBA26-PEN-10.3",
+     "tema": "Ação penal na LPI",
+     "assertiva": "Nos crimes contra a propriedade industrial, a ação penal é, em regra, pública incondicionada.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 199 da Lei 9.279/1996: **somente se procede mediante queixa**, salvo o crime do art. 191 (armas, brasões e distintivos oficiais), de ação pública.",
+      "lei": [
+       {
+        "lei": "L9279",
+        "art": "199",
+        "par": "",
+        "inc": "",
+        "rotulo": "Lei 9.279/1996, art. 199",
+        "texto": "Art. 199. Nos crimes previstos neste Título somente se procede mediante queixa, salvo quanto ao crime do art. 191, em que a ação penal será pública."
+       }
+      ],
+      "pegadinha": "Inverter a regra da queixa.",
+      "palavras_chave": [
+       "mediante queixa"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.3-R1-03",
+     "ponto": "DBA26-PEN-10.3",
+     "tema": "Crime contra marca",
+     "assertiva": "Comete crime contra registro de marca quem reproduz, sem autorização do titular, no todo ou em parte, marca registrada, ou a imita de modo que possa induzir confusão.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Lei 9.279/1996, art. **189, I**: detenção de 3 meses a 1 ano, ou multa.",
+      "lei": [
+       {
+        "lei": "L9279",
+        "art": "189",
+        "par": "",
+        "inc": "",
+        "rotulo": "Lei 9.279/1996, art. 189, I",
+        "texto": "I - reproduz, sem autorização do titular, no todo ou em parte, marca registrada"
+       }
+      ],
+      "palavras_chave": [
+       "189, I"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.3-R1-04",
+     "ponto": "DBA26-PEN-10.3",
+     "tema": "Violação parcial de patente",
+     "assertiva": "O crime contra patente de invenção só se caracteriza se a violação atingir todas as reivindicações da patente.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 186 da LPI: o crime existe **ainda que** a violação **não atinja todas as reivindicações** ou se restrinja a meios equivalentes.",
+      "lei": [
+       {
+        "lei": "L9279",
+        "art": "186",
+        "par": "",
+        "inc": "",
+        "rotulo": "Lei 9.279/1996, art. 186",
+        "texto": "Art. 186. Os crimes deste Capítulo caracterizam-se ainda que a violação não atinja todas as reivindicações da patente"
+       }
+      ],
+      "pegadinha": "Exigir violação integral.",
+      "palavras_chave": [
+       "não atinja todas as reivindicações"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.3-R1-05",
+     "ponto": "DBA26-PEN-10.3",
+     "tema": "Concorrência desleal",
+     "assertiva": "Comete crime de concorrência desleal quem emprega meio fraudulento para desviar, em proveito próprio ou alheio, clientela de outrem.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Lei 9.279/1996, art. **195, III**.",
+      "lei": [
+       {
+        "lei": "L9279",
+        "art": "195",
+        "par": "",
+        "inc": "",
+        "rotulo": "Lei 9.279/1996, art. 195, III",
+        "texto": "III - emprega meio fraudulento, para desviar, em proveito próprio ou alheio, clientela de outrem;"
+       }
+      ],
+      "palavras_chave": [
+       "concorrência desleal"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.4-R1-01",
+     "ponto": "DBA26-PEN-10.4",
+     "tema": "Violação simples",
+     "assertiva": "A violação de direito autoral na forma simples do art. 184, caput, do Código Penal é punida com detenção, ou multa, e se procede mediante queixa.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 184, caput (detenção de 3 meses a 1 ano, ou multa) e art. 186, **I** (queixa): infração de menor potencial ofensivo.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "184",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 184, caput (pena)",
+        "texto": "Pena – detenção, de 3 (três) meses a 1 (um) ano, ou multa."
+       },
+       {
+        "lei": "CP",
+        "art": "186",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 186, I",
+        "texto": "I – queixa, nos crimes previstos no caput do art. 184;"
+       }
+      ],
+      "palavras_chave": [
+       "queixa",
+       "menor potencial ofensivo"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.4-R1-02",
+     "ponto": "DBA26-PEN-10.4",
+     "tema": "Reprodução com lucro",
+     "assertiva": "Na violação de direito autoral por reprodução com intuito de lucro (art. 184, § 1º), procede-se mediante queixa.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 186, **II**: nos §§ 1º e 2º do art. 184, a ação é **pública incondicionada**.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "186",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 186, II",
+        "texto": "II – ação penal pública incondicionada, nos crimes previstos nos §§ 1o e 2o do art. 184;"
+       }
+      ],
+      "pegadinha": "Estender a queixa às formas qualificadas.",
+      "palavras_chave": [
+       "pública incondicionada"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.4-R1-03",
+     "ponto": "DBA26-PEN-10.4",
+     "tema": "Venda de mídia pirata",
+     "assertiva": "Presentes materialidade e autoria, é típica a conduta de expor à venda CDs e DVDs piratas, não sendo afastada pela tolerância social.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "**Súmula 502/STJ** (art. 184, § 2º). A adequação social não exclui a tipicidade.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "184",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 184, § 2º",
+        "texto": "§ 2o Na mesma pena do § 1o incorre quem, com o intuito de lucro direto ou indireto, distribui, vende, expõe à venda"
+       }
+      ],
+      "juris": [
+       {
+        "tribunal": "STJ",
+        "fonte": "Súmula 502/STJ",
+        "data": "23/10/2013",
+        "texto": "Presentes a materialidade e a autoria, afigura-se típica, em relação ao crime do art. 184, § 2º, do CP, a conduta de expor à venda CDs e DVDs piratas."
+       }
+      ],
+      "palavras_chave": [
+       "Súmula 502/STJ",
+       "adequação social"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.4-R1-04",
+     "ponto": "DBA26-PEN-10.4",
+     "tema": "Perícia por amostragem",
+     "assertiva": "A materialidade da violação de direito autoral exige perícia em todo o material apreendido e a identificação dos titulares dos direitos violados.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "**Súmula 574/STJ**: basta perícia **por amostragem**, nos aspectos externos, sendo **desnecessário** identificar os titulares.",
+      "juris": [
+       {
+        "tribunal": "STJ",
+        "fonte": "Súmula 574/STJ",
+        "data": "22/06/2016",
+        "texto": "Para a materialidade da violação de direito autoral, basta a perícia por amostragem do produto apreendido, nos aspectos externos, sendo desnecessário identificar os titulares dos direitos violados ou quem os represente."
+       }
+      ],
+      "pegadinha": "Exigir perícia integral e titular identificado.",
+      "palavras_chave": [
+       "Súmula 574/STJ",
+       "por amostragem"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.4-R1-05",
+     "ponto": "DBA26-PEN-10.4",
+     "tema": "Cópia privada",
+     "assertiva": "A cópia de obra intelectual, em um só exemplar, para uso privado do copista e sem intuito de lucro direto ou indireto, configura a forma qualificada do art. 184, § 1º.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 184, **§ 4º**: as formas qualificadas **não se aplicam** à cópia única para uso privado, sem intuito de lucro, nem às exceções da Lei 9.610/1998.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "184",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 184, § 4º",
+        "texto": "§ 4o O disposto nos §§ 1o, 2o e 3o não se aplica quando se tratar de exceção ou limitação ao direito de autor ou os que lhe são conexos, em conformidade com o previsto na Lei nº 9.610, de 19 de fevereiro de 1998, nem a cópia de obra intelectual ou fonograma, em um só exemplar, para uso privado do copista, sem intuito de lucro direto ou indireto."
+       }
+      ],
+      "pegadinha": "Punir a cópia privada única.",
+      "palavras_chave": [
+       "§ 4º",
+       "uso privado"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.5-R1-01",
+     "ponto": "DBA26-PEN-10.5",
+     "tema": "Liberdade de trabalho",
+     "assertiva": "Constranger alguém, mediante violência ou grave ameaça, a exercer ou não exercer arte, ofício ou profissão configura atentado contra a liberdade de trabalho.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. **197**, I, com pena cumulada com a da violência.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "197",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 197, caput e I",
+        "texto": "Art. 197 - Constranger alguém, mediante violência ou grave ameaça:\nI - a exercer ou não exercer arte, ofício, profissão ou indústria"
+       }
+      ],
+      "palavras_chave": [
+       "liberdade de trabalho"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.5-R1-02",
+     "ponto": "DBA26-PEN-10.5",
+     "tema": "Abandono coletivo",
+     "assertiva": "Para que se considere coletivo o abandono de trabalho, no crime do art. 200, basta o concurso de dois empregados.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 200, par. ún.: é indispensável o concurso de, pelo menos, **três** empregados.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "200",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 200, par. ún.",
+        "texto": "Parágrafo único - Para que se considere coletivo o abandono de trabalho é indispensável o concurso de, pelo menos, três empregados."
+       }
+      ],
+      "pegadinha": "Reduzir o número mínimo.",
+      "palavras_chave": [
+       "três"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.5-R1-03",
+     "ponto": "DBA26-PEN-10.5",
+     "tema": "Frustração de direito trabalhista",
+     "assertiva": "Frustrar, mediante fraude ou violência, direito assegurado pela legislação do trabalho é crime contra a organização do trabalho.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. **203** (Lei 9.777/1998 aumentou a pena para detenção de 1 a 2 anos, e multa).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "203",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 203, caput",
+        "texto": "Art. 203 - Frustrar, mediante fraude ou violência, direito assegurado pela legislação do trabalho:"
+       }
+      ],
+      "palavras_chave": [
+       "203"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.5-R1-04",
+     "ponto": "DBA26-PEN-10.5",
+     "tema": "Aliciamento interno",
+     "assertiva": "O aliciamento de trabalhadores de um local para outro do território nacional só é crime se praticado mediante fraude.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "O caput do art. **207** pune aliciar com o fim de levar trabalhadores de uma para outra localidade, **sem exigir fraude**; a fraude aparece no § 1º (recrutamento fora da localidade).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "207",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 207, caput",
+        "texto": "Art. 207 - Aliciar trabalhadores, com o fim de levá-los de uma para outra localidade do território nacional:"
+       }
+      ],
+      "pegadinha": "Exigir fraude no caput.",
+      "palavras_chave": [
+       "sem exigir fraude"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.5-R1-05",
+     "ponto": "DBA26-PEN-10.5",
+     "tema": "Emigração",
+     "assertiva": "Recrutar trabalhadores, mediante fraude, com o fim de levá-los para território estrangeiro configura o aliciamento de trabalhadores de um local para outro do território nacional.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "É o crime do art. **206** (aliciamento para o fim de **emigração**). O art. 207 é o deslocamento dentro do território nacional.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "206",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 206",
+        "texto": "Art. 206 - Recrutar trabalhadores, mediante fraude, com o fim de levá-los para território estrangeiro."
+       }
+      ],
+      "pegadinha": "Trocar o art. 206 pelo 207.",
+      "palavras_chave": [
+       "emigração"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.6-R1-01",
+     "ponto": "DBA26-PEN-10.6",
+     "tema": "Ultraje a culto",
+     "assertiva": "Escarnecer de alguém publicamente, por motivo de crença ou função religiosa, configura ultraje a culto.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. **208**: três condutas — escarnecer, impedir ou perturbar cerimônia, vilipendiar publicamente ato ou objeto de culto.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "208",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 208, caput",
+        "texto": "Art. 208 - Escarnecer de alguém publicamente, por motivo de crença ou função religiosa"
+       }
+      ],
+      "palavras_chave": [
+       "ultraje a culto"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.6-R1-02",
+     "ponto": "DBA26-PEN-10.6",
+     "tema": "Ultraje com violência",
+     "assertiva": "Se o ultraje a culto é praticado com emprego de violência, a pena é aplicada em dobro, absorvida a violência.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 208, par. ún.: aumento de **um terço**, **sem prejuízo** da pena correspondente à violência (cúmulo).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "208",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 208, par. ún.",
+        "texto": "Parágrafo único - Se há emprego de violência, a pena é aumentada de um terço, sem prejuízo da correspondente à violência."
+       }
+      ],
+      "pegadinha": "Absorver a violência.",
+      "palavras_chave": [
+       "um terço",
+       "sem prejuízo"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.6-R1-03",
+     "ponto": "DBA26-PEN-10.6",
+     "tema": "Perturbação de enterro",
+     "assertiva": "Impedir ou perturbar enterro ou cerimônia funerária é crime contra o respeito aos mortos.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. **209** (Capítulo II do Título V).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "209",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 209, caput",
+        "texto": "Art. 209 - Impedir ou perturbar enterro ou cerimônia funerária:"
+       }
+      ],
+      "palavras_chave": [
+       "209"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.6-R1-04",
+     "ponto": "DBA26-PEN-10.6",
+     "tema": "Vilipêndio a cadáver",
+     "assertiva": "O vilipêndio a cadáver ou a suas cinzas é punido com reclusão de um a três anos, e multa.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 212: **detenção** de 1 a 3 anos, e multa. Reclusão de 1 a 3 é a pena da violação de sepultura (210) e da destruição ou ocultação de cadáver (211).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "212",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 212",
+        "texto": "Art. 212 - Vilipendiar cadáver ou suas cinzas:\nPena - detenção, de um a três anos, e multa."
+       }
+      ],
+      "pegadinha": "Trocar detenção por reclusão.",
+      "palavras_chave": [
+       "detenção"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.6-R1-05",
+     "ponto": "DBA26-PEN-10.6",
+     "tema": "Ocultação de cadáver",
+     "assertiva": "Destruir, subtrair ou ocultar cadáver ou parte dele é crime punido com reclusão.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. **211**: reclusão de 1 a 3 anos, e multa. A ocultação é crime **permanente** enquanto o corpo está escondido (doutrina).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "211",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 211",
+        "texto": "Art. 211 - Destruir, subtrair ou ocultar cadáver ou parte dele:\nPena - reclusão, de um a três anos, e multa."
+       }
+      ],
+      "palavras_chave": [
+       "211",
+       "permanente"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.7-R1-01",
+     "ponto": "DBA26-PEN-10.7",
+     "tema": "Estupro: tipo",
+     "assertiva": "Comete estupro quem constrange alguém, mediante violência ou grave ameaça, a ter conjunção carnal ou a praticar ou permitir que com ele se pratique outro ato libidinoso.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 213 (Lei 12.015/2009): **tipo misto alternativo** que absorveu o antigo atentado violento ao pudor; pena de 6 a 10 anos.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "213",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 213, caput",
+        "texto": "Art. 213. Constranger alguém, mediante violência ou grave ameaça, a ter conjunção carnal ou a praticar ou permitir que com ele se pratique outro ato libidinoso:"
+       }
+      ],
+      "palavras_chave": [
+       "tipo misto alternativo"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.7-R1-02",
+     "ponto": "DBA26-PEN-10.7",
+     "tema": "Pena do estupro de vulnerável",
+     "assertiva": "O estupro de vulnerável, na forma simples, é punido com reclusão de 8 a 15 anos.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "A **Lei 15.280/2025** elevou a pena do art. 217-A, caput, para **10 a 18 anos**, e multa (e também as do § 3º, 12 a 24, e do § 4º, 20 a 40).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "217-A",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 217-A, caput (pena)",
+        "texto": "Pena – reclusão, de 10 (dez) a 18 (dezoito) anos, e multa."
+       }
+      ],
+      "pegadinha": "Cobrar a pena anterior a 2025.",
+      "palavras_chave": [
+       "Lei 15.280/2025",
+       "10 a 18 anos"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.7-R1-03",
+     "ponto": "DBA26-PEN-10.7",
+     "tema": "Consentimento do menor de 14",
+     "assertiva": "No estupro de vulnerável, são irrelevantes o consentimento da vítima menor de 14 anos, sua experiência sexual anterior ou a existência de relacionamento amoroso com o agente.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "**Súmula 593/STJ**, hoje também na letra do art. 217-A, § 5º (que inclui a gravidez resultante do crime).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "217-A",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 217-A, § 5º",
+        "texto": "§ 5º As penas previstas no caput e nos §§ 1º, 3º e 4º deste artigo aplicam-se independentemente do consentimento da vítima, de sua experiência sexual, do fato de ela ter mantido relações sexuais anteriormente ao crime ou da ocorrência de gravidez resultante da prática do crime."
+       }
+      ],
+      "juris": [
+       {
+        "tribunal": "STJ",
+        "fonte": "Súmula 593/STJ",
+        "data": "25/10/2017",
+        "texto": "O estupro de vulnerável se configura com a conjunção carnal ou prática de ato libidinoso com menor de 14 anos, sendo irrelevante eventual consentimento da vítima, sua experiência sexual anterior ou existência de relacionamento amoroso com o agente."
+       }
+      ],
+      "palavras_chave": [
+       "Súmula 593/STJ"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.7-R1-04",
+     "ponto": "DBA26-PEN-10.7",
+     "tema": "Presunção de vulnerabilidade",
+     "assertiva": "A presunção de vulnerabilidade do menor de 14 anos é relativa e pode ser afastada diante das circunstâncias do caso concreto.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "A **Lei 15.353/2026** incluiu o § 4º-A: a presunção é **absoluta** e **inadmissível sua relativização**.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "217-A",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 217-A, § 4º-A",
+        "texto": "§ 4º-A. É absoluta a presunção de vulnerabilidade da vítima e inadmissível sua relativização."
+       }
+      ],
+      "pegadinha": "Relativizar a vulnerabilidade.",
+      "palavras_chave": [
+       "absoluta",
+       "Lei 15.353/2026"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.7-R1-05",
+     "ponto": "DBA26-PEN-10.7",
+     "tema": "Importunação x estupro de vulnerável",
+     "assertiva": "Presente o dolo de satisfazer a lascívia, o ato libidinoso praticado com menor de 14 anos configura estupro de vulnerável, ainda que superficial, sem possibilidade de desclassificação para importunação sexual.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "**Tema 1.121/STJ** (08/06/2022).",
+      "juris": [
+       {
+        "tribunal": "STJ",
+        "fonte": "Tema 1.121/STJ — REsp 1.959.697/SC e outros",
+        "data": "08/06/2022",
+        "texto": "Presente o dolo específico de satisfazer à lascívia, a prática de ato libidinoso com menor de 14 anos configura estupro de vulnerável (art. 217-A), independentemente da ligeireza ou superficialidade da conduta, sem desclassificação para importunação sexual (art. 215-A)."
+       }
+      ],
+      "palavras_chave": [
+       "Tema 1.121/STJ"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.7-R1-06",
+     "ponto": "DBA26-PEN-10.7",
+     "tema": "Importunação sexual",
+     "assertiva": "A importunação sexual exige que o ato libidinoso seja praticado mediante violência ou grave ameaça.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 215-A: basta praticar o ato **sem a anuência** da vítima, para satisfazer a lascívia. Com violência ou grave ameaça, o fato é **estupro** (subsidiariedade expressa).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "215-A",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 215-A, caput",
+        "texto": "Art. 215-A. Praticar contra alguém e sem a sua anuência ato libidinoso"
+       }
+      ],
+      "pegadinha": "Exigir violência na importunação.",
+      "palavras_chave": [
+       "sem a anuência"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.7-R1-07",
+     "ponto": "DBA26-PEN-10.7",
+     "tema": "Assédio sexual",
+     "assertiva": "O assédio sexual exige que o agente se prevaleça da condição de superior hierárquico ou de ascendência inerentes ao exercício de emprego, cargo ou função.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 216-A: crime **próprio**; detenção de 1 a 2 anos, aumentada de até 1/3 se a vítima é menor de 18 (§ 2º).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "216-A",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 216-A, caput",
+        "texto": "Art. 216-A. Constranger alguém com o intuito de obter vantagem ou favorecimento sexual, prevalecendo-se o agente da sua condição de superior hierárquico ou ascendência inerentes ao exercício de emprego, cargo ou função."
+       }
+      ],
+      "palavras_chave": [
+       "próprio"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.7-R1-08",
+     "ponto": "DBA26-PEN-10.7",
+     "tema": "Ação penal: liberdade sexual",
+     "assertiva": "No estupro contra vítima maior e capaz, a ação penal é pública condicionada à representação.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 225 (Lei 13.718/2018): **pública incondicionada** em todos os crimes dos Capítulos I e II.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "225",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 225, caput",
+        "texto": "Nos crimes definidos nos Capítulos I e II deste Título, procede-se mediante ação penal pública incondicionada."
+       }
+      ],
+      "pegadinha": "Ressuscitar a representação.",
+      "palavras_chave": [
+       "pública incondicionada"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.7-R1-09",
+     "ponto": "DBA26-PEN-10.7",
+     "tema": "Estupro qualificado pela idade",
+     "assertiva": "O estupro é qualificado se a vítima é menor de 18 e maior de 14 anos.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 213, **§ 1º**: reclusão de 8 a 12 anos (também se resulta lesão grave). Menor de 14 é estupro de vulnerável.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "213",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 213, § 1º",
+        "texto": "§ 1o Se da conduta resulta lesão corporal de natureza grave ou se a vítima é menor de 18 (dezoito) ou maior de 14 (catorze) anos: (Incluído pela Lei nº 12.015, de 2009)\nPena - reclusão, de 8 (oito) a 12 (doze) anos."
+       }
+      ],
+      "palavras_chave": [
+       "§ 1º"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.7-R1-10",
+     "ponto": "DBA26-PEN-10.7",
+     "tema": "Registro da intimidade",
+     "assertiva": "O crime de registro não autorizado da intimidade sexual (art. 216-B) só se consuma com a divulgação do conteúdo.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 216-B: basta **produzir, fotografar, filmar ou registrar** a cena íntima sem autorização. A divulgação é outro crime (art. 218-C).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "216-B",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 216-B, caput",
+        "texto": "Art. 216-B. Produzir, fotografar, filmar ou registrar, por qualquer meio, conteúdo com cena de nudez ou ato sexual ou libidinoso de caráter íntimo e privado sem autorização dos participantes:"
+       }
+      ],
+      "pegadinha": "Exigir a divulgação.",
+      "palavras_chave": [
+       "produzir, fotografar, filmar ou registrar"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.7-R1-11",
+     "ponto": "DBA26-PEN-10.7",
+     "tema": "Pornografia de vingança",
+     "assertiva": "A pena da divulgação de cena de sexo ou nudez sem consentimento aumenta-se de um a dois terços se o agente mantém ou manteve relação íntima de afeto com a vítima ou age por vingança ou humilhação.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 218-C, **§ 1º** (Lei 13.718/2018). A pena base passou a 4 a 10 anos com a Lei 15.280/2025.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "218-C",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 218-C, § 1º",
+        "texto": "§ 1º A pena é aumentada de 1/3 (um terço) a 2/3 (dois terços) se o crime é praticado por agente que mantém ou tenha mantido relação íntima de afeto com a vítima"
+       }
+      ],
+      "palavras_chave": [
+       "§ 1º",
+       "relação íntima de afeto"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.8-R1-01",
+     "ponto": "DBA26-PEN-10.8",
+     "tema": "Bigamia",
+     "assertiva": "Comete bigamia quem, sendo casado, contrai novo casamento; quem, não sendo casado, casa com pessoa casada conhecendo essa circunstância, tem pena menor.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 235, caput (reclusão de 2 a 6 anos) e **§ 1º** (reclusão ou detenção de 1 a 3 anos).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "235",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 235, caput",
+        "texto": "Art. 235 - Contrair alguém, sendo casado, novo casamento:"
+       },
+       {
+        "lei": "CP",
+        "art": "235",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 235, § 1º",
+        "texto": "§ 1º - Aquele que, não sendo casado, contrai casamento com pessoa casada, conhecendo essa circunstância"
+       }
+      ],
+      "palavras_chave": [
+       "bigamia",
+       "§ 1º"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.8-R1-02",
+     "ponto": "DBA26-PEN-10.8",
+     "tema": "Anulação e bigamia",
+     "assertiva": "Anulado o primeiro casamento, por qualquer motivo, subsiste o crime de bigamia já consumado.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 235, § 2º: anulado o primeiro casamento por qualquer motivo (ou o outro, por motivo que não a bigamia), **considera-se inexistente o crime**.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "235",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 235, § 2º",
+        "texto": "§ 2º - Anulado por qualquer motivo o primeiro casamento, ou o outro por motivo que não a bigamia, considera-se inexistente o crime."
+       }
+      ],
+      "pegadinha": "Manter o crime após a anulação.",
+      "palavras_chave": [
+       "inexistente o crime"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.8-R1-03",
+     "ponto": "DBA26-PEN-10.8",
+     "tema": "Abandono material",
+     "assertiva": "Configura abandono material deixar, sem justa causa, de prover a subsistência do filho menor de 18 anos, faltando ao pagamento de pensão alimentícia judicialmente fixada.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. **244**, caput (exige ausência de **justa causa**).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "244",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 244, caput",
+        "texto": "faltando ao pagamento de pensão alimentícia judicialmente acordada, fixada ou majorada"
+       }
+      ],
+      "palavras_chave": [
+       "244",
+       "justa causa"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.8-R1-04",
+     "ponto": "DBA26-PEN-10.8",
+     "tema": "Adoção à brasileira",
+     "assertiva": "Registrar como seu o filho de outrem por motivo de reconhecida nobreza é fato atípico.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Continua crime (art. 242), mas com **pena menor** (detenção de 1 a 2 anos) e possibilidade de **perdão judicial** (par. ún.).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "242",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 242, par. ún.",
+        "texto": "Parágrafo único - Se o crime é praticado por motivo de reconhecida nobreza: (Redação dada pela Lei nº 6.898, de 1981)\nPena - detenção, de um a dois anos, podendo o juiz deixar de aplicar a pena."
+       }
+      ],
+      "pegadinha": "Ver atipicidade no motivo nobre.",
+      "palavras_chave": [
+       "perdão judicial"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.8-R1-05",
+     "ponto": "DBA26-PEN-10.8",
+     "tema": "Induzimento a erro essencial",
+     "assertiva": "No crime de induzimento a erro essencial e ocultação de impedimento para o casamento, a ação penal é pública incondicionada.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 236, par. ún.: depende de **queixa do contraente enganado**, só depois do trânsito da sentença que anula o casamento (ação privada **personalíssima**).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "236",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 236, par. ún.",
+        "texto": "Parágrafo único - A ação penal depende de queixa do contraente enganado e não pode ser intentada senão depois de transitar em julgado a sentença que, por motivo de erro ou impedimento, anule o casamento."
+       }
+      ],
+      "pegadinha": "Ignorar a ação personalíssima.",
+      "palavras_chave": [
+       "personalíssima"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.9-R1-01",
+     "ponto": "DBA26-PEN-10.9",
+     "tema": "Incêndio",
+     "assertiva": "O crime de incêndio exige que a conduta exponha a perigo a vida, a integridade física ou o patrimônio de outrem, e a pena aumenta de um terço se o incêndio é em casa habitada.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 250, caput e § 1º, II, a: crime de **perigo concreto** e comum.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "250",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 250, caput",
+        "texto": "Art. 250 - Causar incêndio, expondo a perigo a vida, a integridade física ou o patrimônio de outrem:"
+       },
+       {
+        "lei": "CP",
+        "art": "250",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 250, § 1º, II, a",
+        "texto": "a) em casa habitada ou destinada a habitação;"
+       }
+      ],
+      "palavras_chave": [
+       "perigo concreto"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.9-R1-02",
+     "ponto": "DBA26-PEN-10.9",
+     "tema": "Perigo comum com morte",
+     "assertiva": "Se do crime doloso de perigo comum resulta morte, a pena privativa de liberdade é aumentada de metade.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 258: lesão grave, **aumento de metade**; morte, pena **em dobro**.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "258",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 258, 1ª parte",
+        "texto": "Art. 258 - Se do crime doloso de perigo comum resulta lesão corporal de natureza grave, a pena privativa de liberdade é aumentada de metade; se resulta morte, é aplicada em dobro."
+       }
+      ],
+      "pegadinha": "Trocar os resultados.",
+      "palavras_chave": [
+       "em dobro"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.9-R1-03",
+     "ponto": "DBA26-PEN-10.9",
+     "tema": "Medicamento falsificado",
+     "assertiva": "A falsificação, corrupção, adulteração ou alteração de produto destinado a fins terapêuticos ou medicinais é crime hediondo.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Lei 8.072/1990, art. 1º, **VII-B** (art. 273, caput e §§ 1º, 1º-A e 1º-B).",
+      "lei": [
+       {
+        "lei": "L8072",
+        "art": "1",
+        "par": "",
+        "inc": "",
+        "rotulo": "Lei 8.072/1990, art. 1º, VII-B",
+        "texto": "VII-B - falsificação, corrupção, adulteração ou alteração de produto destinado a fins terapêuticos ou medicinais"
+       }
+      ],
+      "palavras_chave": [
+       "VII-B"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.9-R1-04",
+     "ponto": "DBA26-PEN-10.9",
+     "tema": "Importação sem registro",
+     "assertiva": "Segundo o STF, a pena de 10 a 15 anos do art. 273 do Código Penal aplica-se integralmente a quem importa ou vende medicamento sem registro na vigilância sanitária.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "**Tema 1.003/RG** (RE 979.962): é **inconstitucional** essa pena para o § 1º-B, I; vale a pena originária, **1 a 3 anos**, e multa.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "273",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 273, § 1º-B, I",
+        "texto": "I - sem registro, quando exigível, no órgão de vigilância sanitária competente;"
+       }
+      ],
+      "juris": [
+       {
+        "tribunal": "STF",
+        "fonte": "Tema 1.003/RG — RE 979.962/RS (mérito em 24/03/2021; tese readequada nos embargos, sessão virtual de 02 a 12/06/2023)",
+        "data": "24/03/2021",
+        "texto": "É inconstitucional aplicar a pena de 10 a 15 anos do art. 273 (Lei 9.677/1998) à hipótese do § 1º-B, I (produto sem registro no órgão de vigilância sanitária); para ela fica repristinada a pena originária: reclusão, de 1 a 3 anos, e multa."
+       }
+      ],
+      "pegadinha": "Aplicar a pena de 10 a 15 anos.",
+      "palavras_chave": [
+       "Tema 1.003/RG"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.9-R1-05",
+     "ponto": "DBA26-PEN-10.9",
+     "tema": "Exercício ilegal durante suspensão",
+     "assertiva": "Pela redação de 2026, incorre no exercício ilegal da medicina o profissional que exerce a profissão durante a suspensão ou após o cancelamento da habilitação ou do registro.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 282, **§ 5º**, incluído pela Lei 15.425/2026 (que também passou a abranger o médico veterinário).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "282",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 282, § 5º",
+        "texto": "§ 5º Incorre na conduta prevista no caput deste artigo o agente que exerce a profissão durante o período de suspensão"
+       }
+      ],
+      "palavras_chave": [
+       "§ 5º",
+       "Lei 15.425/2026"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.9-R1-06",
+     "ponto": "DBA26-PEN-10.9",
+     "tema": "Curandeirismo e remuneração",
+     "assertiva": "O curandeirismo só é crime se praticado mediante remuneração.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "A remuneração só **acrescenta multa** (art. 284, par. ún.); o crime existe também a título gratuito.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "284",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 284, par. ún.",
+        "texto": "Parágrafo único - Se o crime é praticado mediante remuneração, o agente fica também sujeito à multa."
+       }
+      ],
+      "pegadinha": "Exigir remuneração.",
+      "palavras_chave": [
+       "acrescenta multa"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.10-R1-01",
+     "ponto": "DBA26-PEN-10.10",
+     "tema": "Associação criminosa",
+     "assertiva": "Configura associação criminosa a associação de três ou mais pessoas para o fim específico de cometer crimes.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 288 (Lei 12.850/2013): crime **formal** e **permanente**, que independe da prática dos crimes visados.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "288",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 288, caput",
+        "texto": "Art. 288. Associarem-se 3 (três) ou mais pessoas, para o fim específico de cometer crimes:"
+       }
+      ],
+      "palavras_chave": [
+       "formal",
+       "permanente"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.10-R1-02",
+     "ponto": "DBA26-PEN-10.10",
+     "tema": "Número mínimo",
+     "assertiva": "A associação criminosa do art. 288 do Código Penal exige ao menos quatro integrantes.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Bastam **três**. Quatro ou mais, com estrutura ordenada e divisão de tarefas, é a **organização criminosa** da Lei 12.850/2013.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "288",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 288, caput",
+        "texto": "Art. 288. Associarem-se 3 (três) ou mais pessoas"
+       }
+      ],
+      "pegadinha": "Confundir com a organização criminosa.",
+      "palavras_chave": [
+       "três",
+       "organização criminosa"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.10-R1-03",
+     "ponto": "DBA26-PEN-10.10",
+     "tema": "Associação armada",
+     "assertiva": "A pena da associação criminosa aumenta-se até a metade se a associação é armada ou se houver participação de criança ou adolescente.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 288, **§ 1º** (renumerado pela Lei 15.245/2025).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "288",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 288, § 1º",
+        "texto": "§ 1º A pena aumenta-se até a metade se a associação é armada ou se houver a participação de criança ou adolescente."
+       }
+      ],
+      "palavras_chave": [
+       "§ 1º"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.10-R1-04",
+     "ponto": "DBA26-PEN-10.10",
+     "tema": "Incitação ao crime",
+     "assertiva": "O crime de incitação ao crime só se consuma se alguém efetivamente praticar o crime incitado.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 286: basta **incitar publicamente**; é crime **formal** e de perigo, consumado com a incitação perceptível por número indeterminado de pessoas (doutrina).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "286",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 286, caput",
+        "texto": "Art. 286 - Incitar, publicamente, a prática de crime:"
+       }
+      ],
+      "pegadinha": "Exigir a prática do crime incitado.",
+      "palavras_chave": [
+       "incitar publicamente"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.10-R1-05",
+     "ponto": "DBA26-PEN-10.10",
+     "tema": "Milícia privada",
+     "assertiva": "A constituição de milícia privada exige que o grupo se destine à prática de crimes hediondos.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 288-A: finalidade de praticar **qualquer dos crimes previstos neste Código**.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "288-A",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 288-A",
+        "texto": "Art. 288-A. Constituir, organizar, integrar, manter ou custear organização paramilitar, milícia particular, grupo ou esquadrão com a finalidade de praticar qualquer dos crimes previstos neste Código:"
+       }
+      ],
+      "pegadinha": "Restringir aos hediondos.",
+      "palavras_chave": [
+       "qualquer dos crimes previstos neste Código"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.11-R1-01",
+     "ponto": "DBA26-PEN-10.11",
+     "tema": "Moeda falsa",
+     "assertiva": "Falsificar moeda metálica ou papel-moeda de curso legal no país ou no estrangeiro é punido com reclusão de três a doze anos, e multa.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. **289**, caput; o § 1º pune quem importa, guarda ou introduz na circulação moeda falsa.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "289",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 289, caput",
+        "texto": "Art. 289 - Falsificar, fabricando-a ou alterando-a, moeda metálica ou papel-moeda de curso legal no país ou no estrangeiro:\nPena - reclusão, de três a doze anos, e multa."
+       }
+      ],
+      "palavras_chave": [
+       "289"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.11-R1-02",
+     "ponto": "DBA26-PEN-10.11",
+     "tema": "Falsificação grosseira",
+     "assertiva": "A utilização de papel-moeda grosseiramente falsificado configura o crime de moeda falsa, de competência da Justiça Federal.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "**Súmula 73/STJ**: falsificação grosseira não engana o homem médio e não ofende a fé pública — configura, em tese, **estelionato**, da competência da **Justiça Estadual**.",
+      "juris": [
+       {
+        "tribunal": "STJ",
+        "fonte": "Súmula 73/STJ",
+        "data": "15/04/1993",
+        "texto": "A utilização de papel moeda grosseiramente falsificado configura, em tese, o crime de estelionato, da competência da Justiça Estadual."
+       }
+      ],
+      "pegadinha": "Manter a moeda falsa na falsificação grosseira.",
+      "palavras_chave": [
+       "Súmula 73/STJ"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.11-R1-03",
+     "ponto": "DBA26-PEN-10.11",
+     "tema": "Moeda recebida de boa-fé",
+     "assertiva": "Quem recebe de boa-fé moeda falsa como verdadeira e a restitui à circulação depois de conhecer a falsidade responde por forma privilegiada, punida com detenção.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 289, **§ 2º**: detenção de 6 meses a 2 anos, e multa.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "289",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 289, § 2º",
+        "texto": "§ 2º - Quem, tendo recebido de boa-fé, como verdadeira, moeda falsa ou alterada, a restitui à circulação"
+       }
+      ],
+      "palavras_chave": [
+       "§ 2º",
+       "boa-fé"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.11-R1-04",
+     "ponto": "DBA26-PEN-10.11",
+     "tema": "Cartão de crédito",
+     "assertiva": "Para efeitos penais, o cartão de crédito ou débito equipara-se a documento público.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Equipara-se a documento **particular** (art. 298, par. ún.). Equiparam-se a público, entre outros, o título ao portador ou transmissível por endosso, os livros mercantis e o testamento particular (art. 297, § 2º).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "298",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 298, par. ún.",
+        "texto": "Parágrafo único. Para fins do disposto no caput, equipara-se a documento particular o cartão de crédito ou débito."
+       }
+      ],
+      "pegadinha": "Equiparar o cartão a documento público.",
+      "palavras_chave": [
+       "documento particular"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.11-R1-05",
+     "ponto": "DBA26-PEN-10.11",
+     "tema": "Falsidade ideológica",
+     "assertiva": "A falsidade ideológica consiste em omitir declaração que devia constar de documento ou nele inserir declaração falsa, com o fim de prejudicar direito, criar obrigação ou alterar a verdade sobre fato juridicamente relevante.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. **299**: o documento é materialmente verdadeiro, o **conteúdo** é falso (na falsidade material, arts. 297 e 298, é a forma que é falsa).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "299",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 299, caput",
+        "texto": "Art. 299 - Omitir, em documento público ou particular, declaração que dele devia constar, ou nele inserir ou fazer inserir declaração falsa ou diversa da que devia ser escrita, com o fim de prejudicar direito, criar obrigação ou alterar a verdade sobre fato juridicamente relevante:"
+       }
+      ],
+      "palavras_chave": [
+       "conteúdo"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.11-R1-06",
+     "ponto": "DBA26-PEN-10.11",
+     "tema": "Falso e estelionato",
+     "assertiva": "Quando o falso se exaure no estelionato, sem mais potencialidade lesiva, há concurso material entre falsificação e estelionato.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "**Súmula 17/STJ**: o falso é **absorvido** pelo estelionato (consunção).",
+      "juris": [
+       {
+        "tribunal": "STJ",
+        "fonte": "Súmula 17/STJ",
+        "data": "20/11/1990",
+        "texto": "Quando o falso se exaure no estelionato, sem mais potencialidade lesiva, é por este absorvido."
+       }
+      ],
+      "pegadinha": "Somar as penas.",
+      "palavras_chave": [
+       "Súmula 17/STJ",
+       "absorvido"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.11-R1-07",
+     "ponto": "DBA26-PEN-10.11",
+     "tema": "Falsa identidade e autodefesa",
+     "assertiva": "É típica a conduta de atribuir-se falsa identidade perante a autoridade policial, ainda que para evitar a própria prisão.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "**Súmula 522/STJ**: a autodefesa não alcança mentir sobre a identidade (art. 307).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "307",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 307",
+        "texto": "Art. 307 - Atribuir-se ou atribuir a terceiro falsa identidade para obter vantagem"
+       }
+      ],
+      "juris": [
+       {
+        "tribunal": "STJ",
+        "fonte": "Súmula 522/STJ",
+        "data": "25/03/2015",
+        "texto": "A conduta de atribuir-se falsa identidade perante autoridade policial é típica, ainda que em situação de alegada autodefesa."
+       }
+      ],
+      "palavras_chave": [
+       "Súmula 522/STJ",
+       "autodefesa"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.11-R1-08",
+     "ponto": "DBA26-PEN-10.11",
+     "tema": "Uso de documento falso",
+     "assertiva": "O uso de documento falso tem pena própria, inferior à da falsificação.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 304: a pena é **a cominada à falsificação** ou à alteração do papel usado.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "304",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 304",
+        "texto": "Art. 304 - Fazer uso de qualquer dos papéis falsificados ou alterados, a que se referem os arts. 297 a 302:\nPena - a cominada à falsificação ou à alteração."
+       }
+      ],
+      "pegadinha": "Atribuir pena autônoma ao uso.",
+      "palavras_chave": [
+       "a cominada à falsificação"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.11-R1-09",
+     "ponto": "DBA26-PEN-10.11",
+     "tema": "Sinal identificador de veículo",
+     "assertiva": "Adulterar, remarcar ou suprimir placa de identificação de veículo automotor configura o crime do art. 311 do Código Penal.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. **311** (Lei 14.562/2023 incluiu expressamente a placa, os veículos elétricos e híbridos e os reboques); reclusão de 3 a 6 anos.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "311",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 311, caput",
+        "texto": "Art. 311. Adulterar, remarcar ou suprimir número de chassi, monobloco, motor, placa de identificação"
+       }
+      ],
+      "palavras_chave": [
+       "311"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.12-R1-01",
+     "ponto": "DBA26-PEN-10.12",
+     "tema": "Funcionário público",
+     "assertiva": "Considera-se funcionário público, para os efeitos penais, quem, embora transitoriamente ou sem remuneração, exerce cargo, emprego ou função pública.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. **327**, caput: conceito amplo, que inclui o mesário e o jurado.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "327",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 327, caput",
+        "texto": "Art. 327 - Considera-se funcionário público, para os efeitos penais, quem, embora transitoriamente ou sem remuneração, exerce cargo, emprego ou função pública."
+       }
+      ],
+      "palavras_chave": [
+       "327"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.12-R1-02",
+     "ponto": "DBA26-PEN-10.12",
+     "tema": "Funcionário por equiparação",
+     "assertiva": "Não se equipara a funcionário público quem trabalha para empresa prestadora de serviço contratada para executar atividade típica da Administração Pública.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 327, **§ 1º**: equipara-se tanto quem atua em entidade paraestatal quanto quem trabalha para empresa **contratada ou conveniada** para atividade típica da Administração.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "327",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 327, § 1º",
+        "texto": "§ 1º - Equipara-se a funcionário público quem exerce cargo, emprego ou função em entidade paraestatal, e quem trabalha para empresa prestadora de serviço contratada ou conveniada para a execução de atividade típica da Administração Pública."
+       }
+      ],
+      "pegadinha": "Negar a equiparação.",
+      "palavras_chave": [
+       "contratada ou conveniada"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.12-R1-03",
+     "ponto": "DBA26-PEN-10.12",
+     "tema": "Peculato-furto",
+     "assertiva": "Comete peculato o funcionário que, embora não tendo a posse do bem, o subtrai, valendo-se da facilidade que lhe proporciona a qualidade de funcionário.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 312, **§ 1º** (peculato-furto ou impróprio).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "312",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 312, § 1º",
+        "texto": "§ 1º - Aplica-se a mesma pena, se o funcionário público, embora não tendo a posse do dinheiro, valor ou bem, o subtrai"
+       }
+      ],
+      "palavras_chave": [
+       "peculato-furto"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.12-R1-04",
+     "ponto": "DBA26-PEN-10.12",
+     "tema": "Peculato culposo: reparação tardia",
+     "assertiva": "No peculato culposo, a reparação do dano posterior à sentença irrecorrível também extingue a punibilidade.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 312, § 3º: **antes** da sentença irrecorrível, extingue; **depois**, **reduz de metade** a pena imposta.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "312",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 312, § 3º",
+        "texto": "§ 3º - No caso do parágrafo anterior, a reparação do dano, se precede à sentença irrecorrível, extingue a punibilidade; se lhe é posterior, reduz de metade a pena imposta."
+       }
+      ],
+      "pegadinha": "Extinguir a punibilidade depois do trânsito.",
+      "palavras_chave": [
+       "reduz de metade"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.12-R1-05",
+     "ponto": "DBA26-PEN-10.12",
+     "tema": "Concussão",
+     "assertiva": "Comete concussão o funcionário que exige vantagem indevida, ainda que fora da função ou antes de assumi-la, mas em razão dela.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 316 (pena de 2 a 12 anos desde a Lei 13.964/2019): crime **formal** — consuma-se com a exigência.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "316",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 316, caput",
+        "texto": "Art. 316 - Exigir, para si ou para outrem, direta ou indiretamente, ainda que fora da função ou antes de assumi-la, mas em razão dela, vantagem indevida:"
+       }
+      ],
+      "palavras_chave": [
+       "formal"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.12-R1-06",
+     "ponto": "DBA26-PEN-10.12",
+     "tema": "Corrupção passiva",
+     "assertiva": "A corrupção passiva só se configura com o efetivo recebimento da vantagem indevida pelo funcionário.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 317: também **solicitar** ou **aceitar promessa** — crime formal; a prática do ato de ofício só aumenta a pena (§ 1º).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "317",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 317, caput",
+        "texto": "Art. 317 - Solicitar ou receber, para si ou para outrem, direta ou indiretamente, ainda que fora da função ou antes de assumi-la, mas em razão dela, vantagem indevida, ou aceitar promessa de tal vantagem:"
+       }
+      ],
+      "pegadinha": "Exigir o recebimento.",
+      "palavras_chave": [
+       "aceitar promessa"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.12-R1-07",
+     "ponto": "DBA26-PEN-10.12",
+     "tema": "Prevaricação",
+     "assertiva": "A prevaricação exige que o funcionário retarde, deixe de praticar ou pratique contra a lei o ato de ofício para satisfazer interesse ou sentimento pessoal.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 319: o **especial fim de agir** distingue a prevaricação da corrupção passiva privilegiada (art. 317, § 2º, \"cedendo a pedido ou influência de outrem\").",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "319",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 319",
+        "texto": "Art. 319 - Retardar ou deixar de praticar, indevidamente, ato de ofício, ou praticá-lo contra disposição expressa de lei, para satisfazer interesse ou sentimento pessoal:"
+       }
+      ],
+      "palavras_chave": [
+       "especial fim de agir"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.12-R1-08",
+     "ponto": "DBA26-PEN-10.12",
+     "tema": "Insignificância",
+     "assertiva": "O princípio da insignificância aplica-se aos crimes contra a administração pública quando o prejuízo ao erário é ínfimo.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "**Súmula 599/STJ**: é **inaplicável** — o bem jurídico inclui a moralidade administrativa. Exceção reconhecida pelo próprio STJ: o **descaminho** (Tema 157).",
+      "juris": [
+       {
+        "tribunal": "STJ",
+        "fonte": "Súmula 599/STJ",
+        "data": "20/11/2017",
+        "texto": "O princípio da insignificância é inaplicável aos crimes contra a administração pública."
+       }
+      ],
+      "pegadinha": "Aplicar a bagatela ao peculato.",
+      "palavras_chave": [
+       "Súmula 599/STJ"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.12-R1-09",
+     "ponto": "DBA26-PEN-10.12",
+     "tema": "Descaminho e bagatela",
+     "assertiva": "Incide o princípio da insignificância no descaminho quando o débito tributário não ultrapassa R$ 20.000,00.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "**Tema 157/STJ** (revisado em 28/02/2018), com base no art. 20 da Lei 10.522/2002 e nas Portarias 75 e 130 do Ministério da Fazenda.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "334",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 334, caput",
+        "texto": "Art. 334. Iludir, no todo ou em parte, o pagamento de direito ou imposto devido pela entrada, pela saída ou pelo consumo de mercadoria"
+       }
+      ],
+      "juris": [
+       {
+        "tribunal": "STJ",
+        "fonte": "Tema 157/STJ (revisado) — REsp 1.688.878/SP e REsp 1.709.029/MG",
+        "data": "28/02/2018",
+        "texto": "Incide o princípio da insignificância aos crimes tributários federais e de descaminho quando o débito tributário não ultrapassar R$ 20.000,00 (art. 20 da Lei 10.522/2002, atualizado pelas Portarias 75 e 130 do Ministério da Fazenda)."
+       }
+      ],
+      "palavras_chave": [
+       "Tema 157/STJ"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.12-R1-10",
+     "ponto": "DBA26-PEN-10.12",
+     "tema": "Desacato",
+     "assertiva": "O STF declarou que o crime de desacato não foi recepcionado pela Constituição de 1988, por violar a liberdade de expressão.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Na **ADPF 496** (sessão virtual finalizada em 19/06/2020), o STF decidiu que o desacato **foi recepcionado**, com interpretação restritiva.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "331",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 331",
+        "texto": "Art. 331 - Desacatar funcionário público no exercício da função ou em razão dela:"
+       }
+      ],
+      "juris": [
+       {
+        "tribunal": "STF",
+        "fonte": "ADPF 496, Plenário (sessão virtual finalizada em 19/06/2020)",
+        "data": "19/06/2020",
+        "texto": "O crime de desacato (art. 331 do CP) foi recepcionado pela Constituição de 1988; a tipificação não viola a liberdade de expressão, e o tipo deve ser interpretado restritivamente."
+       }
+      ],
+      "pegadinha": "Afirmar a não recepção.",
+      "palavras_chave": [
+       "ADPF 496"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.12-R1-11",
+     "ponto": "DBA26-PEN-10.12",
+     "tema": "Corrupção ativa",
+     "assertiva": "Comete corrupção ativa quem oferece ou promete vantagem indevida a funcionário público para determiná-lo a praticar, omitir ou retardar ato de ofício.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 333 (pena de 2 a 12 anos): não há o verbo \"dar\" — dar vantagem **solicitada** pelo funcionário é atípico para o particular (doutrina).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "333",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 333, caput",
+        "texto": "Art. 333 - Oferecer ou prometer vantagem indevida a funcionário público, para determiná-lo a praticar, omitir ou retardar ato de ofício:"
+       }
+      ],
+      "palavras_chave": [
+       "oferece ou promete",
+       "Art. 333"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.12-R1-12",
+     "ponto": "DBA26-PEN-10.12",
+     "tema": "Contrabando x descaminho",
+     "assertiva": "Contrabando é iludir, no todo ou em parte, o pagamento de imposto devido pela entrada de mercadoria no País.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Essa é a definição de **descaminho** (art. 334). **Contrabando** é importar ou exportar **mercadoria proibida** (art. 334-A, reclusão de 2 a 5 anos).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "334-A",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 334-A, caput",
+        "texto": "Art. 334-A. Importar ou exportar mercadoria proibida:"
+       }
+      ],
+      "pegadinha": "Trocar contrabando por descaminho.",
+      "palavras_chave": [
+       "mercadoria proibida",
+       "descaminho"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.13-R1-01",
+     "ponto": "DBA26-PEN-10.13",
+     "tema": "Operação de crédito",
+     "assertiva": "Ordenar, autorizar ou realizar operação de crédito, interno ou externo, sem prévia autorização legislativa é crime contra as finanças públicas.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. **359-A** (Lei 10.028/2000, que concretizou penalmente a Lei de Responsabilidade Fiscal); reclusão de 1 a 2 anos.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "359-A",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 359-A, caput",
+        "texto": "Art. 359-A. Ordenar, autorizar ou realizar operação de crédito, interno ou externo, sem prévia autorização legislativa:"
+       }
+      ],
+      "palavras_chave": [
+       "359-A"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.13-R1-02",
+     "ponto": "DBA26-PEN-10.13",
+     "tema": "Restos a pagar sem empenho",
+     "assertiva": "A inscrição em restos a pagar de despesa não empenhada é punida com reclusão.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 359-B: **detenção** de 6 meses a 2 anos.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "359-B",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 359-B",
+        "texto": "Art. 359-B. Ordenar ou autorizar a inscrição em restos a pagar, de despesa que não tenha sido previamente empenhada ou que exceda limite estabelecido em lei: (Incluído pela Lei nº 10.028, de 2000)\nPena – detenção, de 6 (seis) meses a 2 (dois) anos."
+       }
+      ],
+      "pegadinha": "Trocar detenção por reclusão.",
+      "palavras_chave": [
+       "detenção"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.13-R1-03",
+     "ponto": "DBA26-PEN-10.13",
+     "tema": "Último ano do mandato",
+     "assertiva": "Ordenar a assunção de obrigação nos dois últimos quadrimestres do último ano do mandato, cuja despesa não possa ser paga no mesmo exercício ou sem disponibilidade de caixa para a parcela seguinte, é crime.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. **359-C** (reclusão de 1 a 4 anos).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "359-C",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 359-C",
+        "texto": "Art. 359-C. Ordenar ou autorizar a assunção de obrigação, nos dois últimos quadrimestres do último ano do mandato ou legislatura"
+       }
+      ],
+      "palavras_chave": [
+       "359-C"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.13-R1-04",
+     "ponto": "DBA26-PEN-10.13",
+     "tema": "Despesa com pessoal",
+     "assertiva": "É crime ordenar ato que acarrete aumento de despesa total com pessoal nos noventa dias anteriores ao final do mandato.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 359-G: nos **cento e oitenta dias** anteriores ao final do mandato ou da legislatura.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "359-G",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 359-G",
+        "texto": "Art. 359-G. Ordenar, autorizar ou executar ato que acarrete aumento de despesa total com pessoal, nos cento e oitenta dias anteriores"
+       }
+      ],
+      "pegadinha": "Errar o prazo.",
+      "palavras_chave": [
+       "cento e oitenta dias"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.13-R1-05",
+     "ponto": "DBA26-PEN-10.13",
+     "tema": "Garantia graciosa",
+     "assertiva": "Comete o crime de prestação de garantia graciosa quem presta garantia em operação de crédito tendo exigido contragarantia de valor igual ou superior ao da garantia.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 359-E: o crime é prestar a garantia **sem** que tenha sido constituída contragarantia igual ou superior.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "359-E",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 359-E",
+        "texto": "Art. 359-E. Prestar garantia em operação de crédito sem que tenha sido constituída contragarantia"
+       }
+      ],
+      "pegadinha": "Inverter o núcleo.",
+      "palavras_chave": [
+       "sem"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.14-R1-01",
+     "ponto": "DBA26-PEN-10.14",
+     "tema": "Abolição violenta",
+     "assertiva": "Tentar, com emprego de violência ou grave ameaça, abolir o Estado Democrático de Direito, impedindo ou restringindo o exercício dos poderes constitucionais, é crime.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. **359-L** (Lei 14.197/2021, que revogou a Lei de Segurança Nacional); reclusão de 4 a 8 anos, além da pena da violência.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "359-L",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 359-L",
+        "texto": "Art. 359-L. Tentar, com emprego de violência ou grave ameaça, abolir o Estado Democrático de Direito"
+       }
+      ],
+      "palavras_chave": [
+       "359-L"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.14-R1-02",
+     "ponto": "DBA26-PEN-10.14",
+     "tema": "Golpe de Estado: consumação",
+     "assertiva": "O crime de golpe de Estado só se consuma com a efetiva deposição do governo legitimamente constituído.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "O art. 359-M pune **tentar depor** o governo por violência ou grave ameaça: crime **de atentado** (ou de empreendimento), consumado com a tentativa — a deposição efetiva tornaria impossível a punição (doutrina). Pena: reclusão de 4 a 12 anos.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "359-M",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 359-M (pena)",
+        "texto": "Pena - reclusão, de 4 (quatro) a 12 (doze) anos, além da pena correspondente à violência."
+       }
+      ],
+      "pegadinha": "Exigir a deposição.",
+      "palavras_chave": [
+       "de atentado"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.14-R1-03",
+     "ponto": "DBA26-PEN-10.14",
+     "tema": "Manifestação crítica",
+     "assertiva": "Não constitui crime contra o Estado Democrático de Direito a manifestação crítica aos poderes constitucionais nem a reivindicação de direitos por meio de passeatas, reuniões ou greves.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. **359-T** (cláusula de exclusão).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "359-T",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 359-T",
+        "texto": "Art. 359-T. Não constitui crime previsto neste Título a manifestação crítica aos poderes constitucionais"
+       }
+      ],
+      "palavras_chave": [
+       "359-T"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.14-R1-04",
+     "ponto": "DBA26-PEN-10.14",
+     "tema": "Multidão e liderança",
+     "assertiva": "Pela Lei 15.402/2026, a redução de pena dos crimes contra as instituições democráticas praticados em contexto de multidão alcança também o agente que exerceu papel de liderança.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 359-M-B: redução de **1/3 a 2/3** em contexto de multidão, **desde que** o agente **não** tenha financiado nem exercido **liderança**. A mesma lei (art. 359-M-A) manda aplicar, no mesmo contexto, o **concurso formal próprio**, vedado o cúmulo material.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "359-M",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 359-M-B",
+        "texto": "Art. 359-M-B. Quando os crimes previstos neste Capítulo forem praticados em contexto de multidão, a pena será reduzida de 1/3 (um terço) a 2/3 (dois terços), desde que o agente não tenha praticado ato de financiamento ou exercido papel de liderança."
+       }
+      ],
+      "pegadinha": "Estender a redução ao líder.",
+      "palavras_chave": [
+       "liderança",
+       "Lei 15.402/2026"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.14-R1-05",
+     "ponto": "DBA26-PEN-10.14",
+     "tema": "Espionagem e direitos humanos",
+     "assertiva": "Não constitui espionagem a entrega ou a publicação de informações ou documentos com o fim de expor a prática de crime ou a violação de direitos humanos.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 359-K, **§ 4º**.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "359-K",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 359-K, § 4º",
+        "texto": "§ 4º Não constitui crime a comunicação, a entrega ou a publicação de informações ou de documentos com o fim de expor a prática de crime ou a violação de direitos humanos."
+       }
+      ],
+      "palavras_chave": [
+       "§ 4º"
+      ]
+     }
+    },
+    {
+     "id": "PEN-11-R1-01",
+     "ponto": "DBA26-PEN-11",
+     "tema": "Violência doméstica: bagatela e substituição",
+     "assertiva": "Nos crimes ou contravenções praticados contra a mulher no âmbito das relações domésticas, é inaplicável o princípio da insignificância, e, havendo violência ou grave ameaça, não cabe substituir a pena privativa por restritiva de direitos.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "**Súmulas 589 e 588/STJ** — duas faces da mesma política de proteção (arts. 44, I, do CP e 41 da Lei 11.340/2006).",
+      "juris": [
+       {
+        "tribunal": "STJ",
+        "fonte": "Súmula 589/STJ",
+        "data": "13/09/2017",
+        "texto": "É inaplicável o princípio da insignificância nos crimes ou contravenções penais praticados contra a mulher no âmbito das relações domésticas."
+       },
+       {
+        "tribunal": "STJ",
+        "fonte": "Súmula 588/STJ",
+        "data": "13/09/2017",
+        "texto": "Crime ou contravenção contra a mulher com violência ou grave ameaça no ambiente doméstico impossibilita a substituição da pena privativa de liberdade por restritiva de direitos."
+       }
+      ],
+      "palavras_chave": [
+       "Súmulas 589 e 588/STJ"
+      ]
+     }
+    },
+    {
+     "id": "PEN-11-R1-02",
+     "ponto": "DBA26-PEN-11",
+     "tema": "Consumação do roubo",
+     "assertiva": "O roubo só se consuma quando o agente obtém a posse mansa e pacífica do bem, fora da vigilância da vítima.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "**Súmula 582/STJ**: consuma-se com a **inversão da posse** mediante violência ou grave ameaça, ainda que por breve tempo e com perseguição imediata.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "157",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 157, caput",
+        "texto": "Art. 157 - Subtrair coisa móvel alheia, para si ou para outrem, mediante grave ameaça ou violência a pessoa"
+       }
+      ],
+      "juris": [
+       {
+        "tribunal": "STJ",
+        "fonte": "Súmula 582/STJ",
+        "data": "14/09/2016",
+        "texto": "Consuma-se o roubo com a inversão da posse do bem mediante violência ou grave ameaça, ainda que por breve tempo e com perseguição imediata e recuperação da coisa, sendo prescindível a posse mansa e pacífica ou desvigiada."
+       }
+      ],
+      "pegadinha": "Exigir posse mansa e pacífica.",
+      "palavras_chave": [
+       "Súmula 582/STJ",
+       "inversão da posse"
+      ]
+     }
+    },
+    {
+     "id": "PEN-11-R1-03",
+     "ponto": "DBA26-PEN-11",
+     "tema": "Majorantes do roubo",
+     "assertiva": "O aumento na terceira fase do roubo circunstanciado exige fundamentação concreta, não bastando a mera indicação do número de majorantes.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "**Súmula 443/STJ**: vale para escolher a fração entre 1/3 e metade do art. 157, § 2º.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "157",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 157, § 2º",
+        "texto": "§ 2º A pena aumenta-se de 1/3 (um terço) até metade:"
+       }
+      ],
+      "juris": [
+       {
+        "tribunal": "STJ",
+        "fonte": "Súmula 443/STJ",
+        "data": "28/04/2010",
+        "texto": "O aumento na terceira fase no roubo circunstanciado exige fundamentação concreta, não bastando a mera indicação do número de majorantes."
+       }
+      ],
+      "palavras_chave": [
+       "Súmula 443/STJ"
+      ]
+     }
+    },
+    {
+     "id": "PEN-11-R1-04",
+     "ponto": "DBA26-PEN-11",
+     "tema": "Fraude à licitação: natureza",
+     "assertiva": "O crime de fraude à licitação é material e exige prova do prejuízo ao erário.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "**Súmula 645/STJ**: é **formal** — dispensa prejuízo ou obtenção de vantagem.",
+      "juris": [
+       {
+        "tribunal": "STJ",
+        "fonte": "Súmula 645/STJ",
+        "data": "10/02/2021",
+        "texto": "O crime de fraude à licitação é formal, e sua consumação prescinde da comprovação do prejuízo ou da obtenção de vantagem."
+       }
+      ],
+      "pegadinha": "Exigir resultado naturalístico.",
+      "palavras_chave": [
+       "Súmula 645/STJ",
+       "formal"
+      ]
+     }
+    },
+    {
+     "id": "PEN-11-R1-05",
+     "ponto": "DBA26-PEN-11",
+     "tema": "Restituição e insignificância",
+     "assertiva": "A restituição imediata e integral do bem furtado não constitui, por si só, motivo suficiente para a incidência do princípio da insignificância.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "**Tema 1.205/STJ** (24/10/2023). A restituição pode, quando muito, servir ao arrependimento posterior (art. 16) ou ao privilégio.",
+      "juris": [
+       {
+        "tribunal": "STJ",
+        "fonte": "Tema 1.205/STJ — REsp 2.062.375/AL e REsp 2.062.095/AL",
+        "data": "24/10/2023",
+        "texto": "A restituição imediata e integral do bem furtado não constitui, por si só, motivo suficiente para a incidência do princípio da insignificância."
+       }
+      ],
+      "palavras_chave": [
+       "Tema 1.205/STJ"
+      ]
+     }
+    },
+    {
+     "id": "PEN-11-R1-06",
+     "ponto": "DBA26-PEN-11",
+     "tema": "Cheque sem fundos pago",
+     "assertiva": "O pagamento do cheque emitido sem provisão de fundos após o recebimento da denúncia obsta o prosseguimento da ação penal.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "**Súmula 554/STF**: o pagamento **após** o recebimento da denúncia **não obsta** a ação (a leitura *a contrario*, que a doutrina extrai do enunciado, dá relevância ao pagamento anterior ao recebimento).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "171",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 171, § 2º, VI",
+        "texto": "VI - emite cheque, sem suficiente provisão de fundos em poder do sacado, ou lhe frustra o pagamento."
+       }
+      ],
+      "juris": [
+       {
+        "tribunal": "STF",
+        "fonte": "Súmula 554/STF",
+        "data": "15/12/1976",
+        "texto": "O pagamento de cheque emitido sem provisão de fundos, após o recebimento da denúncia, não obsta ao prosseguimento da ação penal."
+       }
+      ],
+      "pegadinha": "Dar efeito extintivo ao pagamento tardio.",
+      "palavras_chave": [
+       "Súmula 554/STF"
+      ]
+     }
     }
    ]
   },
@@ -13972,6 +16878,1751 @@ window.PENTE_FINO.PEN = {
       "pegadinha": "Usar a pena total.",
       "palavras_chave": [
        "tempo que resta"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10-R2-01",
+     "ponto": "DBA26-PEN-10",
+     "tema": "Marco do crime organizado",
+     "assertiva": "Pela Lei 15.358/2026, o homicídio doloso cometido por integrante de organização criminosa ultraviolenta, grupo paramilitar ou milícia privada, no contexto de sua atuação, é punido com reclusão de 20 a 40 anos.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 121, **§ 2º-D**, incluído pela Lei 15.358/2026 (\"marco legal do combate ao crime organizado\"), que também criou formas próprias na lesão seguida de morte, no sequestro, no furto, no roubo, na extorsão e na receptação.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "121",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 121, § 2º-D",
+        "texto": "§ 2º-D. Se o homicídio doloso é cometido por integrante de organização criminosa ultraviolenta, grupo paramilitar ou milícia privada, no contexto da atuação ou para a consecução das condutas previstas no art. 2º da lei que institui o marco legal do combate ao crime organizado no Brasil. (Incluído pela Lei nº 15.358, de 2026)\nPena - reclusão, de 20 (vinte) a 40 (quarenta anos)."
+       }
+      ],
+      "palavras_chave": [
+       "§ 2º-D",
+       "Lei 15.358/2026"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10-R2-02",
+     "ponto": "DBA26-PEN-10",
+     "tema": "Sequestro de menor",
+     "assertiva": "O sequestro e cárcere privado cometido contra menor de 18 anos não integra o rol dos crimes hediondos.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "É hediondo desde a **Lei 14.811/2024** (art. 1º, XI, da Lei 8.072/1990), junto com o tráfico de pessoas contra criança ou adolescente (XII).",
+      "lei": [
+       {
+        "lei": "L8072",
+        "art": "1",
+        "par": "",
+        "inc": "",
+        "rotulo": "Lei 8.072/1990, art. 1º, XI",
+        "texto": "XI - sequestro e cárcere privado cometido contra menor de 18 (dezoito) anos (art. 148, § 1º, inciso IV);"
+       }
+      ],
+      "pegadinha": "Ignorar a ampliação de 2024.",
+      "palavras_chave": [
+       "Lei 14.811/2024"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10-R2-03",
+     "ponto": "DBA26-PEN-10",
+     "tema": "Furto: nova pena",
+     "assertiva": "A Lei 15.397/2026 elevou a pena do furto simples para reclusão de 1 a 6 anos, e multa.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 155, caput, na redação da **Lei 15.397/2026** (antes, 1 a 4 anos). A mesma lei mexeu no roubo, no estelionato e na receptação.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "155",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 155, caput (pena)",
+        "texto": "Pena – reclusão, de 1 (um) a 6 (seis) anos, e multa."
+       }
+      ],
+      "palavras_chave": [
+       "Lei 15.397/2026"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.1-R2-01",
+     "ponto": "DBA26-PEN-10.1",
+     "tema": "Honra do servidor",
+     "assertiva": "Na ofensa à honra de servidor público em razão de suas funções, é concorrente a legitimidade do ofendido, por queixa, e do Ministério Público, mediante representação.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "**Súmula 714/STF**, que conjuga o art. 145, par. ún., do CP com a liberdade do ofendido de oferecer queixa.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "145",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 145, par. ún.",
+        "texto": "Procede-se mediante requisição do Ministro da Justiça, no caso do inciso I do caput do art. 141 deste Código, e mediante representação do ofendido, no caso do inciso II do mesmo artigo"
+       }
+      ],
+      "juris": [
+       {
+        "tribunal": "STF",
+        "fonte": "Súmula 714/STF (publicada no DJ de 13/10/2003)",
+        "data": "13/10/2003",
+        "texto": "É concorrente a legitimidade do ofendido, mediante queixa, e do Ministério Público, condicionada à representação do ofendido, para a ação penal por crime contra a honra de servidor público em razão do exercício de suas funções."
+       }
+      ],
+      "palavras_chave": [
+       "Súmula 714/STF",
+       "concorrente"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.1-R2-02",
+     "ponto": "DBA26-PEN-10.1",
+     "tema": "Honra nas redes sociais",
+     "assertiva": "Se o crime contra a honra é cometido ou divulgado em redes sociais, a pena é aumentada de um terço.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 141, § 2º (Lei 13.964/2019): aplica-se a pena **em triplo**. O aumento de 1/3 é o do caput (ex.: na presença de várias pessoas).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "141",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 141, § 2º",
+        "texto": "§ 2º Se o crime é cometido ou divulgado em quaisquer modalidades das redes sociais da rede mundial de computadores, aplica-se em triplo a pena."
+       }
+      ],
+      "pegadinha": "Trocar o triplo por 1/3.",
+      "palavras_chave": [
+       "em triplo"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.1-R2-03",
+     "ponto": "DBA26-PEN-10.1",
+     "tema": "Ameaça contra a mulher",
+     "assertiva": "A ameaça contra a mulher por razões da condição do sexo feminino tem a pena aplicada em dobro e não depende de representação.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 147, §§ 1º e 2º (Lei 14.994/2024): **pena em dobro**; fora dessa hipótese, a ameaça segue condicionada à representação.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "147",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 147, §§ 1º e 2º",
+        "texto": "§ 1º Se o crime é cometido contra a mulher por razões da condição do sexo feminino, nos termos do § 1º do art. 121-A deste Código, aplica-se a pena em dobro. (Incluído pela Lei nº 14.994, de 2024)\n§ 2º Somente se procede mediante representação, exceto na hipótese prevista no § 1º deste artigo."
+       }
+      ],
+      "palavras_chave": [
+       "pena em dobro"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.1-R2-04",
+     "ponto": "DBA26-PEN-10.1",
+     "tema": "Perseguição: ação penal",
+     "assertiva": "O crime de perseguição (stalking) é de ação penal pública incondicionada.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 147-A, § 3º: **somente se procede mediante representação**.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "147-A",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 147-A, § 3º",
+        "texto": "§ 3º Somente se procede mediante representação."
+       }
+      ],
+      "pegadinha": "Dispensar a representação.",
+      "palavras_chave": [
+       "mediante representação",
+       "stalking"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.1-R2-05",
+     "ponto": "DBA26-PEN-10.1",
+     "tema": "Suicídio de vulnerável",
+     "assertiva": "Se o suicídio se consuma e a vítima é menor de 14 anos ou não tem o necessário discernimento, o agente responde por homicídio.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 122, **§ 7º** (Lei 13.968/2019). Se o resultado é lesão gravíssima, responde pelo art. 129, § 2º (§ 6º).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "122",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 122, § 7º",
+        "texto": "§ 7º Se o crime de que trata o § 2º deste artigo é cometido contra menor de 14 (quatorze) anos ou contra quem não tem o necessário discernimento para a prática do ato, ou que, por qualquer outra causa, não pode oferecer resistência, responde o agente pelo crime de homicídio, nos termos do art. 121 deste Código."
+       }
+      ],
+      "palavras_chave": [
+       "§ 7º",
+       "homicídio"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.1-R2-06",
+     "ponto": "DBA26-PEN-10.1",
+     "tema": "Retratação na injúria",
+     "assertiva": "A retratação cabal do querelado antes da sentença isenta de pena nos crimes de calúnia, difamação e injúria.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 143: só **calúnia e difamação** (imputam fatos). Na injúria não há fato a desmentir.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "143",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 143, caput",
+        "texto": "Art. 143 - O querelado que, antes da sentença, se retrata cabalmente da calúnia ou da difamação, fica isento de pena."
+       }
+      ],
+      "pegadinha": "Incluir a injúria.",
+      "palavras_chave": [
+       "calúnia e difamação"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.1-R2-07",
+     "ponto": "DBA26-PEN-10.1",
+     "tema": "Vítima do vicaricídio",
+     "assertiva": "O vicaricídio exige que a vítima morta seja a própria mulher em situação de violência doméstica.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "No art. 121-B, a vítima morta é **outra pessoa** (descendente, ascendente, dependente, enteado ou pessoa sob guarda da mulher); a mulher é a destinatária do **sofrimento, punição ou controle**. Matar a mulher é feminicídio (art. 121-A).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "121-B",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 121-B, caput",
+        "texto": "Matar descendente, ascendente, dependente, enteado ou pessoa sob guarda ou responsabilidade direta da mulher, com o fim específico de causar-lhe sofrimento, punição ou controle"
+       }
+      ],
+      "pegadinha": "Confundir vicaricídio com feminicídio.",
+      "palavras_chave": [
+       "sofrimento, punição ou controle"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.1-R2-08",
+     "ponto": "DBA26-PEN-10.1",
+     "tema": "Injúria qualificada",
+     "assertiva": "A injúria que utiliza elementos referentes a religião ou à condição de pessoa idosa ou com deficiência é punida com reclusão de 1 a 3 anos; a injúria racial passou à Lei 7.716/1989.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 140, § 3º, e Lei 7.716/1989, art. 2º-A, ambos na redação da **Lei 14.532/2023** (injúria racial: reclusão de 2 a 5 anos).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "140",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 140, § 3º",
+        "texto": "§ 3º Se a injúria consiste na utilização de elementos referentes a religião ou à condição de pessoa idosa ou com deficiência:"
+       },
+       {
+        "lei": "L7716",
+        "art": "2-A",
+        "par": "",
+        "inc": "",
+        "rotulo": "Lei 7.716/1989, art. 2º-A",
+        "texto": "Injuriar alguém, ofendendo-lhe a dignidade ou o decoro, em razão de raça, cor, etnia ou procedência nacional."
+       }
+      ],
+      "palavras_chave": [
+       "Lei 14.532/2023",
+       "injúria racial"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.2-R2-01",
+     "ponto": "DBA26-PEN-10.2",
+     "tema": "Estelionato: ação penal",
+     "assertiva": "O estelionato é, em regra, crime de ação penal pública condicionada à representação, nos termos do § 5º do art. 171.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "A **Lei 15.397/2026 revogou o § 5º** (incluído pela Lei 13.964/2019): o estelionato voltou à ação **pública incondicionada**, regra geral do art. 100.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "171",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 171, § 5º",
+        "texto": "§ 5º (Revogado). (Redação dada pela Lei nº 15.397, de 2026)"
+       }
+      ],
+      "pegadinha": "Cobrar a representação do Pacote Anticrime.",
+      "palavras_chave": [
+       "revogou o § 5º",
+       "pública incondicionada"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.2-R2-02",
+     "ponto": "DBA26-PEN-10.2",
+     "tema": "Conta laranja",
+     "assertiva": "Incorre nas penas do estelionato quem cede, gratuita ou onerosamente, conta bancária para que nela transitem recursos destinados ao financiamento de atividade criminosa ou dela provenientes.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 171, § 2º, **VII** (cessão de conta laranja), incluído pela Lei 15.397/2026.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "171",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 171, § 2º, VII",
+        "texto": "VII – cede, gratuita ou onerosamente, conta bancária para que nela transitem recursos destinados ao financiamento de atividade criminosa ou que dela sejam fruto."
+       }
+      ],
+      "palavras_chave": [
+       "conta laranja",
+       "VII"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.2-R2-03",
+     "ponto": "DBA26-PEN-10.2",
+     "tema": "Pena da receptação",
+     "assertiva": "A receptação simples é punida com reclusão de 1 a 4 anos, e multa.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "A **Lei 15.397/2026** fixou **2 a 6 anos**, e multa (art. 180, caput). A receptação qualificada (§ 1º) segue com 3 a 8 anos.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "180",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 180, caput (pena)",
+        "texto": "Pena – reclusão, de 2 (dois) a 6 (seis) anos, e multa."
+       }
+      ],
+      "pegadinha": "Cobrar a pena anterior a 2026.",
+      "palavras_chave": [
+       "2 a 6 anos"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.2-R2-04",
+     "ponto": "DBA26-PEN-10.2",
+     "tema": "Autonomia da receptação",
+     "assertiva": "A receptação é punível ainda que desconhecido ou isento de pena o autor do crime de que proveio a coisa.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 180, § 4º: **autonomia** da receptação em relação ao crime antecedente.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "180",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 180, § 4º",
+        "texto": "§ 4º - A receptação é punível, ainda que desconhecido ou isento de pena o autor do crime de que proveio a coisa."
+       }
+      ],
+      "palavras_chave": [
+       "autonomia"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.2-R2-05",
+     "ponto": "DBA26-PEN-10.2",
+     "tema": "Imunidade e roubo",
+     "assertiva": "O filho que rouba o pai, com grave ameaça, fica isento de pena pela imunidade absoluta do art. 181 do Código Penal.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 183, I: as imunidades **não se aplicam** ao roubo, à extorsão ou a qualquer crime com violência ou grave ameaça (nem à vítima com 60 anos ou mais, III).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "183",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 183, I",
+        "texto": "I - se o crime é de roubo ou de extorsão, ou, em geral, quando haja emprego de grave ameaça ou violência à pessoa;"
+       }
+      ],
+      "pegadinha": "Estender a escusa absolutória ao roubo.",
+      "palavras_chave": [
+       "imunidades",
+       "não se aplicam"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.2-R2-06",
+     "ponto": "DBA26-PEN-10.2",
+     "tema": "Arma de uso restrito",
+     "assertiva": "Se a violência ou grave ameaça do roubo é exercida com arma de fogo de uso restrito ou proibido, aplica-se em dobro a pena do caput.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 157, **§ 2º-B** (Lei 13.964/2019); arma de fogo de uso permitido aumenta de 2/3 (§ 2º-A, I).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "157",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 157, § 2º-B",
+        "texto": "§ 2º-B. Se a violência ou grave ameaça é exercida com emprego de arma de fogo de uso restrito ou proibido"
+       }
+      ],
+      "palavras_chave": [
+       "§ 2º-B",
+       "em dobro"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.2-R2-07",
+     "ponto": "DBA26-PEN-10.2",
+     "tema": "Extorsão mediante sequestro com morte",
+     "assertiva": "Na extorsão mediante sequestro, se resulta a morte, a pena é de reclusão de 20 a 30 anos.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 159, § 3º: **24 a 30 anos** — a maior pena do Código antes das reformas de 2024–2026.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "159",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 159, § 3º",
+        "texto": "§ 3º - Se resulta a morte: Vide Lei nº 8.072, de 25.7.90\nPena - reclusão, de vinte e quatro a trinta anos."
+       }
+      ],
+      "pegadinha": "Errar o mínimo da pena.",
+      "palavras_chave": [
+       "24 a 30 anos"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.2-R2-08",
+     "ponto": "DBA26-PEN-10.2",
+     "tema": "Devedor contumaz",
+     "assertiva": "A extinção da punibilidade pelo pagamento espontâneo antes da ação fiscal, na apropriação indébita previdenciária, não se aplica ao agente declarado devedor contumaz e inscrito no Cadin.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 168-A, **§ 5º**, incluído pela Lei Complementar 225/2026 (o art. 337-A, § 5º, tem regra igual).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "168-A",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 168-A, § 5º",
+        "texto": "§ 5º A extinção de punibilidade de que trata o § 2º deste artigo não se aplica ao agente declarado devedor contumaz"
+       }
+      ],
+      "palavras_chave": [
+       "devedor contumaz",
+       "§ 5º"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.3-R2-01",
+     "ponto": "DBA26-PEN-10.3",
+     "tema": "Brasões oficiais",
+     "assertiva": "Reproduzir em marca, sem autorização, armas, brasões ou distintivos oficiais é crime de ação penal privada, como os demais crimes da Lei 9.279/1996.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "É justamente a **exceção** do art. 199: no crime do **art. 191**, a ação penal é **pública**.",
+      "lei": [
+       {
+        "lei": "L9279",
+        "art": "191",
+        "par": "",
+        "inc": "",
+        "rotulo": "Lei 9.279/1996, art. 191, caput",
+        "texto": "Reproduzir ou imitar, de modo que possa induzir em erro ou confusão, armas, brasões ou distintivos oficiais"
+       }
+      ],
+      "pegadinha": "Esquecer a exceção do art. 191.",
+      "palavras_chave": [
+       "art. 191",
+       "exceção"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.3-R2-02",
+     "ponto": "DBA26-PEN-10.3",
+     "tema": "Marca de alto renome",
+     "assertiva": "As penas dos crimes contra patentes, desenhos industriais e marcas aumentam-se de um terço à metade se a marca for de alto renome, notoriamente conhecida, de certificação ou coletiva.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Lei 9.279/1996, art. **196, II** (o inciso I trata de representante, sócio ou empregado do titular).",
+      "lei": [
+       {
+        "lei": "L9279",
+        "art": "196",
+        "par": "",
+        "inc": "",
+        "rotulo": "Lei 9.279/1996, art. 196, II",
+        "texto": "II - a marca alterada, reproduzida ou imitada for de alto renome, notoriamente conhecida, de certificação ou coletiva."
+       }
+      ],
+      "palavras_chave": [
+       "alto renome"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.3-R2-03",
+     "ponto": "DBA26-PEN-10.3",
+     "tema": "Desenho industrial",
+     "assertiva": "A Lei 9.279/1996 só tipifica crimes contra patentes e marcas; a violação de desenho industrial registrado é ilícito apenas civil.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "O art. **187** da LPI pune fabricar, sem autorização, produto que incorpore **desenho industrial** registrado ou imitação substancial.",
+      "lei": [
+       {
+        "lei": "L9279",
+        "art": "187",
+        "par": "",
+        "inc": "",
+        "rotulo": "Lei 9.279/1996, art. 187",
+        "texto": "Art. 187. Fabricar, sem autorização do titular, produto que incorpore desenho industrial registrado"
+       }
+      ],
+      "pegadinha": "Negar a tutela penal do desenho industrial.",
+      "palavras_chave": [
+       "desenho industrial"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.4-R2-01",
+     "ponto": "DBA26-PEN-10.4",
+     "tema": "Programa de computador",
+     "assertiva": "A violação de direitos de autor de programa de computador é tipificada em lei especial, com pena de detenção de seis meses a dois anos ou multa.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Lei **9.609/1998**, art. 12 (lei especial prevalece sobre o art. 184 do CP); reprodução para fins de comércio: reclusão de 1 a 4 anos (§ 1º).",
+      "lei": [
+       {
+        "lei": "L9609",
+        "art": "12",
+        "par": "",
+        "inc": "",
+        "rotulo": "Lei 9.609/1998, art. 12, caput",
+        "texto": "Art. 12. Violar direitos de autor de programa de computador:\nPena - Detenção de seis meses a dois anos ou multa."
+       }
+      ],
+      "palavras_chave": [
+       "Lei 9.609/1998"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.4-R2-02",
+     "ponto": "DBA26-PEN-10.4",
+     "tema": "Oferta sob demanda",
+     "assertiva": "A violação de direito autoral por oferecimento ao público sob demanda (cabo, fibra ótica, satélite), com intuito de lucro, é de ação penal pública incondicionada.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 186, **IV**: no § 3º do art. 184, a ação é **pública condicionada à representação**.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "186",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 186, IV",
+        "texto": "IV – ação penal pública condicionada à representação, nos crimes previstos no § 3o do art. 184."
+       }
+      ],
+      "pegadinha": "Igualar o § 3º aos §§ 1º e 2º.",
+      "palavras_chave": [
+       "condicionada à representação"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.4-R2-03",
+     "ponto": "DBA26-PEN-10.4",
+     "tema": "Software e sonegação",
+     "assertiva": "Nos crimes contra programa de computador, a ação penal deixa de ser privada quando do ato delituoso resulta sonegação fiscal ou perda de arrecadação tributária.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Lei 9.609/1998, art. 12, **§ 3º, II** (o inciso I trata de prejuízo a entidade pública).",
+      "lei": [
+       {
+        "lei": "L9609",
+        "art": "12",
+        "par": "",
+        "inc": "",
+        "rotulo": "Lei 9.609/1998, art. 12, § 3º, II",
+        "texto": "II - quando, em decorrência de ato delituoso, resultar sonegação fiscal, perda de arrecadação tributária"
+       }
+      ],
+      "palavras_chave": [
+       "§ 3º, II",
+       "sonegação fiscal"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.5-R2-01",
+     "ponto": "DBA26-PEN-10.5",
+     "tema": "Vítima vulnerável",
+     "assertiva": "No crime de frustração de direito assegurado por lei trabalhista, a pena aumenta de um sexto a um terço se a vítima é menor de dezoito anos, idosa, gestante, indígena ou portadora de deficiência.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 203, **§ 2º** (o art. 207, § 2º, tem aumento idêntico).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "203",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 203, § 2º",
+        "texto": "§ 2º A pena é aumentada de um sexto a um terço se a vítima é menor de dezoito anos, idosa, gestante, indígena"
+       }
+      ],
+      "palavras_chave": [
+       "§ 2º",
+       "um sexto a um terço"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.5-R2-02",
+     "ponto": "DBA26-PEN-10.5",
+     "tema": "Trabalho escravo",
+     "assertiva": "O crime de redução a condição análoga à de escravo está tipificado no título dos crimes contra a organização do trabalho.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "O art. **149** está no Título I (pessoa), capítulo dos crimes **contra a liberdade individual** — embora o tema seja trabalhista.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "149",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 149, caput",
+        "texto": "Art. 149. Reduzir alguém a condição análoga à de escravo"
+       }
+      ],
+      "pegadinha": "Confundir a topografia do art. 149.",
+      "palavras_chave": [
+       "contra a liberdade individual"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.5-R2-03",
+     "ponto": "DBA26-PEN-10.5",
+     "tema": "Decisão administrativa",
+     "assertiva": "O crime do art. 205 do Código Penal exige que o impedimento de exercer a atividade decorra de decisão judicial.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 205: impedimento por **decisão administrativa**. Exercer função de que foi suspenso por **decisão judicial** é o art. 359 (administração da justiça).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "205",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 205",
+        "texto": "Art. 205 - Exercer atividade, de que está impedido por decisão administrativa:"
+       }
+      ],
+      "pegadinha": "Trocar decisão administrativa por judicial.",
+      "palavras_chave": [
+       "decisão administrativa"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.6-R2-01",
+     "ponto": "DBA26-PEN-10.6",
+     "tema": "Violação de sepultura",
+     "assertiva": "A violação ou profanação de sepultura ou urna funerária é punida com detenção.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 210: **reclusão** de 1 a 3 anos, e multa.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "210",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 210",
+        "texto": "Art. 210 - Violar ou profanar sepultura ou urna funerária:\nPena - reclusão, de um a três anos, e multa."
+       }
+      ],
+      "pegadinha": "Trocar reclusão por detenção.",
+      "palavras_chave": [
+       "reclusão"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.6-R2-02",
+     "ponto": "DBA26-PEN-10.6",
+     "tema": "Violência no art. 209",
+     "assertiva": "O crime de impedimento ou perturbação de cerimônia funerária exige emprego de violência.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "A violência não é elementar: é **causa de aumento** de um terço, somada à pena da violência (art. 209, par. ún.).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "209",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 209, par. ún.",
+        "texto": "Parágrafo único - Se há emprego de violência, a pena é aumentada de um terço, sem prejuízo da correspondente à violência."
+       }
+      ],
+      "pegadinha": "Tratar a violência como elementar.",
+      "palavras_chave": [
+       "causa de aumento"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.6-R2-03",
+     "ponto": "DBA26-PEN-10.6",
+     "tema": "Vilipêndio de objeto de culto",
+     "assertiva": "Vilipendiar publicamente ato ou objeto de culto religioso é uma das condutas do crime de ultraje a culto.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 208, parte final: exige **publicidade**.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "208",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 208, parte final",
+        "texto": "vilipendiar publicamente ato ou objeto de culto religioso"
+       }
+      ],
+      "palavras_chave": [
+       "publicidade"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.7-R2-01",
+     "ponto": "DBA26-PEN-10.7",
+     "tema": "Corrupção de menores (art. 218)",
+     "assertiva": "Induzir alguém menor de 14 anos a satisfazer a lascívia de outrem é punido com reclusão de 2 a 5 anos.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "A **Lei 15.280/2025** fixou **6 a 14 anos**, e multa (art. 218).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "218",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 218 (pena)",
+        "texto": "Pena – reclusão, de 6 (seis) a 14 (quatorze) anos, e multa."
+       }
+      ],
+      "pegadinha": "Cobrar a pena anterior.",
+      "palavras_chave": [
+       "6 a 14 anos"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.7-R2-02",
+     "ponto": "DBA26-PEN-10.7",
+     "tema": "Estupro coletivo",
+     "assertiva": "Nos crimes contra a dignidade sexual, a pena aumenta de um a dois terços se o crime é praticado mediante concurso de dois ou mais agentes.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 226, **IV, a** (estupro coletivo); a alínea b é o estupro corretivo.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "226",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 226, IV, a",
+        "texto": "IV - de 1/3 (um terço) a 2/3 (dois terços), se o crime é praticado: (Incluído pela Lei nº 13.718, de 2018)\nEstupro coletivo (Incluído pela Lei nº 13.718, de 2018)\na) mediante concurso de 2 (dois) ou mais agentes;"
+       }
+      ],
+      "palavras_chave": [
+       "estupro coletivo"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.7-R2-03",
+     "ponto": "DBA26-PEN-10.7",
+     "tema": "Gravidez resultante",
+     "assertiva": "Nos crimes contra a dignidade sexual, se do crime resulta gravidez, a pena é aumentada de um sexto.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 234-A, **III**: aumento **de metade a 2/3**.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "234-A",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 234-A, III",
+        "texto": "III - de metade a 2/3 (dois terços), se do crime resulta gravidez;"
+       }
+      ],
+      "pegadinha": "Errar a fração.",
+      "palavras_chave": [
+       "de metade a 2/3"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.7-R2-04",
+     "ponto": "DBA26-PEN-10.7",
+     "tema": "Publicidade do condenado",
+     "assertiva": "Embora os processos por crimes contra a dignidade sexual corram em segredo de justiça, o nome completo do réu e a tipificação passam a ser de acesso público a partir da condenação em primeira instância por crimes como estupro e estupro de vulnerável.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 234-B, **§ 1º** (Lei 15.035/2024), ressalvado o sigilo fundamentado; absolvido em grau recursal, restabelece-se o sigilo (§ 2º).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "234-B",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 234-B, § 1º",
+        "texto": "§ 1º O sistema de consulta processual tornará de acesso público o nome completo do réu, seu número de inscrição no Cadastro de Pessoas Físicas (CPF) e a tipificação penal do fato a partir da condenação em primeira instância"
+       }
+      ],
+      "palavras_chave": [
+       "§ 1º",
+       "Lei 15.035/2024"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.7-R2-05",
+     "ponto": "DBA26-PEN-10.7",
+     "tema": "Vulnerável sem idade",
+     "assertiva": "O estupro de vulnerável restringe-se às vítimas menores de 14 anos.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "O § 1º do art. 217-A alcança, em qualquer idade, quem **por enfermidade ou deficiência mental não tem discernimento** ou, **por qualquer outra causa, não pode oferecer resistência** (ex.: embriaguez completa).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "217-A",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 217-A, § 1º",
+        "texto": "§ 1o Incorre na mesma pena quem pratica as ações descritas no caput com alguém que, por enfermidade ou deficiência mental, não tem o necessário discernimento para a prática do ato, ou que, por qualquer outra causa, não pode oferecer resistência."
+       }
+      ],
+      "pegadinha": "Esquecer o § 1º.",
+      "palavras_chave": [
+       "não pode oferecer resistência"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.7-R2-06",
+     "ponto": "DBA26-PEN-10.7",
+     "tema": "Cliente do adolescente explorado",
+     "assertiva": "Incorre nas penas do favorecimento da exploração sexual de vulnerável quem pratica conjunção carnal ou outro ato libidinoso com maior de 14 e menor de 18 anos submetido à prostituição.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 218-B, **§ 2º, I** (pena de 7 a 16 anos desde a Lei 15.280/2025).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "218-B",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 218-B, § 2º, I",
+        "texto": "I - quem pratica conjunção carnal ou outro ato libidinoso com alguém menor de 18 (dezoito) e maior de 14 (catorze) anos"
+       }
+      ],
+      "palavras_chave": [
+       "§ 2º, I"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.7-R2-07",
+     "ponto": "DBA26-PEN-10.7",
+     "tema": "Casa de prostituição",
+     "assertiva": "Manter estabelecimento em que ocorra exploração sexual só é crime se houver intuito de lucro.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 229: o crime existe **haja, ou não, intuito de lucro** ou mediação direta do proprietário ou gerente.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "229",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 229",
+        "texto": "Art. 229. Manter, por conta própria ou de terceiro, estabelecimento em que ocorra exploração sexual, haja, ou não, intuito de lucro"
+       }
+      ],
+      "pegadinha": "Exigir lucro.",
+      "palavras_chave": [
+       "haja, ou não, intuito de lucro"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.8-R2-01",
+     "ponto": "DBA26-PEN-10.8",
+     "tema": "Pai destituído",
+     "assertiva": "O pai destituído do poder familiar que subtrai o filho de quem tem a guarda legal comete subtração de incapazes.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 249, **§ 1º**: ser pai, tutor ou curador **não exime** de pena se destituído ou privado do poder familiar, tutela, curatela ou guarda.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "249",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 249, § 1º",
+        "texto": "§ 1º - O fato de ser o agente pai ou tutor do menor ou curador do interdito não o exime de pena"
+       }
+      ],
+      "palavras_chave": [
+       "não exime"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.8-R2-02",
+     "ponto": "DBA26-PEN-10.8",
+     "tema": "Restituição do incapaz",
+     "assertiva": "Na subtração de incapazes, restituído o menor sem maus-tratos ou privações, extingue-se a punibilidade pelo perdão do ofendido.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 249, § 2º: o juiz **pode deixar de aplicar a pena** — perdão **judicial**, não perdão do ofendido (que é ato bilateral na ação privada).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "249",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 249, § 2º",
+        "texto": "§ 2º - No caso de restituição do menor ou do interdito, se este não sofreu maus-tratos ou privações, o juiz pode deixar de aplicar pena."
+       }
+      ],
+      "pegadinha": "Trocar perdão judicial por perdão do ofendido.",
+      "palavras_chave": [
+       "perdão judicial"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.8-R2-03",
+     "ponto": "DBA26-PEN-10.8",
+     "tema": "Pena do abandono material",
+     "assertiva": "O abandono material é punido com reclusão de 1 a 4 anos.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 244: **detenção** de 1 a 4 anos e multa.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "244",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 244 (pena)",
+        "texto": "Pena - detenção, de 1 (um) a 4 (quatro) anos e multa"
+       }
+      ],
+      "pegadinha": "Trocar detenção por reclusão.",
+      "palavras_chave": [
+       "detenção"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.9-R2-01",
+     "ponto": "DBA26-PEN-10.9",
+     "tema": "Serviço telefônico",
+     "assertiva": "Interromper ou perturbar serviço telefônico é punido com reclusão de 2 a 4 anos, e multa, aplicadas em dobro se cometido por ocasião de calamidade pública.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 266, caput e **§ 2º, I**, na redação da **Lei 15.397/2026** (antes, detenção de 1 a 3 anos).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "266",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 266, caput (pena)",
+        "texto": "Pena – reclusão, de 2 (dois) a 4 (quatro) anos, e multa."
+       },
+       {
+        "lei": "CP",
+        "art": "266",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 266, § 2º, I",
+        "texto": "§ 2º Aplicam-se as penas em dobro se o crime é cometido: (Redação dada pela Lei nº 15.397, de 2026)\nI – por ocasião de calamidade pública;"
+       }
+      ],
+      "palavras_chave": [
+       "Lei 15.397/2026"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.9-R2-02",
+     "ponto": "DBA26-PEN-10.9",
+     "tema": "Epidemia culposa",
+     "assertiva": "Na epidemia culposa da qual resulta morte, a pena é aplicada em dobro.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "O dobro é da **dolosa** com morte (§ 1º). Na **culposa**, detenção de 1 a 2 anos, ou, se resulta morte, **2 a 4 anos** (§ 2º).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "267",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 267, § 2º",
+        "texto": "§ 2º - No caso de culpa, a pena é de detenção, de um a dois anos, ou, se resulta morte, de dois a quatro anos."
+       }
+      ],
+      "pegadinha": "Aplicar o dobro à forma culposa.",
+      "palavras_chave": [
+       "culposa"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.9-R2-03",
+     "ponto": "DBA26-PEN-10.9",
+     "tema": "Exercício ilegal com morte",
+     "assertiva": "Se do exercício ilegal da medicina resulta morte, o agente responde também pelo crime de homicídio.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 282, **§ 3º** (Lei 15.425/2026); lesão grave ou gravíssima, art. 129, §§ 1º e 2º (§ 2º).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "282",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 282, § 3º",
+        "texto": "§ 3º Se do crime resulta morte, responde também o agente pelo crime de homicídio, nos termos do art. 121 deste Código."
+       }
+      ],
+      "palavras_chave": [
+       "§ 3º"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.9-R2-04",
+     "ponto": "DBA26-PEN-10.9",
+     "tema": "Charlatanismo",
+     "assertiva": "O charlatanismo consiste em exercer o curandeirismo fazendo diagnósticos.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Charlatanismo (art. 283) é **inculcar ou anunciar cura por meio secreto ou infalível**; fazer diagnósticos é uma das formas do curandeirismo (art. 284, III).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "283",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 283",
+        "texto": "Art. 283 - Inculcar ou anunciar cura por meio secreto ou infalível:"
+       }
+      ],
+      "pegadinha": "Confundir charlatanismo com curandeirismo.",
+      "palavras_chave": [
+       "meio secreto ou infalível"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.10-R2-01",
+     "ponto": "DBA26-PEN-10.10",
+     "tema": "Contratar a associação",
+     "assertiva": "Incorre na pena da associação criminosa quem solicita ou contrata o cometimento de crime a integrante de associação criminosa, sem prejuízo da pena do crime encomendado.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 288, **§ 2º**, incluído pela Lei 15.245/2025.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "288",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 288, § 2º",
+        "texto": "§ 2º Incorre na pena prevista no caput deste artigo quem, de qualquer modo, solicitar ou contratar o cometimento de crime a integrante de associação criminosa"
+       }
+      ],
+      "palavras_chave": [
+       "§ 2º",
+       "Lei 15.245/2025"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.10-R2-02",
+     "ponto": "DBA26-PEN-10.10",
+     "tema": "Apologia",
+     "assertiva": "O crime de apologia exige que o elogio se refira a autor já condenado por sentença definitiva.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 287: apologia de **fato criminoso** ou de **autor de crime** — o tipo não exige condenação definitiva.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "287",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 287",
+        "texto": "Art. 287 - Fazer, publicamente, apologia de fato criminoso ou de autor de crime:"
+       }
+      ],
+      "pegadinha": "Exigir condenação.",
+      "palavras_chave": [
+       "fato criminoso"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.10-R2-03",
+     "ponto": "DBA26-PEN-10.10",
+     "tema": "Animosidade nas Forças Armadas",
+     "assertiva": "Incorre na pena da incitação ao crime quem incita, publicamente, animosidade entre as Forças Armadas ou delas contra os poderes constitucionais.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 286, **par. ún.** (Lei 14.197/2021, que revogou a Lei de Segurança Nacional).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "286",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 286, par. ún.",
+        "texto": "Parágrafo único. Incorre na mesma pena quem incita, publicamente, animosidade entre as Forças Armadas"
+       }
+      ],
+      "palavras_chave": [
+       "par. ún.",
+       "Lei 14.197/2021"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.11-R2-01",
+     "ponto": "DBA26-PEN-10.11",
+     "tema": "Atestado médico falso",
+     "assertiva": "O médico que, no exercício da profissão, dá atestado falso é punido com reclusão.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 302: **detenção** de 1 mês a 1 ano (multa se há fim de lucro).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "302",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 302",
+        "texto": "Art. 302 - Dar o médico, no exercício da sua profissão, atestado falso:\nPena - detenção, de um mês a um ano."
+       }
+      ],
+      "pegadinha": "Trocar detenção por reclusão.",
+      "palavras_chave": [
+       "detenção"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.11-R2-02",
+     "ponto": "DBA26-PEN-10.11",
+     "tema": "Fraude em certame",
+     "assertiva": "Na fraude em certames de interesse público, a pena aumenta-se de um terço se o fato é cometido por funcionário público.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 311-A, **§ 3º** (Lei 12.550/2011).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "311-A",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 311-A, § 3º",
+        "texto": "§ 3o Aumenta-se a pena de 1/3 (um terço) se o fato é cometido por funcionário público."
+       }
+      ],
+      "palavras_chave": [
+       "§ 3º"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.11-R2-03",
+     "ponto": "DBA26-PEN-10.11",
+     "tema": "Funcionário e documento público",
+     "assertiva": "Se o funcionário público falsifica documento público prevalecendo-se do cargo, a pena aumenta-se de um terço.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 297, § 1º: aumento de **sexta parte**.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "297",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 297, § 1º",
+        "texto": "§ 1º - Se o agente é funcionário público, e comete o crime prevalecendo-se do cargo, aumenta-se a pena de sexta parte."
+       }
+      ],
+      "pegadinha": "Errar a fração.",
+      "palavras_chave": [
+       "sexta parte"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.11-R2-04",
+     "ponto": "DBA26-PEN-10.11",
+     "tema": "Documentos equiparados",
+     "assertiva": "Para os efeitos penais, os livros mercantis e o testamento particular equiparam-se a documento público.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 297, **§ 2º**.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "297",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 297, § 2º",
+        "texto": "§ 2º - Para os efeitos penais, equiparam-se a documento público o emanado de entidade paraestatal, o título ao portador ou transmissível por endosso, as ações de sociedade comercial, os livros mercantis e o testamento particular."
+       }
+      ],
+      "palavras_chave": [
+       "§ 2º"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.11-R2-05",
+     "ponto": "DBA26-PEN-10.11",
+     "tema": "Uso de documento alheio",
+     "assertiva": "Usar como próprio passaporte ou documento de identidade alheio configura a falsa identidade do art. 307.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "É tipo **próprio**, o art. **308** (detenção de 4 meses a 2 anos, e multa), que também pune quem cede o documento.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "308",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 308",
+        "texto": "Art. 308 - Usar, como próprio, passaporte, título de eleitor, caderneta de reservista ou qualquer documento de identidade alheia"
+       }
+      ],
+      "pegadinha": "Confundir os arts. 307 e 308.",
+      "palavras_chave": [
+       "308"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.11-R2-06",
+     "ponto": "DBA26-PEN-10.11",
+     "tema": "Veículo adulterado",
+     "assertiva": "Incorre nas penas do art. 311 quem adquire, recebe, conduz ou utiliza veículo com sinal identificador que devesse saber estar adulterado ou remarcado.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 311, **§ 2º, III** (Lei 14.562/2023).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "311",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 311, § 2º, III",
+        "texto": "III – aquele que adquire, recebe, transporta, conduz, oculta, mantém em depósito, desmonta, monta, remonta, vende, expõe à venda, ou de qualquer forma utiliza, em proveito próprio ou alheio, veículo automotor, elétrico, híbrido, de reboque, semirreboque ou suas combinações ou partes, com número de chassi ou monobloco, placa de identificação ou qualquer sinal identificador veicular que devesse saber estar adulterado ou remarcado."
+       }
+      ],
+      "palavras_chave": [
+       "§ 2º, III"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.12-R2-01",
+     "ponto": "DBA26-PEN-10.12",
+     "tema": "Denunciação caluniosa",
+     "assertiva": "Comete denunciação caluniosa quem dá causa à instauração de inquérito civil ou de ação de improbidade administrativa contra alguém, imputando-lhe ato ímprobo de que o sabe inocente.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 339, na redação da **Lei 14.110/2020** (inclui infração ético-disciplinar e ato ímprobo).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "339",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 339, caput",
+        "texto": "instauração de inquérito policial, de procedimento investigatório criminal, de processo judicial, de processo administrativo disciplinar, de inquérito civil ou de ação de improbidade administrativa contra alguém, imputando-lhe crime, infração ético-disciplinar ou ato ímprobo de que o sabe inocente:"
+       }
+      ],
+      "palavras_chave": [
+       "Lei 14.110/2020"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.12-R2-02",
+     "ponto": "DBA26-PEN-10.12",
+     "tema": "Retratação no falso testemunho",
+     "assertiva": "No falso testemunho, a retratação feita após a sentença no processo em que ocorreu o ilícito extingue a punibilidade.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 342, § 2º: a retratação deve ocorrer **antes da sentença** no processo em que se deu o falso.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "342",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 342, § 2º",
+        "texto": "§ 2o O fato deixa de ser punível se, antes da sentença no processo em que ocorreu o ilícito, o agente se retrata ou declara a verdade."
+       }
+      ],
+      "pegadinha": "Admitir retratação tardia.",
+      "palavras_chave": [
+       "antes da sentença"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.12-R2-03",
+     "ponto": "DBA26-PEN-10.12",
+     "tema": "Favorecimento pessoal e família",
+     "assertiva": "No favorecimento pessoal, fica isento de pena quem presta o auxílio sendo ascendente, descendente, cônjuge ou irmão do criminoso.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. 348, **§ 2º** (escusa absolutória).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "348",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 348, § 2º",
+        "texto": "§ 2º - Se quem presta o auxílio é ascendente, descendente, cônjuge ou irmão do criminoso, fica isento de pena."
+       }
+      ],
+      "palavras_chave": [
+       "escusa absolutória"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.12-R2-04",
+     "ponto": "DBA26-PEN-10.12",
+     "tema": "Exercício arbitrário",
+     "assertiva": "O exercício arbitrário das próprias razões é sempre crime de ação penal privada.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 345, par. ún.: só se procede mediante queixa **se não há emprego de violência**; com violência, a ação é pública.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "345",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 345, par. ún.",
+        "texto": "Parágrafo único - Se não há emprego de violência, somente se procede mediante queixa."
+       }
+      ],
+      "pegadinha": "Ignorar a violência.",
+      "palavras_chave": [
+       "se não há emprego de violência"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.12-R2-05",
+     "ponto": "DBA26-PEN-10.12",
+     "tema": "Descumprimento de protetivas no CP",
+     "assertiva": "O descumprimento de decisão judicial que defere medidas protetivas de urgência é tipificado no Código Penal, com pena de reclusão de 2 a 5 anos, e só a autoridade judicial pode conceder fiança no flagrante.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. **338-A**, incluído pela Lei 15.280/2025 (a base também mantém o art. 24-A da Lei 11.340/2006, com a mesma pena).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "338-A",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 338-A, caput",
+        "texto": "Art. 338-A. Descumprir decisão judicial que defere medidas protetivas de urgência: (Incluído pela Lei nº 15.280, de 2025)\nPena – reclusão, de 2 (dois) a 5 (cinco) anos, e multa."
+       },
+       {
+        "lei": "CP",
+        "art": "338-A",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 338-A, § 2º",
+        "texto": "§ 2º Na hipótese de prisão em flagrante, apenas a autoridade judicial pode conceder fiança."
+       }
+      ],
+      "palavras_chave": [
+       "338-A",
+       "Lei 15.280/2025"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.12-R2-06",
+     "ponto": "DBA26-PEN-10.12",
+     "tema": "Comunicação falsa de crime",
+     "assertiva": "A comunicação falsa de crime exige que o agente impute o fato a pessoa determinada.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 340: basta provocar a ação da autoridade comunicando crime **que sabe não se ter verificado**. Imputar a pessoa determinada que se sabe inocente é **denunciação caluniosa** (art. 339).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "340",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 340",
+        "texto": "Art. 340 - Provocar a ação de autoridade, comunicando-lhe a ocorrência de crime ou de contravenção que sabe não se ter verificado:"
+       }
+      ],
+      "pegadinha": "Confundir os arts. 339 e 340.",
+      "palavras_chave": [
+       "denunciação caluniosa"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.12-R2-07",
+     "ponto": "DBA26-PEN-10.12",
+     "tema": "Fraude à licitação",
+     "assertiva": "O crime de frustração do caráter competitivo de licitação é formal e se consuma independentemente de prejuízo ao erário.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. **337-F** (Lei 14.133/2021, reclusão de 4 a 8 anos); **Súmula 645/STJ**, firmada para o antigo art. 90 da Lei 8.666/1993, de redação equivalente.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "337-F",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 337-F",
+        "texto": "Art. 337-F. Frustrar ou fraudar, com o intuito de obter para si ou para outrem vantagem decorrente da adjudicação do objeto da licitação"
+       }
+      ],
+      "juris": [
+       {
+        "tribunal": "STJ",
+        "fonte": "Súmula 645/STJ",
+        "data": "10/02/2021",
+        "texto": "O crime de fraude à licitação é formal, e sua consumação prescinde da comprovação do prejuízo ou da obtenção de vantagem."
+       }
+      ],
+      "palavras_chave": [
+       "Súmula 645/STJ",
+       "337-F"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.12-R2-08",
+     "ponto": "DBA26-PEN-10.12",
+     "tema": "Aumento do art. 327, § 2º",
+     "assertiva": "A pena dos crimes funcionais é aumentada da terça parte sempre que o autor for servidor efetivo.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 327, § 2º: aumento para ocupantes de **cargos em comissão** ou de **função de direção ou assessoramento** da administração direta ou indireta.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "327",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 327, § 2º",
+        "texto": "§ 2º - A pena será aumentada da terça parte quando os autores dos crimes previstos neste Capítulo forem ocupantes de cargos em comissão"
+       }
+      ],
+      "pegadinha": "Estender a qualquer servidor.",
+      "palavras_chave": [
+       "cargos em comissão"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.13-R2-01",
+     "ponto": "DBA26-PEN-10.13",
+     "tema": "Títulos da dívida",
+     "assertiva": "Ordenar a oferta pública de títulos da dívida pública que não tenham sido criados por lei ou não estejam registrados em sistema centralizado de liquidação e custódia é crime.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. **359-H** (reclusão de 1 a 4 anos).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "359-H",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 359-H",
+        "texto": "Art. 359-H. Ordenar, autorizar ou promover a oferta pública ou a colocação no mercado financeiro de títulos da dívida pública"
+       }
+      ],
+      "palavras_chave": [
+       "359-H"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.13-R2-02",
+     "ponto": "DBA26-PEN-10.13",
+     "tema": "Não cancelamento de restos a pagar",
+     "assertiva": "O art. 359-F pune quem promove o cancelamento de restos a pagar inscritos em valor superior ao permitido em lei.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "O crime é **deixar de** ordenar, autorizar ou promover o cancelamento (omissivo próprio).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "359-F",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 359-F",
+        "texto": "Art. 359-F. Deixar de ordenar, de autorizar ou de promover o cancelamento do montante de restos a pagar"
+       }
+      ],
+      "pegadinha": "Transformar a omissão em ação.",
+      "palavras_chave": [
+       "deixar de"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.13-R2-03",
+     "ponto": "DBA26-PEN-10.13",
+     "tema": "Despesa não autorizada",
+     "assertiva": "Ordenar despesa não autorizada por lei é punido com reclusão de 1 a 4 anos.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. **359-D**.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "359-D",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 359-D",
+        "texto": "Art. 359-D. Ordenar despesa não autorizada por lei: (Incluído pela Lei nº 10.028, de 2000)\nPena – reclusão, de 1 (um) a 4 (quatro) anos."
+       }
+      ],
+      "palavras_chave": [
+       "359-D"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.14-R2-01",
+     "ponto": "DBA26-PEN-10.14",
+     "tema": "Violência política",
+     "assertiva": "O crime de violência política só protege candidatos regularmente registrados na Justiça Eleitoral.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 359-P: protege o exercício de direitos políticos de **qualquer pessoa**, em razão de sexo, raça, cor, etnia, religião ou procedência nacional.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "359-P",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 359-P",
+        "texto": "Art. 359-P. Restringir, impedir ou dificultar, com emprego de violência física, sexual ou psicológica, o exercício de direitos políticos a qualquer pessoa em razão de seu sexo, raça, cor, etnia, religião ou procedência nacional:"
+       }
+      ],
+      "pegadinha": "Restringir a candidatos.",
+      "palavras_chave": [
+       "qualquer pessoa"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.14-R2-02",
+     "ponto": "DBA26-PEN-10.14",
+     "tema": "Processo eleitoral",
+     "assertiva": "Impedir ou perturbar a eleição ou a aferição de seu resultado mediante violação indevida de mecanismos de segurança do sistema eletrônico de votação é crime contra o funcionamento das instituições democráticas no processo eleitoral.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "Art. **359-N** (reclusão de 3 a 6 anos, e multa).",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "359-N",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 359-N",
+        "texto": "Art. 359-N. Impedir ou perturbar a eleição ou a aferição de seu resultado"
+       }
+      ],
+      "palavras_chave": [
+       "359-N"
+      ]
+     }
+    },
+    {
+     "id": "PEN-10.14-R2-03",
+     "ponto": "DBA26-PEN-10.14",
+     "tema": "Atentado à soberania",
+     "assertiva": "No atentado à soberania, se declarada guerra em decorrência da conduta, a pena aumenta-se de um terço.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "Art. 359-I, § 1º: aumento **de metade até o dobro**.",
+      "lei": [
+       {
+        "lei": "CP",
+        "art": "359-I",
+        "par": "",
+        "inc": "",
+        "rotulo": "CP, art. 359-I, § 1º",
+        "texto": "§ 1º Aumenta-se a pena de metade até o dobro, se declarada guerra em decorrência das condutas previstas no caput deste artigo."
+       }
+      ],
+      "pegadinha": "Errar a fração.",
+      "palavras_chave": [
+       "de metade até o dobro"
+      ]
+     }
+    },
+    {
+     "id": "PEN-11-R2-01",
+     "ponto": "DBA26-PEN-11",
+     "tema": "Corrupção de menores (ECA)",
+     "assertiva": "A configuração do crime de corrupção de menores do art. 244-B do ECA independe da prova da efetiva corrupção do menor, por se tratar de delito formal.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "**Súmula 500/STJ**.",
+      "juris": [
+       {
+        "tribunal": "STJ",
+        "fonte": "Súmula 500/STJ",
+        "data": "23/10/2013",
+        "texto": "A configuração do crime do art. 244-B do ECA independe da prova da efetiva corrupção do menor, por se tratar de delito formal."
+       }
+      ],
+      "palavras_chave": [
+       "Súmula 500/STJ"
+      ]
+     }
+    },
+    {
+     "id": "PEN-11-R2-02",
+     "ponto": "DBA26-PEN-11",
+     "tema": "Sinal clandestino de internet",
+     "assertiva": "O princípio da insignificância aplica-se à transmissão clandestina de sinal de internet via radiofrequência, por ausência de lesão relevante.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "**Súmula 606/STJ**: **não se aplica** (art. 183 da Lei 9.472/1997).",
+      "juris": [
+       {
+        "tribunal": "STJ",
+        "fonte": "Súmula 606/STJ",
+        "data": "11/04/2018",
+        "texto": "Não se aplica o princípio da insignificância à transmissão clandestina de sinal de internet via radiofrequência (art. 183 da Lei 9.472/1997)."
+       }
+      ],
+      "pegadinha": "Aplicar a bagatela.",
+      "palavras_chave": [
+       "Súmula 606/STJ"
+      ]
+     }
+    },
+    {
+     "id": "PEN-11-R2-03",
+     "ponto": "DBA26-PEN-11",
+     "tema": "Vetores da insignificância",
+     "assertiva": "Para o STF, a insignificância exige mínima ofensividade da conduta, nenhuma periculosidade social da ação, reduzidíssimo grau de reprovabilidade do comportamento e inexpressividade da lesão jurídica.",
+     "gabarito": "C",
+     "comentario": {
+      "resumo": "**HC 84.412/SP** (Segunda Turma, 19/10/2004): vetores **cumulativos**, aplicados a todos os crimes da Parte Especial.",
+      "juris": [
+       {
+        "tribunal": "STF",
+        "fonte": "HC 84.412/SP, Segunda Turma",
+        "data": "19/10/2004",
+        "texto": "Insignificância exige, cumulativamente: mínima ofensividade da conduta, nenhuma periculosidade social da ação, reduzidíssimo grau de reprovabilidade do comportamento e inexpressividade da lesão jurídica."
+       }
+      ],
+      "palavras_chave": [
+       "HC 84.412",
+       "cumulativos"
+      ]
+     }
+    },
+    {
+     "id": "PEN-11-R2-04",
+     "ponto": "DBA26-PEN-11",
+     "tema": "Arma com numeração raspada",
+     "assertiva": "A abolitio criminis temporária do Estatuto do Desarmamento alcança a posse de arma de uso permitido com numeração raspada praticada a qualquer tempo.",
+     "gabarito": "E",
+     "comentario": {
+      "resumo": "**Súmula 513/STJ**: só a posse praticada **até 23/10/2005**.",
+      "juris": [
+       {
+        "tribunal": "STJ",
+        "fonte": "Súmula 513/STJ",
+        "data": "11/06/2014",
+        "texto": "A abolitio criminis temporária da Lei 10.826/2003 aplica-se à posse de arma de uso permitido com numeração raspada, suprimida ou adulterada, praticada somente até 23/10/2005."
+       }
+      ],
+      "pegadinha": "Eternizar a vacatio.",
+      "palavras_chave": [
+       "Súmula 513/STJ",
+       "23/10/2005"
       ]
      }
     }

@@ -78,25 +78,43 @@ inconstitucional), dita no comentário quando a letra do CPP diverge; (3) dispos
 (arts. 21, 198 parte final, 241, 260 para interrogatório) aparecem só como pegadinha, nunca como regra; (4) súmula
 vinculante leva como data a publicação no DJe, que é a que a página oficial traz.
 
-## Penal (08/11/2026) — entrega em duas etapas
+## Penal (08/11/2026) — entregue em duas etapas, completo
 
-`pente_fino_pen.js` (`--disc PEN`, conteúdo em `ferramentas/pente_fino/pen/`, jurisprudência em `pen/pen_juris.py`).
-**Esta entrega traz só a PARTE GERAL**: os 58 pontos `DBA26-PEN-1` a `PEN-9.2` (títulos 1 a 9 do edital, com
-subitens; ids `PEN-4.10-R1-01`), em `pen_p01_02.py`, `pen_p03.py`, `pen_p04.py`, `pen_p05_07.py`, `pen_p08.py` e
-`pen_p09.py`. Ficam para a **PARTE ESPECIAL** `PEN-10` a `PEN-10.14` (crimes em espécie) e `PEN-11` (jurisprudência e
-legislação aplicadas a cada tópico).
+`pente_fino_pen.js` (`--disc PEN`, conteúdo em `ferramentas/pente_fino/pen/`, jurisprudência em `pen/pen_juris.py`):
+os **74 pontos** do edital (ids `PEN-4.10-R1-01`, `PEN-10.12-R2-03`).
+**PARTE GERAL** (1ª etapa, commit 89b701a): os 58 pontos `DBA26-PEN-1` a `PEN-9.2` (títulos 1 a 9, com subitens), em
+`pen_p01_02.py`, `pen_p03.py`, `pen_p04.py`, `pen_p05_07.py`, `pen_p08.py` e `pen_p09.py` — 553 assertivas.
+**PARTE ESPECIAL** (2ª etapa): os 16 pontos `PEN-10`, `PEN-10.1` a `PEN-10.14` (crimes em espécie) e `PEN-11`, em
+`pen_p10_01.py` (10 e 10.1), `pen_p10_02_06.py` (10.2 a 10.6), `pen_p10_07_10.py` (10.7 a 10.10),
+`pen_p10_11_14.py` (10.11 a 10.14) e `pen_p11.py` — 185 assertivas (R1 113, R2 72). A reconstrução reproduz, item por
+item, as 553 assertivas da Parte Geral.
 
-- **Entrega parcial explícita:** a entrada PEN de `disciplinas.py` traz `pontos_incluidos` (lista `PEN_PARTE_GERAL` +
-  `PEN_PARTE_ESPECIAL`, esta vazia por ora). `construir.py` grava em `pontos` só esses ids (a tela não mostra ponto
-  vazio) e `conferir.py` exige exatamente eles, na ordem, e **imprime os pendentes do edital**. A regra só vale para
-  quem tem a chave: CPC, CIV, MLE, CRI e CPP continuam exigindo todos os pontos do edital.
-- **Como acrescentar a Parte Especial:** (1) criar os arquivos de conteúdo em `pen/` (sugestão: `pen_p10_01_04.py`,
-  `pen_p10_05_11.py`, `pen_p10_12_14.py`, `pen_p11.py`), reaproveitando `pen_juris.py` e acrescentando julgados
-  conferidos; (2) somar os nomes em `modulos`; (3) pôr os ids em `PEN_PARTE_ESPECIAL`. Com os 74 feitos, a chave
-  `pontos_incluidos` pode sair (volta a valer o edital inteiro). Revisar então `cabecalho`, `fontes` e `volume`.
+- **Lista explícita:** a entrada PEN de `disciplinas.py` traz `pontos_incluidos` (`PEN_PARTE_GERAL` +
+  `PEN_PARTE_ESPECIAL`), que agora cobre o edital inteiro — o conferidor informa **0 pendentes**. A chave ficou como
+  registro das duas etapas; tirá-la não muda o arquivo gerado. A regra só vale para quem tem a chave: CPC, CIV, MLE,
+  CRI e CPP continuam exigindo todos os pontos do edital.
+- **PEN-10** (rótulo "Crimes.") faz a visão de conjunto da Parte Especial: hediondez (Lei 8.072/1990), ação penal dos
+  crimes sexuais e as reformas de 2024–2026. **PEN-10.3** (propriedade imaterial) cobre a **propriedade industrial**
+  (Lei 9.279/1996, que revogou os arts. 187 a 196 do CP) e **PEN-10.4** (propriedade intelectual) o **direito autoral**
+  (CP, arts. 184 e 186) e o **programa de computador** (Lei 9.609/1998). **PEN-11** é ponto de **fechamento**:
+  jurisprudência transversal (súmulas e teses aplicáveis a vários crimes), toda conferida.
 - Volume próprio (R1 5–12, R2 3–8): R1 5–6 e R2 3–4 na média; os de maior incidência AOCP (`PEN-9.1`, `1.1`, `7`,
-  `1.2`, `2.2`, `8.11`…) e a prescrição (`9.2`) vão além. Como no CPP, **toda assertiva tem lei ou jurisprudência**.
-- Particularidades: (1) a lei seca guarda redações de 2024–2026 — CP, arts. 61, II, m (Lei 15.159/2025), 65, I, e 115
+  `1.2`, `2.2`, `8.11`…), a prescrição (`9.2`) e os grandes da Parte Especial (`10.1`, `10.2` e `10.12` com 12/8,
+  `10.7` com 11/7, `10.11` com 9/6) vão além. Como no CPP, **toda assertiva tem lei ou jurisprudência**.
+- Parte Especial — particularidades: (1) a base guarda as redações de 2025–2026 e o item cita a linha vigente, com a
+  antiga só como pegadinha: Lei 15.397/2026 (furto 1 a 6 anos e repouso noturno de metade; roubo 6 a 10; latrocínio 24
+  a 30; receptação 2 a 6; **revogação do § 5º do art. 171** — estelionato volta à ação pública incondicionada; conta
+  laranja, art. 171, § 2º, VII; art. 266), Lei 15.280/2025 (penas dos arts. 217-A, 218, 218-A, 218-B e 218-C; art.
+  338-A), Lei 15.353/2026 (art. 217-A, § 4º-A: presunção **absoluta** de vulnerabilidade), Lei 15.384/2026
+  (vicaricídio, art. 121-B, hediondo), Lei 15.358/2026 (marco do crime organizado: arts. 121, § 2º-D, 148, § 3º, 157,
+  §§ 4º–5º...), Lei 15.402/2026 (arts. 359-M-A e 359-M-B), Lei 15.425/2026 (art. 282), Lei 15.245/2025 (art. 288,
+  §§ 1º–2º), LC 225/2026 (devedor contumaz, arts. 168-A e 337-A, § 5º); (2) **feminicídio** é crime autônomo (art.
+  121-A, Lei 14.994/2024) e a qualificadora do inciso VI aparece só como pegadinha; (3) o conferidor acusa como
+  "redação superada" a linha citada quando as duas seguintes começam com o mesmo marcador (ex.: `I-B` seguido de `I-C`
+  na Lei 8.072/1990, art. 1º; o caput do art. 359-M seguido do art. 359-M-A) — nesses casos cita-se outra linha do
+  mesmo dispositivo (a pena, ou o inciso seguinte) e o comentário explica; (4) o art. 339 traz na base o "à" em forma
+  decomposta (a + acento combinante): o recorte começa depois dele.
+- Parte Geral — particularidades: (1) a lei seca guarda redações de 2024–2026 — CP, arts. 61, II, m (Lei 15.159/2025), 65, I, e 115
   (Lei 15.160/2025: ressalva da violência sexual contra a mulher), 92 (Leis 14.994/2024, 15.358/2026 e 15.487/2026),
   91-A, § 5º (Lei 15.358/2026), 103, par. ún. (Lei 15.438/2026: decadência de 12 meses na violência doméstica); LEP,
   art. 112 (Leis 14.843/2024, 15.358/2026 e 15.402/2026: caput com 1/6, hediondo primário 70%, feminicídio 75%), art.

@@ -206,3 +206,36 @@ prompt do servidor já manda não aplicar norma posterior.
   779 (01/08/2023), o HC 176.473 (sessão virtual de 17 a 24/04/2020) e o Tema 788/RG (sessão virtual encerrada em
   30/06/2023); HC 84.412 (Segunda Turma, 19/10/2004, data citada nos acórdãos do STF). A `assets/sumulas.json` não foi
   usada como fonte.
+
+## Pente Fino de Direito Penal — Parte Especial (08/11/2026, D-021)
+
+- **Guia de temas e profundidade (sem cópia de texto):** `DELEGADO BA/RESUMO DESTACADO - DELEGADO PCPR - DIREITO PENAL
+  - PARTE ESPECIAL.pdf` (lidos só os títulos dos capítulos para calibrar o que cai e o nível) e a incidência AOCP de
+  `revisao/mapa_prioridade.json` (PEN-10.6, 10.7, 10.9, 10.10, 10.11 e 10.12 com incidência; os demais, zero).
+  Material de terceiro, uso pessoal (D-018).
+- Texto das 185 assertivas (PEN-10 a 10.14 e PEN-11) e dos comentários de `discursiva/pente_fino_pen.js` (gerado de
+  `ferramentas/pente_fino/pen/pen_p10_01.py`, `pen_p10_02_06.py`, `pen_p10_07_10.py`, `pen_p10_11_14.py` e
+  `pen_p11.py`) é próprio: conferência de janelas de 8 palavras contra o material — 1 frase coincidente fora da lei foi
+  reescrita (privilégio da violenta emoção); as que sobram fora da letra de lei e das súmulas/teses oficiais são paráfrase
+  do texto legal (penas escritas "1 a 4 anos" × "1 (um) a 4 (quatro) anos", tipos como "induzir alguém menor de 14
+  anos a satisfazer a lascívia de outrem") ou o nome legal do crime ("induzimento a erro essencial e ocultação de
+  impedimento", "registro não autorizado da intimidade sexual"). ⚠️ O PDF traz marca d'água com dados pessoais do
+  comprador: nada disso entrou (busca por CPF e pelo nome do material nos arquivos novos: zero), e a extração de texto
+  foi apagada ao fim. A Parte Geral não foi alterada (a reconstrução reproduz as 553 assertivas, item por item).
+- **Letra de lei:** `assets/lei_seca_oficial.json` (Planalto), sem lei nova acrescentada; 177 citações de 118
+  dispositivos (CP, Lei 8.072/1990, Lei 9.279/1996, Lei 9.609/1998, Lei 7.716/1989). Citadas as redações de 2023–2026
+  já presentes na base: Lei 15.397/2026 (CP, arts. 155, caput e § 1º, 157, caput e § 3º, II, 171, § 2º, VII, e § 5º
+  revogado, 180, caput, e 266), Lei 15.280/2025 (arts. 217-A, 218, 218-B, 218-C e 338-A), Lei 15.353/2026 (art.
+  217-A, §§ 4º-A e 5º), Lei 15.384/2026 (art. 121-B; Lei 8.072/1990, art. 1º, I-C), Lei 15.358/2026 (art. 121, § 2º-D),
+  Lei 15.402/2026 (art. 359-M-B), Lei 15.425/2026 (art. 282, §§ 3º e 5º), Lei 15.245/2025 (art. 288, §§ 1º e 2º), Lei
+  Complementar 225/2026 (art. 168-A, § 5º), Lei 14.994/2024 (arts. 121-A, 129, § 13, e 147, §§ 1º e 2º), Lei
+  14.811/2024 (Lei 8.072/1990, art. 1º, XI), Lei 15.035/2024 (art. 234-B, § 1º) e Lei 14.532/2023 (art. 140, § 3º; Lei
+  7.716/1989, art. 2º-A).
+- **Jurisprudência (conferida em 08/11/2026):** 33 julgados/súmulas na Parte Especial — 18 reaproveitados de
+  `pen_juris.py` e 15 novos: Súmulas 24, 73, 502, 522, 542, 574 e 593 do STJ no SCON (processo.stj.jus.br/SCON/sumstj,
+  data = "julgado em", nenhuma com indicação de cancelamento); Temas 157 (revisado, 28/02/2018), 934 (14/10/2015) e
+  1.121 (08/06/2022) na página de repetitivos do STJ; Súmulas 603 e 714 do STF na página oficial de cada súmula
+  (portal.stf.jus.br — a página traz só a publicação no DJ, e é essa a data usada, dita na fonte); notícias oficiais do
+  STF para a ADPF 54 (12/04/2012) e a ADPF 496 (sessão virtual finalizada em 19/06/2020); andamento do Tema 1.003/RG
+  (mérito em 24/03/2021, tese readequada nos embargos, sessão virtual de 02 a 12/06/2023). A `assets/sumulas.json` não
+  foi usada como fonte.

@@ -33,7 +33,10 @@ if CFG.get('pontos_incluidos') is not None:
     if fora: print('ERRO: pontos_incluidos fora do edital:', fora); sys.exit(1)
     pendentes = [p for p in edital if p not in set(CFG['pontos_incluidos'])]
     edital = [p for p in edital if p in set(CFG['pontos_incluidos'])]
-    print(f'Entrega parcial: {len(edital)} pontos incluídos; {len(pendentes)} do edital ainda pendentes: {", ".join(pendentes)}')
+    if pendentes:
+        print(f'Entrega parcial: {len(edital)} pontos incluídos; {len(pendentes)} do edital ainda pendentes: {", ".join(pendentes)}')
+    else:
+        print(f'Lista explícita (pontos_incluidos) cobre o edital inteiro: {len(edital)} pontos, 0 pendentes.')
 
 erros, avisos = [], []
 DATA = re.compile(r'^\d{2}/\d{2}/\d{4}$')

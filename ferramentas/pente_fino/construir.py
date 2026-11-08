@@ -2,7 +2,7 @@
   --disc CPC (padrão): c01_04.py, c05_08.py, c09_12.py (Processo Civil, aprovado — D-021);
   --disc CIV: civ/*.py (Direito Civil e Empresarial); --disc MLE: mle/*.py (Medicina Legal);
   --disc CRI: cri/*.py (Criminologia); --disc CPP: cpp/*.py (Direito Processual Penal);
-  --disc PEN: pen/*.py (Direito Penal — por ora só a Parte Geral, filtrada por `pontos_incluidos`).
+  --disc PEN: pen/*.py (Direito Penal — Parte Geral e Parte Especial, 74 pontos, listados em `pontos_incluidos`).
 Cada lei é (chave, início, fim|None, rótulo): o texto é RECORTADO do oficial (assets/lei_seca_oficial.json),
 do início até o fim do trecho final — nada é digitado à mão. Uso: python construir.py [--disc CPC|CIV|MLE|CRI|CPP|PEN]"""
 import argparse, importlib, json, pathlib, re, sys, collections
