@@ -159,3 +159,25 @@ prompt do servidor já manda não aplicar norma posterior.
 - Material de terceiro, uso pessoal (D-018). Texto das assertivas e dos comentários é próprio: conferência de janelas
   de 8 palavras contra o material (frases coincidentes reescritas; restam só enunciados oficiais e letra de lei).
   ⚠️ Os PDFs trazem marca d'água com dados pessoais do comprador: nada disso entrou, e as extrações foram apagadas.
+
+## Pente Fino de Direito Processual Penal (08/11/2026, D-021)
+
+- **Guia de temas e profundidade (sem cópia de texto):** `DELEGADO BA/RESUMO DESTACADO - DELEGADO PCPR - DIREITO
+  PROCESSUAL PENAL.pdf` (só o sumário dos capítulos foi lido para calibrar o que cai e o nível) e a incidência AOCP de
+  `revisao/mapa_prioridade.json` (CPP-2.1, 2.2, 7.6 e 8.5 à frente). Material de terceiro, uso pessoal (D-018).
+- Texto das assertivas e dos comentários de `discursiva/pente_fino_cpp.js` (gerado de `ferramentas/pente_fino/cpp/`) é
+  próprio: conferência de janelas de 8 palavras contra o material — as coincidências que sobram fora da letra de lei e
+  das súmulas oficiais são paráfrases do próprio texto legal (grafia "4 anos" × "4 (quatro) anos", trema) ou de tese
+  oficial do STF. ⚠️ O PDF traz marca d'água com dados pessoais do comprador: nada disso entrou (busca por CPF no
+  conteúdo: zero), e a extração de texto foi apagada ao fim.
+- **Letra de lei:** `assets/lei_seca_oficial.json` (Planalto), sem lei nova acrescentada. Citadas as redações de
+  2025–2026 já presentes na base oficial: Lei 15.272/2025 (CPP, arts. 310, §§ 5º–6º, e 312, §§ 3º–4º), Lei
+  15.280/2025 (art. 350-A), Lei 15.358/2026 (custódia por videoconferência, arts. 3º-B, § 1º, 310, 78, I, 313, V, e
+  584, § 4º), Lei 15.438/2026 (decadência de 12 meses na violência doméstica, art. 38, § 2º), Lei 15.487/2026 (art.
+  313, VI) e Lei 15.397/2026 (revogação do § 5º do art. 171 do CP: o estelionato volta à ação pública incondicionada).
+- **Jurisprudência (conferida em 08/11/2026):** súmulas do STJ no SCON (processo.stj.jus.br/SCON/sumstj); súmulas do
+  STF no PDF oficial; súmulas vinculantes 11, 14, 35 e 45 no portal do STF (data = publicação no DJe, a única que a
+  página traz); notícias oficiais do STF para as ADIs 6.298/6.299/6.300/6.305 (24/08/2023), ADIs 3.360 e 4.109
+  (11/02/2022), ADPFs 395 e 444 (14/06/2018), ADI 5.637 (11/03/2022) e HC 185.913 (18/09/2024); andamento dos Temas
+  184 e 280/RG; Informativos 684, 735 e 818 do STJ (HC 598.886, RHC 158.580, HC 877.943). A `assets/sumulas.json` não
+  foi usada como fonte.

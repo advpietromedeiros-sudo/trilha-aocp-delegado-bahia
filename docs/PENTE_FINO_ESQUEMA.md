@@ -63,3 +63,17 @@ subitens; o `CRI-8` traz no rótulo também o tópico 9 do edital, subcultura e 
 `doutrina_sem_fonte` da MLE: a disciplina é doutrinária, e a lei entra só onde o tema tem base (vítima no CPP, Lei
 13.431/2017, Lei 9.099/1995, LEP, CF art. 144, Lei 12.830/2013). Classificações com divergência (escolas, vitimização
 terciária, velocidades do Direito Penal) seguem a posição mais cobrada, e o comentário declara a divergência.
+
+## Processo Penal (08/11/2026)
+
+`pente_fino_cpp.js` (`--disc CPP`, conteúdo em `ferramentas/pente_fino/cpp/`, jurisprudência em `cpp/cpp_juris.py`): 41
+pontos (`DBA26-CPP-1` a `CPP-15`, com subitens, `CPP-4.2-B2` e `CPP-15-B2` → ids `CPP-4.2-B2-R1-01`). Volume próprio
+(R1 5–12, R2 3–8, `volume` em `disciplinas.py`: os pontos grandes — inquérito, competência, ação penal, provas,
+prisões — passam de 7). Como no CPC, **toda assertiva tem lei ou jurisprudência** (sem `doutrina_sem_fonte`).
+Particularidades: (1) a lei seca guarda redações de 2025–2026 (audiência de custódia por videoconferência, art. 310;
+decadência de 12 meses na violência doméstica, art. 38, § 2º; § 5º do art. 171 do CP revogado) — o conferidor avisa
+"alteração de 2026" e o item cita a linha vigente; (2) juiz das garantias e art. 28 seguem a interpretação do STF nas
+ADIs 6.298/6.299/6.300/6.305 (competência até o **oferecimento** da denúncia; exclusões; art. 157, § 5º,
+inconstitucional), dita no comentário quando a letra do CPP diverge; (3) dispositivos tidos por não recepcionados
+(arts. 21, 198 parte final, 241, 260 para interrogatório) aparecem só como pegadinha, nunca como regra; (4) súmula
+vinculante leva como data a publicação no DJe, que é a que a página oficial traz.

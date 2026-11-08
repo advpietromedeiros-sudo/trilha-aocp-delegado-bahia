@@ -3,7 +3,9 @@ CPC: aprovado pelo titular (D-021) — os valores abaixo reproduzem, letra por l
 CIV: Direito Civil e Empresarial (07/11/2026).
 MLE: Medicina Legal (07/11/2026) — pontos com subitem (DBA26-MLE-5.1); volume próprio (R1 6–10, R2 5–8) e
 assertiva só de doutrina admitida (a disciplina é doutrinária: nem todo sinal ou fenômeno tem lei por trás).
-CRI: Criminologia (07/11/2026) — mesmo volume e mesma regra de doutrina sem fonte da MLE (disciplina doutrinária)."""
+CRI: Criminologia (07/11/2026) — mesmo volume e mesma regra de doutrina sem fonte da MLE (disciplina doutrinária).
+CPP: Direito Processual Penal (08/11/2026) — 41 pontos com subitens; volume próprio (R1 5–12, R2 3–8) e, como no CPC,
+toda assertiva com lei ou jurisprudência (sem doutrina_sem_fonte)."""
 import re
 
 
@@ -78,4 +80,22 @@ DISC = {
                 'Lei 13.431/2017 (escuta especializada e depoimento especial) — Planalto',
                 'Lei 13.869/2019 (Abuso de Autoridade), art. 15-A incluído pela Lei 14.321/2022 — Planalto',
                 'Doutrina criminológica: redação própria, posição mais cobrada em concurso; divergências declaradas no comentário']),
+    'CPP': dict(
+        prefixo='DBA26-CPP-',
+        pasta='cpp',
+        modulos=['cpp_p01', 'cpp_p02_03', 'cpp_p04_06', 'cpp_p07', 'cpp_p08', 'cpp_p09_15'],
+        disciplina='Direito Processual Penal',
+        conferido_em='08/11/2026',
+        volume=((5, 12), (3, 8)),  # 41 pontos (com subitens): R1 5–7 e R2 3–5 na média; os grandes (inquérito, competência, ação penal, provas, prisões) vão além
+        cabecalho='// Pente Fino — Direito Processual Penal (DBA26-CPP-1 a 15, com os subitens, CPP-4.2-B2 e CPP-15-B2). Gerado por ferramentas/pente_fino/construir.py --disc CPP em 08/11/2026.',
+        fontes=['Decreto-Lei 3.689/1941 (CPP), com a Lei 13.964/2019 (Pacote Anticrime) — Planalto',
+                'Constituição Federal de 1988 — Planalto', 'Decreto-Lei 2.848/1940 (Código Penal) — Planalto',
+                'Lei 9.099/1995 (Juizados Especiais) — Planalto', 'Lei 12.830/2013 (investigação criminal pelo delegado) — Planalto',
+                'Lei 7.960/1989 (prisão temporária) e Lei 8.072/1990 (crimes hediondos) — Planalto',
+                'Lei 9.296/1996 (interceptação telefônica) e Lei 12.850/2013 (organizações criminosas) — Planalto',
+                'Lei 11.340/2006 (Maria da Penha), Lei 12.037/2009 (identificação criminal) e Lei 13.869/2019 (abuso de autoridade) — Planalto',
+                'Súmulas do STJ — processo.stj.jus.br/SCON/sumstj',
+                'Súmulas do STF — PDF oficial "Enunciados das Súmulas do STF 1 a 736" (stf.jus.br) e Súmulas Vinculantes (portal.stf.jus.br)',
+                'STF — ADIs 6.298/6.299/6.300/6.305, ADIs 3.360 e 4.109, ADPFs 395 e 444, HC 185.913, Temas 184 e 280/RG (portal.stf.jus.br e notícias oficiais)',
+                'STJ — HC 598.886/SC e RHC 158.580/BA (Informativos 684 e 735)']),
 }
