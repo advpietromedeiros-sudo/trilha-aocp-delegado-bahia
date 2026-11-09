@@ -2,7 +2,7 @@
 
 > Estado, tarefas e o que ficou rodando. Atualizado a cada ~15 min de trabalho e no fechamento.
 
-**Última atualização:** 09/11/2026, 12h1x.
+**Última atualização:** 09/11/2026, 16h0x.
 
 ## Estado
 
@@ -12,8 +12,10 @@
   - ✅ **Pente Fino:** os 3.128 itens têm aprofundamento, e todos os 1.525 E têm correção.
     - Camada em `ferramentas/pente_fino/aprofundar/`; `conferir.py` OK nas 8 disciplinas.
     - Trava: `ferramentas/validar_aprofundamento.py` (porta do portão) proíbe número que o item não tenha.
-  - ⏳ **Revisão:** 30 lotes no total. Os lotes da Revisão vão para `revisao/material/nfpss/aprofundar/` e depois
-    para o `montar_revisao_material.py`.
+  - ✅ **Revisão (15h58):** os 2.783 itens têm aprofundamento, e todos os 1.270 E têm correção.
+    - Camada em `revisao/material/nfpss/aprofundar/`, fora do Git; `revisao_nfpss.js` remontado (4.285 KB).
+    - Lista do que conferir: `revisao/material/nfpss/CONFERIR_aprofundamento.md`, com CPC05-098 (gabarito C
+      duvidoso), TRI01-075 (ADI 7066), CON04-015/022 (EC 139/2026) e vários itens da LC 236/2026.
   - ⚠️ **Itens do Pente Fino apontados pelos redatores, a CONFERIR:**
     - **MLE-5-R2-06:** o sinal de Winslow é o recipiente com água sobre o tórax, não o espelho.
     - **MLE-4-R1-02:** "trajetória" × "trajeto", em contradição com o próprio resumo.
