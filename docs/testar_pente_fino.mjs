@@ -37,7 +37,8 @@ const pagina = (nome, srcPF, sabotar = null) => {
 };
 const SABOTAGENS = [
   ['Rodada 2 sempre liberada', s => s.replace('const pfLiberada=(D,e,n)=>n<=1||pfConcluida(D,e,n-1);', 'const pfLiberada=()=>true;')],
-  ['exceção sem vermelho', s => s.replace('.cm-exc{color:#a3211a;', '.cm-exc{color:inherit;')],
+  ['tela não acompanha a assertiva', s => s.replace('function pfRolar(){', 'function pfRolar(){return;')],
+  ['exceção sem vermelho',s => s.replace('.cm-exc{color:#a3211a;', '.cm-exc{color:inherit;')],
 ];
 
 const NAV = ['C:/Program Files/Google/Chrome/Application/chrome.exe', 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe', 'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe', 'C:/Program Files/Microsoft/Edge/Application/msedge.exe'].find(existsSync);
@@ -120,7 +121,16 @@ async function suite(arq, completo) {
   const t8 = await avalia(`(function(){const r=[...document.querySelectorAll('[data-pfrod]')];return {rods:r.length,r1:r[0]&&!r[0].disabled,r2:r[1]&&r[1].disabled,r2txt:r[1]&&r[1].textContent,
     assert:(document.getElementById('pfAssertiva')||{}).textContent,ce:document.querySelectorAll('[data-pfr]').length,pontos:document.querySelectorAll('[data-pfponto]').length}})()`);
   confere('T8 · Pente Fino: Rodada 1 liberada, Rodada 2 com cadeado e "Conclua a Rodada 1"', t8.rods === 2 && t8.r1 && t8.r2 && /🔒/.test(t8.r2txt) && /Conclua a Rodada 1/.test(t8.r2txt) && t8.ce === 2 && t8.pontos === 3, JSON.stringify(t8));
+  // tela baixa para a página precisar rolar; responder e trocar de assertiva põem o quadro no topo (pedido de 08/11/2026)
+  await cdp('Emulation.setDeviceMetricsOverride', { width: 1000, height: 420, deviceScaleFactor: 1, mobile: false });
+  await avalia('scrollTo(0,0)');
+  const topoItem = async () => { await espera(900); return avalia("Math.round(document.querySelector('.pf-item').getBoundingClientRect().top)"); };
   await avalia(`document.querySelector('[data-pfr="C"]').click()`); // gabarito da 1ª é E: erra de propósito
+  const r24a = await topoItem();
+  await avalia("document.getElementById('pfProx').click()"); const r24b = await topoItem();
+  await avalia('scrollTo(0,0)'); await avalia("document.getElementById('pfAnt').click()"); const r24c = await topoItem();
+  await cdp('Emulation.clearDeviceMetricsOverride');
+  confere('T24 · responder, Próxima e Anterior deixam o quadro da assertiva no topo da tela (comentário visível logo abaixo)', [r24a, r24b, r24c].every(t => t >= 0 && t <= 24), JSON.stringify({ responder: r24a, proxima: r24b, anterior: r24c }));
   await avalia(AJUDA);
   const t9 = await avalia(`(function(){const fb=document.querySelector('.pf-fb');const li=document.querySelector('.cm-exc-lista li');const ex=document.querySelector('.pf-com .cm-exc');
     return {fb:fb&&fb.textContent,quadros:[...document.querySelectorAll('.pf-com .cm-q .cm-rot')].map(x=>x.textContent.trim()),liCor:li&&getComputedStyle(li).color,excCor:ex&&getComputedStyle(ex).color,

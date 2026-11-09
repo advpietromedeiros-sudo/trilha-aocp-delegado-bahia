@@ -123,7 +123,7 @@ img.fig{display:block;max-width:100%;margin:10px auto;border:1px solid var(--lin
 .pf-pontos summary{cursor:pointer;font-weight:700;color:var(--azul);padding:6px 0}
 .pf-ponto{display:grid;grid-template-columns:minmax(0,1fr) 120px 64px;gap:10px;align-items:center;width:100%;text-align:left;background:#fff;border:1px solid var(--linha);border-radius:10px;padding:8px 12px;margin:6px 0;font:inherit;color:inherit;cursor:pointer}
 .pf-ponto:hover{border-color:var(--azul)}.pf-ponto.at{border-color:var(--azul);background:#f5f8fd}.pf-ponto span{font-size:14px;line-height:1.4}.pf-ponto small{text-align:right;color:var(--suave);font-weight:700}
-.pf-item{border:1px solid #d7dfeb;border-radius:16px;padding:18px 20px;background:linear-gradient(180deg,#fbfcfe,#fff);box-shadow:0 6px 18px #1f24330c}
+.pf-item{scroll-margin-top:12px;border:1px solid #d7dfeb;border-radius:16px;padding:18px 20px;background:linear-gradient(180deg,#fbfcfe,#fff);box-shadow:0 6px 18px #1f24330c}
 .pf-meta{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;font-size:13px;color:var(--suave)}.pf-meta .selo{margin:0;background:var(--azul2);color:#1b3f73}
 .pf-assertiva{font-size:19px;line-height:1.65;font-weight:600;margin:12px 0 16px;color:var(--tinta)}
 .pf-ce{display:grid;grid-template-columns:1fr 1fr;gap:12px}
@@ -546,19 +546,24 @@ function telaPente(){
  ${pfConfirma?`<div class="pf-confirma" role="alertdialog" aria-label="Confirmar reinício"><b>Apagar as ${feitas} resposta(s) da ${esc(R.titulo||'Rodada '+n)}?</b>${n===1&&rods.length>1?' A Rodada 2 volta a ficar bloqueada até você concluir a 1 de novo.':''}<div class="linha-bts"><button class="bt pri" id="pfResetSim">Sim, reiniciar</button><button class="bt" id="pfResetNao">Cancelar</button></div></div>`:''}
  <p class="pf-atalhos">Atalhos: <b>C</b> = Certo · <b>E</b> = Errado · <b>←</b> <b>→</b> = anterior e próxima.</p></div>`;
  const on=(id,f)=>{const x=$(id);if(x)x.onclick=f};
- on('pfAnt',()=>{e.pos[n]=i-1;pfSalvar();telaPente()});on('pfProx',()=>{e.pos[n]=i+1;pfSalvar();telaPente();scrollTo(0,0)});
+ on('pfAnt',()=>{e.pos[n]=i-1;pfSalvar();telaPente();pfRolar()});on('pfProx',()=>{e.pos[n]=i+1;pfSalvar();telaPente();pfRolar()});
  const soErros=()=>{e.so[n]=!e.so[n];e.pos[n]=0;pfSalvar();telaPente()};on('pfSoErros',soErros);on('pfSoErros2',soErros);on('pfSoSai',soErros);
  on('pfReset',()=>{pfConfirma=true;telaPente();const b=$('pfResetNao');if(b)b.focus()});on('pfResetNao',()=>{pfConfirma=false;telaPente()});
  on('pfResetSim',()=>{R.itens.forEach(x=>delete e.resp[x.id]);e.pos[n]=0;e.so[n]=false;pfConfirma=false;pfSalvar();telaPente()});
 }
 function pfResponder(v){const ds=pfDados(),par=ds.find(([k])=>k===pf.disc);if(!par)return;const D=par[1],e=pfEst(pf.disc),L=pfLista(D,e,e.rod),it=L[e.pos[e.rod]||0];
- if(!it||e.resp[it.id])return;e.resp[it.id]=v;pfSalvar();telaPente()}
+ if(!it||e.resp[it.id])return;e.resp[it.id]=v;pfSalvar();telaPente();pfRolar()}
+// Depois de responder ou de trocar de assertiva, o quadro da assertiva vai para o topo da tela
+// (pedido do titular, 08/11/2026: a tela subia e o comentário ficava escondido embaixo).
+function pfRolar(){const a=document.querySelector('.pf-item');if(!a||!a.scrollIntoView)return;
+ const suave=!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches);
+ a.scrollIntoView({block:'start',behavior:suave?'smooth':'auto'})}
 document.addEventListener('click',ev=>{
  const r=ev.target.closest('[data-pfr]');if(r&&!r.disabled){pfResponder(r.dataset.pfr);return}
  const ro=ev.target.closest('[data-pfrod]');if(ro&&!ro.disabled){const e=pfEst(pf.disc);e.rod=+ro.dataset.pfrod;pfConfirma=false;pfSalvar();telaPente();scrollTo(0,0);return}
  const di=ev.target.closest('[data-pfdisc]');if(di){pf.disc=di.dataset.pfdisc;pfConfirma=false;pfSalvar();telaPente();return}
  const po=ev.target.closest('[data-pfponto]');if(po){const ds=pfDados(),D=ds.find(([k])=>k===pf.disc)[1],e=pfEst(pf.disc);e.so[e.rod]=false;const L=pfLista(D,e,e.rod),id=po.dataset.pfponto;
-  let k=L.findIndex(x=>x.ponto===id&&!e.resp[x.id]);if(k<0)k=L.findIndex(x=>x.ponto===id);if(k>=0)e.pos[e.rod]=k;pfSalvar();telaPente();const a=$('pfAssertiva');if(a&&a.scrollIntoView)a.scrollIntoView({block:'center'})}
+  let k=L.findIndex(x=>x.ponto===id&&!e.resp[x.id]);if(k<0)k=L.findIndex(x=>x.ponto===id);if(k>=0)e.pos[e.rod]=k;pfSalvar();telaPente();pfRolar()}
 });
 document.addEventListener('keydown',ev=>{if(aba!=='pente'||ev.ctrlKey||ev.metaKey||ev.altKey||/^(INPUT|TEXTAREA|SELECT)$/.test(ev.target.tagName))return;
  const k=ev.key.toLowerCase();
