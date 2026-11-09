@@ -4,6 +4,9 @@ Uso:
   python ferramentas/testar_revisao.py              gera o módulo de exemplo (revisao/conteudo/_exemplo.json)
                                                     e abre o HTML no navegador headless (sem erro de JS,
                                                     progresso, essencial, fichas que errei, celular)
+  python ferramentas/testar_revisao.py MODULO       idem para outro módulo (nome em revisao/conteudo/ ou
+                                                    caminho de um .json), ex. m02_penal_parte_geral
+  python ferramentas/testar_revisao.py MODULO --sem-pdf   idem, sem gerar o PDF (mais rápido)
   python ferramentas/testar_revisao.py --prints     idem, e tira 4 prints em .scratch/revisao/
   python ferramentas/testar_revisao.py --autoteste  REGRA CINCO: planta defeitos (ponto com id inexistente,
                                                     ficha sem gabarito, lei sem artigo, juris sem data, lei
@@ -28,7 +31,8 @@ RAIZ = Path(__file__).resolve().parent.parent
 GERADOR = RAIZ / "ferramentas" / "gerar_revisao.py"
 NAVEGADOR = RAIZ / "ferramentas" / "testar_revisao_navegador.mjs"
 PROIBIDAS = RAIZ / "ferramentas" / "referencias_proibidas.py"
-EXEMPLO = RAIZ / "revisao" / "conteudo" / "_exemplo.json"
+CONTEUDO = RAIZ / "revisao" / "conteudo"
+EXEMPLO = CONTEUDO / "_exemplo.json"
 PRINTS = RAIZ / ".scratch" / "revisao"
 
 
@@ -255,9 +259,22 @@ def autoteste():
             print("  o HTML limpo abre sem erro de JS no navegador")
         else:
             falhas.append(f"o HTML limpo foi reprovado no navegador (rc={rc}): {out[-400:]}")
-    # 5) os autotestes próprios do gerador e do verificador de referências
+    # 5) o nome do módulo é respeitado (07/11/2026: o teste ignorava o argumento e só rodava o _exemplo)
+    alvo = alvo_do_argv(["m02_penal_parte_geral", "--sem-pdf"])
+    if alvo == CONTEUDO / "m02_penal_parte_geral.json" and alvo_do_argv([]) == EXEMPLO:
+        print("  o nome do módulo vira o alvo do teste (sem nome, o _exemplo)")
+    else:
+        falhas.append(f"o nome do módulo não virou o alvo: {alvo}")
+    rc, out = roda([sys.executable, str(Path(__file__).resolve()), "modulo_que_nao_existe_xyz"])
+    if rc == 1 and "modulo_que_nao_existe_xyz" in out:
+        print("  acusou (rc=1): módulo inexistente pedido pelo nome (não cai calado no _exemplo)")
+    else:
+        falhas.append(f"módulo inexistente não acusado pelo nome (rc={rc}): {out[-200:]}")
+    # 6) os autotestes próprios do gerador, da régua comum, das súmulas e do verificador de referências
     for rot, cmd in (
         ("gerador (em memória)", [sys.executable, str(GERADOR), "--autoteste"]),
+        ("régua comum de lei seca", [sys.executable, str(RAIZ / "ferramentas" / "localizar_lei.py"), "--autoteste"]),
+        ("corretor de súmulas", [sys.executable, str(RAIZ / "ferramentas" / "corrigir_sumulas.py"), "--autoteste"]),
         ("verificador de referências", [sys.executable, str(PROIBIDAS), "--autoteste"]),
     ):
         rc, out = roda(cmd)
@@ -277,30 +294,43 @@ def autoteste():
     return 0
 
 
-def normal(prints):
-    if not EXEMPLO.exists():
-        print(
-            f"[FALHA] módulo de exemplo ausente: {EXEMPLO} (fica fora do Git; ver revisao/ESQUEMA_MODULO.md)"
-        )
+def alvo_do_argv(argv):
+    """O 1º argumento que não é opção é o módulo (nome em revisao/conteudo/ ou caminho .json); sem ele, o _exemplo."""
+    pos = [a for a in argv if not a.startswith("--")]
+    if not pos:
+        return EXEMPLO
+    a = Path(pos[0])
+    return a if a.suffix.lower() == ".json" else CONTEUDO / f"{pos[0]}.json"
+
+
+def normal(prints, alvo=EXEMPLO, sem_pdf=False):
+    if not alvo.exists():
+        print(f"[FALHA] módulo ausente: {alvo} (fica fora do Git; ver revisao/ESQUEMA_MODULO.md)")
         return 1
-    rc, out = roda([sys.executable, str(GERADOR), str(EXEMPLO)])
+    try:
+        nome = json.loads(alvo.read_text(encoding="utf-8"))["modulo"]
+    except (ValueError, KeyError) as e:
+        print(f"[FALHA] {alvo.name}: não deu para ler o campo 'modulo' ({e})")
+        return 1
+    rc, out = roda([sys.executable, str(GERADOR), str(alvo)] + (["--sem-pdf"] if sem_pdf else []), timeout=1500)
     print(out.rstrip())
     if rc != 0:
         print(f"[FALHA] o gerador saiu {rc}")
         return 1
-    html = RAIZ / "revisao" / "saida" / "_exemplo.html"
+    html = RAIZ / "revisao" / "saida" / f"{nome}.html"
     rc, out = roda([sys.executable, str(PROIBIDAS), str(html)])
     print(out.rstrip())
     if rc != 0:
         return 1
     cmd = [node(), str(NAVEGADOR), str(html)] + ([str(PRINTS)] if prints else [])
-    rc, out = roda(cmd, timeout=180)
+    rc, out = roda(cmd, timeout=300)
     print(out.rstrip())
     if rc != 0:
         print(f"[FALHA] teste de navegador saiu {rc}")
         return 1
     print(
-        "[OK] motor da revisão: módulo de exemplo gerado (HTML e PDF), sem referência proibida e sem erro de JS"
+        f"[OK] motor da revisão: módulo {nome} gerado (HTML{'' if sem_pdf else ' e PDF'}), sem referência proibida "
+        "e sem erro de JS"
     )
     return 0
 
@@ -308,4 +338,4 @@ def normal(prints):
 if __name__ == "__main__":
     if "--autoteste" in sys.argv:
         sys.exit(autoteste())
-    sys.exit(normal("--prints" in sys.argv))
+    sys.exit(normal("--prints" in sys.argv, alvo_do_argv(sys.argv[1:]), "--sem-pdf" in sys.argv))

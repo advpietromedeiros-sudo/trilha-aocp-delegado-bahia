@@ -13,9 +13,11 @@ Uso:
 
 O formato que os módulos usam (fixado em 06/11/2026 com a frente do gerador):
   <meta name="conferido-em" content="dd/mm/aaaa">                                   obrigatório no topo
-  <blockquote class="lei" data-lei="CP" data-art="121" data-par="§ 2º" data-inc="VI">trecho exato</blockquote>
-      data-lei = a MESMA chave (sigla) de assets/lei_seca_oficial.json; data-par e data-inc opcionais.
-      Confere o trecho como CONTIDO no artigo oficial vigente (espaços, aspas tipográficas e hífens normalizados).
+  <blockquote class="lei" data-lei="CP" data-art="121" data-par="§ 2º" data-inc="VI" data-ali="a">trecho</blockquote>
+      data-lei = a MESMA chave (sigla) de assets/lei_seca_oficial.json; data-par, data-inc e data-ali opcionais.
+      A conferência é a de ferramentas/localizar_lei.py — a MESMA régua do gerador (07/11/2026): trecho CONTIDO
+      no artigo oficial vigente (anotações do Planalto, aspas, hífens, espaços e º/°/o normalizados) e
+      parágrafo, inciso e alínea LOCALIZADOS na estrutura do artigo, um dentro do outro.
   <div class="juris" data-tribunal="STJ" data-fonte="Súmula 593 | REsp 1.234.567/BA | Tema 1.234"
        data-data="dd/mm/aaaa" data-sumula="STJ-593">…</div>
       data-fonte e data-data obrigatórios; data-sumula (STJ-n, STF-n, SV-n) é conferida em assets/sumulas.json.
@@ -29,11 +31,12 @@ import json
 import re
 import subprocess
 import sys
-import unicodedata
 from datetime import date, datetime
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(RAIZ / "ferramentas"))
+import localizar_lei as LL  # noqa: E402  (régua comum com o gerador)
 LEI_SECA = RAIZ / "assets" / "lei_seca_oficial.json"
 SUMULAS = RAIZ / "assets" / "sumulas.json"
 CATALOGO = RAIZ / "assets" / "catalogo_leis.json"
@@ -42,16 +45,8 @@ LIMITE_DIAS = 30
 RX_DATA = re.compile(r"^(\d{2})/(\d{2})/(\d{4})$")
 
 
-# ------------------------------------------------------------------ normalização
-def normalizar(t: str) -> str:
-    """Compara texto de lei sem tropeçar em tipografia: aspas, hífens, espaços, º/°, caixa."""
-    t = unicodedata.normalize("NFKC", t or "")
-    t = re.sub(r"[\"“”„‟«»]", "", t)  # aspas são do autor do módulo, não da lei: saem dos dois lados
-    t = re.sub(r"[‘’‚‛`´]", "'", t)
-    t = re.sub(r"[‐‑‒–—―−]", "-", t)
-    t = t.replace("°", "º").replace("\u00a0", " ")
-    t = re.sub(r"\s+", " ", t).strip().casefold()
-    return t
+# ------------------------------------------------------------------ normalização (régua comum)
+normalizar = LL.normalizar
 
 
 def data_valida(s: str | None) -> date | None:
@@ -64,28 +59,9 @@ def data_valida(s: str | None) -> date | None:
         return None
 
 
-def id_sumula(rotulo: str) -> str | None:
-    """'STJ-593' → 'SUM-STJ-593'; 'STF-473' → 'SUM-STF-473'; 'SV-13' → 'SV-13' (chaves de assets/sumulas.json)."""
-    m = re.fullmatch(r"\s*(STJ|STF|SV)\s*-?\s*(\d+)\s*", rotulo or "", re.I)
-    if not m:
-        return None
-    trib, num = m[1].upper(), m[2]
-    return f"SV-{num}" if trib == "SV" else f"SUM-{trib}-{num}"
-
-
-RX_CANCELADA = re.compile(r"(?:^|[.•;]\s*)(cancelada|superada)(\s+em\s+parte)?\s*\.?\s*(?:•|$)", re.I | re.M)
-
-
-def situacao_sumula(s: dict) -> str | None:
-    """A base não tem campo de situação: o texto traz '• Cancelada.' ou 'Superada.' ao fim. Campo 'situacao', se
-    um dia existir, vale primeiro."""
-    sit = (s.get("situacao") or "").strip().lower()
-    if sit in ("cancelada", "superada", "superada em parte"):
-        return sit
-    m = RX_CANCELADA.search(s.get("texto", ""))
-    if m:
-        return (m[1] + (" em parte" if m[2] else "")).lower()
-    return None
+id_sumula = LL.id_sumula
+situacao_sumula = LL.situacao_sumula
+RX_CANCELADA = LL.RX_CANCELADA
 
 
 # ------------------------------------------------------------------ leitura do módulo
@@ -103,7 +79,7 @@ class _Leitor(html.parser.HTMLParser):
             self.meta_conferido = a.get("content")
         elif tag == "blockquote" and "lei" in classes:
             reg = {"lei": a.get("data-lei"), "art": a.get("data-art"), "par": a.get("data-par"),
-                   "inc": a.get("data-inc"), "texto": "", "linha": self.getpos()[0]}
+                   "inc": a.get("data-inc"), "ali": a.get("data-ali"), "texto": "", "linha": self.getpos()[0]}
             self.leis.append(reg)
             self._pilha.append((tag, reg, 0))
             return
@@ -148,32 +124,9 @@ def conferir(mod: dict, oficial: dict, sumulas: dict) -> tuple[list[str], list[s
         erros.append(f'falta <meta name="conferido-em" content="dd/mm/aaaa"> válido (achado: {mod.get("conferido_em")!r})')
     for c in mod["leis"]:
         onde = f"linha {c.get('linha', '?')}: {c.get('lei')} art. {c.get('art')}"
-        if not c.get("lei") or not c.get("art"):
-            erros.append(f"{onde} — citação de lei sem data-lei ou data-art")
-            continue
-        chave = f"{c['lei']}:{c['art']}"
-        art = oficial.get(chave)
-        if not art:
-            erros.append(f"{onde} — {chave} não está no texto oficial baixado: não dá para conferir (lacuna a coletar)")
-            continue
-        alvo = normalizar(art["texto"])
-        trecho = normalizar(c.get("texto", "")).strip("'").strip()
-        if len(trecho) < 8:
-            erros.append(f"{onde} — trecho citado vazio ou curto demais para conferir")
-            continue
-        if trecho not in alvo:
-            erros.append(f"{onde} — o texto citado DIFERE do vigente (Planalto, baixado em {art.get('baixado_em')}): "
-                         f"\"{c.get('texto', '').strip()[:120]}\"")
-        # o Planalto quebra linha no meio ("§\n1º"); a busca é no texto inteiro já normalizado
-        par = (c.get("par") or "").strip()
-        if par:
-            p = re.sub(r"§\s*", "§ ", normalizar(par))
-            if not re.search(re.escape(p) + r"(?![0-9])", re.sub(r"§\s*", "§ ", alvo)):
-                erros.append(f"{onde} — data-par={par!r} não aparece no artigo oficial")
-        inc = (c.get("inc") or "").strip()
-        if inc:  # inciso: "II - ..." (só "I" solto casaria qualquer letra i do artigo)
-            if not re.search(r"(?<![a-z0-9])" + re.escape(normalizar(inc)) + r"\s*-\s", alvo):
-                erros.append(f"{onde} — data-inc={inc!r} não aparece como inciso no artigo oficial")
+        e, a = LL.conferir_citacao(c, oficial)
+        erros += [f"{onde} — {x}" for x in e]
+        avisos += [f"{onde} — {x}" for x in a]
     for j in mod["juris"]:
         onde = f"linha {j.get('linha', '?')}: juris {j.get('tribunal') or '?'}"
         if not (j.get("fonte") or "").strip():
@@ -309,6 +262,15 @@ def autoteste() -> int:
     oficial = {"CP:121": {"texto": "Art. 121. Matar alguém:\nPena - reclusão, de seis a vinte anos.\n§ 1º Se o agente "
                                    "comete o crime impelido por motivo de relevante valor social ou moral",
                           "baixado_em": "03/11/2026"},
+               "CP:13": {"texto": "Art. 13 - O resultado somente é imputável a quem lhe deu causa.\n§ 2º - A omissão é "
+                                  "penalmente relevante. O dever de agir incumbe a quem:(Incluído pela Lei nº 7.209)\n"
+                                  "a) tenha por lei obrigação de cuidado, proteção ou vigilância;\nb) de outra forma",
+                         "baixado_em": "07/11/2026"},
+               "CPP:78": {"texto": "Art. 78. Regras:\nI - no concurso com o júri;\nIl - no concurso de jurisdições da "
+                                   "mesma categoria:\na) preponderará a do lugar da infração;\nIII - de diversas "
+                                   "categorias", "baixado_em": "07/11/2026"},
+               "L7960:2": {"texto": "Art. 2° A prisão temporária será decretada pelo Juiz.\n§ 2° O despacho que "
+                                    "decretar a prisão temporária deverá ser fundamentado.", "baixado_em": "07/11/2026"},
                "L11340:5": {"texto": "Art. 5º Para os efeitos desta Lei, configura violência doméstica e familiar "
                                      "contra a mulher qualquer ação ou omissão baseada no gênero que lhe cause morte, "
                                      "lesão, sofrimento físico, sexual ou psicológico e dano moral ou patrimonial:\n"
@@ -344,6 +306,24 @@ def autoteste() -> int:
         ("inciso inexistente acusa (a letra i solta no texto não engana)",
          topo + '<blockquote class="lei" data-lei="L11340" data-art="5" data-inc="IV">'
                 "no âmbito da unidade doméstica</blockquote>", 1, "data-inc"),
+        # 07/11/2026: os três casos em que o gerador aprovava e este verificador reprovava (régua agora comum)
+        ("alínea em data-ali passa (CP 13, § 2º, a)",
+         topo + '<blockquote class="lei" data-lei="CP" data-art="13" data-par="§ 2º" data-ali="a">'
+                "tenha por lei obrigação de cuidado</blockquote>", 0, None),
+        ("alínea marcada como data-inc acusa e diz o porquê",
+         topo + '<blockquote class="lei" data-lei="CP" data-art="13" data-par="§ 2º" data-inc="a">'
+                "tenha por lei obrigação de cuidado</blockquote>", 1, "ALÍNEA"),
+        ("alínea inexistente acusa (CP 13, § 2º, c)",
+         topo + '<blockquote class="lei" data-lei="CP" data-art="13" data-par="§ 2º" data-ali="c">'
+                "tenha por lei obrigação de cuidado</blockquote>", 1, "data-ali"),
+        ("data-inc II acha o 'Il' do Planalto (CPP 78)",
+         topo + '<blockquote class="lei" data-lei="CPP" data-art="78" data-inc="II">'
+                "no concurso de jurisdições da mesma categoria</blockquote>", 0, None),
+        ("data-par § 2º acha o '§ 2°' do Planalto (Lei 7.960)",
+         topo + '<blockquote class="lei" data-lei="L7960" data-art="2" data-par="§ 2º">'
+                "O despacho que decretar a prisão temporária</blockquote>", 0, None),
+        ("súmula vinculante SV-n é lida (fora da base só avisa)",
+         topo + juris_ok.replace("STJ-593", "SV-14"), 0, None),
     ]
     falhas = 0
     for nome, html_txt, esperado, motivo in casos:

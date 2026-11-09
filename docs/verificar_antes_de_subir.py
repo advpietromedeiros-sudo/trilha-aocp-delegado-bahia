@@ -22,6 +22,10 @@ PY = [
     "ferramentas/extrair_provas_aocp.py",
     "ferramentas/classificar_incidencia.py",
     "ferramentas/verificar_atualidade.py",
+    "ferramentas/localizar_lei.py",
+    "ferramentas/gerar_revisao.py",
+    "ferramentas/testar_revisao.py",
+    "ferramentas/corrigir_sumulas.py",
 ]
 
 # (nome, comando, o erro que esta porta impede)
@@ -66,6 +70,14 @@ PORTAS: list[tuple[str, list[str], str]] = [
     ("o verificador de atualidade acusa",
      [sys.executable, "ferramentas/verificar_atualidade.py", "--autoteste"],
      "artigo citado fora do texto vigente, súmula cancelada, jurisprudência sem fonte e data (verde falso)"),
+    ("a régua comum de lei seca acusa", [sys.executable, "ferramentas/localizar_lei.py", "--autoteste"],
+     "alínea como inciso, 'Il' do Planalto, '§ 2°' com grau: gerador aprovando o que o verificador reprova (07/11/2026)"),
+    ("o gerador da revisão acusa", [sys.executable, "ferramentas/gerar_revisao.py", "--autoteste"],
+     "módulo com lei adulterada, súmula cancelada ou PDF não gravado saindo como gerado; régua dividida com o verificador"),
+    ("o corretor de súmulas acusa", [sys.executable, "ferramentas/corrigir_sumulas.py", "--autoteste"],
+     "troca às cegas de súmula sem o valor de antes conferido; correção aplicada duas vezes"),
+    ("súmulas: correções oficiais aplicadas", [sys.executable, "ferramentas/corrigir_sumulas.py", "--estado"],
+     "sumulas.json regravado pela extração sem as correções conferidas no STF/STJ; sai 2 (pulada) sem a base"),
     ("lei seca oficial com menos de 30 dias",
      [sys.executable, "ferramentas/verificar_atualidade.py", "--estado"],
      "módulo gerado sobre lei seca velha; sai 2 (pulada) onde a base não existe — fica fora do Git (D-015)"),

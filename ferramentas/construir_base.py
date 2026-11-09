@@ -331,6 +331,12 @@ def main():
     (dst / 'lei_seca_material.json').write_text(json.dumps(lei, ensure_ascii=False), 'utf8')
     s = parse_sumulas(raw); print('súmulas:', len(s))
     (dst / 'sumulas.json').write_text(json.dumps(s, ensure_ascii=False, indent=0), 'utf8')
+    # a extração diverge do oficial em casos conferidos: reaplica as correções registradas (07/11/2026)
+    if (dst / 'sumulas.json').resolve() == (pathlib.Path(__file__).resolve().parent.parent / 'assets' / 'sumulas.json'):
+        import subprocess
+        subprocess.run([sys.executable, str(pathlib.Path(__file__).with_name('corrigir_sumulas.py'))], check=False)
+    else:
+        print('súmulas: gravadas fora de assets/ — rode ferramentas/corrigir_sumulas.py sobre a base oficial')
     t = parse_teses(raw / 'TESES_RG_STF.pdf'); print('teses RG:', len(t))
     (dst / 'teses_rg.json').write_text(json.dumps(t, ensure_ascii=False, indent=0), 'utf8')
     j = parse_juris_aocp(raw / 'LD_DELEGADO_AOCP_JURIS.pdf'); print('precedentes LD JURIS:', len(j))

@@ -27,6 +27,7 @@ import datetime as dt
 import html
 import io
 import json
+import os
 import re
 import subprocess
 import sys
@@ -34,6 +35,7 @@ from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(RAIZ / "ferramentas"))
+import localizar_lei as LL  # noqa: E402  (régua comum com o verificador de atualidade)
 import referencias_proibidas as RP  # noqa: E402
 
 MOLDE = RAIZ / "revisao" / "molde"
@@ -43,23 +45,11 @@ ITENS = RAIZ / "assets" / "items.json"
 LEI = RAIZ / "assets" / "lei_seca_oficial.json"
 SUMULAS = RAIZ / "assets" / "sumulas.json"
 AVATAR = MOLDE / "avatar-professor-pietro-medeiros.jpg"
-NAVEGADORES = [
-    Path(r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"),
-    Path(r"C:\Program Files\Google\Chrome\Application\chrome.exe"),
-    Path(r"C:\Program Files\Microsoft\Edge\Application\msedge.exe"),
-]
 
 ESQUEMA = 1
 TAGS_OK = {"b", "strong", "i", "em", "mark", "u", "br", "sub", "sup", "small", "code"}
 ORIGEM_OK = re.compile(r"^(AOCP .+|Trilha|Simulado( .+)?|Revisão)$")
 DATA_OK = re.compile(r"^\d{2}/\d{2}/\d{4}$")
-SUMULA_OK = re.compile(r"^(STF|STJ|TSE|TST|STM)-(V-)?\d+$")
-# anotações do Planalto que não fazem parte do texto normativo
-ANOTACAO = re.compile(
-    r"\((?:Reda[cç][aã]o|Inclu[ií]d|Revogad|Vide|Vig[eê]ncia|Renumerad|Acrescid|"
-    r"Express[aã]o|Promulga|Regulament|Produ[cç][aã]o de efeito)[^)]*\)",
-    re.I,
-)
 
 
 # ------------------------------------------------------------------ utilidades
@@ -68,9 +58,8 @@ def esc(t):
 
 
 def norm(t):
-    """Normaliza para conferir citação × texto oficial: tira anotações do Planalto e junta espaços."""
-    t = ANOTACAO.sub(" ", str(t))
-    return re.sub(r"\s+", " ", t).strip()
+    """Normaliza para conferir citação × texto oficial — a régua é a de ferramentas/localizar_lei.py."""
+    return LL.normalizar(t)
 
 
 def data_valida(s):
@@ -221,35 +210,28 @@ def validar(mod, itens, lei, sumulas):
                 if not isinstance(L, dict):
                     erros.append(f"{ol}: não é objeto")
                     continue
-                chave, art = L.get("lei"), L.get("art")
-                if not chave:
-                    erros.append(f"{ol}: lei sem chave ('lei', ex. CP)")
-                if not art:
-                    erros.append(f"{ol}: lei sem artigo ('art')")
                 txt = L.get("texto")
-                if not isinstance(txt, str) or not txt.strip():
-                    erros.append(f"{ol}: falta 'texto' (trecho exato do texto oficial)")
-                elif re.search(r"<[a-zA-Z/]", txt):
+                if isinstance(txt, str) and re.search(r"<[a-zA-Z/]", txt):
                     erros.append(f"{ol}: 'texto' da lei é texto puro, sem HTML")
-                if chave and art:
-                    of = lei.get(f"{chave}:{art}")
-                    if of is None:
-                        erros.append(f"{ol}: '{chave}:{art}' não existe em assets/lei_seca_oficial.json")
-                    elif isinstance(txt, str) and txt.strip() and norm(txt) not in norm(of.get("texto", "")):
-                        erros.append(
-                            f"{ol}: texto não confere com o oficial de {chave}:{art} "
-                            f"(citado: {norm(txt)[:70]!r}…)"
-                        )
-                    elif of:
-                        if of.get("baixado_em"):
-                            baixados.add(of["baixado_em"])
-                        if of.get("alteracao_2026"):
-                            avisos.append(
-                                f"{ol}: {chave}:{art} tem alteração de 2026 (vai para 'sensível a mudança')"
-                            )
-                for c in ("par", "inc", "rotulo"):
+                tipos_ok = True
+                for c in ("lei", "art", "par", "inc", "ali", "rotulo"):
                     if L.get(c) is not None and not isinstance(L.get(c), str):
                         erros.append(f"{ol}: '{c}' deve ser texto")
+                        tipos_ok = False
+                if not tipos_ok:
+                    continue
+                # a MESMA conferência do verificador de atualidade (ferramentas/localizar_lei.py)
+                e_lei, a_lei = LL.conferir_citacao(L, lei)
+                erros += [f"{ol}: {x}" for x in e_lei]
+                avisos += [f"{ol}: {x}" for x in a_lei]
+                of = lei.get(f"{L.get('lei')}:{L.get('art')}")
+                if of and not e_lei:
+                    if of.get("baixado_em"):
+                        baixados.add(of["baixado_em"])
+                    if of.get("alteracao_2026"):
+                        avisos.append(
+                            f"{ol}: {L['lei']}:{L['art']} tem alteração de 2026 (vai para 'sensível a mudança')"
+                        )
             # jurisprudência
             for k, J in enumerate(lista(p.get("jurisprudencia")), 1):
                 oj = f"{op}, juris {k}"
@@ -272,19 +254,26 @@ def validar(mod, itens, lei, sumulas):
                 checar_html(J.get("comentario"), f"{oj}.comentario", erros)
                 s = J.get("sumula")
                 if s:
-                    if not SUMULA_OK.match(str(s)):
-                        erros.append(f"{oj}: 'sumula' fora do padrão TRIBUNAL-NÚMERO (ex. STJ-593): {s!r}")
+                    sid = LL.id_sumula(str(s))
+                    if not sid:
+                        erros.append(
+                            f"{oj}: 'sumula' fora do padrão STJ-n, STF-n ou SV-n (ex. STJ-593, SV-14): {s!r}"
+                        )
                     else:
-                        trib = str(s).split("-")[0]
+                        trib = LL.tribunal_sumula(str(s))
                         if J.get("tribunal") and J["tribunal"] != trib:
-                            erros.append(f"{oj}: tribunal {J['tribunal']} diferente do da súmula {s}")
-                        ref = sumulas.get(f"SUM-{s}")
+                            erros.append(f"{oj}: tribunal {J['tribunal']} diferente do da súmula {s} ({trib})")
+                        ref = sumulas.get(sid)
                         if ref is None:
                             avisos.append(
-                                f"{oj}: súmula {s} não está em assets/sumulas.json (texto não conferido)"
+                                f"{oj}: súmula {s} ({sid}) não está em assets/sumulas.json (texto não conferido)"
                             )
-                        elif J.get("texto") and norm(J["texto"]) not in norm(ref.get("texto", "")):
-                            erros.append(f"{oj}: texto da súmula {s} não confere com assets/sumulas.json")
+                        else:
+                            sit = LL.situacao_sumula(ref)
+                            if sit:
+                                erros.append(f"{oj}: {sid} está marcada como {sit.upper()} em assets/sumulas.json")
+                            if J.get("texto") and norm(J["texto"]) not in norm(ref.get("texto", "")):
+                                erros.append(f"{oj}: texto da súmula {s} não confere com assets/sumulas.json")
             # pegadinhas, esquema
             esq = p.get("esquema")
             if esq is not None:
@@ -388,6 +377,8 @@ def rotulo_lei(L, lei):
         r += f", {L['par']}"
     if L.get("inc"):
         r += f", inciso {L['inc']}"
+    if L.get("ali"):
+        r += f", alínea \"{L['ali']}\""
     return r
 
 
@@ -397,6 +388,8 @@ def html_lei(L, lei):
         attrs += f' data-par="{esc(L["par"])}"'
     if L.get("inc"):
         attrs += f' data-inc="{esc(L["inc"])}"'
+    if L.get("ali"):
+        attrs += f' data-ali="{esc(L["ali"])}"'
     of = lei.get(f"{L['lei']}:{L['art']}", {})
     url = of.get("url")
     fonte = f'<span class="lei-fonte">texto oficial · baixado em {esc(of.get("baixado_em", "?"))}'
@@ -624,7 +617,10 @@ def montar(mod, itens, lei, sumulas, b64, avisos):
     for b in blocos:
         for p in b["pontos"]:
             for Lc in lista(p.get("lei_seca")):
-                chave = (Lc["lei"], Lc["art"], Lc.get("par") or "", Lc.get("inc") or "", norm(Lc["texto"]))
+                chave = (
+                    Lc["lei"], Lc["art"], Lc.get("par") or "", Lc.get("inc") or "", Lc.get("ali") or "",
+                    norm(Lc["texto"]),
+                )
                 if chave in vistos:
                     continue
                 vistos.add(chave)
@@ -650,6 +646,7 @@ def montar(mod, itens, lei, sumulas, b64, avisos):
                 + art_rot(Lc["art"])
                 + (f", {Lc['par']}" if Lc.get("par") else "")
                 + (f", inciso {Lc['inc']}" if Lc.get("inc") else "")
+                + (f", alínea {Lc['ali']}" if Lc.get("ali") else "")
             )
             ls_cont.append(
                 f'<div class="ls-art-group" id="{gid}"><div class="ls-art-head"><span class="ls-art-num">{esc(onde)}</span>'
@@ -664,7 +661,7 @@ def montar(mod, itens, lei, sumulas, b64, avisos):
                 + "</div></div>"
             )
             chips.append(
-                f'<a href="#{gid}" class="toc-artchip">{esc(art_rot(Lc["art"]) + (" " + Lc["par"] if Lc.get("par") else "") + (" " + Lc["inc"] if Lc.get("inc") else ""))}</a>'
+                f'<a href="#{gid}" class="toc-artchip">{esc(art_rot(Lc["art"]) + (" " + Lc["par"] if Lc.get("par") else "") + (" " + Lc["inc"] if Lc.get("inc") else "") + (" " + Lc["ali"] if Lc.get("ali") else ""))}</a>'
             )
         ls_toc.append(
             f'<details class="toc-group" open><summary>{esc(diploma.split(" — ")[0])}</summary><div class="toc-links">'
@@ -764,29 +761,73 @@ def avatar_b64(lado=360):
     return base64.b64encode(buf.getvalue()).decode()
 
 
-def gerar_pdf(html_path, pdf_path):
-    nav = next((p for p in NAVEGADORES if p.exists()), None)
-    if not nav:
-        raise SystemExit("[FALHA] nem Edge nem Chrome encontrados para gerar o PDF")
-    if pdf_path.exists():
-        pdf_path.unlink()
-    r = subprocess.run(
-        [
-            str(nav),
-            "--headless=new",
-            "--disable-gpu",
-            "--no-pdf-header-footer",
-            "--virtual-time-budget=6000",
-            f"--print-to-pdf={pdf_path}",
-            html_path.as_uri(),
-        ],
-        capture_output=True,
-        text=True,
-        timeout=240,
-    )
-    if not pdf_path.exists() or pdf_path.stat().st_size < 20_000:
-        raise SystemExit(f"[FALHA] PDF não gerado: rc={r.returncode} {r.stderr[-400:]}")
-    return nav.name
+PDF_CDP = RAIZ / "ferramentas" / "pdf_cdp.mjs"
+PDF_PASSO = 40  # páginas por parte: o módulo de 316 páginas não cabe numa impressão só com ~1 GB livre
+
+
+def juntar_partes(partes, pdf_path):
+    """Une as partes na ordem e devolve o número de páginas. Apaga as partes só depois de gravar o PDF inteiro."""
+    import pymupdf
+
+    doc = pymupdf.open()
+    for p in partes:
+        # lido como bytes: no Windows o arquivo aberto pelo PyMuPDF não se apaga depois (WinError 32)
+        with pymupdf.open(stream=Path(p).read_bytes(), filetype="pdf") as d:
+            doc.insert_pdf(d)
+    paginas = doc.page_count
+    doc.save(str(pdf_path), garbage=3, deflate=True)
+    doc.close()
+    return paginas
+
+
+def gerar_pdf(html_path, pdf_path, passo=PDF_PASSO):
+    """PDF por CDP (Page.printToPDF em partes, por pageRanges) + junção com PyMuPDF.
+
+    Antes (até 07/11/2026) era --print-to-pdf na linha de comando: com o módulo de 316 páginas o navegador saía
+    com rc=0 sem gravar o arquivo (memória). Continua a regra: PDF não gravado = SystemExit (sai 1), nunca verde
+    em silêncio. Devolve (nome do motor, nº de páginas)."""
+    import shutil
+    import tempfile
+
+    node = shutil.which("node")
+    if not node:
+        raise SystemExit("[FALHA] node não encontrado: o PDF sai por ferramentas/pdf_cdp.mjs (CDP)")
+    # o PDF antigo só é trocado no fim (os.replace): se ele estiver aberto num leitor, a falha é clara e o
+    # antigo continua lá, em vez de sumir antes da impressão
+    # as partes nascem numa pasta temporária própria, fora de revisao/saida: lá um vigia de arquivos (editor,
+    # indexador) chegou a prender uma parte (WinError 32, 07/11/2026) e a sobra ficava ao lado do PDF
+    tmp = Path(tempfile.mkdtemp(prefix="revisao-pdf-partes-"))
+    try:
+        try:
+            r = subprocess.run(
+                [node, str(PDF_CDP), str(html_path), str(tmp / pdf_path.stem), str(passo)],
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+                errors="replace",
+                timeout=1200,
+            )
+        except subprocess.TimeoutExpired:
+            raise SystemExit("[FALHA] PDF não gerado: a impressão por CDP passou de 20 min") from None
+        partes = sorted(tmp.glob(pdf_path.stem + ".parte*.pdf"))
+        if r.returncode != 0 or not partes:
+            raise SystemExit(f"[FALHA] PDF não gerado: rc={r.returncode} {(r.stdout + r.stderr)[-600:]}")
+        novo = tmp / pdf_path.name
+        paginas = juntar_partes(partes, novo)
+        if not novo.exists() or novo.stat().st_size < 20_000 or paginas < 1:
+            raise SystemExit(f"[FALHA] PDF não gravado ou vazio: {novo} ({paginas} página(s))")
+        try:
+            os.replace(novo, pdf_path)
+        except PermissionError:
+            raise SystemExit(
+                f"[FALHA] PDF não gravado: {pdf_path} está aberto em outro programa (WinError 32). "
+                "Feche o PDF e gere de novo; o arquivo antigo ficou como estava"
+            ) from None
+    finally:
+        shutil.rmtree(tmp, ignore_errors=True)
+    if not pdf_path.exists() or pdf_path.stat().st_size < 20_000 or paginas < 1:
+        raise SystemExit(f"[FALHA] PDF não gravado ou vazio: {pdf_path} ({paginas} página(s))")
+    return f"CDP, {len(partes)} parte(s) de até {passo} páginas", paginas
 
 
 # ------------------------------------------------------------------ autoteste (em memória)
@@ -808,9 +849,46 @@ def _fixture():
             "texto": "Art. 4º - Considera-se praticado o crime no momento da ação ou\nomissão, ainda que outro seja o momento do resultado.(Redação dada pela Lei nº 7.209, de 1984)",
             "baixado_em": dt.date.today().strftime("%d/%m/%Y"),
             "url": "https://www.planalto.gov.br/",
-        }
+        },
+        # trechos reais dos três casos de 07/11/2026 (a régua do gerador aprovava, a do verificador reprovava)
+        "CP:13": {
+            "sigla": "CP",
+            "art": "13",
+            "diploma": "Código Penal — Decreto-Lei 2.848/1940",
+            "texto": "Art. 13 - O resultado, de que depende a existência do crime, somente é imputável a quem lhe "
+            "deu causa.\nRelevância da omissão (Incluído pela Lei nº 7.209, de 11.7.1984)\n"
+            "§ 2º - A omissão é penalmente relevante quando o omitente devia e podia agir para evitar o resultado. "
+            "O dever de agir incumbe a quem:(Incluído pela Lei nº 7.209, de 11.7.1984)\n"
+            "a) tenha por lei obrigação de cuidado, proteção ou vigilância; (Incluído pela Lei nº 7.209, de 1984)\n"
+            "b) de outra forma, assumiu a responsabilidade de impedir o resultado;",
+            "baixado_em": dt.date.today().strftime("%d/%m/%Y"),
+        },
+        "CPP:78": {
+            "sigla": "CPP",
+            "art": "78",
+            "diploma": "Código de Processo Penal — Decreto-Lei 3.689/1941",
+            "texto": "Art. 78. Na determinação da competência por conexão ou continência, serão observadas as "
+            "seguintes regras:\nI - no concurso entre a competência do júri e a de outro órgão da jurisdição "
+            "comum, prevalecerá a competência do júri;\n"
+            "Il - no concurso de jurisdições da mesma categoria: (Redação dada pela Lei nº 263, de 23.2.1948)\n"
+            "a) preponderará a do lugar da infração, à qual for cominada a pena mais grave;\n"
+            "III - no concurso de jurisdições de diversas categorias, predominará a de maior graduação;",
+            "baixado_em": dt.date.today().strftime("%d/%m/%Y"),
+        },
+        "L7960:2": {
+            "sigla": "L7960",
+            "art": "2",
+            "diploma": "Prisão temporária — Lei 7.960/1989",
+            "texto": "Art. 2° A prisão temporária será decretada pelo Juiz.\n§ 2° O despacho que decretar a "
+            "prisão temporária deverá ser fundamentado e prolatado dentro do prazo de 24 (vinte e quatro) horas.",
+            "baixado_em": dt.date.today().strftime("%d/%m/%Y"),
+        },
     }
     sumulas = {
+        "SV-14": {
+            "texto": "É direito do defensor, no interesse do representado, ter acesso amplo aos elementos de prova."
+        },
+        "SUM-STJ-470": {"texto": "O Ministério Público não tem legitimidade... • Cancelada."},
         "SUM-STF-711": {
             "texto": "A lei penal mais grave aplica-se ao crime continuado ou ao crime permanente, se a sua vigência é anterior à cessação da continuidade ou da permanência."
         }
@@ -862,6 +940,72 @@ def _fixture():
     return mod, itens, lei, sumulas
 
 
+def _lei(m):
+    return m["blocos"][0]["pontos"][0]["lei_seca"]
+
+
+# Citações que TÊM de passar: os três casos de 07/11/2026 (alínea, "Il", "§ 2°")
+BONS = [
+    (
+        "alínea no campo 'ali' (CP 13, § 2º, a)",
+        {"lei": "CP", "art": "13", "par": "§ 2º", "ali": "a",
+         "texto": "tenha por lei obrigação de cuidado, proteção ou vigilância"},
+    ),
+    (
+        "'II' no módulo, 'Il' no Planalto (CPP 78)",
+        {"lei": "CPP", "art": "78", "inc": "II", "texto": "no concurso de jurisdições da mesma categoria"},
+    ),
+    (
+        "alínea dentro do inciso 'Il' (CPP 78, II, a)",
+        {"lei": "CPP", "art": "78", "inc": "II", "ali": "a", "texto": "preponderará a do lugar da infração"},
+    ),
+    (
+        "'§ 2º' no módulo, '§ 2°' no Planalto (Lei 7.960)",
+        {"lei": "L7960", "art": "2", "par": "§ 2º",
+         "texto": "O despacho que decretar a prisão temporária deverá ser fundamentado"},
+    ),
+]
+SV_BOA = {
+    "tribunal": "STF",
+    "sumula": "SV-14",
+    "fonte": "STF, Súmula Vinculante 14",
+    "data": "02/02/2009",
+    "texto": "É direito do defensor, no interesse do representado, ter acesso amplo aos elementos de prova.",
+}
+# Citações para a prova da régua comum: o gerador e o verificador têm de dar o MESMO veredito
+REGUA = BONS + [
+    ("alínea como inciso", {"lei": "CP", "art": "13", "par": "§ 2º", "inc": "a", "texto": "tenha por lei obrigação"}),
+    ("alínea que não existe", {"lei": "CP", "art": "13", "par": "§ 2º", "ali": "c", "texto": "tenha por lei obrigação"}),
+    ("inciso que não existe", {"lei": "CPP", "art": "78", "inc": "V", "texto": "no concurso de jurisdições"}),
+    ("parágrafo que não existe", {"lei": "L7960", "art": "2", "par": "§ 9º", "texto": "O despacho que decretar"}),
+    ("texto trocado", {"lei": "L7960", "art": "2", "par": "§ 2º", "texto": "O despacho que revogar a prisão"}),
+    ("trecho curto demais", {"lei": "L7960", "art": "2", "texto": "Juiz"}),
+]
+
+
+def _mesma_regua(mod, itens, lei, sumulas):
+    """Para cada citação: o gerador valida o JSON; o verificador lê o HTML que o gerador montaria. Vereditos iguais."""
+    import verificar_atualidade as VA
+
+    falhas = []
+    for rot, cit in REGUA:
+        m = copy.deepcopy(mod)
+        _lei(m)[:] = [dict(cit)]
+        e_ger = [x for x in validar(m, itens, lei, sumulas)[0] if "lei seca" in x]
+        out, _ = montar(m, itens, lei, sumulas, "", [])
+        p = VA._Leitor()
+        p.feed(out)
+        e_ver, _ = VA.conferir({"conferido_em": p.meta_conferido, "leis": p.leis, "juris": []}, lei, sumulas)
+        if bool(e_ger) != bool(e_ver):
+            falhas.append(
+                f"régua dividida — {rot}: gerador {'recusa' if e_ger else 'aceita'}, verificador "
+                f"{'recusa' if e_ver else 'aceita'} ({(e_ger or e_ver)[:1]})"
+            )
+        else:
+            print(f"  mesma régua: {rot} → {'os dois recusam' if e_ger else 'os dois aceitam'}")
+    return falhas
+
+
 DEFEITOS = [
     (
         "id inexistente no edital",
@@ -911,6 +1055,52 @@ DEFEITOS = [
         "origem fora do padrão",
     ),
     (
+        "alínea marcada como inciso (CP 13, § 2º, 'a')",
+        lambda m: _lei(m).append(
+            {"lei": "CP", "art": "13", "par": "§ 2º", "inc": "a", "texto": "tenha por lei obrigação de cuidado"}
+        ),
+        "é ALÍNEA, não inciso",
+    ),
+    (
+        "alínea inexistente no parágrafo (CP 13, § 2º, 'c')",
+        lambda m: _lei(m).append(
+            {"lei": "CP", "art": "13", "par": "§ 2º", "ali": "c", "texto": "tenha por lei obrigação de cuidado"}
+        ),
+        "data-ali",
+    ),
+    (
+        "inciso inexistente (CPP 78, V)",
+        lambda m: _lei(m).append(
+            {"lei": "CPP", "art": "78", "inc": "V", "texto": "no concurso de jurisdições da mesma categoria"}
+        ),
+        "data-inc",
+    ),
+    (
+        "parágrafo inexistente (Lei 7.960, art. 2º, § 9º)",
+        lambda m: _lei(m).append(
+            {"lei": "L7960", "art": "2", "par": "§ 9º", "texto": "O despacho que decretar a prisão temporária"}
+        ),
+        "data-par",
+    ),
+    (
+        "súmula cancelada citada",
+        lambda m: m["blocos"][0]["pontos"][0]["jurisprudencia"].append(
+            {
+                "tribunal": "STJ",
+                "sumula": "STJ-470",
+                "fonte": "STJ, Súmula 470",
+                "data": "24/11/2010",
+                "texto": "O Ministério Público não tem legitimidade",
+            }
+        ),
+        "CANCELADA",
+    ),
+    (
+        "súmula vinculante com tribunal errado",
+        lambda m: m["blocos"][0]["pontos"][0]["jurisprudencia"].append(dict(SV_BOA, tribunal="STJ")),
+        "diferente do da súmula",
+    ),
+    (
         "HTML proibido",
         lambda m: m["blocos"][0]["pontos"][0]["o_que_cai"].append("<script>alert(1)</script>"),
         "tag <script>",
@@ -925,6 +1115,22 @@ def autoteste():
         print(f"[AUTOTESTE FALHOU] o módulo válido foi reprovado: {e}")
         return 1
     falhas = []
+    for rotulo, cit in BONS:
+        m = copy.deepcopy(mod)
+        _lei(m).append(cit)
+        e, _ = validar(m, itens, lei, sumulas)
+        if e:
+            falhas.append(f"citação boa recusada — {rotulo}: {e}")
+        else:
+            print(f"  aceitou: {rotulo}")
+    m = copy.deepcopy(mod)
+    m["blocos"][0]["pontos"][0]["jurisprudencia"].append(SV_BOA)
+    e, _ = validar(m, itens, lei, sumulas)
+    if e:
+        falhas.append(f"súmula vinculante SV-14 recusada: {e}")
+    else:
+        print("  aceitou: súmula vinculante SV-14")
+    falhas += _mesma_regua(mod, itens, lei, sumulas)
     for rotulo, planta, espera in DEFEITOS:
         m = copy.deepcopy(mod)
         planta(m)
@@ -945,10 +1151,37 @@ def autoteste():
             falhas.append(f"referência proibida: parou por outro motivo ({ex})")
     else:
         falhas.append("referência proibida não acusada")
+    # o PDF que não é gravado: o impressor sai 0 sem arquivo (o defeito de 07/11/2026, módulo de 316 páginas)
+    import shutil
+    import tempfile
+
+    global PDF_CDP
+    if shutil.which("node"):
+        with tempfile.TemporaryDirectory(prefix="revisao-pdf-autoteste-") as tmp:
+            falso = Path(tmp) / "impressor_mudo.mjs"
+            falso.write_text("process.exit(0);\n", encoding="utf-8")
+            (Path(tmp) / "x.html").write_text("<p>x</p>", encoding="utf-8")
+            real, PDF_CDP = PDF_CDP, falso
+            try:
+                gerar_pdf(Path(tmp) / "x.html", Path(tmp) / "x.pdf")
+            except SystemExit as ex:
+                if "PDF não gerado" in str(ex):
+                    print("  acusou: impressor saiu 0 sem gravar o PDF (sai 1, nunca verde em silêncio)")
+                else:
+                    falhas.append(f"PDF não gravado: parou por outro motivo ({ex})")
+            else:
+                falhas.append("PDF não gravado passou como gerado")
+            finally:
+                PDF_CDP = real
+    else:
+        print("  [PUL] node ausente: o caso do PDF não gravado não rodou")
     if falhas:
         print(f"[AUTOTESTE FALHOU] {falhas}")
         return 1
-    print(f"[AUTOTESTE OK] o módulo válido passa e os {len(DEFEITOS) + 1} defeitos plantados foram acusados")
+    print(
+        f"[AUTOTESTE OK] o módulo válido e as {len(BONS) + 1} citações boas passam, os {len(DEFEITOS) + 1} defeitos "
+        f"plantados foram acusados e gerador e verificador deram o mesmo veredito nas {len(REGUA)} citações"
+    )
     return 0
 
 
@@ -1012,9 +1245,9 @@ def main(argv):
     print(f"     html: {h} ({h.stat().st_size:,} bytes)".replace(",", "."))
     if "--sem-pdf" not in argv:
         pdf = saida / f"{mod['modulo']}.pdf"
-        nav = gerar_pdf(h, pdf)
+        motor, paginas = gerar_pdf(h, pdf)
         tam = f"{pdf.stat().st_size:,}".replace(",", ".")
-        print(f"     pdf:  {pdf} ({tam} bytes, {nav})")
+        print(f"     pdf:  {pdf} ({paginas} páginas, {tam} bytes, {motor})")
     return 0
 
 

@@ -8,11 +8,13 @@
 ## Como gerar
 
 ```powershell
-# máquina local · pasta do projeto · volta em 10 a 30 s (o PDF sai pelo Edge/Chrome headless)
+# máquina local · pasta do projeto · o _exemplo volta em 10 a 30 s; um módulo de 300 páginas, em 1 a 3 min
+# (o PDF sai pelo Edge/Chrome headless via CDP, em partes de 40 páginas juntadas com o PyMuPDF; pede o Node)
 python ferramentas/gerar_revisao.py _exemplo             # HTML + PDF em revisao/saida/
 python ferramentas/gerar_revisao.py _exemplo --validar   # só valida, não escreve nada
 python ferramentas/gerar_revisao.py _exemplo --sem-pdf   # só o HTML
 python ferramentas/testar_revisao.py                     # gera o exemplo e testa no navegador
+python ferramentas/testar_revisao.py m02_penal_parte_geral --sem-pdf   # idem para um módulo pelo nome
 python ferramentas/testar_revisao.py --autoteste         # REGRA CINCO: planta defeitos e exige a recusa
 ```
 
@@ -74,8 +76,16 @@ Um JSON em UTF-8. Campos marcados com **\*** são obrigatórios.
 | `lei`\* | texto | **chave** de `assets/lei_seca_oficial.json`: a parte antes de `:` (ex. `CP`, `CPP`, `CF`, `L11343`) |
 | `art`\* | texto | artigo como está na chave (ex. `"2"`, `"121"`). `lei:art` tem de existir no oficial |
 | `par` | texto | parágrafo, como se lê (ex. `"§ 1º"`, `"parágrafo único"`) |
-| `inc` | texto | inciso em romano (ex. `"XL"`) |
-| `texto`\* | texto puro | **trecho exato** do texto oficial. Conferido assim: tiram-se as anotações do Planalto ("(Redação dada…)", "(Incluído…)", "(Vide…)" etc.), juntam-se os espaços e quebras, e o trecho tem de estar **contido** no artigo oficial. Diferença de uma letra reprova |
+| `inc` | texto | inciso em romano (ex. `"XL"`, `"I-B"`). **Alínea não é inciso**: `"a"` em `inc` reprova — vai em `ali` |
+| `ali` | texto | alínea, uma letra minúscula (ex. `"a"`). Fica dentro do `inc` (se houver) ou do `par` (se houver) |
+| `texto`\* | texto puro | **trecho exato** do texto oficial (8 caracteres ou mais). Conferido assim: tiram-se as anotações do Planalto ("(Redação dada…)", "(Incluído…)", "(Vide…)" etc.) e as aspas; juntam-se espaços e quebras; hífens e travessões viram `-`; `º`, `°` (grau) e `o` depois de algarismo viram `º`; maiúscula e minúscula não contam. O trecho tem de estar **contido** no artigo oficial. Palavra trocada reprova |
+
+**Régua única (07/11/2026).** O gerador e o verificador de atualidade conferem a citação pela **mesma** função,
+`ferramentas/localizar_lei.py` (`conferir_citacao`): o gerador recusa exatamente o que o `--conferir` recusa, e o
+`--autoteste` do gerador prova isso citação a citação. Além do trecho, `par`, `inc` e `ali` são **localizados** na
+estrutura do artigo, um dentro do outro: o inciso dentro do parágrafo citado, a alínea dentro do inciso ou do
+parágrafo; `"§ 4º"` não casa com `"§ 4º-A"` e `XI` não casa com `XL`. O Planalto às vezes troca o `I` por `l`
+minúsculo ou `1` (CPP, art. 78, "Il"): o inciso `"II"` é aceito, com aviso, **só se** houver um único candidato.
 | `rotulo` | texto | substitui o rótulo automático ("Código Penal, art. 2º, parágrafo único") |
 | `comentario` | texto rico | nota abaixo do quadro da lei |
 
@@ -85,7 +95,7 @@ Sai no HTML, sempre neste formato (lido pelo verificador de atualidade):
 <blockquote class="lei" data-lei="CP" data-art="2" data-par="parágrafo único">texto exato</blockquote>
 ```
 
-`data-par` e `data-inc` só aparecem quando o campo existe.
+`data-par`, `data-inc` e `data-ali` só aparecem quando o campo existe (ex. `data-par="§ 2º" data-ali="a"`).
 
 ### Juris (`jurisprudencia[]`)
 
@@ -95,7 +105,7 @@ Sai no HTML, sempre neste formato (lido pelo verificador de atualidade):
 | `fonte`\* | texto | de onde veio (ex. `"STJ, Súmula 567 (Terceira Seção)"`, `"STF, HC 000.000/UF, Informativo 000"`) |
 | `data`\* | `dd/mm/aaaa` | data do julgamento ou da aprovação |
 | `texto`\* | texto puro | enunciado ou tese |
-| `sumula` | texto | `TRIBUNAL-NÚMERO` (ex. `STJ-593`). O tribunal tem de bater com `tribunal`; se a súmula está em `assets/sumulas.json`, o `texto` tem de estar contido no texto de lá (senão reprova); se não está, sai **aviso** |
+| `sumula` | texto | `STJ-n`, `STF-n` ou `SV-n` (súmula vinculante, do STF; ex. `STJ-593`, `SV-14`). Chave em `assets/sumulas.json`: `SUM-STJ-n`, `SUM-STF-n`, `SV-n`. O tribunal tem de bater com `tribunal` (SV é `STF`); se a súmula está no `sumulas.json`, o `texto` tem de estar contido no texto de lá e ela não pode estar **cancelada ou superada** (senão reprova); se não está, sai **aviso**. As correções do `sumulas.json` conferidas na fonte oficial estão em `ferramentas/corrigir_sumulas.py` |
 | `comentario` | texto rico | |
 
 Sai assim:
@@ -134,14 +144,16 @@ tag (ou atributo) **reprova**. Lei e juris são texto puro, sem HTML.
 ## O que reprova (sai 1)
 
 Ponto sem id ou com id fora do `items.json`; id repetido; prioridade sem `escore` numérico; ponto sem
-`o_que_cai`; lei sem chave, sem artigo, com `lei:art` fora do oficial ou com texto que não confere; juris sem
-tribunal, fonte ou data, data fora de `dd/mm/aaaa`, súmula fora do padrão ou com texto diferente do
-`sumulas.json`; ficha sem gabarito C/E, sem item ou sem fundamento; questão sem as 5 alternativas, sem gabarito
+`o_que_cai`; lei sem chave, sem artigo, com `lei:art` fora do oficial, com texto que não confere ou curto demais,
+com `par`, `inc` ou `ali` que não se localiza no artigo (ou alínea posta em `inc`); juris sem
+tribunal, fonte ou data, data fora de `dd/mm/aaaa`, súmula fora do padrão, cancelada/superada ou com texto
+diferente do `sumulas.json`; PDF não gravado; ficha sem gabarito C/E, sem item ou sem fundamento; questão sem as 5 alternativas, sem gabarito
 A–E, sem comentário ou com origem fora da lista; esquema malformado; HTML fora da lista; `conferido_em` ausente,
 inválido ou no futuro; e **referência proibida** no HTML final (`ferramentas/referencias_proibidas.py`: outras
 bancas, cursinhos, o curso de origem dos simulados, "Prof." abreviado).
 
-**Avisos** (não reprovam): súmula que não está no `sumulas.json`; artigo com alteração de 2026; lei seca
+**Avisos** (não reprovam): súmula que não está no `sumulas.json`; inciso achado com I/l/1 trocados no texto
+oficial; artigo com alteração de 2026; lei seca
 oficial baixada há mais de 30 dias da data de conferência (rode `atualizar_lei_seca.bat`).
 
 ## O que o HTML entrega
