@@ -2,9 +2,21 @@
 
 > Estado, tarefas e o que ficou rodando. Atualizado a cada ~15 min de trabalho e no fechamento.
 
-**Última atualização:** 07/11/2026, 16h31.
+**Última atualização:** 09/11/2026, 10h51.
 
 ## Estado
+
+- ✅ **09/11/2026, 10h48 — Conserto da revisão (régua única de lei seca, corretor de súmulas, PDF por CDP) no Git:**
+  commit `9fa62b9`. Estava pausado fora do Git desde 07/11, ~15h. Portão 26 de 26 (rc 0); m01 a m04 validados pelo
+  gerador novo (rc 0). Súmulas 641 e 645 do STJ corrigidas por `ferramentas/corrigir_sumulas.py`.
+  ⚠️ Ainda em aberto: `servidor.py` mostra as leis da Bahia como "Planalto" (`merged_lei`); súmula STJ-582 (m03)
+  fora de `assets/sumulas.json`; **módulos 5 a 13 da revisão não gerados** (o calendário previa todos até 13/11).
+- ✅ **07/11 a 08/11/2026 — Pente Fino** (D-021) em 9 disciplinas, cada uma num commit: Processo Civil, Civil e
+  Empresarial, Medicina Legal, Criminologia, Processo Penal, Penal Parte Geral e Parte Especial, Legislação Penal
+  Extravagante, Informática (último: `3e44a29`, 08/11, 22h04). **Sem Pente Fino** (pontos no `items.json`, medido em
+  09/11/2026): Administrativo 71, Constitucional 62, Tributário 36, Raciocínio Lógico 23, Legislação Geral da Bahia
+  e Igualdade (PRG) 18, Ambiental 16, Português 10, Legislação Geral 5, Atualidades 2.
+  📅 **Prova objetiva e discursiva: 06/12/2026 — faltam 27 dias** (contados de 09/11).
 
 - ✅ **07/11/2026, 16h31 — Destaques didáticos nos comentários dos simulados:** termos jurídicos centrais em negrito; exceções e limitações em vermelho. Aplicados só na renderização dos comentários, sem reescrever o material. Testes cobrem destaques, escaping e preservação do renderizador padrão.
 - ✅ **07/11/2026, 16h15 — Layout das abas da aplicação Discursiva:** hierarquia visual, leitura de enunciados, orientações, modelos e comentários mais claros; etapas, cartões e progresso com maior destaque; responsividade conferida sem rolagem horizontal em viewport móvel. Fluxos, dados e respostas não mudaram. Storybook compilado e portão aprovado nas 26 portas.
