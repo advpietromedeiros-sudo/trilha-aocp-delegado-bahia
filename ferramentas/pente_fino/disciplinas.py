@@ -16,15 +16,21 @@ das duas etapas e pode sair sem mudar nada no arquivo gerado.
 LPE: Legislação Penal e Processual Penal Extravagante (08/11/2026) — 40 pontos (DBA26-LPE-1 a 40, uma lei por ponto e o
 LPE-40 de fechamento com jurisprudência transversal), conteúdo em lpe/ e jurisprudência em lpe/lpe_juris.py, que
 reaproveita as entradas de pen_juris.py e cpp_juris.py; volume da CPP/PEN (R1 5–12, R2 3–8) e toda assertiva com lei ou
-jurisprudência (sem doutrina_sem_fonte). Sem `pontos_incluidos`: exige os 40 pontos do edital."""
+jurisprudência (sem doutrina_sem_fonte). Sem `pontos_incluidos`: exige os 40 pontos do edital.
+INF: Noções de Informática (08/11/2026) — 34 pontos com até TRÊS níveis (DBA26-INF-2.1.1: ordem_ponto passou a ler o 3º
+nível), conteúdo em inf/; volume R1 5–10 e R2 3–7 e `doutrina_sem_fonte` como na MLE/CRI (a disciplina é técnica: a lei
+entra só no crime informático e na fraude eletrônica do CP). Fato técnico volátil (atalho, menu, função) leva no resumo a
+fonte oficial e a data de consulta ("Fonte: ..."), listadas também em `fontes`."""
 import re
 
 
 def ordem_ponto(pid):
     """DBA26-CIV-4 < DBA26-CIV-4-B2 < DBA26-CIV-5 e DBA26-MLE-5 < DBA26-MLE-5.1 < DBA26-MLE-5.2 < DBA26-MLE-6;
-    para o CPC e o CIV dá a mesma ordem de antes (subitem 0 em todos)."""
-    m = re.match(r'^DBA26-[A-Z]+-(\d+)(?:\.(\d+))?(?:-B(\d+))?$', pid)
-    return (int(m.group(1)), int(m.group(2) or 0), int(m.group(3) or 0)) if m else (10 ** 6, 0, 0)
+    para o CPC e o CIV dá a mesma ordem de antes (subitem 0 em todos). Desde 08/11/2026 (INF) aceita também o 3º nível
+    (DBA26-INF-2.1 < DBA26-INF-2.1.1 < DBA26-INF-2.1.5 < DBA26-INF-2.2); nas demais disciplinas o 3º nível é 0 e a
+    ordem não muda."""
+    m = re.match(r'^DBA26-[A-Z]+-(\d+)(?:\.(\d+))?(?:\.(\d+))?(?:-B(\d+))?$', pid)
+    return (int(m.group(1)), int(m.group(2) or 0), int(m.group(3) or 0), int(m.group(4) or 0)) if m else (10 ** 6, 0, 0, 0)
 
 
 # Direito Penal — Parte Geral (entregue em 08/11/2026): títulos 1 a 9 do edital, com os subitens.
@@ -160,4 +166,22 @@ DISC = {
                 'Súmulas do STJ — processo.stj.jus.br/SCON/sumstj e notícias oficiais do STJ (Súmulas 658 a 669)',
                 'Súmulas do STF — PDF oficial "Enunciados das Súmulas do STF 1 a 736" (stf.jus.br) e Súmulas Vinculantes 24, 26, 35, 56 e 63 (portal.stf.jus.br)',
                 'STF — Tema 506/RG (Informativo 1.143), Inq 4.435 AgR-quarto, RE 548.181 (Informativo 714), Tema 184/RG, ADIs 3.360/4.109 e ADI 5.637 (portal.stf.jus.br e notícias oficiais)']),
+    'INF': dict(
+        prefixo='DBA26-INF-',
+        pasta='inf',
+        modulos=['inf_p01', 'inf_p02_1', 'inf_p02_2', 'inf_p02_3', 'inf_p03'],
+        disciplina='Noções de Informática',
+        conferido_em='08/11/2026',
+        volume=((5, 10), (3, 7)),  # 34 pontos: R1 5–6 e R2 3–4 na média; os de maior incidência AOCP (3.6, 2.2, 3.1, 2.3, 2.1) vão além
+        doutrina_sem_fonte=True,
+        cabecalho='// Pente Fino — Noções de Informática (DBA26-INF-1 a INF-3.7, com os subitens de até três níveis). Gerado por ferramentas/pente_fino/construir.py --disc INF em 08/11/2026.',
+        fontes=['Suporte Microsoft (support.microsoft.com/pt-br) — "Atalhos de teclado no Windows", consultado em 08/11/2026',
+                'Suporte Microsoft — "Atalhos de teclado no Word", consultado em 08/11/2026 (a página segue o layout de teclado dos EUA em parte: só entram os atalhos em que a versão em português é inequívoca)',
+                'Suporte Microsoft — "Atalhos de teclado no Excel" e "Funções do Excel (por categoria)", consultados em 08/11/2026',
+                'Suporte Microsoft — "Usar atalhos de teclado para fazer apresentações do PowerPoint", consultado em 08/11/2026',
+                'Ajuda da Pesquisa Google (support.google.com/websearch) — "Refinar pesquisas", consultado em 08/11/2026',
+                'Cartilha de Segurança para Internet — CERT.br/NIC.br (cartilha.cert.br), consultada em 08/11/2026',
+                'NIST SP 800-145, "The NIST Definition of Cloud Computing" (2011) — definição de computação em nuvem',
+                'Decreto-Lei 2.848/1940 (Código Penal), arts. 154-A, 154-B, 171, § 2º-A, 266, § 1º, e 298, par. ún. (Leis 12.737/2012, 14.155/2021 e 15.397/2026) — Planalto',
+                'Versões de referência: Windows 11 e Microsoft 365 (Word, Excel e PowerPoint) em português; LibreOffice 7.x/24.x quando citado. Divergência entre versões é declarada no comentário']),
 }

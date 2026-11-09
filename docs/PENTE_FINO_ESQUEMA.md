@@ -155,3 +155,26 @@ entregues de uma vez (sem `pontos_incluidos`: o conferidor exige os 40).
   inconstitucionalidade declarada e não conferida hoje (Lei 10.826/2003, art. 21; Lei 11.343/2006, art. 44, caput,
   quanto à liberdade provisória e às restritivas; Lei 9.613/1998, art. 17-D) ficaram de fora; posição de tribunal só
   com julgado conferido em `lpe_juris.py`.
+
+## Informática (08/11/2026)
+
+`pente_fino_inf.js` (`--disc INF`, conteúdo em `ferramentas/pente_fino/inf/`, fontes técnicas em `inf/inf_fontes.py`): os
+**34 pontos** do edital (`DBA26-INF-1` a `INF-3.7`), com subitens de até **três níveis** (`DBA26-INF-2.1.1` → ids
+`INF-2.1.1-R1-01`), em `inf_p01.py` (Windows 11), `inf_p02_1.py` (Microsoft 365 e Word), `inf_p02_2.py` (Excel),
+`inf_p02_3.py` (PowerPoint) e `inf_p03.py` (redes, internet e intranet, nuvem, navegadores, deep e dark web, correio
+eletrônico, segurança, backup) — 314 assertivas (R1 193, R2 121), entregues de uma vez.
+
+- `ordem_ponto` (em `disciplinas.py`) passou a ler o **3º nível** (2.1 < 2.1.1 < 2.1.5 < 2.2); nas outras disciplinas
+  o 3º nível é 0 e a reconstrução delas não muda uma letra.
+- Volume próprio (R1 5–10, R2 3–7): 5/3 nos pontos sem incidência; os de maior incidência AOCP (`revisao/mapa_prioridade.json`:
+  3.6 segurança 10/7, 2.2 Excel 8/5, 3.1 internet 8/5, 2.1 Word 7/4, 2.2.2 funções 7/5) vão além.
+- `doutrina_sem_fonte`, como na MLE/CRI: a disciplina é técnica, e a lei entra só onde há tipo penal (CP, arts. 154-A,
+  154-B e 171, §§ 2º-A e 2º-B), recortada da base oficial. Fato técnico volátil — **atalho, menu, nome de função,
+  operador de busca** — leva no fim do resumo a frase "Fonte: ..." com a página oficial e a data de consulta (Suporte
+  Microsoft, Ajuda da Pesquisa Google, Cartilha CERT.br, NIST SP 800-145), listadas também em `fontes`.
+- Versões de referência: **Windows 11** e **Microsoft 365** em português; quando a versão importa, o item diz (guias do
+  Explorador só no Windows 11 22H2; PROCX, CLASSIFICAR e Transformar no Microsoft 365/2021; atalhos do LibreOffice 7.x/24.x).
+- As páginas de atalhos da Microsoft avisam que seguem o **layout de teclado dos EUA** e, na versão em português, trazem
+  linhas trocadas (ex.: alinhar à direita, selecionar tudo). Por isso só entraram atalhos em que a página e o Office em
+  português coincidem sem dúvida (Ctrl + N/I/S, Ctrl + E, Ctrl + J, Ctrl + 1/2/5, Ctrl + Enter, Ctrl + Shift + Enter,
+  F7, F12; no Excel, F2, F4, F11, Ctrl + D, Ctrl + 1, Ctrl + Alt + V); "selecionar tudo" no Excel é cobrado pelo botão.

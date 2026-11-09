@@ -269,3 +269,23 @@ prompt do servidor já manda não aplicar norma posterior.
   finalizado em 26/06/2024); Inq 4.435 AgR-quarto (notícia oficial, Plenário, 14/03/2019); RE 548.181 (Informativo 714,
   Primeira Turma, 06/08/2013). **Canceladas e não usadas como regra:** Súmula 512/STJ (SCON) e Súmula Vinculante 9
   (Informativo STF 1.193, PSV 60). A `assets/sumulas.json` não foi usada como fonte.
+
+## Pente Fino de Informática (08/11/2026, D-021)
+
+- **Guia de temas e profundidade (sem cópia de texto):** não há material de Informática em `DELEGADO BA/` (nenhum arquivo
+  da disciplina na pasta; busca por Excel, PowerPoint, malware e navegador nos quatro resumos gerais e nos dois PDFs de
+  lei seca anotada: zero). O nível e o estilo foram calibrados pelas 113 questões de
+  Informática e Segurança da Informação dos cadernos AOCP em `revisao/dados/` (fora do Git; entrada de 06/11/2026) e
+  pela incidência de `revisao/mapa_prioridade.json` (INF-3.6, 2.2, 3.1, 2.3 e 2.1 à frente). Nenhum enunciado entrou.
+- Texto das 314 assertivas e dos comentários de `discursiva/pente_fino_inf.js` (gerado de `ferramentas/pente_fino/inf/`)
+  é próprio: conferência de janelas de 8 palavras contra todos os 24 cadernos AOCP (78.680 janelas) — **zero**
+  coincidências. Busca por dado pessoal de comprador nos arquivos novos: zero. A extração e o script de conferência
+  ficaram em `.scratch/` e foram apagados ao fim.
+- **Fontes técnicas oficiais (consultadas em 08/11/2026, WebFetch):** Suporte Microsoft em português — "Atalhos de
+  teclado no Windows", "Atalhos de teclado no Word", "Atalhos de teclado no Excel", "Funções do Excel (por categoria)" e
+  "Usar atalhos de teclado para fazer apresentações do PowerPoint"; Ajuda da Pesquisa Google, "Refinar pesquisas";
+  Cartilha de Segurança para Internet (CERT.br/NIC.br); e a definição NIST SP 800-145 (2011). Cada item que depende
+  delas traz a fonte e a data no resumo (77 itens).
+- **Letra de lei:** `assets/lei_seca_oficial.json` (Planalto), **sem lei nova acrescentada**: CP, arts. 154-A (caput e
+  §§ 1º e 2º, redação da Lei 14.155/2021), 154-B e 171, §§ 2º-A (redação da Lei 15.397/2026) e 2º-B — 6 citações de 3
+  artigos. **Jurisprudência:** nenhuma. A `assets/sumulas.json` não foi usada.
