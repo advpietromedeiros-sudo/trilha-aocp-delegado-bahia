@@ -2,9 +2,28 @@
 
 > Estado, tarefas e o que ficou rodando. Atualizado a cada ~15 min de trabalho e no fechamento.
 
-**Última atualização:** 09/11/2026, 10h51.
+**Última atualização:** 09/11/2026, 12h1x.
 
 ## Estado
+
+- 🆕 **09/11/2026 — Aba 📚 Revisão (D-022):** o material de revisão anexado pelo titular (Partes 1 e 2: Processo
+  Civil, Tributário, Constitucional e Ambiental; 267 páginas) virou assertivas C/E comentadas, ~2.700 em 23 blocos.
+  - **Tela:** reaproveita o motor do Pente Fino, com os blocos todos abertos e o progresso em `revisao:v1`.
+  - **Cobertura provada:** `ferramentas/validar_revisao_material.py` confere página a página e número de julgado a
+    número de julgado.
+  - **Montagem:** `ferramentas/montar_revisao_material.py` grava `discursiva/revisao_nfpss.js`.
+  - **Fora do Git:** o material e as assertivas, em `revisao/material/nfpss/`.
+  - ⏳ **A Parte 3 vem depois, do titular.** Ela entra pelo mesmo caminho:
+    1. extrair o texto, tirando a marca d'água de CPF;
+    2. dividir em blocos com `revisao/material/nfpss/limpar_nfpss.py` (adaptar as divisas de disciplina);
+    3. redator por bloco, guiado pelo brief em `revisao/material/nfpss/BRIEF.md`;
+    4. o verificador em rc 0;
+    5. o montador.
+  - ⚠️ **~75 itens com "O material diverge"** (Lei 7.374 por 7.347, Súmula 509 do STF por STJ, arts. do CPC/73, EC
+    69/2012...). Vários pedem conferência na fonte oficial: LC 236/2026, Lei 15.484/2026, Tema 1385, ADI 7066 e
+    ADPF 973.
+  - `docs/testar_pente_fino.mjs` (27 conferências, T25 a T27 da Revisão; autoteste com 5 defeitos plantados) roda
+    só aqui: depende do Chrome do Windows e não é porta do portão.
 
 - ✅ **09/11/2026, 10h48 — Conserto da revisão (régua única de lei seca, corretor de súmulas, PDF por CDP) no Git:**
   commit `9fa62b9`. Estava pausado fora do Git desde 07/11, ~15h. Portão 26 de 26 (rc 0); m01 a m04 validados pelo

@@ -26,6 +26,8 @@ PY = [
     "ferramentas/gerar_revisao.py",
     "ferramentas/testar_revisao.py",
     "ferramentas/corrigir_sumulas.py",
+    "ferramentas/validar_revisao_material.py",
+    "ferramentas/montar_revisao_material.py",
 ]
 
 # (nome, comando, o erro que esta porta impede)
@@ -86,6 +88,13 @@ PORTAS: list[tuple[str, list[str], str]] = [
      "módulo gerado sobre lei seca velha; sai 2 (pulada) onde a base não existe — fica fora do Git (D-015)"),
     ("a régua de incidência acusa", [sys.executable, "ferramentas/classificar_incidencia.py", "--autoteste"],
      "régua que casa 'tor' dentro de 'torre', perde o plural em -ões ou classifica sem termo (06/11/2026)"),
+    # Aba Revisão: assertivas C/E de TODO o material anexado (D-022, 09/11/2026)
+    ("a prova de cobertura da Revisão acusa",
+     [sys.executable, "ferramentas/validar_revisao_material.py", "--autoteste"],
+     "página do material sem assertiva, julgado perdido, CPF da marca d'água ou gabarito torto "
+     "passando calados"),
+    ("o montador da Revisão acusa", [sys.executable, "ferramentas/montar_revisao_material.py", "--autoteste"],
+     "revisao_nfpss.js gravado com bloco sem cobertura provada ou sem assertivas"),
     ("o leitor das provas AOCP acusa", [sys.executable, "ferramentas/extrair_provas_aocp.py", "--autoteste"],
      "gabarito ou cabeçalho da prova lidos errado em silêncio"),
 ]

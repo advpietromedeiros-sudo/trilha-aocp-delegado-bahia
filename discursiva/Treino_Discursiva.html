@@ -162,6 +162,7 @@ img.fig{display:block;max-width:100%;margin:10px auto;border:1px solid var(--lin
 <script src="pente_fino_pen.js" data-opcional="1"></script>
 <script src="pente_fino_lpe.js" data-opcional="1"></script>
 <script src="pente_fino_inf.js" data-opcional="1"></script>
+<script src="revisao_nfpss.js" data-local="terceiro"></script>
 <script>
 /* Treino de Discursiva (02/11/2026, pedido do titular): fazer a peça e os estudos de caso PASSO A PASSO, sob orientação,
    e memorizar os artigos de cada um (cartões com repetição espaçada + Certo/Errado para a objetiva).
@@ -203,10 +204,10 @@ function passosDe(p){
 }
 
 /* ---------- abas ---------- */
-const ABAS=[['edital','🗺️ Edital'],['pecas','📜 Peças'],['casos','✍️ Estudos de caso'],['simulados','📝 Simulados'],['pente','🔍 Pente Fino'],['memoria','🧠 Memorizar'],['progresso','📊 Progresso']];
+const ABAS=[['edital','🗺️ Edital'],['pecas','📜 Peças'],['casos','✍️ Estudos de caso'],['simulados','📝 Simulados'],['pente','🔍 Pente Fino'],['revisao','📚 Revisão'],['memoria','🧠 Memorizar'],['progresso','📊 Progresso']];
 let aba='edital';
 const marcarAba=a=>{aba=a;$('abas').innerHTML=ABAS.map(([k,n])=>`<button class="${k===a?'on':''}" data-aba="${k}">${n}</button>`).join('')};
-function ir(a){aba=a;$('abas').innerHTML=ABAS.map(([k,n])=>`<button class="${k===a?'on':''}" data-aba="${k}">${n}</button>`).join('');({edital,pecas:listaPecas,casos:listaCasos,simulados:listaSimulados,pente:telaPente,memoria:memorizar,progresso})[a]();scrollTo(0,0)}
+function ir(a){aba=a;$('abas').innerHTML=ABAS.map(([k,n])=>`<button class="${k===a?'on':''}" data-aba="${k}">${n}</button>`).join('');({edital,pecas:listaPecas,casos:listaCasos,simulados:listaSimulados,pente:()=>pfModo('pente'),revisao:()=>pfModo('revisao'),memoria:memorizar,progresso})[a]();scrollTo(0,0)}
 document.addEventListener('click',e=>{const b=e.target.closest('[data-aba]');if(b)ir(b.dataset.aba)});
 
 function edital(){
@@ -487,16 +488,29 @@ document.addEventListener('keydown',ev=>{if(aba!=='simulados'||!sim||!$('simProx
    Dados: window.PENTE_FINO.<DISC> (discursiva/pente_fino_<disc>.js; formato em docs/PENTE_FINO_ESQUEMA.md).
    Progresso em chave própria do localStorage, à prova de falha (navegador sem armazenamento segue funcionando). */
 const PF_CHAVE='pente-fino:v1';
-let pf={disc:null,d:{}};try{const x=JSON.parse(localStorage.getItem(PF_CHAVE)||'null');if(x&&typeof x==='object')pf=Object.assign(pf,x,{d:x.d&&typeof x.d==='object'?x.d:{}})}catch(e){}
-const pfSalvar=()=>{try{localStorage.setItem(PF_CHAVE,JSON.stringify(pf))}catch(e){}};
+/* A aba 📚 Revisão (09/11/2026, pedido do titular) usa este mesmo motor: assertivas C/E de TODO o material de revisão
+   que ele anexou, um bloco por trecho do material, todos abertos (sem a trava de rodada). Dados de TERCEIRO:
+   window.REVISAO em discursiva/revisao_nfpss.js, só no disco (fora do Git e do arquivo de envio, data-local). */
+const PF_FONTES={
+ pente:{chave:PF_CHAVE,dados:()=>window.PENTE_FINO,titulo:'🔍 Pente Fino',trava:true,ponto:'Ponto',pontos:'Progresso por ponto do edital (ir para um ponto)',
+  intro:D=>`Assertivas de <b>Certo ou Errado</b> comentadas, ponto a ponto do edital. A <b>Rodada 1</b> passa pelo essencial de todos os pontos; a <b>Rodada 2</b> aprofunda e abre quando a 1 estiver concluída.${D.conferido_em?` <small>Lei e jurisprudência conferidas em ${esc(D.conferido_em)}.</small>`:''}`,
+  vazio:`<b>Conteúdo ainda não gerado.</b><br>As assertivas de Certo ou Errado comentadas aparecem aqui assim que o arquivo da disciplina (ex.: <code>pente_fino_cpc.js</code>) estiver na pasta <code>discursiva</code>.`},
+ revisao:{chave:'revisao:v1',dados:()=>window.REVISAO,titulo:'📚 Revisão',trava:false,ponto:'Seção',pontos:'Progresso por seção do material (ir para uma seção)',
+  intro:D=>`Todo o material de revisão em assertivas de <b>Certo ou Errado</b> comentadas, na ordem do material. Cada bloco cobre um trecho (as páginas estão no título) e todos ficam abertos.${D.fontes?` <small>${esc(D.fontes)}</small>`:''}`,
+  vazio:`<b>A revisão não está nesta cópia.</b><br>É material de terceiro e fica só na máquina do titular: o arquivo <code>revisao_nfpss.js</code> precisa estar na pasta <code>discursiva</code>.`}};
+const pfCarregar=ch=>{const s={disc:null,d:{}};try{const x=JSON.parse(localStorage.getItem(ch)||'null');if(x&&typeof x==='object')Object.assign(s,x,{d:x.d&&typeof x.d==='object'?x.d:{}})}catch(e){}return s};
+const PF_EST={pente:pfCarregar(PF_CHAVE),revisao:pfCarregar('revisao:v1')};
+let pfAba='pente',pf=PF_EST.pente;
+const pfSalvar=()=>{try{localStorage.setItem(PF_FONTES[pfAba].chave,JSON.stringify(pf))}catch(e){}};
 let pfConfirma=false;
-const pfDados=()=>{const P=typeof window.PENTE_FINO==='object'&&window.PENTE_FINO?window.PENTE_FINO:{};return Object.keys(P).filter(k=>P[k]&&Array.isArray(P[k].rodadas)).map(k=>[k,P[k]])};
+function pfModo(a){if(a!==pfAba)pfConfirma=false;pfAba=a;pf=PF_EST[a];telaPente()}
+const pfDados=()=>{const v=PF_FONTES[pfAba].dados(),P=typeof v==='object'&&v?v:{};return Object.keys(P).filter(k=>P[k]&&Array.isArray(P[k].rodadas)).map(k=>[k,P[k]])};
 const pfEst=k=>{const e=pf.d[k]=pf.d[k]||{};e.rod=e.rod||1;e.pos=e.pos||{};e.resp=e.resp||{};e.so=e.so||{};return e};
 const pfRod=(D,n)=>D.rodadas.find(r=>r.n===n)||{n,titulo:'Rodada '+n,itens:[]};
 const pfFeitas=(e,itens)=>itens.filter(i=>e.resp[i.id]).length;
 const pfAcertos=(e,itens)=>itens.filter(i=>e.resp[i.id]&&e.resp[i.id]===i.gabarito).length;
 const pfConcluida=(D,e,n)=>{const it=pfRod(D,n).itens;return it.length>0&&pfFeitas(e,it)===it.length};
-const pfLiberada=(D,e,n)=>n<=1||pfConcluida(D,e,n-1);
+const pfLiberada=(D,e,n)=>!PF_FONTES[pfAba].trava||n<=1||pfConcluida(D,e,n-1);
 const pfLista=(D,e,n)=>{const it=pfRod(D,n).itens;return e.so[n]?it.filter(i=>e.resp[i.id]&&e.resp[i.id]!==i.gabarito):it};
 const pfBarra=(a,t)=>`<div class="pf-barra${t&&a===t?' ok':''}" role="progressbar" aria-valuemin="0" aria-valuemax="${t}" aria-valuenow="${a}"><i style="width:${t?Math.round(100*a/t):0}%"></i></div>`;
 function pfComentario(it){
@@ -509,10 +523,11 @@ function pfComentario(it){
  ${lei.length?`<section class="cm-q cm-lei"><header class="cm-rot">📖 Letra da lei</header>${lei.map(l=>`<figure class="cm-cit"><figcaption>${esc(l.rotulo||[l.lei,l.art&&'art. '+l.art,l.par,l.inc].filter(Boolean).join(', '))}</figcaption><blockquote>${M(l.texto)}</blockquote></figure>`).join('')}</section>`:''}
  ${jur.length?`<section class="cm-q cm-juris"><header class="cm-rot">⚖️ Jurisprudência</header>${jur.map(j=>`<div class="cm-jur"><div class="cm-jur-fonte"><b>${esc(j.tribunal||'')}</b>${j.fonte?' · '+esc(j.fonte):''}${j.data?' · '+esc(j.data):''}</div><p>${M(j.texto)}</p></div>`).join('')}</section>`:''}
  ${c.pegadinha?`<section class="cm-q cm-pegadinha"><header class="cm-rot">🎯 Pegadinha da banca</header><p>${M(c.pegadinha)}</p></section>`:''}
+ ${c.divergencia?`<section class="cm-q cm-atencao"><header class="cm-rot">⚠️ O material diverge</header><p>${M(c.divergencia)}</p></section>`:''}
  ${pc.length?`<div class="cm-tags" aria-label="Palavras-chave">${pc.map(x=>`<span>#${esc(x)}</span>`).join('')}</div>`:''}</div>`}
 function telaPente(){
- const ds=pfDados();
- if(!ds.length){$('tela').innerHTML=`<div class="card"><h2>🔍 Pente Fino</h2><div class="pf-vazio"><b>Conteúdo ainda não gerado.</b><br>As assertivas de Certo ou Errado comentadas aparecem aqui assim que o arquivo da disciplina (ex.: <code>pente_fino_cpc.js</code>) estiver na pasta <code>discursiva</code>.</div></div>`;return}
+ const ds=pfDados(),F=PF_FONTES[pfAba];
+ if(!ds.length){$('tela').innerHTML=`<div class="card"><h2>${F.titulo}</h2><div class="pf-vazio">${F.vazio}</div></div>`;return}
  if(!ds.some(([k])=>k===pf.disc))pf.disc=ds[0][0];
  const D=ds.find(([k])=>k===pf.disc)[1],e=pfEst(pf.disc);
  if(!pfLiberada(D,e,e.rod))e.rod=1;
@@ -531,20 +546,20 @@ function telaPente(){
  if(!tot)corpo=`<div class="pf-vazio">Esta rodada ainda não tem assertivas.</div>`;
  else if(!it)corpo=`<div class="pf-vazio">Nenhuma assertiva errada nesta rodada. 👏<div class="linha-bts" style="justify-content:center"><button class="bt pri" id="pfSoSai">Voltar a todas</button></div></div>`;
  else corpo=`<div class="pf-item">
-  <div class="pf-meta"><span class="selo">Ponto ${numPonto(it.ponto)} · ${esc(nomePonto(it.ponto))}</span><span>${esc(it.tema||'')}</span><span style="margin-left:auto"><b>Assertiva ${i+1} de ${L.length}</b>${e.so[n]?' · só as que errei':''}</span></div>
+  <div class="pf-meta"><span class="selo">${F.ponto} ${numPonto(it.ponto)} · ${esc(nomePonto(it.ponto))}</span><span>${esc(it.tema||'')}${it.pag?` · p. ${esc(it.pag)} do material`:''}</span><span style="margin-left:auto"><b>Assertiva ${i+1} de ${L.length}</b>${e.so[n]?' · só as que errei':''}</span></div>
   <p class="pf-assertiva" id="pfAssertiva">${esc(it.assertiva)}</p>
   <div class="pf-ce" role="group" aria-label="Julgue a assertiva"><button data-pfr="C" ${r?'disabled':''} class="${r==='C'?'escolhida':''}">✔ CERTO</button><button data-pfr="E" ${r?'disabled':''} class="${r==='E'?'escolhida':''}">✘ ERRADO</button></div>
   ${r?`<div class="pf-fb ${ok?'ok':'no'}" role="status">${ok?'✔ Acertou':'✘ Errou'} — gabarito: ${it.gabarito==='C'?'CERTO':'ERRADO'}</div>${pfComentario(it)}`:''}
   <div class="linha-bts"><button class="bt" id="pfAnt" ${i>0?'':'disabled'}>← Anterior</button><button class="bt pri" id="pfProx" ${i<L.length-1?'':'disabled'}>Próxima →</button></div></div>`;
- $('tela').innerHTML=`<div class="card"><div class="pf-topo"><h2>🔍 Pente Fino</h2>${ds.length>1?`<div class="pf-discs">${ds.map(([k,x])=>`<button class="${k===pf.disc?'on':''}" data-pfdisc="${esc(k)}">${esc(x.disciplina||k)}</button>`).join('')}</div>`:`<span class="selo" style="margin:0;background:var(--azul2);color:#1b3f73">${esc(D.disciplina||pf.disc)}</span>`}</div>
- <p>Assertivas de <b>Certo ou Errado</b> comentadas, ponto a ponto do edital. A <b>Rodada 1</b> passa pelo essencial de todos os pontos; a <b>Rodada 2</b> aprofunda e abre quando a 1 estiver concluída.${D.conferido_em?` <small>Lei e jurisprudência conferidas em ${esc(D.conferido_em)}.</small>`:''}</p>
+ $('tela').innerHTML=`<div class="card"><div class="pf-topo"><h2>${F.titulo}</h2>${ds.length>1?`<div class="pf-discs">${ds.map(([k,x])=>`<button class="${k===pf.disc?'on':''}" data-pfdisc="${esc(k)}">${esc(x.disciplina||k)}</button>`).join('')}</div>`:`<span class="selo" style="margin:0;background:var(--azul2);color:#1b3f73">${esc(D.disciplina||pf.disc)}</span>`}</div>
+ <p>${F.intro(D)}</p>
  <div class="pf-rodadas">${tiles}</div>
  <div class="pf-meta"><span><b>Geral da ${esc(R.titulo||'Rodada '+n)}:</b> ${feitas} de ${tot} respondidas · ${acertos} acertos${feitas?' ('+Math.round(100*acertos/feitas)+'%)':''}</span></div>${pfBarra(feitas,tot)}
- ${fimRod?`<div class="pf-fim" role="status"><b>🎉 ${esc(R.titulo||'Rodada '+n)} concluída:</b> ${acertos} de ${tot} acertos.${prox?` A Rodada ${prox} está liberada.`:''}<div class="linha-bts">${prox?`<button class="bt ok" data-pfrod="${prox}">Ir para a Rodada ${prox} →</button>`:''}${erradas?`<button class="bt" id="pfSoErros2">Rever as ${erradas} que errei</button>`:''}</div></div>`:''}
- <details class="pf-pontos"><summary>Progresso por ponto do edital (ir para um ponto)</summary>${pontos}</details></div>
+ ${fimRod?`<div class="pf-fim" role="status"><b>🎉 ${esc(R.titulo||'Rodada '+n)} concluída:</b> ${acertos} de ${tot} acertos.${prox&&F.trava?` A Rodada ${prox} está liberada.`:''}<div class="linha-bts">${prox?`<button class="bt ok" data-pfrod="${prox}">${F.trava?`Ir para a Rodada ${prox}`:`Ir para ${esc(pfRod(D,prox).titulo||'o bloco '+prox)}`} →</button>`:''}${erradas?`<button class="bt" id="pfSoErros2">Rever as ${erradas} que errei</button>`:''}</div></div>`:''}
+ <details class="pf-pontos"><summary>${F.pontos}</summary>${pontos}</details></div>
  <div class="card">${corpo}
  <div class="linha-bts"><button class="bt" id="pfSoErros" aria-pressed="${!!e.so[n]}" ${erradas||e.so[n]?'':'disabled'}>${e.so[n]?'Ver todas as assertivas':`↺ Rever as que errei (${erradas})`}</button><button class="bt" id="pfReset" ${feitas?'':'disabled'}>Reiniciar a rodada</button></div>
- ${pfConfirma?`<div class="pf-confirma" role="alertdialog" aria-label="Confirmar reinício"><b>Apagar as ${feitas} resposta(s) da ${esc(R.titulo||'Rodada '+n)}?</b>${n===1&&rods.length>1?' A Rodada 2 volta a ficar bloqueada até você concluir a 1 de novo.':''}<div class="linha-bts"><button class="bt pri" id="pfResetSim">Sim, reiniciar</button><button class="bt" id="pfResetNao">Cancelar</button></div></div>`:''}
+ ${pfConfirma?`<div class="pf-confirma" role="alertdialog" aria-label="Confirmar reinício"><b>Apagar as ${feitas} resposta(s) da ${esc(R.titulo||'Rodada '+n)}?</b>${n===1&&rods.length>1&&F.trava?' A Rodada 2 volta a ficar bloqueada até você concluir a 1 de novo.':''}<div class="linha-bts"><button class="bt pri" id="pfResetSim">Sim, reiniciar</button><button class="bt" id="pfResetNao">Cancelar</button></div></div>`:''}
  <p class="pf-atalhos">Atalhos: <b>C</b> = Certo · <b>E</b> = Errado · <b>←</b> <b>→</b> = anterior e próxima.</p></div>`;
  const on=(id,f)=>{const x=$(id);if(x)x.onclick=f};
  on('pfAnt',()=>{e.pos[n]=i-1;pfSalvar();telaPente();pfRolar()});on('pfProx',()=>{e.pos[n]=i+1;pfSalvar();telaPente();pfRolar()});
@@ -566,7 +581,7 @@ document.addEventListener('click',ev=>{
  const po=ev.target.closest('[data-pfponto]');if(po){const ds=pfDados(),D=ds.find(([k])=>k===pf.disc)[1],e=pfEst(pf.disc);e.so[e.rod]=false;const L=pfLista(D,e,e.rod),id=po.dataset.pfponto;
   let k=L.findIndex(x=>x.ponto===id&&!e.resp[x.id]);if(k<0)k=L.findIndex(x=>x.ponto===id);if(k>=0)e.pos[e.rod]=k;pfSalvar();telaPente();pfRolar()}
 });
-document.addEventListener('keydown',ev=>{if(aba!=='pente'||ev.ctrlKey||ev.metaKey||ev.altKey||/^(INPUT|TEXTAREA|SELECT)$/.test(ev.target.tagName))return;
+document.addEventListener('keydown',ev=>{if((aba!=='pente'&&aba!=='revisao')||ev.ctrlKey||ev.metaKey||ev.altKey||/^(INPUT|TEXTAREA|SELECT)$/.test(ev.target.tagName))return;
  const k=ev.key.toLowerCase();
  if(k==='c'||k==='e'){const b=document.querySelector(`[data-pfr="${k.toUpperCase()}"]`);if(b&&!b.disabled){ev.preventDefault();b.click()}}
  else if(ev.key==='ArrowRight'&&$('pfProx')&&!$('pfProx').disabled){ev.preventDefault();$('pfProx').click()}

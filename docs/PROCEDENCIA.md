@@ -289,3 +289,22 @@ prompt do servidor já manda não aplicar norma posterior.
 - **Letra de lei:** `assets/lei_seca_oficial.json` (Planalto), **sem lei nova acrescentada**: CP, arts. 154-A (caput e
   §§ 1º e 2º, redação da Lei 14.155/2021), 154-B e 171, §§ 2º-A (redação da Lei 15.397/2026) e 2º-B — 6 citações de 3
   artigos. **Jurisprudência:** nenhuma. A `assets/sumulas.json` não foi usada.
+
+## 09/11/2026, 11h2x — Material de revisão de curso (Partes 1 e 2) na aba Revisão (D-022)
+
+- **O quê:** um material de revisão para a PC-BA, de um curso preparatório de terceiro: a "Parte 1" (Processo Civil e
+  Tributário, 127 páginas) e a "Parte 2" (Constitucional e Ambiental, 140 páginas).
+  - **Curso e nome do material:** a marca do curso e o nome do material constam do PDF; não se repetem aqui.
+  - **Forma de chegada:** os PDFs vieram anexados no chat pelo titular; não estavam no disco.
+- **Autorização:** pedido escrito do titular (texto em D-022), para seu estudo pessoal; o app não vai para o portal
+  (D-009). **Sem** autorização do autor para distribuição.
+- **Onde ficou, tudo fora do Git:**
+  - PDFs, texto extraído, blocos e assertivas C/E derivadas: `revisao/material/nfpss/`;
+  - o gerado: `discursiva/revisao_nfpss.js`;
+  - nenhum dos dois vai no arquivo único de envio (`data-local`).
+  - No Git entram só o verificador e o montador, que são autorais.
+- **Dado pessoal:** toda página traz uma marca d'água com o CPF do comprador.
+  - **Na extração:** a marca é retirada, e o verificador reprova qualquer número em formato de CPF nas assertivas.
+  - **No repositório:** o CPF não está escrito em arquivo nenhum; o autoteste usa um número montado na execução.
+- **As assertivas:** são texto novo, escrito sobre o conteúdo do material. Doutrina e julgados aparecem como o material
+  os cita.

@@ -21,6 +21,11 @@ const arqSim = path.join(dir, "simulados_delta.js"), TEM_SIM = fs.existsSync(arq
 const tagSim = '<script src="simulados_delta.js" data-local="terceiro"></script>';
 if (!html.includes(tagSim)) { console.log("falta a tag de simulados_delta.js"); process.exit(1); }
 if (TEM_SIM) html = html.replace(tagSim, () => "<script>" + fs.readFileSync(arqSim, "utf8") + "</script>");
+// aba Revisão (09/11/2026, D-022): assertivas sobre material de terceiro, só no disco; sem elas, a aba avisa
+const arqRev = path.join(dir, "revisao_nfpss.js"), TEM_REV = fs.existsSync(arqRev);
+const tagRev = '<script src="revisao_nfpss.js" data-local="terceiro"></script>';
+if (!html.includes(tagRev)) { console.log("falta a tag de revisao_nfpss.js"); process.exit(1); }
+html = html.replace(tagRev, () => TEM_REV ? "<script>" + fs.readFileSync(arqRev, "utf8") + "</script>" : "");
 if (process.env.DISC_UNICO) html = fs.readFileSync(process.env.DISC_UNICO, "utf8");
 if (AUTO) { const s = html.replace("const tec=Math.round(40*f/Math.max(1,tot))", "const tec=Math.round(4*f/Math.max(1,tot))"); if (s === html) { console.log("AUTOTESTE: não plantou"); process.exit(1); } html = s; }
 const erros = [], vc = new VirtualConsole();
@@ -31,7 +36,7 @@ const w = dom.window, d = w.document, A = w.discAPI;
 let falhas = 0; const prova = (n, ok, det = "") => { console.log(`  ${ok ? "✅" : "❌"} ${n}${!ok && det ? " — " + det : ""}`); if (!ok) falhas++; };
 const clicar = id => d.getElementById(id).click();
 
-prova("página carrega com as 7 abas (Pente Fino desde 07/11/2026) e sem erro de JavaScript", d.querySelectorAll("#abas button").length === 7 && erros.length === 0, erros.join(" | "));
+prova("página carrega com as 8 abas (Pente Fino desde 07/11/2026, Revisão desde 09/11/2026) e sem erro de JavaScript", d.querySelectorAll("#abas button").length === 8 && erros.length === 0, erros.join(" | "));
 // conteúdo
 const ruins = [];
 for (const p of A.PECAS) A.passosDe(p).forEach((s, i) => { if (!s.t || !s.orient || !String(s.modelo || "").trim() || !Array.isArray(s.check) || !s.check.length) ruins.push(p.id + " passo " + (i + 1)); });
@@ -151,6 +156,19 @@ else if (TEM_SIM) {
   A.abrirSim("dpcba-2", "estudo"); d.querySelector('[data-simir="1"]').click();
   prova("modo estudo: responder mostra na hora o comentário e o gabarito", !!d.querySelector(".com") && d.querySelector(".fb.ok") && d.body.textContent.includes("Gabarito: " + q2.gab));
 } else console.log("  ⚠️ simulados_delta.js ausente (material local): testes de conteúdo dos simulados pulados");
+if (TEM_REV) {
+  const R = w.REVISAO, ks = Object.keys(R), its = ks.flatMap(k => R[k].rodadas.flatMap(r => r.itens));
+  const ruins = its.filter(i => !["C", "E"].includes(i.gabarito) || !i.assertiva || !i.comentario || !i.comentario.resumo || !i.pag);
+  const ids = new Set(its.map(i => i.id));
+  prova(`Revisão: ${ks.length} disciplinas, ${its.length} assertivas com gabarito, resumo e página, ids únicos`, ks.length >= 4 && its.length >= 2000 && !ruins.length && ids.size === its.length, ruins.slice(0, 3).map(i => i.id).join(","));
+  prova("Revisão: nenhum número em formato de CPF nos dados", !/\d{3}\.\d{3}\.\d{3}-\d{2}/.test(JSON.stringify(R)));
+  A.ir("revisao");
+  const rods = [...d.querySelectorAll("[data-pfrod]")];
+  prova("Revisão: a aba abre com os blocos todos liberados", /📚 Revisão/.test(d.querySelector("#tela h2").textContent) && rods.length >= 4 && rods.every(b => !b.disabled), rods.length + " blocos");
+  d.querySelector('[data-pfr="C"]').click();
+  prova("Revisão: responder mostra o veredito e o comentário", !!d.querySelector(".pf-fb") && !!d.querySelector(".pf-com .cm-porque"));
+  A.ir("edital");
+} else console.log("  ⚠️ revisao_nfpss.js ausente (material local): testes de conteúdo da Revisão pulados");
 {
   const d2 = new JSDOM(htmlSemSim, { runScripts: "dangerously", url: "http://localhost/", pretendToBeVisual: true, beforeParse(w) { w.scrollTo = () => {}; } });
   d2.window.discAPI.ir("simulados");

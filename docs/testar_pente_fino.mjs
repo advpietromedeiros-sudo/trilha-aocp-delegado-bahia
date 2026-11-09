@@ -23,6 +23,12 @@ const EXEMPLO = join(PF, 'exemplo.js');
 if (!existsSync(EXEMPLO)) { console.log('FALHA: falta o exemplo ' + EXEMPLO); process.exit(1); }
 const TEM_SIM = existsSync(join(DISC, 'simulados_delta.js'));
 const TAG_PF = '<script src="pente_fino_cpc.js" data-opcional="1"></script>';
+const TAG_REV = '<script src="revisao_nfpss.js" data-local="terceiro"></script>';
+const itRev = (id, ponto, pag, gab, extra = {}) => ({ id, ponto, pag, tema: 'Tema ' + id, gabarito: gab,
+  assertiva: `Assertiva de revisão ${id}, do material, para julgar.`, comentario: { resumo: 'Por quê ' + id, ...extra } });
+const EXEMPLO_REV = { TRI: { disciplina: 'Tributário', fontes: '4 assertivas de exemplo.', pontos: [{ id: 'imunidades', titulo: 'Imunidades' }, { id: 'icms', titulo: 'ICMS' }],
+  rodadas: [{ n: 1, titulo: 'Bloco 1 · p. 61–72', itens: [itRev('TRI01-001', 'imunidades', 61, 'E', { divergencia: 'O material traz a regra anterior à EC 132/2023.' }), itRev('TRI01-002', 'imunidades', 62, 'C')] },
+    { n: 2, titulo: 'Bloco 2 · p. 73–83', itens: [itRev('TRI02-001', 'icms', 73, 'C'), itRev('TRI02-002', 'icms', 75, 'E')] }] } };
 const original = readFileSync(join(DISC, 'Treino_Discursiva.html'), 'utf8');
 if (!original.includes(TAG_PF)) { console.log('FALHA: a página não tem a tag do pente_fino_cpc.js'); process.exit(1); }
 
@@ -32,11 +38,17 @@ const pagina = (nome, srcPF, sabotar = null) => {
   // 07/11/2026: com mais de uma disciplina na página (pente_fino_civ.js...), as outras saem da cópia de teste,
   // para que a suíte veja só o exemplo (ou nenhum dado, no T23).
   h = h.replace(/<script src="pente_fino_[a-z]+\.js" data-opcional="1"><\/script>\n?/g, '');
+  // 09/11/2026: a aba Revisão lê material de terceiro que só existe na máquina do titular; a cópia de teste usa o
+  // exemplo fixo abaixo (sem ele, o 404 do arquivo local derrubava o T22).
+  if (!h.includes(TAG_REV)) throw new Error('a página não tem a tag do revisao_nfpss.js');
+  h = h.replace(TAG_REV, `<script>window.REVISAO=${JSON.stringify(EXEMPLO_REV)};</script>`);
   if (sabotar) { const h2 = sabotar(h); if (h2 === h) throw new Error('não plantou: ' + nome); h = h2; }
   const arq = join(PF, nome); writeFileSync(arq, h); return arq;
 };
 const SABOTAGENS = [
-  ['Rodada 2 sempre liberada', s => s.replace('const pfLiberada=(D,e,n)=>n<=1||pfConcluida(D,e,n-1);', 'const pfLiberada=()=>true;')],
+  ['Rodada 2 sempre liberada', s => s.replace('const pfLiberada=(D,e,n)=>!PF_FONTES[pfAba].trava||n<=1||pfConcluida(D,e,n-1);', 'const pfLiberada=()=>true;')],
+  ['Revisão gravando no progresso do Pente Fino', s => s.replace("revisao:{chave:'revisao:v1'", "revisao:{chave:PF_CHAVE")],
+  ['Revisão com a trava de rodada', s => s.replace("titulo:'📚 Revisão',trava:false", "titulo:'📚 Revisão',trava:true")],
   ['tela não acompanha a assertiva', s => s.replace('function pfRolar(){', 'function pfRolar(){return;')],
   ['exceção sem vermelho',s => s.replace('.cm-exc{color:#a3211a;', '.cm-exc{color:inherit;')],
 ];
@@ -86,7 +98,7 @@ async function suite(arq, completo) {
   erros = [];
   await abre(arq); await avalia("try{localStorage.clear()}catch(e){}"); await abre(arq); await avalia(AJUDA);
   const t1 = await avalia("({abas:document.querySelectorAll('#abas button').length,pente:[...document.querySelectorAll('#abas button')].map(b=>b.textContent).join('|'),api:typeof window.discAPI,blocos:typeof BLOCOS.comentario})");
-  confere('T1 · abre sem erro de JS, com 7 abas e a aba Pente Fino ao lado de Simulados', erros.length === 0 && t1?.abas === 7 && /Simulados\|🔍 Pente Fino/.test(t1.pente) && t1.blocos === 'function', erros.slice(0, 3).join(' | ') || JSON.stringify(t1));
+  confere('T1 · abre sem erro de JS, com 8 abas: Pente Fino ao lado de Simulados e Revisão ao lado do Pente Fino', erros.length === 0 && t1?.abas === 8 && /Simulados\|🔍 Pente Fino\|📚 Revisão/.test(t1.pente) && t1.blocos === 'function', erros.slice(0, 3).join(' | ') || JSON.stringify(t1));
 
   // ---------- Simulados: quadros, verde, vermelho, negrito, AA, nenhum caractere perdido ----------
   if (TEM_SIM) {
@@ -176,6 +188,27 @@ async function suite(arq, completo) {
   await avalia("document.getElementById('pfReset').click();document.getElementById('pfResetSim').click()");
   const t19c = await avalia("({geral:document.querySelector('.pf-meta span').textContent,r2:document.querySelectorAll('[data-pfrod]')[1].disabled,conf:window.__confirmou})");
   confere('T19 · reiniciar pede confirmação na tela; Cancelar mantém; Sim zera e a Rodada 2 volta ao cadeado', t19a.painel && /Apagar as 4 resposta/.test(t19a.txt) && !t19b.painel && /4 de 4/.test(t19b.geral) && /0 de 4/.test(t19c.geral) && t19c.r2 && t19c.conf === 0, JSON.stringify({ t19a, t19b, t19c }));
+
+  // ---------- Revisão (09/11/2026): o mesmo motor, blocos todos abertos e progresso em chave própria ----------
+  const pfAntes = await avalia("localStorage.getItem('pente-fino:v1')");
+  await avalia("discAPI.ir('revisao')"); await avalia('scrollTo(0,0)');
+  const t25 = await avalia(`(function(){const r=[...document.querySelectorAll('[data-pfrod]')];return {h:document.querySelector('#tela h2').textContent,rods:r.length,abertos:r.every(b=>!b.disabled),
+    cad:/🔒|Conclua/.test(r.map(b=>b.textContent).join(' ')),meta:document.querySelector('.pf-item .pf-meta').textContent,sum:document.querySelector('.pf-pontos summary').textContent}})()`);
+  confere('T25 · Revisão: abre com os blocos todos liberados (sem cadeado), seção e página do material', /📚 Revisão/.test(t25.h) && t25.rods === 2 && t25.abertos && !t25.cad && /Seção 1 · Imunidades/.test(t25.meta) && /p\. 61 do material/.test(t25.meta) && /seção do material/.test(t25.sum), JSON.stringify(t25));
+  await tecla('c', 'KeyC', 67, 'c');
+  const t26 = await avalia(`({fb:(document.querySelector('.pf-fb')||{}).textContent,div:[...document.querySelectorAll('.pf-com .cm-rot')].map(x=>x.textContent).join('|'),
+    rev:JSON.parse(localStorage.getItem('revisao:v1')||'{}'),pf:localStorage.getItem('pente-fino:v1')})`);
+  confere('T26 · Revisão: atalho C responde, o comentário mostra "O material diverge" e o progresso vai para revisao:v1 sem tocar no Pente Fino',
+    /Errou/.test(t26.fb || '') && /O material diverge/.test(t26.div) && t26.rev?.d?.TRI?.resp?.['TRI01-001'] === 'C' && t26.pf === pfAntes, JSON.stringify({ fb: t26.fb, div: t26.div, rev: t26.rev?.d, igual: t26.pf === pfAntes }));
+  await avalia(`document.querySelectorAll('[data-pfrod]')[1].click()`);
+  const t27a = await avalia("({t:document.querySelector('.pf-rod.on b').textContent,a:document.getElementById('pfAssertiva').textContent})");
+  await avalia("discAPI.ir('pente')");
+  const t27b = await avalia("({h:document.querySelector('#tela h2').textContent,geral:document.querySelector('.pf-meta span').textContent})");
+  await avalia("discAPI.ir('revisao')");
+  const t27c = await avalia("document.querySelector('.pf-rod.on b').textContent");
+  confere('T27 · Revisão: o bloco 2 abre sem concluir o 1; ir ao Pente Fino e voltar mantém cada aba no seu ponto',
+    /Bloco 2/.test(t27a.t) && /TRI02-001/.test(t27a.a) && /🔍 Pente Fino/.test(t27b.h) && /0 de 4/.test(t27b.geral) && /Bloco 2/.test(t27c), JSON.stringify({ t27a, t27b, t27c }));
+  await avalia("discAPI.ir('pente')");
 
   // ---------- celular 360 px ----------
   if (completo) {

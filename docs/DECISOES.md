@@ -299,3 +299,30 @@ Aprovados a tela e o conteúdo de Processo Civil (142 + 112 assertivas, 12 ponto
 gerado por `ferramentas/pente_fino/`). Esquema em `docs/PENTE_FINO_ESQUEMA.md`. ⚠️ A pasta DELEGADO BA não tem
 material de Processo Civil (medido em 07/11/2026): a base foi a lei seca oficial e a jurisprudência conferida no
 STF/STJ. Próxima disciplina: a definir pelo titular.
+
+### D-022 — Aba Revisão: todo o material de revisão anexado em Certo/Errado (09/11/2026, 11h2x, titular)
+
+Pedido textual do titular, com as Partes 1 (Processo Civil e Tributário, 127 páginas) e 2 (Constitucional e
+Ambiental, 140 páginas) de um material de revisão de curso anexadas no chat: *"CONSEGUE GERAR UMA ABA CHAMADA DE
+REVISÃO PARA EU REVISAR TODO ESSE CONTEÚDO ANEXADO EM FORMATO DE ASSERTIVAS CERTO E ERRADO? AINDA TEM A PARTE 3 MAS EU
+COLOCO DEPOIS. VEJA SE CONSEGUE SEM PERDER NADA DO CONTEÚDO."*
+
+- **Tela:** aba **📚 Revisão** ao lado do Pente Fino, no mesmo motor, com 3 diferenças: os blocos ficam todos abertos,
+  sem trava de rodada; o progresso vai para a chave própria `revisao:v1`; e o comentário mostra o quadro ⚠️ *"O material
+  diverge"* onde o material está desatualizado ou errado.
+- **Gabarito:** segue o direito vigente, e a divergência do material se anota no item, sem se apagar.
+- **"Sem perder nada", medido:** `ferramentas/validar_revisao_material.py` reprova o bloco se acontecer qualquer uma
+  destas coisas:
+  - página com conteúdo sem assertiva;
+  - número de julgado, tema, informativo ou lei do texto ausente dos itens;
+  - menos de 1 item a cada 650 caracteres;
+  - gabarito fora de 35% a 65% de E;
+  - CPF ou nome do curso no item.
+
+  O `ferramentas/montar_revisao_material.py` só grava `discursiva/revisao_nfpss.js` com todos os blocos aprovados.
+- **Fora do Git:** material, blocos, assertivas e o `.js`, que é material de terceiro (`revisao/material/`,
+  `discursiva/revisao_nfpss.js`); a tag `data-local` tira o `.js` do arquivo de envio. A Parte 3 entra pelo mesmo
+  caminho, como blocos novos.
+- ⚠️ **Limite declarado:** o número do julgado é conferido contra o material, não contra a fonte oficial, e o
+  gabarito é escrito pelo redator. Julgados e leis de 2025 e 2026 posteriores ao conhecimento do redator saem como o
+  material os traz.
