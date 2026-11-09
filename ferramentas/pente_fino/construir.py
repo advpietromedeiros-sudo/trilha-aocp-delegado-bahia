@@ -35,6 +35,11 @@ if CFG.get('pontos_incluidos') is not None:  # só a PEN (entrega em etapas): fi
     PONTOS = [p for p in PONTOS if p['id'] in set(CFG['pontos_incluidos'])]
 
 erros = []
+# Aprofundamento (09/11/2026, pedido do titular): camada à parte, por id do item, escrita sobre o conteúdo conferido
+# e aprovada por ferramentas/validar_aprofundamento.py (nenhum número que o item não tenha).
+_AP = AQUI / 'aprofundar' / f'{DISC}.json'
+APROF = json.load(open(_AP, encoding='utf-8')) if _AP.exists() else {}
+CAMPOS_AP = ('correcao', 'aprofundamento', 'exemplo', 'memorize')
 
 
 def recorta(chave, ini, fim):
@@ -86,6 +91,8 @@ for it in base.ITENS:
     if it['juris']: com['juris'] = [{k: v for k, v in j.items() if not k.startswith('_')} for j in it['juris']]
     if it['pegadinha']: com['pegadinha'] = it['pegadinha']
     com['palavras_chave'] = it['palavras_chave']
+    for k in CAMPOS_AP:
+        if APROF.get(iid, {}).get(k): com[k] = APROF[iid][k]
     rodadas[it['rodada']].append(dict(id=iid, ponto=it['ponto'], tema=it['tema'], assertiva=it['assertiva'],
                                       gabarito=it['gabarito'], comentario=com))
 

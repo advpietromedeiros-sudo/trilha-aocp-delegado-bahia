@@ -37,13 +37,27 @@ def _slug(s: str) -> str:
     return s[:60] or "secao"
 
 
-def _item(bloco: str, k: int, it: dict, pid: str) -> dict:
+CAMPOS_AP = ("correcao", "aprofundamento", "exemplo", "memorize")
+
+
+def _aprofundamento(pasta: Path) -> dict:
+    """Camada de aprofundamento (09/11/2026), por id; aprovada por ferramentas/validar_aprofundamento.py."""
+    out: dict = {}
+    for arq in sorted((pasta / "aprofundar").glob("*.json")):
+        out.update(json.loads(arq.read_text(encoding="utf-8")))
+    return out
+
+
+def _item(bloco: str, k: int, it: dict, pid: str, ap: dict | None = None) -> dict:
     c = {"resumo": it["resumo"]}
     for campo in ("regra", "pegadinha", "divergencia"):
         if it.get(campo):
             c[campo] = it[campo]
     if it.get("juris"):
         c["juris"] = [{"tribunal": "", "fonte": "", "texto": it["juris"]}]
+    for campo in CAMPOS_AP:
+        if (ap or {}).get(f"{bloco}-{k:03d}", {}).get(campo):
+            c[campo] = ap[f"{bloco}-{k:03d}"][campo]
     return {"id": f"{bloco}-{k:03d}", "ponto": pid, "tema": it.get("tema", ""), "pag": int(it["pag"]),
             "assertiva": it["assertiva"], "gabarito": it["gabarito"], "comentario": c}
 
@@ -52,6 +66,7 @@ def montar(pasta: Path) -> tuple[dict, list[str]]:
     """Devolve (dados por disciplina, erros). Com erro em qualquer bloco, os dados não servem."""
     erros: list[str] = []
     discs: dict[str, dict] = {}
+    ap = _aprofundamento(pasta)
     for txt in sorted((pasta / "blocos").glob("*.txt")):
         bloco = txt.stem
         m = re.fullmatch(r"([A-Z]{2,4})(\d{2})", bloco)
@@ -79,7 +94,7 @@ def montar(pasta: Path) -> tuple[dict, list[str]]:
                     pid, n = f"{base}-{n}", n + 1
                 D["_ids"][titulo] = pid
                 D["pontos"].append({"id": pid, "titulo": titulo})
-            convertidos.append(_item(bloco, k, it, D["_ids"][titulo]))
+            convertidos.append(_item(bloco, k, it, D["_ids"][titulo], ap))
         pgs = [int(p) for p in re.findall(r"\[\[p\.(\d+)\]\]", texto)]
         faixa = f"p. {pgs[0]}–{pgs[-1]}" if pgs else ""
         D["rodadas"].append({"n": num, "titulo": f"Bloco {num} · {faixa}".strip(" ·"), "itens": convertidos})

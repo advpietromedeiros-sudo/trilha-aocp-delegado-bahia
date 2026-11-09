@@ -6,6 +6,24 @@
 
 ## Estado
 
+- 🆕 **09/11/2026 — Comentários aprofundados (Pente Fino e Revisão)**, pedido do titular.
+  - **Campos novos:** "Onde está o erro" (o que a assertiva diz ao lado do certo), "Aprofundando", "Na prática" e
+    "Para memorizar"; layout novo no Storybook.
+  - ✅ **Pente Fino:** os 3.128 itens têm aprofundamento, e todos os 1.525 E têm correção.
+    - Camada em `ferramentas/pente_fino/aprofundar/`; `conferir.py` OK nas 8 disciplinas.
+    - Trava: `ferramentas/validar_aprofundamento.py` (porta do portão) proíbe número que o item não tenha.
+  - ⏳ **Revisão:** 30 lotes no total. Os lotes da Revisão vão para `revisao/material/nfpss/aprofundar/` e depois
+    para o `montar_revisao_material.py`.
+  - ⚠️ **Itens do Pente Fino apontados pelos redatores, a CONFERIR:**
+    - **MLE-5-R2-06:** o sinal de Winslow é o recipiente com água sobre o tórax, não o espelho.
+    - **MLE-4-R1-02:** "trajetória" × "trajeto", em contradição com o próprio resumo.
+    - **INF-2.3-R2-02:** atalho da caneta, Ctrl + C ou Ctrl + P.
+    - **PEN-9-R2-02:** rótulo da lei com formato errado.
+    - **PEN-4.4-R1-03 e PEN-1.1-R1-05:** o artigo citado não sustenta o tema.
+    - **PEN-4.3-R2-03:** redação confusa.
+    - **CPP-8.5-R2-01:** prisão especial do diplomado; a ADPF 334 a derrubou em 2023.
+    - **Já conferidos na lei seca oficial:** 3 trechos escritos de memória, todos corretos (LPE-27, LPE-31 e LPE-36).
+
 - 🆕 **09/11/2026 — Aba 📚 Revisão (D-022):** o material de revisão anexado pelo titular (Partes 1 e 2: Processo
   Civil, Tributário, Constitucional e Ambiental; 267 páginas) virou assertivas C/E comentadas, ~2.700 em 23 blocos.
   - **Tela:** reaproveita o motor do Pente Fino, com os blocos todos abertos e o progresso em `revisao:v1`.

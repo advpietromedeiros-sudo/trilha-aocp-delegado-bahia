@@ -28,6 +28,7 @@ PY = [
     "ferramentas/corrigir_sumulas.py",
     "ferramentas/validar_revisao_material.py",
     "ferramentas/montar_revisao_material.py",
+    "ferramentas/validar_aprofundamento.py",
 ]
 
 # (nome, comando, o erro que esta porta impede)
@@ -95,6 +96,10 @@ PORTAS: list[tuple[str, list[str], str]] = [
      "passando calados"),
     ("o montador da Revisão acusa", [sys.executable, "ferramentas/montar_revisao_material.py", "--autoteste"],
      "revisao_nfpss.js gravado com bloco sem cobertura provada ou sem assertivas"),
+    ("o verificador do aprofundamento acusa",
+     [sys.executable, "ferramentas/validar_aprofundamento.py", "--autoteste"],
+     "comentário aprofundado com número que o item não tem, E sem o certo ao lado do erro "
+     "ou CPF (09/11/2026)"),
     ("o leitor das provas AOCP acusa", [sys.executable, "ferramentas/extrair_provas_aocp.py", "--autoteste"],
      "gabarito ou cabeçalho da prova lidos errado em silêncio"),
 ]

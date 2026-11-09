@@ -49,6 +49,26 @@ Regras de conteúdo: `lei[].texto` tem de estar contido, letra por letra, no art
 (chave `<lei>:<art>`); jurisprudência só com fonte e data conferidas em fonte oficial (STF/STJ) — data nunca da
 memória; nada de texto copiado de material de terceiro e nenhum nome de curso, autor ou material.
 
+## Aprofundamento do comentário (09/11/2026, pedido do titular)
+
+Pedido: *"UMA MELHORIA NOS COMENTÁRIOS TANTO DO PENTE FINO QUANTO DA REVISÃO... PARA FICAR UM POUCO MAIS DETALHADO E
+MAIS APROFUNDADO E MELHORAR O LAYOUT NOS COMENTÁRIOS"*. O `comentario` ganhou 4 campos opcionais. Eles vêm de uma
+camada à parte, `ferramentas/pente_fino/aprofundar/<DISC>.json` (um JSON por disciplina, com o id do item como
+chave), e o `construir.py` os junta ao item. Os arquivos de conteúdo conferidos não mudam.
+
+- `correcao: {erro, certo}`: o que a assertiva diz de errado, ao lado da versão correta. Obrigatória no gabarito
+  E e proibida no C. Na tela é o quadro 🔁 *Onde está o erro*.
+- `aprofundamento`: de 2 a 5 parágrafos, separados por linha em branco (de 280 a 1.600 caracteres). Traz o
+  fundamento, o funcionamento, as fronteiras com o instituto vizinho e como a banca explora o ponto. Na tela é o
+  quadro 🔎 *Aprofundando*, e só o `**negrito**` escrito vira destaque: o vermelho automático das exceções não entra.
+- `exemplo`: um caso hipotético curto. Na tela é o quadro 🧩 *Na prática*.
+- `memorize`: uma linha de até 220 caracteres. Na tela é a faixa 🧠 *Para memorizar*.
+
+A trava está em `ferramentas/validar_aprofundamento.py`, que é porta do portão. **Nenhum número entra no texto
+novo sem já estar no item**: artigo, lei, súmula, tema, ano ou prazo. O redator explica o que foi conferido; não cita
+dispositivo de memória. Itens que os redatores apontaram como possivelmente errados no original ficam listados no
+FAROL, para conferir.
+
 ## Medicina Legal (07/11/2026)
 
 `pente_fino_mle.js` (`--disc MLE`, conteúdo em `ferramentas/pente_fino/mle/`): os pontos têm subitem

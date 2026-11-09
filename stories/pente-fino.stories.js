@@ -22,12 +22,19 @@ const EXEMPLO_PF = {
           excecoes: ['Tutela provisória de urgência (art. 9º, parágrafo único, I)'],
           lei: [{ lei: 'L13105', art: '10', rotulo: 'CPC, art. 10', texto: 'O juiz não pode decidir, em grau algum de jurisdição, com base em fundamento a respeito do qual não se tenha dado às partes oportunidade de se manifestar, ainda que se trate de matéria sobre a qual deva decidir de ofício.' }],
           juris: [{ tribunal: 'STJ', fonte: 'EXEMPLO FICTÍCIO', data: '01/01/2026', texto: 'Tese fictícia, só para mostrar o quadro.' }],
-          pegadinha: 'A banca troca "ainda que" por "salvo quando".', palavras_chave: ['contraditório', 'decisão surpresa'] } },
+          pegadinha: 'A banca troca "ainda que" por "salvo quando".', palavras_chave: ['contraditório', 'decisão surpresa'],
+          // 09/11/2026: camada de aprofundamento (o erro lado a lado com o certo, o porquê, um caso e a linha para memorizar)
+          correcao: { erro: 'Diz que a matéria conhecível de ofício dispensa ouvir as partes.', certo: 'Mesmo na matéria conhecível de ofício, o juiz precisa dar às partes a oportunidade de se manifestar antes de decidir.' },
+          aprofundamento: 'O **contraditório** do CPC/2015 não é só o direito de falar: é o direito de **influenciar** a decisão. Por isso o juiz não pode surpreender as partes com um fundamento que nenhuma delas teve a chance de discutir.\n\nConhecer de ofício significa apenas que o juiz pode levantar a matéria sem provocação; não significa decidir sem ouvir. Ele traz o tema, abre prazo para as partes e só então decide.\n\nA banca costuma misturar os dois planos: "pode conhecer de ofício" (iniciativa) com "pode decidir sem ouvir" (contraditório). São coisas diferentes.',
+          exemplo: 'O juiz percebe, ao sentenciar, que pode haver prescrição. Antes de extinguir o processo, intima autor e réu para falarem sobre ela; só depois decide.',
+          memorize: 'De ofício = o juiz PODE TRAZER o tema; não = PODE DECIDIR sem ouvir.' } },
       { id: 'S-2', ponto: 'P2', tema: 'Dias úteis', gabarito: 'E', assertiva: 'Na contagem de prazo em dias, computam-se os dias corridos.',
         comentario: { resumo: 'Está **errada**: computam-se **somente os dias úteis** (art. 219).', palavras_chave: ['dias úteis'] } }] },
     { n: 2, titulo: 'Rodada 2 · Aprofundamento', itens: [
       { id: 'S-3', ponto: 'P1', tema: 'Tutela da evidência', gabarito: 'C', assertiva: 'A tutela da evidência do art. 311, II, pode ser concedida sem ouvir o réu.',
-        comentario: { resumo: 'Está **certa**: art. 9º, parágrafo único, II.' } }] }]
+        comentario: { resumo: 'Está **certa**: art. 9º, parágrafo único, II.',
+          aprofundamento: 'A tutela da evidência dispensa o perigo da demora: basta a **probabilidade qualificada** do direito. Na hipótese do inciso II, a prova documental somada à tese firmada em julgamento repetitivo torna o direito tão evidente que a lei autoriza a decisão antes de ouvir o réu.\n\nO contraditório não some: é apenas **postergado**. O réu se manifesta depois e pode pedir a revogação.',
+          memorize: 'Evidência II e III: liminar sem ouvir o réu; I e IV: só depois da contestação.' } }] }]
 };
 const EXEMPLO_COM = [
   ['p', 'A questão cobra o art. 25 da Lei nº 14.133/2021 e a Súmula 473 do STF: a Administração deverá anular seus atos ilegais no prazo de 5 (cinco) anos, salvo comprovada má-fé.'],
@@ -39,6 +46,7 @@ const EXEMPLO_COM = [
 function pagina(aposCarregar) {
   const tags = { 'conteudo.js': conteudo, 'leis.js': leis, 'pecas_complementares.js': complementares, 'conducao.js': conducao, 'estudo.js': estudo, 'artigos.js': artigos, 'blocos.js': blocos };
   let h = paginaHtml.replace('<script src="simulados_delta.js" data-local="terceiro"></script>', '')
+    .replace('<script src="revisao_nfpss.js" data-local="terceiro"></script>', '')
     .replace('<script src="pente_fino_cpc.js" data-opcional="1"></script>', `<script>window.PENTE_FINO={CPC:${JSON.stringify(EXEMPLO_PF)}};</script>`);
   for (const [nome, js] of Object.entries(tags)) h = h.replace(`<script src="${nome}"></script>`, () => `<script>${js}</script>`);
   h = h.replace('</body>', () => `<script>try{localStorage.removeItem('pente-fino:v1')}catch(e){}${aposCarregar}</script></body>`);
@@ -64,6 +72,7 @@ export default {
 
 export const PenteFinoAntesDeResponder = { name: 'Pente Fino · antes de responder', render: ({ width }) => moldura(pagina("discAPI.ir('pente');"), width) };
 export const PenteFinoComentario = { name: 'Pente Fino · comentário (errou)', render: ({ width }) => moldura(pagina("discAPI.ir('pente');discAPI.pente.responder('C');"), width) };
+export const ComentarioAprofundadoCerta = { name: 'Comentário aprofundado · assertiva certa (Rodada 2)', render: ({ width }) => moldura(pagina("const s=discAPI.pente.st();s.disc='CPC';s.d.CPC={rod:2,pos:{},resp:{'S-1':'C','S-2':'E'},so:{}};discAPI.ir('pente');discAPI.pente.responder('C');"), width) };
 export const PenteFinoCelular = { name: 'Pente Fino · celular (360 px)', args: { width: '360px' }, render: ({ width }) => moldura(pagina("discAPI.ir('pente');discAPI.pente.responder('C');"), width) };
 export const ComentarioDoSimulado = {
   name: 'Simulados · comentário em quadros (exemplo inventado)',

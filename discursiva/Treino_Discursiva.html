@@ -111,6 +111,21 @@ img.fig{display:block;max-width:100%;margin:10px auto;border:1px solid var(--lin
 .cm-cit blockquote{margin:0;padding:8px 14px 10px;font:15.5px/1.7 Georgia,serif;color:var(--tinta)}
 .cm-jur{border:1px solid #f0e2bb;border-radius:10px;background:#fffcf3;padding:8px 12px;margin:8px 0}.cm-jur-fonte{font-size:13px;color:#6e4c00}
 .cm-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}.cm-tags span{background:#e7eef9;color:#1b3f73;border-radius:999px;padding:3px 11px;font-size:13px;font-weight:700}
+/* Comentário aprofundado do Pente Fino e da Revisão (09/11/2026, pedido do titular): o "por quê" em destaque,
+   o erro lado a lado com o certo, o aprofundamento em texto corrido, o exemplo e a linha para memorizar. */
+.pf-com{gap:14px}.pf-com p{line-height:1.68}
+.pf-com .cm-porque{--cor:#24508f;border-left-width:6px;background:linear-gradient(180deg,#f7faff,#fff 70%)}.pf-com .cm-porque p{font-size:1.04em;color:#13294b}
+.cm-correcao{--cor:#5d6577;--tinta-q:#3b4352;--fundo-q:#f2f4f7}
+.cm-cmp{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:4px 0 6px}
+.cm-cmp>div{border-radius:10px;padding:8px 12px;border:1px solid}.cm-cmp b{display:block;font-size:12.5px;letter-spacing:.05em;text-transform:uppercase;margin-bottom:2px}
+.cm-cmp-erro{background:#fdf0ef;border-color:#f3c9c5!important;color:#5c1611}.cm-cmp-erro b{color:#8f1d17}
+.cm-cmp-certo{background:#eef8f2;border-color:#b5dcc4!important;color:#123f29}.cm-cmp-certo b{color:#145c39}
+.cm-aprof{--cor:#0f6e6e;--tinta-q:#0b5252;--fundo-q:#e6f4f4}.cm-aprof p{margin:.55em 0}
+.cm-exemplo{--cor:#4a5878;--tinta-q:#323d55;--fundo-q:#eef1f7}.cm-exemplo p{font-style:italic}
+.cm-memo{display:flex;gap:10px;align-items:flex-start;background:#1b3f73;color:#fff;border-radius:14px;padding:12px 16px;box-shadow:0 3px 14px #1b3f7333}
+.cm-memo b{flex:none;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:#cfe0ff;padding-top:2px}.cm-memo span{font-weight:700;line-height:1.5}
+.cm-memo .cm-chave{color:#fff;text-decoration:underline;text-underline-offset:3px}
+@media (max-width:640px){.cm-cmp{grid-template-columns:1fr}.cm-memo{flex-direction:column;gap:2px}}
 /* ---------- Pente Fino ---------- */
 .pf-topo{display:flex;flex-wrap:wrap;gap:10px;align-items:center}.pf-topo h2{margin:0}
 .pf-discs{display:flex;flex-wrap:wrap;gap:6px}.pf-discs button{border:1px solid var(--azul);background:#fff;color:var(--azul);border-radius:999px;padding:6px 14px;min-height:40px;font:inherit;cursor:pointer}.pf-discs button.on{background:var(--azul);color:#fff;font-weight:700}
@@ -516,14 +531,21 @@ const pfBarra=(a,t)=>`<div class="pf-barra${t&&a===t?' ok':''}" role="progressba
 function pfComentario(it){
  const c=it.comentario||{},M=x=>BLOCOS.marcado(x),lista=v=>Array.isArray(v)?v.filter(Boolean):v?[v]:[];
  const exc=lista(c.excecoes),lei=lista(c.lei),jur=lista(c.juris),pc=lista(c.palavras_chave);
+ // texto corrido do aprofundamento: só o **negrito** escrito; o vermelho automático das exceções poluía o parágrafo
+ const B=x=>String(x??'').split(/\*\*([^*]+)\*\*/).map((y,i)=>i%2?`<strong class="cm-chave">${esc(y)}</strong>`:esc(y)).join('');
+ const par=t=>String(t||'').split(/\n\s*\n/).filter(x=>x.trim()).map(x=>`<p>${B(x.trim())}</p>`).join(''),cor=c.correcao&&c.correcao.erro&&c.correcao.certo?c.correcao:null;
  return `<div class="cm pf-com">
  ${c.resumo?`<section class="cm-q cm-porque"><header class="cm-rot">💡 Por quê</header><p>${M(c.resumo)}</p></section>`:''}
+ ${cor?`<section class="cm-q cm-correcao"><header class="cm-rot">🔁 Onde está o erro</header><div class="cm-cmp"><div class="cm-cmp-erro"><b>✘ A assertiva diz</b>${B(cor.erro)}</div><div class="cm-cmp-certo"><b>✔ O correto</b>${B(cor.certo)}</div></div></section>`:''}
+ ${c.aprofundamento?`<section class="cm-q cm-aprof"><header class="cm-rot">🔎 Aprofundando</header>${par(c.aprofundamento)}</section>`:''}
+ ${c.exemplo?`<section class="cm-q cm-exemplo"><header class="cm-rot">🧩 Na prática</header>${par(c.exemplo)}</section>`:''}
  ${c.regra?`<section class="cm-q cm-regra"><header class="cm-rot">📌 Regra</header><p>${M(c.regra)}</p></section>`:''}
  ${exc.length?`<section class="cm-q cm-atencao"><header class="cm-rot">⛔ Exceções</header><ul class="cm-exc-lista">${exc.map(x=>`<li>${M(x)}</li>`).join('')}</ul></section>`:''}
  ${lei.length?`<section class="cm-q cm-lei"><header class="cm-rot">📖 Letra da lei</header>${lei.map(l=>`<figure class="cm-cit"><figcaption>${esc(l.rotulo||[l.lei,l.art&&'art. '+l.art,l.par,l.inc].filter(Boolean).join(', '))}</figcaption><blockquote>${M(l.texto)}</blockquote></figure>`).join('')}</section>`:''}
  ${jur.length?`<section class="cm-q cm-juris"><header class="cm-rot">⚖️ Jurisprudência</header>${jur.map(j=>`<div class="cm-jur"><div class="cm-jur-fonte"><b>${esc(j.tribunal||'')}</b>${j.fonte?' · '+esc(j.fonte):''}${j.data?' · '+esc(j.data):''}</div><p>${M(j.texto)}</p></div>`).join('')}</section>`:''}
  ${c.pegadinha?`<section class="cm-q cm-pegadinha"><header class="cm-rot">🎯 Pegadinha da banca</header><p>${M(c.pegadinha)}</p></section>`:''}
  ${c.divergencia?`<section class="cm-q cm-atencao"><header class="cm-rot">⚠️ O material diverge</header><p>${M(c.divergencia)}</p></section>`:''}
+ ${c.memorize?`<div class="cm-memo" role="note"><b>🧠 Para memorizar</b><span>${B(c.memorize)}</span></div>`:''}
  ${pc.length?`<div class="cm-tags" aria-label="Palavras-chave">${pc.map(x=>`<span>#${esc(x)}</span>`).join('')}</div>`:''}</div>`}
 function telaPente(){
  const ds=pfDados(),F=PF_FONTES[pfAba];

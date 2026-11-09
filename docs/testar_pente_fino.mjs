@@ -27,7 +27,10 @@ const TAG_REV = '<script src="revisao_nfpss.js" data-local="terceiro"></script>'
 const itRev = (id, ponto, pag, gab, extra = {}) => ({ id, ponto, pag, tema: 'Tema ' + id, gabarito: gab,
   assertiva: `Assertiva de revisão ${id}, do material, para julgar.`, comentario: { resumo: 'Por quê ' + id, ...extra } });
 const EXEMPLO_REV = { TRI: { disciplina: 'Tributário', fontes: '4 assertivas de exemplo.', pontos: [{ id: 'imunidades', titulo: 'Imunidades' }, { id: 'icms', titulo: 'ICMS' }],
-  rodadas: [{ n: 1, titulo: 'Bloco 1 · p. 61–72', itens: [itRev('TRI01-001', 'imunidades', 61, 'E', { divergencia: 'O material traz a regra anterior à EC 132/2023.' }), itRev('TRI01-002', 'imunidades', 62, 'C')] },
+  rodadas: [{ n: 1, titulo: 'Bloco 1 · p. 61–72', itens: [itRev('TRI01-001', 'imunidades', 61, 'E', { divergencia: 'O material traz a regra anterior à EC 132/2023.',
+      correcao: { erro: 'Diz que a imunidade alcança qualquer taxa.', certo: 'A imunidade recíproca alcança só impostos, não taxas.' },
+      aprofundamento: 'A imunidade protege o **pacto federativo**: um ente não tributa o patrimônio do outro por meio de impostos.\n\nAs taxas remuneram serviço ou poder de polícia; por isso ficam fora da regra, salvo previsão expressa, e não pode ser outra a leitura.',
+      memorize: 'Imunidade recíproca = só **impostos**.' }), itRev('TRI01-002', 'imunidades', 62, 'C')] },
     { n: 2, titulo: 'Bloco 2 · p. 73–83', itens: [itRev('TRI02-001', 'icms', 73, 'C'), itRev('TRI02-002', 'icms', 75, 'E')] }] } };
 const original = readFileSync(join(DISC, 'Treino_Discursiva.html'), 'utf8');
 if (!original.includes(TAG_PF)) { console.log('FALHA: a página não tem a tag do pente_fino_cpc.js'); process.exit(1); }
@@ -48,6 +51,7 @@ const pagina = (nome, srcPF, sabotar = null) => {
 const SABOTAGENS = [
   ['Rodada 2 sempre liberada', s => s.replace('const pfLiberada=(D,e,n)=>!PF_FONTES[pfAba].trava||n<=1||pfConcluida(D,e,n-1);', 'const pfLiberada=()=>true;')],
   ['Revisão gravando no progresso do Pente Fino', s => s.replace("revisao:{chave:'revisao:v1'", "revisao:{chave:PF_CHAVE")],
+  ['aprofundamento com vermelho automático', s => s.replace('.map(x=>`<p>${B(x.trim())}</p>`)', '.map(x=>`<p>${M(x.trim())}</p>`)')],
   ['Revisão com a trava de rodada', s => s.replace("titulo:'📚 Revisão',trava:false", "titulo:'📚 Revisão',trava:true")],
   ['tela não acompanha a assertiva', s => s.replace('function pfRolar(){', 'function pfRolar(){return;')],
   ['exceção sem vermelho',s => s.replace('.cm-exc{color:#a3211a;', '.cm-exc{color:inherit;')],
@@ -198,6 +202,14 @@ async function suite(arq, completo) {
   await tecla('c', 'KeyC', 67, 'c');
   const t26 = await avalia(`({fb:(document.querySelector('.pf-fb')||{}).textContent,div:[...document.querySelectorAll('.pf-com .cm-rot')].map(x=>x.textContent).join('|'),
     rev:JSON.parse(localStorage.getItem('revisao:v1')||'{}'),pf:localStorage.getItem('pente-fino:v1')})`);
+  await avalia(AJUDA);
+  const t28 = await avalia(`(function(){const c=document.querySelector('.pf-com');return {rot:[...c.querySelectorAll('.cm-rot')].map(x=>x.textContent.trim()),
+    erro:(c.querySelector('.cm-cmp-erro')||{}).textContent,certo:(c.querySelector('.cm-cmp-certo')||{}).textContent,pars:c.querySelectorAll('.cm-aprof p').length,
+    vermelho:!!c.querySelector('.cm-aprof .cm-exc'),neg:!!c.querySelector('.cm-aprof .cm-chave'),memo:(c.querySelector('.cm-memo')||{}).textContent,
+    AA:[...c.querySelectorAll('.cm-cmp-erro,.cm-cmp-certo,.cm-cmp b,.cm-aprof p,.cm-memo b,.cm-memo span')].map(e=>[e.className||e.tagName,__t.contraste(e)]).filter(([,r])=>r<4.5)}})()`);
+  confere('T28 · comentário aprofundado: o erro ao lado do certo, aprofundamento em parágrafos (só negrito, sem vermelho automático), "Para memorizar" e contraste AA',
+    t28.rot.join('|') === '💡 Por quê|🔁 Onde está o erro|🔎 Aprofundando|⚠️ O material diverge' && /A assertiva diz.*qualquer taxa/.test(t28.erro) && /O correto.*não taxas/.test(t28.certo)
+    && t28.pars === 2 && t28.neg && !t28.vermelho && /Para memorizar.*impostos/.test(t28.memo) && t28.AA.length === 0, JSON.stringify(t28));
   confere('T26 · Revisão: atalho C responde, o comentário mostra "O material diverge" e o progresso vai para revisao:v1 sem tocar no Pente Fino',
     /Errou/.test(t26.fb || '') && /O material diverge/.test(t26.div) && t26.rev?.d?.TRI?.resp?.['TRI01-001'] === 'C' && t26.pf === pfAntes, JSON.stringify({ fb: t26.fb, div: t26.div, rev: t26.rev?.d, igual: t26.pf === pfAntes }));
   await avalia(`document.querySelectorAll('[data-pfrod]')[1].click()`);

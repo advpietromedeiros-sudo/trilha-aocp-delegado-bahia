@@ -130,7 +130,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "ciência empírica e interdisciplinar",
        "controle social"
-      ]
+      ],
+      "aprofundamento": "O conceito reúne três ideias que a banca separa para testar. **Empírica** diz como a Criminologia conhece: observando a realidade, e não deduzindo de normas. **Interdisciplinar** diz com que instrumentos: biologia, psicologia, sociologia, estatística e Direito, integrados num saber próprio, e não apenas somados.\n\nOs quatro objetos mostram a evolução da disciplina. Os clássicos olharam o delito; os positivistas, o delinquente; a Vitimologia trouxe a vítima; e o paradigma da reação social incorporou o controle social. O conceito moderno é a soma dessas camadas.\n\nA parte final indica a finalidade: não basta explicar o crime, é preciso oferecer informação útil para a **prevenção** e para avaliar os modelos de resposta. Por isso a Criminologia dialoga com a Política Criminal sem se confundir com ela.\n\nNa prova, a assertiva costuma ficar errada quando chama a Criminologia de normativa, quando retira um dos quatro objetos ou quando a reduz a ciência auxiliar do Direito Penal.",
+      "memorize": "Criminologia: ciência empírica e interdisciplinar; objetos: delito, delinquente, vítima e controle social; fim: prevenção e avaliação das respostas ao crime."
      }
     },
     {
@@ -145,7 +147,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "ciência do ser",
        "dever ser"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que a Criminologia é ciência normativa, do dever ser, igual ao Direito Penal.",
+       "certo": "A Criminologia é ciência empírica, do ser, que observa a realidade; o Direito Penal é que é ciência normativa, do dever ser."
+      },
+      "aprofundamento": "A distinção entre **ser** e **dever ser** é a chave para separar as ciências criminais. O Direito Penal parte da norma e pergunta como a conduta deve ser valorada: é típica, ilícita, culpável? Trabalha com categorias jurídicas e conclui por dedução.\n\nA Criminologia parte do fato e pergunta como o crime realmente acontece: quem pratica, quem sofre, por que ocorre, como as instâncias reagem. Seu compromisso é com a realidade observável, e suas conclusões podem ser contrastadas com dados.\n\nAs duas se complementam. A Criminologia informa a Política Criminal, que propõe estratégias, e o legislador as converte em normas. Se a Criminologia fosse normativa, perderia justamente o que a torna útil: a capacidade de mostrar ao legislador o que a norma não enxerga.\n\nA banca troca os polos com facilidade. Leia a palavra que define a natureza: \"normativa\", \"dever ser\" e \"dogmática\" pertencem ao Direito Penal; \"empírica\", \"fática\" e \"ser\" pertencem à Criminologia.",
+      "memorize": "Criminologia = ser (fato, empiria). Direito Penal = dever ser (norma, dogmática)."
      }
     },
     {
@@ -159,7 +167,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "Topinard",
        "Garofalo"
-      ]
+      ],
+      "aprofundamento": "Saber a origem do termo ajuda a datar o nascimento da Criminologia como ciência. Ela surge no ambiente do **positivismo**, quando o estudo do crime deixa a especulação filosófica dos clássicos e passa a buscar dados observáveis sobre o criminoso.\n\nTopinard, antropólogo, teria cunhado a palavra; Garofalo, um dos três grandes nomes da Escola Positiva italiana ao lado de Lombroso e Ferri, deu-lhe projeção ao usá-la como título de sua obra. Garofalo também é lembrado pelo conceito de delito natural, ligado à ofensa aos sentimentos de piedade e probidade.\n\nComo o próprio resumo alerta, há autores que atribuem o mérito apenas a Garofalo. Em prova, a versão mais segura é a dupla: Topinard cria, Garofalo difunde. A pegadinha mais comum é inverter os papéis ou atribuir o termo a Lombroso, que é o fundador da antropologia criminal, mas não o criador da palavra.",
+      "memorize": "Termo Criminologia: Topinard cunha; Garofalo difunde com a obra homônima."
      }
     },
     {
@@ -174,7 +184,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "ciência autônoma",
        "modelo integrado"
-      ]
+      ],
+      "correcao": {
+       "erro": "Rebaixa a Criminologia a ciência auxiliar, subordinada ao Direito Penal e sem objeto nem método próprios.",
+       "certo": "A Criminologia é ciência autônoma, com objeto e método próprios, que se relaciona com o Direito Penal e a Política Criminal no modelo integrado, sem subordinação."
+      },
+      "aprofundamento": "Uma ciência é autônoma quando tem **objeto** e **método** próprios. A Criminologia tem os dois: estuda delito, delinquente, vítima e controle social, e o faz pelo método empírico. O Direito Penal, por sua vez, estuda a norma e usa método dogmático. Não há subordinação porque uma não depende da outra para existir.\n\nA ideia de ciência auxiliar vem de uma fase antiga, em que a Criminologia era vista como fornecedora de dados para a dogmática. A doutrina moderna a substituiu pelo **modelo integrado** das ciências criminais: Criminologia, Política Criminal e Direito Penal são saberes distintos, que dialogam em relação de complementaridade.\n\nNesse modelo, a Criminologia pode até criticar o Direito Penal, mostrando que uma lei não funciona ou que é aplicada de forma seletiva. Uma ciência subordinada não teria essa liberdade. A palavra que torna a assertiva errada é \"subordinada\", reforçada por \"sem objeto nem método próprios\".",
+      "memorize": "Criminologia é autônoma: objeto e método próprios; relação com o Direito Penal é de integração, não de subordinação."
      }
     },
     {
@@ -188,7 +204,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "empírico e indutivo",
        "dedutivo"
-      ]
+      ],
+      "aprofundamento": "O método decorre da natureza de cada ciência. Quem estuda o ser precisa observar: a Criminologia coleta dados, compara casos e, a partir do particular, formula conclusões gerais. Esse caminho do particular para o geral é a **indução**.\n\nQuem estuda o dever ser parte de uma premissa dada, a norma, e a aplica ao caso. O juiz que verifica se uma conduta se encaixa no tipo faz um silogismo: premissa maior é a lei, premissa menor é o fato, conclusão é a decisão. Esse caminho do geral para o particular é a **dedução**.\n\nA mesma distinção aparece na história das escolas: os clássicos usavam o método lógico-abstrato e dedutivo, e o positivismo inaugurou o empírico-indutivo. Por isso se diz que a Criminologia como ciência nasce com o positivismo.\n\nNa prova, a troca entre \"indutivo\" e \"dedutivo\" é a armadilha mais frequente. Associe indução a observação e dedução a norma.",
+      "memorize": "Criminologia: empírico-indutivo (do fato à regra). Direito Penal: lógico-dedutivo (da norma ao caso)."
      }
     },
     {
@@ -203,7 +221,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "probabilístico",
        "ciência não exata"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que a Criminologia oferece leis universais e certezas absolutas sobre as causas do crime.",
+       "certo": "O saber criminológico é probabilístico, relativo e provisório: oferece diagnósticos e tendências, não leis universais nem certezas absolutas."
+      },
+      "aprofundamento": "Ser empírica significa basear-se na observação, não ter certeza absoluta. O comportamento humano é influenciado por fatores biológicos, psicológicos e sociais que variam no tempo e no espaço, e nenhuma pesquisa consegue isolar todos eles como se faz num laboratório de física.\n\nPor isso o saber criminológico é **probabilístico**: indica que certo fator aumenta o risco de criminalidade, não que ele produz o crime necessariamente. É **relativo**, porque depende do contexto estudado, e **provisório**, porque novas pesquisas podem rever conclusões anteriores.\n\nEssa humildade metodológica é o que diferencia a Criminologia moderna do positivismo do século XIX, que buscava causas deterministas, como o criminoso nato. A ideia de leis universais do crime é justamente o que a crítica posterior derrubou.\n\nNa prova, desconfie de \"leis universais\", \"certeza absoluta\" e \"causas necessárias\". Empírico não é sinônimo de exato.",
+      "memorize": "Empírico não é exato: a Criminologia dá probabilidades e tendências, não leis universais."
      }
     },
     {
@@ -218,7 +242,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "Criminologia clínica",
        "Criminologia geral"
-      ]
+      ],
+      "correcao": {
+       "erro": "Inverte as definições: atribui à Criminologia geral a aplicação ao caso concreto e à clínica a sistematização.",
+       "certo": "A Criminologia geral sistematiza, compara e classifica os resultados; a Criminologia clínica aplica esse conhecimento ao caso concreto, para diagnóstico, prognóstico e tratamento do infrator."
+      },
+      "aprofundamento": "A divisão sistemática separa duas tarefas. A **Criminologia geral** trabalha com o conjunto: reúne os resultados das pesquisas, compara, classifica e organiza o conhecimento em teorias. É a dimensão de síntese.\n\nA **Criminologia clínica** desce ao indivíduo. Usa o conhecimento geral para examinar uma pessoa concreta, fazer diagnóstico, prognóstico e propor tratamento. Por isso aparece ligada à execução penal, nos exames de personalidade e de classificação do condenado, e herda a influência médica do positivismo.\n\nUma imagem ajuda: a geral é o manual, a clínica é o atendimento. A clínica não existe sem a geral, porque precisa de um saber organizado para aplicar.\n\nA assertiva inverte as definições. Na prova, as palavras \"caso concreto\", \"diagnóstico\", \"prognóstico\" e \"tratamento\" pertencem à clínica; \"sistematiza\", \"compara\" e \"classifica\" pertencem à geral.",
+      "memorize": "Geral organiza o saber; clínica aplica ao indivíduo (diagnóstico, prognóstico, tratamento)."
      }
     },
     {
@@ -232,7 +262,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "empirismo",
        "observação"
-      ]
+      ],
+      "aprofundamento": "O **silogismo** é o raciocínio próprio da dogmática: da norma geral se extrai a solução do caso. O empirismo segue a via oposta: parte da experiência, do dado observado, e só então formula uma conclusão, que pode ser testada e refutada por outra observação.\n\nEsse compromisso com a verificação é o que dá à Criminologia caráter científico. Uma afirmação como \"a pobreza causa o crime\" só vale se resistir ao confronto com os dados; se as pesquisas mostram crimes praticados por pessoas de alta renda, como os crimes de colarinho branco, a hipótese precisa ser revista.\n\nO empirismo não exclui a teoria. O pesquisador formula hipóteses, mas elas precisam ser confrontadas com a realidade. A diferença está em quem dá a última palavra: na dogmática, a norma; na Criminologia, a observação.\n\nNa banca, a frase é correta quando liga empirismo a observação, experiência e verificação.",
+      "memorize": "Empirismo: conclusão vem da observação e pode ser verificada; silogismo abstrato é da dogmática."
      }
     },
     {
@@ -247,7 +279,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "técnicas quantitativas",
        "técnicas qualitativas"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que o método empírico afasta as técnicas quantitativas e admite apenas as qualitativas.",
+       "certo": "A Criminologia usa técnicas quantitativas (estatísticas, inquéritos de vitimização, autodenúncia) e qualitativas (entrevista, observação participante, estudo de caso)."
+      },
+      "aprofundamento": "O método empírico diz que a conclusão vem da observação, mas não limita o tipo de instrumento. A Criminologia usa as duas famílias de técnicas porque cada uma responde a uma pergunta diferente.\n\nAs **técnicas quantitativas** medem: quantos crimes, onde, com que frequência, que perfil. Estatísticas oficiais, inquéritos de vitimização e pesquisas de autodenúncia, em que a pessoa revela anonimamente crimes que cometeu, pertencem a esse grupo. Elas dão a dimensão do fenômeno.\n\nAs **técnicas qualitativas** compreendem: como o infrator interpreta sua conduta, como a vítima vive a experiência, como funciona uma instituição. Entrevistas, observação participante e estudos de caso dão profundidade ao número.\n\nA pesquisa mais completa combina as duas. A assertiva erra ao excluir uma família inteira; na prova, desconfie de \"apenas\" e \"afasta\" quando o tema é método.",
+      "memorize": "Técnicas: quantitativas medem (estatística, vitimização, autodenúncia); qualitativas compreendem (entrevista, observação, caso)."
      }
     },
     {
@@ -261,7 +299,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "pesquisas de vitimização",
        "cifra negra"
-      ]
+      ],
+      "aprofundamento": "As estatísticas oficiais só contam o que chega às instâncias formais. Muito crime fica de fora: a vítima não registra por medo, vergonha, descrédito na polícia ou por achar o fato pequeno demais. Essa criminalidade oculta é a **cifra negra**.\n\nO **inquérito de vitimização** contorna o problema perguntando diretamente às pessoas, numa amostra representativa, se sofreram crimes e se os comunicaram. Comparando as respostas com os registros oficiais, estima-se o tamanho do que não foi registrado e em que tipos de crime a subnotificação é maior.\n\nA técnica também revela dados sobre a própria vítima: perfil, sentimento de insegurança, confiança nas instituições. Por isso é instrumento valioso para a Vitimologia e para orientar a política criminal.\n\nTem limites: depende da memória e da sinceridade do entrevistado e não alcança crimes sem vítima individual. A pesquisa de autodenúncia é a técnica irmã, que pergunta ao possível autor.",
+      "memorize": "Inquérito de vitimização pergunta à população se foi vítima; a diferença em relação ao registro estima a cifra negra."
      }
     },
     {
@@ -275,7 +315,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "interdisciplinaridade",
        "biopsicossocial"
-      ]
+      ],
+      "aprofundamento": "O crime é um fenômeno **biopsicossocial**: envolve o corpo e a mente de quem age, o ambiente em que vive e as regras que definem o que é proibido. Nenhuma ciência isolada dá conta de todas essas dimensões.\n\nA biologia e a psiquiatria contribuem com fatores individuais; a psicologia, com processos de aprendizagem e personalidade; a sociologia e a antropologia, com estruturas, culturas e interações; a estatística, com a medição do fenômeno; o Direito, com a definição legal do crime e das respostas estatais.\n\nO ponto decisivo é a palavra **integração**. Interdisciplinaridade não é colocar os saberes lado a lado, como capítulos independentes, mas articulá-los num conhecimento único sobre o crime. É isso que permite à Criminologia manter objeto próprio sem se dissolver nas ciências que a alimentam.\n\nNa banca, a frase está certa quando lista saberes variados; fica errada quando conclui que a interdisciplinaridade a torna dependente ou sem objeto.",
+      "memorize": "Interdisciplinar = integra biologia, psicologia, sociologia, estatística e Direito num saber próprio sobre o crime."
      }
     },
     {
@@ -290,7 +332,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "lógico-abstrato",
        "Escola Clássica"
-      ]
+      ],
+      "correcao": {
+       "erro": "Atribui à Escola Clássica o método empírico-indutivo, baseado na observação de criminosos.",
+       "certo": "A Escola Clássica usou o método lógico-abstrato e dedutivo, de base racionalista; o método empírico-indutivo é próprio da Escola Positiva."
+      },
+      "aprofundamento": "A Escola Clássica nasce do **Iluminismo** e do jusnaturalismo. Seus autores partiam de premissas racionais, como o livre-arbítrio e o contrato social, e delas deduziam como o Direito Penal deveria ser: penas proporcionais, legalidade, humanidade. O método era lógico-abstrato, dedutivo, típico da filosofia.\n\nO **positivismo** surge como reação, no ambiente das ciências naturais. Lombroso mediu crânios e examinou presos; Ferri estudou estatísticas e fatores sociais. A proposta era observar o criminoso real e, por indução, descobrir as causas do crime.\n\nPor isso se diz que a Criminologia como ciência empírica nasce com os positivistas, e não com os clássicos, que fizeram filosofia penal e reforma legislativa.\n\nA assertiva troca os métodos. Na prova, associe clássicos a razão, dedução e livre-arbítrio; positivistas a observação, indução e determinismo.",
+      "memorize": "Clássicos: lógico-abstrato, dedutivo. Positivistas: empírico-indutivo."
      }
     },
     {
@@ -305,7 +353,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "objeto próprio",
        "autonomia"
-      ]
+      ],
+      "correcao": {
+       "erro": "Conclui que a interdisciplinaridade torna a Criminologia dependente das ciências que a compõem e sem objeto próprio.",
+       "certo": "A Criminologia é interdisciplinar e, ainda assim, autônoma: tem objeto próprio (delito, delinquente, vítima e controle social) e método próprio."
+      },
+      "aprofundamento": "Receber contribuições de várias ciências não significa depender delas. A Criminologia seleciona o que cada saber oferece e o organiza em torno de perguntas que só ela formula: por que o crime ocorre, quem é selecionado, como a vítima participa, como o controle social reage.\n\nEsse recorte é o seu **objeto próprio**: delito, delinquente, vítima e controle social, estudados de forma integrada. A sociologia estuda a sociedade em geral, a psicologia o comportamento em geral; só a Criminologia toma o fenômeno criminal como centro.\n\nAo objeto se soma o método empírico. Objeto e método próprios são os dois requisitos da **autonomia** científica.\n\nA assertiva faz um salto lógico falso: de interdisciplinar para dependente. Na prova, quando a frase tira da Criminologia o objeto ou a autonomia, ela está errada.",
+      "memorize": "Interdisciplinar não é dependente: a Criminologia tem objeto e método próprios."
      }
     },
     {
@@ -319,7 +373,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "delito, delinquente, vítima e controle social",
        "objetos"
-      ]
+      ],
+      "aprofundamento": "Cada objeto foi incorporado num momento histórico, e conhecer essa ordem ajuda a resolver as questões de escola. O **delito** foi o centro dos clássicos, que o viam como ente jurídico. O **delinquente** foi o foco dos positivistas, que procuravam nele as causas do crime.\n\nA **vítima** ganhou espaço com a Vitimologia, depois da Segunda Guerra, quando se percebeu que ela participa da dinâmica do crime e sofre os efeitos do processo. O **controle social** entrou com o paradigma da reação social, que passou a estudar como polícia, Justiça e sociedade definem e selecionam o que é crime.\n\nA Criminologia moderna não escolhe um deles: estuda os quatro de forma integrada. Uma questão que traga só três, ou que diga que a vítima e o controle social sempre estiveram no objeto, está incompleta ou historicamente errada.",
+      "memorize": "Quatro objetos, na ordem histórica: delito (clássicos), delinquente (positivistas), vítima (Vitimologia), controle social (reação social)."
      }
     },
     {
@@ -334,7 +390,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "redescoberta da vítima",
        "Vitimologia"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que a vítima sempre foi objeto central da Criminologia, desde a Escola Positiva.",
+       "certo": "A Escola Positiva concentrou-se no delinquente; a vítima foi redescoberta depois da Segunda Guerra, com a Vitimologia de von Hentig e Mendelsohn."
+      },
+      "aprofundamento": "O positivismo procurava as causas do crime no próprio infrator: anomalias físicas, psíquicas ou sociais. Nessa lógica, a vítima era figura secundária, um elemento passivo do fato, sem interesse científico.\n\nA mudança vem depois da Segunda Guerra. O trauma das vítimas em massa e os estudos de **von Hentig** e **Mendelsohn** mostraram que a vítima tem papel na dinâmica do crime, pode contribuir para ele em maior ou menor grau e sofre danos que vão além do fato, inclusive no contato com o sistema. Nasce a **Vitimologia**, e a vítima passa a ser objeto da Criminologia.\n\nFala-se em \"redescoberta\" porque, antes do Estado moderno, a vítima tinha papel central na reação ao crime, papel que perdeu quando o Estado monopolizou a persecução penal.\n\nA assertiva antecipa a Vitimologia. Na prova, positivismo é sinônimo de foco no delinquente.",
+      "memorize": "Positivismo olhou o delinquente; a vítima só entra com a Vitimologia, no pós-guerra."
      }
     },
     {
@@ -348,7 +410,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "delito como ente jurídico",
        "delinquente"
-      ]
+      ],
+      "aprofundamento": "A ênfase de cada escola decorre de sua premissa sobre a liberdade humana. Para os **clássicos**, todo homem é livre e racional; se todos podem escolher, não há o que estudar no criminoso, que é igual aos demais. O interesse recai sobre o **delito**, entendido como ente jurídico, violação da lei, e sobre a pena justa e proporcional.\n\nPara os **positivistas**, o comportamento é determinado por fatores biológicos, psicológicos e sociais. Se o crime tem causa, ela está na pessoa e em seu meio. O foco passa ao **delinquente**, e a resposta penal se orienta pela periculosidade, não pela gravidade do fato.\n\nEssa mudança explica outras diferenças: pena proporcional ao fato nos clássicos e medida ajustada ao perigo nos positivistas; responsabilidade moral nos primeiros, responsabilidade social nos segundos.\n\nNa prova, ligue livre-arbítrio a delito e determinismo a delinquente.",
+      "memorize": "Clássicos: delito como ente jurídico, livre-arbítrio. Positivistas: delinquente, determinismo, periculosidade."
      }
     },
     {
@@ -363,7 +427,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "controle social informal",
        "controle social formal"
-      ]
+      ],
+      "correcao": {
+       "erro": "Classifica família, escola e igreja como controle social formal.",
+       "certo": "Família, escola e igreja são instâncias de controle social informal; o controle formal é exercido por polícia, Ministério Público, Judiciário e administração penitenciária."
+      },
+      "aprofundamento": "O critério de distinção é **quem exerce** o controle e **como**. O controle **informal** é difuso: nasce das relações cotidianas e se exerce por aprovação, reprovação, afeto, exclusão. Família, escola, igreja, vizinhança, trabalho e opinião pública ensinam e cobram as normas do grupo sem precisar do Estado.\n\nO controle **formal** é institucional e estatal: polícia, Ministério Público, Judiciário e administração penitenciária. Atua por meio de procedimentos e sanções previstas em lei, inclusive a pena.\n\nA Criminologia valoriza o controle informal porque é ele que mais previne: as pessoas respeitam as normas sobretudo por terem sido socializadas a isso. O formal entra quando o informal falha, e por isso o Direito Penal é a última opção.\n\nA escola pública é instituição do Estado, o que confunde candidatos; mas sua função de controle é educativa e cotidiana, e por isso é informal. Na banca, o informal é o da vida diária; o formal é o do sistema de Justiça.",
+      "memorize": "Informal: família, escola, igreja, trabalho, opinião pública. Formal: polícia, MP, Judiciário, sistema penitenciário."
      }
     },
     {
@@ -378,7 +448,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "controle social",
        "reação social"
-      ]
+      ],
+      "correcao": {
+       "erro": "Situa a entrada do controle social no objeto da Criminologia na Escola Clássica, no século XVIII.",
+       "certo": "O controle social passou a integrar o objeto da Criminologia sobretudo com o labelling approach, nos anos 1960, no paradigma da reação social."
+      },
+      "aprofundamento": "A Escola Clássica discutia a lei e a pena, mas não tomava o controle social como objeto de estudo empírico. Ela pensava como o Estado deveria punir, não como as instâncias de fato selecionam quem será punido.\n\nO salto vem com o **labelling approach**, nos anos 1960. Os teóricos da rotulação perceberam que o crime não é uma qualidade da conduta, mas o resultado de uma definição: alguém precisa criar a norma e alguém precisa aplicá-la a uma pessoa concreta. Estudar o crime passa a exigir estudar quem define e quem reage. É a mudança do paradigma etiológico, que busca causas, para o **paradigma da reação social**.\n\nA partir daí, polícia, Justiça, prisão e mídia viram objeto de pesquisa, e surgem conceitos como seletividade, criminalização secundária e desvio secundário.\n\nA assertiva antecipa para os clássicos uma conquista da reação social. Na prova, controle social como objeto lembra labelling.",
+      "memorize": "Controle social vira objeto com o labelling approach (reação social), nos anos 1960."
      }
     },
     {
@@ -392,7 +468,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "correcionalista",
        "tutela"
-      ]
+      ],
+      "aprofundamento": "As quatro imagens do delinquente mostram como cada escola responde à pergunta \"por que alguém comete crime?\" e, por consequência, o que fazer com ele.\n\nO **correcionalismo**, de origem espanhola e alemã, vê no criminoso alguém com vontade fraca, incapaz de conduzir a própria vida segundo o Direito. A resposta não é castigo, mas **tutela**: o Estado atua como educador, e a pena tem função pedagógica e de correção. Daí a tendência à pena indeterminada, que dura até a emenda do condenado.\n\nAs outras imagens servem de contraste. O clássico vê alguém livre que escolheu mal e merece pena proporcional. O positivista vê alguém determinado por sua patologia, a ser neutralizado ou tratado. O marxista vê alguém produzido pelas estruturas econômicas, cuja responsabilidade é deslocada para a sociedade.\n\nNa prova, \"débil\" e \"tutela\" entregam o correcionalismo.",
+      "memorize": "Imagens do delinquente: clássico livre; positivista doente; correcionalista débil que precisa de tutela; marxista vítima das estruturas."
      }
     },
     {
@@ -407,7 +485,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "problema social e comunitário",
        "conceito jurídico-penal"
-      ]
+      ],
+      "correcao": {
+       "erro": "Reduz o delito criminológico, \"exclusivamente\", ao fato típico, ilícito e culpável definido pelo legislador.",
+       "certo": "O fato típico, ilícito e culpável é o conceito jurídico-penal; para a Criminologia, o delito é problema social e comunitário, e ela pode estudar condutas desviantes ainda não tipificadas."
+      },
+      "aprofundamento": "O conceito **analítico** de crime é ferramenta da dogmática: serve para o juiz decidir se pune ou não. Ele depende da lei, e por isso muda quando o legislador cria ou revoga um tipo.\n\nA Criminologia precisa de um conceito mais amplo, porque estuda também o processo pelo qual algo passa a ser crime. Para ela, o delito é **problema social e comunitário**: um fato que se repete com certa frequência, causa dor ou dano relevante, gera inquietação social e exige resposta. Esse olhar permite estudar condutas desviantes ainda não tipificadas e avaliar se merecem ou não a criminalização.\n\nSe a Criminologia aceitasse apenas o conceito legal, ficaria presa às escolhas do legislador e não poderia criticá-las, o que contraria sua autonomia.\n\nA palavra que torna a assertiva errada é \"exclusivamente\". O fato típico, ilícito e culpável é o conceito jurídico-penal, não o criminológico.",
+      "memorize": "Delito para a Criminologia = problema social e comunitário, não só o fato típico, ilícito e culpável."
      }
     },
     {
@@ -421,7 +505,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "informar",
        "diagnóstico qualificado"
-      ]
+      ],
+      "aprofundamento": "A Criminologia não pune nem legisla; seu produto é **conhecimento**. Ela diz quanto crime há, onde se concentra, quem pratica, quem sofre e como as instituições reagem. Esse diagnóstico é o ponto de partida de qualquer política pública séria sobre segurança.\n\nSem essa informação, as decisões se baseiam em impressões, casos de grande repercussão ou pressão da mídia. Um exemplo é a tendência de endurecer penas após um crime chocante, mesmo quando os dados mostram que a severidade pouco influencia a criminalidade.\n\n\"Núcleo de conhecimentos seguros\" deve ser lido com cuidado: significa informação científica, verificada e contrastada, e não certeza absoluta. O saber criminológico continua probabilístico e provisório.\n\nNa prova, a frase é correta quando coloca a Criminologia como fornecedora de diagnóstico; fica errada quando lhe atribui o papel de criar normas.",
+      "memorize": "Função básica da Criminologia: informar com diagnóstico qualificado do problema criminal, base da política criminal."
      }
     },
     {
@@ -436,7 +522,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "substrato empírico",
        "legislador"
-      ]
+      ],
+      "correcao": {
+       "erro": "Atribui à Criminologia a função de formular as normas penais incriminadoras.",
+       "certo": "Quem cria tipos penais é o legislador; a Política Criminal converte o saber empírico em estratégias, e a Criminologia apenas fornece o substrato empírico."
+      },
+      "aprofundamento": "A criação de tipos penais é ato político e jurídico: só o **legislador**, com legitimidade democrática, pode decidir o que será crime, e a decisão se submete à legalidade. Uma ciência empírica não tem essa legitimidade, por mais que conheça a realidade.\n\nO modelo integrado distribui as tarefas. A Criminologia diagnostica: oferece dados sobre o fenômeno. A **Política Criminal** escolhe: transforma o diagnóstico em estratégias, decidindo, por exemplo, se um problema exige criminalização, medida administrativa ou política social. O Direito Penal formaliza: converte a opção em normas e as interpreta.\n\nHá também uma razão de cautela. Se quem estuda as causas legislasse, o risco de um direito penal de autor, voltado a punir pessoas pelo que são, seria grande, como mostrou a experiência positivista.\n\nNa prova, verbos como \"formular normas\", \"tipificar\" e \"cominar penas\" nunca são função da Criminologia.",
+      "memorize": "Criminologia diagnostica, Política Criminal escolhe, legislador tipifica."
      }
     },
     {
@@ -450,7 +542,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "explicar e prevenir",
        "avaliar os modelos"
-      ]
+      ],
+      "aprofundamento": "As funções formam um ciclo. **Explicar** é compreender a gênese e a dinâmica do crime. **Prevenir** é usar essa compreensão para agir antes do fato, sobre causas e oportunidades. **Intervir** no infrator é a dimensão clínica, voltada a reduzir a reincidência. **Avaliar** é verificar se as respostas adotadas funcionam.\n\nA avaliação fecha o ciclo e o reabre: se um programa de ressocialização não reduz a reincidência, a explicação precisa ser revista e a estratégia, corrigida. É por isso que a Criminologia moderna não é apenas teórica, mas também aplicada.\n\nEssas funções não transformam a Criminologia em órgão de governo. Ela oferece conhecimento e avaliação; a decisão continua com a Política Criminal e com o legislador.\n\nNa prova, a assertiva fica errada quando retira uma das funções, sobretudo a avaliativa, ou quando restringe a Criminologia à explicação causal.",
+      "memorize": "Funções da Criminologia: explicar, prevenir, intervir no infrator e avaliar os modelos de reação."
      }
     },
     {
@@ -465,7 +559,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "eficácia",
        "modelos de reação"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que a Criminologia deve abster-se de avaliar a eficácia do sistema penal e limitar-se à explicação causal.",
+       "certo": "Avaliar a eficácia dos modelos de reação ao delito (dissuasório, ressocializador e integrador) é função própria da Criminologia."
+      },
+      "aprofundamento": "A ideia de que ciência deve apenas explicar é herança do positivismo, que buscava as causas do crime e deixava de lado o funcionamento do próprio sistema. A Criminologia moderna, sobretudo depois da reação social, entende que o sistema penal faz parte do problema criminal e precisa ser estudado.\n\nAvaliar os **modelos de reação** significa verificar empiricamente se cumprem o que prometem. O modelo **dissuasório** aposta na ameaça da pena; o **ressocializador**, na recuperação do infrator; o **integrador**, na reparação do dano e na pacificação entre autor, vítima e comunidade. Cada um pode ser medido por seus resultados.\n\nEssa avaliação não é opinião política: é análise de eficácia, feita com dados. Ela serve à Política Criminal, que decide o que manter ou mudar.\n\nA assertiva erra ao mandar a Criminologia se abster. Avaliar é função própria dela, não exceção.",
+      "memorize": "Avaliar o sistema penal é função da Criminologia: modelos dissuasório, ressocializador e integrador."
      }
     },
     {
@@ -479,7 +579,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "prevenção",
        "repressão"
-      ]
+      ],
+      "aprofundamento": "A repressão atua depois do crime: há uma vítima e um dano já consumado. A **prevenção** procura evitar que o fato ocorra, o que é mais eficiente e menos custoso para todos.\n\nA Criminologia moderna organiza a prevenção em níveis. A **primária** atua nas causas sociais, com educação, moradia, emprego e lazer. A **secundária** atua sobre grupos e locais de risco, com policiamento, urbanismo e programas dirigidos. A **terciária** atua sobre quem já delinquiu, para evitar a reincidência.\n\nHá também a prevenção situacional, que reduz oportunidades: iluminação, vigilância, barreiras físicas. Ela parte da ideia de que muitos crimes dependem da ocasião, e não apenas da motivação do autor.\n\nA repressão continua necessária, mas não é suficiente. Na prova, a frase fica errada quando apresenta a Criminologia como voltada só à punição ou quando sustenta que penas mais altas bastam para prevenir.",
+      "memorize": "Criminologia moderna: prevenção (primária, secundária e terciária) acima da mera repressão."
      }
     },
     {
@@ -494,7 +596,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "delinquente",
        "controle social"
-      ]
+      ],
+      "correcao": {
+       "erro": "Restringe a função da Criminologia ao estudo do criminoso.",
+       "certo": "O estudo do criminoso foi o foco positivista; hoje a Criminologia abrange delito, delinquente, vítima e controle social, e suas funções incluem explicar, prevenir, intervir e avaliar."
+      },
+      "aprofundamento": "A Criminologia nasceu com o positivismo, que de fato centrou seus estudos no criminoso. Mas o objeto foi se ampliando. A Vitimologia trouxe a vítima, mostrando seu papel na dinâmica do crime. O paradigma da reação social trouxe o controle social, mostrando que as instâncias de controle também produzem o crime ao selecionar quem será criminalizado.\n\nCom o objeto, ampliaram-se as funções. Hoje a Criminologia explica o fenômeno, orienta a prevenção, intervém no infrator e avalia os modelos de reação. Estudar apenas o criminoso deixaria de fora a maior parte do que hoje se considera relevante.\n\nO argumento histórico da assertiva é uma armadilha: a origem de uma ciência não limita o seu desenvolvimento.\n\nNa prova, sempre que a frase usar \"restringe-se\" ou \"apenas\" ligado ao delinquente, a resposta é errada.",
+      "memorize": "Foco só no criminoso é positivismo; a Criminologia moderna abrange os quatro objetos."
      }
     },
     {
@@ -508,7 +616,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "controle social",
        "normas comunitárias"
-      ]
+      ],
+      "aprofundamento": "Nenhum grupo humano sobrevive sem regras compartilhadas. O **controle social** é o conjunto de meios pelos quais o grupo transmite essas regras e reage a quem as descumpre. Inclui desde a reprovação de um olhar até a prisão.\n\nOs mecanismos podem ser **positivos**, como elogio, prestígio e recompensa, ou **negativos**, como censura, exclusão e pena. Podem ser **informais**, exercidos pela família, escola, igreja e comunidade, ou **formais**, exercidos pelas instituições estatais do sistema penal.\n\nA Criminologia estuda o controle social porque ele ajuda a explicar tanto a conformidade quanto o crime. Pessoas bem integradas aos controles informais tendem a respeitar as normas; quando esses vínculos se enfraquecem, a criminalidade tende a crescer. Além disso, o próprio controle formal pode gerar desvio, como mostrou o labelling.\n\nNa prova, a definição é correta quando abrange formal e informal.",
+      "memorize": "Controle social: mecanismos e sanções que levam à conformidade com as normas do grupo; formal e informal."
      }
     },
     {
@@ -523,7 +633,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "controle social formal",
        "polícia"
-      ]
+      ],
+      "correcao": {
+       "erro": "Classifica a polícia como agente de controle social informal.",
+       "certo": "A polícia é instância de controle social formal, ao lado do Ministério Público, do Judiciário e da administração penitenciária."
+      },
+      "aprofundamento": "O critério é a natureza da instância. A polícia é órgão do Estado, atua com base em lei, usa procedimentos formais, como o registro e o inquérito, e pode empregar força legítima. Tudo isso a coloca no **controle social formal**, ao lado do Ministério Público, do Judiciário e da administração penitenciária.\n\nNo informal estão as instâncias da vida cotidiana: família, escola, igreja, vizinhança, trabalho e opinião pública, que atuam por socialização e reprovação, sem procedimento legal.\n\nA polícia tem um papel especial dentro do controle formal: costuma ser a **porta de entrada** do sistema penal. É ela que decide, na prática, o que será registrado e investigado, o que a torna peça central nos estudos sobre seletividade e cifra negra.\n\nNa prova, qualquer órgão do sistema de Justiça criminal é controle formal.",
+      "memorize": "Polícia é controle social formal e, em regra, a porta de entrada do sistema penal."
      }
     },
     {
@@ -537,7 +653,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "primeira instância formal",
        "seleção"
-      ]
+      ],
+      "aprofundamento": "A **criminalização secundária** é a aplicação concreta da lei penal a pessoas determinadas. Ela começa, quase sempre, na polícia, que decide quais fatos registrar, quais investigar com prioridade e quais encaminhar ao Ministério Público.\n\nEssa decisão envolve **discricionariedade** prática. Os recursos são limitados e não há como investigar tudo; a escolha recai, muitas vezes, sobre os delitos mais visíveis e sobre as pessoas mais expostas à vigilância, como as que vivem e trabalham na rua. Por isso o filtro policial é tão estudado pela Criminologia: é ali que boa parte da seletividade se produz.\n\nO que não passa por esse primeiro filtro integra a cifra negra ou, mais precisamente, a parte dela que chegou ao conhecimento estatal e se perdeu.\n\nA expressão \"em regra\" é importante: há casos que chegam diretamente ao Ministério Público ou ao Judiciário, mas a porta de entrada típica é a polícia.",
+      "memorize": "A polícia é o primeiro filtro da criminalização secundária: decide o que registra, investiga e encaminha."
      }
     },
     {
@@ -552,7 +670,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "ultima ratio",
        "subsidiário"
-      ]
+      ],
+      "correcao": {
+       "erro": "Apresenta o Direito Penal como o primeiro e principal instrumento de controle social.",
+       "certo": "O Direito Penal é a ultima ratio: instrumento subsidiário e fragmentário, que só atua quando os demais meios de controle social falham."
+      },
+      "aprofundamento": "O Direito Penal usa a sanção mais grave do ordenamento: a privação da liberdade. Por isso só se justifica quando os outros meios de controle não bastam. Essa é a ideia de **ultima ratio**.\n\nDela decorrem duas características. A **subsidiariedade** diz que o Direito Penal só atua quando os ramos civil e administrativo e os controles informais forem insuficientes. A **fragmentariedade** diz que ele só protege os bens jurídicos mais relevantes e contra os ataques mais graves, e não toda lesão.\n\nA Criminologia reforça essa ideia com dados: quem respeita as normas o faz sobretudo por ter sido socializado pela família, escola e comunidade, e não por medo da pena. O controle informal é o primeiro e o mais eficaz; o penal é o último.\n\nA assertiva inverte a ordem. Na prova, \"primeiro\" e \"principal\" ligados ao Direito Penal indicam erro.",
+      "memorize": "Direito Penal é ultima ratio: subsidiário (só quando os outros falham) e fragmentário (só o mais grave)."
      }
     },
     {
@@ -566,7 +690,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "seletividade",
        "grupos vulneráveis"
-      ]
+      ],
+      "aprofundamento": "A **seletividade** significa que o sistema penal não alcança todos os que praticam crimes, mas escolhe alguns. Como é impossível processar toda a criminalidade, a escolha acaba recaindo sobre quem está mais exposto e tem menos meios de defesa: pobres, jovens de periferia, minorias.\n\nO **labelling approach** mostrou o mecanismo: o crime é o resultado de uma definição aplicada a alguém, e quem aplica a definição age com estereótipos. A **Criminologia crítica** foi além e ligou a seletividade à estrutura de classes: a lei e sua aplicação protegem os interesses dos grupos dominantes, enquanto os crimes dos poderosos, como os de colarinho branco, tendem a ficar impunes.\n\nA seletividade ocorre em dois momentos: na criminalização primária, quando se escolhe o que tipificar, e na secundária, quando se escolhe quem perseguir.\n\nNa prova, seletividade combina com teorias do conflito, não com as do consenso.",
+      "memorize": "Seletividade do controle formal: tese do labelling e da Criminologia crítica; recai sobre os mais vulneráveis."
      }
     },
     {
@@ -581,7 +707,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "controle informal",
        "certeza"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que a eficácia preventiva depende mais do aumento das penas que do controle social informal.",
+       "certo": "A eficácia preventiva depende muito mais do controle social informal e da certeza da resposta do que da severidade das penas."
+      },
+      "aprofundamento": "A intuição comum diz que pena alta assusta e previne. As pesquisas criminológicas mostram outra coisa: o que mais dissuade é a **certeza** de que haverá resposta, e não o tamanho da pena. Uma pena altíssima que quase nunca é aplicada tem pouco efeito; uma resposta moderada e provável pesa mais na decisão do potencial infrator.\n\nAlém disso, a maior parte das pessoas respeita as normas por ter sido socializada a isso. O **controle informal**, exercido por família, escola, trabalho e comunidade, é o que sustenta a conformidade no dia a dia. Onde esses vínculos são fracos, aumentar penas tende a ter efeito limitado.\n\nEssa constatação já aparecia em Beccaria, para quem a certeza da punição vale mais que sua severidade, e é confirmada pela Criminologia contemporânea.\n\nNa prova, a assertiva que aposta no aumento de penas como principal ferramenta preventiva está errada.",
+      "memorize": "Previne mais a certeza da resposta e o controle informal do que a severidade da pena."
      }
     },
     {
@@ -595,7 +727,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "modelo integrado",
        "ponte"
-      ]
+      ],
+      "aprofundamento": "O **modelo integrado** das ciências criminais distribui três tarefas. A Criminologia conhece a realidade: é ciência do ser. O Direito Penal formaliza as escolhas em normas: é ciência do dever ser. Entre os dois, a **Política Criminal** faz a ponte.\n\nA ponte é necessária porque o dado empírico não diz, sozinho, o que fazer. Saber que certo crime cresce numa região não indica se a melhor resposta é nova lei, mais policiamento ou programa social. A Política Criminal transforma o conhecimento em **estratégias** e opções que o legislador pode adotar, e também critica o direito vigente à luz dos resultados.\n\nA expressão \"assumíveis pelo legislador\" lembra que a decisão final é política e democrática. A Política Criminal propõe; o legislador decide; o Direito Penal sistematiza e aplica.\n\nNa prova, a ponte é a Política Criminal, e não a Criminologia nem a dogmática.",
+      "memorize": "Modelo integrado: Criminologia (ser) → Política Criminal (ponte, estratégias) → Direito Penal (dever ser, normas)."
      }
     },
     {
@@ -610,7 +744,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "método",
        "objeto"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que Criminologia e Direito Penal coincidem quanto ao método e ao objeto.",
+       "certo": "Diferem nos dois: a Criminologia usa método empírico-indutivo e tem objeto amplo (delito, delinquente, vítima e controle social); o Direito Penal usa método lógico-dedutivo e estuda a norma penal."
+      },
+      "aprofundamento": "As duas ciências se distinguem nos dois critérios clássicos de classificação científica.\n\nQuanto ao **método**, a Criminologia observa a realidade e conclui por indução, a partir dos dados. O Direito Penal parte da norma e a aplica ao caso por dedução, numa operação lógica e valorativa.\n\nQuanto ao **objeto**, o Direito Penal estuda o crime como fato típico, ilícito e culpável, e a pena como consequência jurídica. A Criminologia estuda o delito como problema social, e também o delinquente, a vítima e o controle social. Seu objeto é mais amplo e alcança até condutas ainda não tipificadas.\n\nSão diferenças de natureza: uma é ciência do ser, a outra do dever ser. Elas se complementam no modelo integrado, mas não se confundem.\n\nNa prova, qualquer frase que iguale as duas em método ou em objeto está errada.",
+      "memorize": "Criminologia × Direito Penal: método indutivo × dedutivo; objeto amplo × norma."
      }
     },
     {
@@ -634,7 +774,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "tipificação",
        "legalidade"
-      ]
+      ],
+      "aprofundamento": "A **criminalização primária** é o momento em que o legislador decide que certa conduta será crime. É uma escolha política, porque envolve valorar quais bens merecem proteção penal e qual o custo social de punir. A Criminologia pode informar essa escolha, mostrando a dimensão do problema e a eficácia provável da resposta penal.\n\nMas a escolha tem um limite intransponível: a **legalidade**, prevista no art. 1º do Código Penal. Só a lei, anterior ao fato, pode definir crime e cominar pena. Nem o dado criminológico mais sólido autoriza punir sem lei, e nem o juiz pode criar tipos por analogia para preencher lacunas.\n\nA legalidade cumpre funções de garantia: dá previsibilidade, impede a retroatividade da lei incriminadora e reserva ao Parlamento a decisão sobre o que é crime.\n\nNa prova, a frase é correta porque reconhece o diálogo com a Criminologia sem retirar do legislador e da lei a palavra final.",
+      "memorize": "Tipificar é opção político-criminal do legislador, informada pela Criminologia, mas sempre presa à legalidade."
      }
     },
     {
@@ -648,7 +790,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "ilicitude",
        "desvio"
-      ]
+      ],
+      "aprofundamento": "A **ilicitude** é um degrau do conceito analítico de crime: a conduta típica contraria o ordenamento e não está amparada por causa de justificação, como a legítima defesa. É uma categoria técnica, que só existe em relação a uma norma.\n\nO **desvio** é conceito sociológico: qualquer comportamento que se afasta das expectativas do grupo. Abrange crimes, mas também condutas não proibidas por lei e que geram reprovação social. A Criminologia trabalha com esse conceito mais amplo porque se interessa pelo processo pelo qual um comportamento passa a ser visto como problema e, às vezes, a ser criminalizado.\n\nEsse olhar permite à Criminologia estudar fenômenos antes da lei e também criticar tipos existentes que punem condutas sem relevância social.\n\nNa prova, ilicitude pertence à dogmática; desvio, à Criminologia. As duas palavras não são sinônimas.",
+      "memorize": "Ilicitude é categoria dogmática; desvio é conceito criminológico, mais amplo, que alcança condutas não tipificadas."
      }
     },
     {
@@ -672,7 +816,10 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "comportamento da vítima",
        "circunstância judicial"
-      ]
+      ],
+      "aprofundamento": "O art. 59 do Código Penal lista as circunstâncias judiciais que orientam a fixação da pena-base, e o **comportamento da vítima** é uma delas. A inclusão traduz para a dogmática uma lição da **Vitimologia**: o crime é uma interação, e a vítima pode, em certos casos, contribuir para o fato, provocando ou facilitando a conduta.\n\nO alcance dessa circunstância é limitado. O comportamento da vítima não exclui o crime nem transfere a culpa; serve apenas para graduar a reprovação dentro dos limites legais. Quando a vítima não contribuiu de modo algum, a circunstância não pode ser usada para agravar a pena do réu, porque a ausência de contribuição é o normal.\n\nA Vitimologia, assim, mostra sua influência prática: além de estudar a vítima, ajuda a medir a resposta penal de forma mais justa.\n\nNa prova, a frase é certa porque liga a circunstância judicial à Vitimologia.",
+      "exemplo": "Pedro, provocado com insultos insistentes por Carlos, agride-o. Na pena-base, o juiz pode valorar a provocação da vítima em favor de Pedro, sem que isso afaste o crime.",
+      "memorize": "Comportamento da vítima é circunstância judicial do art. 59 do CP: marca da Vitimologia na dosimetria."
      }
     },
     {
@@ -697,7 +844,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "teoria mista",
        "reprovação e prevenção"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que o art. 59 do Código Penal adota exclusivamente a teoria absoluta, retributiva, da pena.",
+       "certo": "Ao mandar fixar a pena para reprovação e prevenção do crime, o art. 59 adota a teoria mista ou unificadora, que soma retribuição e prevenção."
+      },
+      "aprofundamento": "As teorias da pena respondem por que punir. As **absolutas** dizem que a pena se justifica em si mesma, como retribuição pelo mal causado. As **relativas** dizem que ela serve a um fim: prevenir novos crimes, seja intimidando a sociedade e reafirmando a norma, seja atuando sobre o condenado. As **mistas** ou **unificadoras** combinam as duas ideias.\n\nO art. 59 do Código Penal manda fixar a pena conforme seja necessário e suficiente para **reprovação** e **prevenção**. Reprovação expressa a retribuição; prevenção expressa a finalidade utilitária. Somadas, revelam a teoria mista.\n\nA leitura reforça um limite: a pena deve ser suficiente, mas também apenas necessária. A ideia de necessidade impede excessos e se conecta à proporcionalidade.\n\nA assertiva esquece a metade do texto. Na prova, \"exclusivamente retributiva\" ignora a palavra prevenção, que está expressa no artigo.",
+      "memorize": "Art. 59 do CP: reprovação + prevenção = teoria mista (unificadora)."
      }
     },
     {
@@ -722,7 +875,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "individualização da pena",
        "fases"
-      ]
+      ],
+      "correcao": {
+       "erro": "Restringe a individualização da pena à fase judicial, excluindo a cominação legislativa e a execução.",
+       "certo": "A individualização da pena se projeta em três fases: cominação, pelo legislador; aplicação, pelo juiz; e execução, conforme a Lei de Execução Penal."
+      },
+      "aprofundamento": "A **individualização da pena** garante que cada pessoa receba a resposta adequada ao seu fato e às suas circunstâncias, e não uma pena padronizada. A Constituição a prevê no art. 5º, XLVI, e a doutrina a projeta em três momentos.\n\nNa **cominação**, o legislador individualiza ao fixar penas mínimas e máximas distintas para cada crime, de acordo com a gravidade do bem atingido. Na **aplicação**, o juiz individualiza ao dosar a pena no caso concreto, considerando circunstâncias judiciais, agravantes, atenuantes e causas de aumento ou diminuição. Na **execução**, a individualização continua com a classificação do condenado, a progressão de regime e os benefícios previstos na Lei de Execução Penal.\n\nA garantia, assim, acompanha a pena do nascimento da lei até o cumprimento. Uma pena fixa ou um regime único, sem atenção à pessoa, violaria o princípio.\n\nNa prova, a palavra \"restrita\" indica erro: a individualização é trifásica nesse sentido.",
+      "memorize": "Individualização da pena: legislativa (cominação), judicial (aplicação) e executória (execução)."
      }
     },
     {
@@ -736,7 +895,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "teorias do consenso",
        "teorias do conflito"
-      ]
+      ],
+      "aprofundamento": "A divisão parte de uma pergunta: a sociedade se apoia num acordo sobre valores ou num conflito entre grupos?\n\nPara as **teorias do consenso**, há valores compartilhados pela maioria, e o crime é um desvio desse acordo. Por isso elas procuram explicar por que alguns se afastam das normas: a desorganização urbana na Escola de Chicago, a aprendizagem na associação diferencial, a tensão entre metas e meios na anomia, os valores próprios do grupo na subcultura.\n\nPara as **teorias do conflito**, a ordem é imposta pelos grupos com mais poder, e o crime é uma definição que eles aplicam. A pergunta muda: não é por que alguém delinque, mas por que certas condutas e pessoas são criminalizadas. Daí o labelling, que estuda a rotulação, e a Criminologia crítica, que liga o sistema penal à estrutura de classes.\n\nNa prova, o critério para classificar é a visão de sociedade, e não a época da teoria.",
+      "memorize": "Consenso: Chicago, associação diferencial, anomia, subcultura. Conflito: labelling e Criminologia crítica."
      }
     },
     {
@@ -751,7 +912,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "teorias do conflito",
        "valores compartilhados"
-      ]
+      ],
+      "correcao": {
+       "erro": "Atribui às teorias do consenso a visão de sociedade formada por grupos antagônicos e mantida pela força e pela coerção.",
+       "certo": "Essa é a premissa das teorias do conflito; as do consenso veem a sociedade integrada por valores compartilhados, com instituições que funcionam."
+      },
+      "aprofundamento": "As duas famílias se distinguem pela imagem que fazem da sociedade. Para o **consenso**, herdeiro do funcionalismo, a sociedade é um organismo cujas partes cooperam: há valores compartilhados pela maioria, e as instituições existem para preservá-los. O crime é uma falha de integração, e a pergunta é por que alguém se desvia.\n\nPara o **conflito**, a sociedade é formada por grupos com interesses opostos, e a ordem existe porque os mais fortes impõem suas regras aos demais. A lei penal e sua aplicação refletem essa dominação, e a pergunta passa a ser quem define o crime e a quem a definição é aplicada.\n\nA assertiva descreve com precisão a premissa do conflito, mas a atribui ao consenso. Na prova, \"valores antagônicos\", \"força\" e \"coerção\" pertencem ao conflito; \"valores compartilhados\", \"integração\" e \"funcionamento das instituições\" pertencem ao consenso.",
+      "memorize": "Consenso: valores compartilhados, integração. Conflito: grupos antagônicos, força e coerção."
      }
     },
     {
@@ -765,7 +932,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "paradigma etiológico",
        "paradigma da reação social"
-      ]
+      ],
+      "aprofundamento": "O **paradigma etiológico** trata o crime como um dado da realidade, que existe antes de qualquer definição, e procura suas causas: no corpo, na mente ou no meio social do autor. É o caminho do positivismo e de boa parte das teorias do consenso.\n\nO **paradigma da reação social** muda o foco. Parte da ideia de que o crime não é uma qualidade natural da conduta, mas resultado de um processo de definição: alguém cria a norma e alguém a aplica a pessoas concretas. Por isso estuda a **criminalização primária**, quando o legislador escolhe o que proibir, e a **secundária**, quando polícia e Justiça escolhem quem perseguir.\n\nA mudança desloca a atenção do autor para as instâncias de controle e explica fenômenos que o paradigma etiológico não alcançava, como a seletividade do sistema e o desvio produzido pelo próprio rótulo.\n\nNa prova, causas lembram etiológico; criminalização e instâncias de controle lembram reação social.",
+      "memorize": "Etiológico: causas do crime. Reação social: processos de criminalização e atuação das instâncias de controle."
      }
     },
     {
@@ -780,7 +949,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "modelos sociológicos",
        "enfoque individual"
-      ]
+      ],
+      "correcao": {
+       "erro": "Inverte os enfoques: atribui aos modelos sociológicos o enfoque individual e aos biológicos e psicológicos o enfoque social.",
+       "certo": "Os modelos biológico e psicológico têm enfoque individual; os sociológicos tratam o crime como fenômeno social, ligado à estrutura da sociedade."
+      },
+      "aprofundamento": "Os modelos explicativos se separam pelo lugar onde procuram a causa do crime. Os **biológicos** olham o corpo: herança, anomalias, funcionamento cerebral. Os **psicológicos** olham a mente: personalidade, aprendizagem, transtornos. Nos dois casos, a explicação está **no indivíduo**, e a pergunta é o que há de diferente naquela pessoa.\n\nOs **sociológicos** olham para fora: a estrutura social, a cultura, a cidade, os grupos e as instituições. O crime aparece como **fenômeno coletivo**, cuja frequência varia com as condições sociais, independentemente das características de cada autor. Chicago, anomia, subcultura e labelling estão nesse campo.\n\nOs modelos não se excluem. A Criminologia moderna, interdisciplinar, combina fatores individuais e sociais.\n\nA assertiva inverte os enfoques. Na prova, \"individual\" vai com biologia e psicologia; \"social\" e \"estrutural\", com sociologia.",
+      "memorize": "Biológico e psicológico: indivíduo. Sociológico: fenômeno coletivo e estrutural."
      }
     },
     {
@@ -795,7 +970,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "associação diferencial",
        "teorias do consenso"
-      ]
+      ],
+      "correcao": {
+       "erro": "Classifica a associação diferencial de Sutherland entre as teorias do conflito.",
+       "certo": "A associação diferencial costuma ser classificada entre as teorias do consenso, ao lado da Escola de Chicago, da anomia e da subcultura delinquente."
+      },
+      "aprofundamento": "A classificação depende da visão de sociedade da teoria. **Sutherland** explica o crime como comportamento aprendido em grupos íntimos, quando a pessoa entra em contato com mais definições favoráveis do que contrárias à violação da lei. A teoria pressupõe que exista uma ordem normativa e procura explicar por que alguns aprendem a desviar-se dela; por isso a doutrina majoritária a coloca no **consenso**.\n\nA confusão vem do fato de Sutherland ter estudado os **crimes de colarinho branco** e mostrado que pessoas de alta posição também delinquem, o que critica a ideia de que crime é coisa de pobre. Esse aspecto lembra as teorias críticas, mas não muda a estrutura da teoria, que continua buscando causas no processo de aprendizagem.\n\nAs teorias do conflito, em contraste, perguntam quem define o crime e por quê: labelling e Criminologia crítica.\n\nNa prova, siga a classificação majoritária: associação diferencial é consenso.",
+      "memorize": "Associação diferencial (Sutherland) é teoria do consenso, embora tenha revelado o crime de colarinho branco."
      }
     },
     {
@@ -809,7 +990,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "coerção",
        "teorias do conflito"
-      ]
+      ],
+      "aprofundamento": "As teorias do conflito têm raízes em autores que viram a sociedade como palco de disputa entre grupos. A ordem não seria fruto de acordo, mas de **dominação**: quem tem poder econômico e político define o que é proibido e organiza as instituições para manter sua posição.\n\nAplicada ao crime, essa ideia produz uma inversão. O crime deixa de ser visto como violação de um valor comum e passa a ser uma **definição** que os grupos dominantes impõem, com frequência a condutas típicas dos grupos dominados. O sistema penal funciona como instrumento de controle desses grupos.\n\nDaí as preocupações centrais do labelling e da Criminologia crítica: seletividade, estigmatização, imunidade dos poderosos e função real da prisão.\n\nNa prova, a frase é correta porque liga o conflito a força, coerção, dominação e sujeição. Se a mesma descrição vier atribuída ao consenso, está errada.",
+      "memorize": "Conflito: ordem imposta por coerção e poder; crime é definição de quem domina."
      }
     },
     {
@@ -824,7 +1007,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "paradigma etiológico",
        "reação social"
-      ]
+      ],
+      "correcao": {
+       "erro": "Inverte as perguntas, atribuindo à reação social o \"por que delinque\" e ao etiológico o \"quem é definido como delinquente\".",
+       "certo": "O paradigma etiológico pergunta por que o indivíduo delinque; o paradigma da reação social pergunta quem é definido como delinquente e por quê."
+      },
+      "aprofundamento": "Cada paradigma tem sua pergunta, e a banca gosta de trocá-las.\n\nO **etiológico** pergunta **por que** a pessoa delinque. Trata o crime como fato natural e busca causas no indivíduo ou no meio. É a pergunta do positivismo e das teorias do consenso.\n\nO da **reação social** pergunta **quem** é definido como delinquente, **por quem** e **com que consequências**. Trata o crime como resultado de um processo social de rotulação e estuda as instâncias que o aplicam. É a pergunta do labelling e da Criminologia crítica.\n\nA mudança de pergunta altera todo o programa de pesquisa: em vez de examinar o criminoso, examina-se a polícia, a Justiça, a lei e a prisão.\n\nA assertiva inverte as perguntas. Uma regra simples para a prova: \"por que delinque\" é causa, e causa é etiologia.",
+      "memorize": "Etiológico: por que delinque? Reação social: quem é definido como delinquente, e por quê?"
      }
     },
     {
@@ -838,7 +1027,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "Escola de Chicago",
        "zona de transição"
-      ]
+      ],
+      "aprofundamento": "A Escola de Chicago surgiu numa cidade que crescia muito depressa, com ondas de imigrantes e bairros que mudavam de perfil em poucos anos. Os pesquisadores aplicaram ao espaço urbano a ideia da ecologia: a cidade cresce em **zonas concêntricas** a partir do centro comercial.\n\nA **zona de transição**, logo ao redor do centro, recebia os recém-chegados, tinha moradias precárias, alta rotatividade e laços comunitários frágeis. Ali o controle informal falhava, e a criminalidade era maior. O dado decisivo foi que as taxas permaneciam altas mesmo quando os grupos que ali moravam mudavam: a causa estava no lugar, e não nas pessoas.\n\nEsse é o conceito de **desorganização social**. Dele decorrem propostas de prevenção voltadas ao ambiente e à comunidade, que inspiram até hoje políticas urbanas e a prevenção situacional.\n\nNa prova, Chicago é teoria do consenso e liga crime a espaço urbano e enfraquecimento do controle informal.",
+      "memorize": "Chicago: ecologia criminal, zonas concêntricas, zona de transição, desorganização social."
      }
     },
     {
@@ -852,7 +1043,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "associação diferencial",
        "aprendido"
-      ]
+      ],
+      "aprofundamento": "**Sutherland** rompe com as explicações biológicas e com a ideia de que o crime decorre da pobreza. Para ele, o crime se aprende como qualquer outro comportamento, pela interação com outras pessoas, sobretudo em **grupos íntimos**, como família, amigos e colegas de trabalho.\n\nO que se aprende não é só a técnica, mas também os **motivos**, as atitudes e as **racionalizações** que tornam a violação aceitável. A pessoa delinque quando acumula mais definições favoráveis do que contrárias à violação da lei. As associações variam em frequência, duração, prioridade e intensidade, e por isso cada trajetória é diferente.\n\nA teoria explica bem os **crimes de colarinho branco**: executivos aprendem, no ambiente corporativo, práticas ilícitas e justificativas para elas, sem qualquer carência econômica.\n\nNa prova, a palavra-chave é \"aprendido\". Teorias que falam em herança ou em invenção individual não são de Sutherland.",
+      "memorize": "Associação diferencial: o crime é aprendido em grupos íntimos, com técnicas, motivos e racionalizações."
      }
     },
     {
@@ -867,7 +1060,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "aprendido",
        "Sutherland"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que, para Sutherland, o comportamento criminoso é herdado ou inventado pelo próprio indivíduo.",
+       "certo": "Para Sutherland, o comportamento criminoso é aprendido na interação com outras pessoas, sobretudo em grupos íntimos; não é herdado nem inventado."
+      },
+      "aprofundamento": "O núcleo da teoria da associação diferencial é exatamente a **aprendizagem**. Sutherland escreve contra duas correntes. Contra a biológica, nega que o crime seja herdado: não há criminoso nato. Contra a ideia de criação espontânea, nega que cada pessoa invente sozinha o comportamento criminoso, sem contato com quem já o pratica.\n\nPara ele, o crime se transmite por **comunicação**, em processos de interação, como se aprende uma profissão ou um hábito. Aprende-se a técnica e também as justificativas. Quem nunca teve contato com definições favoráveis ao crime dificilmente o praticará.\n\nEssa visão tem consequências práticas: se o crime é aprendido, pode ser prevenido atuando sobre os contatos e os grupos de referência, e também se explica por que ele aparece em todas as classes sociais.\n\nA assertiva nega o centro da teoria. Na prova, Sutherland sempre combina com \"aprendido\".",
+      "memorize": "Sutherland: crime não é herdado nem inventado; é aprendido."
      }
     },
     {
@@ -882,7 +1081,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "anomia",
        "metas culturais"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que a estrutura social distribui de forma igualitária os meios institucionalizados entre todas as classes.",
+       "certo": "Para Merton, a anomia decorre da tensão entre metas culturais de sucesso e meios institucionalizados distribuídos de forma desigual; a pressão sobre quem não tem acesso a eles favorece o desvio."
+      },
+      "aprofundamento": "**Merton** observa uma sociedade que valoriza intensamente o sucesso, sobretudo o econômico, e propõe essa meta a todos. Os **meios institucionalizados** para alcançá-la, como educação de qualidade, emprego e capital, estão distribuídos de forma **desigual**: muitos recebem a meta e não recebem os meios.\n\nDessa tensão nasce a anomia, e as pessoas reagem de modos diferentes. Há a conformidade, que aceita metas e meios; a **inovação**, que aceita a meta e usa meios ilícitos, a forma mais ligada ao crime; o ritualismo, que abandona a meta e se apega aos meios; o retraimento, que rejeita os dois; e a rebelião, que propõe metas e meios novos.\n\nSe os meios fossem iguais para todos, não haveria a pressão estrutural que a teoria descreve. A desigualdade é o motor do modelo.\n\nA assertiva troca \"desigual\" por \"igualitária\" e, com isso, desmonta a teoria.",
+      "memorize": "Merton: metas iguais para todos, meios desiguais; a inovação é a reação mais ligada ao crime."
      }
     },
     {
@@ -896,7 +1101,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "subcultura delinquente",
        "frustração de status"
-      ]
+      ],
+      "aprofundamento": "**Albert Cohen** estudou gangues juvenis e percebeu que muitos de seus crimes não traziam ganho econômico. Para explicá-los, partiu da **frustração de status**: jovens das classes baixas são avaliados, na escola e no trabalho, por padrões da classe média que não conseguem alcançar.\n\nA resposta coletiva é criar uma **subcultura** com valores invertidos. O que a classe média valoriza, como respeito à propriedade e adiamento do prazer, é rejeitado; o que ela condena passa a dar prestígio no grupo. Daí as três marcas: **não utilitária**, porque o crime não visa lucro; **maliciosa**, porque há prazer em provocar; **negativista**, porque nega os valores dominantes.\n\nA teoria pertence ao consenso, pois pressupõe valores dominantes contra os quais a subcultura reage, e dialoga com Merton ao partir de uma tensão estrutural.\n\nNa prova, as três características vêm juntas e são a assinatura de Cohen.",
+      "memorize": "Cohen: subcultura delinquente nasce da frustração de status; é não utilitária, maliciosa e negativista."
      }
     },
     {
@@ -910,7 +1117,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "labelling approach",
        "rótulo"
-      ]
+      ],
+      "aprofundamento": "O **labelling approach**, ou teoria da rotulação, inverte a pergunta tradicional. Em vez de buscar o que há de errado no ato ou no autor, observa que um mesmo comportamento pode ser tratado como crime ou ignorado, conforme quem o pratica e quem reage. O desvio, portanto, depende da **reação social**.\n\nPara **Becker**, os grupos sociais criam o desvio ao fazer as regras e ao aplicá-las a pessoas específicas, rotulando-as. Desviante é quem recebeu o rótulo com sucesso.\n\nO rótulo tem efeitos. Lemert distingue o **desvio primário**, praticado por muitos e sem consequências maiores, do **desvio secundário**, que surge quando a pessoa, estigmatizada, assume a identidade que lhe foi atribuída. O sistema penal, nessa leitura, pode produzir mais crime do que evita.\n\nNa prova, a frase é correta quando nega que o desvio seja qualidade intrínseca do ato.",
+      "memorize": "Labelling (Becker): desvio não está no ato; é rótulo aplicado com sucesso pela reação social."
      }
     },
     {
@@ -925,7 +1134,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "Criminologia crítica",
        "construção social"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que a Criminologia crítica aceita a definição legal de crime como dado natural e se concentra nas causas individuais.",
+       "certo": "A Criminologia crítica questiona a definição legal: o crime é construção social ligada a relações de poder e de classe, e o foco está na seletividade do sistema penal, não em causas individuais."
+      },
+      "aprofundamento": "A **Criminologia crítica** nasce do diálogo entre o labelling e o marxismo. Do labelling, herda a ideia de que o crime é definição, e não dado natural. Do marxismo, acrescenta a pergunta sobre **quem** define: as relações de classe e de poder explicam por que certas condutas são criminalizadas e outras não.\n\nPor isso ela recusa as duas premissas da assertiva. Não aceita a definição legal como natural, porque a lei é produto de escolhas políticas. E não se concentra em causas individuais, porque isso desviaria a atenção da estrutura social e do funcionamento seletivo do sistema penal.\n\nSeus temas são a seletividade, a imunidade dos crimes dos poderosos, a função real da prisão na manutenção da desigualdade e a proposta de reduzir o uso do Direito Penal.\n\nNa prova, aceitar a lei como dado e buscar causas individuais é postura **etiológica**, oposta à crítica.",
+      "memorize": "Criminologia crítica: crime é construção social ligada ao poder e à classe; recusa a postura etiológica individual."
      }
     },
     {
@@ -939,7 +1154,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "direitos fundamentais",
        "dignidade"
-      ]
+      ],
+      "aprofundamento": "Prevenir o crime é um objetivo legítimo, mas não autoriza qualquer meio. No Estado Democrático de Direito, os **direitos fundamentais** funcionam como limite: a prevenção não pode suprimir garantias, tratar pessoas como meros instrumentos ou punir alguém pelo que é, e não pelo que fez.\n\nA lição tem raiz histórica. Programas que buscavam eficiência a qualquer custo, como a segregação de supostos perigosos ou a vigilância indiscriminada de grupos, mostraram que a prevenção sem limites se converte em opressão e recai sobre os mais vulneráveis.\n\nA **dignidade da pessoa humana** é o núcleo desse limite. Ela impede, por exemplo, penas cruéis, tortura como meio de investigação e medidas baseadas em estereótipos.\n\nNa prova, a frase é correta porque subordina a eficiência à dignidade. Desconfie das assertivas em que a eficácia preventiva justifica relativizar direitos.",
+      "memorize": "Prevenção democrática: eficiência não legitima meio contrário à dignidade nem aos direitos fundamentais."
      }
     },
     {
@@ -953,7 +1170,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "conceito clássico",
        "causas e oportunidades"
-      ]
+      ],
+      "aprofundamento": "O conceito **clássico** de prevenção é jurídico-penal: a lei ameaça com uma pena, e o potencial infrator, calculando custos e benefícios, desiste. É a **dissuasão**, ligada à prevenção geral negativa.\n\nA Criminologia moderna considera esse conceito insuficiente. A ameaça da pena alcança apenas parte das pessoas e funciona mal quando a resposta é incerta. Além disso, o crime tem causas sociais e depende de oportunidades concretas, que a lei não modifica.\n\nPor isso a prevenção moderna atua em duas frentes. Sobre as **causas**, com políticas sociais, educação, emprego e fortalecimento da comunidade. Sobre as **oportunidades**, com prevenção situacional: iluminação, vigilância, desenho urbano, barreiras físicas.\n\nA palavra \"também\" é importante: a ameaça da pena não é descartada, mas deixa de ser o único instrumento. Na prova, a assertiva que reduz a prevenção moderna à intimidação está errada.",
+      "memorize": "Prevenção clássica: dissuasão pela ameaça da pena. Moderna: também causas e oportunidades do crime."
      }
     },
     {
@@ -968,7 +1187,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "certeza",
        "severidade"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que a Criminologia moderna demonstrou ser o aumento da severidade das penas o meio mais eficaz de prevenção.",
+       "certo": "A Criminologia moderna indica que pesam mais a certeza e a rapidez da resposta do que a severidade da pena, lição que remonta a Beccaria."
+      },
+      "aprofundamento": "O efeito dissuasório depende da percepção do potencial infrator. Se ele acredita que dificilmente será descoberto, uma pena altíssima pesa pouco na decisão. Se percebe que a resposta é provável e rápida, mesmo uma pena moderada desestimula a conduta. Por isso as pesquisas apontam a **certeza** e a **rapidez** como fatores mais relevantes que a **severidade**.\n\nO aumento de penas tem ainda efeitos colaterais: superlotação carcerária, custos elevados e reforço da estigmatização, que pode favorecer a reincidência. Muitas vezes é adotado como resposta simbólica a crimes de grande repercussão, sem ganho preventivo comprovado.\n\nA ideia remonta a Beccaria e foi confirmada empiricamente pela Criminologia moderna.\n\nNa prova, a palavra \"demonstrou\" é a armadilha: a Criminologia demonstrou justamente o contrário. A frase correta diz que a eficácia está na certeza e na rapidez da resposta.",
+      "memorize": "Previne mais a certeza e a rapidez da resposta do que a severidade da pena."
      }
     },
     {
@@ -983,7 +1208,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "Beccaria",
        "certeza da punição"
-      ]
+      ],
+      "correcao": {
+       "erro": "Atribui a Beccaria a ideia de que a severidade da punição tem maior efeito preventivo do que a sua certeza.",
+       "certo": "Beccaria sustentou o contrário: a certeza da punição previne mais do que a sua severidade, e é melhor prevenir os crimes do que puni-los."
+      },
+      "aprofundamento": "**Beccaria**, em sua obra de 1764, escreveu contra o sistema penal do Antigo Regime, marcado por penas cruéis, arbitrárias e aplicadas de forma imprevisível. Seu argumento central é utilitário: a pena serve para evitar novos crimes, e para isso o que importa é que ela seja **certa** e pronta, e não terrível.\n\nPara ele, uma pena moderada e infalível impressiona mais do que o medo de uma pena atroz acompanhado da esperança de impunidade. A severidade excessiva, além de injusta, endurece os costumes e pode até estimular crimes mais graves, já que o infrator não teria nada a perder.\n\nBeccaria também afirmou que é melhor **prevenir** os crimes do que puni-los, antecipando a preocupação moderna com a prevenção.\n\nA assertiva inverte a lição. Na prova, Beccaria é sempre certeza acima de severidade.",
+      "memorize": "Beccaria: certeza > severidade; melhor prevenir do que punir."
      }
     },
     {
@@ -997,7 +1228,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "saúde pública",
        "primária, secundária e terciária"
-      ]
+      ],
+      "aprofundamento": "Na **saúde pública**, a prevenção se organiza em níveis conforme o momento da intervenção. A primária evita que a doença surja, com saneamento e vacinação. A secundária detecta e trata cedo os grupos de risco. A terciária trata quem já adoeceu, para evitar sequelas e recaídas.\n\nA Criminologia adaptou essa lógica ao crime. A **primária** atua nas causas, para toda a população, com políticas sociais. A **secundária** atua onde e quando o crime se manifesta, sobre grupos e lugares de risco. A **terciária** atua sobre quem já delinquiu, para evitar a reincidência.\n\nA analogia ajuda a memorizar: quanto mais cedo a intervenção, mais ampla e mais genuína ela é; quanto mais tarde, mais focada e mais limitada.\n\nNa prova, a frase é correta ao reconhecer a origem médica e sanitária da classificação.",
+      "memorize": "A tríade primária, secundária e terciária vem da saúde pública: antes, no início e depois do problema."
      }
     },
     {
@@ -1022,7 +1255,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "responsabilidade de todos",
        "comunidade"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que a segurança pública e a prevenção do crime são tarefa exclusiva das instâncias formais, sem responsabilidade da sociedade.",
+       "certo": "Pelo art. 144 da Constituição, a segurança pública é dever do Estado, direito e responsabilidade de todos; a prevenção envolve também a comunidade."
+      },
+      "aprofundamento": "O art. 144 da Constituição define a segurança pública com três expressões: **dever do Estado**, **direito** e **responsabilidade de todos**. A primeira impõe ao poder público a obrigação de agir; a segunda garante ao cidadão o direito de exigir proteção; a terceira chama a sociedade a participar.\n\nA Criminologia explica por que essa participação é indispensável. A maior parte da conformidade às normas é produzida pelo **controle social informal**: família, escola, vizinhança e trabalho. As instâncias formais entram quando esse controle falha, e sozinhas não conseguem prevenir o crime.\n\nNa prática, a responsabilidade coletiva aparece em conselhos comunitários de segurança, em programas de policiamento comunitário e em políticas de prevenção que envolvem a escola e a família.\n\nA assertiva apaga a terceira expressão do texto constitucional. Na prova, \"exclusiva\" do Estado é o sinal do erro.",
+      "memorize": "Art. 144 da CF: segurança pública é dever do Estado, direito e responsabilidade de todos."
      }
     },
     {
@@ -1036,7 +1275,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "prevenção primária",
        "população em geral"
-      ]
+      ],
+      "aprofundamento": "A **prevenção primária** é a que intervém antes de qualquer sinal de crime, nas condições sociais que favorecem o conflito. Por isso seus instrumentos não são penais nem policiais, mas políticas públicas gerais: educação, emprego, moradia, saúde, cultura e lazer.\n\nSua destinatária é a **população em geral**, e não um grupo selecionado. A lógica é que, melhorando a socialização e a qualidade de vida de todos, diminuem as causas que levam ao crime.\n\nPor atuar sobre causas profundas, seus resultados aparecem a **médio e longo prazo**. É considerada a forma mais genuína de prevenção, mas também a mais lenta e a mais cara, o que a torna pouco atraente para quem busca respostas imediatas.\n\nNa prova, as três palavras que identificam a primária são: causas, todos e longo prazo.",
+      "memorize": "Primária: causas do crime, toda a população, médio e longo prazo, políticas sociais."
      }
     },
     {
@@ -1051,7 +1292,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "médio e longo prazo",
        "grupos de risco"
-      ]
+      ],
+      "correcao": {
+       "erro": "Atribui à prevenção primária atuação a curto prazo e dirigida a grupos específicos de risco.",
+       "certo": "A prevenção primária é de médio e longo prazo e alcança toda a população; curto prazo e grupos de risco caracterizam a prevenção secundária."
+      },
+      "aprofundamento": "Cada nível de prevenção tem três marcas: o momento, o destinatário e o prazo dos resultados.\n\nA **primária** atua antes, nas causas sociais; dirige-se a **toda a população**; e produz efeitos a **médio e longo prazo**, porque mudar condições de vida leva tempo.\n\nA **secundária** atua mais tarde, onde e quando o crime se manifesta; dirige-se a **grupos e locais de risco**; e opera a **curto e médio prazo**, com policiamento, urbanismo e programas focalizados.\n\nA **terciária** atua depois do crime, sobre o condenado, para evitar a reincidência.\n\nA assertiva atribui à primária as marcas da secundária. Na prova, sempre que aparecer \"grupos de risco\" ou \"curto prazo\", pense em secundária; \"população em geral\" e \"longo prazo\" são da primária.",
+      "memorize": "Primária: todos, longo prazo. Secundária: grupos de risco, curto e médio prazo."
      }
     },
     {
@@ -1065,7 +1312,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "políticas sociais",
        "prevenção primária"
-      ]
+      ],
+      "aprofundamento": "Educação, emprego, saneamento e moradia não são políticas de segurança no sentido estrito, mas atuam nas condições que favorecem o crime. Uma criança com escola de qualidade e família apoiada tem mais vínculos com o controle informal; um bairro com saneamento e espaços públicos cuidados tem mais convivência e menos abandono.\n\nPor isso essas políticas são classificadas como **prevenção primária**: são gerais, dirigidas a todos, e não dependem de qualquer sinal de risco criminal. Elas se confundem com a efetivação dos direitos sociais.\n\nA diferença para a secundária está no foco. Um programa de emprego para toda a população é primário; um programa voltado a jovens de uma área com alta criminalidade tende a ser secundário, porque seleciona um grupo de risco.\n\nNa prova, política social geral é primária.",
+      "memorize": "Políticas sociais gerais (educação, emprego, saneamento, moradia) = prevenção primária."
      }
     },
     {
@@ -1080,7 +1329,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "mais genuína",
        "longo prazo"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que a prevenção primária produz resultados imediatos, a curto prazo, e com baixo custo.",
+       "certo": "A prevenção primária é a mais genuína, mas é lenta, de médio e longo prazo, e cara, porque exige prestações sociais; por isso é pouco atraente politicamente."
+      },
+      "aprofundamento": "A prevenção primária é chamada de **mais genuína** porque ataca as raízes do problema: se as condições que favorecem o crime melhoram, ele tende a diminuir sem que seja preciso punir ninguém.\n\nO preço dessa profundidade é o tempo e o custo. Mudar a educação, a moradia e o mercado de trabalho de uma população exige investimento contínuo e só produz resultados a **médio e longo prazo**. Por isso a primária costuma ser **pouco atraente politicamente**: o governante paga o custo e talvez não colha o resultado durante o próprio mandato.\n\nEssa é uma das razões pelas quais se recorre com frequência a respostas imediatas e visíveis, como aumento de penas e operações policiais, mesmo sendo menos eficazes no longo prazo.\n\nA assertiva acerta ao chamá-la de genuína, mas erra ao dizer que é rápida e barata. Na prova, primária é profunda, lenta e cara.",
+      "memorize": "Primária: a mais genuína, porém lenta e cara."
      }
     },
     {
@@ -1095,7 +1350,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "prevenção terciária",
        "presídios"
-      ]
+      ],
+      "correcao": {
+       "erro": "Classifica a construção de presídios como exemplo de prevenção primária.",
+       "certo": "Presídio relaciona-se à população condenada e é campo da prevenção terciária; a primária atua nas causas, com políticas sociais para toda a população."
+      },
+      "aprofundamento": "O critério para classificar uma medida é seu **destinatário**. O presídio serve a quem já foi condenado ou está preso, e sua finalidade preventiva, quando existe, é evitar que essa pessoa volte a delinquir. Esse é o campo da **prevenção terciária**.\n\nA primária, ao contrário, dirige-se a toda a população e atua antes do crime, com políticas sociais. Construir uma escola ou urbanizar um bairro é primário; construir um presídio não é, porque pressupõe que o crime já ocorreu e que há alguém a custodiar.\n\nA terciária é a mais tardia e limitada: atua sobre uma parcela pequena dos que delinquem e depende de condições de execução que favoreçam a reintegração, como trabalho, estudo e assistência.\n\nNa prova, tudo o que envolve preso, condenado, egresso ou reincidência é prevenção terciária.",
+      "memorize": "Presídio, condenado, egresso, reincidência = prevenção terciária."
      }
     },
     {
@@ -1119,7 +1380,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "direitos sociais",
        "prevenção primária"
-      ]
+      ],
+      "aprofundamento": "O art. 6º da Constituição lista os **direitos sociais**: educação, saúde, alimentação, trabalho, moradia, transporte, lazer, segurança, previdência, proteção à maternidade e à infância e assistência aos desamparados. São exatamente os instrumentos da prevenção primária.\n\nA ligação não é coincidência. A prevenção primária parte da ideia de que a privação desses direitos enfraquece a socialização e os vínculos comunitários, criando ambiente favorável ao crime. Ao efetivá-los, o Estado reduz essas causas para toda a população.\n\nDaí uma consequência importante: a prevenção primária não é tarefa só da polícia ou da Justiça criminal, mas de toda a administração pública, nas áreas de educação, saúde, habitação e assistência social.\n\nNa prova, a frase é correta porque associa a primária aos direitos sociais. Se a assertiva os ligar à secundária ou à terciária, desconfie.",
+      "memorize": "Prevenção primária = efetivação dos direitos sociais do art. 6º da CF."
      }
     },
     {
@@ -1133,7 +1396,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "prevenção secundária",
        "grupos de risco"
-      ]
+      ],
+      "aprofundamento": "A **prevenção secundária** não espera o crime acontecer, mas também não atua nas causas gerais. Ela se dirige ao lugar e ao momento em que o crime se manifesta, e aos **grupos e subgrupos** que apresentam maior risco de praticá-lo ou de sofrê-lo.\n\nSeus instrumentos são focalizados: policiamento em áreas críticas, ordenação urbana, controle de espaços, programas para jovens em situação de vulnerabilidade, medidas legislativas pontuais. Por atuarem sobre situações concretas, produzem efeitos a **curto e médio prazo**.\n\nA crítica mais comum é o risco de **deslocamento**: o crime pode migrar para outras áreas ou horários quando o foco se fixa num local. Há também o risco de estigmatizar os grupos selecionados.\n\nNa prova, as marcas da secundária são: momento e lugar do crime, grupos de risco e curto e médio prazo.",
+      "memorize": "Secundária: onde e quando o crime se manifesta, grupos de risco, curto e médio prazo."
      }
     },
     {
@@ -1147,7 +1412,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "policiamento ostensivo",
        "prevenção secundária"
-      ]
+      ],
+      "aprofundamento": "O reforço do policiamento ostensivo numa área com muitos roubos é uma resposta **focalizada**: escolhe um local onde o crime se concentra e aumenta a presença do Estado ali, para inibir novas ocorrências. Esse é o desenho típico da **prevenção secundária**.\n\nA medida não atua nas causas sociais do roubo, o que seria primário, nem se dirige a condenados, o que seria terciário. Seu efeito é aumentar a percepção de risco do potencial infrator, reforçando a certeza de resposta, e reduzir as oportunidades naquele espaço.\n\nO resultado costuma aparecer a curto prazo, mas tende a ser limitado ao período da intervenção e pode deslocar o crime para áreas próximas, o que exige combinar a ação policial com outras políticas.\n\nNa prova, ação policial dirigida a área de risco é o exemplo clássico de secundária.",
+      "memorize": "Policiamento ostensivo em área de alta incidência = prevenção secundária."
      }
     },
     {
@@ -1162,7 +1429,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "prevenção terciária",
        "reincidência"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que a prevenção secundária se dirige à população reclusa para evitar a reincidência.",
+       "certo": "População reclusa e prevenção da reincidência são o campo da prevenção terciária; a secundária atua sobre grupos e locais de risco, onde e quando o crime se manifesta."
+      },
+      "aprofundamento": "A distinção entre secundária e terciária está no **momento** e no **destinatário**.\n\nA **secundária** atua quando e onde o crime se manifesta, sobre grupos e locais de risco, antes que determinada pessoa seja condenada. Seu objetivo é evitar que o crime ocorra naquela situação concreta.\n\nA **terciária** atua depois do crime e da condenação, sobre a **população reclusa** ou já punida. Seu objetivo é evitar a **reincidência**, por meio de trabalho, estudo, assistência e acompanhamento do egresso, conforme a Lei de Execução Penal.\n\nA assertiva atribui à secundária o destinatário e a finalidade da terciária. Na prova, a combinação \"população reclusa\" e \"reincidência\" sempre indica terciária.",
+      "memorize": "Reclusos e reincidência = terciária, nunca secundária."
      }
     },
     {
@@ -1177,7 +1450,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "curto e médio prazo",
        "prevenção primária"
-      ]
+      ],
+      "correcao": {
+       "erro": "Atribui à prevenção secundária a atuação sobre as causas profundas do crime, a longo prazo.",
+       "certo": "Causas profundas e longo prazo caracterizam a prevenção primária; a secundária é seletiva e de curto e médio prazo, voltada a grupos e locais de risco."
+      },
+      "aprofundamento": "A secundária é **seletiva**: escolhe grupos, locais e situações concretas de risco e atua sobre eles, a **curto e médio prazo**. Não tem a pretensão de transformar as causas estruturais da criminalidade.\n\nAs **causas profundas** e o **longo prazo** são as marcas da **primária**, que atua sobre toda a população com políticas sociais de educação, emprego, moradia e saúde.\n\nUma forma de fixar: a primária pergunta por que o crime existe numa sociedade; a secundária pergunta onde e quando ele está acontecendo agora; a terciária pergunta como evitar que o condenado volte a delinquir.\n\nA assertiva troca a secundária pela primária. Na prova, \"causas profundas\" e \"longo prazo\" sempre apontam para a primária.",
+      "memorize": "Causas profundas e longo prazo = primária. Secundária é seletiva e de curto e médio prazo."
      }
     },
     {
@@ -1191,7 +1470,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "prevenção situacional",
        "prevenção secundária"
-      ]
+      ],
+      "aprofundamento": "A **prevenção situacional** parte de uma constatação simples: muitos crimes dependem da **oportunidade**. Se o alvo está desprotegido, o local é escuro e não há quem observe, a chance de o crime ocorrer aumenta. Reduzir essas oportunidades reduz o crime naquele espaço, sem depender de mudar a motivação do autor.\n\nIluminação pública, câmeras, vigilância, barreiras físicas e desenho urbano que favoreça a visibilidade são seus instrumentos típicos. Como se dirigem a **locais e situações de risco** concretos, costumam ser classificados como **prevenção secundária**.\n\nA expressão \"costumam ser\" é precisa: algumas medidas de desenho urbano gerais poderiam ser vistas como primárias, mas a classificação mais aceita é a secundária.\n\nA crítica recorrente é o risco de deslocamento do crime para áreas menos protegidas. Na prova, prevenção situacional em área de risco é secundária.",
+      "memorize": "Prevenção situacional (iluminação, vigilância em áreas de risco) é, em regra, secundária."
      }
     },
     {
@@ -1206,7 +1487,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "ordenação urbana",
        "prevenção secundária"
-      ]
+      ],
+      "correcao": {
+       "erro": "Classifica a ordenação urbana e o controle dos espaços de concentração criminal como instrumentos da prevenção terciária.",
+       "certo": "São instrumentos da prevenção secundária, que usa política policial, urbanística e legislativa focadas nos locais de risco; a terciária cuida do condenado."
+      },
+      "aprofundamento": "A **ordenação urbana** e o controle dos espaços de concentração criminal atuam sobre **lugares de risco**, para reduzir oportunidades e reforçar a presença do Estado e da comunidade ali. São, por isso, instrumentos da **prevenção secundária**, ao lado da política policial e de medidas legislativas focalizadas.\n\nA herança vem da Escola de Chicago, que mostrou a relação entre espaço urbano desorganizado e criminalidade, e das teorias da oportunidade, que inspiraram a prevenção situacional.\n\nA **terciária** tem outro destinatário: o **condenado**. Seus instrumentos são os da execução penal, como trabalho, estudo, assistência, progressão de regime e apoio ao egresso. Nada disso tem relação com o desenho da cidade.\n\nA assertiva troca a secundária pela terciária. Na prova, espaço urbano é secundário; preso e egresso são terciários.",
+      "memorize": "Ordenação urbana e controle de espaços de risco = secundária. Terciária = condenado."
      }
     },
     {
@@ -1220,7 +1507,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "prevenção terciária",
        "reincidência"
-      ]
+      ],
+      "aprofundamento": "A **prevenção terciária** é a última etapa: atua depois que o crime ocorreu e o autor foi condenado. Sua destinatária é a **população reclusa** ou já submetida à pena, e seu objetivo é impedir que essa pessoa volte a delinquir.\n\nOs instrumentos estão, em grande parte, na Lei de Execução Penal: assistência material, jurídica, educacional, social e religiosa; trabalho e estudo, inclusive com remição; progressão de regime; e acompanhamento do egresso. A ideia é preparar o retorno à convivência social.\n\nÉ a forma mais tardia e limitada de prevenção. Alcança apenas quem passou pelo filtro do sistema, que é uma parcela pequena dos que delinquem, e enfrenta o efeito estigmatizante da prisão, apontado pelo labelling como fator de reincidência.\n\nNa prova, as palavras \"recluso\", \"condenado\", \"egresso\" e \"reincidência\" identificam a terciária.",
+      "memorize": "Terciária: população reclusa ou condenada; objetivo é evitar a reincidência."
      }
     },
     {
@@ -1235,7 +1524,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "condenado",
        "população em geral"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que a prevenção terciária tem como destinatária a população em geral.",
+       "certo": "A população em geral é destinatária da prevenção primária; a terciária dirige-se ao condenado ou à população reclusa, para evitar a reincidência."
+      },
+      "aprofundamento": "O destinatário é o critério mais seguro para distinguir os três níveis.\n\nA **primária** se dirige a **toda a população**, com políticas sociais gerais que atuam nas causas do crime. A **secundária** se dirige a **grupos e locais de risco**, onde e quando o crime se manifesta. A **terciária** se dirige ao **condenado** ou à população reclusa, para evitar a reincidência.\n\nPor isso a terciária é a mais restrita: alcança apenas quem já foi selecionado pelo sistema penal. Atribuir a ela a população em geral é confundi-la com o nível oposto da escala.\n\nNa prova, monte a sequência mental: todos, grupos de risco, condenados. Quanto mais avançado o nível, menor e mais específico o público.",
+      "memorize": "Destinatários: primária, todos; secundária, grupos de risco; terciária, condenados."
      }
     },
     {
@@ -1259,7 +1554,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "harmônica integração social",
        "prevenção terciária"
-      ]
+      ],
+      "aprofundamento": "O art. 1º da Lei de Execução Penal declara dois objetivos. O primeiro é **efetivar a sentença**: cumprir a pena ou a medida de segurança tal como fixada. O segundo é proporcionar condições para a **harmônica integração social** do condenado e do internado.\n\nO segundo objetivo traduz a **prevenção terciária** e a função ressocializadora da pena. A execução não é apenas custódia: deve oferecer meios para que a pessoa volte à convivência social sem reincidir, como trabalho, estudo e assistência.\n\nO dispositivo menciona o **internado**, que é quem cumpre medida de segurança, mostrando que a finalidade de integração alcança também os inimputáveis e semi-imputáveis submetidos a tratamento.\n\nA Criminologia crítica aponta a distância entre esse objetivo legal e a realidade carcerária, mas, para a prova, o que importa é a letra: efetivar a sentença e promover a integração social.",
+      "memorize": "Art. 1º da LEP: efetivar a sentença e promover a harmônica integração social do condenado e do internado."
      }
     },
     {
@@ -1283,7 +1580,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "assistência ao preso",
        "prevenir o crime"
-      ]
+      ],
+      "aprofundamento": "O art. 10 da Lei de Execução Penal faz da **assistência** um **dever do Estado** e lhe atribui duas finalidades: prevenir o crime e orientar o retorno à convivência social. É a expressão legal mais direta da prevenção terciária.\n\nA lógica é que a prisão, por si só, não ressocializa. Sem apoio material, jurídico, educacional, social, religioso e de saúde, o preso tende a sair mais vulnerável do que entrou, com vínculos rompidos e sem perspectivas, o que favorece a reincidência.\n\nPor ser dever, a assistência não é favor nem benefício condicionado ao bom comportamento: o Estado tem a obrigação de prestá-la, e sua ausência compromete a finalidade da execução.\n\nNa prova, a frase é correta porque reproduz o texto legal. Fique atento às trocas: \"faculdade\" no lugar de \"dever\" ou a omissão da finalidade preventiva tornam a assertiva errada.",
+      "memorize": "Art. 10 da LEP: assistência ao preso e ao internado é dever do Estado, para prevenir o crime e orientar o retorno à sociedade."
      }
     },
     {
@@ -1308,7 +1607,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "egresso",
        "assistência"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que a assistência prevista na Lei de Execução Penal não se estende ao egresso.",
+       "certo": "Pelo parágrafo único do art. 10 da Lei de Execução Penal, a assistência ao preso e ao internado estende-se ao egresso."
+      },
+      "aprofundamento": "O momento mais delicado da execução é a saída. O **egresso** volta à sociedade muitas vezes sem emprego, sem moradia e com o estigma da prisão. Se o apoio terminasse no portão do presídio, boa parte do esforço de integração social se perderia exatamente quando é mais necessário.\n\nPor isso o parágrafo único do art. 10 da Lei de Execução Penal estende a assistência ao egresso. A medida reforça a prevenção terciária e responde à constatação criminológica de que o período logo após a libertação concentra alto risco de reincidência.\n\nO labelling ajuda a entender a importância: o rótulo de ex-presidiário fecha portas e pode empurrar a pessoa para o desvio secundário. O apoio ao egresso procura romper esse ciclo.\n\nA assertiva nega uma regra expressa. Na prova, a extensão ao egresso é texto literal da lei.",
+      "memorize": "Art. 10, parágrafo único, da LEP: a assistência estende-se ao egresso."
      }
     },
     {
@@ -1323,7 +1628,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "tardia",
        "insuficiente"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que a prevenção terciária é a de resultados mais amplos, por atuar na raiz do problema criminal.",
+       "certo": "A prevenção terciária é tardia, parcial e insuficiente, pois atua depois do crime sobre quem já foi condenado; atuar na raiz do problema é virtude da primária."
+      },
+      "aprofundamento": "A **terciária** é a forma mais limitada de prevenção por três razões. É **tardia**, porque só atua depois que o crime ocorreu e já há vítima e dano. É **parcial**, porque alcança apenas quem foi selecionado pelo sistema penal, uma fração pequena dos que delinquem. E costuma ser **insuficiente**, porque a prisão, com seus efeitos estigmatizantes, dificulta a própria reintegração que pretende promover.\n\nA virtude de atuar na raiz do problema pertence à **primária**, que se dirige às causas sociais e a toda a população, com resultados mais amplos, embora lentos.\n\nIsso não significa que a terciária seja dispensável: evitar a reincidência é objetivo relevante, e a Lei de Execução Penal oferece instrumentos para isso. Mas é a última linha de defesa, não a principal.\n\nA assertiva atribui à terciária a virtude da primária. Na prova, raiz do problema é sempre primária.",
+      "memorize": "Terciária: tardia, parcial e insuficiente. Raiz do problema é primária."
      }
     },
     {
@@ -1355,7 +1666,10 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "remição",
        "doze horas"
-      ]
+      ],
+      "aprofundamento": "A **remição** permite ao condenado abater parte da pena pelo trabalho ou pelo estudo. O art. 126 da Lei de Execução Penal a reserva a quem cumpre pena em regime fechado ou semiaberto e fixa a proporção: um dia de pena a cada **12 horas** de frequência escolar ou a cada **3 dias** de trabalho.\n\nO instituto é instrumento típico da **prevenção terciária**. Trabalho e estudo dão qualificação, rotina e perspectiva de inserção no mercado, reduzindo a chance de reincidência. O desconto da pena funciona como incentivo para que o preso participe dessas atividades.\n\nA remição também expressa a individualização da pena na fase de execução: o tempo efetivo de cumprimento passa a depender, em parte, do engajamento do condenado.\n\nNa prova, cuidado com a troca dos números: as horas se referem ao estudo e os dias ao trabalho. Inverter as proporções ou incluir regime não previsto no caput torna a assertiva errada.",
+      "exemplo": "Ana, em regime fechado, trabalha 3 dias na oficina do presídio. Pela regra do art. 126, ela remirá um dia de pena.",
+      "memorize": "Remição (art. 126 da LEP): 1 dia de pena a cada 12 horas de estudo ou a cada 3 dias de trabalho."
      }
     },
     {
@@ -1369,7 +1683,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "dissuasório",
        "ressocializador"
-      ]
+      ],
+      "aprofundamento": "Os modelos de reação ao crime respondem a uma pergunta: o que o sistema deve buscar quando um crime ocorre?\n\nO **dissuasório**, herdeiro dos clássicos, busca intimidar. A pena serve de exemplo para que outros não delinquam, e o protagonismo é do Estado frente ao infrator.\n\nO **ressocializador** busca recuperar o infrator. A pena deve oferecer meios para que ele não volte a delinquir, com trabalho, estudo e assistência. É o modelo que inspira a Lei de Execução Penal.\n\nO **integrador**, também chamado restaurativo ou consensual, busca reparar o dano e pacificar a relação entre infrator, vítima e comunidade. Dá voz à vítima e valoriza soluções negociadas.\n\nNa prova, identifique o modelo pela finalidade: intimidar, recuperar ou reparar. A Criminologia moderna avalia empiricamente a eficácia de cada um.",
+      "memorize": "Modelos de reação: dissuasório (intimidar), ressocializador (recuperar), integrador (reparar e pacificar)."
      }
     },
     {
@@ -1384,7 +1700,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "modelo dissuasório",
        "intimidação"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que, no modelo dissuasório, os protagonistas são a vítima e a comunidade, com o Estado à margem.",
+       "certo": "No modelo dissuasório, a resposta é a pena intimidatória, e os protagonistas são o Estado e o infrator; a vítima e a comunidade ficam à margem."
+      },
+      "aprofundamento": "O **modelo dissuasório** é o clássico: o crime é visto como uma ofensa ao Estado e à ordem jurídica, e a resposta é uma pena capaz de **intimidar** a sociedade, na lógica da prevenção geral. A relação se estabelece entre o **Estado**, que pune, e o **infrator**, que é punido.\n\nNesse desenho, a **vítima** fica à margem. Ela serve como fonte de prova, mas não participa da decisão nem tem seus interesses, como a reparação do dano, no centro do processo. A comunidade também não tem papel ativo.\n\nO protagonismo da vítima e da comunidade é a marca do **modelo integrador**, que busca a reparação, a conciliação e a pacificação social. Foi justamente a crítica ao esquecimento da vítima no modelo clássico que impulsionou as práticas restaurativas.\n\nA assertiva acerta a finalidade, mas inverte os protagonistas. Na prova, dissuasório é Estado contra infrator.",
+      "memorize": "Dissuasório: Estado × infrator, vítima à margem. Integrador: vítima e comunidade no centro."
      }
     },
     {
@@ -1399,7 +1721,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "ressocializador",
        "prevenção especial"
-      ]
+      ],
+      "correcao": {
+       "erro": "Atribui ao modelo ressocializador o foco na punição exemplar para intimidar a coletividade.",
+       "certo": "Intimidar a coletividade é próprio do modelo dissuasório; o ressocializador busca a intervenção positiva no condenado para reinseri-lo, na lógica da prevenção especial."
+      },
+      "aprofundamento": "Os dois modelos olham para destinatários diferentes. O **dissuasório** mira a **coletividade**: a pena exemplar deve assustar quem ainda não delinquiu. É a lógica da prevenção geral negativa.\n\nO **ressocializador** mira o **condenado**: a pena deve oferecer meios para que ele não volte a delinquir, com trabalho, estudo, assistência e acompanhamento. É a lógica da **prevenção especial positiva**, que vê o infrator como alguém a ser reintegrado, e não apenas punido.\n\nO modelo ressocializador ganhou força no século XX e inspira a Lei de Execução Penal. Foi criticado tanto por quem o considera ineficaz, diante dos índices de reincidência, quanto por quem vê nele risco de intervenção excessiva na personalidade do condenado.\n\nNa prova, \"punição exemplar\" e \"intimidar a coletividade\" são sempre dissuasórios; \"intervenção positiva\" e \"reinserção\" são ressocializadores.",
+      "memorize": "Dissuasório: intimida a coletividade. Ressocializador: intervém no condenado para reinseri-lo."
      }
     },
     {
@@ -1413,7 +1741,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "ressocializador",
        "prevenção especial positiva"
-      ]
+      ],
+      "aprofundamento": "A **prevenção especial** se dirige ao próprio infrator, para que ele não volte a delinquir. Ela tem duas faces. A **negativa** neutraliza: afasta o condenado do convívio para impedir novos crimes enquanto estiver preso. A **positiva** busca transformá-lo, oferecendo meios para que reconstrua a vida dentro da lei.\n\nO **modelo ressocializador** corresponde à face positiva. Seus instrumentos estão na Lei de Execução Penal: assistência, trabalho, estudo, remição, progressão de regime, apoio ao egresso. Tudo parte da ideia de que a execução deve promover a integração social.\n\nUma ressalva importante é o respeito à autonomia. A ressocialização não pode significar impor ao preso uma personalidade ou crenças; deve oferecer oportunidades, e não doutrinar.\n\nNa prova, a frase é correta ao ligar ressocializador a prevenção especial positiva. Fique atento à troca por \"prevenção geral\", que mira a sociedade.",
+      "memorize": "Ressocializador = prevenção especial positiva: intervenção no condenado para reinseri-lo, nos moldes da LEP."
      }
     },
     {
@@ -1427,7 +1757,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "modelo integrador",
        "reparação do dano"
-      ]
+      ],
+      "aprofundamento": "O **modelo integrador** parte de uma crítica ao sistema tradicional: o Estado se apropriou do conflito e deixou de lado quem o viveu. A vítima vira testemunha, o infrator vira réu, e ninguém conversa sobre o dano concreto.\n\nA proposta é **devolver o conflito às partes**. Vítima, infrator e comunidade participam da solução, com foco na **reparação** do dano, na responsabilização ativa do autor e na **pacificação**. A justiça restaurativa, com práticas como mediação e círculos, é sua expressão mais conhecida.\n\nO modelo não elimina o Estado nem é adequado a todos os casos. Funciona melhor em conflitos interpessoais e de menor gravidade e depende da adesão voluntária dos envolvidos.\n\nNa prova, as palavras que identificam o integrador são reparação, conciliação e participação da vítima e da comunidade.",
+      "memorize": "Integrador/restaurativo: devolve o conflito às partes, com reparação, conciliação e participação de vítima, infrator e comunidade."
      }
     },
     {
@@ -1451,7 +1783,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "reparação dos danos",
        "pena não privativa de liberdade"
-      ]
+      ],
+      "aprofundamento": "A Lei 9.099/1995 criou um modelo de justiça criminal voltado às infrações de menor potencial ofensivo e orientado pelo **consenso**. O art. 62 traduz essa escolha em dois objetivos: a **reparação dos danos** sofridos pela vítima e a aplicação de **pena não privativa de liberdade**.\n\nOs dois objetivos refletem o **modelo integrador**. A reparação dá à vítima um papel ativo e atende a seu interesse concreto, que o processo tradicional costumava ignorar. A pena não privativa evita os efeitos estigmatizantes da prisão para delitos de menor gravidade.\n\nOs instrumentos da lei seguem essa lógica: composição civil dos danos, transação penal e suspensão condicional do processo, todos baseados em acordo.\n\nO artigo também lista os critérios do procedimento: oralidade, simplicidade, informalidade, economia processual e celeridade. Na prova, a expressão \"sempre que possível\" indica que a reparação e a pena alternativa são orientações, e não resultados obrigatórios.",
+      "memorize": "Lei 9.099/1995, art. 62: buscar, sempre que possível, a reparação dos danos e a pena não privativa de liberdade."
      }
     },
     {
@@ -1476,7 +1810,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "composição dos danos civis",
        "renúncia"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que o acordo de composição civil homologado não afeta o direito de queixa ou de representação.",
+       "certo": "Na ação penal privada ou pública condicionada à representação, o acordo de composição civil homologado acarreta a renúncia ao direito de queixa ou de representação."
+      },
+      "aprofundamento": "A **composição civil dos danos** é o acordo entre autor do fato e vítima sobre a reparação do prejuízo, celebrado na audiência preliminar do Juizado e homologado pelo juiz. É uma das expressões mais claras do modelo integrador na Lei 9.099/1995.\n\nO parágrafo único do art. 74 dá a esse acordo um efeito penal forte nos crimes de **ação privada** e de **ação pública condicionada à representação**: a homologação **acarreta a renúncia** ao direito de queixa ou de representação. Com isso, extingue-se a punibilidade, e o processo penal não prossegue.\n\nA lógica é coerente: nesses crimes, a lei já deixa à vítima a decisão de levar o caso adiante. Se ela obteve a reparação e aceitou o acordo, o conflito está resolvido, e não há razão para a persecução.\n\nNa ação pública incondicionada, o acordo não tem esse efeito. Na prova, a assertiva que nega a renúncia está errada.",
+      "memorize": "Lei 9.099/1995, art. 74, parágrafo único: composição civil homologada = renúncia à queixa ou à representação."
      }
     },
     {
@@ -1490,7 +1830,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "ente jurídico",
        "Carrara"
-      ]
+      ],
+      "aprofundamento": "**Carrara** é o grande sistematizador da Escola Clássica, e sua definição de crime tem cada palavra pensada como garantia contra o arbítrio.\n\n\"Infração da **lei do Estado**\" afasta a punição de pecados ou de violações morais sem previsão legal. \"Promulgada para proteger a segurança dos cidadãos\" exige que a lei tenha finalidade de proteção. \"Ato externo\" impede punir pensamentos. \"Moralmente imputável\" exige liberdade e responsabilidade do autor. \"Politicamente danoso\" exige lesão social.\n\nPor isso se diz que, para os clássicos, o crime é **ente jurídico**: só existe como violação de uma norma, e não como fenômeno da natureza. A visão contrasta com a positivista, para a qual o crime é fato natural e social, a ser explicado por suas causas.\n\nNa prova, Carrara e ente jurídico andam juntos, assim como Garofalo e delito natural.",
+      "memorize": "Carrara (Escola Clássica): crime é ente jurídico, infração da lei do Estado, não fato natural."
      }
     },
     {
@@ -1504,7 +1846,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "livre-arbítrio",
        "responsabilidade moral"
-      ]
+      ],
+      "aprofundamento": "A Escola Clássica parte de uma premissa filosófica: o ser humano é **livre** e racional. Quem comete crime escolheu fazê-lo, podendo agir de outro modo. Daí a **responsabilidade moral**: responde quem tinha liberdade de escolha, e por isso inimputáveis ficam fora do alcance da pena.\n\nSe o crime é uma escolha livre, a pena é a **retribuição** justa por ela. E, para ser justa, precisa ser **proporcional** ao mal praticado e **determinada** previamente na lei. Essa ideia, nascida contra as penas cruéis e arbitrárias do Antigo Regime, deu origem a garantias que ainda hoje estruturam o Direito Penal, como a legalidade e a proporcionalidade.\n\nO método era o **lógico-abstrato**: os clássicos deduziam suas conclusões de premissas racionais, sem observar o criminoso real.\n\nNa prova, livre-arbítrio, responsabilidade moral e pena proporcional identificam a Escola Clássica.",
+      "memorize": "Clássicos: livre-arbítrio, responsabilidade moral, pena retributiva, proporcional e determinada; método lógico-abstrato."
      }
     },
     {
@@ -1519,7 +1863,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "periculosidade",
        "retribuição"
-      ]
+      ],
+      "correcao": {
+       "erro": "Atribui à Escola Clássica pena fundada na periculosidade e indeterminada até a cura do agente.",
+       "certo": "Para a Escola Clássica, a pena é retribuição pela culpa, determinada e proporcional ao crime; periculosidade e indeterminação são marcas positivistas."
+      },
+      "aprofundamento": "O fundamento da pena decorre da visão de homem de cada escola. Os **clássicos** veem alguém livre que escolheu o crime; logo, a pena se funda na **culpa** e funciona como **retribuição**. Para ser justa, deve ser **determinada** na lei e **proporcional** à gravidade do fato.\n\nOs **positivistas** veem alguém determinado por fatores que não controla; não faz sentido falar em culpa. A sanção passa a ser **defesa social** e se mede pela **periculosidade**. Se o perigo dura enquanto a pessoa não for curada, a medida deve ser **indeterminada**, até que ele cesse.\n\nEssa diferença sobrevive no Direito Penal atual: a pena se liga à culpabilidade e tem limites fixos; a medida de segurança se liga à periculosidade e tem traço de indeterminação, embora submetida a limites.\n\nA assertiva leva aos clássicos o vocabulário positivista. Na prova, periculosidade e indeterminação nunca são clássicas.",
+      "memorize": "Clássicos: culpa, pena determinada e proporcional. Positivistas: periculosidade, sanção indeterminada."
      }
     },
     {
@@ -1533,7 +1883,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "determinismo",
        "defesa social"
-      ]
+      ],
+      "aprofundamento": "O positivismo aplica ao crime o método das ciências naturais. Se tudo na natureza tem causa, o crime também tem, e ela pode ser encontrada observando o criminoso e seu meio. O crime deixa de ser ente jurídico e passa a ser **fato natural e social**.\n\nDisso decorre o **determinismo**: o criminoso age movido por fatores biológicos, psicológicos e sociais. Sem livre-arbítrio, não há responsabilidade moral; surge a **responsabilidade social**, segundo a qual o indivíduo responde porque vive em sociedade e esta tem o direito de se defender.\n\nA sanção, então, é **defesa social**, e sua medida é a **periculosidade**, não a gravidade do fato. Isso abriu caminho para a medida de segurança e para a individualização do tratamento, mas também para excessos, como a punição de pessoas por suas características.\n\nNa prova, o conjunto determinismo, responsabilidade social, defesa social e periculosidade é a assinatura do positivismo.",
+      "memorize": "Positivismo: crime como fato natural e social, determinismo, responsabilidade social, sanção como defesa social pela periculosidade."
      }
     },
     {
@@ -1548,7 +1900,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "Lombroso",
        "Ferri"
-      ]
+      ],
+      "correcao": {
+       "erro": "Troca os autores das fases: atribui a fase antropológica a Ferri e a sociológica a Lombroso.",
+       "certo": "A fase antropológica é de Lombroso, a sociológica é de Ferri e a jurídica é de Garofalo."
+      },
+      "aprofundamento": "A Escola Positiva italiana é contada em três fases, cada uma com um autor e um enfoque.\n\nA **antropológica** é de **Lombroso**, médico, que procurou no corpo do criminoso os sinais de sua tendência ao crime e formulou a ideia do criminoso nato.\n\nA **sociológica** é de **Ferri**, que ampliou as causas para fatores físicos, antropológicos e sociais, negou o livre-arbítrio e defendeu a responsabilidade social. Também propôs substitutivos penais, medidas sociais para prevenir o crime.\n\nA **jurídica** é de **Garofalo**, que levou as ideias positivistas ao Direito Penal, formulou o conceito de delito natural e popularizou o termo Criminologia.\n\nA assertiva troca Lombroso e Ferri. Para fixar: Lombroso era médico e olhava o corpo; Ferri era sociólogo e olhava a sociedade; Garofalo era jurista e olhava o Direito.",
+      "memorize": "Trindade positivista: Lombroso (antropológica), Ferri (sociológica), Garofalo (jurídica)."
      }
     },
     {
@@ -1563,7 +1921,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "delito natural",
        "piedade e probidade"
-      ]
+      ],
+      "correcao": {
+       "erro": "Atribui a Carrara o conceito de delito natural como violação dos sentimentos de piedade e probidade.",
+       "certo": "O delito natural é conceito de Garofalo, positivista; Carrara, clássico, via o crime como ente jurídico."
+      },
+      "aprofundamento": "O **delito natural** é conceito de **Garofalo**, o jurista da Escola Positiva. Ele queria encontrar crimes que existissem em qualquer sociedade, independentemente da lei, e os definiu como violação dos sentimentos altruísticos de **piedade** e **probidade**, na medida média da comunidade. Homicídio e furto seriam exemplos.\n\nA ideia é tipicamente positivista: o crime é fato natural, com essência própria, anterior à definição legal.\n\n**Carrara** pensava o oposto. Para ele, clássico, o crime é **ente jurídico**: só existe como infração da lei do Estado. Não há crime fora da lei, e por isso não faria sentido falar em delito natural.\n\nA assertiva troca o autor. Na prova, piedade e probidade são sempre Garofalo; ente jurídico é sempre Carrara.",
+      "memorize": "Delito natural (piedade e probidade) = Garofalo. Ente jurídico = Carrara."
      }
     },
     {
@@ -1578,7 +1942,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "responsabilidade social",
        "Ferri"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que, para Ferri, a responsabilidade penal se funda no livre-arbítrio do agente.",
+       "certo": "Ferri negou o livre-arbítrio e defendeu a responsabilidade social ou legal: o indivíduo responde porque vive em sociedade."
+      },
+      "aprofundamento": "**Ferri** é o grande nome da fase sociológica do positivismo, e sua obra se constrói justamente contra o livre-arbítrio. Para ele, o crime resulta de fatores físicos, antropológicos e sociais, e a ideia de escolha livre é uma ilusão filosófica sem base científica.\n\nSem livre-arbítrio, cai a responsabilidade moral dos clássicos. Ferri a substitui pela **responsabilidade social**, também chamada legal: o indivíduo responde não porque escolheu o mal, mas porque vive em sociedade e esta tem o direito de se defender de quem a ameaça. Por isso a sanção se mede pela periculosidade.\n\nFerri também defendeu os **substitutivos penais**, medidas sociais e econômicas capazes de prevenir o crime melhor que a pena.\n\nA assertiva atribui a Ferri a premissa clássica. Na prova, livre-arbítrio é sempre clássico; todo positivista o nega.",
+      "memorize": "Ferri nega o livre-arbítrio: responsabilidade social (legal)."
      }
     },
     {
@@ -1592,7 +1962,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "Técnico-Jurídica",
        "Arturo Rocco"
-      ]
+      ],
+      "aprofundamento": "No começo do século XX, o Direito Penal italiano vivia uma mistura de filosofia clássica e ciências naturais positivistas. **Arturo Rocco**, em 1905, propôs uma separação: o jurista deve estudar o **direito positivo vigente**, com método técnico-jurídico, e deixar as investigações antropológicas, sociológicas e filosóficas para outras ciências.\n\nO resultado foi a consolidação da **dogmática penal** como ciência autônoma. O crime passa a ser estudado como fato jurídico, e a Criminologia segue seu caminho como ciência empírica separada.\n\nA escola manteve elementos das duas tradições anteriores: a pena conserva sentido retributivo, ligada à culpabilidade, e a **medida de segurança** alcança os perigosos. É a raiz do sistema que combina pena e medida de segurança.\n\nNa prova, Técnico-Jurídica lembra Rocco e a separação entre dogmática e Criminologia.",
+      "memorize": "Escola Técnico-Jurídica (Arturo Rocco, 1905): Direito Penal estuda o direito positivo com método técnico-jurídico, separado da Criminologia."
      }
     },
     {
@@ -1606,7 +1978,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "Criminologia crítica",
        "status atribuído"
-      ]
+      ],
+      "aprofundamento": "Dizer que o crime não é **realidade ontológica** significa que ele não tem essência própria, como uma pedra ou uma doença. É um **status** atribuído a certas condutas e pessoas por processos de definição: o legislador escolhe o que criminalizar, e as instâncias de controle escolhem quem perseguir.\n\nA **Criminologia crítica** acrescenta que essas escolhas não são neutras. Elas tendem a recair sobre os grupos mais vulneráveis e a preservar os interesses dos dominantes, de modo que o sistema penal **reproduz a desigualdade** social. A prisão, nessa leitura, contribui para manter cada um em seu lugar na estrutura.\n\nDaí suas propostas: reduzir ao mínimo o uso do Direito Penal, descriminalizar condutas de menor relevância e, nas correntes mais radicais, abolir o sistema penal.\n\nNa prova, a frase é correta porque reúne construção social, seletividade e reprodução da desigualdade.",
+      "memorize": "Crítica: crime é status atribuído por criminalização seletiva; pena reproduz a desigualdade; propõe Direito Penal mínimo."
      }
     },
     {
@@ -1621,7 +1995,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "selecionado",
        "Criminologia crítica"
-      ]
+      ],
+      "correcao": {
+       "erro": "Atribui à Criminologia crítica a visão do criminoso como ser anormal, biologicamente predisposto ao delito.",
+       "certo": "Essa é a visão positivista biológica; para a Criminologia crítica, o criminoso é o selecionado pelo sistema penal, em regra entre os vulneráveis."
+      },
+      "aprofundamento": "A ideia do criminoso como ser **anormal** e biologicamente predisposto é a marca do **positivismo antropológico** de Lombroso. Ela parte do paradigma etiológico: procura no corpo do autor a causa do crime.\n\nA **Criminologia crítica** rejeita essa premissa. Para ela, o criminoso não é diferente das demais pessoas por natureza; é aquele que foi **selecionado** pelo sistema penal. Como muitos praticam crimes e poucos são perseguidos, o que distingue o criminalizado é a posição social, e não a biologia. Em regra, a seleção recai sobre os vulneráveis.\n\nA crítica vai além: a busca de anomalias no criminoso serviu historicamente para legitimar a repressão sobre grupos marginalizados, apresentando como científica uma escolha política.\n\nNa prova, sempre que a assertiva atribuir à crítica uma causa individual ou biológica, está errada.",
+      "memorize": "Anormal e predisposto = positivismo biológico. Para a crítica, criminoso é o selecionado."
      }
     },
     {
@@ -1635,7 +2015,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "Mendelsohn",
        "von Hentig"
-      ]
+      ],
+      "aprofundamento": "A Vitimologia surge no **pós-guerra**, quando o mundo se depara com vítimas em massa e percebe que a ciência criminal ignorava quem sofria o crime. Dois nomes marcam esse momento.\n\n**Mendelsohn** é apontado como **pai da Vitimologia**: propôs o termo e defendeu o estudo da vítima como disciplina, classificando-a segundo seu grau de participação no fato.\n\n**Von Hentig**, com sua obra de 1948, deslocou a atenção para a interação entre autor e vítima. Mostrou que a vítima não é sempre um elemento passivo: às vezes contribui para o crime, às vezes tem características que a tornam mais vulnerável.\n\nOs dois inauguram a **redescoberta da vítima**. Antes, o positivismo concentrava-se no delinquente. Na prova, guarde: Mendelsohn é o pai; von Hentig é o da dupla penal.",
+      "memorize": "Vitimologia: Mendelsohn é o pai; von Hentig (1948) estudou a interação autor-vítima."
      }
     },
     {
@@ -1649,7 +2031,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "classificação de Mendelsohn",
        "unicamente culpada"
-      ]
+      ],
+      "aprofundamento": "**Mendelsohn** organizou as vítimas numa escala de **culpabilidade**, conforme sua contribuição para o crime. Num extremo está a vítima **completamente inocente**, ou ideal, que nada fez para provocar o fato. No outro, a **unicamente culpada**, que é na verdade a autora da agressão.\n\nEntre os extremos há três graus intermediários: a vítima menos culpada que o infrator, que contribui de forma leve, por imprudência ou ignorância; a tão culpada quanto ele, que participa em igual medida; e a mais culpada, que provoca o crime.\n\nA classificação tem reflexo jurídico. O comportamento da vítima é circunstância judicial na dosimetria e pode, nos casos extremos, afastar a responsabilidade do autor, como na legítima defesa contra agressor injusto.\n\nNa prova, grave a ordem: inocente, menos culpada, tão culpada, mais culpada, unicamente culpada.",
+      "memorize": "Mendelsohn: inocente, menos culpada, tão culpada, mais culpada e unicamente culpada."
      }
     },
     {
@@ -1664,7 +2048,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "unicamente culpada",
        "legítima defesa"
-      ]
+      ],
+      "correcao": {
+       "erro": "Classifica como vítima completamente inocente quem pratica agressão injusta e é ferido por quem age em legítima defesa.",
+       "certo": "Quem agride injustamente e é repelido em legítima defesa é vítima unicamente culpada, categoria que também abrange a vítima simuladora e a imaginária."
+      },
+      "aprofundamento": "Na escala de Mendelsohn, a categoria depende do grau de contribuição da vítima para o fato. A **completamente inocente** nada fez para provocar o crime. A **unicamente culpada** é o oposto: foi ela quem deu causa ao resultado, e o outro apenas reagiu.\n\nQuem pratica **agressão injusta** e é ferido por quem se defende legitimamente se encaixa nessa categoria extrema. Ele é vítima apenas no sentido físico, porque sofreu a lesão; no sentido jurídico e moral, é o agressor. Coerentemente, o Direito Penal não pune quem agiu em legítima defesa.\n\nA mesma categoria inclui a vítima **simuladora**, que finge ter sofrido crime, e a **imaginária**, que acredita ter sido vítima de fato inexistente.\n\nA assertiva coloca o agressor no polo oposto da escala. Na prova, legítima defesa contra agressor injusto indica vítima unicamente culpada.",
+      "memorize": "Agressor repelido em legítima defesa = vítima unicamente culpada (Mendelsohn)."
      }
     },
     {
@@ -1678,7 +2068,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "dupla penal",
        "propensão"
-      ]
+      ],
+      "aprofundamento": "Antes de **von Hentig**, o crime era visto como ação unilateral do autor sobre uma vítima passiva. Ele propôs ver o fato como **interação**: autor e vítima formam uma **dupla penal**, e o comportamento de um influencia o do outro.\n\nEssa perspectiva revelou que algumas vítimas têm maior **propensão** à vitimização, por características pessoais ou sociais: idade, isolamento, condição psíquica, dependência, situação econômica. Não se trata de culpa, mas de **vulnerabilidade**, que o agressor muitas vezes explora.\n\nO conceito tem utilidade prática. Ajuda a orientar a prevenção, protegendo grupos vulneráveis, e a compreender a dinâmica de crimes como golpes contra idosos ou violência doméstica.\n\nCabe cautela: estudar a contribuição da vítima não significa culpá-la. Na prova, dupla penal é von Hentig, e propensão não equivale a responsabilidade.",
+      "memorize": "Von Hentig: dupla penal (interação autor-vítima) e vítimas propensas, isto é, vulneráveis."
      }
     },
     {
@@ -1692,7 +2084,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "vitimização primária",
        "danos"
-      ]
+      ],
+      "aprofundamento": "A Vitimologia distingue níveis de vitimização segundo a **fonte do dano**. A **primária** é a mais evidente: decorre diretamente do crime. Inclui lesões físicas, traumas psicológicos, perdas patrimoniais e todos os prejuízos que o fato provoca.\n\nOs outros níveis são consequências posteriores. A **secundária** vem das instâncias formais de controle, quando a vítima é maltratada, desacreditada ou exposta durante a investigação e o processo. A **terciária**, na posição mais cobrada, vem do meio social, quando família, amigos e comunidade isolam ou estigmatizam a vítima.\n\nA distinção é útil porque os danos secundário e terciário são evitáveis por políticas públicas e por boas práticas, enquanto o primário só se previne evitando o próprio crime.\n\nNa prova, pergunte sempre: de onde vem o dano? Se vem do crime, é primária.",
+      "memorize": "Vitimização primária: dano que decorre diretamente do crime (físico, psíquico, material)."
      }
     },
     {
@@ -1707,7 +2101,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "vitimização secundária",
        "instâncias formais"
-      ]
+      ],
+      "correcao": {
+       "erro": "Atribui a vitimização secundária ao meio social da vítima, como família, amigos e vizinhos.",
+       "certo": "A vitimização secundária é causada pelas instâncias formais, como polícia, Ministério Público e Judiciário, no curso da investigação e do processo; o isolamento pelo meio social é, na posição mais cobrada, a terciária."
+      },
+      "aprofundamento": "A **vitimização secundária**, também chamada sobrevitimização, é o sofrimento adicional causado pelas **instâncias formais** de controle. Acontece quando a vítima é tratada com descaso na delegacia, obrigada a repetir o relato várias vezes, questionada de modo desrespeitoso, colocada frente a frente com o agressor sem necessidade ou exposta publicamente.\n\nÉ especialmente grave porque o dano vem justamente de quem deveria protegê-la. Por isso a legislação recente passou a combatê-la, com regras de escuta especializada e até com a tipificação da revitimização como crime.\n\nO isolamento e a estigmatização pelo **meio social**, como família, amigos e vizinhos, correspondem, na posição mais cobrada, à **vitimização terciária**.\n\nA assertiva troca as fontes. Na prova, sistema de Justiça é secundária; meio social é terciária.",
+      "memorize": "Secundária: instâncias formais (polícia, MP, Judiciário). Terciária: meio social."
      }
     },
     {
@@ -1722,7 +2122,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "vitimização terciária",
        "meio social"
-      ]
+      ],
+      "correcao": {
+       "erro": "Atribui à vitimização terciária o dano material que decorre do próprio crime.",
+       "certo": "O dano que decorre do próprio crime é vitimização primária; a terciária, na posição mais cobrada, vem do meio social e da falta de amparo, que isolam ou estigmatizam a vítima."
+      },
+      "aprofundamento": "O dano material sofrido pela vítima decorre do **próprio crime** e, por isso, é **vitimização primária**. Os demais níveis tratam de danos que vêm depois e de outras fontes.\n\nNa posição mais cobrada, a **terciária** vem do **meio social** e da falta de amparo: a vítima é isolada, desacreditada ou estigmatizada pela família, pelos amigos e pela comunidade, e não encontra apoio para superar o trauma. Pense na vítima de violência sexual que passa a ser julgada pelo bairro.\n\nO próprio item registra uma **divergência**: há autores que usam a expressão para os efeitos do sistema penal sobre o **condenado**, que também sofre com a estigmatização. Para a prova, a leitura predominante é a do meio social, mas convém conhecer a outra.\n\nA assertiva atribui à terciária o que é primário. Na prova, dano direto do crime é sempre primária.",
+      "memorize": "Primária: crime. Secundária: sistema formal. Terciária: meio social (com divergência sobre o condenado)."
      }
     },
     {
@@ -1746,7 +2152,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "violência institucional",
        "revitimização"
-      ]
+      ],
+      "aprofundamento": "A Lei 13.431/2017 organiza o sistema de garantia de direitos da criança e do adolescente vítima ou testemunha de violência. Entre as formas de violência que define, o art. 4º, IV, inclui a **violência institucional**: a praticada por instituição pública ou conveniada, inclusive quando gerar **revitimização**.\n\nO dispositivo transforma em categoria legal o que a Vitimologia chama de **vitimização secundária**. O dano provocado pelo próprio sistema, ao ouvir a criança repetidas vezes ou de forma inadequada, deixa de ser mero efeito colateral e passa a ser violência reconhecida.\n\nPara evitá-la, a lei prevê a **escuta especializada** e o **depoimento especial**, procedimentos que reduzem o número de oitivas e protegem a vítima do contato com o agressor.\n\nNa prova, a frase é correta porque reproduz a definição legal, que abrange também instituições conveniadas, e não só as públicas.",
+      "memorize": "Lei 13.431/2017, art. 4º, IV: violência institucional, inclusive quando gera revitimização, é a vitimização secundária posta em lei."
      }
     },
     {
@@ -1770,7 +2178,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "ofendido",
        "comunicado"
-      ]
+      ],
+      "aprofundamento": "No processo penal tradicional, a vítima era tratada como fonte de prova: depunha e era esquecida. O art. 201, § 2º, do Código de Processo Penal muda essa lógica ao garantir que o ofendido seja **comunicado** dos principais atos do processo.\n\nA lista do dispositivo tem razão de ser. Saber do ingresso e da saída do acusado da prisão permite à vítima proteger-se. Saber da audiência permite participar. Saber da sentença e dos acórdãos permite acompanhar o desfecho e, se for o caso, buscar a reparação.\n\nA regra é reflexo da Vitimologia e do **protagonismo** que a vítima ganhou no processo, e ajuda a reduzir a vitimização secundária, que nasce também do descaso e da falta de informação.\n\nNa prova, a frase é correta ao reproduzir os atos da lista. Atenção às trocas: o dispositivo fala em comunicação, e não em autorização da vítima para esses atos.",
+      "memorize": "CPP, art. 201, § 2º: o ofendido é comunicado da prisão e da soltura do acusado, das audiências e da sentença e dos acórdãos."
      }
     },
     {
@@ -1794,7 +2204,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "revitimização",
        "violência institucional"
-      ]
+      ],
+      "aprofundamento": "O art. 15-A da Lei 13.869/2019, incluído pela Lei 14.321/2022, criou o crime de **violência institucional**. Pune o agente público que submete a vítima de infração penal ou a testemunha de crimes violentos a procedimentos **desnecessários, repetitivos ou invasivos** que a levem a reviver, sem estrita necessidade, a situação de violência.\n\nÉ o ponto mais alto da resposta legal à **vitimização secundária**. O que antes era tratado como falha de atendimento passa a ser conduta criminosa, com o objetivo de mudar práticas institucionais.\n\nA expressão \"sem estrita necessidade\" é essencial. O tipo não impede a oitiva da vítima nem perícias necessárias; pune o excesso, a repetição sem motivo e a exposição que poderia ser evitada.\n\nNa prova, o tipo protege a vítima de qualquer infração penal, mas a testemunha apenas de crimes violentos. Trocar esses alcances torna a assertiva errada.",
+      "memorize": "Art. 15-A da Lei 13.869/2019 (incluído pela Lei 14.321/2022): revitimização desnecessária virou crime de violência institucional."
      }
     },
     {
@@ -1808,7 +2220,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "criminoso nato",
        "atavismo"
-      ]
+      ],
+      "aprofundamento": "**Lombroso**, médico, examinou presos e cadáveres em busca de sinais físicos que distinguissem o criminoso. Em sua obra de 1876, sustentou que existe o **criminoso nato**, alguém que já nasce com tendência ao crime.\n\nA explicação era o **atavismo**: o criminoso seria uma regressão a estágios primitivos da evolução humana, um selvagem nascido em meio civilizado. Essa condição se revelaria por **estigmas** físicos, como assimetrias do crânio, mandíbula proeminente e orelhas de abano, e psíquicos, como insensibilidade à dor e ausência de remorso.\n\nA teoria foi refutada: estudos comparativos mostraram que os supostos estigmas aparecem também em não criminosos. Mas Lombroso tem importância histórica, porque inaugurou o estudo empírico do criminoso e, com isso, a Criminologia científica.\n\nNa prova, criminoso nato, atavismo e estigmas são sempre Lombroso.",
+      "memorize": "Lombroso: criminoso nato, explicado pelo atavismo e revelado por estigmas físicos e psíquicos."
      }
     },
     {
@@ -1823,7 +2237,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "categorias",
        "Lombroso"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que Lombroso jamais admitiu outras categorias de criminosos além do nato.",
+       "certo": "Nas edições posteriores de sua obra, Lombroso admitiu outras categorias, como o louco, o epiléptico, o ocasional e o passional, reduzindo o peso do criminoso nato."
+      },
+      "aprofundamento": "A obra de Lombroso não ficou parada na primeira edição. Diante das críticas e de novos dados, inclusive as contribuições de Ferri, ele ampliou sua classificação ao longo das edições posteriores.\n\nAlém do **nato**, passou a reconhecer o criminoso **louco**, ligado a doença mental; o **epiléptico**, que associava a formas de impulsividade; o **ocasional**, que delinque por circunstâncias favoráveis, sem tendência inata; e o **passional**, levado por emoção intensa.\n\nCom isso, o peso do criminoso nato diminuiu, e a explicação passou a incluir fatores sociais e circunstanciais. A evolução mostra que mesmo o fundador do positivismo antropológico percebeu os limites de uma explicação puramente biológica.\n\nA assertiva ignora essa evolução. Na prova, desconfie de \"jamais\" e \"apenas\" ligados a Lombroso.",
+      "memorize": "Lombroso evoluiu: além do nato, louco, epiléptico, ocasional e passional."
      }
     },
     {
@@ -1837,7 +2257,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "Kretschmer",
        "biotipologia"
-      ]
+      ],
+      "aprofundamento": "A **biotipologia** buscou relacionar a forma do corpo com o temperamento e, por extensão, com o comportamento. **Kretschmer**, psiquiatra alemão, propôs três tipos constitucionais.\n\nO **leptossômico** é magro e alongado, associado a temperamento introvertido; o **atlético**, musculoso, associado a explosividade e violência; o **pícnico**, baixo e arredondado, associado a temperamento sociável e oscilante. Cada tipo teria inclinação para certos delitos: os atléticos para crimes violentos, os leptossômicos para furtos e fraudes, os pícnicos para fraudes e crimes ocasionais.\n\nA teoria pertence às explicações **biológicas** do crime e herda a lógica positivista de procurar no corpo a causa do comportamento. Foi abandonada como explicação causal, por falta de comprovação e pelo risco de estereótipos.\n\nNa prova, os três nomes são a marca de Kretschmer.",
+      "memorize": "Kretschmer: biotipos leptossômico, atlético e pícnico ligados a temperamentos e tendências delitivas."
      }
     },
     {
@@ -1852,7 +2274,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "XYY",
        "predisposição"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que estudos comprovaram ser a síndrome XYY causa determinante da criminalidade violenta.",
+       "certo": "A hipótese do XYY, levantada nos anos 1960, não se confirmou como causa do crime; a genética trabalha com predisposição em interação com o meio."
+      },
+      "aprofundamento": "Nos anos 1960, pesquisas em presídios encontraram proporção um pouco maior de homens com um cromossomo Y extra. Surgiu a hipótese do \"supermacho\", geneticamente inclinado à violência.\n\nA hipótese **não se confirmou**. Estudos posteriores mostraram que a maioria das pessoas com essa condição não comete crimes e que a diferença observada se explicava melhor por outros fatores, como dificuldades de aprendizagem e maior chance de detecção. Não há relação causal comprovada com a violência.\n\nO episódio ilustra uma lição da Criminologia moderna: a genética trabalha com **predisposições**, que interagem com o ambiente, e não com causas determinantes. É o modelo **biopsicossocial**.\n\nA assertiva transforma hipótese em certeza. Na prova, \"comprovaram\" e \"causa determinante\" ligados à genética indicam erro.",
+      "memorize": "XYY: hipótese não confirmada; genética indica predisposição, não causa determinante."
      }
     },
     {
@@ -1866,7 +2294,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "sentimento de culpa",
        "psicanalítica"
-      ]
+      ],
+      "aprofundamento": "A explicação comum diz que a culpa vem depois do crime. **Freud** observou casos em que a ordem é inversa: a pessoa já carrega um **sentimento de culpa** inconsciente, de origem psíquica profunda, e comete o delito para ser punida.\n\nA punição funciona como alívio. Ao receber a pena por um fato concreto, o sujeito dá uma forma à culpa difusa que o atormentava. O crime, assim, não é motivado pelo ganho, mas pela necessidade de castigo.\n\nA ideia pertence às **teorias psicodinâmicas**, que procuram as causas do crime em conflitos inconscientes. Junto com outras abordagens psicológicas, integra os modelos de enfoque individual.\n\nNa prova, a palavra-chave é a ordem: a culpa **antecede** o crime. A assertiva que coloca a culpa como consequência não descreve a tese freudiana.",
+      "memorize": "Freud: no criminoso por sentimento de culpa, a culpa antecede o crime, que busca a punição para aliviá-la."
      }
     },
     {
@@ -1880,7 +2310,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "psicopatia",
        "capacidade de entendimento"
-      ]
+      ],
+      "aprofundamento": "A **psicopatia** é um padrão de personalidade marcado por ausência de empatia e de remorso, manipulação, superficialidade afetiva e impulsividade. Não se confunde com doença mental que destrua a compreensão da realidade.\n\nO ponto jurídico decisivo é que o psicopata, em regra, **entende o caráter ilícito** do que faz. Ele sabe que a conduta é proibida; o que lhe falta é a ressonância afetiva que inibe a maioria das pessoas. Por isso a perícia tende a concluir pela **imputabilidade** e, no máximo, pela semi-imputabilidade, quando se reconhece redução da capacidade de autodeterminação.\n\nA psicopatia é estudada como fator de risco para crimes violentos e reincidência, mas não como causa necessária: muitos indivíduos com esses traços não delinquem.\n\nNa prova, a armadilha é tratar a psicopatia como causa automática de inimputabilidade. A expressão \"em regra\" é a chave da frase correta.",
+      "memorize": "Psicopatia não suprime, em regra, a capacidade de entender o ilícito: tende à imputabilidade, no máximo à semi-imputabilidade."
      }
     },
     {
@@ -1895,7 +2327,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "biopsicossocial",
        "fatores biológicos"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que as teorias criminológicas contemporâneas abandonaram por completo o estudo dos fatores biológicos, considerados irrelevantes.",
+       "certo": "Neurociência, genética e bioquímica continuam estudadas, mas dentro de um modelo biopsicossocial, sem determinismo."
+      },
+      "aprofundamento": "As explicações biológicas do positivismo foram criticadas pelo determinismo e pelo uso discriminatório. Mas a crítica não levou ao abandono do corpo como objeto de estudo; levou à mudança da forma de estudá-lo.\n\nHoje a **neurociência** investiga o funcionamento cerebral ligado a impulsividade e agressividade; a **genética** estuda predisposições; a **bioquímica** examina hormônios e neurotransmissores. A diferença é que esses fatores são vistos como **predisposições**, que interagem com fatores psicológicos e sociais, e nunca como destino.\n\nÉ o modelo **biopsicossocial**: o crime resulta da combinação de vários fatores, e nenhum deles, isoladamente, explica a conduta. Essa visão também é coerente com a interdisciplinaridade da Criminologia.\n\nA assertiva confunde relativizar com abandonar. Na prova, \"por completo\" e \"irrelevantes\" indicam erro.",
+      "memorize": "Fatores biológicos não foram abandonados, só relativizados: modelo biopsicossocial, sem determinismo."
      }
     },
     {
@@ -1909,7 +2347,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "aprendizagem social",
        "Bandura"
-      ]
+      ],
+      "aprofundamento": "**Bandura** mostrou que o comportamento agressivo pode ser aprendido sem que a pessoa o pratique primeiro: basta **observar** alguém agindo assim e **imitar**. É a **modelagem**. Em seus experimentos, crianças que viam adultos agredindo um boneco tendiam a reproduzir os mesmos gestos.\n\nO segundo elemento é o **reforço**. Se o comportamento observado é recompensado, a imitação é mais provável; se é punido, tende a diminuir. A pessoa aprende não só a conduta, mas também suas consequências esperadas.\n\nA teoria dialoga com a associação diferencial de Sutherland, porque ambas veem o crime como aprendido, mas a de Bandura enfatiza os mecanismos psicológicos da aprendizagem. Ela ajuda a explicar a transmissão da violência em famílias e a influência de modelos no ambiente social.\n\nNa prova, observação, imitação e reforço são as palavras-chave de Bandura.",
+      "memorize": "Bandura (aprendizagem social): agressividade aprendida por observação e imitação de modelos, reforçada pelas consequências."
      }
     },
     {
@@ -1923,7 +2363,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "fenômeno normal",
        "Durkheim"
-      ]
+      ],
+      "aprofundamento": "**Durkheim** rompe com a ideia de que o crime é uma doença social. Como ele aparece em todas as sociedades conhecidas, é um fenômeno **normal**: uma sociedade sem crime exigiria uma uniformidade absoluta de consciências, impossível de alcançar.\n\nO crime pode ser até **funcional**. Ao provocar a reação coletiva, reafirma os valores do grupo e fortalece a **consciência coletiva**. Além disso, o desvio de hoje pode antecipar a moral de amanhã, permitindo a evolução social, como mostram condutas antes punidas e depois aceitas.\n\nO crime só se torna **patológico** quando ultrapassa certos níveis e passa a ameaçar a coesão social.\n\nA tese influenciou a anomia e as teorias do consenso. Na prova, Durkheim é normalidade e funcionalidade do crime; patologia é só o excesso.",
+      "memorize": "Durkheim: crime é normal e funcional; patológico é só o excesso."
      }
     },
     {
@@ -1938,7 +2380,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "normal",
        "Durkheim"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que, para Durkheim, o crime é fenômeno patológico a ser erradicado da sociedade saudável.",
+       "certo": "Para Durkheim, o crime é normal, presente em todas as sociedades, e pode ser funcional; patológico é apenas o seu excesso."
+      },
+      "aprofundamento": "A tese central de **Durkheim** é a oposta da assertiva. Para ele, o crime é **normal** porque está presente em todas as sociedades e é inevitável: mesmo numa sociedade de santos, haveria faltas consideradas graves por aquele grupo.\n\nO crime também cumpre funções: reforça a consciência coletiva quando a sociedade reage a ele e abre espaço para mudanças morais. Uma sociedade que eliminasse todo desvio seria rígida a ponto de não evoluir.\n\nO que Durkheim considera **patológico** não é o crime em si, mas o seu **excesso**, quando os níveis de criminalidade se tornam anormalmente altos e ameaçam a coesão social.\n\nA ideia de erradicar o crime é estranha ao seu pensamento. Na prova, sempre que a assertiva disser que, para Durkheim, o crime é patológico em si, ela está errada.",
+      "memorize": "Durkheim: sociedade sem crime é impossível; o crime é normal."
      }
     },
     {
@@ -1952,7 +2400,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "anomia",
        "ausência de normas"
-      ]
+      ],
+      "aprofundamento": "**Anomia** significa, literalmente, ausência de normas. Em **Durkheim**, descreve o estado em que as regras que orientam e limitam os desejos das pessoas se enfraquecem ou deixam de existir.\n\nIsso ocorre sobretudo em períodos de **mudanças sociais bruscas**, como crises econômicas, industrialização acelerada ou mesmo prosperidade repentina. As normas antigas perdem força antes que novas se consolidem, e os indivíduos ficam sem referência sobre o que é possível e legítimo desejar. Durkheim usou o conceito para explicar o aumento de suicídios em momentos de crise.\n\nO conceito foi depois reformulado por **Merton**, que o deslocou da falta de normas para a tensão entre metas culturais e meios institucionalizados.\n\nNa prova, distinga: anomia em Durkheim é desregramento em tempos de crise; em Merton, é tensão estrutural entre metas e meios.",
+      "memorize": "Anomia em Durkheim: enfraquecimento ou ausência de normas, típico de mudanças sociais bruscas."
      }
     },
     {
@@ -1966,7 +2416,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "metas culturais",
        "meios institucionalizados"
-      ]
+      ],
+      "aprofundamento": "**Merton** reformula a anomia de Durkheim. O problema não é a falta de normas, mas uma **contradição** dentro da própria estrutura social. A cultura propõe a todos a mesma **meta**, o sucesso, sobretudo econômico, e valoriza intensamente quem a alcança. A estrutura social, porém, distribui os **meios institucionalizados**, como educação, emprego e capital, de forma **desigual**.\n\nQuem recebe a meta sem os meios fica sob pressão. Alguns se conformam, outros abandonam a meta, outros buscam caminhos ilícitos para alcançá-la. A criminalidade, especialmente a patrimonial, aparece como resposta a essa tensão.\n\nA teoria explica por que a criminalidade registrada se concentra nas camadas com menor acesso aos meios, embora também receba críticas por não explicar bem os crimes de colarinho branco.\n\nNa prova, a anomia de Merton depende de duas palavras: metas e meios. A desigualdade no acesso aos meios é o motor da teoria.",
+      "memorize": "Anomia em Merton: disjunção entre metas culturais de sucesso e meios institucionalizados de acesso desigual."
      }
     },
     {
@@ -1980,7 +2432,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "modos de adaptação",
        "inovação"
-      ]
+      ],
+      "aprofundamento": "Os modos de adaptação descrevem como cada pessoa reage à tensão entre metas e meios. A chave é cruzar duas perguntas: aceita a meta? aceita os meios?\n\nNa **conformidade**, aceita os dois: busca o sucesso pelos caminhos legítimos. É a resposta mais comum. Na **inovação**, aceita a meta, mas rejeita os meios: quer o sucesso e usa vias ilícitas, sendo o modo mais ligado ao crime patrimonial. No **ritualismo**, abandona a meta, mas segue os meios por rotina, como o burocrata que cumpre regras sem expectativa de ascensão.\n\nNo **retraimento**, rejeita os dois e se afasta da sociedade, como em certos casos de dependência química e vida de rua. Na **rebelião**, rejeita os dois e propõe metas e meios novos, como nos movimentos revolucionários.\n\nNa prova, monte a tabela mental de aceitação e rejeição; as trocas entre inovação e ritualismo são as mais cobradas.",
+      "memorize": "Merton: conformidade, inovação (meta sim, meios não), ritualismo (meios sim, meta não), retraimento e rebelião."
      }
     },
     {
@@ -1995,7 +2449,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "inovação",
        "ritualismo"
-      ]
+      ],
+      "correcao": {
+       "erro": "Chama de ritualismo o modo em que o indivíduo aceita as metas culturais, mas rejeita os meios, recorrendo ao crime.",
+       "certo": "Aceitar as metas e rejeitar os meios é a inovação; no ritualismo, o indivíduo abandona as metas e segue os meios institucionalizados por rotina."
+      },
+      "aprofundamento": "A combinação descrita na assertiva, aceitar as metas e rejeitar os meios recorrendo ao crime, é a **inovação**. É o modo que Merton liga mais diretamente à criminalidade, sobretudo patrimonial: a pessoa quer o sucesso econômico que a sociedade valoriza e, sem acesso aos meios legítimos, busca atalhos ilícitos.\n\nO **ritualismo** é quase o espelho dessa situação. A pessoa **abandona as metas**, deixando de aspirar ao sucesso, mas continua seguindo os **meios** institucionalizados por hábito e conformismo, como quem cumpre a rotina de trabalho sem expectativa de melhorar de vida. Não é um modo tipicamente criminoso.\n\nA troca entre os dois é a armadilha mais frequente nas questões sobre Merton.\n\nPara fixar: inovar é inventar um caminho novo, ilícito, para a mesma meta; ritualizar é repetir o caminho sem ter mais aonde chegar.",
+      "memorize": "Inovação: meta sim, meios não (crime). Ritualismo: meta não, meios sim (rotina)."
      }
     },
     {
@@ -2009,7 +2469,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "zona de transição",
        "desorganização social"
-      ]
+      ],
+      "aprofundamento": "O dado mais forte da Escola de Chicago veio das pesquisas de **Shaw e McKay**. Eles acompanharam por muitos anos a criminalidade juvenil nos bairros da cidade e perceberam que as taxas mais altas se mantinham na **zona de transição**, mesmo quando os grupos que a ocupavam se sucediam: chegavam imigrantes de uma origem, depois de outra, e o crime continuava alto ali e caía quando esses grupos se mudavam para zonas mais estáveis.\n\nA conclusão foi decisiva: a causa não estava nas características étnicas ou biológicas dos moradores, mas nas **condições do lugar**. Alta rotatividade, pobreza, moradias precárias e laços comunitários frágeis enfraqueciam o controle informal. É a **desorganização social**.\n\nO achado derruba explicações racistas do crime e orienta a prevenção para a comunidade e o ambiente.\n\nNa prova, a expressão \"independentemente do grupo\" é o coração da frase correta.",
+      "memorize": "Shaw e McKay: o crime acompanha a área (zona de transição), não o grupo que a ocupa; prova da desorganização social."
      }
     },
     {
@@ -2024,7 +2486,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "desorganização social",
        "controle informal"
-      ]
+      ],
+      "correcao": {
+       "erro": "Define a desorganização social como fortalecimento das instituições comunitárias de controle informal.",
+       "certo": "A desorganização social é o enfraquecimento das instituições comunitárias de controle informal, como família, vizinhança e associações, em áreas marcadas por mobilidade e heterogeneidade, o que favorece o crime."
+      },
+      "aprofundamento": "A **desorganização social** é o conceito central da Escola de Chicago. Descreve áreas urbanas em que a **mobilidade** constante dos moradores, a **heterogeneidade** cultural e a pobreza impedem a formação de laços duradouros. As pessoas chegam e partem, não se conhecem, não compartilham valores nem confiam umas nas outras.\n\nNessas condições, as instituições comunitárias que exercem o **controle informal**, como família, vizinhança, igreja e associações, ficam **enfraquecidas**. Ninguém vigia, ninguém repreende, ninguém transmite regras com autoridade. O espaço fica aberto ao desvio e à transmissão de valores criminosos entre os jovens.\n\nA assertiva descreve o cenário certo, mobilidade e heterogeneidade, mas troca o efeito. Se houvesse fortalecimento das instituições, não haveria desorganização. Na prova, desorganização social sempre significa controle informal debilitado.",
+      "memorize": "Desorganização social = controle informal enfraquecido por mobilidade, heterogeneidade e pobreza."
      }
     },
     {
@@ -2039,7 +2507,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "não utilitária",
        "Albert Cohen"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que a subcultura delinquente de Cohen é utilitária, voltada ao lucro, e reproduz os valores da classe média.",
+       "certo": "Para Cohen, a subcultura delinquente é não utilitária, maliciosa e negativista, e inverte os valores da classe média."
+      },
+      "aprofundamento": "**Cohen** chamou a atenção para um dado que as explicações econômicas não alcançavam: boa parte dos delitos das gangues juvenis não trazia lucro. Furtavam objetos que não usavam, destruíam por prazer, provocavam sem motivo aparente.\n\nPara explicá-los, mostrou que a subcultura nasce da **frustração de status** de jovens das classes baixas, julgados por padrões da classe média que não conseguem atingir. A reação coletiva é **inverter** esses valores: o que a classe média respeita, o grupo despreza; o que ela condena, o grupo valoriza.\n\nDaí as três marcas: **não utilitária**, porque o objetivo não é o ganho; **maliciosa**, porque há prazer em incomodar; **negativista**, porque nega os valores dominantes.\n\nA assertiva troca as duas características centrais. Na prova, subcultura de Cohen nunca é utilitária e nunca reproduz os valores da classe média.",
+      "memorize": "Cohen: subcultura não utilitária, maliciosa e negativista; inverte os valores da classe média."
      }
     },
     {
@@ -2053,7 +2527,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "interacionismo simbólico",
        "labelling approach"
-      ]
+      ],
+      "aprofundamento": "O **interacionismo simbólico**, desenvolvido a partir de Mead e Blumer, parte da ideia de que as pessoas agem segundo os **significados** que atribuem às coisas, e esses significados nascem da **interação** com os outros. A identidade de cada um também se forma assim: vemo-nos, em grande parte, como os outros nos veem.\n\nAplicada ao crime, essa ideia leva ao **labelling approach**. Se a identidade se constrói na interação, ser tratado como criminoso, pela polícia, pela Justiça e pela comunidade, pode levar a pessoa a se ver como criminosa e agir conforme o rótulo. O desvio deixa de ser uma qualidade do ato e passa a ser produto de uma definição social.\n\nO interacionismo é, portanto, a base teórica que permitiu ao labelling deslocar o foco das causas para a reação social.\n\nNa prova, a ligação entre interacionismo simbólico e labelling é cobrada como relação de fundamento.",
+      "memorize": "Interacionismo simbólico (Mead, Blumer): identidade e desvio se constroem na interação; é a base do labelling."
      }
     },
     {
@@ -2067,7 +2543,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "labelling approach",
        "etiquetamento"
-      ]
+      ],
+      "aprofundamento": "As várias denominações dizem a mesma coisa de ângulos diferentes. **Etiquetamento** e **rotulação** destacam o ato de aplicar a alguém a marca de desviante. **Reação social** destaca quem produz o desvio: a sociedade e suas instâncias de controle, ao reagir a uma conduta.\n\nO contexto de surgimento ajuda a entender a teoria. Nos Estados Unidos dos anos 1960, movimentos por direitos civis e contestação questionavam as instituições. A Criminologia passou a perguntar por que certas pessoas eram perseguidas e outras não, e a estudar polícia, Justiça e prisão como produtoras de criminalidade.\n\nOs autores se complementam: Becker define o desvio como rótulo aplicado; Lemert distingue desvio primário e secundário; Goffman estuda o estigma e as instituições totais; Kitsuse analisa os processos de definição.\n\nNa prova, o labelling é teoria do conflito e marca a passagem para o paradigma da reação social.",
+      "memorize": "Labelling = etiquetamento = rotulação = reação social; EUA, anos 1960; Becker, Lemert, Goffman, Kitsuse."
      }
     },
     {
@@ -2081,7 +2559,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "Becker",
        "outsiders"
-      ]
+      ],
+      "aprofundamento": "**Becker** identifica dois momentos na criação do desvio. No primeiro, os grupos fazem as **regras**: sem a regra, não haveria o que violar. No segundo, aplicam essas regras a **pessoas determinadas**, rotulando-as como **outsiders**, isto é, como estranhos ao grupo.\n\nA consequência é que o desvio não é uma qualidade do ato, mas o resultado da interação entre quem age e quem reage. Uma mesma conduta pode ser ignorada quando praticada por alguém influente e punida quando praticada por alguém marginalizado. Desviante é aquele a quem o rótulo foi aplicado **com sucesso**.\n\nBecker também chamou atenção para os **empreendedores morais**, pessoas e grupos que se mobilizam para criar novas regras e impor sua visão de moralidade.\n\nNa prova, Becker é o autor de Outsiders, de 1963, e da definição do desvio como rótulo.",
+      "memorize": "Becker (Outsiders, 1963): grupos criam o desvio ao fazer regras e aplicá-las, rotulando pessoas como outsiders."
      }
     },
     {
@@ -2095,7 +2575,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "desvio primário",
        "desvio secundário"
-      ]
+      ],
+      "aprofundamento": "**Lemert** explica como o rótulo pode produzir o criminoso. O **desvio primário** é o ato inicial, que muita gente pratica por motivos variados. Ele não altera a forma como a pessoa se vê: ela continua se considerando alguém normal, que cometeu um deslize.\n\nO problema surge com a **reação social**. Se a pessoa é detida, processada, exposta e estigmatizada, passa a ser tratada como desviante. Com o tempo, as portas se fecham, os vínculos se rompem, e ela pode **assumir o papel** que lhe foi atribuído. Os atos seguintes já são expressão dessa nova identidade. Esse é o **desvio secundário**.\n\nA lição político-criminal é importante: uma reação desproporcional a um desvio primário pode criar uma carreira criminosa que não existiria. Daí as propostas de diversão e de evitar a prisão em casos leves.\n\nNa prova, a ordem é fixa: primário, reação social, secundário.",
+      "memorize": "Lemert: desvio primário (ato inicial) → reação social → desvio secundário (identidade desviante assumida)."
      }
     },
     {
@@ -2110,7 +2592,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "desvio primário",
        "reação social"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que o desvio secundário é o primeiro ato desviante, anterior a qualquer reação social.",
+       "certo": "O primeiro ato é o desvio primário; o desvio secundário é posterior e decorre da reação social, com a assunção do papel de desviante."
+      },
+      "aprofundamento": "Na teoria de Lemert, a sequência é o ponto central. O primeiro ato desviante é o **desvio primário**: praticado antes de qualquer resposta da sociedade e sem repercussão na identidade do agente.\n\nO **desvio secundário** só aparece **depois**, como consequência da **reação social**. Quando a pessoa é rotulada e estigmatizada, passa a reorganizar sua identidade em torno do papel de desviante, e os novos atos decorrem dessa condição.\n\nA inversão da assertiva destrói a lógica da teoria. Se o secundário viesse antes da reação, ela não teria papel causal, e o labelling perderia sua tese principal: a de que o controle social pode produzir o desvio.\n\nNa prova, lembre que o nome é cronológico: primário vem primeiro; secundário vem depois, e por causa da reação.",
+      "memorize": "Primário vem primeiro; secundário vem depois da reação social."
      }
     },
     {
@@ -2125,7 +2613,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "instituições totais",
        "Goffman"
-      ]
+      ],
+      "correcao": {
+       "erro": "Atribui a Becker o estudo das instituições totais e da mortificação do eu.",
+       "certo": "As instituições totais e a mortificação do eu foram estudadas por Goffman, também autor da obra sobre estigma; Becker é o autor de Outsiders."
+      },
+      "aprofundamento": "As **instituições totais** são conceito de **Goffman**. São lugares onde as pessoas vivem isoladas da sociedade, sob uma autoridade única, com rotina padronizada e todas as necessidades administradas: prisões, manicômios, quartéis, conventos.\n\nAo entrar, o internado passa pela **mortificação do eu**: perde nome, roupas, objetos pessoais, privacidade e autonomia. Sua identidade anterior é desmontada e substituída pelo papel institucional. A Criminologia usa o conceito para explicar por que a prisão tende a dificultar a reintegração social.\n\nGoffman também escreveu sobre o **estigma**, a marca social que desqualifica a pessoa, tema central para o labelling.\n\n**Becker** é o autor de Outsiders e da definição do desvio como rótulo aplicado. A assertiva troca os autores. Na prova, instituições totais e estigma são Goffman; outsiders é Becker.",
+      "memorize": "Goffman: instituições totais, mortificação do eu e estigma. Becker: Outsiders."
      }
     },
     {
@@ -2139,7 +2633,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "processos de criminalização",
        "labelling approach"
-      ]
+      ],
+      "aprofundamento": "Antes do labelling, a Criminologia trabalhava no **paradigma etiológico**: tomava o crime como um dado e procurava suas causas no indivíduo ou no meio.\n\nO labelling percebeu que esse ponto de partida era frágil. As estatísticas oficiais, base das pesquisas causais, não mostram o crime real, mas o crime que as instâncias de controle selecionaram. Estudar o criminoso registrado era estudar o resultado de uma seleção, sem saber como ela funcionava.\n\nPor isso a investigação se desloca para os **processos de criminalização**: como o legislador escolhe o que proibir, como a polícia decide quem abordar, como o juiz avalia o réu, como a prisão marca o condenado. As instâncias de controle passam a ser objeto de estudo, e não apenas instrumentos.\n\nNa prova, essa mudança é a passagem do paradigma etiológico para o da reação social.",
+      "memorize": "Labelling: das causas do crime para os processos de criminalização e a reação das instâncias de controle."
      }
     },
     {
@@ -2153,7 +2649,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "descriminalização",
        "diversão"
-      ]
+      ],
+      "aprofundamento": "Se o rótulo e a reação social podem produzir desvio secundário, a política criminal coerente com o labelling é a que **reduz o contato** com o sistema penal e seus efeitos estigmatizantes.\n\nA **descriminalização** retira do Direito Penal condutas que não precisam dele. A **diversão** desvia casos do processo tradicional para soluções alternativas, como acordos e programas comunitários. A **desinstitucionalização** evita a internação em prisões e manicômios sempre que possível. O **devido processo legal** garante que, quando a intervenção ocorrer, respeite direitos e limites.\n\nO número de \"Ds\" varia entre autores, mas o núcleo é esse. Muitas dessas ideias aparecem no Direito brasileiro, como nos institutos consensuais dos Juizados e nas penas alternativas.\n\nNa prova, a frase é correta ao associar ao labelling propostas de redução da intervenção penal, e não de endurecimento.",
+      "memorize": "Política dos Ds do labelling: descriminalização, diversão, desinstitucionalização e devido processo legal."
      }
     },
     {
@@ -2168,7 +2666,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "teoria do conflito",
        "labelling"
-      ]
+      ],
+      "correcao": {
+       "erro": "Classifica o labelling approach como teoria do consenso, que aceitaria a definição oficial do crime como neutra.",
+       "certo": "O labelling approach é teoria do conflito e questiona a neutralidade das definições oficiais, apontando sua aplicação seletiva."
+      },
+      "aprofundamento": "As teorias do consenso aceitam que existe um acordo social sobre valores e tomam a definição legal de crime como um dado: o crime é a violação daquilo que a maioria considera importante.\n\nO **labelling** recusa essa premissa. Para ele, as definições oficiais não são neutras: são feitas por grupos com poder de criar regras e aplicadas de forma **seletiva**, conforme quem pratica a conduta. O crime é uma construção social, e estudar quem define e quem é definido é a tarefa central da Criminologia.\n\nPor isso o labelling integra as **teorias do conflito**, ao lado da Criminologia crítica, que aprofundou suas conclusões ligando a seletividade à estrutura de classes.\n\nA assertiva troca a família teórica e ainda atribui ao labelling justamente a postura que ele critica. Na prova, labelling e neutralidade das definições oficiais são ideias opostas.",
+      "memorize": "Labelling é conflito: questiona a neutralidade da definição oficial do crime."
      }
     },
     {
@@ -2182,7 +2686,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "América Latina",
        "Zaffaroni"
-      ]
+      ],
+      "aprofundamento": "As teorias criminológicas clássicas foram produzidas nos países centrais, para realidades de Estado social consolidado. A **Criminologia crítica latino-americana** percebeu que aplicá-las diretamente à região escondia diferenças decisivas: desigualdade extrema, herança colonial, autoritarismo político e um sistema penal marcado pela violência.\n\nAutores como **Lola Aniyar de Castro**, **Rosa del Olmo** e **Zaffaroni** passaram a analisar o sistema penal a partir dessa **realidade periférica**. Estudaram a violência estrutural, a seletividade sobre populações pobres e não brancas, as execuções e a distância entre o discurso legal e a prática das agências.\n\nO resultado é uma criminologia própria, que dialoga com a crítica europeia, mas formula conceitos para a região, como o realismo marginal.\n\nNa prova, essa corrente aparece associada à periferia, à violência estrutural e à deslegitimação do sistema penal.",
+      "memorize": "Crítica latino-americana (Aniyar de Castro, del Olmo, Zaffaroni): sistema penal visto a partir da realidade periférica."
      }
     },
     {
@@ -2196,7 +2702,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "agências",
        "comunicação social"
-      ]
+      ],
+      "aprofundamento": "A visão tradicional do sistema penal inclui apenas polícia, Justiça e prisão. **Zaffaroni** amplia o conceito para mostrar que a criminalização é obra de muitos atores.\n\nAs **agências políticas** criam as leis penais e definem prioridades. As **agências de comunicação social** constroem a imagem do crime e do criminoso, escolhem quais fatos merecem destaque e alimentam o medo e a demanda por punição. As **agências de reprodução ideológica**, como universidades e escolas, formam os operadores e difundem os discursos que legitimam o sistema.\n\nEssa ampliação é importante para entender a **seletividade**. O estereótipo do criminoso não nasce na delegacia: é produzido também pela mídia e pelos discursos, e só depois orienta a atuação policial.\n\nNa prova, a frase é correta ao incluir as agências políticas, de comunicação e ideológicas no sistema penal em sentido amplo.",
+      "memorize": "Zaffaroni: sistema penal em sentido amplo inclui agências políticas, de comunicação social e de reprodução ideológica."
      }
     },
     {
@@ -2210,7 +2718,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "seletividade",
        "estereótipo"
-      ]
+      ],
+      "aprofundamento": "O sistema penal não tem capacidade de processar todos os crimes. Precisa escolher, e a escolha não é aleatória. As agências de controle tendem a selecionar quem corresponde ao **estereótipo** do criminoso, construído pela mídia e pelo senso comum: em geral, jovens pobres, moradores de periferia, com baixa escolaridade.\n\nEssas pessoas são mais **vulneráveis** à criminalização por estarem mais expostas à vigilância, terem menos recursos de defesa e praticarem delitos mais visíveis. Os crimes de quem não se encaixa no estereótipo, como os de colarinho branco, tendem a ficar invisíveis ou impunes.\n\nNa América Latina, a desigualdade acentua esse mecanismo, e a crítica regional o descreve como traço estrutural, e não como desvio pontual de funcionamento.\n\nNa prova, seletividade e estereótipo são as duas palavras que caracterizam essa tese.",
+      "memorize": "Seletividade: as agências escolhem os vulneráveis que se encaixam no estereótipo do criminoso."
      }
     },
     {
@@ -2225,7 +2735,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "realismo marginal",
        "deslegitimação"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que, para o realismo marginal, o sistema penal latino-americano é legítimo porque opera conforme o discurso jurídico oficial.",
+       "certo": "O realismo marginal sustenta a deslegitimação do sistema penal: sua operação real é seletiva e violenta, distante do discurso jurídico oficial."
+      },
+      "aprofundamento": "O **realismo marginal** de Zaffaroni parte de uma constatação: na América Latina, o sistema penal real é muito diferente do que o discurso jurídico promete. A lei fala em igualdade, legalidade e ressocialização; a prática mostra seletividade, violência policial, superlotação e mortes.\n\nDiante dessa distância, Zaffaroni sustenta a **deslegitimação** do sistema penal: ele não cumpre as funções que justificariam sua existência. A palavra \"realismo\" indica que a análise parte da operação real das agências; \"marginal\", que é feita a partir da periferia do poder mundial.\n\nA consequência não é ignorar o sistema, mas **conter o poder punitivo**: o juiz e o jurista devem usar o Direito Penal como barreira, reduzindo a violência que o sistema produz.\n\nA assertiva inverte a tese. Na prova, realismo marginal é sinônimo de deslegitimação, nunca de legitimidade.",
+      "memorize": "Realismo marginal (Zaffaroni): deslegitimação do sistema penal e contenção do poder punitivo."
      }
     },
     {
@@ -2240,7 +2756,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "Rosa del Olmo",
        "importação"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que Rosa del Olmo defendeu a importação das teorias criminológicas centrais, especialmente do positivismo, como caminho de modernização.",
+       "certo": "Rosa del Olmo criticou a importação acrítica, pela América Latina, dos modelos criminológicos dos países centrais, sobretudo do positivismo."
+      },
+      "aprofundamento": "**Rosa del Olmo** estudou como as teorias criminológicas chegaram à América Latina. Mostrou que o **positivismo** foi importado sem adaptação, num contexto em que servia às elites locais para explicar a criminalidade pela raça e pela inferioridade de certos grupos, legitimando seu controle.\n\nA autora **criticou** essa importação acrítica. A Criminologia não seria neutra: as teorias carregam a marca da sociedade que as produziu e dos interesses a que servem. Transplantá-las para a região, sem considerar a realidade periférica, reforçava a dominação em vez de explicar o crime.\n\nSua obra é uma das bases da Criminologia crítica latino-americana, que procura construir conceitos próprios para a região.\n\nA assertiva inverte a posição da autora. Na prova, Rosa del Olmo está sempre do lado da crítica à importação.",
+      "memorize": "Rosa del Olmo criticou a importação acrítica do positivismo pela América Latina."
      }
     },
     {
@@ -2254,7 +2776,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "Nina Rodrigues",
        "positivismo"
-      ]
+      ],
+      "aprofundamento": "**Nina Rodrigues**, médico baiano, foi o principal divulgador do positivismo lombrosiano no Brasil. Aplicou à realidade brasileira a ideia de que fatores biológicos explicariam o crime e, nesse caminho, sustentou que a raça influenciaria a responsabilidade penal.\n\nSuas ideias tinham marcado **viés racial**: chegou a defender tratamento penal diferenciado conforme a raça, apoiado na suposta inferioridade de negros e indígenas. Isso serviu, no pós-abolição, para dar aparência científica ao controle e à discriminação da população negra.\n\nA Criminologia atual rejeita essas teses. Elas são estudadas hoje como exemplo do que Rosa del Olmo criticou: a importação do positivismo para legitimar a dominação de grupos vulneráveis.\n\nNa prova, Nina Rodrigues representa a recepção brasileira do positivismo biológico, com viés racial hoje rejeitado.",
+      "memorize": "Nina Rodrigues: positivismo lombrosiano no Brasil, com viés racial hoje rejeitado."
      }
     },
     {
@@ -2269,7 +2793,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "contenção do poder punitivo",
        "redução de danos"
-      ]
+      ],
+      "correcao": {
+       "erro": "Atribui à Criminologia crítica latino-americana a defesa do recrudescimento da atuação policial como principal estratégia contra a violência.",
+       "certo": "A Criminologia crítica latino-americana propõe contenção do poder punitivo, redução de danos e respeito aos direitos fundamentais."
+      },
+      "aprofundamento": "A Criminologia crítica latino-americana parte do diagnóstico de que o sistema penal da região já é seletivo e violento. Aumentar o poder policial, nesse quadro, tende a ampliar a violência sobre os grupos vulneráveis, sem resolver as causas estruturais.\n\nPor isso suas propostas vão na direção oposta. A **contenção do poder punitivo** busca limitar a atuação das agências e usar o Direito Penal como barreira. A **redução de danos** procura diminuir o sofrimento produzido pelo próprio sistema, como superlotação e letalidade policial. O **respeito aos direitos fundamentais** é condição de qualquer política de segurança.\n\nO recrudescimento da atuação policial como estratégia principal é a bandeira do movimento de **lei e ordem**, que a crítica combate.\n\nNa prova, qualquer assertiva que atribua à crítica uma proposta de endurecimento está errada.",
+      "memorize": "Crítica latino-americana: contenção do poder punitivo e redução de danos, nunca lei e ordem."
      }
     },
     {
@@ -2283,7 +2813,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "Política Criminal",
        "estratégias"
-      ]
+      ],
+      "aprofundamento": "A **Política Criminal** responde à pergunta: o que fazer diante do crime? Ela reúne os **princípios** e as **estratégias** com que o Estado organiza a resposta ao fenômeno criminal, incluindo a decisão sobre o que criminalizar, como prevenir e como punir.\n\nSua posição é de **ponte**. Recebe da Criminologia o diagnóstico empírico, sobre o ser, e o transforma em opções que o legislador converte em normas, no plano do dever ser. Também avalia criticamente o direito vigente, propondo reformas quando ele se mostra ineficaz ou injusto.\n\nA Política Criminal não é apenas penal. Pode recomendar medidas sociais, administrativas ou urbanísticas, e até concluir que um problema não deve ser tratado pelo Direito Penal.\n\nNa prova, ponte entre Criminologia e Direito Penal é sempre a Política Criminal.",
+      "memorize": "Política Criminal: princípios e estratégias de resposta ao crime; ponte entre Criminologia (ser) e Direito Penal (dever ser)."
      }
     },
     {
@@ -2297,7 +2829,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "lei e ordem",
        "Direito Penal mínimo"
-      ]
+      ],
+      "aprofundamento": "Os três movimentos podem ser vistos numa escala de intensidade do poder punitivo.\n\nNo extremo máximo está o **lei e ordem**, que vê no endurecimento penal a resposta à criminalidade: mais tipos, penas maiores, menos benefícios, mais prisão. Costuma ganhar força em momentos de medo social e de crimes de grande repercussão.\n\nNo centro está o **Direito Penal mínimo**, de matriz **garantista**, que admite o Direito Penal como necessário, mas o limita ao essencial, com garantias rigorosas de legalidade, lesividade, culpabilidade e devido processo.\n\nNo extremo oposto está o **abolicionismo**, que propõe eliminar o sistema penal e resolver os conflitos por outras vias, como a conciliação e a reparação.\n\nNa prova, saber em que polo está cada movimento ajuda a identificar trocas de autores e de propostas.",
+      "memorize": "Escala punitiva: lei e ordem (máximo), Direito Penal mínimo (garantismo), abolicionismo (eliminação)."
      }
     },
     {
@@ -2312,7 +2846,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "abolicionismo",
        "Hulsman"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que o abolicionismo penal propõe o recrudescimento das penas privativas de liberdade.",
+       "certo": "O abolicionismo penal, de autores como Hulsman, Christie e Mathiesen, propõe abolir o sistema penal e resolver os conflitos por outras vias."
+      },
+      "aprofundamento": "O **abolicionismo penal** é a posição mais radical da crítica ao sistema penal. Autores como **Hulsman**, **Christie** e **Mathiesen** sustentam que o sistema penal não cumpre suas promessas, produz sofrimento desnecessário, é seletivo e rouba o conflito das pessoas envolvidas.\n\nA proposta é **abolir** o sistema penal ou, em versões moderadas, reduzi-lo drasticamente, substituindo a pena por formas de resolução de conflitos como conciliação, mediação, reparação e soluções comunitárias. Hulsman sugeria até trocar a palavra crime por \"situações problemáticas\", para abrir espaço a respostas não punitivas.\n\nO recrudescimento das penas é justamente o oposto, próprio do movimento de lei e ordem.\n\nA assertiva inverte a proposta abolicionista. Na prova, o nome já entrega a resposta: abolicionismo quer abolir, não endurecer.",
+      "memorize": "Abolicionismo (Hulsman, Christie, Mathiesen): abolir o sistema penal, não endurecê-lo."
      }
     },
     {
@@ -2327,7 +2867,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "garantismo",
        "Ferrajoli"
-      ]
+      ],
+      "correcao": {
+       "erro": "Atribui a Jakobs o garantismo e o Direito Penal mínimo.",
+       "certo": "O garantismo, com seu Direito Penal mínimo limitado por garantias penais e processuais, é de Ferrajoli; Jakobs é o autor do Direito Penal do inimigo."
+      },
+      "aprofundamento": "O **garantismo** é obra de **Ferrajoli**. Ele propõe um **Direito Penal mínimo**, em que a punição só é legítima quando respeita um conjunto de garantias, organizadas como axiomas: não há pena sem crime, crime sem lei, lei sem necessidade, necessidade sem ofensa a bem jurídico, ofensa sem conduta, conduta sem culpa, e não há culpa sem processo com acusação, prova e defesa.\n\nCada axioma é uma condição da punição. Faltando um, a pena é ilegítima. O garantismo aceita o Direito Penal, mas o limita ao máximo, como forma de proteger o indivíduo contra o arbítrio estatal.\n\n**Jakobs** está no polo oposto. É o autor do **Direito Penal do inimigo**, que admite reduzir garantias para quem é tratado como inimigo do Estado.\n\nA assertiva troca o autor. Na prova, garantismo é Ferrajoli; inimigo é Jakobs.",
+      "memorize": "Garantismo e Direito Penal mínimo = Ferrajoli. Direito Penal do inimigo = Jakobs."
      }
     },
     {
@@ -2341,7 +2887,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "Direito Penal do inimigo",
        "Jakobs"
-      ]
+      ],
+      "aprofundamento": "**Jakobs** distingue dois tipos de Direito Penal. O do **cidadão** se aplica a quem, mesmo cometendo crime, continua oferecendo garantia mínima de que respeitará a ordem jurídica. O do **inimigo** se aplica a quem, por sua conduta reiterada ou pela adesão a organizações criminosas ou terroristas, teria abandonado essa condição.\n\nPara o inimigo, o tratamento muda. Há **antecipação da tutela**, com punição de atos preparatórios e da mera pertinência a grupos. As **penas são desproporcionais**, mais altas que a gravidade do fato justificaria. As **garantias processuais** são relativizadas. O objetivo deixa de ser responder a um fato e passa a ser neutralizar um perigo.\n\nA teoria é muito criticada, por retomar a lógica do direito penal de autor e por permitir que o Estado escolha quem perde a condição de pessoa.\n\nNa prova, as três marcas são antecipação, penas altas e menos garantias.",
+      "memorize": "Direito Penal do inimigo (Jakobs): antecipação da punição, penas desproporcionais, garantias relativizadas."
      }
     },
     {
@@ -2356,7 +2904,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "segunda velocidade",
        "Silva Sánchez"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que a segunda velocidade do Direito Penal combina pena privativa de liberdade com flexibilização de garantias.",
+       "certo": "Na segunda velocidade, a flexibilização de garantias se combina com penas alternativas; prisão com garantias flexibilizadas é a terceira velocidade, ligada ao Direito Penal do inimigo."
+      },
+      "aprofundamento": "**Silva Sánchez** observou que o Direito Penal contemporâneo se expande e se divide em blocos com regras diferentes, que chamou de **velocidades**. O critério é a combinação entre o tipo de pena e o grau de garantias.\n\nA **primeira velocidade** é o Direito Penal clássico: pena de prisão com garantias plenas. A **segunda** aceita **flexibilizar garantias**, mas em troca usa **penas alternativas**, sem prisão, como ocorre em infrações de menor gravidade ou em parte do Direito Penal econômico. A **terceira** combina **prisão** com garantias flexibilizadas e corresponde ao Direito Penal do inimigo.\n\nA lógica é de compensação: só se aceita reduzir garantias quando a pena não é privativa de liberdade. A terceira velocidade rompe essa compensação, e por isso é a mais criticada.\n\nA assertiva descreve a terceira velocidade e a chama de segunda.",
+      "memorize": "Velocidades: primeira, prisão com garantias; segunda, alternativas com menos garantias; terceira, prisão com menos garantias."
      }
     },
     {
@@ -2370,7 +2924,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "lei e ordem",
        "tolerância zero"
-      ]
+      ],
+      "aprofundamento": "O movimento de **lei e ordem** sustenta que a criminalidade se combate com mais rigor: penas maiores, menos benefícios, atuação policial intensa. A **tolerância zero** é sua expressão mais conhecida, aplicada em Nova York nos anos 1990, com repressão sistemática até de pequenas infrações.\n\nA base teórica é a das **janelas quebradas**: se uma janela quebrada não é consertada, passa a mensagem de que ninguém se importa, e logo outras são quebradas. Aplicada ao crime, a ideia é que tolerar a desordem e as infrações menores abre caminho para delitos graves.\n\nA política é controversa. Seus defensores atribuem a ela a queda da criminalidade; os críticos apontam outros fatores para essa queda e denunciam o aumento da seletividade e dos abusos contra populações pobres.\n\nNa prova, as três ideias aparecem juntas: lei e ordem, tolerância zero e janelas quebradas.",
+      "memorize": "Lei e ordem + tolerância zero (Nova York, anos 1990) + janelas quebradas."
      }
     },
     {
@@ -2384,7 +2940,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "intervenção mínima",
        "ultima ratio"
-      ]
+      ],
+      "aprofundamento": "A **intervenção mínima** decorre da gravidade da sanção penal. Como a pena atinge a liberdade e carrega estigma, só pode ser usada quando realmente necessária. Esse é o sentido de **ultima ratio**.\n\nO princípio se desdobra em dois. A **subsidiariedade** olha para os outros meios: o Direito Penal só atua quando os ramos civil e administrativo e o controle informal não bastam. A **fragmentariedade** olha para o objeto: o Direito Penal só protege os bens jurídicos mais importantes e contra os ataques mais graves, deixando de fora as demais lesões.\n\nA Criminologia oferece apoio empírico ao princípio, ao mostrar que o controle informal previne mais que a pena e que a prisão tem efeitos colaterais relevantes.\n\nNa prova, a intervenção mínima aparece ligada ao garantismo e ao Direito Penal mínimo, e em oposição ao movimento de lei e ordem.",
+      "memorize": "Intervenção mínima: Direito Penal como ultima ratio, subsidiário e fragmentário."
      }
     },
     {
@@ -2398,7 +2956,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "modelo integrado",
        "ciências criminais"
-      ]
+      ],
+      "aprofundamento": "O **modelo integrado**, ou tripartido, organiza as ciências criminais em três saberes, cada um com sua tarefa. A **Criminologia** conhece a realidade do crime, pelo método empírico. A **Política Criminal** transforma esse conhecimento em estratégias de resposta. O **Direito Penal** traduz as escolhas em normas e as aplica.\n\n**Autônomos** significa que cada um tem objeto e método próprios, sem subordinação: a Criminologia não é auxiliar do Direito Penal, nem este é mero instrumento da Política Criminal. **Complementares** significa que precisam uns dos outros: o Direito Penal sem Criminologia legisla às cegas; a Criminologia sem Direito Penal não se converte em resposta jurídica.\n\nO modelo supera visões antigas, que viam a Criminologia como ciência auxiliar ou que pretendiam absorver o Direito Penal nas ciências naturais.\n\nNa prova, as palavras-chave são autonomia e complementaridade.",
+      "memorize": "Modelo integrado: Criminologia (ser), Política Criminal (estratégia) e Direito Penal (norma), autônomos e complementares."
      }
     },
     {
@@ -2413,7 +2973,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "Criminalística",
        "vestígios materiais"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que Criminalística e Criminologia são expressões sinônimas.",
+       "certo": "A Criminalística é disciplina técnica de exame dos vestígios materiais do crime, voltada à prova pericial; a Criminologia é ciência empírica do fenômeno criminal."
+      },
+      "aprofundamento": "Os nomes parecidos escondem disciplinas muito diferentes. A **Criminalística** é técnica: examina os **vestígios materiais** do crime para reconstruir o fato e identificar autoria. Impressões digitais, balística, exames de local, análises de DNA e de documentos pertencem a ela. Seu produto é a **prova pericial**, usada no inquérito e no processo.\n\nA **Criminologia** é ciência empírica do fenômeno criminal em sentido amplo. Estuda por que o crime ocorre, quem pratica, quem sofre e como o controle social reage. Seu produto é conhecimento geral, útil para a prevenção e para a política criminal.\n\nUma forma simples de distinguir: a Criminalística pergunta como este crime aconteceu e quem o cometeu; a Criminologia pergunta por que crimes desse tipo acontecem e como preveni-los.\n\nNa prova, tratar as duas como sinônimas é sempre erro.",
+      "memorize": "Criminalística: vestígios e perícia do caso concreto. Criminologia: ciência empírica do fenômeno criminal."
      }
     },
     {
@@ -2427,7 +2993,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "Penologia",
        "penas"
-      ]
+      ],
+      "aprofundamento": "A **Penologia** se ocupa das **penas**: suas finalidades, suas espécies, sua execução e seus efeitos. Pergunta para que serve punir, que tipos de pena existem e como devem ser cumpridas, e examina se a execução alcança os objetivos declarados.\n\nEla se relaciona com várias disciplinas. Com o Direito Penal, compartilha a discussão sobre as teorias da pena. Com a Criminologia, compartilha a avaliação empírica dos modelos de reação ao crime, como a eficácia da prisão na redução da reincidência. Com a Lei de Execução Penal, compartilha o estudo do cumprimento da pena e dos instrumentos de prevenção terciária.\n\nAlguns autores a tratam como ramo da Criminologia; outros, como disciplina própria. O que importa para a prova é seu objeto: a pena, em teoria e prática.\n\nNa prova, cuidado com a troca entre Penologia e Criminalística, que estuda vestígios do crime.",
+      "memorize": "Penologia: teoria e prática das penas, suas finalidades e execução."
      }
     },
     {
@@ -2441,7 +3009,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "dogmática penal",
        "eficácia"
-      ]
+      ],
+      "aprofundamento": "A **dogmática penal** trabalha **dentro** da norma. Parte do direito vigente como premissa, interpreta seus termos, organiza conceitos e oferece soluções coerentes para os casos. Sua pergunta é: o que a lei determina e como aplicá-la?\n\nA **Criminologia** observa a norma **de fora**. Pode verificar se a lei é aplicada de modo igual a todos, se produz o efeito preventivo prometido, se cria problemas maiores do que resolve. Por isso pode questionar tanto a **eficácia** quanto a **legitimidade** de uma norma, papel que a dogmática, presa ao direito posto, não exerce.\n\nEssa liberdade crítica é consequência da autonomia da Criminologia e alimenta a Política Criminal, que pode propor reformas com base nos dados.\n\nNa prova, a frase é correta ao atribuir à dogmática a interpretação e sistematização, e à Criminologia a crítica externa.",
+      "memorize": "Dogmática interpreta a norma por dentro; Criminologia pode questionar sua eficácia e legitimidade por fora."
      }
     },
     {
@@ -2456,7 +3026,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "valorativa",
        "Política Criminal"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que a Política Criminal é ciência empírica, de método idêntico ao da Criminologia.",
+       "certo": "A Política Criminal é disciplina valorativa e estratégica: escolhe fins e meios a partir do dado criminológico, sem se confundir com a Criminologia, que é empírica."
+      },
+      "aprofundamento": "A **Criminologia** descreve a realidade: seu método é empírico, e suas conclusões dizem como as coisas são. A **Política Criminal** escolhe: decide quais **fins** perseguir e quais **meios** usar diante do crime. Essas escolhas envolvem **valores**, como liberdade, segurança, dignidade e eficiência, que nenhum dado empírico resolve sozinho.\n\nPor isso a Política Criminal é disciplina **valorativa** e estratégica. Usa o dado criminológico como base, mas acrescenta um juízo sobre o que é desejável e legítimo. Dois governos podem ter o mesmo diagnóstico e escolher políticas opostas, um apostando no endurecimento, outro na prevenção social.\n\nNo modelo integrado, a distinção é a de três tarefas: conhecer, escolher e normatizar. Igualar a Política Criminal à Criminologia apagaria a etapa da escolha.\n\nNa prova, empírica é a Criminologia; valorativa é a Política Criminal.",
+      "memorize": "Criminologia descreve (empírica); Política Criminal escolhe fins e meios (valorativa)."
      }
     },
     {
@@ -2470,7 +3046,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "Vitimologia",
        "ciência autônoma"
-      ]
+      ],
+      "aprofundamento": "A natureza da **Vitimologia** é uma divergência clássica. Para a posição **majoritária**, ela é **ramo da Criminologia**: a vítima é um dos quatro objetos da Criminologia moderna, e estudá-la é parte do estudo integrado do fenômeno criminal.\n\nPara outros, com destaque para **Mendelsohn**, a Vitimologia é **ciência autônoma**, com objeto próprio, a vítima, e preocupações que vão além do crime, alcançando vítimas de acidentes, desastres e outras formas de sofrimento.\n\nA divergência tem raiz na própria história: Mendelsohn, considerado pai da disciplina, queria dar a ela identidade independente, enquanto a Criminologia, ao ampliar seu objeto, incorporou a vítima.\n\nNa prova, a frase é correta ao apresentar as duas posições com seus pesos. Fique atento a assertivas que tratem a questão como pacífica em qualquer dos sentidos.",
+      "memorize": "Vitimologia: ramo da Criminologia (majoritária) ou ciência autônoma (Mendelsohn)."
      }
     },
     {
@@ -2484,7 +3062,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "efeito funil",
        "sistema de justiça criminal"
-      ]
+      ],
+      "aprofundamento": "O **efeito funil** descreve a perda progressiva de casos ao longo do sistema de justiça criminal. Na boca do funil estão todos os crimes que realmente ocorreram. A cada etapa, uma parte se perde.\n\nMuitos crimes não são **registrados**, porque a vítima não comunica ou a polícia não toma conhecimento: é a cifra negra. Dos registrados, só parte é efetivamente **investigada**, por falta de recursos ou de elementos. Dos investigados, só parte gera **denúncia e processo**. E dos processados, menos ainda resultam em **condenação**, por falta de provas, prescrição ou absolvição.\n\nNo final, o número de condenados é uma fração pequena do total de crimes. O fenômeno ajuda a entender a **seletividade**: quem chega ao fim do funil não é necessariamente quem mais delinquiu, mas quem passou por todos os filtros.\n\nNa prova, o funil é a imagem da perda de casos em cada etapa.",
+      "memorize": "Efeito funil: crimes ocorridos > registrados > investigados > processados > condenados."
      }
     },
     {
@@ -2498,7 +3078,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "cifra negra",
        "criminalidade real"
-      ]
+      ],
+      "aprofundamento": "As estatísticas oficiais não medem o crime real, mas o crime que chega às instâncias formais. A diferença entre os dois é a **cifra negra**, também chamada criminalidade oculta.\n\nEla existe por vários motivos. A vítima pode não comunicar o fato por medo, vergonha, desconfiança na polícia ou por considerar o dano pequeno. Há crimes sem vítima individual, que ninguém denuncia. E há crimes que a vítima nem percebe ter sofrido, como certas fraudes.\n\nA cifra negra tem consequência metodológica importante: pesquisas que se baseiam só nos registros oficiais retratam a atuação das agências, e não a criminalidade. Para estimá-la, usam-se inquéritos de vitimização e pesquisas de autodenúncia.\n\nHá ainda a **cifra dourada**, expressão usada para a criminalidade dos poderosos, que raramente chega ao sistema. Na prova, cifra negra é sempre a diferença entre o real e o registrado.",
+      "memorize": "Cifra negra: diferença entre a criminalidade real e a registrada pelas instâncias formais."
      }
     },
     {
@@ -2513,7 +3095,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "cifra negra",
        "homicídio"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que a cifra negra tende a ser maior nos homicídios do que nos crimes patrimoniais de pequeno valor.",
+       "certo": "A cifra negra do homicídio é baixa, porque o fato deixa vestígio evidente; os furtos de pequeno valor são pouco comunicados e têm cifra negra alta."
+      },
+      "aprofundamento": "A cifra negra não é igual em todos os crimes. Ela depende da **visibilidade** do fato e da disposição da vítima de comunicá-lo.\n\nO **homicídio** deixa um vestígio impossível de ignorar: há um corpo, uma família que procura a polícia, um registro obrigatório de óbito. Por isso a cifra negra é **baixa**, e as estatísticas de homicídio são consideradas as mais confiáveis para comparar regiões.\n\nOs **furtos de pequeno valor**, ao contrário, são pouco comunicados. A vítima avalia que o prejuízo não compensa o tempo na delegacia ou que não haverá recuperação do bem. A cifra negra é **alta**. O mesmo ocorre com crimes sexuais e violência doméstica, por medo e vergonha.\n\nA assertiva inverte a relação. Na prova, quanto mais grave e visível o crime, menor a cifra negra; quanto menor o dano e maior o constrangimento, maior a subnotificação.",
+      "memorize": "Homicídio: cifra negra baixa. Furto de pequeno valor: cifra negra alta."
      }
     },
     {
@@ -2527,7 +3115,10 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "prisionização",
        "Clemmer"
-      ]
+      ],
+      "aprofundamento": "A prisionização explica por que a prisão, pensada para ressocializar, costuma produzir o efeito inverso. O preso entra numa sociedade fechada, com hierarquia, linguagem, códigos de lealdade e regras próprias de sobrevivência, e quanto mais tempo passa ali, mais adota esse modo de vida como seu.\n\nO problema é que os valores que garantem a sobrevivência lá dentro (desconfiança da autoridade, lei do silêncio, adesão a grupos internos) são justamente os que dificultam a vida em liberdade. Por isso a doutrina liga a **prisionização** à reincidência e à crítica da pena privativa de liberdade como instrumento de reinserção.\n\nNa prova, a banca costuma trocar o conceito por algo positivo (\"adaptação ressocializadora\") ou atribuí-lo a outro autor. Guarde o trio: Clemmer, cultura carcerária, obstáculo à reinserção.",
+      "exemplo": "João cumpre pena longa e aprende a gíria, as regras de facção e a desconfiar de qualquer agente público. Ao sair, rejeita ofertas de emprego formal e volta ao grupo que conheceu na prisão.",
+      "memorize": "Prisionização (Clemmer) = o preso absorve a cultura carcerária, e isso atrapalha a volta à vida livre."
      }
     },
     {
@@ -2541,7 +3132,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "seletividade",
        "estereótipos"
-      ]
+      ],
+      "aprofundamento": "O sistema penal não consegue processar todos os crimes que acontecem; por isso escolhe. Essa escolha não é aleatória: as agências tendem a recair sobre quem corresponde à imagem social do \"criminoso típico\", construída por mídia, senso comum e práticas institucionais. Esse é o papel dos **estereótipos** na **seletividade**.\n\nO resultado é um ciclo: a polícia vigia mais certos bairros e grupos, registra mais crimes ali, e as estatísticas parecem confirmar que aquele grupo delinque mais, o que reforça o estereótipo. A Criminologia da reação social e a Criminologia crítica fizeram disso um eixo central de análise.\n\nA banca costuma afirmar que a seletividade decorre só da maior prática de crimes pelos pobres. A palavra que entrega o gabarito certo é \"estereótipos\": a seleção é também construção social, não mero reflexo da criminalidade real.",
+      "memorize": "Seletividade: o sistema escolhe quem punir, guiado por estereótipos sobre grupos vulneráveis."
      }
     },
     {
@@ -2566,7 +3159,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "valor mínimo",
        "reparação dos danos"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que o juiz criminal não pode fixar valor mínimo de reparação e que a matéria é exclusiva do juízo cível.",
+       "certo": "Na sentença condenatória, o juiz fixará valor mínimo para reparação dos danos causados pela infração, considerando os prejuízos do ofendido (CPP, art. 387, IV), sem prejuízo de a vítima buscar o restante no cível."
+      },
+      "aprofundamento": "O dispositivo citado é expressão da redescoberta da vítima no processo penal. Antes, o ofendido precisava esperar a condenação e depois ajuizar ação no cível para receber qualquer coisa; a regra encurta esse caminho e dá à sentença penal um conteúdo reparatório mínimo.\n\nO juiz **fixa valor mínimo**, considerando os prejuízos sofridos pelo ofendido. Não é a indenização integral: a vítima pode buscar o restante no juízo cível. A sentença penal condenatória, portanto, já traz um título com valor certo, sem eliminar a via civil para o que exceder.\n\nA pegadinha é dizer que a matéria é reservada ao cível. O cível continua possível para complementar, mas não é exclusivo. Na Criminologia, o tema se liga à vitimologia e à reparação como resposta ao crime.",
+      "memorize": "Sentença penal condenatória fixa valor MÍNIMO de reparação; o resto pode ser buscado no cível."
      }
     },
     {
@@ -2581,7 +3180,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "estatísticas oficiais",
        "pesquisas de vitimização"
-      ]
+      ],
+      "correcao": {
+       "erro": "Diz que as estatísticas oficiais refletem com fidelidade a criminalidade real e dispensam pesquisas de vitimização.",
+       "certo": "As estatísticas oficiais medem a criminalidade registrada e a atividade das agências; não captam a cifra negra, que é revelada por pesquisas de vitimização, as quais as complementam."
+      },
+      "aprofundamento": "As estatísticas oficiais nascem dos registros das agências: boletins, inquéritos, processos. Elas mostram o que chegou ao sistema, e não tudo o que aconteceu. Muitos crimes nunca são comunicados (por medo, descrença, vergonha ou porque a vítima nem percebe), e outros são registrados e não avançam. A diferença entre o real e o registrado é a **cifra negra**.\n\nAlém disso, os números também medem a atividade da própria polícia: uma operação intensa em certa área aumenta os registros ali sem que o crime tenha crescido. Por isso a Criminologia trata a estatística oficial como dado útil, mas parcial.\n\nAs **pesquisas de vitimização** perguntam diretamente à população se ela sofreu crimes, captando o que não foi registrado. A banca erra a frase ao dizer que a estatística reflete \"com fidelidade\" a criminalidade real ou que dispensa outras fontes.",
+      "memorize": "Estatística oficial = crime registrado. Cifra negra se mede com pesquisa de vitimização."
      }
     },
     {
@@ -2605,7 +3210,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "polícia judiciária",
        "delegados de polícia de carreira"
-      ]
+      ],
+      "aprofundamento": "O dispositivo citado desenha a polícia civil como polícia investigativa: ela atua depois que o crime ocorreu, reunindo elementos sobre autoria e materialidade. É diferente da polícia ostensiva, que atua de forma visível para evitar o crime.\n\nA frase tem duas ressalvas que a banca adora cortar ou trocar. Primeira: \"ressalvada a competência da União\", porque crimes de atribuição federal cabem à polícia federal. Segunda: \"exceto as militares\", porque crimes militares são apurados no âmbito militar. Também importa que a direção cabe a **delegados de polícia de carreira**.\n\nNa leitura criminológica, a polícia civil é instância formal de controle social, a porta de entrada da criminalização secundária. Errado seria trocar \"delegados de carreira\" por qualquer servidor, retirar as ressalvas ou dar à polícia civil a função ostensiva.",
+      "memorize": "Polícia civil: polícia judiciária + apuração de infrações, salvo as militares e o que é da União; dirigida por delegado de carreira."
      }
     },
     {
@@ -2630,7 +3237,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "natureza jurídica",
        "exclusivas de Estado"
-      ]
+      ],
+      "correcao": {
+       "erro": "Classifica as funções como de natureza administrativa e delegáveis a particulares.",
+       "certo": "As funções de polícia judiciária e a apuração de infrações penais exercidas pelo delegado são de natureza jurídica, essenciais e exclusivas de Estado, portanto indelegáveis (Lei 12.830/2013, art. 2º)."
+      },
+      "aprofundamento": "A lei citada qualificou as funções do delegado para reforçar a autonomia técnica da investigação. Dizer que são de **natureza jurídica** significa que o delegado não é mero executor administrativo: ele interpreta o fato à luz do direito, decide sobre prisão em flagrante, indiciamento e representações.\n\nSer **exclusiva de Estado** quer dizer que a atividade envolve poder de império sobre liberdade e intimidade das pessoas, e por isso não pode ser transferida a particulares. Investigação criminal privada com poderes estatais seria incompatível com essa regra.\n\nA assertiva erra duas vezes: troca \"jurídica\" por \"administrativa\" e diz \"delegáveis a particulares\". O que se mantém é \"essenciais\". Fique atento à banca que mantém um termo certo para dar aparência de correção à frase.",
+      "memorize": "Funções do delegado: JURÍDICAS, essenciais e EXCLUSIVAS de Estado."
      }
     },
     {
@@ -2655,7 +3268,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "polícias militares",
        "polícia ostensiva"
-      ]
+      ],
+      "correcao": {
+       "erro": "Atribui às polícias civis a polícia ostensiva e a preservação da ordem pública.",
+       "certo": "Às polícias militares cabem a polícia ostensiva e a preservação da ordem pública (CF, art. 144, § 5º); às civis, as funções de polícia judiciária e a apuração de infrações penais."
+      },
+      "aprofundamento": "A Constituição divide o trabalho policial em dois momentos. A polícia militar atua antes do crime, de forma visível (fardamento, viatura, patrulha), para dissuadir e manter a ordem: é a **polícia ostensiva**. A polícia civil atua depois, investigando: é a polícia judiciária.\n\nEssa divisão tem lógica de controle social: a presença ostensiva corresponde à prevenção, enquanto a investigação alimenta a persecução penal. Na linguagem da prevenção situacional, a viatura é o \"guardião capaz\"; o inquérito é a resposta ao fato já ocorrido.\n\nA pegadinha é a simples troca de corporação. Se a frase falar em ostensiva ou preservação da ordem pública, o sujeito certo é a polícia militar; se falar em polícia judiciária e apuração de infrações, é a civil.",
+      "memorize": "Ostensiva e ordem pública = PM. Judiciária e apuração = civil."
      }
     },
     {
@@ -2679,7 +3298,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "indiciamento",
        "ato fundamentado"
-      ]
+      ],
+      "aprofundamento": "O **indiciamento** é o ato pelo qual o delegado declara, formalmente, que há indícios suficientes de que determinada pessoa é a autora do fato investigado. Ele muda a posição do investigado e produz efeitos estigmatizantes, por isso a lei exige que seja **fundamentado** e técnico-jurídico.\n\nSer privativo significa que nem o juiz nem o Ministério Público podem determinar que o delegado indicie alguém: a análise é dele. A fundamentação deve indicar autoria, materialidade e circunstâncias, o que permite controle posterior e evita indiciamentos arbitrários.\n\nNa ótica criminológica, o indiciamento é um momento de rotulação pelas instâncias formais. A banca costuma errar a frase dizendo que o indiciamento pode ser requisitado por outra autoridade ou dispensar fundamentação.",
+      "memorize": "Indiciamento: privativo do delegado, fundamentado, com autoria, materialidade e circunstâncias."
      }
     },
     {
@@ -2704,7 +3325,14 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "arquivar",
        "autoridade policial"
-      ]
+      ],
+      "correcao": {
+       "erro": "Dá ao delegado o poder de mandar arquivar os autos do inquérito quando concluir pela atipicidade.",
+       "certo": "A autoridade policial não poderá mandar arquivar autos de inquérito (CPP, art. 17); ela relata e remete, e o arquivamento é deliberado fora da polícia."
+      },
+      "aprofundamento": "A proibição existe para garantir controle externo sobre o destino da investigação. Se o delegado pudesse encerrar sozinho o inquérito, a decisão de não processar ficaria concentrada no mesmo órgão que investiga, sem fiscalização do titular da ação penal.\n\nMesmo convencido de que o fato é atípico, o delegado deve concluir o inquérito com relatório e remetê-lo. Quem delibera sobre o arquivamento é o sistema formado pelo Ministério Público e pelos mecanismos de controle previstos em lei, nunca a autoridade policial.\n\nA banca costuma criar uma exceção: \"salvo atipicidade evidente\", \"salvo extinção da punibilidade\". Não há. A regra é absoluta para a autoridade policial. Note que o delegado pode deixar de indiciar, o que é diferente de arquivar.",
+      "exemplo": "O delegado conclui que o fato investigado não é crime. Ele faz relatório expondo essa conclusão e remete os autos; não pode encerrá-los por conta própria.",
+      "memorize": "Delegado NÃO arquiva inquérito, nem por atipicidade."
      }
     },
     {
@@ -2718,7 +3346,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "instância formal de controle",
        "prevenção"
-      ]
+      ],
+      "aprofundamento": "A Criminologia vê a polícia judiciária por dois ângulos. Como instância formal de controle, ela seleciona: decide o que investigar, quem ouvir, quem indiciar, e por isso participa da criminalização secundária. Como fonte de informação, ela registra: boletins e inquéritos formam a base das estatísticas criminais.\n\nEsses dados permitem mapear horários, locais e modos de execução, o que orienta a prevenção secundária e situacional e o planejamento da segurança pública. Ao mesmo tempo, é preciso lembrar que tais registros medem a criminalidade **registrada**, sujeita à cifra negra e às prioridades da própria agência.\n\nA banca pode tentar reduzir a polícia a mero órgão repressivo, sem papel informativo; ou tratar seus dados como retrato fiel da criminalidade. As duas versões são incorretas.",
+      "memorize": "Polícia judiciária: seleciona (controle formal) e informa (dados para prevenção)."
      }
     },
     {
@@ -2742,7 +3372,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "vida pregressa",
        "indiciado"
-      ]
+      ],
+      "aprofundamento": "O dispositivo citado é um ponto de contato direto entre o processo penal e a Criminologia. Ao mandar investigar a vida pregressa, a lei pede ao delegado que olhe não só o fato, mas também o **autor**: seu contexto individual, familiar, social e econômico, e seu comportamento antes, durante e depois do crime.\n\nEsses dados servem para a individualização da pena (circunstâncias judiciais), para a análise de medidas cautelares e para a compreensão das causas do delito. É herança do enfoque etiológico, que busca entender a pessoa por trás da conduta.\n\nO limite está na culpabilidade do fato: esses elementos ajudam a compreender e dosar a resposta, mas não podem servir para punir alguém pelo que ele é. A banca costuma cortar algum dos aspectos da lista ou trocar \"deve\" por \"pode\".",
+      "memorize": "Inquérito investiga também a vida pregressa do indiciado: individual, familiar, social e econômica, antes, durante e depois do crime."
      }
     },
     {
@@ -2766,7 +3398,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "dignidade da pessoa humana",
        "Estado Democrático de Direito"
-      ]
+      ],
+      "aprofundamento": "Colocar a **dignidade da pessoa humana** como fundamento da República significa que o Estado existe para a pessoa, e não o contrário. No campo penal, isso impede tratar o infrator como objeto ou instrumento de política de segurança.\n\nA dignidade se desdobra em limites concretos: proibição de penas cruéis, respeito à integridade do preso, pessoalidade da pena, culpabilidade do fato. A política criminal pode escolher estratégias, mas sempre dentro dessa moldura; e as agências (polícia, MP, juiz, prisão) devem respeitá-la em cada ato.\n\nA banca costuma propor que a dignidade cede diante da gravidade do crime ou da eficiência da repressão. No Estado Democrático de Direito, não cede: ela é o limite, e não um valor a ser ponderado contra a eficácia punitiva.",
+      "memorize": "Dignidade humana = fundamento da República e limite de todo o poder punitivo."
      }
     },
     {
@@ -2781,7 +3415,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "direitos fundamentais",
        "limita"
-      ]
+      ],
+      "correcao": {
+       "erro": "Atribui à Criminologia a função de legitimar qualquer política repressiva eficaz, independentemente dos direitos fundamentais.",
+       "certo": "No Estado Democrático de Direito, a Criminologia avalia e limita as políticas repressivas, e a eficácia não se sobrepõe aos direitos fundamentais."
+      },
+      "aprofundamento": "A Criminologia moderna rejeita o papel de mera fornecedora de justificativas para o poder punitivo. Sua função é produzir conhecimento empírico sobre o crime, o infrator, a vítima e o controle social, e esse conhecimento serve também para avaliar e criticar as políticas adotadas.\n\nNo Estado Democrático de Direito, uma política pode ser eficaz e ainda assim ilegítima, se violar **direitos fundamentais**. A Criminologia aponta, por exemplo, efeitos como seletividade, estigmatização e prisionização, que nenhum ganho de eficiência autoriza ignorar.\n\nA pegadinha está em \"qualquer\" e \"independentemente\": palavras absolutas que colocam a eficácia acima dos direitos. Quando a frase subordina garantias a resultado, o gabarito tende a ser errado.",
+      "memorize": "Criminologia democrática avalia e limita; eficácia não vence direito fundamental."
      }
     },
     {
@@ -2805,7 +3445,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "integridade física e moral",
        "humanidade"
-      ]
+      ],
+      "aprofundamento": "A garantia citada concretiza o princípio da **humanidade** das penas. A privação de liberdade retira o direito de ir e vir, mas não autoriza o Estado a retirar outros direitos não atingidos pela sentença, como a integridade física e moral.\n\nIsso tem consequência prática: tortura, maus-tratos, humilhação e condições degradantes de custódia violam a Constituição, e o Estado responde por danos causados a quem está sob sua guarda. A garantia vale para o preso provisório e para o definitivo, e também para quem está detido em delegacia.\n\nNa Criminologia, o tema se liga à crítica da prisão e à prisionização: condições degradantes agravam o efeito dessocializador. A banca pode tentar restringir a garantia ao preso condenado ou a hipóteses específicas; ela é geral.",
+      "memorize": "Preso perde a liberdade, não a integridade física e moral."
      }
     },
     {
@@ -2830,7 +3472,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "penas cruéis",
        "humanidade"
-      ]
+      ],
+      "correcao": {
+       "erro": "Admite penas cruéis quando necessárias à prevenção geral.",
+       "certo": "A Constituição veda penas cruéis sem qualquer exceção (art. 5º, XLVII, e); a única ressalva do dispositivo é a pena de morte em caso de guerra declarada."
+      },
+      "aprofundamento": "A vedação de penas **cruéis** é uma das proibições sem ressalva do dispositivo citado. Repare na estrutura: a pena de morte tem exceção expressa (guerra declarada), mas as demais, inclusive as cruéis, não têm. Isso mostra que o constituinte, quando quis abrir exceção, o fez de forma explícita.\n\nO fundamento é a dignidade da pessoa humana: há um limite que nenhuma finalidade preventiva pode ultrapassar. A ideia de que penas mais duras intimidam mais (prevenção geral negativa) não autoriza o sofrimento desproporcional e degradante.\n\nA banca cria exceções inexistentes, como \"salvo necessidade de prevenção geral\" ou \"salvo crimes hediondos\". Lembre: só a pena de morte tem exceção, e é a guerra declarada.",
+      "memorize": "Pena cruel: proibida sempre. Só a pena de morte tem exceção (guerra declarada)."
      }
     },
     {
@@ -2854,7 +3502,10 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "pessoalidade",
        "reparar o dano"
-      ]
+      ],
+      "aprofundamento": "A **pessoalidade** (ou intranscendência) da pena decorre da responsabilidade penal subjetiva: só responde criminalmente quem praticou o fato com culpabilidade. Punir filhos ou herdeiros por crime do pai seria punição sem culpa, típica de sistemas antigos.\n\nA ressalva não contradiz o princípio, porque reparação do dano e perdimento de bens não são pena: são efeitos patrimoniais. Eles podem alcançar os sucessores, mas só até o limite do valor do patrimônio transferido. O herdeiro não paga com bens próprios, apenas com o que recebeu.\n\nA banca erra a frase de dois modos: incluindo a multa ou outra pena entre o que passa aos sucessores, ou retirando o limite do patrimônio transferido. Atenção às duas trocas.",
+      "exemplo": "Carlos é condenado e morre deixando herança modesta. A vítima pode cobrar a reparação dos herdeiros, mas só até o valor que eles herdaram; a pena em si se extingue com ele.",
+      "memorize": "Pena não passa da pessoa; reparação e perdimento passam, até o limite do patrimônio transferido."
      }
     },
     {
@@ -2868,7 +3519,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "garantias",
        "vítima"
-      ]
+      ],
+      "aprofundamento": "O modelo democrático busca equilíbrio entre três eixos que, em outros modelos, se excluíam. A prevenção substitui o castigo exemplar como foco; a vítima deixa de ser esquecida e passa a ter voz e direito à reparação; e as garantias do investigado continuam valendo.\n\nO ponto central é que valorizar a vítima não pode servir de pretexto para restringir direitos do investigado, e respeitar garantias não significa ignorar a vítima. As duas coisas convivem: devido processo, presunção de inocência e, ao mesmo tempo, reparação e atenção ao ofendido.\n\nA banca costuma propor um falso dilema: \"para proteger a vítima, é legítimo flexibilizar garantias\". No modelo democrático, essa troca não é aceita.",
+      "memorize": "Modelo democrático: prevenção + vítima + garantias, sem sacrificar nenhuma."
      }
     },
     {
@@ -2893,7 +3546,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "legalidade",
        "medida provisória"
-      ]
+      ],
+      "correcao": {
+       "erro": "Admite a criação de crimes por medida provisória em razão da urgência.",
+       "certo": "Crime só pode ser criado por lei anterior que o defina (CF, art. 5º, XXXIX), e a Constituição veda medida provisória sobre direito penal (art. 62, § 1º, I, b)."
+      },
+      "aprofundamento": "A **legalidade estrita** exige que crime e pena sejam definidos por lei em sentido formal, votada pelo Parlamento. A razão é democrática: a restrição mais grave à liberdade só pode vir dos representantes do povo, depois de debate público, e não de ato unilateral do Executivo.\n\nA medida provisória, embora tenha força de lei, é editada pelo Presidente e só depois apreciada pelo Congresso. Por isso a Constituição veda seu uso em matéria de direito penal. A urgência política não supera essa vedação: a política criminal deve seguir o caminho legislativo.\n\nA banca costuma justificar a exceção com \"urgência\" ou \"relevância\". Nenhuma das duas permite criar crime por medida provisória.",
+      "memorize": "Crime só por lei formal. Medida provisória em direito penal: vedada."
      }
     }
    ]
@@ -2913,7 +3572,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "incidência massiva",
        "persistência espaço-temporal"
-      ]
+      ],
+      "aprofundamento": "Os requisitos servem para separar o que é problema criminal do que é só um incômodo isolado ou uma conduta que divide a sociedade. Não basta que algo pareça ruim: é preciso que atinja muitas pessoas, cause dor real, se repita ao longo do tempo e em vários lugares, e que haja consenso sobre suas causas e sobre como enfrentá-lo.\n\nA consequência é ver o crime como **problema social e comunitário**, e não como drama exclusivo entre autor e vítima. Isso abre espaço para a prevenção e para a participação da comunidade na resposta.\n\nA banca costuma retirar um requisito, trocar \"aflitiva\" por \"esporádica\" ou dizer que basta a previsão legal. Lembre: a definição criminológica é material e social, não apenas jurídico-formal.",
+      "memorize": "Problema criminal: incidência massiva + aflitiva + persistência espaço-temporal + consenso (etiologia e intervenção)."
      }
     },
     {
@@ -2927,7 +3588,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "Lombroso",
        "fase científica"
-      ]
+      ],
+      "aprofundamento": "A Criminologia se torna ciência quando troca a especulação pelo **método empírico-indutivo**: observar casos concretos, medir, comparar e só então formular hipóteses. A obra de Lombroso fez isso ao examinar presos, crânios e características físicas, buscando no próprio delinquente a explicação do crime.\n\nAs conclusões lombrosianas (o criminoso nato, os estigmas físicos) foram superadas, mas o método permaneceu. Por isso se diz que o mérito do marco é metodológico, e não o conteúdo da teoria.\n\nA banca pode trocar o autor, a data ou o método (dizendo \"lógico-abstrato\", que é da Escola Clássica). Guarde a correspondência: Lombroso, 1876, observação empírica, início da fase científica.",
+      "memorize": "Fase científica: Lombroso, O Homem Delinquente (1876), método empírico-indutivo."
      }
     },
     {
@@ -2942,7 +3605,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "interdisciplinaridade",
        "integração"
-      ]
+      ],
+      "correcao": {
+       "erro": "Define a interdisciplinaridade como mera justaposição de saberes, sem integração.",
+       "certo": "A interdisciplinaridade exige integração dos saberes biológicos, psicológicos e sociológicos num conhecimento próprio da Criminologia; a mera justaposição é multidisciplinaridade."
+      },
+      "aprofundamento": "A diferença está na integração. Na **multidisciplinaridade**, cada ciência fala do crime com seu próprio método, uma ao lado da outra, sem diálogo: o biólogo vê o corpo, o psicólogo vê a mente, o sociólogo vê o meio. Na **interdisciplinaridade**, esses aportes são combinados e reelaborados, formando um saber novo e próprio da Criminologia.\n\nÉ isso que dá autonomia à Criminologia como ciência: ela não é simples soma de outras disciplinas, mas uma síntese com objeto e método próprios.\n\nA banca explora justamente a troca dos termos. Se a frase falar em \"justaposição\", \"soma\" ou \"sem integração\", está descrevendo a multidisciplinaridade.",
+      "memorize": "Justaposição = multi. Integração = inter."
      }
     },
     {
@@ -2957,7 +3626,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "prevenção",
        "reparação do dano"
-      ]
+      ],
+      "correcao": {
+       "erro": "Inverte o deslocamento, dizendo que o enfoque moderno vai da prevenção e da reparação para o castigo, e trata o crime como problema individual.",
+       "certo": "O enfoque moderno desloca a ênfase do castigo para a prevenção do delito e a reparação do dano, compreendendo o crime como problema comunitário."
+      },
+      "aprofundamento": "A Criminologia contemporânea abandona a ideia de que a resposta ao crime se esgota na punição do infrator. O castigo exemplar resolve pouco: chega depois do dano, não repara a vítima e não atua nas causas.\n\nPor isso o foco migra para a **prevenção** (evitar que o crime ocorra) e para a **reparação** (atender o dano sofrido). Ao mesmo tempo, o crime passa a ser visto como problema comunitário: envolve a vítima, o infrator e a comunidade, que também participa da solução.\n\nA pegadinha é inverter o sentido do movimento. Quando a frase disser que se vai \"da prevenção para o castigo\" ou que o crime é \"problema individual\", está descrevendo o modelo que foi superado.",
+      "memorize": "Moderno: do castigo para a prevenção e a reparação; crime = problema comunitário."
      }
     },
     {
@@ -2972,7 +3647,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "fase pré-científica",
        "lógico-abstrato"
-      ]
+      ],
+      "correcao": {
+       "erro": "Atribui à fase pré-científica a observação sistemática, as estatísticas e os exames antropométricos.",
+       "certo": "A fase pré-científica usava o método lógico-abstrato, especulativo; observação sistemática, estatísticas e medições chegam com o positivismo, na fase científica."
+      },
+      "aprofundamento": "A fase pré-científica, associada à Escola Clássica, pensava o crime como ente jurídico: uma violação da lei por um sujeito racional e livre. O método era **lógico-abstrato**, isto é, raciocínio filosófico e dedutivo a partir de princípios, sem ir a campo observar delinquentes.\n\nA observação sistemática, as estatísticas e os exames antropométricos são ferramentas do **positivismo**, que inaugura a fase científica. É exatamente essa mudança de método que marca a passagem entre as fases.\n\nA banca antecipa técnicas positivistas para o período clássico. Se a frase falar em medição, observação de presos ou estatística, associe ao positivismo, nunca à fase pré-científica.",
+      "memorize": "Pré-científica = lógico-abstrato. Observação e medição = positivismo."
      }
     },
     {
@@ -2986,7 +3667,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "observação participante",
        "Escola de Chicago"
-      ]
+      ],
+      "aprofundamento": "A **observação participante** busca compreender o grupo a partir do ponto de vista de seus membros. Em vez de aplicar questionários de fora, o pesquisador convive, participa da rotina e aprende os significados que as pessoas atribuem às próprias práticas. É técnica **qualitativa**.\n\nA Escola de Chicago usou esse método para estudar a cidade em crescimento, gangues juvenis e bairros desorganizados, o que lhe permitiu ver o crime como fenômeno ligado ao ambiente urbano e às relações sociais.\n\nO limite da técnica é o risco de o pesquisador perder o distanciamento ou se envolver em situações ilícitas. Na prova, a banca pode classificá-la como quantitativa ou atribuí-la a outra escola; ambos os erros são comuns.",
+      "memorize": "Observação participante: qualitativa, pesquisador dentro do grupo, marca da Escola de Chicago."
      }
     },
     {
@@ -3001,7 +3684,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "estudos longitudinais",
        "estudos transversais"
-      ]
+      ],
+      "correcao": {
+       "erro": "Inverte os conceitos, atribuindo aos transversais o acompanhamento ao longo do tempo e aos longitudinais o recorte num único momento.",
+       "certo": "Estudos longitudinais acompanham o mesmo grupo ao longo do tempo; estudos transversais analisam um recorte num único momento."
+      },
+      "aprofundamento": "A diferença está no tempo. O estudo **transversal** observa um grupo num único momento, como uma fotografia: mostra como a criminalidade se distribui naquele instante, mas não revela trajetórias. O estudo **longitudinal** acompanha as mesmas pessoas por anos, como um filme, e permite ver quando a carreira criminal começa, se intensifica ou cessa.\n\nPor isso os estudos longitudinais (de coorte) são a base das pesquisas sobre carreiras criminais e fatores de risco ao longo da vida. São mais caros e demorados, mas captam causalidade com mais segurança.\n\nA pegadinha é a inversão pura. Associe \"longo\" a \"ao longo do tempo\" para não errar.",
+      "memorize": "Longitudinal = filme (ao longo do tempo). Transversal = fotografia (um momento)."
      }
     },
     {
@@ -3016,7 +3705,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "autodenúncia",
        "seletividade"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que a autodenúncia revela criminalidade oculta concentrada apenas nas classes sociais mais baixas.",
+       "certo": "As pesquisas de autodenúncia revelaram que a criminalidade oculta se distribui por todas as classes sociais, o que reforçou a tese da seletividade do sistema penal."
+      },
+      "aprofundamento": "As pesquisas de **autodenúncia** perguntam, de forma anônima, se a pessoa praticou certos delitos. Seu grande achado foi mostrar que comportamentos ilícitos são muito difundidos e aparecem em **todas as classes sociais**, inclusive entre os mais favorecidos.\n\nSe todas as classes delinquem, mas as prisões estão cheias de pobres, a diferença não está só no comportamento, e sim na forma como o sistema escolhe quem perseguir. Esse resultado reforçou a tese da **seletividade** e alimentou o paradigma da reação social.\n\nA banca inverte o achado, dizendo que a criminalidade oculta se concentra nas classes baixas. É o contrário. Outro cuidado: autodenúncia (pergunta ao autor) é diferente de pesquisa de vitimização (pergunta à vítima).",
+      "memorize": "Autodenúncia: todas as classes delinquem; a prisão é que seleciona."
      }
     },
     {
@@ -3030,7 +3725,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "limites éticos",
        "observação"
-      ]
+      ],
+      "aprofundamento": "Nas ciências naturais, o experimento controla variáveis: o pesquisador provoca um fenômeno e mede o resultado. Em Criminologia, isso esbarra em limites éticos (não se pode induzir alguém a cometer crime nem expor pessoas a vitimização) e práticos (não há como isolar todas as variáveis da vida social).\n\nPor isso o **método empírico** se realiza sobretudo de forma indireta: observação, estatística, estudos de caso, entrevistas e pesquisas de vitimização e autodenúncia. Experimentos existem, mas são limitados, como a avaliação de programas de prevenção em áreas comparáveis.\n\nA banca pode afirmar que a experimentação é o método principal da Criminologia, ou que ela não é ciência por não experimentar. Ambas as afirmações são incorretas: ela é empírica, apenas com técnicas adaptadas.",
+      "memorize": "Criminologia é empírica, mas experimenta pouco: observa, mede e estuda casos."
      }
     },
     {
@@ -3045,7 +3742,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "interdisciplinaridade",
        "positivismo"
-      ]
+      ],
+      "correcao": {
+       "erro": "Atribui à Escola Clássica a interdisciplinaridade e a integração de biologia e sociologia.",
+       "certo": "A Escola Clássica era jurídico-filosófica; a abertura aos aportes biológicos e sociológicos começa com o positivismo e a interdisciplinaridade se consolida na Criminologia moderna."
+      },
+      "aprofundamento": "A Escola Clássica pensava o crime a partir do direito e da filosofia: o delito como violação da lei por um sujeito livre e racional, e a pena como resposta proporcional. Seu foco era limitar o poder punitivo, e não investigar causas biológicas ou sociais.\n\nA abertura a outros saberes vem com o **positivismo**: Lombroso traz a antropologia e a biologia, Ferri a sociologia. Só depois, na Criminologia moderna, esses aportes são integrados de forma **interdisciplinar**.\n\nA banca atribui aos clássicos o que é dos positivistas. Se a frase ligar Escola Clássica a biologia ou sociologia, desconfie: a marca clássica é jurídico-filosófica.",
+      "memorize": "Clássica = jurídico-filosófica. Biologia e sociologia entram com o positivismo."
      }
     },
     {
@@ -3059,7 +3762,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "marxista",
        "vítima das estruturas"
-      ]
+      ],
+      "aprofundamento": "A imagem **marxista** parte da ideia de que a sociedade capitalista é marcada por desigualdade e conflito de classes. Nesse contexto, o crime é visto como produto das estruturas econômicas: a pobreza, a exclusão e a exploração empurram certos grupos para a delinquência.\n\nPor isso a responsabilidade se desloca do indivíduo para a organização social. O infrator aparece como **vítima das estruturas**, e a resposta adequada seria transformar a sociedade, e não apenas punir.\n\nNa prova, é útil comparar as imagens: clássica (ser livre e racional), positivista (ser determinado por fatores internos ou externos), correcionalista (ser inferior, incapaz, a ser tutelado) e marxista (vítima das estruturas). A banca costuma trocar essas imagens entre si.",
+      "memorize": "Imagem marxista: o delinquente é vítima das estruturas; a culpa vai para a sociedade."
      }
     },
     {
@@ -3073,7 +3778,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "vitimização secundária",
        "vítima"
-      ]
+      ],
+      "aprofundamento": "A vítima entrou no objeto da Criminologia em várias camadas. Primeiro, pelo papel na gênese do delito: a relação entre autor e vítima (a \"dupla penal\") ajuda a entender como o crime acontece. Depois, pelos danos que sofre, físicos, psicológicos e patrimoniais.\n\nPor fim, pela relação com o sistema de justiça. Ao procurar a polícia ou ser ouvida em juízo, a vítima pode ser maltratada, desacreditada ou exposta, sofrendo a **vitimização secundária**, causada pelas instâncias formais e não pelo autor do crime.\n\nA banca costuma reduzir o interesse pela vítima a um único aspecto, ou confundir vitimização primária (pelo crime), secundária (pelo sistema) e terciária (pelo meio social). A frase certa é ampla.",
+      "memorize": "Vítima interessa por três lados: gênese do crime, danos sofridos e vitimização secundária no sistema."
      }
     },
     {
@@ -3088,7 +3795,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "determinismo",
        "livre-arbítrio"
-      ]
+      ],
+      "correcao": {
+       "erro": "Atribui ao positivismo a imagem do delinquente normal que opta livremente pelo crime.",
+       "certo": "Essa é a imagem clássica; para o positivismo, o delinquente é determinado por fatores biológicos, psicológicos ou sociais."
+      },
+      "aprofundamento": "A Escola Clássica via o delinquente como pessoa normal, dotada de razão e **livre-arbítrio**, que escolhe o crime e por isso merece a pena. O positivismo rompe com essa ideia: o comportamento criminoso seria **determinado** por fatores biológicos, psicológicos ou sociais, que a pessoa não controla.\n\nDaí a imagem do delinquente como \"prisioneiro\" de sua patologia ou de seu meio, e a ideia de que a resposta deveria ser tratamento ou defesa social, e não retribuição moral.\n\nA pegadinha é a troca das imagens. Livre-arbítrio e normalidade pertencem aos clássicos; determinismo e anormalidade, aos positivistas.",
+      "memorize": "Clássica = livre-arbítrio. Positivista = determinismo."
      }
     },
     {
@@ -3102,7 +3815,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "homem real",
        "histórico e concreto"
-      ]
+      ],
+      "aprofundamento": "A Criminologia moderna recusa os dois extremos anteriores. O sujeito puramente racional e abstrato dos clássicos não corresponde à pessoa real, que vive em contextos e sofre influências. O ser totalmente determinado dos positivistas apaga a capacidade de escolha e justifica intervenções sem limite.\n\nA síntese é a do **homem real e histórico**: alguém que decide, mas sob condições concretas que pesam sobre essa decisão. Isso permite pensar responsabilidade e, ao mesmo tempo, prevenção e intervenção sobre fatores de risco.\n\nA banca costuma afirmar que a Criminologia moderna adota o determinismo ou retorna ao livre-arbítrio puro. A resposta certa é o meio-termo: influenciável, mas não determinado.",
+      "memorize": "Criminologia moderna: homem real, histórico e concreto, influenciável, mas não determinado."
      }
     },
     {
@@ -3117,7 +3832,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "controle informal",
        "controle formal"
-      ]
+      ],
+      "correcao": {
+       "erro": "Restringe o objeto ao controle social formal e exclui o informal.",
+       "certo": "O controle social, formal e informal, é objeto da Criminologia; o informal é decisivo para a prevenção e o formal é estudado sobretudo quanto à seletividade."
+      },
+      "aprofundamento": "O controle social é o conjunto de mecanismos que levam as pessoas a seguir as normas. O **controle informal** atua no cotidiano, por meio da família, da escola, do trabalho, da religião e da vizinhança; o **controle formal** é exercido pelas agências estatais, como polícia, MP, Judiciário e prisão.\n\nA Criminologia estuda os dois. O informal é decisivo para a prevenção, porque é ele que, na maior parte do tempo, mantém a conformidade; o formal entra quando o informal falha, e é analisado sobretudo quanto à seletividade e aos efeitos estigmatizantes.\n\nA pegadinha é o \"apenas\". Quando a frase excluir uma das formas de controle do objeto da Criminologia, o gabarito é errado.",
+      "memorize": "Objeto da Criminologia: controle formal E informal."
      }
     },
     {
@@ -3131,7 +3852,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "probabilística",
        "provisória"
-      ]
+      ],
+      "aprofundamento": "A Criminologia lida com comportamento humano em sociedade, que é variável e influenciado por inúmeros fatores. Por isso ela não formula leis exatas como a física: trabalha com tendências, correlações e fatores de risco que aumentam ou diminuem a probabilidade de um resultado.\n\nO saber é também provisório, pois novas pesquisas podem rever conclusões anteriores. A própria história da disciplina mostra isso: teorias que pareciam sólidas, como a do criminoso nato, foram abandonadas diante de novos dados.\n\nA banca pode afirmar que a informação criminológica é exata, definitiva ou capaz de prever com segurança quem vai delinquir. Fique com o par \"probabilística e provisória\".",
+      "memorize": "Informação criminológica: probabilística e provisória, nunca verdade absoluta."
      }
     },
     {
@@ -3146,7 +3869,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "efeitos do sistema penal",
        "reação social"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que a Criminologia é neutra e desinteressada dos efeitos do sistema punitivo.",
+       "certo": "A Criminologia avalia os efeitos do sistema penal, como estigmatização, prisionização e seletividade, tarefa central do paradigma da reação social e da Criminologia crítica."
+      },
+      "aprofundamento": "A ideia de uma Criminologia neutra, que apenas descreve o crime sem olhar para o sistema que o define e pune, foi abandonada pela doutrina moderna. Com o paradigma da **reação social**, o próprio sistema penal passou a ser objeto de estudo.\n\nIsso significa examinar como a polícia, o juiz e a prisão afetam as pessoas: o rótulo de criminoso, a prisionização, a seletividade sobre grupos vulneráveis. A Criminologia crítica aprofunda essa análise, relacionando o controle penal às estruturas de poder.\n\nA pegadinha está em \"neutra e desinteressada\". A Criminologia é empírica e busca rigor, mas não é indiferente às consequências do sistema punitivo; avaliá-las é tarefa central dela.",
+      "memorize": "Criminologia não é neutra diante do sistema penal: avalia seus efeitos."
      }
     },
     {
@@ -3160,7 +3889,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "intervenção positiva",
        "reinserção"
-      ]
+      ],
+      "aprofundamento": "Além de explicar o crime e orientar a prevenção, a Criminologia tem a função de orientar a **intervenção positiva** no infrator. A pergunta é: o que fazer com quem já delinquiu para que não volte a delinquir?\n\nA resposta não é apenas neutralizar (afastar da sociedade), mas oferecer programas que reduzam fatores de risco e ampliem oportunidades: educação, trabalho, tratamento de dependências, apoio familiar. Isso conversa com a prevenção terciária e com o objetivo de integração social da execução penal.\n\nA banca pode reduzir a função da Criminologia à pura neutralização, ou dizer que a intervenção no infrator não é tarefa criminológica. As duas versões são incorretas.",
+      "memorize": "Intervenção positiva: reinserir e reduzir reincidência, não só neutralizar."
      }
     },
     {
@@ -3174,7 +3905,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "substrato empírico",
        "Política Criminal"
-      ]
+      ],
+      "aprofundamento": "O **modelo integrado** de ciências criminais divide tarefas. A Criminologia é ciência do \"ser\": observa e explica o crime, o autor, a vítima e o controle. A **Política Criminal** transforma esse conhecimento em escolhas estratégicas: que condutas criminalizar, que medidas preventivas adotar. O Direito Penal é ciência do \"dever ser\": converte essas escolhas em normas.\n\nA ideia é que a política criminal não deve ser feita no escuro. Leis criadas sem base empírica tendem a ser simbólicas ou ineficazes, enquanto escolhas apoiadas em dados têm mais chance de funcionar.\n\nA banca costuma trocar as funções: dizer que a Política Criminal fornece dados ou que a Criminologia edita normas. Guarde a sequência dado, estratégia, norma.",
+      "memorize": "Criminologia dá o dado; Política Criminal escolhe a estratégia; Direito Penal faz a norma."
      }
     },
     {
@@ -3189,7 +3922,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "paradigma etiológico",
        "processos de criminalização"
-      ]
+      ],
+      "correcao": {
+       "erro": "Generaliza para todas as correntes a busca das causas do crime na pessoa do delinquente.",
+       "certo": "Essa é a lógica do paradigma etiológico; o paradigma da reação social explica a criminalidade pelos processos de criminalização e pela atuação das instâncias de controle."
+      },
+      "aprofundamento": "O **paradigma etiológico**, dominante desde o positivismo, pergunta por que alguém se torna criminoso e procura a resposta em causas: biológicas, psicológicas ou sociais. O foco é o delinquente.\n\nO paradigma da **reação social** muda a pergunta. Em vez de \"por que ele delinque?\", pergunta \"por que certas condutas e pessoas são definidas como criminosas?\". A explicação passa pelos processos de criminalização, pela atuação seletiva das agências e pelo efeito dos rótulos.\n\nA pegadinha está em \"todas as correntes\". Quando a frase generalizar o paradigma etiológico, está ignorando o labelling approach e a Criminologia crítica.",
+      "memorize": "Etiológico: causas no delinquente. Reação social: processos de criminalização."
      }
     },
     {
@@ -3203,7 +3942,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "criminalização primária",
        "criminalização secundária"
-      ]
+      ],
+      "aprofundamento": "A distinção mostra que o crime passa por duas etapas de construção. Na **criminalização primária**, o legislador escolhe abstratamente que condutas serão crime e com que pena. É um programa amplo, que alcança potencialmente qualquer pessoa.\n\nNa **criminalização secundária**, as agências aplicam esse programa a pessoas concretas: a polícia investiga e prende, o MP denuncia, o juiz condena, a prisão executa. É aqui que a seletividade se manifesta com mais força, porque as agências não têm capacidade de alcançar todos os casos.\n\nA banca costuma inverter as etapas ou atribuir a secundária ao legislador. Guarde: primária = lei; secundária = pessoas concretas.",
+      "memorize": "Primária = legislador define o crime. Secundária = agências punem pessoas concretas."
      }
     },
     {
@@ -3218,7 +3959,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "capacidade operacional",
        "seletividade"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que, pela limitada capacidade operacional, as agências aplicam a criminalização primária a todos os casos de forma igualitária.",
+       "certo": "Justamente pela limitada capacidade operacional, as agências selecionam os casos, e a seleção tende a recair sobre os mais vulneráveis."
+      },
+      "aprofundamento": "O programa da criminalização primária é imenso: se todas as condutas previstas como crime fossem perseguidas, o sistema entraria em colapso. As agências só conseguem processar uma pequena parte, e por isso precisam escolher.\n\nEssa escolha tende a recair sobre quem é mais visível e mais vulnerável: pessoas de baixa renda, moradores de áreas vigiadas, quem tem menos recursos para se defender. É a **seletividade** estrutural do sistema penal, um dos achados centrais da Criminologia da reação social.\n\nA pegadinha é a palavra \"igualitária\". A limitação operacional não leva à igualdade; leva exatamente à seleção. Quando a frase disser que o sistema alcança todos de forma igual, o gabarito é errado.",
+      "memorize": "Capacidade limitada gera seleção, não igualdade."
      }
     },
     {
@@ -3232,7 +3979,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "controle formal",
        "estigmatizantes"
-      ]
+      ],
+      "aprofundamento": "O controle informal (família, escola, vizinhança, trabalho) é o que mantém a maior parte das pessoas dentro das normas no dia a dia. O controle formal, exercido por polícia, MP, Judiciário e prisão, é a última linha: entra quando o informal não conseguiu evitar o desvio. Daí falar em **subsidiariedade**.\n\nO controle formal é mais burocrático, segue procedimentos e produz registros oficiais. Isso tem um custo: ao passar pela polícia e pelo processo, a pessoa recebe um rótulo público difícil de apagar, que o labelling approach associa à **estigmatização** e à carreira criminal.\n\nA banca costuma inverter a relação (dizer que o informal é subsidiário do formal) ou afirmar que o controle formal é menos estigmatizante. Ambas as trocas tornam a frase errada.",
+      "memorize": "Controle formal: subsidiário do informal, mais formalizado e mais estigmatizante."
      }
     },
     {
@@ -3247,7 +3996,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "vínculos sociais",
        "Hirschi"
-      ]
+      ],
+      "correcao": {
+       "erro": "Atribui à teoria dos vínculos sociais a resposta de que a conformidade vem da intimidação gerada pela severidade das penas.",
+       "certo": "Para Hirschi, a maioria não delinque por causa dos laços com a sociedade (apego, compromisso, envolvimento e crença), e não pela severidade penal."
+      },
+      "aprofundamento": "Hirschi inverte a pergunta tradicional. Em vez de \"por que alguns delinquem?\", ele pergunta \"por que a maioria não delinque?\", partindo da ideia de que a tentação de violar normas é comum a todos. A resposta está nos **vínculos sociais** que prendem a pessoa à sociedade.\n\nSão quatro elementos: apego (laços afetivos com família e amigos), compromisso (investimento em projetos como estudo e carreira, que o crime poria em risco), envolvimento (tempo ocupado com atividades convencionais) e crença (adesão às normas). Quando esses laços enfraquecem, a pessoa fica livre para delinquir.\n\nA pegadinha mantém a pergunta correta e troca a resposta pela intimidação penal, que é lógica do modelo dissuasório. Para Hirschi, o freio é social e informal, não a severidade da pena.",
+      "memorize": "Hirschi: por que não delinquem? Por causa dos vínculos: apego, compromisso, envolvimento e crença."
      }
     },
     {
@@ -3262,7 +4017,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "associação diferencial",
        "enfraquecimento dos vínculos"
-      ]
+      ],
+      "correcao": {
+       "erro": "Atribui à teoria dos vínculos sociais a explicação do aprendizado de técnicas e motivações em grupos íntimos.",
+       "certo": "O aprendizado em grupos íntimos é a associação diferencial de Sutherland; para a teoria dos vínculos sociais, de Hirschi, a delinquência decorre do enfraquecimento dos vínculos sociais."
+      },
+      "aprofundamento": "As duas teorias respondem a perguntas diferentes. A **associação diferencial**, de Sutherland, explica o crime como comportamento aprendido: em grupos íntimos, a pessoa aprende técnicas, motivos e justificativas, e delinque quando as definições favoráveis à violação da lei superam as desfavoráveis.\n\nA teoria dos vínculos, de Hirschi, não precisa explicar a motivação, pois a supõe comum a todos. O que explica o crime é a ausência de freios: quando os laços com a família, a escola e as instituições convencionais se enfraquecem, nada segura a pessoa.\n\nNa prova, associe \"aprendizado\" e \"grupos íntimos\" a Sutherland; \"laços\", \"vínculos\" e \"controle\" a Hirschi. A banca troca exatamente esses núcleos.",
+      "memorize": "Aprende o crime = Sutherland. Perde os vínculos = Hirschi."
      }
     },
     {
@@ -3276,7 +4037,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "culpabilidade do fato",
        "Direito Penal do autor"
-      ]
+      ],
+      "aprofundamento": "A **culpabilidade do fato** significa que se pune o que a pessoa fez, e não quem ela é. O juízo de reprovação recai sobre uma conduta concreta, típica e ilícita, praticada por alguém que podia agir de outro modo.\n\nO **Direito Penal do autor** pune o modo de ser: a personalidade perigosa, o estilo de vida, a pertença a um grupo. Esse modelo, típico de regimes autoritários, abre espaço para perseguir pessoas sem que tenham cometido qualquer fato, e é incompatível com a legalidade e a dignidade humana.\n\nIsso não impede que personalidade e conduta social pesem na dosimetria, como circunstâncias judiciais. O que não se admite é que, \"por si sós\", fundamentem a punição. Essa expressão é a chave do item.",
+      "memorize": "Pune-se o fato, não o autor; personalidade só modula, nunca fundamenta a pena."
      }
     },
     {
@@ -3290,7 +4053,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "fundamento e limite",
        "culpabilidade"
-      ]
+      ],
+      "aprofundamento": "A culpabilidade cumpre dupla função. Como **fundamento**, ela é condição para punir: sem culpabilidade, não há pena. Como **limite**, ela fixa o teto da pena: a resposta não pode ir além da reprovação que o fato merece.\n\nEsse limite é importante porque as finalidades preventivas, sozinhas, não têm freio. Se o objetivo fosse apenas intimidar a sociedade ou neutralizar o perigoso, sempre se poderia justificar uma pena maior. A culpabilidade impede que a pessoa seja usada como instrumento para fins coletivos.\n\nA banca costuma dizer que a prevenção pode justificar pena acima da culpabilidade. Essa frase é errada: a prevenção pode, no máximo, atuar abaixo do teto, nunca ultrapassá-lo.",
+      "memorize": "Culpabilidade: fundamento e limite. Prevenção não fura o teto."
      }
     },
     {
@@ -3305,7 +4070,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "prevenção geral negativa",
        "prevenção especial negativa"
-      ]
+      ],
+      "correcao": {
+       "erro": "Atribui à prevenção geral negativa a intimidação dirigida ao próprio condenado.",
+       "certo": "A prevenção geral negativa intimida a coletividade; intimidar o próprio condenado para que não volte a delinquir é prevenção especial negativa."
+      },
+      "aprofundamento": "As teorias preventivas se dividem por dois critérios: o destinatário (geral, a coletividade; especial, o condenado) e o modo (negativo, por intimidação ou neutralização; positivo, por reafirmação da norma ou ressocialização).\n\nA **prevenção geral negativa** usa a pena como exemplo para a sociedade: ao ver alguém punido, os demais se intimidam. A **prevenção especial negativa** atua sobre o próprio condenado, para que ele não volte a delinquir, seja pela intimidação individual, seja pela neutralização durante o cumprimento.\n\nA pegadinha troca o destinatário. Monte a tabela mental: geral = todos; especial = o condenado; negativa = intimida ou neutraliza; positiva = reafirma ou ressocializa.",
+      "memorize": "Geral = coletividade. Especial = condenado. Negativa = intimida. Positiva = integra."
      }
     },
     {
@@ -3319,7 +4090,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "prevenção geral positiva",
        "vigência da norma"
-      ]
+      ],
+      "aprofundamento": "A **prevenção geral positiva**, também chamada integradora, não aposta no medo. A ideia é que o crime abala a confiança da sociedade na validade da norma, e a pena serve para mostrar que a norma continua valendo.\n\nCom isso, a pena fortalece a fidelidade dos cidadãos ao Direito e estabiliza as expectativas sociais. O destinatário é a coletividade, como na geral negativa, mas a mensagem é outra: não \"tenha medo\", e sim \"a regra continua de pé\".\n\nA crítica comum é que essa teoria pode justificar penas simbólicas, desligadas da proteção concreta de bens jurídicos. Na prova, a banca costuma confundi-la com a geral negativa (intimidação) ou com a especial positiva (ressocialização).",
+      "memorize": "Geral positiva: a pena reafirma a norma e a confiança no Direito."
      }
     },
     {
@@ -3343,7 +4116,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "prevenção especial positiva",
        "harmônica integração social"
-      ]
+      ],
+      "aprofundamento": "A **prevenção especial positiva** vê a pena como oportunidade de transformar o condenado, oferecendo condições para que ele volte ao convívio social sem delinquir. É o chamado ideal ressocializador.\n\nO dispositivo citado expressa isso ao incluir, entre os objetivos da execução, proporcionar condições para a harmônica integração social do condenado e do internado. Educação, trabalho, assistência e progressão de regime são instrumentos dessa finalidade.\n\nRepare que a lei fala em \"proporcionar condições\", e não em impor uma mudança de personalidade: a ressocialização é oferta, não tratamento forçado. A banca pode associar o dispositivo à retribuição ou à prevenção geral; a correspondência correta é com a especial positiva.",
+      "memorize": "Integração social do condenado (LEP, art. 1º) = prevenção especial positiva."
      }
     },
     {
@@ -3368,7 +4143,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "substituição",
        "alternativas à prisão"
-      ]
+      ],
+      "correcao": {
+       "erro": "Retira das decisões do juiz na sentença a substituição da pena privativa e a atribui exclusivamente à execução.",
+       "certo": "Ao fixar a pena, o juiz decide também sobre a substituição da pena privativa de liberdade por outra espécie, se cabível (CP, art. 59, IV)."
+      },
+      "aprofundamento": "O dispositivo citado lista as decisões do juiz na sentença: escolher a pena, fixar sua quantidade, definir o regime inicial e verificar se cabe a substituição da pena privativa por outra espécie. A substituição é, portanto, tarefa do juiz da condenação.\n\nIsso reflete uma escolha de política criminal: a prisão deve ser a última opção, e o juiz, ao individualizar a pena, deve verificar desde logo se a resposta alternativa é suficiente. Evitar a prisão quando possível reduz os efeitos da prisionização e da estigmatização.\n\nA expressão \"se cabível\" indica que a substituição depende de requisitos legais; não é automática. A pegadinha é empurrar a decisão para a execução penal, como se fosse matéria exclusiva dela.",
+      "memorize": "Substituição da pena privativa: decisão do juiz da sentença, se cabível."
      }
     },
     {
@@ -3382,7 +4163,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "funcionalista",
        "teorias do consenso"
-      ]
+      ],
+      "aprofundamento": "As teorias do **consenso** partem da ideia de que a sociedade é um sistema integrado, em que as partes cumprem funções e os membros compartilham valores básicos. A ordem social é a regra; o crime, um desvio que indica falha no funcionamento.\n\nO **funcionalismo** fornece essa base: instituições como família, escola e trabalho distribuem papéis e transmitem metas comuns. Quando funcionam, há integração; quando falham, surge a desorganização ou a anomia. Escola de Chicago, anomia, subcultura e associação diferencial costumam ser agrupadas nessa família.\n\nO contraponto são as teorias do conflito, para as quais a ordem resulta de imposição de grupos dominantes. A banca costuma trocar as famílias, pondo teoria crítica entre as de consenso ou anomia entre as de conflito.",
+      "memorize": "Consenso: sociedade integrada, valores comuns, base funcionalista."
      }
     },
     {
@@ -3396,7 +4179,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "multifatoriais",
        "Ferri"
-      ]
+      ],
+      "aprofundamento": "As **teorias multifatoriais** rejeitam a explicação do crime por uma única causa. O comportamento delinquente resultaria da combinação de vários fatores, de diferentes naturezas, que se reforçam mutuamente.\n\nFerri, um dos expoentes do positivismo, já apontava nessa direção ao dividir os fatores do crime em três grupos: antropológicos (ligados ao indivíduo, como constituição orgânica e psíquica), físicos (ligados ao ambiente natural, como clima e geografia) e sociais (ligados à organização da sociedade, como economia e família). Com isso, ele ampliou o positivismo lombrosiano para o campo sociológico.\n\nA banca pode trocar os grupos de fatores ou atribuir a classificação a outro autor. Guarde a tríade e o nome de Ferri.",
+      "memorize": "Ferri: fatores antropológicos, físicos e sociais."
      }
     },
     {
@@ -3411,7 +4196,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "Criminologia crítica",
        "conflito"
-      ]
+      ],
+      "correcao": {
+       "erro": "Classifica a Criminologia crítica como teoria do consenso, de matriz funcionalista.",
+       "certo": "A Criminologia crítica é teoria do conflito, de matriz marxista."
+      },
+      "aprofundamento": "A **Criminologia crítica** é a principal representante das teorias do **conflito**. Para ela, a sociedade não se funda em consenso, mas na desigualdade e na dominação: o direito penal protege interesses de quem detém o poder e se volta preferencialmente contra os grupos subalternos.\n\nSua matriz é **marxista**: a análise do crime e do controle penal passa pelas estruturas econômicas e pela luta de classes. É, por isso mesmo, crítica do funcionalismo, que trata a ordem social como algo dado e neutro.\n\nA pegadinha troca a família teórica. Se a frase disser \"consenso\" ou \"funcionalista\" ao lado de \"crítica\", o gabarito é errado.",
+      "memorize": "Crítica = conflito + marxismo."
      }
     },
     {
@@ -3425,7 +4216,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "microssociológica",
        "macrossociológica"
-      ]
+      ],
+      "aprofundamento": "O **labelling approach** nasce do interacionismo simbólico, que estuda como os significados se constroem nas interações cotidianas. Por isso ele se concentra no plano **microssociológico**: como alguém recebe o rótulo de desviante, como a polícia e o juiz definem situações, como a pessoa incorpora a etiqueta.\n\nA **Criminologia crítica** reconhece esses achados, mas observa que eles não explicam por que certos grupos têm o poder de definir quem é criminoso. Para responder, leva a análise ao plano **macrossociológico**, das estruturas econômicas e de poder.\n\nA banca costuma inverter os planos, atribuindo ao labelling a análise macro ou à crítica a origem interacionista.",
+      "memorize": "Labelling = micro (interacionismo). Crítica = macro (estruturas de poder)."
      }
     },
     {
@@ -3440,7 +4233,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "atividades rotineiras",
        "guardião capaz"
-      ]
+      ],
+      "correcao": {
+       "erro": "Inclui entre os elementos a presença de um guardião capaz.",
+       "certo": "O crime predatório ocorre com a convergência, no tempo e no espaço, de ofensor motivado, alvo adequado e ausência de guardião capaz."
+      },
+      "aprofundamento": "A teoria das **atividades rotineiras** desloca a atenção do criminoso para a situação. O crime predatório acontece quando três elementos se encontram no mesmo tempo e lugar: alguém disposto a delinquir, um alvo atrativo e acessível e a falta de alguém capaz de impedir.\n\nO **guardião capaz** não é só a polícia: pode ser o vizinho atento, o porteiro, a câmera, o próprio dono do bem. A mudança nas rotinas sociais (casas vazias durante o dia, bens portáteis valiosos) aumenta as oportunidades, mesmo sem mudar o número de pessoas motivadas.\n\nA pegadinha troca \"ausência\" por \"presença\". Com guardião presente, a tendência é o crime não ocorrer; é a falta dele que fecha o triângulo.",
+      "memorize": "Ofensor motivado + alvo adequado + AUSÊNCIA de guardião = crime."
      }
     },
     {
@@ -3454,7 +4253,10 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "técnicas de neutralização",
        "Sykes e Matza"
-      ]
+      ],
+      "aprofundamento": "Sykes e Matza observaram que jovens infratores não rejeitam totalmente os valores convencionais: muitos sentem culpa, admiram pessoas honestas e distinguem quem pode ser vítima. Para delinquir, precisam de justificativas que suspendam momentaneamente a força das normas.\n\nAs **técnicas de neutralização** cumprem essa função: \"não foi culpa minha\" (negação da responsabilidade), \"ninguém saiu ferido\" (negação do dano), \"ele mereceu\" (negação da vítima), \"quem me julga é pior\" (condenação dos que condenam) e \"fiz pelo grupo\" (apelo a lealdades superiores).\n\nA teoria se liga à aprendizagem: essas justificativas são aprendidas. A banca costuma trocar uma técnica por outra ou atribuí-las a outro autor.",
+      "exemplo": "Pedro furta uma loja grande e diz a si mesmo que a empresa tem seguro e não vai sentir a perda. É a negação do dano.",
+      "memorize": "Neutralização: nega responsabilidade, dano e vítima; condena quem condena; apela a lealdades superiores."
      }
     },
     {
@@ -3469,7 +4271,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "neutralização",
        "valores dominantes"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que, na teoria da neutralização, o delinquente rejeita integralmente os valores dominantes, como na subcultura de Cohen.",
+       "certo": "Para Sykes e Matza, o delinquente reconhece os valores dominantes e por isso precisa neutralizá-los com justificativas, o que critica a ideia de valores totalmente invertidos."
+      },
+      "aprofundamento": "A teoria da subcultura de Cohen descreve grupos juvenis que constroem valores próprios, opostos aos da classe média, em reação à frustração de status. Nesse modelo, há verdadeira inversão de valores.\n\nSykes e Matza discordam. Se o jovem infrator tivesse valores totalmente invertidos, não sentiria culpa nem precisaria se justificar. O fato de usar **técnicas de neutralização** mostra que ele **reconhece** as normas dominantes e precisa \"desligá-las\" momentaneamente para agir.\n\nPor isso a neutralização é frequentemente apresentada como crítica à subcultura. A pegadinha iguala as duas teorias; lembre que a palavra-chave da neutralização é justificativa, e não rejeição.",
+      "memorize": "Subcultura: inverte valores. Neutralização: reconhece e justifica."
      }
     },
     {
@@ -3483,7 +4291,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "janelas quebradas",
        "tolerância zero"
-      ]
+      ],
+      "aprofundamento": "A metáfora é simples: se uma janela quebrada não é consertada, transmite a mensagem de que ninguém cuida do lugar, e logo outras serão quebradas. A **desordem** visível (pichação, lixo, vandalismo, pequenas infrações) sinaliza ausência de controle e afasta os moradores dos espaços públicos.\n\nCom o recuo do controle informal, o local se torna atrativo para crimes mais graves. A resposta proposta é agir cedo, reparando a desordem e reprimindo pequenas infrações para restaurar o controle.\n\nEssa ideia inspirou políticas de **tolerância zero**, criticadas por gerar seletividade e abuso policial contra grupos vulneráveis. A banca pode trocar os autores (por exemplo, com o espaço defensável) ou negar a ligação com a tolerância zero.",
+      "memorize": "Janelas quebradas (Wilson e Kelling, 1982): desordem não reparada atrai crime grave; base da tolerância zero."
      }
     },
     {
@@ -3498,7 +4308,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "pequenas desordens",
        "janelas quebradas"
-      ]
+      ],
+      "correcao": {
+       "erro": "Considera as pequenas desordens irrelevantes e propõe foco exclusivo nos crimes violentos.",
+       "certo": "Para as janelas quebradas, as pequenas desordens importam, pois sinalizam abandono e atraem crimes mais graves; por isso devem ser enfrentadas."
+      },
+      "aprofundamento": "A premissa central das janelas quebradas é exatamente a importância das **pequenas desordens**. Elas não são graves em si, mas comunicam abandono: indicam que o local não é vigiado nem cuidado, o que enfraquece o controle informal e atrai infratores mais sérios.\n\nPor isso a teoria propõe atuar sobre a desordem e as pequenas infrações, e não só sobre os crimes violentos. A lógica é preventiva: interromper a escalada antes que ela chegue ao crime grave.\n\nA assertiva nega a premissa da teoria. Quando a frase disser que a desordem é irrelevante ou que a polícia deve focar exclusivamente nos crimes graves, está descrevendo o oposto das janelas quebradas.",
+      "memorize": "Janelas quebradas: a pequena desordem importa."
      }
     },
     {
@@ -3512,7 +4328,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "colarinho branco",
        "Sutherland"
-      ]
+      ],
+      "aprofundamento": "Ao formular o conceito de **crime de colarinho branco**, Sutherland desmontou a ideia de que o crime é fenômeno ligado à pobreza. Executivos, profissionais liberais e empresários também delinquem, no exercício da profissão, por meio de fraudes, corrupção e crimes contra a ordem econômica.\n\nIsso fragilizava as teorias que explicavam o crime por patologias individuais ou por miséria, e reforçava a **associação diferencial**: o crime é aprendido nos grupos de convivência, inclusive em ambientes corporativos.\n\nO conceito também revelou que esses crimes raramente chegam ao sistema penal, o que se relaciona à cifra dourada. A banca costuma retirar o elemento \"no curso da ocupação\" ou atribuir o conceito a outro autor.",
+      "memorize": "Colarinho branco (Sutherland): alto status + respeitabilidade + crime no curso da ocupação."
      }
     },
     {
@@ -3526,7 +4344,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "oportunidade diferencial",
        "Cloward e Ohlin"
-      ]
+      ],
+      "aprofundamento": "Cloward e Ohlin partem da anomia: a sociedade impõe metas a todos, mas distribui de forma desigual os meios legítimos para alcançá-las. A contribuição deles foi notar que os meios ilegítimos também são desiguais: nem todo bairro oferece acesso a redes criminosas organizadas.\n\nDaí as três subculturas. A **criminal** surge onde há estrutura ilegal estável, que ensina e recruta; a **conflitiva** aparece onde não há essa estrutura, e a violência vira forma de obter status; a **retraída** reúne quem fracassou nos dois caminhos e se refugia, por exemplo, no uso de drogas.\n\nA teoria une a anomia e a associação diferencial. A banca costuma trocar as subculturas ou suas características.",
+      "memorize": "Oportunidade diferencial: subculturas criminal, conflitiva e retraída."
      }
     },
     {
@@ -3540,7 +4360,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "prevenção situacional",
        "oportunidades"
-      ]
+      ],
+      "aprofundamento": "A **prevenção situacional** não tenta mudar a pessoa nem a sociedade; atua sobre o momento e o lugar do crime. Parte da ideia de que o infrator faz um cálculo rápido de custo e benefício, e de que, alterando as condições da situação, é possível fazer o crime parecer menos compensador.\n\nAs estratégias são três: aumentar o esforço (fechaduras, grades, controle de acesso), aumentar o risco (iluminação, câmeras, vigilância) e reduzir as recompensas (cofres, marcação de bens, menos dinheiro em espécie).\n\nEla se encaixa na prevenção secundária e conversa com a teoria das atividades rotineiras. A banca pode confundi-la com prevenção primária, que atua nas raízes sociais do crime.",
+      "memorize": "Situacional: mais esforço, mais risco, menos recompensa."
      }
     },
     {
@@ -3554,7 +4376,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "deslocamento",
        "difusão de benefícios"
-      ]
+      ],
+      "aprofundamento": "Se a prevenção situacional apenas bloqueia uma oportunidade, o infrator motivado pode simplesmente procurar outra. O **deslocamento** pode ser geográfico (outra rua), temporal (outro horário), de alvo (outra vítima), de método ou até de tipo de crime.\n\nOs defensores respondem que o deslocamento raramente é total, porque muitas oportunidades dependem de circunstâncias específicas. Além disso, apontam o efeito oposto, a **difusão de benefícios**: as áreas vizinhas também melhoram, porque o infrator não sabe exatamente onde a vigilância termina.\n\nNa prova, a banca pode apresentar o deslocamento como vantagem da prevenção situacional ou negar que seja crítica a ela. É, sim, a crítica mais conhecida.",
+      "memorize": "Crítica à situacional: deslocamento. Resposta: difusão de benefícios."
      }
     },
     {
@@ -3569,7 +4393,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "espaço defensável",
        "Oscar Newman"
-      ]
+      ],
+      "correcao": {
+       "erro": "Atribui a teoria do espaço defensável a Wilson e Kelling.",
+       "certo": "A teoria do espaço defensável, que relaciona o desenho arquitetônico ao controle natural do território pelos moradores, é de Oscar Newman; Wilson e Kelling são autores das janelas quebradas."
+      },
+      "aprofundamento": "O **espaço defensável** propõe que o desenho arquitetônico e urbano pode favorecer o controle do território pelos próprios moradores. Espaços com limites claros, janelas voltadas para áreas comuns e sensação de pertencimento permitem vigilância natural e inibem o crime.\n\nA teoria é de Oscar Newman e está na base da prevenção pelo desenho ambiental. Wilson e Kelling são os autores das janelas quebradas, que tratam do efeito da desordem não reparada. As duas teorias se aproximam por valorizar o controle informal sobre o ambiente, o que facilita a confusão.\n\nRepare que o conteúdo da assertiva está correto; o erro está só no autor. É uma troca típica da banca: manter a descrição e trocar o nome.",
+      "memorize": "Espaço defensável = Newman. Janelas quebradas = Wilson e Kelling."
      }
     },
     {
@@ -3584,7 +4414,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "lei e ordem",
        "garantias"
-      ]
+      ],
+      "correcao": {
+       "erro": "Apresenta lei e ordem e tolerância zero irrestrita como modelos ideais, com a eficiência da repressão prevalecendo sobre as garantias.",
+       "certo": "No Estado Democrático de Direito, as garantias limitam a prevenção, e as políticas de lei e ordem são criticadas pela seletividade e pelo custo em direitos."
+      },
+      "aprofundamento": "Os movimentos de **lei e ordem** apostam no endurecimento penal, no aumento das penas e na repressão intensa como respostas ao crime. A tolerância zero, aplicada de forma irrestrita, persegue toda pequena infração.\n\nNo Estado Democrático de Direito, essas políticas encontram limites. As garantias fundamentais não são obstáculos a serem removidos pela eficiência; são condição de legitimidade da atuação estatal. Além disso, a Criminologia aponta efeitos colaterais: seletividade sobre grupos vulneráveis, abusos, superlotação carcerária e prisionização.\n\nA pegadinha está em \"modelos ideais\" e \"prevalece sobre as garantias\". Frases que colocam a eficiência repressiva acima dos direitos tendem a ser erradas.",
+      "memorize": "Garantia é limite; eficiência repressiva não a supera."
      }
     },
     {
@@ -3598,7 +4434,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "policiamento comunitário",
        "parceria"
-      ]
+      ],
+      "aprofundamento": "O **policiamento comunitário** muda a relação entre polícia e população. Em vez de apenas responder a chamadas, a polícia se aproxima da comunidade, conhece seus problemas e trabalha com ela para resolvê-los.\n\nO foco passa da ocorrência isolada para os **problemas** que a geram: um terreno abandonado, uma rua mal iluminada, um conflito recorrente entre vizinhos. A comunidade participa da identificação e da solução, o que fortalece o controle informal e a confiança na polícia.\n\nEsse modelo se relaciona com a prevenção secundária e situacional e com a ideia de crime como problema comunitário. A banca pode descrevê-lo como reforço da repressão ou como atuação exclusiva da polícia; ambas as versões fogem da noção de parceria.",
+      "memorize": "Policiamento comunitário: parceria com a comunidade e foco nos problemas locais."
      }
     },
     {
@@ -3613,7 +4451,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "raízes",
        "prevenção secundária"
-      ]
+      ],
+      "correcao": {
+       "erro": "Atribui à prevenção primária a atuação no momento e no lugar em que o crime se manifesta.",
+       "certo": "A prevenção primária atua antes, nas raízes do crime; atuar no momento e no lugar em que o crime se manifesta é próprio da prevenção secundária."
+      },
+      "aprofundamento": "A classificação da prevenção usa três critérios: momento, destinatário e meios. A **prevenção primária** atua antes de qualquer crime, nas causas profundas: educação, moradia, emprego, saúde, cultura. Seu destinatário é a população em geral, e seus efeitos são de longo prazo.\n\nA **prevenção secundária** atua onde e quando o crime se manifesta: áreas de risco, grupos vulneráveis, horários críticos. Inclui policiamento, prevenção situacional e programas focalizados. A terciária atua depois, sobre o condenado.\n\nA pegadinha descreve a secundária e a chama de primária. Lembre que a primária é a mais \"distante\" do crime: atua na raiz, não no momento da manifestação.",
+      "memorize": "Primária = raiz. Secundária = onde o crime aparece. Terciária = depois da condenação."
      }
     },
     {
@@ -3637,7 +4481,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "campanhas educativas",
        "prevenção primária"
-      ]
+      ],
+      "aprofundamento": "Campanhas educativas atuam sobre a cultura, buscando mudar valores e comportamentos antes que a violência aconteça. Como se dirigem a toda a sociedade, e não a um grupo de risco ou a agressores identificados, são **prevenção primária**.\n\nA lei citada prevê essas campanhas entre as diretrizes de prevenção da violência doméstica e familiar contra a mulher. A violência de gênero tem raízes culturais (papéis tradicionais, tolerância social à agressão), e por isso a prevenção precisa atuar na educação desde a escola.\n\nA banca pode classificar a campanha como secundária ou terciária. Pergunte-se sempre: quem é o destinatário? Se for o público escolar e a sociedade em geral, é primária.",
+      "memorize": "Campanha educativa para toda a sociedade = prevenção primária."
      }
     },
     {
@@ -3652,7 +4498,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "população em geral",
        "condenado"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que o destinatário da prevenção primária é o condenado.",
+       "certo": "A prevenção primária dirige-se à população em geral; o condenado é destinatário da prevenção terciária."
+      },
+      "aprofundamento": "O destinatário é um dos critérios mais seguros para classificar a prevenção. A **primária** se dirige a toda a população, sem selecionar ninguém; a **secundária**, a grupos e áreas de risco; a **terciária**, a quem já foi condenado, com o objetivo de evitar a reincidência.\n\nA lógica segue a distância em relação ao crime: quanto mais cedo a intervenção, mais amplo o público. A prevenção primária, por ser política social geral, beneficia até quem nunca chegaria perto do crime.\n\nA pegadinha troca o destinatário. Se a frase disser \"condenado\", a resposta é terciária; se disser \"população em geral\", primária.",
+      "memorize": "Primária = todos. Secundária = grupos de risco. Terciária = condenado."
      }
     },
     {
@@ -3666,7 +4518,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "política social",
        "raízes sociais"
-      ]
+      ],
+      "aprofundamento": "A prevenção primária parte da premissa de que o crime tem raízes sociais: desigualdade, exclusão, falta de educação e oportunidades, desestruturação de laços comunitários. Se é assim, a resposta mais eficaz não está no direito penal, mas em políticas públicas que atuem nessas condições.\n\nPor isso se diz que ela é, sobretudo, **política social**. Escola, emprego, moradia e saúde são instrumentos de prevenção, ainda que não tenham o crime como alvo direto. Os resultados demoram, o que a torna pouco atraente para quem busca efeitos imediatos.\n\nA banca costuma dizer que a prevenção primária se realiza principalmente pelo endurecimento das penas ou pelo policiamento; essas medidas pertencem a outros níveis.",
+      "memorize": "Prevenção primária = política social de longo prazo."
      }
     },
     {
@@ -3690,7 +4544,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "erradicar a pobreza",
        "prevenção primária"
-      ]
+      ],
+      "aprofundamento": "O dispositivo citado fixa, entre os objetivos fundamentais da República, erradicar a pobreza e a marginalização e reduzir as desigualdades. Eles não foram escritos como norma penal, mas atuam exatamente sobre as condições que a Criminologia associa à criminalidade.\n\nPor isso a doutrina vê nesses objetivos o horizonte constitucional da **prevenção primária**: ao promover inclusão e igualdade, o Estado atua nas causas do crime, e não apenas em suas consequências.\n\nA conexão também reforça a ideia de que segurança pública não se resume à polícia e ao direito penal. A banca pode afirmar que esses objetivos não guardam relação com a prevenção do crime; a relação existe, ainda que indireta.",
+      "memorize": "Objetivos do art. 3º, III, da CF = horizonte da prevenção primária."
      }
     },
     {
@@ -3704,7 +4560,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "seletivo",
        "ação policial"
-      ]
+      ],
+      "aprofundamento": "A **prevenção secundária** não alcança toda a população; ela escolhe onde e sobre quem atuar, com base em dados de criminalidade. Policiamento em áreas de risco, programas para grupos vulneráveis e medidas situacionais em locais críticos são exemplos.\n\nEssa focalização a torna eficiente no curto prazo, mas também **seletiva**. Concentrar a vigilância em certos bairros e grupos aumenta a chance de que crimes ali sejam registrados, reforçando estereótipos e estigmas, enquanto outras áreas e outros crimes ficam fora do radar.\n\nA ligação com a política legislativa e a ação policial distingue a secundária da primária, que é política social ampla. A banca pode descrevê-la como universal ou neutra; o traço característico é a seleção.",
+      "memorize": "Secundária: focalizada, ligada à polícia e à legislação, e por isso seletiva."
      }
     },
     {
@@ -3719,7 +4577,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "egressos",
        "prevenção terciária"
-      ]
+      ],
+      "correcao": {
+       "erro": "Classifica programas de reinserção de egressos como prevenção secundária.",
+       "certo": "Programas de reinserção de egressos do sistema prisional são prevenção terciária, pois se dirigem a quem já foi condenado, para evitar a reincidência."
+      },
+      "aprofundamento": "O critério decisivo aqui é o destinatário. O egresso é alguém que já foi condenado e cumpriu pena; a intervenção sobre ele visa evitar que volte a delinquir. Isso é **prevenção terciária**, que atua depois do crime e da condenação.\n\nA LEP prevê assistência ao egresso justamente para facilitar a reinserção: apoio na obtenção de trabalho, orientação e, se necessário, alojamento e alimentação temporários. O objetivo é romper o ciclo de reincidência.\n\nA **prevenção secundária** atua antes de qualquer condenação, sobre grupos e áreas de risco. A banca troca os níveis; lembre que \"egresso\", \"condenado\" e \"reincidência\" apontam para a terciária.",
+      "memorize": "Egresso = prevenção terciária."
      }
     },
     {
@@ -3733,7 +4597,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "estigmatização",
        "deslocamento"
-      ]
+      ],
+      "aprofundamento": "As duas críticas decorrem da própria natureza da prevenção secundária. Por ser focalizada, ela marca certos bairros e grupos como perigosos, o que pode gerar **estigmatização**: os moradores passam a ser vistos como suspeitos, e a vigilância concentrada produz mais registros, reforçando a imagem.\n\nPor atuar sobre oportunidades em lugares específicos, ela também pode apenas empurrar a criminalidade para outro local, horário ou alvo: o **deslocamento**. O crime não desaparece, apenas muda de endereço.\n\nEssas críticas não tornam a prevenção secundária inútil, mas mostram que ela não substitui a primária. A banca pode trocar as críticas por características da terciária, como intervenção tardia.",
+      "memorize": "Secundária: risco de estigmatizar e de deslocar o crime."
      }
     },
     {
@@ -3747,7 +4613,10 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "jovens em situação de risco",
        "prevenção secundária"
-      ]
+      ],
+      "aprofundamento": "Para classificar o programa, olhe o destinatário e o momento. Jovens em situação de risco em bairros violentos formam um grupo específico, selecionado por estar mais exposto ao crime, como autor ou como vítima. A intervenção ocorre antes de qualquer condenação.\n\nIsso caracteriza a **prevenção secundária**: focalizada em grupos e áreas onde o crime se manifesta com mais intensidade. Se o mesmo programa fosse oferecido a todos os jovens do país, sem seleção, seria primária; se fosse dirigido a adolescentes que já cumpriram medida, seria terciária.\n\nA banca costuma chamar esse tipo de programa de primário, por envolver educação ou esporte. Mas o que define o nível é o público, e não o conteúdo da ação.",
+      "exemplo": "Um município oferece oficinas profissionalizantes apenas para jovens de dois bairros com altos índices de homicídio. É prevenção secundária, pois o público é selecionado por estar em risco.",
+      "memorize": "Grupo de risco em área de risco = prevenção secundária."
      }
     },
     {
@@ -3762,7 +4631,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "prevenção terciária",
        "condenação"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que a prevenção secundária atua após a condenação definitiva.",
+       "certo": "A prevenção secundária atua quando e onde o crime se manifesta, antes de qualquer condenação; após a condenação atua a prevenção terciária."
+      },
+      "aprofundamento": "O momento de atuação é critério clássico da classificação. A **primária** atua antes, nas causas; a **secundária** atua quando e onde o crime se manifesta, sobre áreas e grupos de risco; a **terciária** atua depois, sobre quem já foi condenado.\n\nA prevenção secundária, portanto, não depende de condenação. Ela é anterior a qualquer processo: policiamento preventivo, câmeras, programas para jovens em risco. Seu objetivo é impedir que o crime aconteça naquele contexto específico.\n\nA pegadinha descreve o momento da terciária e o atribui à secundária. Se a frase falar em \"após a condenação\", a resposta é terciária.",
+      "memorize": "Após a condenação = terciária, nunca secundária."
      }
     },
     {
@@ -3787,7 +4662,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "3 dias de trabalho",
        "remição"
-      ]
+      ],
+      "correcao": {
+       "erro": "Fixa a proporção em um dia de pena a cada dois dias de trabalho.",
+       "certo": "Na remição pelo trabalho, desconta-se 1 dia de pena a cada 3 dias de trabalho (LEP, art. 126, § 1º, II)."
+      },
+      "aprofundamento": "A **remição** permite ao condenado abater parte da pena pelo trabalho ou pelo estudo. É instrumento de prevenção terciária: estimula atividades que favorecem a reinserção e reduz o tempo de exposição à prisionização.\n\nNo trabalho, a proporção legal é de um dia de pena para cada três dias trabalhados. A lei fixa esse número de forma exata, e a banca o troca com frequência, propondo dois, quatro ou outros valores.\n\nAlém de decorar a proporção, entenda a lógica: a remição recompensa o esforço do condenado e conecta a execução ao objetivo de integração social. Na prova, leia com atenção o número de dias.",
+      "memorize": "Remição pelo trabalho: 1 dia de pena a cada 3 dias trabalhados."
      }
     },
     {
@@ -3811,7 +4692,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "egresso",
        "dois meses"
-      ]
+      ],
+      "aprofundamento": "A saída da prisão é um momento crítico. O egresso muitas vezes não tem emprego, perdeu vínculos familiares e carrega o estigma da condenação. Sem apoio, o risco de reincidência é alto. A assistência ao egresso é, por isso, expressão da **prevenção terciária**.\n\nA lei prevê, se necessário, alojamento e alimentação em estabelecimento adequado por dois meses, prazo que pode ser prorrogado uma única vez se o egresso comprovar empenho na obtenção de emprego. A condição da prorrogação mostra que o apoio é temporário e vinculado ao esforço de reinserção.\n\nA banca costuma trocar o prazo ou retirar a expressão \"se necessário\". Guarde os dois elementos: necessidade e dois meses.",
+      "memorize": "Egresso: alojamento e alimentação, se necessário, por dois meses, prorrogável uma vez."
      }
     },
     {
@@ -3825,7 +4708,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "tardia, parcial e insuficiente",
        "caráter punitivo"
-      ]
+      ],
+      "aprofundamento": "A **prevenção terciária** atua sobre quem já cometeu o crime e foi condenado. Como chega depois do fato, ela é **tardia**: o dano à vítima já ocorreu. É **parcial**, porque alcança apenas os condenados, uma pequena fração dos autores de crimes, considerando a cifra negra. E é **insuficiente**, porque não atua nas causas sociais do delito.\n\nSeu caráter **punitivo** decorre do fato de se realizar no contexto da execução da pena. Ainda assim, ela tem função relevante: reduzir a reincidência por meio de trabalho, estudo e assistência.\n\nA banca pode atribuir essas características à prevenção primária, que, ao contrário, é precoce, ampla e atua nas raízes. Lembre o quarteto: punitiva, tardia, parcial, insuficiente.",
+      "memorize": "Terciária: punitiva, tardia, parcial e insuficiente."
      }
     },
     {
@@ -3849,7 +4734,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "classificação",
        "individualização da execução"
-      ]
+      ],
+      "aprofundamento": "A **individualização da pena** não termina na sentença: continua na execução. Para que o tratamento penal seja adequado a cada condenado, a lei manda classificá-los segundo antecedentes e personalidade, o que orienta a distribuição em estabelecimentos, as atividades e o acompanhamento.\n\nEssa é uma ferramenta da Criminologia clínica, que estuda o condenado individualmente para planejar intervenções. Ela permite separar perfis distintos e evitar que condenados primários convivam indistintamente com reincidentes, reduzindo a prisionização.\n\nA banca pode trocar os critérios (por exemplo, \"gravidade do crime\" ou \"condição econômica\") ou dizer que a classificação serve para agravar a pena. O texto legal fala em antecedentes e personalidade, para orientar a individualização.",
+      "memorize": "Classificação do condenado: antecedentes e personalidade, para individualizar a execução."
      }
     },
     {
@@ -3874,7 +4761,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "cooperação da comunidade",
        "execução penal"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que a LEP veda a participação da comunidade e atribui a execução exclusivamente ao Estado.",
+       "certo": "O Estado deverá recorrer à cooperação da comunidade nas atividades de execução da pena e da medida de segurança (LEP, art. 4º)."
+      },
+      "aprofundamento": "A LEP adota a ideia de que a reinserção do condenado não depende só do Estado. A comunidade tem papel relevante: ela recebe o egresso, oferece trabalho, apoio e oportunidades, e pode participar de conselhos e programas durante a execução.\n\nPor isso o dispositivo citado usa \"deverá recorrer\": a cooperação comunitária é diretriz obrigatória da execução, e não mera faculdade. Isso conecta a execução penal à visão do crime como problema comunitário e à prevenção terciária.\n\nA pegadinha inverte o sentido da regra, trocando o dever de recorrer à comunidade por uma vedação. Quando a frase atribuir a execução exclusivamente ao Estado, desconfie.",
+      "memorize": "LEP: o Estado DEVERÁ recorrer à comunidade na execução."
      }
     },
     {
@@ -3889,7 +4782,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "protagonista",
        "modelo integrador"
-      ]
+      ],
+      "correcao": {
+       "erro": "Reduz a vítima, no modelo integrador, a mera informante sem participação no desfecho.",
+       "certo": "No modelo integrador, a vítima é protagonista: participa da solução do conflito e da reparação do dano."
+      },
+      "aprofundamento": "Os modelos de reação ao crime se distinguem pelo lugar que dão a cada protagonista. No dissuasório, o centro é o Estado e a pena; no ressocializador, o infrator e seu tratamento; no **integrador**, o conflito entre pessoas concretas, que deve ser resolvido com a participação de todos os envolvidos.\n\nNesse último modelo, a vítima deixa de ser simples fonte de prova e passa a ser **protagonista**: participa da solução, expressa suas necessidades e recebe **reparação**. Composição civil, transação, suspensão do processo com reparação e justiça restaurativa são expressões dessa lógica.\n\nA pegadinha descreve a vítima do modelo clássico (mera informante) e a coloca no integrador. Quando a frase falar em integrador, procure as palavras participação, conciliação e reparação.",
+      "memorize": "Integrador: vítima protagonista, solução negociada e reparação."
      }
     },
     {
@@ -3914,7 +4813,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "transação penal",
        "não importará em reincidência"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que a pena aplicada em transação penal importa reincidência.",
+       "certo": "A pena restritiva de direitos ou multa aplicada em transação penal não importa reincidência; só é registrada para impedir o mesmo benefício no prazo de cinco anos (Lei 9.099/1995, art. 76, § 4º)."
+      },
+      "aprofundamento": "A transação penal é uma resposta consensual: o autor aceita cumprir pena restritiva de direitos ou multa sem que haja processo, culpa reconhecida ou condenação. Como não há condenação, não faz sentido que gere os efeitos de uma, como a **reincidência**.\n\nO registro existe por outra razão: impedir que a mesma pessoa use o benefício repetidamente. Por isso a lei prevê que ela fique impedida de nova transação no prazo de cinco anos. O registro serve apenas a esse fim, e não deve constar como antecedente criminal.\n\nEssa lógica integra o modelo consensual, que busca evitar o estigma do processo para infrações de menor potencial ofensivo. A banca costuma atribuir à transação a reincidência ou os maus antecedentes.",
+      "memorize": "Transação penal: sem reincidência; registro só para barrar novo benefício em cinco anos."
      }
     },
     {
@@ -3928,7 +4833,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "nada funciona",
        "crise do ideal ressocializador"
-      ]
+      ],
+      "aprofundamento": "O ideal ressocializador dominou boa parte do século XX: a pena serviria para tratar e corrigir o condenado. Nos anos 1970, porém, avaliações de programas de tratamento concluíram que poucos produziam efeito consistente na reincidência, e a expressão \"nada funciona\" (nothing works) resumiu esse diagnóstico.\n\nA crise teve efeitos contraditórios. De um lado, fortaleceu discursos punitivos e de mera neutralização; de outro, estimulou críticas à própria prisão como espaço de ressocialização e o desenvolvimento de alternativas.\n\nO ponto importante é que a crise não eliminou o ideal: pesquisas posteriores mostraram que certos programas funcionam sob condições específicas. A banca pode afirmar que o ressocializador foi abandonado; o correto é falar em crise.",
+      "memorize": "Nothing works (Martinson, 1974): crise do ideal ressocializador, não seu fim."
      }
     },
     {
@@ -3952,7 +4859,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "reparação do dano",
        "suspensão condicional do processo"
-      ]
+      ],
+      "aprofundamento": "A **suspensão condicional do processo** permite que o processo fique suspenso por um período de prova, sob condições; cumpridas, extingue-se a punibilidade. Entre essas condições está a reparação do dano, salvo impossibilidade de fazê-lo.\n\nA exigência mostra o traço integrador da lei citada: o benefício ao acusado está ligado à satisfação da vítima. A ressalva da impossibilidade evita que a pobreza do acusado o exclua do benefício, o que seria discriminação econômica.\n\nA banca pode retirar a ressalva (\"a reparação é condição absoluta\") ou dizer que a reparação é mera faculdade do juiz. O texto legal a coloca como condição, com a ressalva da impossibilidade.",
+      "memorize": "Sursis processual: reparação do dano é condição, salvo impossibilidade."
      }
     },
     {
@@ -3967,7 +4876,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "modelo dissuasório",
        "neutralização da vítima"
-      ]
+      ],
+      "correcao": {
+       "erro": "Atribui ao modelo dissuasório clássico o protagonismo da vítima e a pena voltada à reparação.",
+       "certo": "No modelo dissuasório, a vítima fica neutralizada e a pena volta-se à intimidação; protagonismo da vítima e reparação são marcas do modelo integrador."
+      },
+      "aprofundamento": "O **modelo dissuasório** clássico enxerga o crime como confronto entre o infrator e o Estado. A pena serve para intimidar: mostrar ao autor e à sociedade que o crime não compensa. A vítima, nesse esquema, é **neutralizada**: o Estado assume o conflito e ela vira apenas testemunha do próprio caso.\n\nA reparação do dano não é finalidade da pena nesse modelo; quando ocorre, é tratada à parte, na esfera civil. É justamente essa ausência que o modelo integrador procura corrigir.\n\nA pegadinha atribui ao dissuasório a marca do integrador. Associe dissuasório a intimidação e Estado; integrador a vítima e reparação.",
+      "memorize": "Dissuasório: intimidação, vítima neutralizada."
      }
     },
     {
@@ -3991,7 +4906,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "acordo de não persecução penal",
        "reparar o dano"
-      ]
+      ],
+      "aprofundamento": "O **acordo de não persecução penal** é negociado entre o Ministério Público e o investigado, antes da denúncia. Cumpridas as condições, o caso não segue para processo. É mais um instrumento da justiça negociada, que busca respostas mais rápidas e menos estigmatizantes.\n\nA primeira condição listada no dispositivo citado é reparar o dano ou restituir a coisa à vítima, exceto na impossibilidade. Com isso, o acordo não é apenas uma vantagem para o investigado: ele incorpora a satisfação da vítima como parte da solução.\n\nA ressalva da impossibilidade segue a mesma lógica da suspensão condicional do processo. A banca pode suprimi-la ou dizer que a reparação não integra o acordo.",
+      "memorize": "ANPP: reparar o dano ou restituir a coisa, salvo impossibilidade."
      }
     },
     {
@@ -4005,7 +4922,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "Beccaria",
        "proporcionalidade"
-      ]
+      ],
+      "aprofundamento": "A obra de Beccaria é o manifesto do Iluminismo penal. Contra um sistema de penas arbitrárias, cruéis e desiguais, ele propôs que só a lei pode definir crimes e penas, que a pena deve ser proporcional ao delito e útil (prevenir novos crimes), e não mera vingança.\n\nCombateu a tortura como meio de prova, por punir antes da condenação e favorecer o forte sobre o inocente fraco. Quanto à pena de morte, sustentou que é desnecessária e ineficaz, admitindo-a apenas em situações excepcionalíssimas, ligadas à segurança do Estado.\n\nA banca costuma dizer que Beccaria defendia a pena de morte como regra ou que aceitava a tortura. Guarde: legalidade, proporcionalidade, utilidade; contra tortura e, salvo exceção extrema, contra a pena de morte.",
+      "memorize": "Beccaria (1764): legalidade, proporcionalidade, utilidade; contra tortura e pena de morte."
      }
     },
     {
@@ -4020,7 +4939,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "ente jurídico",
        "Carrara"
-      ]
+      ],
+      "correcao": {
+       "erro": "Atribui a Carrara a concepção do crime como ente de fato, natural, independente da lei.",
+       "certo": "Para Carrara, o crime é ente jurídico, que só existe pela lei; a ideia de delito natural é positivista (Garofalo)."
+      },
+      "aprofundamento": "Carrara é o maior expoente da Escola Clássica italiana. Para ele, o crime é **ente jurídico**: só existe porque a lei o define. A conduta que ninguém proibiu não é crime, por mais reprovável que pareça. Isso decorre da legalidade e da ideia de que o crime é violação de uma norma do Estado.\n\nO positivismo pensa de modo oposto. Para Garofalo, por exemplo, existiria um delito natural, a ofensa aos sentimentos de piedade e probidade, que seria crime em qualquer sociedade, independentemente da lei.\n\nA pegadinha troca as concepções. Ente jurídico, lei e legalidade apontam para Carrara; fato natural e sentimentos básicos, para o positivismo.",
+      "memorize": "Carrara: crime = ente jurídico. Garofalo: delito natural."
      }
     },
     {
@@ -4034,7 +4959,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "Terza Scuola",
        "imputáveis e inimputáveis"
-      ]
+      ],
+      "aprofundamento": "A **Terza Scuola** surgiu como resposta ao embate entre clássicos e positivistas. Ela aceita a responsabilidade moral dos clássicos, mas sem o livre-arbítrio absoluto; e aceita a investigação das causas do crime dos positivistas, sem o determinismo extremo.\n\nO resultado prático é a distinção entre **imputáveis** e **inimputáveis**. Quem tem capacidade de entender e querer recebe pena, fundada na culpabilidade; quem não tem recebe medida de segurança, fundada na periculosidade. Essa lógica está na base do sistema que separa pena e medida de segurança.\n\nA banca pode afirmar que a Terceira Escola rejeitou ambos os modelos ou adotou integralmente um deles. A palavra-chave é eclética: conciliação.",
+      "memorize": "Terza Scuola: eclética; pena para imputáveis, medida de segurança para inimputáveis."
      }
     },
     {
@@ -4048,7 +4975,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "von Liszt",
        "prevenção especial"
-      ]
+      ],
+      "aprofundamento": "Von Liszt, na Escola Moderna Alemã, defendeu que a pena deve ter finalidade prática voltada ao autor, e não apenas retribuir o mal causado. É a **prevenção especial**: a pena atua sobre o próprio condenado.\n\nComo os delinquentes não são iguais, a pena deve variar conforme o tipo. Para os corrigíveis, correção; para os que não precisam de correção (delinquentes ocasionais), intimidação; para os incorrigíveis, neutralização (inocuização). É a tríade clássica de sua teoria.\n\nVon Liszt também concebeu a \"ciência total do direito penal\", que integra dogmática, Criminologia e Política Criminal. A banca pode trocar a finalidade (prevenção geral) ou embaralhar a tríade.",
+      "memorize": "Von Liszt: corrigir os corrigíveis, intimidar os ocasionais, neutralizar os incorrigíveis."
      }
     },
     {
@@ -4063,7 +4992,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "periculosidade",
        "indeterminada"
-      ]
+      ],
+      "correcao": {
+       "erro": "Atribui à Escola Positiva a sanção fixa e proporcional à gravidade objetiva do fato.",
+       "certo": "Para a Escola Positiva, a sanção se mede pela periculosidade do agente e pode ser indeterminada; a proporcionalidade ao fato é ideia clássica."
+      },
+      "aprofundamento": "Para os clássicos, a pena se mede pelo fato: quanto mais grave o crime, maior a pena, e o limite é fixado previamente pela lei. É a lógica da proporcionalidade, ligada à retribuição e à segurança jurídica.\n\nO positivismo muda o foco para o autor. Se o crime é sintoma de uma condição do agente, a sanção deve durar enquanto essa condição persistir. A medida passa a ser a **periculosidade**, e a sanção pode ser **indeterminada**, sem prazo fixo, até que o perigo cesse.\n\nA crítica a esse modelo é que ele permite privar alguém da liberdade sem limite certo, o que conflita com garantias. A banca troca as concepções: proporcional ao fato é clássico; periculosidade e indeterminação, positivista.",
+      "memorize": "Clássica: pena proporcional ao fato. Positiva: sanção pela periculosidade, até indeterminada."
      }
     },
     {
@@ -4078,7 +5013,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "Baratta",
        "Nova Criminologia"
-      ]
+      ],
+      "correcao": {
+       "erro": "Atribui à Criminologia crítica raízes positivistas.",
+       "certo": "A Criminologia crítica tem raízes marxistas e é, inclusive, crítica do positivismo; entre seus autores estão Taylor, Walton e Young (A Nova Criminologia) e Baratta."
+      },
+      "aprofundamento": "A Criminologia crítica nasce justamente como crítica ao positivismo. Este buscava causas do crime no indivíduo e tratava a definição legal de crime como dado neutro; a crítica pergunta quem define o crime e a quem interessa essa definição.\n\nSua matriz é **marxista**: o sistema penal é analisado como instrumento ligado às estruturas econômicas e às relações de poder. A Nova Criminologia, de Taylor, Walton e Young, e a obra de Baratta são marcos dessa corrente, que também incorporou achados do labelling approach.\n\nRepare que a assertiva acerta os autores e erra só a matriz. É uma técnica comum da banca: manter os nomes corretos para disfarçar a troca de conceito.",
+      "memorize": "Crítica: matriz marxista, antipositivista; Taylor, Walton, Young e Baratta."
      }
     },
     {
@@ -4102,7 +5043,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "atendimento multidisciplinar",
        "ofendido"
-      ]
+      ],
+      "aprofundamento": "O dispositivo citado reconhece que o crime produz danos que o processo penal, sozinho, não repara: trauma, desamparo jurídico, problemas de saúde. Por isso permite ao juiz encaminhar o ofendido para **atendimento multidisciplinar**, nas áreas psicossocial, jurídica e de saúde.\n\nO custo pode recair sobre o ofensor ou sobre o Estado. Isso expressa a ideia de que a vítima não é apenas instrumento de prova, mas pessoa com necessidades a serem atendidas, o que reduz a vitimização secundária.\n\nRepare na palavra \"poderá\" e na expressão \"se entender necessário\": é faculdade do juiz, conforme o caso. A banca pode transformar em dever absoluto ou restringir o custeio a apenas um dos responsáveis.",
+      "memorize": "Juiz PODE encaminhar o ofendido a atendimento multidisciplinar, às custas do ofensor ou do Estado."
      }
     },
     {
@@ -4127,7 +5070,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "conduzido",
        "ofendido"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que o ofendido intimado que falta sem motivo justo não pode ser conduzido, por não ser testemunha.",
+       "certo": "Se, intimado, deixar de comparecer sem motivo justo, o ofendido poderá ser conduzido à presença da autoridade (CPP, art. 201, § 1º)."
+      },
+      "aprofundamento": "O ofendido não é testemunha no sentido técnico: não presta compromisso de dizer a verdade e não comete falso testemunho. Mas sua palavra é muitas vezes essencial para esclarecer o fato, e por isso a lei permite sua condução.\n\nSe, intimado, ele deixar de comparecer sem motivo justo, poderá ser conduzido à presença da autoridade. A medida equilibra o interesse da investigação com a proteção da vítima: só se aplica quando não há justificativa para a ausência.\n\nA pegadinha usa um argumento verdadeiro (o ofendido não é testemunha) para chegar a uma conclusão falsa (não pode ser conduzido). Fique atento a frases que misturam premissa certa e consequência errada.",
+      "memorize": "Ofendido faltoso sem motivo justo pode ser conduzido."
      }
     },
     {
@@ -4152,7 +5101,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "depoimento especial",
        "autoridade policial"
-      ]
+      ],
+      "correcao": {
+       "erro": "Restringe o depoimento especial à autoridade judiciária e o veda na fase policial.",
+       "certo": "O depoimento especial é a oitiva de criança ou adolescente vítima ou testemunha de violência perante autoridade policial ou judiciária (Lei 13.431/2017, art. 8º)."
+      },
+      "aprofundamento": "O **depoimento especial** é uma forma protegida de ouvir criança ou adolescente vítima ou testemunha de violência. Busca evitar que o relato repetido e feito em ambiente hostil cause novo sofrimento: é ferramenta contra a vitimização secundária.\n\nA lei citada prevê que ele ocorre perante autoridade policial ou judiciária. Ou seja, a delegacia também deve adotar esse procedimento, com ambiente adequado e profissionais capacitados. Isso é coerente com a ideia de que a revitimização pode começar já na fase policial.\n\nA pegadinha exclui a autoridade policial. Lembre do texto literal: \"perante autoridade policial ou judiciária\".",
+      "memorize": "Depoimento especial: perante autoridade policial OU judiciária."
      }
     },
     {
@@ -4176,7 +5131,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "ainda que visual",
        "revitimização"
-      ]
+      ],
+      "aprofundamento": "Encontrar o agressor, mesmo que só de vista, pode reativar o trauma, intimidar a criança e comprometer a qualidade do relato. A regra citada busca impedir esse efeito, protegendo a vítima de qualquer contato, inclusive visual, com o suposto autor ou acusado.\n\nIsso exige organização prática: salas separadas, entradas distintas, horários diferentes. A proteção vale em todas as fases em que a criança ou o adolescente for ouvido.\n\nNa Criminologia, a regra é expressão do combate à **revitimização** pelo próprio sistema. A banca pode restringir a vedação ao contato físico ou dizer que o contato visual é permitido; o texto diz \"ainda que visual\".",
+      "memorize": "Criança ou adolescente: nenhum contato, nem visual, com o suposto autor."
      }
     },
     {
@@ -4200,7 +5157,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "herdeiros e dependentes carentes",
        "crime doloso"
-      ]
+      ],
+      "aprofundamento": "O crime doloso pode deixar desamparados aqueles que dependiam da vítima, como filhos e cônjuge. Esses são as **vítimas indiretas**. O dispositivo citado prevê que a lei disporá sobre a assistência do Poder Público a herdeiros e dependentes carentes nesses casos.\n\nA assistência não exclui a responsabilidade civil do autor: o Estado ampara quem precisa, mas o ofensor continua obrigado a indenizar. A norma depende de lei que defina hipóteses e condições.\n\nA banca pode estender a regra a crimes culposos, retirar o requisito da carência ou afirmar que a assistência estatal afasta a responsabilidade do autor. O texto fala em crime doloso, dependentes carentes e \"sem prejuízo\" da responsabilidade civil.",
+      "memorize": "Art. 245 da CF: assistência a herdeiros e dependentes carentes de vítima de crime doloso, sem afastar a responsabilidade do autor."
      }
     },
     {
@@ -4224,7 +5183,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "vitimodogmática",
        "comportamento da vítima"
-      ]
+      ],
+      "aprofundamento": "A **vitimodogmática** leva para a dogmática penal os estudos da Vitimologia sobre o papel da vítima no crime. A pergunta é: se a vítima contribuiu de algum modo para o fato, isso deve repercutir na responsabilidade do autor?\n\nNo Direito brasileiro, a principal porta de entrada é o comportamento da vítima entre as circunstâncias judiciais do dispositivo citado. Ele pode influenciar a dosimetria, normalmente para atenuar a reprovação quando a vítima provocou ou facilitou a conduta.\n\nO cuidado é não transformar essa ideia em culpabilização da vítima, especialmente em crimes sexuais e de violência doméstica. A banca pode confundir vitimodogmática com vitimização secundária ou negar a previsão legal do comportamento da vítima.",
+      "memorize": "Vitimodogmática: contribuição da vítima na dogmática; ex.: comportamento da vítima no art. 59 do CP."
      }
     },
     {
@@ -4238,7 +5199,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "subnotificação",
        "cifra negra"
-      ]
+      ],
+      "aprofundamento": "Os crimes sexuais estão entre os mais subnotificados. A vítima muitas vezes teme represálias, sobretudo quando o autor é próximo; sente vergonha ou culpa, reforçadas por estereótipos sociais; e receia ser desacreditada ou exposta ao procurar a polícia e a Justiça.\n\nEsse último fator é a **vitimização secundária**: o medo de sofrer de novo no contato com o sistema afasta a vítima do registro. O resultado é uma **cifra negra** muito alta, que torna as estatísticas oficiais pouco confiáveis para medir esses crimes.\n\nPor isso medidas como atendimento especializado e oitiva protegida não são apenas humanitárias: também ajudam a reduzir a subnotificação. A banca pode atribuir a subnotificação apenas à baixa gravidade dos fatos; a explicação correta é outra.",
+      "memorize": "Crimes sexuais: medo, vergonha e receio da vitimização secundária elevam a cifra negra."
      }
     },
     {
@@ -4253,7 +5216,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "síndrome de Estocolmo",
        "vínculo afetivo"
-      ]
+      ],
+      "correcao": {
+       "erro": "Descreve a síndrome como aversão intensa ao captor e colaboração com a polícia contra ele.",
+       "certo": "Na síndrome de Estocolmo, a vítima desenvolve vínculo afetivo ou de simpatia com o captor, podendo até defendê-lo."
+      },
+      "aprofundamento": "A **síndrome de Estocolmo** é uma reação psicológica em que a vítima de sequestro ou cárcere passa a sentir simpatia ou vínculo afetivo pelo captor. Uma explicação comum é que, em situação de dependência total e ameaça, a identificação com o agressor funciona como estratégia de sobrevivência.\n\nNa prática, a vítima pode defender o captor, desconfiar da polícia e até resistir ao resgate ou relutar em colaborar com a investigação. Isso tem relevância direta para negociadores e investigadores.\n\nA pegadinha inverte o efeito: descreve aversão e colaboração com a polícia, que é o contrário do fenômeno.",
+      "memorize": "Estocolmo: a vítima se vincula ao captor."
      }
     },
     {
@@ -4267,7 +5236,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "epilepsia",
        "loucura moral"
-      ]
+      ],
+      "aprofundamento": "Lombroso começou descrevendo o criminoso nato por estigmas físicos, como sinal de atavismo, uma regressão a estágios primitivos da evolução. Ao longo das edições de sua obra, ampliou a explicação e passou a ver no criminoso nato traços comuns ao epiléptico e ao chamado louco moral.\n\nA ideia era de um mesmo fundo patológico: o crime seria manifestação de uma anomalia orgânica e psíquica, aparentada à epilepsia e à incapacidade de sentir regras morais. Isso reforça o caráter biológico e determinista de sua teoria.\n\nEssas teses foram superadas, mas a banca as cobra como história da disciplina. Pode trocar a doença associada ou atribuir a aproximação a outro autor.",
+      "memorize": "Lombroso: criminoso nato, epilepsia e loucura moral no mesmo tronco."
      }
     },
     {
@@ -4282,7 +5253,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "Eysenck",
        "condicionabilidade"
-      ]
+      ],
+      "correcao": {
+       "erro": "Atribui a menor condicionabilidade aos introvertidos.",
+       "certo": "Para Eysenck, os extrovertidos são menos condicionáveis e por isso teriam maior risco de delinquir."
+      },
+      "aprofundamento": "Eysenck explicou a criminalidade a partir da personalidade e da aprendizagem por condicionamento. Ao longo da vida, a pessoa aprende a evitar condutas proibidas porque associa a elas punições e desaprovação, o que forma a consciência moral.\n\nOs **extrovertidos**, segundo ele, condicionam-se com mais dificuldade, por terem menor reatividade do sistema nervoso. Por isso internalizam menos as proibições e teriam maior propensão ao crime. Os introvertidos, ao contrário, condicionam-se com facilidade.\n\nSua teoria usa três dimensões da personalidade: extroversão, neuroticismo e psicoticismo. A pegadinha troca extrovertido por introvertido.",
+      "memorize": "Eysenck: extrovertido condiciona menos, maior risco."
      }
     },
     {
@@ -4297,7 +5274,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "mesomorfo",
        "Sheldon"
-      ]
+      ],
+      "correcao": {
+       "erro": "Associa o ectomorfo à delinquência.",
+       "certo": "Sheldon associou à delinquência o mesomorfo, de tipo musculoso e atlético."
+      },
+      "aprofundamento": "Sheldon classificou os tipos corporais em três: endomorfo (arredondado, com tendência à gordura), mesomorfo (musculoso, atlético) e ectomorfo (magro, frágil). A cada tipo associou um temperamento.\n\nAo estudar jovens delinquentes, concluiu que predominava o **mesomorfo**, associado a temperamento enérgico, agressivo e voltado à ação. É uma teoria de base biotipológica, herdeira do enfoque biológico do positivismo, hoje criticada por falta de rigor e por ignorar fatores sociais.\n\nA banca troca o somatótipo. Uma dica: o mesomorfo é o \"meio-termo\" musculoso, o tipo de quem age com força física.",
+      "memorize": "Sheldon: mesomorfo (musculoso) ligado à delinquência."
      }
     },
     {
@@ -4312,7 +5295,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "conflitos inconscientes",
        "superego"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que a psicanálise explica o crime sempre por fatores sociais externos, sem relação com o inconsciente.",
+       "certo": "A psicanálise explica o crime por conflitos inconscientes e falhas na formação do superego."
+      },
+      "aprofundamento": "A teoria psicanalítica procura as raízes do comportamento no inconsciente. O crime seria expressão de conflitos psíquicos não resolvidos, impulsos reprimidos ou falhas na formação do **superego**, a instância que interioriza as normas e produz a culpa.\n\nUma ideia marcante é a do criminoso por sentimento de culpa: alguém que delinque para ser punido e, assim, aliviar uma culpa inconsciente prévia. Fatores sociais não são ignorados, mas a explicação central é intrapsíquica.\n\nA pegadinha retira da psicanálise justamente seu núcleo. Quando a frase disser que ela explica o crime \"sempre\" por fatores externos, sem inconsciente, o gabarito é errado.",
+      "memorize": "Psicanálise: inconsciente e superego."
      }
     },
     {
@@ -4327,7 +5316,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "Goring",
        "estigmas"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que Goring confirmou integralmente as teses lombrosianas sobre estigmas físicos.",
+       "certo": "Os estudos de Goring (1913), comparando presos e não presos, não confirmaram os estigmas físicos lombrosianos."
+      },
+      "aprofundamento": "Goring fez o que Lombroso não havia feito com rigor: comparou, com método estatístico, presos e não presos. Se os estigmas físicos fossem marca do criminoso, deveriam aparecer com muito mais frequência entre os presos.\n\nO resultado foi o oposto: não houve diferença significativa que sustentasse o tipo criminoso lombrosiano. Esse estudo ajudou a desmontar a ideia do criminoso nato identificável pela aparência.\n\nA pegadinha inverte o resultado. Se a frase disser que Goring \"confirmou\" Lombroso, está errada: ele refutou os estigmas físicos.",
+      "memorize": "Goring (1913) refutou os estigmas de Lombroso."
      }
     },
     {
@@ -4341,7 +5336,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "frustração-agressão",
        "impulsos agressivos"
-      ]
+      ],
+      "aprofundamento": "A hipótese **frustração-agressão** sustenta que, quando alguém é impedido de alcançar um objetivo, surge um impulso agressivo. Esse impulso pode ser dirigido à fonte da frustração ou, quando isso não é possível ou é arriscado, deslocado para outro alvo, mais fraco ou mais acessível.\n\nÉ uma teoria psicológica clássica que ajuda a entender, por exemplo, por que alguém frustrado no trabalho descarrega a raiva em casa. Ela dialoga com explicações sociológicas, como a anomia, que também relaciona o crime à frustração de metas.\n\nA banca pode afirmar que a frustração gera sempre agressão contra a própria fonte, eliminando o deslocamento, ou classificar a teoria como biológica.",
+      "memorize": "Frustração-agressão: frustração gera impulso agressivo, contra a fonte ou deslocado."
      }
     },
     {
@@ -4356,7 +5353,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "retraimento",
        "rebelião"
-      ]
+      ],
+      "correcao": {
+       "erro": "Atribui ao retraimento a busca de substituir metas e meios por uma nova ordem social.",
+       "certo": "No retraimento, o indivíduo rejeita metas e meios e apenas foge, sem propor nada; substituí-los por nova ordem é a rebelião."
+      },
+      "aprofundamento": "Merton descreveu cinco modos de adaptação à tensão entre metas culturais e meios institucionais: conformidade, inovação, ritualismo, retraimento e rebelião. O retraimento e a rebelião se parecem porque, em ambos, a pessoa rejeita metas e meios.\n\nA diferença está no que vem depois. No **retraimento**, o indivíduo simplesmente desiste e se retira da vida social, como ocorre com certos dependentes químicos e pessoas em situação de rua. Na **rebelião**, ele rejeita a ordem existente e propõe substituí-la por novas metas e novos meios, como os movimentos revolucionários.\n\nA pegadinha descreve a rebelião e a chama de retraimento. Lembre: retraimento foge; rebelião propõe.",
+      "memorize": "Retraimento foge; rebelião substitui."
      }
     },
     {
@@ -4370,7 +5373,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "Durkheim",
        "Merton"
-      ]
+      ],
+      "aprofundamento": "O conceito de anomia muda de sentido entre os dois autores. Para Durkheim, anomia é a falta ou o enfraquecimento das normas que regulam os desejos, situação típica de momentos de crise e transformação rápida. É algo **conjuntural**.\n\nPara Merton, a anomia é **estrutural**: decorre da própria organização da sociedade, que estimula todos a buscar certas metas (como sucesso econômico) mas não oferece a todos os meios legítimos para alcançá-las. A tensão entre metas e meios pressiona alguns a adotar caminhos ilegítimos.\n\nA banca costuma inverter os conceitos ou atribuir a Durkheim a disjunção entre metas e meios. Associe Durkheim a crise e Merton a estrutura.",
+      "memorize": "Durkheim: anomia de crise. Merton: anomia estrutural (metas x meios)."
      }
     },
     {
@@ -4384,7 +5389,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "sociedade criminógena",
        "fatores estruturais"
-      ]
+      ],
+      "aprofundamento": "Falar em **sociedade criminógena** é afirmar que o crime não nasce apenas de defeitos individuais, mas também de características da própria organização social. Desigualdade, exclusão, concentração de renda e estímulo constante ao consumo criam pressões e frustrações que favorecem a criminalidade.\n\nEssa ideia aparece em várias correntes: na anomia, que relaciona o crime à tensão entre metas e meios, e na Criminologia crítica, que o relaciona às estruturas econômicas. Em comum, há o deslocamento do foco do indivíduo para a estrutura social.\n\nA consequência prática é reforçar a importância da prevenção primária, por meio de políticas sociais. A banca pode afirmar que a expressão explica o crime exclusivamente por características individuais, o que contradiz seu sentido.",
+      "memorize": "Sociedade criminógena: a estrutura social também produz o crime."
      }
     },
     {
@@ -4399,7 +5406,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "saturação criminal",
        "Ferri"
-      ]
+      ],
+      "correcao": {
+       "erro": "Atribui a Lombroso a lei da saturação criminal.",
+       "certo": "A lei da saturação criminal é de Ferri, marco da Sociologia Criminal positivista; Lombroso é o expoente da fase antropológica."
+      },
+      "aprofundamento": "Ferri levou o positivismo para o campo sociológico. A **lei da saturação criminal** afirma que, em determinado meio físico e social, ocorre um número correspondente de delitos, assim como certo volume de água, a determinada temperatura, dissolve uma quantidade correspondente de substância.\n\nA consequência é que mudar o meio muda a quantidade de crimes. Por isso Ferri valorizava os \"substitutivos penais\", medidas sociais capazes de reduzir a criminalidade sem recorrer à pena. É o marco da Sociologia Criminal positivista.\n\nLombroso, por sua vez, representa a fase antropológica, centrada no indivíduo e em seus traços biológicos. A banca troca os autores; se a frase falar em meio físico e social determinando o volume de crimes, pense em Ferri.",
+      "memorize": "Saturação criminal = Ferri."
      }
     },
     {
@@ -4413,7 +5426,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "delinquência juvenil",
        "subcultura"
-      ]
+      ],
+      "aprofundamento": "A teoria da **subcultura delinquente** foi construída a partir da observação de gangues juvenis de bairros pobres. Ela explica como jovens que não conseguem alcançar o status valorizado pela classe média criam valores próprios, em que a delinquência rende prestígio dentro do grupo.\n\nPor isso, seu alcance é limitado. Ela não explica bem o crime cometido por adultos integrados, nem a criminalidade das elites, como os crimes de colarinho branco, que ocorrem em contextos de sucesso social e não de frustração de status.\n\nEssa limitação é apontada pelos críticos e cobrada pela banca. Se a frase disser que a subcultura explica toda a criminalidade, inclusive a econômica, o gabarito tende a ser errado.",
+      "memorize": "Subcultura: gangues juvenis de classes baixas; não explica a criminalidade das elites."
      }
     },
     {
@@ -4428,7 +5443,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "interação social",
        "processos de definição"
-      ]
+      ],
+      "correcao": {
+       "erro": "Atribui à perspectiva interacionista a prioridade às causas biológicas do desvio.",
+       "certo": "A perspectiva interacionista estuda a interação social e os processos de definição do desvio, sem enfoque em causas biológicas."
+      },
+      "aprofundamento": "O interacionismo simbólico estuda como as pessoas constroem significados em suas interações. Aplicado ao desvio, ele pergunta como certas condutas e pessoas passam a ser definidas como desviantes, quem atribui esse rótulo e como o rotulado reage.\n\nO foco está nos **processos de definição** e na reação social, e não nas causas biológicas do comportamento. É dessa matriz que nasce o labelling approach, que vê o desvio como resultado de um processo de etiquetamento.\n\nA pegadinha atribui ao interacionismo o enfoque biológico, que pertence ao positivismo. Interacionismo, interação e rótulo andam juntos.",
+      "memorize": "Interacionismo: interação e definição, não biologia."
      }
     },
     {
@@ -4442,7 +5463,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "Chicago Area Project",
        "pesquisa empírica"
-      ]
+      ],
+      "aprofundamento": "A Escola de Chicago estudou a cidade como laboratório social. Usou estatísticas para medir a criminalidade por região, mapas para mostrar sua concentração em certas áreas e observação participante para entender a vida nos bairros por dentro.\n\nO diagnóstico de que a criminalidade se concentrava em áreas de desorganização social levou a uma resposta coerente: intervir na comunidade. O Chicago Area Project buscou fortalecer o controle informal com a participação dos próprios moradores, em atividades para jovens e melhorias no bairro.\n\nIsso mostra a união entre pesquisa empírica e ação social. A banca pode dizer que a Escola de Chicago só usava métodos quantitativos ou que não propôs intervenção.",
+      "memorize": "Chicago: estatística, mapas, observação participante e Chicago Area Project."
      }
     },
     {
@@ -4456,7 +5479,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "transmissão cultural",
        "Shaw e McKay"
-      ]
+      ],
+      "aprofundamento": "Shaw e McKay notaram algo intrigante: certas áreas de Chicago mantinham altas taxas de criminalidade por décadas, mesmo quando a população mudava, com grupos de diferentes origens chegando e saindo. Se o crime fosse traço dos indivíduos, a taxa mudaria com os moradores.\n\nA explicação combina dois elementos. A **desorganização social** enfraquece o controle informal; e a **transmissão cultural** faz com que valores e práticas delinquentes passem de uma geração de moradores à seguinte, como uma tradição local.\n\nA teoria antecipa ideias de aprendizagem e mostra que o lugar importa. A banca pode atribuir a persistência a fatores biológicos ou afirmar que ela desaparecia com a troca de moradores.",
+      "memorize": "Shaw e McKay: desorganização social + transmissão cultural entre gerações."
      }
     },
     {
@@ -4470,7 +5495,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "poder de definição",
        "Baratta"
-      ]
+      ],
+      "aprofundamento": "Baratta reconhece o grande mérito do labelling: mostrar que a criminalidade não é qualidade da conduta, mas resultado de processos de definição e seleção. O problema é que essa análise fica no plano micro, das interações entre o rotulado e as agências.\n\nFalta explicar por que certos grupos detêm o poder de definir quem é criminoso e por que a seleção recai sobre determinadas classes. Para isso, Baratta propõe olhar as estruturas econômicas e de poder, o que leva à **economia política** do controle penal.\n\nÉ por esse caminho que a Criminologia crítica supera o labelling sem abandoná-lo. A banca pode afirmar que a crítica rejeita integralmente o labelling; o correto é que ela o incorpora e aprofunda.",
+      "memorize": "Baratta: o labelling explica o rótulo, mas não quem tem poder de rotular."
      }
     },
     {
@@ -4484,7 +5511,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "profecia autorrealizável",
        "carreira criminal"
-      ]
+      ],
+      "aprofundamento": "Uma **profecia autorrealizável** é uma previsão que, por ser feita e acreditada, acaba provocando o próprio resultado previsto. No labelling, o rótulo de criminoso funciona assim: a sociedade espera que o rotulado volte a delinquir e o trata de acordo.\n\nPortas se fecham: emprego, relações, confiança. A pessoa passa a conviver com outros rotulados e, aos poucos, assume a identidade que lhe foi atribuída. O desvio inicial, muitas vezes ocasional, transforma-se em carreira criminal.\n\nIsso fundamenta propostas como a diversão e a intervenção mínima, que buscam evitar o rótulo. A banca pode afirmar que o rótulo inibe a reincidência; para o labelling, ele tende a favorecê-la.",
+      "memorize": "Rótulo = profecia autorrealizável que alimenta a carreira criminal."
      }
     },
     {
@@ -4499,7 +5528,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "cerimônias degradantes",
        "Garfinkel"
-      ]
+      ],
+      "correcao": {
+       "erro": "Atribui a Durkheim a descrição das cerimônias degradantes.",
+       "certo": "As cerimônias degradantes foram descritas por Garfinkel, autor ligado à perspectiva interacionista; processo penal e prisão funcionam como tais."
+      },
+      "aprofundamento": "As **cerimônias degradantes** são rituais públicos em que a identidade de uma pessoa é rebaixada: ela deixa de ser vista como alguém comum e passa a ser vista como inferior, perigosa, desviante. O conceito foi formulado por Garfinkel, ligado à perspectiva interacionista.\n\nNa Criminologia, o processo penal e a prisão funcionam como cerimônias desse tipo: a acusação pública, o julgamento e a condenação transformam o acusado em \"criminoso\", e esse status acompanha a pessoa por muito tempo.\n\nO conceito é central para o labelling, que vê nesses rituais um momento-chave da construção da identidade desviante. A banca troca o autor; Durkheim é ligado à anomia e à normalidade do crime, não a esse conceito.",
+      "memorize": "Cerimônias degradantes = Garfinkel."
      }
     },
     {
@@ -4514,7 +5549,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "diversão",
        "evitar o estigma"
-      ]
+      ],
+      "correcao": {
+       "erro": "Define a diversão como agravamento da resposta penal para infrações leves.",
+       "certo": "A diversão consiste em desviar o caso do processo penal formal, por vias alternativas, para evitar o estigma."
+      },
+      "aprofundamento": "A **diversão** (diversion) é proposta típica do labelling. Se o contato com o sistema penal formal gera estigma e favorece a carreira criminal, convém **desviar** certos casos para vias alternativas, evitando o processo e a condenação.\n\nIsso se aplica sobretudo a infrações leves e a autores primários, por meio de mediação, acordos, programas comunitários ou simples arquivamento com acompanhamento. No Brasil, institutos consensuais, como a transação penal, guardam afinidade com essa ideia.\n\nA pegadinha inverte o sentido: agravar a resposta penal é o oposto da diversão. A palavra-chave é evitar o estigma do processo formal.",
+      "memorize": "Diversão: desviar do processo formal para evitar o rótulo."
      }
     },
     {
@@ -4528,7 +5569,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "cifra dourada",
        "elites"
-      ]
+      ],
+      "aprofundamento": "A **cifra dourada** é a parte da criminalidade oculta formada pelos crimes das camadas privilegiadas: fraudes financeiras, sonegação, crimes ambientais, corrupção. São condutas de grande dano social, mas difusas, complexas e praticadas por quem tem poder e recursos para se defender.\n\nPor isso raramente chegam ao sistema penal ou terminam em punição. A cifra dourada reforça a tese da seletividade: o sistema não alcança todos igualmente, e as prisões não refletem quem pratica crimes, mas quem é selecionado.\n\nA cifra negra é o conceito mais amplo, de toda criminalidade não registrada; a cifra dourada é uma de suas partes. A banca pode confundir as duas ou associar a cifra dourada aos crimes das classes baixas.",
+      "memorize": "Cifra dourada: crimes das elites que escapam ao sistema."
      }
     },
     {
@@ -4543,7 +5586,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "seletiva",
        "criminalização secundária"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que, para o labelling, a criminalização secundária recai igualitariamente sobre todas as classes sociais.",
+       "certo": "Para o labelling, a criminalização secundária é seletiva e recai preferencialmente sobre os vulneráveis."
+      },
+      "aprofundamento": "Para o labelling, a criminalização secundária é o momento em que as agências escolhem, entre as muitas pessoas que praticam condutas definidas como crime, aquelas que receberão o rótulo. Essa escolha é **seletiva**.\n\nOs critérios não são apenas a gravidade do fato: pesam a visibilidade da conduta, os estereótipos dos agentes e a capacidade de defesa de cada um. O resultado é que o sistema recai preferencialmente sobre os mais **vulneráveis**, enquanto a criminalidade dos poderosos permanece na cifra dourada.\n\nA pegadinha troca seletiva por igualitária. Toda vez que a frase disser que o sistema alcança todas as classes de forma igual, desconfie.",
+      "memorize": "Criminalização secundária: seletiva, não igualitária."
      }
     },
     {
@@ -4557,7 +5606,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "segurança nacional",
        "militarização"
-      ]
+      ],
+      "aprofundamento": "A doutrina da **segurança nacional** organizou a ação estatal em torno da ideia de que o principal perigo estava dentro do próprio país: o opositor político, o \"subversivo\", tratado como **inimigo interno**. A lógica era de guerra, e não de aplicação da lei a cidadãos.\n\nEssa visão marcou as agências de controle. A segurança pública foi militarizada, com táticas, hierarquias e linguagem de combate, e a fronteira entre investigação criminal e repressão política se tornou difusa.\n\nA Criminologia latino-americana aponta que esse legado sobreviveu à redemocratização, por exemplo, em práticas que tratam certos grupos e territórios como inimigos. A banca pode negar a influência ou atribuí-la apenas ao campo militar, sem reflexo na segurança pública.",
+      "memorize": "Segurança nacional: militarização e figura do inimigo interno."
      }
     },
     {
@@ -4571,7 +5622,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "sistema penal subterrâneo",
        "Zaffaroni"
-      ]
+      ],
+      "aprofundamento": "Ao lado do sistema penal oficial, regido por leis e procedimentos, Zaffaroni identifica um **sistema penal subterrâneo**: o conjunto de práticas punitivas ilegais exercidas pelas próprias agências. Execuções sem processo, tortura, desaparecimentos e extorsões são exemplos.\n\nO conceito mostra que o poder punitivo real é maior do que o previsto em lei e que boa parte dele escapa a qualquer controle. Essa face ilegal costuma recair sobre os mesmos grupos vulneráveis já alcançados pela seletividade do sistema formal.\n\nPara a Criminologia, estudar o poder punitivo apenas pelo que dizem as normas é insuficiente. A banca pode descrever o sistema subterrâneo como forma legal de controle; o traço essencial é a ilegalidade.",
+      "memorize": "Sistema penal subterrâneo (Zaffaroni): a face ilegal do poder punitivo."
      }
     },
     {
@@ -4586,7 +5639,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "vulneráveis",
        "cifra dourada"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que a criminalização secundária atinge preferencialmente os autores de crimes de colarinho branco.",
+       "certo": "Na América Latina, a criminalização secundária atinge preferencialmente os vulneráveis; a criminalidade das elites, como a de colarinho branco, forma a cifra dourada."
+      },
+      "aprofundamento": "A seletividade da criminalização secundária é especialmente intensa na América Latina, marcada por grandes desigualdades. As agências atuam com mais frequência sobre quem é visível nas ruas e tem pouca capacidade de defesa: jovens pobres, moradores de periferias, grupos estigmatizados.\n\nOs crimes de colarinho branco seguem o caminho oposto. São complexos, praticados em ambientes fechados, por pessoas com recursos e influência, e raramente chegam a condenação. Formam a **cifra dourada**.\n\nA pegadinha inverte os alvos e usa a \"visibilidade social\" como justificativa. Na verdade, a visibilidade que atrai a seleção é a do crime de rua, não a do crime econômico.",
+      "memorize": "Seletividade: recai sobre os vulneráveis; colarinho branco fica na cifra dourada."
      }
     },
     {
@@ -4600,7 +5659,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "Criminologia da libertação",
        "Lola Aniyar de Castro"
-      ]
+      ],
+      "aprofundamento": "A **Criminologia da libertação** é uma vertente latino-americana da Criminologia crítica. Ela parte da constatação de que a região vive relações de dependência e dominação, e de que o sistema penal participa da manutenção dessas estruturas.\n\nPor isso a proposta não é apenas descrever o crime e o controle, mas assumir compromisso com a **transformação social**: estudar o controle penal a partir da realidade periférica e a serviço dos grupos dominados. Lola Aniyar de Castro é uma das principais referências dessa linha.\n\nA banca pode classificá-la como corrente positivista ou neutra. A marca é o engajamento: crítica do poder e compromisso com a mudança das estruturas.",
+      "memorize": "Criminologia da libertação (Lola Aniyar de Castro): crítica e engajada na transformação social."
      }
     },
     {
@@ -4614,7 +5675,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "criminologia midiática",
        "meios de comunicação"
-      ]
+      ],
+      "aprofundamento": "A **criminologia midiática**, na expressão de Zaffaroni, não é uma escola científica: é a imagem do crime fabricada pelos meios de comunicação. Ela seleciona casos chocantes, repete-os e constrói uma realidade em que a sociedade parece dividida entre pessoas de bem (\"nós\") e criminosos (\"eles\").\n\nEssa divisão produz medo e alimenta a figura do **inimigo**, que deve ser combatido a qualquer custo. O resultado é pressão por leis mais duras, mais prisões e menos garantias, mesmo sem evidências de que isso reduza o crime.\n\nO conceito se liga ao populismo penal e ao Direito Penal simbólico. A banca pode apresentar a criminologia midiática como fonte confiável de conhecimento ou dizer que ela reduz as demandas punitivas.",
+      "memorize": "Criminologia midiática: nós x eles, medo e demanda por mais punição."
      }
     },
     {
@@ -4629,7 +5692,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "realidade periférica",
        "adaptação"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que as teorias dos países centrais devem ser aplicadas sem adaptações à realidade regional.",
+       "certo": "Para a Criminologia crítica latino-americana, as teorias dos países centrais devem ser adequadas à realidade periférica da região."
+      },
+      "aprofundamento": "As grandes teorias criminológicas foram produzidas, em sua maioria, na Europa e nos Estados Unidos, em sociedades com outra história, outra estrutura econômica e outro modo de funcionamento das agências. Aplicá-las mecanicamente à América Latina pode levar a diagnósticos equivocados.\n\nA Criminologia crítica regional insiste na **adequação** dessas teorias à realidade periférica: desigualdade extrema, herança de regimes autoritários, violência policial, sistema penal subterrâneo. Só assim a análise consegue explicar o que acontece aqui.\n\nA pegadinha está em \"sem adaptações\". A posição latino-americana não rejeita as teorias centrais, mas exige que sejam repensadas a partir da região.",
+      "memorize": "Crítica latino-americana: adaptar as teorias centrais à realidade periférica."
      }
     },
     {
@@ -4643,7 +5712,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "terceira velocidade",
        "Direito Penal do inimigo"
-      ]
+      ],
+      "aprofundamento": "Silva Sánchez descreve o Direito Penal em velocidades, conforme a combinação entre tipo de pena e grau de garantias. Na primeira, há pena de prisão com garantias plenas; na segunda, garantias flexibilizadas, mas sem prisão, com penas alternativas.\n\nA **terceira velocidade** junta o pior dos dois mundos: pena de prisão e garantias flexibilizadas. É o espaço do **Direito Penal do inimigo**, voltado a quem é visto como ameaça permanente ao ordenamento, como terroristas e membros de organizações criminosas.\n\nO autor apresenta essa velocidade como algo que só se tolera excepcionalmente, e a doutrina a critica pela incompatibilidade com o Estado Democrático de Direito. A banca troca as velocidades entre si.",
+      "memorize": "Terceira velocidade: prisão + garantias flexibilizadas = Direito Penal do inimigo."
      }
     },
     {
@@ -4657,7 +5728,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "quarta velocidade",
        "neopunitivismo"
-      ]
+      ],
+      "aprofundamento": "A classificação original das velocidades não incluía uma quarta. Parte da doutrina acrescentou essa categoria, também chamada **neopunitivismo**, para descrever a persecução penal internacional de quem exerceu o poder do Estado e cometeu graves violações de direitos humanos.\n\nO que a caracteriza é a flexibilização de garantias tradicionais, como a irretroatividade ou a prescrição, em nome da proteção dos direitos humanos, num contexto de tribunais internacionais. O alvo, curiosamente, não são grupos vulneráveis, mas ex-governantes e agentes de Estado.\n\nComo é acréscimo doutrinário e sem consenso, convém conhecer o conteúdo sem atribuí-lo ao autor da classificação original. A banca pode cobrá-lo exatamente com essa descrição.",
+      "memorize": "Quarta velocidade (neopunitivismo): persecução internacional de quem exerceu poder estatal, com garantias flexibilizadas."
      }
     },
     {
@@ -4672,7 +5745,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "não-pessoa",
        "garantias reduzidas"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que, no Direito Penal do inimigo, o inimigo conserva integralmente o status de cidadão e todas as garantias.",
+       "certo": "Para Jakobs, o inimigo é tratado como não-pessoa, com garantias reduzidas, o que gera as críticas de incompatibilidade com o Estado Democrático de Direito."
+      },
+      "aprofundamento": "O **Direito Penal do inimigo** distingue dois tipos de destinatário. O cidadão comete um crime, mas continua sendo pessoa, com direito a todas as garantias. O inimigo seria aquele que se afastou de modo duradouro do Direito e não oferece garantia mínima de comportamento conforme às normas.\n\nPara Jakobs, esse inimigo é tratado como **não-pessoa**: em vez de responder pelo que fez, é combatido pelo perigo que representa. Isso justifica antecipação da punição, penas desproporcionais e redução de garantias processuais.\n\nAs críticas são fortes: a teoria abre espaço para arbitrariedade e é incompatível com a dignidade humana. A assertiva inverte o núcleo da teoria ao dizer que o inimigo conserva todas as garantias.",
+      "memorize": "Inimigo (Jakobs) = não-pessoa, garantias reduzidas."
      }
     },
     {
@@ -4686,7 +5765,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "situações-problema",
        "Hulsman"
-      ]
+      ],
+      "aprofundamento": "Hulsman é um dos principais nomes do **abolicionismo penal**. Para ele, o conceito de \"crime\" é uma construção que agrupa situações muito diferentes e as entrega a um sistema que causa mais dor do que resolve.\n\nPor isso propõe falar em **situações-problema**: conflitos concretos entre pessoas, que devem ser resolvidos de acordo com suas particularidades, por meios civis (indenização), administrativos ou comunitários (mediação, conciliação). A vítima e o autor recuperam o conflito que o Estado lhes \"tirou\".\n\nA proposta é radical, mas influenciou práticas como a justiça restaurativa. A banca pode atribuir a Hulsman a defesa da ampliação do direito penal, o que contradiz sua posição.",
+      "memorize": "Hulsman: situações-problema no lugar de crime, resolvidas fora do sistema penal."
      }
     },
     {
@@ -4701,7 +5782,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "atuarial",
        "gestão de riscos"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que a política criminal atuarial se concentra na reabilitação individual do condenado.",
+       "certo": "A política criminal atuarial gerencia grupos de risco e privilegia a incapacitação, não a reabilitação individual."
+      },
+      "aprofundamento": "A política criminal **atuarial** toma emprestada a lógica dos seguros: em vez de compreender e transformar o indivíduo, calcula riscos e administra populações. O foco passa a ser identificar grupos considerados perigosos e controlá-los de modo eficiente.\n\nA principal ferramenta é a **incapacitação**: manter afastados, vigiados ou presos aqueles que os índices apontam como de alto risco. A reabilitação individual perde espaço, porque não importa tanto por que a pessoa delinque, mas quanto risco ela representa.\n\nA crítica é que esse modelo reforça a seletividade e trata pessoas como números. A pegadinha atribui ao atuarialismo a reabilitação, que é marca do modelo ressocializador.",
+      "memorize": "Atuarial: gestão de risco e incapacitação, não reabilitação."
      }
     },
     {
@@ -4716,7 +5803,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "culpabilidade",
        "garantismo"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que o garantismo admite pena sem culpabilidade quando necessária à prevenção.",
+       "certo": "Para Ferrajoli, a culpabilidade é axioma do garantismo (nulla poena sine culpa): não há pena sem culpa, e a prevenção não autoriza exceção."
+      },
+      "aprofundamento": "O garantismo de Ferrajoli organiza o direito penal em axiomas, condições sem as quais a punição não é legítima. Entre eles está **nulla poena sine culpa**: não há pena sem culpabilidade.\n\nUm axioma não admite exceção por conveniência. A prevenção é finalidade legítima da pena, mas atua dentro dos limites das garantias, e não acima delas. Punir quem não agiu com culpa, por razões preventivas, transformaria a pessoa em instrumento e violaria o núcleo do modelo.\n\nO garantismo se apresenta como modelo de direito penal mínimo, que maximiza a liberdade e limita o poder punitivo. A pegadinha cria uma exceção que a teoria não admite.",
+      "memorize": "Garantismo: nulla poena sine culpa, sem exceção preventiva."
      }
     },
     {
@@ -4730,7 +5823,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "ciência total",
        "barreira intransponível"
-      ]
+      ],
+      "aprofundamento": "Von Liszt propôs que as ciências criminais não trabalhassem isoladas. Na **ciência total do Direito Penal**, a Criminologia explica o crime, a Política Criminal escolhe estratégias e a dogmática organiza as normas, num conjunto integrado.\n\nAo mesmo tempo, ele estabeleceu um limite: o Direito Penal é a **barreira intransponível** da Política Criminal. Por mais útil que pareça uma estratégia de combate ao crime, ela não pode passar por cima das garantias legais, como a legalidade e a culpabilidade.\n\nA frase expressa uma tensão central das ciências criminais: eficiência e garantia. A banca costuma inverter a ordem da frase célebre, por isso grave quem é a barreira e quem é contido.",
+      "memorize": "Von Liszt: Direito Penal é a barreira intransponível da Política Criminal."
      }
     },
     {
@@ -4745,7 +5840,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "barreira intransponível",
        "von Liszt"
-      ]
+      ],
+      "correcao": {
+       "erro": "Inverte a frase, afirmando que a Política Criminal é a barreira intransponível do Direito Penal.",
+       "certo": "Para von Liszt, o Direito Penal é a barreira intransponível da Política Criminal."
+      },
+      "aprofundamento": "A frase de von Liszt tem direção precisa. A Política Criminal busca eficiência no enfrentamento do crime e tende a se expandir; o Direito Penal, com suas garantias, é o que a contém. Por isso o Direito Penal é a barreira, e a Política Criminal é o que precisa ser barrado.\n\nInverter a frase muda o sentido: seria dizer que a eficiência limita as garantias, o que é exatamente o contrário da ideia de um direito penal liberal. A legalidade e a culpabilidade funcionam como muros que nenhuma estratégia política pode atravessar.\n\nA pegadinha é a inversão pura. Lembre-se da lógica: quem protege a pessoa (o Direito Penal) é o limite de quem quer agir com eficiência (a Política Criminal).",
+      "memorize": "Barreira = Direito Penal; barrada = Política Criminal."
      }
     },
     {
@@ -4759,7 +5860,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "Medicina Legal",
        "ciências auxiliares"
-      ]
+      ],
+      "aprofundamento": "As ciências criminais auxiliares fornecem meios técnicos para esclarecer fatos e produzir prova. A **Medicina Legal** aplica conhecimentos médicos e biológicos às necessidades da Justiça: exame de lesões, determinação da causa da morte, identificação de pessoas, avaliação de embriaguez e de violência sexual.\n\nSua função é diferente da Criminologia. A Criminologia estuda o crime como fenômeno social e humano, buscando explicações e estratégias de prevenção; a Medicina Legal responde a perguntas concretas de um caso, para instruir o processo.\n\nA banca pode tratar a Medicina Legal como ramo da Criminologia ou como ciência normativa. Ela é ciência auxiliar, de natureza técnica e voltada à prova.",
+      "memorize": "Medicina Legal: ciência auxiliar, conhecimento médico a serviço da prova."
      }
     },
     {
@@ -4773,7 +5876,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "falsas memórias",
        "psicologia do testemunho"
-      ]
+      ],
+      "aprofundamento": "A memória não funciona como gravação fiel. Ela é reconstruída a cada lembrança e pode ser influenciada por perguntas sugestivas, informações recebidas depois do fato, estresse e expectativas. Assim surgem as **falsas memórias**: lembranças sinceras de algo que não aconteceu ou aconteceu de outro modo.\n\nNo processo penal, isso afeta especialmente o **reconhecimento** de pessoas. Uma vítima pode reconhecer com convicção um inocente, sobretudo se o procedimento for sugestivo ou feito por fotografia isolada. Erros desse tipo estão entre as causas frequentes de condenações injustas.\n\nA psicologia do testemunho contribui com protocolos que reduzem esses riscos. A banca pode afirmar que a convicção da testemunha garante a exatidão do reconhecimento; a ciência mostra que não.",
+      "memorize": "Falsas memórias: convicção não garante exatidão; procedimento correto reduz erro judiciário."
      }
     },
     {
@@ -4788,7 +5893,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "complementares",
        "autônomas"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que Criminologia e Direito Penal são incomunicáveis.",
+       "certo": "Criminologia e Direito Penal são autônomas, mas complementares: o dado criminológico informa a Política Criminal e o Direito Penal."
+      },
+      "aprofundamento": "Criminologia e Direito Penal são **autônomas**: cada uma tem objeto, método e finalidade próprios. A Criminologia é empírica e estuda o que acontece (o ser); o Direito Penal é normativo e diz o que deve ser.\n\nMas autonomia não é isolamento. No modelo integrado, o dado criminológico informa a Política Criminal, que orienta o legislador e o intérprete do Direito Penal. Sem esse diálogo, as leis tendem a ser simbólicas ou ineficazes; sem os limites do Direito Penal, a Política Criminal pode violar garantias.\n\nA pegadinha troca \"autônomas\" por \"incomunicáveis\". Quando a frase separar completamente os saberes, o gabarito é errado.",
+      "memorize": "Autônomas, sim; incomunicáveis, não."
      }
     },
     {
@@ -4802,7 +5913,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "primeiro filtro",
        "criminalização secundária"
-      ]
+      ],
+      "aprofundamento": "Antes de qualquer processo, alguém precisa decidir se um fato será registrado e investigado. Essa decisão, em regra, é da polícia. Por isso ela realiza a primeira e mais ampla seleção do sistema: o que não é registrado ou investigado dificilmente chega ao MP ou ao juiz.\n\nEssa seleção é influenciada por prioridades institucionais, recursos disponíveis, estereótipos e pela própria disposição da vítima em comunicar o fato. Ela explica boa parte da cifra negra e da seletividade do sistema.\n\nNa Criminologia, a polícia aparece, assim, como o **primeiro filtro** da criminalização secundária. A banca pode atribuir esse papel ao Judiciário ou dizer que a polícia apenas cumpre ordens, sem selecionar.",
+      "memorize": "Polícia: primeiro e mais amplo filtro da criminalização secundária."
      }
     },
     {
@@ -4817,7 +5930,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "cultura carcerária",
        "prisionização"
-      ]
+      ],
+      "correcao": {
+       "erro": "Define a prisionização como readaptação do preso aos valores da sociedade livre.",
+       "certo": "A prisionização é o processo pelo qual o preso assimila a cultura carcerária, afastando-se dos valores da sociedade livre."
+      },
+      "aprofundamento": "A **prisionização** descreve o efeito socializador da prisão, mas na direção errada. O preso aprende a viver segundo as regras do ambiente carcerário: códigos informais, hierarquias entre detentos, desconfiança da autoridade, linguagem própria.\n\nQuanto mais intensa essa assimilação, maior a distância em relação aos valores da sociedade livre, o que dificulta a reinserção e favorece a reincidência. É um dos argumentos centrais contra a crença de que a prisão, por si só, ressocializa.\n\nA pegadinha inverte o conceito, descrevendo uma readaptação à vida livre. Lembre que prisionização vem de \"prisão\": é a adaptação à cultura de dentro, e não à de fora.",
+      "memorize": "Prisionização: adaptação à cultura da prisão, não à vida livre."
      }
     },
     {
@@ -4831,7 +5950,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "compartimentalizada",
        "agências"
-      ]
+      ],
+      "aprofundamento": "Fala-se em \"sistema\" de justiça criminal, mas a Criminologia aponta que suas partes funcionam de modo pouco integrado. Polícia, Ministério Público, Judiciário e administração penitenciária têm culturas, metas e critérios de sucesso diferentes.\n\nA polícia pode ser cobrada por número de prisões; o MP, por denúncias; o juiz, por produtividade e respeito às garantias; a prisão, por segurança e disciplina. Esses objetivos nem sempre convergem e, às vezes, se contradizem, gerando retrabalho, conflitos e resultados pouco coerentes.\n\nEssa **compartimentalização** ajuda a explicar por que reformas em um ponto do sistema podem produzir efeitos inesperados em outro. A banca pode descrever o sistema como plenamente coordenado.",
+      "memorize": "Sistema de justiça criminal: agências compartimentalizadas, com metas próprias e às vezes contraditórias."
      }
     },
     {
@@ -4855,7 +5976,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "intimidade",
        "segredo de justiça"
-      ]
+      ],
+      "aprofundamento": "A exposição da vítima é uma das formas mais comuns de **vitimização secundária**. Ter o nome, a imagem e detalhes íntimos divulgados pode causar um sofrimento tão grande quanto o próprio crime, além de desestimular outras vítimas a procurar a Justiça.\n\nO dispositivo citado manda o juiz adotar as providências necessárias para preservar a intimidade, a vida privada, a honra e a imagem do ofendido. Entre elas está o segredo de justiça sobre dados, depoimentos e informações a seu respeito, para evitar a exposição aos meios de comunicação.\n\nRepare que o segredo é uma possibilidade (\"podendo\"), enquanto as providências de preservação são dever (\"tomará\"). A banca pode inverter essa relação.",
+      "memorize": "Juiz TOMARÁ providências para preservar o ofendido e PODE decretar segredo de justiça."
      }
     },
     {
@@ -4880,7 +6003,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "espaço separado",
        "ofendido"
-      ]
+      ],
+      "correcao": {
+       "erro": "Afirma que o CPP não prevê espaço separado para o ofendido antes ou durante a audiência.",
+       "certo": "Antes do início da audiência e durante sua realização, será reservado espaço separado para o ofendido (CPP, art. 201, § 4º)."
+      },
+      "aprofundamento": "Esperar a audiência no mesmo corredor que o acusado, seus familiares ou testemunhas de defesa pode intimidar a vítima, reavivar o trauma e até influenciar seu depoimento. Para evitar isso, o dispositivo citado determina que seja reservado espaço separado para o ofendido antes e durante a audiência.\n\nA regra é expressão da preocupação com a **vitimização secundária**: o sistema não deve acrescentar sofrimento ao que o crime já causou. É uma medida simples, mas com efeito importante na qualidade da prova e no respeito à vítima.\n\nA pegadinha nega a existência da regra. Repare que o texto usa \"será\", indicando obrigação, e abrange os dois momentos: antes e durante a audiência.",
+      "memorize": "Ofendido: espaço separado antes e durante a audiência."
      }
     },
     {
@@ -4904,7 +6033,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "avocado",
        "despacho fundamentado"
-      ]
+      ],
+      "aprofundamento": "A regra protege a investigação contra interferências indevidas. Se um superior pudesse retirar o inquérito do delegado responsável sem justificativa, investigações incômodas poderiam ser desviadas ou paralisadas por razões políticas ou pessoais.\n\nPor isso a avocação ou redistribuição exige três elementos: decisão de superior hierárquico, despacho fundamentado e motivo legal, que é o interesse público ou a inobservância de procedimentos que prejudique a eficácia da investigação. Sem esses requisitos, o ato é ilegítimo.\n\nA garantia reforça a autonomia técnica do delegado, ligada à natureza jurídica de suas funções. A banca costuma dispensar a fundamentação ou ampliar os motivos.",
+      "memorize": "Avocação: superior hierárquico + despacho fundamentado + interesse público ou falha procedimental."
      }
     },
     {
@@ -4929,7 +6060,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "despacho fundamentado",
        "avocação"
-      ]
+      ],
+      "correcao": {
+       "erro": "Admite a avocação livre do inquérito, independentemente de fundamentação.",
+       "certo": "O inquérito em curso somente poderá ser avocado ou redistribuído por superior hierárquico, mediante despacho fundamentado e por motivo previsto em lei (Lei 12.830/2013, art. 2º, § 4º)."
+      },
+      "aprofundamento": "A lei citada usa a palavra \"somente\": a avocação e a redistribuição do inquérito são exceções, e não decisões livres do superior. A exigência de **despacho fundamentado** permite que a decisão seja controlada e evita que a investigação seja retirada do delegado por motivos ocultos.\n\nAlém da fundamentação, deve haver um dos motivos legais: interesse público ou inobservância de procedimentos que prejudique a eficácia da investigação. A garantia protege a independência técnica do trabalho investigativo.\n\nA pegadinha usa \"livremente\" e \"independentemente de fundamentação\". Essas expressões contrariam frontalmente o texto legal.",
+      "memorize": "Avocação nunca é livre: exige despacho fundamentado e motivo legal."
      }
     },
     {
@@ -4953,7 +6090,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "atendimento policial especializado",
        "vitimização secundária"
-      ]
+      ],
+      "aprofundamento": "A mulher vítima de violência doméstica muitas vezes chega à delegacia fragilizada, com medo e, não raro, depois de ter sido desacreditada por familiares. Um atendimento despreparado (perguntas culpabilizantes, descrédito, demora) pode fazê-la desistir e reforçar o ciclo de violência.\n\nO **atendimento policial especializado**, em particular nas Delegacias de Atendimento à Mulher, busca oferecer acolhimento adequado, profissionais capacitados e encaminhamentos à rede de proteção. É uma forma de prevenir a **vitimização secundária**.\n\nO dispositivo citado o coloca entre as diretrizes da política de enfrentamento. A banca pode tratá-lo como mera recomendação sem previsão legal; ele está expressamente previsto.",
+      "memorize": "Violência doméstica: atendimento policial especializado, em especial nas Delegacias da Mulher."
      }
     },
     {
@@ -4977,7 +6116,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "mínima intervenção",
        "revitimização"
-      ]
+      ],
+      "aprofundamento": "Uma criança vítima de violência pode ser ouvida por conselheiro tutelar, policial, psicólogo, promotor e juiz. Cada novo relato obriga a reviver o fato, o que aprofunda o trauma e pode contaminar a memória com sugestões.\n\nA diretriz da **mínima intervenção** dos profissionais envolvidos busca reduzir esse percurso: menos pessoas, menos repetições, mais coordenação entre os órgãos. Ela se aplica também à fase policial, que deve evitar oitivas desnecessárias.\n\nÉ uma ferramenta contra a **revitimização**, ao lado do depoimento especial e da vedação de contato com o autor. A banca pode afirmar que a lei estimula múltiplas oitivas para garantir a prova; a lógica é a oposta.",
+      "memorize": "Criança ou adolescente vítima: mínima intervenção dos profissionais, para não revitimizar."
      }
     },
     {
@@ -5005,7 +6146,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "requisição",
        "delegado de polícia"
-      ]
+      ],
+      "correcao": {
+       "erro": "Condiciona toda requisição de perícia, informações, documentos e dados pelo delegado a prévia autorização judicial.",
+       "certo": "Cabe ao delegado requisitar perícia, informações, documentos e dados que interessem à apuração (Lei 12.830/2013, art. 2º, § 2º), sem intermediação judicial, ressalvadas as matérias sob reserva de jurisdição."
+      },
+      "aprofundamento": "O poder de requisição dá agilidade à investigação. Se o delegado precisasse pedir ao juiz cada perícia, documento ou informação, a apuração ficaria lenta e o Judiciário seria sobrecarregado com pedidos rotineiros. Por isso a lei citada atribui diretamente ao delegado a requisição de perícia, informações, documentos e dados.\n\nO limite está nas matérias sob **reserva de jurisdição**. Quando a medida atinge direitos protegidos de modo especial, como a interceptação telefônica e a quebra de sigilo bancário, a decisão cabe ao juiz, e o delegado deve representar.\n\nA pegadinha generaliza a necessidade de autorização judicial. A regra é a requisição direta; a ordem judicial é exceção para os dados sob reserva.",
+      "memorize": "Delegado requisita direto; só o que está sob reserva de jurisdição exige juiz."
      }
     },
     {
@@ -5029,7 +6176,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "ouvir o ofendido",
        "vitimização secundária"
-      ]
+      ],
+      "aprofundamento": "Ouvir o ofendido logo no início da investigação é essencial: ele costuma ser a melhor fonte sobre o que aconteceu, e a memória é mais precisa quando o fato é recente. Por isso a lei o coloca entre as primeiras providências da autoridade policial.\n\nO enfoque vitimológico acrescenta o \"como\". A oitiva deve evitar perguntas culpabilizantes, exposição desnecessária, longas esperas e repetição do relato. Uma vítima maltratada na delegacia sofre **vitimização secundária** e pode desistir de colaborar.\n\nA regra une eficiência investigativa e respeito à vítima. A banca pode tratar a oitiva como faculdade do delegado ou ignorar o cuidado com a revitimização.",
+      "memorize": "Ouvir o ofendido é dever do delegado, sem revitimizar."
      }
     },
     {
@@ -5061,7 +6210,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "objetivos fundamentais",
        "prevenção primária"
-      ]
+      ],
+      "aprofundamento": "Os objetivos fundamentais citados não tratam de crime, mas desenham o tipo de sociedade que a Constituição quer construir: livre, justa, solidária, sem pobreza nem marginalização. São exatamente as condições que a Criminologia associa à redução das causas do delito.\n\nPor isso a doutrina vê nesses objetivos o programa da **prevenção primária**. Políticas de educação, emprego, moradia e inclusão social, voltadas a esses fins, atuam nas raízes da criminalidade, ainda que de forma indireta e a longo prazo.\n\nIsso mostra que a segurança pública não depende apenas da polícia e do direito penal. A banca pode afirmar que esses objetivos são estranhos à prevenção do crime; a ligação é reconhecida.",
+      "memorize": "Objetivos do art. 3º da CF = programa da prevenção primária."
      }
     },
     {
@@ -5075,7 +6226,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "Direito Penal simbólico",
        "sensação de segurança"
-      ]
+      ],
+      "aprofundamento": "O **Direito Penal simbólico** surge quando o legislador cria crimes ou aumenta penas para dar uma resposta rápida a um caso de grande repercussão ou a uma onda de medo. O objetivo real é mostrar à sociedade que algo está sendo feito, e não proteger efetivamente o bem jurídico.\n\nEssas normas costumam ter pouca aplicação prática ou efeito nulo sobre a criminalidade, mas cumprem uma função política: acalmar a opinião pública e render dividendos eleitorais. O custo é a inflação legislativa e o descrédito do próprio direito penal.\n\nO tema se liga à criminologia midiática e ao populismo penal. A banca pode apresentar o Direito Penal simbólico como modelo eficaz de proteção de bens jurídicos; a crítica aponta justamente o contrário.",
+      "memorize": "Direito Penal simbólico: efeito político e sensação de segurança, sem proteção real."
      }
     },
     {
@@ -5090,7 +6243,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "populismo penal",
        "evidências"
-      ]
+      ],
+      "correcao": {
+       "erro": "Apresenta o populismo penal como a política criminal recomendada pela Criminologia no Estado Democrático de Direito.",
+       "certo": "O populismo penal é criticado pela Criminologia, por ignorar evidências e ampliar a seletividade."
+      },
+      "aprofundamento": "O **populismo penal** consiste em usar o endurecimento punitivo como resposta automática ao medo e à indignação pública, amplificados pela mídia. Mais crimes, penas maiores, menos benefícios: medidas de forte apelo emocional, mas raramente apoiadas em evidências.\n\nA Criminologia critica esse modelo por várias razões. Ele ignora dados sobre o que realmente reduz o crime, amplia a seletividade sobre grupos vulneráveis, superlota as prisões e alimenta o ciclo de prisionização e reincidência.\n\nNo Estado Democrático de Direito, a política criminal deve ser baseada em conhecimento empírico e respeitar garantias. A pegadinha transforma o objeto da crítica em recomendação.",
+      "memorize": "Populismo penal: criticado, não recomendado."
      }
     },
     {
@@ -5115,7 +6274,13 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "estabelecimentos distintos",
        "sexo do apenado"
-      ]
+      ],
+      "correcao": {
+       "erro": "Inclui a condição econômica entre os critérios de separação dos estabelecimentos, no lugar do sexo.",
+       "certo": "A pena será cumprida em estabelecimentos distintos, de acordo com a natureza do delito, a idade e o sexo do apenado (CF, art. 5º, XLVIII)."
+      },
+      "aprofundamento": "A separação dos presos em estabelecimentos distintos é instrumento de individualização da pena e de proteção. Separar por natureza do delito evita a convivência indiscriminada entre perfis muito diferentes; por idade, protege os mais jovens e os mais velhos; por sexo, garante segurança e respeito à intimidade.\n\nA condição econômica não está entre os critérios. Separar presos por renda criaria privilégios incompatíveis com a igualdade e reforçaria a seletividade do sistema, oferecendo tratamento melhor a quem tem mais recursos.\n\nA pegadinha troca um dos critérios. Grave os três: natureza do delito, idade e sexo.",
+      "memorize": "Estabelecimentos distintos: natureza do delito, idade e sexo."
      }
     },
     {
@@ -5147,7 +6312,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "direitos não atingidos",
        "execução"
-      ]
+      ],
+      "aprofundamento": "A condenação retira alguns direitos, como a liberdade de locomoção, mas não transforma o condenado em alguém sem direitos. Tudo o que a sentença ou a lei não atingiram continua assegurado: integridade, saúde, assistência, comunicação, entre outros.\n\nO parágrafo único reforça a igualdade: não pode haver distinção de natureza racial, social, religiosa ou política. Isso impede que a execução se torne instrumento de discriminação ou de perseguição.\n\nO dispositivo citado é a expressão do Estado Democrático de Direito na execução penal. A banca pode afirmar que o condenado perde todos os direitos civis ou que a execução admite distinções sociais.",
+      "memorize": "Condenado mantém todos os direitos não atingidos pela sentença ou pela lei, sem discriminação."
      }
     },
     {
@@ -5171,7 +6338,9 @@ window.PENTE_FINO.CRI = {
       "palavras_chave": [
        "sensacionalismo",
        "direito do preso"
-      ]
+      ],
+      "aprofundamento": "A exposição sensacionalista do preso (imagens humilhantes, divulgação espetacularizada, rótulos públicos) produz estigma duradouro. Ela reforça o efeito de rotulação que a Criminologia associa à carreira criminal e dificulta a reinserção, além de atingir a honra e a imagem da pessoa.\n\nPor isso a lei citada inclui entre os direitos do preso a proteção contra qualquer forma de **sensacionalismo**. O direito vale diante da mídia e também diante de agentes públicos que promovam exposição indevida.\n\nO tema se conecta à criminologia midiática e às cerimônias degradantes. A banca pode restringir a proteção ao preso condenado definitivamente ou a determinadas formas de exposição; o texto diz \"qualquer forma\".",
+      "memorize": "Preso: proteção contra QUALQUER forma de sensacionalismo."
      }
     }
    ]
