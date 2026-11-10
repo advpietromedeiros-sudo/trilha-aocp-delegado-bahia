@@ -14,8 +14,8 @@
   por `ferramentas/embutir_grifa.py` no `index.html`, no Treino de Discursiva, no molde da Revisão e nos 5 cadernos
   de `revisao/saida/`. Prova: `docs/testar_grifa.cjs` (24 conferências + 2 telas reais; autoteste com 3 defeitos);
   4 portas novas no portão (33 de 33 verdes às 20h27). Story: `Nesta sessão/Paleta de grifos (tecla G)`.
-  - ⏳ **Aguardando a aprovação do titular no Storybook antes do commit** (§P6). Até lá, os arquivos ficam
-    alterados no disco (já funcionam ao recarregar a página).
+  - ✅ **Autorizado pelo titular às 20h36 (D-023)** e subido no Git. A story está em `Aguardando Análise` até a
+    aprovação visual.
   - ⚠️ **Limites declarados:** grifo salvo por navegador e por tela (não vai no backup do app); o histórico
     acumulado (`historico/`) não tem a paleta; teste em jsdom, sem prova num Chrome real.
 

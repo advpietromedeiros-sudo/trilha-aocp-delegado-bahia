@@ -102,6 +102,15 @@ PORTAS: list[tuple[str, list[str], str]] = [
      "ou CPF (09/11/2026)"),
     ("o leitor das provas AOCP acusa", [sys.executable, "ferramentas/extrair_provas_aocp.py", "--autoteste"],
      "gabarito ou cabeçalho da prova lidos errado em silêncio"),
+    # Paleta de grifos com a tecla G em todas as telas (10/11/2026, pedido do titular)
+    ("grifos: cópia embutida igual à fonte", [sys.executable, "ferramentas/embutir_grifa.py", "--conferir"],
+     "tela sem a paleta ou com cópia velha de assets/grifa.js (cada tela grifando de um jeito)"),
+    ("o conferidor dos grifos acusa", [sys.executable, "ferramentas/embutir_grifa.py", "--autoteste"],
+     "conferidor que aprova tela sem o bloco, com cópia antiga ou com dois blocos (verde falso)"),
+    ("grifos: comportamento", ["node", "docs/testar_grifa.cjs"],
+     "G abrindo dentro de campo; grifo que some ao redesenhar; grifo no lugar errado em trecho repetido"),
+    ("o teste dos grifos acusa", ["node", "docs/testar_grifa.cjs", "--autoteste"],
+     "teste que passa com o contexto ignorado ou sem reaplicar o grifo (verde falso)"),
 ]
 
 # Régua de segredo (31/10/2026): exige VALOR de 20+ caracteres depois do `=` — o LEIA_PRIMEIRO cita

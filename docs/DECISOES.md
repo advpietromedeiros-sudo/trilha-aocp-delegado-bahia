@@ -326,3 +326,13 @@ COLOCO DEPOIS. VEJA SE CONSEGUE SEM PERDER NADA DO CONTEÚDO."*
 - ⚠️ **Limite declarado:** o número do julgado é conferido contra o material, não contra a fonte oficial, e o
   gabarito é escrito pelo redator. Julgados e leis de 2025 e 2026 posteriores ao conhecimento do redator saem como o
   material os traz.
+
+### D-023 — Paleta de grifos com a tecla G em todas as telas (10/11/2026, 20h17 e 20h36, titular)
+
+- **Pedido (20h17), textual:** *"coloque uma função que sempre que eu apertar G aparece uma paletra de grifes...para
+  eu grifar algum texto que eu queira em todas as telas essa função"*.
+- **Autorização para subir (20h36), textual:** *"pode fazer a questão do grife"*.
+- **O que se fez:** fonte única `assets/grifa.js`, embutida por `ferramentas/embutir_grifa.py` nas telas (o
+  `servidor.py` só serve `/index.html`, por isso embutido e não `<script src>`); grifos salvos por navegador e por tela.
+- ⚠️ **A autorização é para subir, não é aprovação visual registrada:** a story fica em `Aguardando Análise` até o
+  titular aprovar a aparência no Storybook (§G6.5).
