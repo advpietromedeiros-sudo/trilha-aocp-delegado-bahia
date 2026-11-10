@@ -29,7 +29,8 @@ NOMES = {"CPC": "Processo Civil", "TRI": "Tributário", "CON": "Constitucional",
          "ADM": "Administrativo", "PEN": "Penal", "CPP": "Processo Penal", "LPE": "Legislação Penal Especial",
          "CRI": "Criminologia", "MLE": "Medicina Legal", "CIV": "Civil", "HUM": "Direitos Humanos",
          "EMP": "Empresarial", "ELE": "Eleitoral", "TRA": "Trabalho", "PRT": "Processo do Trabalho",
-         "INF": "Estatuto da Criança e do Adolescente", "PRV": "Previdenciário", "FIN": "Financeiro"}
+         "INF": "Estatuto da Criança e do Adolescente", "PRV": "Previdenciário", "FIN": "Financeiro",
+         "IGR": "Igualdade Racial e de Gênero", "LEG": "Legislação Geral"}  # Parte 3, 10/11/2026
 
 
 def _slug(s: str) -> str:

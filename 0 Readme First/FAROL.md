@@ -2,9 +2,44 @@
 
 > Estado, tarefas e o que ficou rodando. Atualizado a cada ~15 min de trabalho e no fechamento.
 
-**Última atualização:** 09/11/2026, 16h0x.
+**Última atualização:** 10/11/2026, 20h33.
 
 ## Estado
+
+- ✅ **10/11/2026, 20h32 — Parte 3 da Revisão montada:** os 34 blocos com rc 0 no verificador (varredura das 20h28),
+  **4.594 assertivas**; `discursiva/revisao_nfpss.js` regravado (6.942,5 KB) com **7.377** no total (Partes 1 a 3).
+  - ⏳ **Falta:** a camada de aprofundamento da Parte 3 (como a das Partes 1 e 2) e conferir na fonte as
+    divergências de `revisao/material/nfpss/CONFERIR_P3.md` (~60 itens; vários escritos "de memória" pelos redatores).
+- 🆕 **10/11/2026, 20h17 — Paleta de grifos (tecla G), pedido do titular:** fonte única `assets/grifa.js`, embutida
+  por `ferramentas/embutir_grifa.py` no `index.html`, no Treino de Discursiva, no molde da Revisão e nos 5 cadernos
+  de `revisao/saida/`. Prova: `docs/testar_grifa.cjs` (24 conferências + 2 telas reais; autoteste com 3 defeitos);
+  4 portas novas no portão (33 de 33 verdes às 20h27). Story: `Nesta sessão/Paleta de grifos (tecla G)`.
+  - ⏳ **Aguardando a aprovação do titular no Storybook antes do commit** (§P6). Até lá, os arquivos ficam
+    alterados no disco (já funcionam ao recarregar a página).
+  - ⚠️ **Limites declarados:** grifo salvo por navegador e por tela (não vai no backup do app); o histórico
+    acumulado (`historico/`) não tem a paleta; teste em jsdom, sem prova num Chrome real.
+
+- 🆕 **10/11/2026 — Parte 3 da Revisão (D-022), EM ANDAMENTO.** O titular subiu o PDF às 13h22 (414 páginas,
+  8 disciplinas) e escolheu gerar **tudo, em ondas** (15h1x).
+  - ✅ Texto extraído (`revisao/material/nfpss/parte3.txt`, sem CPF) e dividido por
+    `revisao/material/nfpss/limpar_parte3.py` em **34 blocos**: IGR01-02, LEG01, ADM01-05, CIV01-05, CRI01-03,
+    PEN01-08, CPP01-05, LPE01-05. Brief: `revisao/material/nfpss/BRIEF_P3.md` (com o negrito da §G6.6).
+  - ⏳ **Onda 1 (15h2x):** PEN01 a PEN08 e CPP01. **Medido às 20h04:** 5 de 9 prontos no verificador (rc 0) —
+    CPP01 149, PEN01 149, PEN02 140, PEN03 159 e PEN07 114 itens (711); PEN04, PEN05, PEN06 e PEN08 **sem nenhum
+    arquivo** (os redatores morreram com a sessão anterior).
+  - ⏳ **Retomada às 20h05:** PEN04, PEN05, PEN06, PEN08 e a onda 2 de Processo Penal (CPP02 a CPP05), 8 redatores.
+    **20h07:** onda 3 solta (LPE01 a LPE05) — 13 redatores em paralelo. **20h09:** PEN08 (73) e CPP05 (64) com
+    rc 0, conferido pela sessão principal; CRI01 e CRI02 soltos.
+  - **20h17 — 20 de 34 blocos concluídos com rc 0** (conferidos pela sessão principal): CPP01-05, PEN01-08,
+    LPE01-03, LPE05, CRI01-03. Varredura dos 34 às 20h17: 21 com rc 0 e **2.584 itens** — o 21º é o LPE04, que passa
+    mas o redator ainda escrevia (não conta como concluído, §F37). Rodando: LPE04, ADM01-05, CIV01-05, LEG01; IGR01-02
+    soltos às 20h17. ⚠️ *Correção:* o relato das 20h14 dava 17 blocos (CPP04 incluso) — eram 16; o CPP04 só fechou
+    às 20h17.
+  - 📋 Divergências dos redatores em `revisao/material/nfpss/CONFERIR_P3.md` (fora do Git), a conferir na fonte.
+  - ⏳ **Depois:** verificador em rc 0 por bloco, o montador (`montar_revisao_material.py`, com IGR e LEG novos)
+    e a camada de aprofundamento.
+- ✅ **10/11/2026 — Treino de Discursiva:** artigo, súmula e conceito do "Escrever a peça" abrem o Estudo completo
+  (commit `2ef6eaa`); texto justificado e negrito (§G6.6, commit `ab175e9`).
 
 - 🆕 **09/11/2026 — Comentários aprofundados (Pente Fino e Revisão)**, pedido do titular.
   - **Campos novos:** "Onde está o erro" (o que a assertiva diz ao lado do certo), "Aprofundando", "Na prática" e
