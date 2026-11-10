@@ -20,11 +20,29 @@ SUM = ROOT / 'assets' / 'sumulas.json'
 CAT = ROOT / 'assets' / 'catalogo_leis.json'
 OUT = DISC / 'artigos.js'
 
-PECAS_JS = [DISC / 'conteudo.js', DISC / 'pecas_complementares.js']
+PECAS_JS = [DISC / 'conteudo.js', DISC / 'pecas_complementares.js', DISC / 'leis.js']
 CHIP = re.compile(r'^(CF|CPP|CP|ECA|LEP|CTN|LC\s*(\d+)(?:/\d+)?|Lei\s*([\d.]+)/\d+)\s*,\s*arts?\.\s*(\d+)\s*(?:º|°|o)?\s*(-[A-Z])?')
 SIGLA = {'CF': 'CF', 'CP': 'CP', 'CPP': 'CPP', 'ECA': 'L8069', 'LEP': 'L7210', 'CTN': 'L5172'}
 REF = re.compile(r"'((?:CF|CP|CPP|LC\d+|L\d{4,5}):\d+(?:-[A-Z])?(?::[^'\s]+)?)'")
 JUR = re.compile(r"'((?:SUM-ST[FJ]|SV)-\d+)'")
+LEI_RX = r'(?:Código de Processo Penal|Código Penal|Constituição(?: Federal)?|CPP|CP|CF|ECA|LEP|CTN|Lei(?: nº)?\s*[\d.]+/\d+|LC\s*\d+(?:/\d+)?)'
+# o mesmo padrão de RX_ART no motor (Treino_Discursiva.html)
+CITA = re.compile(r'(?:\b(' + LEI_RX + r')\s*,\s*)?\barts?\.\s*((?:§\s*)?\d+\s*[º°]?(?:-[A-Z])?(?:\s*(?:,|\be\b)\s*(?:§\s*\d+\s*[º°]?(?:-[A-Z])?|[IVXL]+\b|parágrafo único|caput|\d+\s*[º°]?(?:-[A-Z])?(?![\d/])))*)(\s*,?\s*(?:(?:do|da)\s+' + LEI_RX + r'|(?:CPP|CP|CF)\b(?!\s*,\s*arts?\.)))?')
+
+
+def sigla_de(n):
+    if not n: return None
+    n = re.sub(r'^\s*,?\s*(?:(?:do|da)\s+)?', '', n, flags=re.I).strip()
+    m = re.match(r'Lei(?:\s+nº)?\s*([\d.]+)/\d+', n, re.I)
+    if m: return 'L' + m.group(1).replace('.', '')
+    m = re.match(r'LC\s*(\d+)', n, re.I)
+    if m: return 'LC' + m.group(1)
+    if re.match(r'(CPP|Código de Processo Penal)', n): return 'CPP'
+    if re.match(r'(CP|Código Penal)', n): return 'CP'
+    if re.match(r'(CF|Constituição)', n): return 'CF'
+    return {'ECA': 'L8069', 'LEP': 'L7210', 'CTN': 'L5172'}.get(n[:3].upper())
+
+
 ROT = {'CF': 'CF', 'CP': 'CP', 'CPP': 'CPP', 'L5172': 'CTN', 'L8069': 'ECA', 'L7210': 'LEP'}
 NOTA = r'\((?:Reda[çc][ãa]o dada|Inclu[íi]d[oa]|Revogad[oa]|Vide|Vig[êe]ncia|Acrescid[oa]|Renumerad[oa])[^)]*\)'
 
@@ -101,6 +119,19 @@ def main():
             if m:
                 sig = 'LC' + m.group(2) if m.group(2) else 'L' + m.group(3).replace('.', '') if m.group(3) else SIGLA[m.group(1)]
                 refs.add(f'{sig}:{m.group(4)}{m.group(5) or ""}')
+    # e os artigos citados no texto das peças com a lei por extenso ('art. 313, I, do CPP', 'CP, art. 157'), para que
+    # cada citação do 'Escrever a peça' abra a letra da lei (pedido do titular, 10/11/2026)
+    for f in PECAS_JS + [DISC / 'Treino_Discursiva.html']:
+        # por literal de texto: 'art. N' sem lei herda a última lei citada antes no mesmo texto, como no motor
+        for lit in re.findall(r"'(?:[^'\\\n]|\\.)*'|\"(?:[^\"\\\n]|\\.)*\"", f.read_text('utf8')):
+            ult = None
+            for m in CITA.finditer(lit):
+                sig = sigla_de(m.group(1)) or sigla_de(m.group(3))
+                ult = sig or ult
+                if not ult: continue
+                for q in re.finditer(r'(§\s*)?(\d+)\s*[º°]?(-[A-Z])?', m.group(2)):
+                    nu = q.group(2) + (q.group(3) or '')
+                    if not q.group(1) and (sig or f'{ult}:{nu}' in lei): refs.add(f'{ult}:{nu}')
     refs = sorted(refs)
     arts, faltas, mod, paginas = {}, [], None, {}
     for ref in refs:
@@ -131,7 +162,7 @@ def main():
         t = re.split(r'\s+-\s+(?=[A-ZÁÉÍÓÚ])', s['texto'], 1)[0].strip()  # o acervo anexa notas depois de " - "
         juris[j] = {'t': t, 'tri': s.get('tribunal') or ('STF' if j.startswith('SV') else ''), 'n': s.get('numero') or j.split('-')[-1]}
     cab = ('/* GERADO por ferramentas/gerar_artigos_discursiva.py — não edite à mão (D-015).\n'
-           '   Texto oficial do Planalto (lei seca) e das súmulas do STF e do STJ citados em conducao.js e estudo.js. */\n')
+           '   Texto oficial do Planalto (lei seca) e das súmulas do STF e do STJ citados na condução, no estudo e no texto das peças. */\n')
     OUT.write_text(cab + 'const ARTIGOS = ' + json.dumps(arts, ensure_ascii=False, indent=0) + ';\n'
                    + 'const JURIS = ' + json.dumps(juris, ensure_ascii=False, indent=0) + ';\n', 'utf8')
     print(f'{len(arts)} referências de lei, {len(juris)} súmulas -> {OUT.relative_to(ROOT)}')

@@ -174,6 +174,32 @@ if (TEM_REV) {
   d2.window.discAPI.ir("simulados");
   prova("sem os dados de terceiro, a aba Simulados avisa e não quebra", /não estão nesta cópia/.test(d2.window.document.body.textContent));
 }
+// ligações do "Escrever a peça" ao "Estudo completo" (pedido do titular, 10/11/2026): artigo, súmula e conceito viram link
+{
+  A.abrirPeca("preventiva", "escrever"); const sobre = d.getElementById("sobre");
+  const iCab = A.passosDe(A.PECAS.find(p => p.id === "preventiva")).findIndex(x => /^Cabimento/.test(x.t)); d.querySelector(`[data-passo="${iCab}"]`).click();
+  const lks = [...d.querySelectorAll('.orient [data-lk^="art|"]')];
+  prova("ligações: a orientação do passo traz artigos clicáveis e a faixa com os temas do Estudo completo", lks.length > 0 && !!d.querySelector(".dolig [data-lk^='tema|']"));
+  const alvo = d.querySelector('.orient [data-lk="art|CPP:313"]'); alvo && alvo.click();
+  prova("ligações: clicar no art. 313 abre a tela com a letra da lei e o tema Prisão preventiva", !!alvo && !sobre.hidden && /Prisão preventiva/.test(d.getElementById("sobreCorpo").textContent) && !!d.querySelector("#sobreCorpo .lei[open] .leitxt") && !!d.querySelector("#sobreCorpo .tema h3"), d.getElementById("sobreTit").textContent);
+  d.dispatchEvent(new w.KeyboardEvent("keydown", { key: "Escape", bubbles: true }));
+  prova("ligações: Esc fecha a tela", sobre.hidden);
+  d.getElementById("verModelo").click();
+  prova("ligações: o modelo do passo também tem links", d.querySelectorAll(".modelo [data-lk]").length > 0);
+  const ps = A.passosDe(A.PECAS.find(p => p.id === "preventiva"));
+  const t3b = w.eval("ligar")("Juiz das garantias (art. 3º-B do CPP).", []);
+  prova("ligações: 'art. 3º-B' liga ao 3º-B, não ao 3º", /data-lk="art\|CPP:3-B"/.test(t3b), t3b);
+  for (let i = 0; i < ps.length; i++) { A.abrirPeca("preventiva", "escrever"); d.querySelector(`[data-passo="${i}"]`).click(); const tx = d.getElementById("txt"); tx.value = i === 0 ? "Decretação com base no art. 312 do CPP, na Súmula 676 do STJ e na Súmula Vinculante 14; presente o fumus comissi delicti." : ""; tx.dispatchEvent(new w.Event("input")); }
+  d.querySelector(`[data-passo="${ps.length}"]`).click();
+  const fin = d.querySelector(".peca-final");
+  prova("ligações: na peça montada, o que o aluno escreveu vira link (artigo, súmula e conceito)", !!fin.querySelector('[data-lk="art|CPP:312"]') && !!fin.querySelector('[data-lk="jur|SUM-STJ-676"]') && !!fin.querySelector('[data-lk="jur|SV-14"]') && !!fin.querySelector('[data-lk="tema|preventiva"]'), fin.innerHTML.slice(0, 300));
+  fin.querySelector('[data-lk="tema|preventiva"]').click();
+  prova("ligações: o conceito abre o tema inteiro do Estudo completo (doutrina e objetiva)", !sobre.hidden && /Doutrina/.test(d.getElementById("sobreCorpo").textContent) && /Prisão preventiva/.test(d.getElementById("sobreTit").textContent));
+  d.getElementById("sobreX").click();
+  let n = 0; for (const p of A.PECAS) { A.abrirPeca(p.id, "escrever"); for (const x of A.passosDe(p)) for (const t of [x.orient, x.modelo, ...(x.check || [])]) n += (w.eval("ligar")(t || "", w.eval("ctxDe")(x.arts)).match(/data-lk=/g) || []).length; }
+  prova(`ligações: as 18 peças somam ${n} links (régua: 700 ou mais)`, n >= 700, String(n));
+  A.st().pecas.preventiva = { txt: {}, chk: {} };
+}
 prova("nenhum erro de JavaScript em todo o fluxo", erros.length === 0, erros.join(" | "));
 
 if (AUTO) { console.log(falhas ? "AUTOTESTE OK: o defeito plantado foi acusado" : "AUTOTESTE FALHOU: o defeito passou"); process.exit(falhas ? 0 : 1); }

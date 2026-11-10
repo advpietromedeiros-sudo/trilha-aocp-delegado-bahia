@@ -42,6 +42,15 @@ mark{background:#fff0a8;padding:0 2px;border-radius:3px}
 details.lei{border:1px solid var(--linha);border-radius:8px;margin:6px 0;background:#fff}details.lei summary{cursor:pointer;padding:7px 10px;color:var(--azul);font-weight:600}
 .leitxt{white-space:pre-wrap;font:15px/1.6 Georgia,serif;padding:4px 12px 10px}.leitxt small{color:var(--suave);font:12px "Segoe UI",sans-serif}.leifonte{font-size:12px;color:var(--suave);padding:0 12px 8px}
 .n26{color:var(--vermelho);font-weight:700}.arts span[data-art]{cursor:pointer}.arts span[data-art]:hover{background:var(--azul2)}
+.lk{color:#5a2ca0;font-weight:700;text-decoration:underline dotted 2px;text-underline-offset:3px;cursor:pointer;border-radius:4px}.lk:hover,.lk:focus{background:#efe7fb;outline:none}
+.lk-c{color:#0f5d3a;text-decoration-style:dashed}.lk-s{color:#8a4b00}
+.dolig{margin:10px 0;display:flex;flex-wrap:wrap;gap:6px;align-items:center}.dolig b{font-size:13px;color:var(--suave);text-transform:uppercase;letter-spacing:.04em}
+.dolig button{border:1px solid #cdbfe9;background:#f6f1fd;color:#4a2590;border-radius:999px;padding:5px 12px;font-weight:700;cursor:pointer}.dolig button:hover{background:#e9dffa}
+#sobre{position:fixed;inset:0;z-index:90;background:rgba(15,27,48,.55);display:flex;align-items:flex-start;justify-content:center;padding:4vh 12px;overflow:auto}
+#sobre[hidden]{display:none}
+#sobre .caixa{background:#fff;color:#1c2230;max-width:860px;width:100%;border-radius:14px;padding:18px 22px 22px;box-shadow:0 18px 50px rgba(0,0,0,.35)}
+#sobre .topo{display:flex;justify-content:space-between;align-items:center;gap:10px;position:sticky;top:-4vh;background:#fff;padding:6px 0;border-bottom:1px solid var(--linha);margin-bottom:6px}
+#sobre .topo h2{margin:0;font-size:20px}#sobre .topo button{border:0;border-radius:10px;background:#0f1b30;color:#fff;font-weight:700;padding:8px 14px;cursor:pointer}
 .tema{border-top:1px solid var(--linha);padding-top:10px;margin-top:12px}.rot{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--suave);margin-top:10px}
 .nums{display:grid;grid-template-columns:repeat(auto-fill,minmax(38px,1fr));gap:4px;margin:8px 0}.nums button{border:1px solid var(--linha);background:#fff;border-radius:6px;padding:5px 0;font:13px "Segoe UI",sans-serif;cursor:pointer}.nums button.at{outline:2px solid var(--azul)}.nums button.resp{background:var(--azul2);border-color:var(--azul)}.nums button.cer{background:var(--verde2);border-color:var(--verde)}.nums button.err{background:var(--vermelho2);border-color:var(--vermelho)}
 .op:disabled{opacity:1;cursor:default;color:var(--tinta)}.op.marcada{background:var(--azul2);border-color:var(--azul);font-weight:600}.sq p{margin:.45em 0}pre.tab{overflow-x:auto;font:13px/1.45 Consolas,monospace;background:#fafaf7;border:1px solid var(--linha);border-radius:6px;padding:8px;white-space:pre}
@@ -161,6 +170,7 @@ img.fig{display:block;max-width:100%;margin:10px auto;border:1px solid var(--lin
 <header><h1>⚖️ Treino de Discursiva</h1><small>Delegado PC-BA 2026 · Instituto AOCP · peça + estudos de caso + memorização da lei</small>
 <nav class="abas" id="abas"></nav></header>
 <main id="tela"></main>
+<div id="sobre" hidden role="dialog" aria-modal="true" aria-labelledby="sobreTit"><div class="caixa"><div class="topo"><h2 id="sobreTit"></h2><button id="sobreX">✕ Fechar (Esc)</button></div><div id="sobreCorpo"></div></div></div>
 <script src="conteudo.js"></script>
 <script src="leis.js"></script>
 <script src="pecas_complementares.js"></script>
@@ -214,7 +224,7 @@ function passosDe(p){
   {t:'Dos fatos',orient:'Síntese objetiva SÓ com o que o enunciado traz. Nunca invente dados. Tipificação completa: (1) consumado ou tentado (art. 14, II)? (2) qualificadora, majorante, agravante? (3) vários agentes: concurso de pessoas (art. 29), associação (art. 288) ou orcrim (Lei 12.850, art. 2º)? (4) vários crimes: concurso material (69), formal (70) ou continuado (71)? (5) adolescente: ato infracional análogo.',arts:['CP, arts. 14, 29, 69, 70 e 71','CP, art. 288; Lei 12.850/13, art. 2º'],check:['Síntese curta e fiel ao enunciado','Nenhum dado inventado','Indiquei o IP de origem','Tipifiquei completo (tentativa, qualificadora/majorante, concurso de pessoas e de crimes)'],modelo:p.fatos},
   ...(p.dirfund?[{t:'Dos fundamentos: não há direito fundamental absoluto',orient:'Diga QUAL direito fundamental a medida relativiza e o inciso do art. 5º da CF: liberdade (LXI), casa (XI), intimidade e vida privada (X), comunicações (XII), propriedade (XXII). A relativização é excepcional e está sob reserva de jurisdição.',arts:['CF, art. 5º, '+p.dirfund.inc],check:['Nomeei o direito fundamental relativizado','Citei o inciso do art. 5º ('+p.dirfund.inc+')','Disse que a medida está sob reserva de jurisdição'],modelo:'DOS FUNDAMENTOS — DA INEXISTÊNCIA DE DIREITOS FUNDAMENTAIS ABSOLUTOS\nA relativização de direito fundamental é medida excepcional, sujeita à reserva de jurisdição. Contudo, a garantia da '+p.dirfund.bem+' (CF, art. 5º, '+p.dirfund.inc+') não pode servir de escudo para a prática de ilícitos, em detrimento da segurança pública e da ordem pública, igualmente tuteladas: não há direito fundamental absoluto, admitindo-se sua restrição excepcional, por ordem judicial fundamentada.'}]:[]),
   ...p.direito,
-  {t:'Dos pedidos',orient:'Pedidos NUMERADOS: o principal, os acessórios (mandado e registro no BNMP — art. 289-A; acesso a dados…), oitiva do MP, decisão sem intimação prévia do investigado (art. 282, § 3º), sigilo e urgência. Nas prisões, lembre a revisão a cada 90 dias (art. 316, parágrafo único). A banca pontua CADA pleito.',arts:[],check:p.pedidos_check,modelo:p.pedidos},
+  {t:'Dos pedidos',orient:'Pedidos NUMERADOS: o principal, os acessórios (mandado e registro no BNMP — art. 289-A; acesso a dados…), oitiva do MP, decisão sem intimação prévia do investigado (art. 282, § 3º), sigilo e urgência. Nas prisões, lembre a revisão a cada 90 dias (art. 316, parágrafo único). A banca pontua CADA pleito.',arts:['CPP, art. 282, § 3º (decisão sem intimação prévia)','CPP, art. 289-A (registro do mandado no BNMP)','CPP, art. 316, parágrafo único (revisão a cada 90 dias)'],check:p.pedidos_check,modelo:p.pedidos},
   BASE.fecho];
 }
 
@@ -304,34 +314,114 @@ function telaEstudo(){
  $('tela').innerHTML=`<div class="card"><div class="linha-bts" style="margin-top:0"><button class="bt" data-aba="pecas">← Peças</button></div><h2>${esc(peca.titulo)}</h2>${barraModos()}
  <p>Tudo o que caiu nesta peça, para a <b>discursiva</b> e para a <b>objetiva</b>: letra da lei (redação oficial atualizada), doutrina, jurisprudência e pegadinhas. Áreas: ${porArea.map(([a,l])=>`<a href="#ar-${AREAS.indexOf(a)}">${esc(a)} (${l.length})</a>`).join(' · ')}.</p>
  <div class="linha-bts"><button class="bt pri" id="estCartoes">🧠 Cartões e Certo/Errado desta peça</button></div></div>
- ${porArea.map(([a,l])=>`<div class="card" id="ar-${AREAS.indexOf(a)}"><h2>${esc(a)}</h2>${l.map(t=>`<div class="tema"><h3>${esc(t.t)}</h3>
-  ${t.lei&&t.lei.length?`<div class="rot">📖 Letra da lei</div>${t.lei.map(r=>leiHTML(r)).join('')}`:''}
-  <div class="rot">🎓 Doutrina</div><p>${esc(t.dout)}</p>
-  ${(t.jur&&t.jur.length)||(t.jtxt&&t.jtxt.length)?`<div class="rot">⚖️ Jurisprudência</div>${(t.jur||[]).map(r=>leiHTML(r)).join('')}${(t.jtxt||[]).length?`<ul>${t.jtxt.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:''}`:''}
-  ${t.obj&&t.obj.length?`<div class="rot">🎯 Para a objetiva</div><ul>${t.obj.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:''}</div>`).join('')}</div>`).join('')}`;
+ ${porArea.map(([a,l])=>`<div class="card" id="ar-${AREAS.indexOf(a)}"><h2>${esc(a)}</h2>${l.map(t=>temaHTML(t)).join('')}</div>`).join('')}`;
  const b=$('estCartoes');if(b)b.onclick=()=>sessao(peca.cards.map((_,i)=>peca.id+'#'+i),'Memorize: '+peca.titulo);
 }
 
+/* um tema do Estudo completo: o mesmo bloco serve à aba e à tela que abre de um link na peça */
+const temaHTML=(t,abre)=>`<div class="tema"><h3>${esc(t.t)}</h3>
+  ${t.lei&&t.lei.length?`<div class="rot">📖 Letra da lei</div>${t.lei.map(r=>leiHTML(r,abre&&abre.includes(r.split(':').slice(0,2).join(':')))).join('')}`:''}
+  <div class="rot">🎓 Doutrina</div><p>${esc(t.dout)}</p>
+  ${(t.jur&&t.jur.length)||(t.jtxt&&t.jtxt.length)?`<div class="rot">⚖️ Jurisprudência</div>${(t.jur||[]).map(r=>leiHTML(r,abre&&abre.includes(r))).join('')}${(t.jtxt||[]).length?`<ul>${t.jtxt.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:''}`:''}
+  ${t.obj&&t.obj.length?`<div class="rot">🎯 Para a objetiva</div><ul>${t.obj.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:''}</div>`;
+
+/* ---------- ligações: o que se escreve na peça abre o que o Estudo completo já tem (pedido do titular, 10/11/2026) ----------
+   Artigo, súmula ou conceito citado na orientação, no modelo, no checklist ou na peça montada vira link; o link abre
+   uma tela com a letra da lei (redação oficial) e os temas do Estudo completo que tratam daquilo. Nada é escrito de
+   novo: a tela só mostra o que já está em estudo.js, artigos.js e no acervo de súmulas. */
+const base=r=>String(r).split(':').slice(0,2).join(':');
+const temasDaPeca=()=>typeof ESTUDO==='undefined'||!peca?[]:(ESTUDO[peca.id]||[]).map(k=>({k,...TEMAS[k]})).filter(t=>t.t);
+const todosTemas=()=>typeof TEMAS==='undefined'?[]:Object.keys(TEMAS).map(k=>({k,...TEMAS[k]}));
+/* temas que tratam de um artigo (base 'CPP:313') ou de uma súmula; primeiro os desta peça */
+function temasDe(ref){const tem=t=>/^(SUM|SV)/.test(ref)?(t.jur||[]).includes(ref):(t.lei||[]).some(r=>base(r)===ref);
+ const da=temasDaPeca().filter(tem);return da.length?da:todosTemas().filter(tem)}
+const temArt=k=>(typeof ARTIGOS!=='undefined'&&ARTIGOS[k]&&!ARTIGOS[k].falta)||temasDe(k).length>0;
+/* nome da lei escrito no texto → sigla da chave */
+function sigDe(n){if(!n)return null;n=n.replace(/^\s*,?\s*(?:(?:do|da)\s+)?/i,'').trim();
+ let m=n.match(/^Lei(?:\s+nº)?\s*([\d.]+)\/\d+/i);if(m)return 'L'+m[1].replace(/\./g,'');m=n.match(/^LC\s*(\d+)/i);if(m)return 'LC'+m[1];
+ if(/^(CPP|Código de Processo Penal)/i.test(n))return 'CPP';if(/^(CP|Código Penal)/i.test(n))return 'CP';if(/^(CF|Constituição)/i.test(n))return 'CF';
+ return ({ECA:'L8069',LEP:'L7210',CTN:'L5172'})[n.slice(0,3).toUpperCase()]||null}
+/* artigo sem lei escrita: decide pelo contexto do passo (chips) e pelos temas da peça; ambíguo, não liga */
+function resolver(num,ctx){const c=[...new Set(ctx.filter(k=>k.split(':')[1]===num))];if(c.length===1)return c[0];
+ const t=[...new Set(temasDaPeca().flatMap(x=>(x.lei||[]).map(base)).filter(k=>k.split(':')[1]===num))];return t.length===1?t[0]:null}
+const LEI_RX='(?:Código de Processo Penal|Código Penal|Constituição(?: Federal)?|CPP|CP|CF|ECA|LEP|CTN|Lei(?: nº)?\\s*[\\d.]+\\/\\d+|LC\\s*\\d+(?:\\/\\d+)?)';
+const RX_ART=new RegExp('(?:\\b('+LEI_RX+')\\s*,\\s*)?\\barts?\\.\\s*((?:§\\s*)?\\d+\\s*[º°]?(?:-[A-Z])?(?:\\s*(?:,|\\be\\b)\\s*(?:§\\s*\\d+\\s*[º°]?(?:-[A-Z])?|[IVXL]+\\b|parágrafo único|caput|\\d+\\s*[º°]?(?:-[A-Z])?(?![\\d/])))*)(\\s*,?\\s*(?:(?:do|da)\\s+'+LEI_RX+'|(?:CPP|CP|CF)\\b(?!\\s*,\\s*arts?\\.)))?','g');
+const RX_SUM=/\b(?:Súmula|Súm\.)\s+(Vinculante\s+)?(?:nº\s*)?(\d+)(\s*,?\s*(?:do|da)\s+(STF|STJ))?|\bSV\s*(\d+)/gi;
+/* termos de conceito: o título do tema (antes de ':' ou '(') e expressões fixas da doutrina de cada tema */
+const TERMOS_EXTRA={preventiva:['fumus comissi delicti','periculum libertatis','garantia da ordem pública','conveniência da instrução criminal'],
+ cautelares:['medidas cautelares diversas'],temporaria:['prisão temporária'],flagrante:['audiência de custódia','prisão em flagrante'],
+ busca:['busca e apreensão','mandado de busca'],interceptacao:['interceptação telefônica','interceptação telemática','interceptação das comunicações'],
+ 'cadeia-custodia':['cadeia de custódia','exame de corpo de delito'],reconhecimento:['reconhecimento de pessoas','reconhecimento pessoal'],
+ 'direitos-fundamentais':['reserva de jurisdição','direitos fundamentais absolutos','direito fundamental absoluto'],
+ orcrim:['organização criminosa'],trafico:['tráfico de drogas','associação para o tráfico'],lavagem:['lavagem de dinheiro'],
+ infiltracao:['infiltração de agentes','ação controlada','colaboração premiada'],captacao:['captação ambiental'],
+ 'sigilo-bancario':['sigilo bancário','sigilo fiscal'],assecuratorias:['sequestro de bens','medidas assecuratórias','alienação antecipada','arresto'],
+ inquerito:['inquérito policial','indiciamento'],'violencia-domestica':['medidas protetivas','Maria da Penha'],coacao:['coação no curso do processo'],
+ 'extorsao-sequestro':['extorsão mediante sequestro'],identificacao:['identificação criminal','perfil genético'],eca:['ato infracional','internação provisória']};
+function termos(){const L=[];for(const t of temasDaPeca()){const tit=t.t.split(/[:(]/)[0].trim();
+ const xs=[...(tit.split(' ').length<=6?[tit]:[]),...(TERMOS_EXTRA[t.k]||[])];for(const x of xs)if(x.length>=5)L.push([x,t.k])}
+ return L.sort((a,b)=>b[0].length-a[0].length)}
+const rxEsc=x=>x.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+/* todas as chaves de artigo com a lei escrita num texto ('CP, arts. 14, 29 e 71' → CP:14, CP:29, CP:71) */
+function chavesTexto(txt){const K=[];let m;RX_ART.lastIndex=0;while((m=RX_ART.exec(String(txt||'')))){const sig=sigDe(m[1])||sigDe(m[3]);if(!sig)continue;
+ let q;const rn=/(§\s*)?(\d+)\s*[º°]?(-[A-Z])?/g;while((q=rn.exec(m[2])))if(!q[1])K.push(sig+':'+q[2]+(q[3]||''))}return K}
+const ctxDe=arts=>[...new Set((arts||[]).flatMap(chavesTexto))];
+/* texto puro → HTML com links; ctx = chaves dos artigos do passo, para resolver "art. 313" sem a lei escrita */
+function ligar(txt,ctx){txt=String(txt||'');if(!txt||typeof TEMAS==='undefined')return esc(txt);ctx=ctx||[];const M=[];let m;
+ let ult=null;RX_ART.lastIndex=0;while((m=RX_ART.exec(txt))){const ini=m.index,fim=ini+m[0].length,sig=sigDe(m[1])||sigDe(m[3]);if(sig)ult=sig;
+  const g2=m[2],o2=ini+m[0].indexOf(g2,m[1]?m[1].length:0),partes=[];let q;const rn=/(§\s*)?(\d+)\s*[º°]?(-[A-Z])?/g;
+  while((q=rn.exec(g2))){if(q[1])continue;const nu=q[2]+(q[3]||''),k=sig?sig+':'+nu:(ult&&temArt(ult+':'+nu)?ult+':'+nu:resolver(nu,ctx));if(k&&temArt(k))partes.push([o2+q.index,o2+q.index+q[0].length,k])}
+  if(partes.length){partes[0][0]=ini+(m[1]?m[0].indexOf('art'):0);M.push({ini,fim,partes})}}
+ RX_SUM.lastIndex=0;while((m=RX_SUM.exec(txt))){let ref;if(m[1]||m[5])ref='SV-'+(m[2]||m[5]);
+  else{const n=m[2],tri=m[4]&&m[4].toUpperCase(),c=['STF','STJ'].filter(x=>typeof JURIS!=='undefined'&&JURIS['SUM-'+x+'-'+n]);ref=tri?'SUM-'+tri+'-'+n:c.length===1?'SUM-'+c[0]+'-'+n:null}
+  if(ref&&((typeof JURIS!=='undefined'&&JURIS[ref])||temasDe(ref).length))M.push({ini:m.index,fim:m.index+m[0].length,ref})}
+ const usados=new Set();for(const [x,k] of termos()){if(usados.has(k+'|'+x))continue;const r=new RegExp('(^|[^\\p{L}])('+rxEsc(x)+')(?![\\p{L}])','giu');
+  while((m=r.exec(txt))){const ini=m.index+m[1].length;M.push({ini,fim:ini+m[2].length,tema:k,c:1});usados.add(k+'|'+x);break}}
+ M.sort((a,b)=>a.ini-b.ini||(b.fim-b.ini)-(a.fim-a.ini)||(a.c?1:0)-(b.c?1:0));
+ let out='',p=0;for(const x of M){if(x.ini<p)continue;out+=esc(txt.slice(p,x.ini));
+  if(x.partes){let q=x.ini;for(const [a,b,k] of x.partes){out+=esc(txt.slice(q,a))+`<a class="lk" tabindex="0" role="button" data-lk="art|${k}" title="Abrir: ${esc(rotulo(k))}">${esc(txt.slice(a,b))}</a>`;q=b}out+=esc(txt.slice(q,x.fim))}
+  else if(x.ref)out+=`<a class="lk lk-s" tabindex="0" role="button" data-lk="jur|${x.ref}" title="Abrir: ${esc(rotulo(x.ref))}">${esc(txt.slice(x.ini,x.fim))}</a>`;
+  else out+=`<a class="lk lk-c" tabindex="0" role="button" data-lk="tema|${x.tema}" title="Abrir no Estudo completo: ${esc(TEMAS[x.tema].t)}">${esc(txt.slice(x.ini,x.fim))}</a>`;
+  p=x.fim}
+ return out+esc(txt.slice(p))}
+/* a tela que o link abre */
+function abrirSobre(tipo,ref){let tit,h;
+ if(tipo==='tema'){const t={k:ref,...TEMAS[ref]};tit='📚 '+t.t;h=`<p class="cont">Do Estudo completo · ${esc(t.area)}</p>${temaHTML(t)}`}
+ else{const ts=temasDe(ref);tit=(tipo==='jur'?'⚖️ ':'📖 ')+rotulo(ref);
+  h=`<div class="rot">${tipo==='jur'?'⚖️ Súmula (texto oficial)':'📖 Letra da lei (redação oficial)'}</div>${leiHTML(ref,1)}
+  ${ts.length?`<div class="rot" style="margin-top:16px">📚 No Estudo completo${ts.some(t=>temasDaPeca().some(x=>x.k===t.k))?' desta peça':''}</div>${ts.map(t=>temaHTML(t,[ref])).join('')}`:'<p class="cont">Este dispositivo não tem tema próprio no Estudo completo; acima, a letra da lei.</p>'}`}
+ $('sobreTit').textContent=tit;$('sobreCorpo').innerHTML=h;const o=$('sobre');o.hidden=false;o.scrollTop=0;$('sobreX').focus()}
+const fecharSobre=()=>{const o=$('sobre');if(o&&!o.hidden){o.hidden=true;const v=document.querySelector('[data-lk].foco');if(v){v.classList.remove('foco');v.focus()}}};
+document.addEventListener('click',e=>{if(e.target.id==='sobreX'||e.target.id==='sobre')return fecharSobre();const a=e.target.closest('[data-lk]');if(!a)return;e.preventDefault();
+ document.querySelectorAll('[data-lk].foco').forEach(x=>x.classList.remove('foco'));a.classList.add('foco');const i=a.dataset.lk.indexOf('|');abrirSobre(a.dataset.lk.slice(0,i),a.dataset.lk.slice(i+1))});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&$('sobre')&&!$('sobre').hidden){e.preventDefault();fecharSobre();return}
+ if((e.key==='Enter'||e.key===' ')&&e.target.matches&&e.target.matches('a[data-lk]')){e.preventDefault();e.target.click()}});
+/* a faixa do passo: os temas do Estudo completo ligados ao que este passo cita */
+function faixaPasso(P,ctx){const h=ligar([P.orient,P.modelo,...(P.check||[])].join('\n'),ctx),ts=temasDaPeca();
+ const ks=ts.filter(t=>(t.lei||[]).some(r=>ctx.includes(base(r))||h.includes('art|'+base(r)+'"'))||(t.jur||[]).some(r=>h.includes('jur|'+r+'"'))||h.includes('tema|'+t.k+'"'));
+ return ks.length?`<div class="dolig"><b>📚 Do Estudo completo, neste passo:</b>${ks.map(t=>`<button data-lk="tema|${t.k}">${esc(t.t)}</button>`).join('')}</div>`:''}
+
 function telaPeca(){
  const ps=passosDe(peca),s=st.pecas[peca.id],P=ps[passo],ultimo=passo===ps.length;
+ const ctx=P?ctxDe(P.arts):ctxDe(ps.flatMap(x=>x.arts||[]));
  const barra=`<div class="passos">${ps.map((x,i)=>`<button class="${i===passo?'at':(s.txt[i]?'ok':'')}" data-passo="${i}">${i+1}. ${esc(x.t)}</button>`).join('')}<button class="${ultimo?'at':''}" data-passo="${ps.length}">✔ Peça completa</button></div>`;
  let corpo;
  if(ultimo){
   const texto=ps.map((x,i)=>s.txt[i]||'').filter(Boolean).join('\n\n'),n=linhas(texto);
   const totChk=ps.reduce((a,x)=>a+(x.check||[]).length,0),feitos=ps.reduce((a,x,i)=>a+(x.check||[]).filter((_,j)=>s.chk[i+'.'+j]).length,0);
   const tec=Math.round(40*feitos/Math.max(1,totChk)),sis=Math.round(10*ps.filter((x,i)=>s.txt[i]).length/ps.length);
-  corpo=`<h3>Sua peça montada</h3><div class="cont ${n>90?'ruim':''}">≈ ${n} linhas manuscritas (máximo 90${n>90?' — o excesso seria DESCONSIDERADO':''})</div><div class="peca-final">${esc(texto)||'(nada escrito ainda)'}</div>
+  corpo=`<h3>Sua peça montada</h3><div class="cont ${n>90?'ruim':''}">≈ ${n} linhas manuscritas (máximo 90${n>90?' — o excesso seria DESCONSIDERADO':''})</div><div class="peca-final">${texto?ligar(texto,ctx):'(nada escrito ainda)'}</div>${texto?'<p class="cont">Os artigos, súmulas e conceitos sublinhados abrem o que o Estudo completo traz sobre eles.</p>':''}
   <h3>Autoavaliação pela Tabela 7.3</h3><table><tr><td>Conhecimento técnico (checklist ${feitos}/${totChk})</td><td><b>${tec}</b>/40</td></tr><tr><td>Sistematização lógica (partes escritas)</td><td><b>${sis}</b>/10</td></tr><tr><td>Língua Portuguesa — sua nota honesta</td><td><input type="number" id="lp" min="0" max="10" value="${s.lp??8}" style="width:70px"> /10</td></tr></table>
   ${n>90?'<div class="alerta">Corte texto: a banca desconsidera o que passar de 90 linhas (item 7.2.9.5).</div>':''}
   <div class="mnem"><b>Para gravar:</b> ${esc(peca.mnemonico)}</div>
   <div class="linha-bts"><button class="bt ok" id="salvarNota">Registrar nota e ir memorizar →</button><button class="bt" id="refazer">Refazer do zero</button></div>`;
  }else{
-  corpo=`<h3>Passo ${passo+1} de ${ps.length}: ${esc(P.t)}</h3><div class="orient">${esc(P.orient)}</div>
-  ${chips(P.arts)}
+  corpo=`<h3>Passo ${passo+1} de ${ps.length}: ${esc(P.t)}</h3><div class="orient">${ligar(P.orient,ctx)}</div>
+  ${chips(P.arts)}${faixaPasso(P,ctx)}
   <textarea id="txt" placeholder="Escreva aqui este trecho da peça, como faria na folha de resposta…">${esc(s.txt[passo]||'')}</textarea><div class="cont" id="cont"></div>
   <div class="linha-bts"><button class="bt" id="verModelo">👁 Comparar com o modelo</button>${passo>0?'<button class="bt" id="ant">◀ Anterior</button>':''}<button class="bt pri" id="prox">Próximo passo ▶</button></div>
-  <div id="area-modelo" ${s['m'+passo]?'':'hidden'}><h3>Modelo deste passo</h3><div class="modelo">${esc(P.modelo||'')}</div>
-  ${P.check&&P.check.length?`<h3>Checklist (marque o que VOCÊ fez)</h3><div class="check">${P.check.map((c,j)=>`<label><input type="checkbox" data-chk="${passo}.${j}" ${s.chk[passo+'.'+j]?'checked':''}> ${esc(c)}</label>`).join('')}</div>`:''}</div>`;
+  <div id="area-modelo" ${s['m'+passo]?'':'hidden'}><h3>Modelo deste passo</h3><div class="modelo">${ligar(P.modelo||'',ctx)}</div>
+  ${P.check&&P.check.length?`<h3>Checklist (marque o que VOCÊ fez)</h3><div class="check">${P.check.map((c,j)=>`<label><input type="checkbox" data-chk="${passo}.${j}" ${s.chk[passo+'.'+j]?'checked':''}> ${ligar(c,ctx)}</label>`).join('')}</div>`:''}</div>`;
  }
  $('tela').innerHTML=`<div class="card"><div class="linha-bts" style="margin-top:0"><button class="bt" data-aba="pecas">← Peças</button></div><h2>${esc(peca.titulo)}</h2>${barraModos()}<details ${passo===0?'open':''}><summary><b>Enunciado</b></summary><div class="enun">${esc(peca.enunciado)}</div></details>${barra}${corpo}</div>`;
  const t=$('txt');if(t){const upd=()=>{s.txt[passo]=t.value;salvar();$('cont').textContent='≈ '+linhas(t.value)+' linha(s) neste trecho'};t.oninput=upd;upd();t.focus()}
