@@ -198,6 +198,12 @@ if (TEM_REV) {
   d.getElementById("sobreX").click();
   let n = 0; for (const p of A.PECAS) { A.abrirPeca(p.id, "escrever"); for (const x of A.passosDe(p)) for (const t of [x.orient, x.modelo, ...(x.check || [])]) n += (w.eval("ligar")(t || "", w.eval("ctxDe")(x.arts)).match(/data-lk=/g) || []).length; }
   prova(`ligações: as 18 peças somam ${n} links (régua: 700 ou mais)`, n >= 700, String(n));
+  // HARNESS §G6.6 (10/11/2026): texto justificado e os principais pontos em negrito
+  A.abrirPeca("preventiva", "escrever"); const iPre = A.passosDe(A.PECAS.find(p => p.id === "preventiva")).findIndex(x => x.t === "Preâmbulo"); d.querySelector(`[data-passo="${iPre}"]`).click();
+  const ori = d.querySelector(".orient");
+  prova("§G6.6: a orientação é justificada e o que vem em MAIÚSCULAS sai em negrito (A PEÇA)", w.getComputedStyle(ori).textAlign === "justify" && [...ori.querySelectorAll("b.dest")].some(b => b.textContent === "A PEÇA"), ori.innerHTML.slice(0, 200));
+  d.querySelector('[data-modo="estudo"]').click();
+  prova("§G6.6: no Estudo completo a doutrina é justificada e traz artigos em destaque e clicáveis", w.getComputedStyle(d.querySelector(".tema p")).textAlign === "justify" && d.querySelectorAll(".tema p [data-lk]").length > 0);
   A.st().pecas.preventiva = { txt: {}, chk: {} };
 }
 prova("nenhum erro de JavaScript em todo o fluxo", erros.length === 0, erros.join(" | "));

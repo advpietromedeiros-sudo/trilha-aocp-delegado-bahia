@@ -42,6 +42,9 @@ mark{background:#fff0a8;padding:0 2px;border-radius:3px}
 details.lei{border:1px solid var(--linha);border-radius:8px;margin:6px 0;background:#fff}details.lei summary{cursor:pointer;padding:7px 10px;color:var(--azul);font-weight:600}
 .leitxt{white-space:pre-wrap;font:15px/1.6 Georgia,serif;padding:4px 12px 10px}.leitxt small{color:var(--suave);font:12px "Segoe UI",sans-serif}.leifonte{font-size:12px;color:var(--suave);padding:0 12px 8px}
 .n26{color:var(--vermelho);font-weight:700}.arts span[data-art]{cursor:pointer}.arts span[data-art]:hover{background:var(--azul2)}
+/* HARNESS §G6.6 (10/11/2026): texto corrido justificado; título, botão e tabela ficam como estão */
+.card p,.card li,.orient,.modelo,.enun,.mnem,.peca-final,.leitxt,.fb,.tema p,.tema li,#sobreCorpo p,#sobreCorpo li,#txt{text-align:justify;text-justify:inter-word;hyphens:auto;-webkit-hyphens:auto}
+.dest{font-weight:800}
 .lk{color:#5a2ca0;font-weight:700;text-decoration:underline dotted 2px;text-underline-offset:3px;cursor:pointer;border-radius:4px}.lk:hover,.lk:focus{background:#efe7fb;outline:none}
 .lk-c{color:#0f5d3a;text-decoration-style:dashed}.lk-s{color:#8a4b00}
 .dolig{margin:10px 0;display:flex;flex-wrap:wrap;gap:6px;align-items:center}.dolig b{font-size:13px;color:var(--suave);text-transform:uppercase;letter-spacing:.04em}
@@ -321,9 +324,9 @@ function telaEstudo(){
 /* um tema do Estudo completo: o mesmo bloco serve à aba e à tela que abre de um link na peça */
 const temaHTML=(t,abre)=>`<div class="tema"><h3>${esc(t.t)}</h3>
   ${t.lei&&t.lei.length?`<div class="rot">📖 Letra da lei</div>${t.lei.map(r=>leiHTML(r,abre&&abre.includes(r.split(':').slice(0,2).join(':')))).join('')}`:''}
-  <div class="rot">🎓 Doutrina</div><p>${esc(t.dout)}</p>
-  ${(t.jur&&t.jur.length)||(t.jtxt&&t.jtxt.length)?`<div class="rot">⚖️ Jurisprudência</div>${(t.jur||[]).map(r=>leiHTML(r,abre&&abre.includes(r))).join('')}${(t.jtxt||[]).length?`<ul>${t.jtxt.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:''}`:''}
-  ${t.obj&&t.obj.length?`<div class="rot">🎯 Para a objetiva</div><ul>${t.obj.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:''}</div>`;
+  <div class="rot">🎓 Doutrina</div><p>${ligar(t.dout,[],t.k)}</p>
+  ${(t.jur&&t.jur.length)||(t.jtxt&&t.jtxt.length)?`<div class="rot">⚖️ Jurisprudência</div>${(t.jur||[]).map(r=>leiHTML(r,abre&&abre.includes(r))).join('')}${(t.jtxt||[]).length?`<ul>${t.jtxt.map(x=>`<li>${ligar(x,[],t.k)}</li>`).join('')}</ul>`:''}`:''}
+  ${t.obj&&t.obj.length?`<div class="rot">🎯 Para a objetiva</div><ul>${t.obj.map(x=>`<li>${ligar(x,[],t.k)}</li>`).join('')}</ul>`:''}</div>`;
 
 /* ---------- ligações: o que se escreve na peça abre o que o Estudo completo já tem (pedido do titular, 10/11/2026) ----------
    Artigo, súmula ou conceito citado na orientação, no modelo, no checklist ou na peça montada vira link; o link abre
@@ -366,8 +369,10 @@ const rxEsc=x=>x.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
 function chavesTexto(txt){const K=[];let m;RX_ART.lastIndex=0;while((m=RX_ART.exec(String(txt||'')))){const sig=sigDe(m[1])||sigDe(m[3]);if(!sig)continue;
  let q;const rn=/(§\s*)?(\d+)\s*[º°]?(-[A-Z])?/g;while((q=rn.exec(m[2])))if(!q[1])K.push(sig+':'+q[2]+(q[3]||''))}return K}
 const ctxDe=arts=>[...new Set((arts||[]).flatMap(chavesTexto))];
+const CAIXA_ALTA=/(^|[^\p{L}])((?:\p{Lu}{1,2}\s+)?\p{Lu}{3,}(?:[\s,/-]+\p{Lu}{2,})*)(?![\p{L}])/gu;
+const escN=t=>esc(t).replace(CAIXA_ALTA,(m,a,b)=>a+'<b class="dest">'+b+'</b>');
 /* texto puro → HTML com links; ctx = chaves dos artigos do passo, para resolver "art. 313" sem a lei escrita */
-function ligar(txt,ctx){txt=String(txt||'');if(!txt||typeof TEMAS==='undefined')return esc(txt);ctx=ctx||[];const M=[];let m;
+function ligar(txt,ctx,fora){txt=String(txt||'');if(!txt||typeof TEMAS==='undefined')return escN(txt);ctx=ctx||[];const M=[];let m;
  let ult=null;RX_ART.lastIndex=0;while((m=RX_ART.exec(txt))){const ini=m.index,fim=ini+m[0].length,sig=sigDe(m[1])||sigDe(m[3]);if(sig)ult=sig;
   const g2=m[2],o2=ini+m[0].indexOf(g2,m[1]?m[1].length:0),partes=[];let q;const rn=/(§\s*)?(\d+)\s*[º°]?(-[A-Z])?/g;
   while((q=rn.exec(g2))){if(q[1])continue;const nu=q[2]+(q[3]||''),k=sig?sig+':'+nu:(ult&&temArt(ult+':'+nu)?ult+':'+nu:resolver(nu,ctx));if(k&&temArt(k))partes.push([o2+q.index,o2+q.index+q[0].length,k])}
@@ -375,15 +380,15 @@ function ligar(txt,ctx){txt=String(txt||'');if(!txt||typeof TEMAS==='undefined')
  RX_SUM.lastIndex=0;while((m=RX_SUM.exec(txt))){let ref;if(m[1]||m[5])ref='SV-'+(m[2]||m[5]);
   else{const n=m[2],tri=m[4]&&m[4].toUpperCase(),c=['STF','STJ'].filter(x=>typeof JURIS!=='undefined'&&JURIS['SUM-'+x+'-'+n]);ref=tri?'SUM-'+tri+'-'+n:c.length===1?'SUM-'+c[0]+'-'+n:null}
   if(ref&&((typeof JURIS!=='undefined'&&JURIS[ref])||temasDe(ref).length))M.push({ini:m.index,fim:m.index+m[0].length,ref})}
- const usados=new Set();for(const [x,k] of termos()){if(usados.has(k+'|'+x))continue;const r=new RegExp('(^|[^\\p{L}])('+rxEsc(x)+')(?![\\p{L}])','giu');
+ const usados=new Set();for(const [x,k] of termos()){if(k===fora||usados.has(k+'|'+x))continue;const r=new RegExp('(^|[^\\p{L}])('+rxEsc(x)+')(?![\\p{L}])','giu');
   while((m=r.exec(txt))){const ini=m.index+m[1].length;M.push({ini,fim:ini+m[2].length,tema:k,c:1});usados.add(k+'|'+x);break}}
  M.sort((a,b)=>a.ini-b.ini||(b.fim-b.ini)-(a.fim-a.ini)||(a.c?1:0)-(b.c?1:0));
- let out='',p=0;for(const x of M){if(x.ini<p)continue;out+=esc(txt.slice(p,x.ini));
+ let out='',p=0;for(const x of M){if(x.ini<p)continue;out+=escN(txt.slice(p,x.ini));
   if(x.partes){let q=x.ini;for(const [a,b,k] of x.partes){out+=esc(txt.slice(q,a))+`<a class="lk" tabindex="0" role="button" data-lk="art|${k}" title="Abrir: ${esc(rotulo(k))}">${esc(txt.slice(a,b))}</a>`;q=b}out+=esc(txt.slice(q,x.fim))}
   else if(x.ref)out+=`<a class="lk lk-s" tabindex="0" role="button" data-lk="jur|${x.ref}" title="Abrir: ${esc(rotulo(x.ref))}">${esc(txt.slice(x.ini,x.fim))}</a>`;
   else out+=`<a class="lk lk-c" tabindex="0" role="button" data-lk="tema|${x.tema}" title="Abrir no Estudo completo: ${esc(TEMAS[x.tema].t)}">${esc(txt.slice(x.ini,x.fim))}</a>`;
   p=x.fim}
- return out+esc(txt.slice(p))}
+ return out+escN(txt.slice(p))}
 /* a tela que o link abre */
 function abrirSobre(tipo,ref){let tit,h;
  if(tipo==='tema'){const t={k:ref,...TEMAS[ref]};tit='📚 '+t.t;h=`<p class="cont">Do Estudo completo · ${esc(t.area)}</p>${temaHTML(t)}`}
@@ -423,7 +428,7 @@ function telaPeca(){
   <div id="area-modelo" ${s['m'+passo]?'':'hidden'}><h3>Modelo deste passo</h3><div class="modelo">${ligar(P.modelo||'',ctx)}</div>
   ${P.check&&P.check.length?`<h3>Checklist (marque o que VOCÊ fez)</h3><div class="check">${P.check.map((c,j)=>`<label><input type="checkbox" data-chk="${passo}.${j}" ${s.chk[passo+'.'+j]?'checked':''}> ${ligar(c,ctx)}</label>`).join('')}</div>`:''}</div>`;
  }
- $('tela').innerHTML=`<div class="card"><div class="linha-bts" style="margin-top:0"><button class="bt" data-aba="pecas">← Peças</button></div><h2>${esc(peca.titulo)}</h2>${barraModos()}<details ${passo===0?'open':''}><summary><b>Enunciado</b></summary><div class="enun">${esc(peca.enunciado)}</div></details>${barra}${corpo}</div>`;
+ $('tela').innerHTML=`<div class="card"><div class="linha-bts" style="margin-top:0"><button class="bt" data-aba="pecas">← Peças</button></div><h2>${esc(peca.titulo)}</h2>${barraModos()}<details ${passo===0?'open':''}><summary><b>Enunciado</b></summary><div class="enun">${ligar(peca.enunciado,ctx)}</div></details>${barra}${corpo}</div>`;
  const t=$('txt');if(t){const upd=()=>{s.txt[passo]=t.value;salvar();$('cont').textContent='≈ '+linhas(t.value)+' linha(s) neste trecho'};t.oninput=upd;upd();t.focus()}
  const on=(id,f)=>{const e=$(id);if(e)e.onclick=f};
  on('verModelo',()=>{s['m'+passo]=1;salvar();$('area-modelo').hidden=false});
