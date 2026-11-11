@@ -47,6 +47,7 @@ async function suite(js) {
   const pal = d.getElementById("grf-paleta");
   ok("G abre a paleta", pal && !pal.hidden);
   ok("paleta com 5 cores e borracha", pal && pal.querySelectorAll(".grf-cor").length === 5 && !!pal.querySelector('[data-ferramenta="borracha"]'));
+  ok("aberta, a página reserva a faixa da barra (não cobre o conteúdo)", d.documentElement.classList.contains("grf-reserva"));
   ok("paleta é uma barra de ferramentas com nome", pal && pal.getAttribute("role") === "toolbar" && !!pal.getAttribute("aria-label"));
   // 2) selecionar com a cor ativa grifa e salva
   pal.querySelector('[data-ferramenta="verde"]').click();
@@ -88,13 +89,15 @@ async function suite(js) {
   const t1 = d.getElementById("p1").firstChild; selecionar(w, t1, 2, 12); await espera(20);
   ok("segundo grifo criado (pré-condição)", w.Grifa.lista().length === 1);
   const lp = pal.querySelector(".grf-limpar"); lp.click();
-  ok("1º clique em Limpar só pede confirmação", w.Grifa.lista().length === 1 && /Confirmar/.test(lp.textContent));
+  ok("1º clique em Limpar só pede confirmação", w.Grifa.lista().length === 1 && /Confirmar/.test(lp.getAttribute("aria-label") || ""));
+  ok("o pedido de confirmação aparece na tela, ao lado da barra", !pal.querySelector(".grf-aviso").hidden && /Confirmar/.test(pal.querySelector(".grf-aviso").textContent));
   lp.click();
   ok("2º clique apaga todos", w.Grifa.lista().length === 0 && d.querySelectorAll("mark.grf").length === 0);
   // 8) Esc e G fecham
   tecla(w, d.body, "Escape"); ok("Esc fecha a paleta", pal.hidden);
   tecla(w, d.body, "G"); ok("G maiúsculo também abre", !pal.hidden);
   tecla(w, d.body, "g"); ok("G de novo fecha", pal.hidden);
+  ok("fechada, a faixa reservada some", !d.documentElement.classList.contains("grf-reserva"));
   return falhas;
 }
 
@@ -138,5 +141,5 @@ const SABOTAGENS = [
   }
   const falhas = [...await suite(FONTE), ...await telasReais()];
   if (falhas.length) { for (const f of falhas) console.log("  ❌ " + f); console.log(`FALHA: ${falhas.length} conferência(s)`); process.exit(1); }
-  console.log("OK: paleta de grifos — 24 conferências de comportamento e 2 telas reais");
+  console.log("OK: paleta de grifos — 27 conferências de comportamento e 2 telas reais");
 })();

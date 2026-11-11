@@ -16,6 +16,10 @@
   4 portas novas no portão (33 de 33 verdes às 20h27). Story: `Nesta sessão/Paleta de grifos (tecla G)`.
   - ✅ **Autorizado pelo titular às 20h36 (D-023)** e subido no Git. A story está em `Aguardando Análise` até a
     aprovação visual.
+  - 🔧 **21h47 — barra vertical na borda direita** (pedido do titular: a caixa no canto de baixo ficava em cima das
+    palavras). Só ícones, ajuda no `title`; aberta, a página reserva 54 px à direita para a barra não cobrir nada.
+    Conferido em print do Chrome (1366 px) no `index.html` e no Treino. ⚠️ Celular **não conferido** (o Chrome
+    headless do Windows não renderiza abaixo de ~500 px).
   - ⚠️ **Limites declarados:** grifo salvo por navegador e por tela (não vai no backup do app); o histórico
     acumulado (`historico/`) não tem a paleta; teste em jsdom, sem prova num Chrome real.
 
