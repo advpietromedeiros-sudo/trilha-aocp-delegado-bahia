@@ -15,10 +15,12 @@
 
 - ✅ **10/11/2026, 20h32 — Parte 3 da Revisão montada:** os 34 blocos com rc 0 no verificador (varredura das 20h28),
   **4.594 assertivas**; `discursiva/revisao_nfpss.js` regravado (6.942,5 KB) com **7.377** no total (Partes 1 a 3).
-  - ⏳ **22h04 — aprofundamento da Parte 3 em andamento** (pedido do titular às 22h02): 22 lotes (4.594 itens)
-    em `.scratch/aprofundar3/` (brief, `exportar.py`, `juntar.py`); 11 redatores soltos (ADM 01-04, CIV 01-04,
-    CPP 01-03); faltam soltar 11: CRI, IGR, LEG, LPE 01-03, PEN 01-05. Depois: `juntar.py` (valida cada lote)
-    e o montador.
+  - ✅ **22h48 — aprofundamento da Parte 3 concluído** (pedido do titular às 22h02): 22 lotes (4.594 itens) em
+    `.scratch/aprofundar3/`, todos `[OK ]` no `validar_aprofundamento.py`; `juntar.py` gravou ADM, CIV, CPP, CRI, IGR,
+    LEG, LPE e PEN em `revisao/material/nfpss/aprofundar/` (fora do Git); `revisao_nfpss.js` remontado (11.379,1 KB).
+    Medido na saída montada: **7.377 de 7.377** assertivas com aprofundamento e **3.327 de 3.327** E com correção
+    (`.scratch/aprofundar3/gen/conferir_saida.py`); `testar_discursiva.cjs` verde com o arquivo real.
+    Pontos apontados pelos redatores no item original: `revisao/material/nfpss/CONFERIR_P3.md`.
   - ⏳ **Falta também:** conferir na fonte as
     divergências de `revisao/material/nfpss/CONFERIR_P3.md` (~60 itens; vários escritos "de memória" pelos redatores).
 - 🆕 **10/11/2026, 20h17 — Paleta de grifos (tecla G), pedido do titular:** fonte única `assets/grifa.js`, embutida
