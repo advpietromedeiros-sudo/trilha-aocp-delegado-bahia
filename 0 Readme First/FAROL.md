@@ -6,9 +6,20 @@
 
 ## Estado
 
+- ✅ **10/11/2026, 22h23 — Simulados: quadro "Não esqueça as exceções" com frase cortada** (imagem do titular,
+  22h18). Causa: a oração de exceção era cortada em 64 caracteres, limite pensado para o realce vermelho dentro do
+  parágrafo; no quadro o trecho aparece sozinho. Agora o quadro leva a oração até a pontuação (acima de 260
+  caracteres, termina em "…"), e tabela, fórmula e conta ficam fora do quadro (achatadas, davam frase embaralhada).
+  Prova: `docs/testar_blocos_simulados.cjs` confere os 173 itens do quadro nos 400 comentários reais; portão 33/33
+  e `testar_pente_fino.mjs` 28/28 às 22h23.
+
 - ✅ **10/11/2026, 20h32 — Parte 3 da Revisão montada:** os 34 blocos com rc 0 no verificador (varredura das 20h28),
   **4.594 assertivas**; `discursiva/revisao_nfpss.js` regravado (6.942,5 KB) com **7.377** no total (Partes 1 a 3).
-  - ⏳ **Falta:** a camada de aprofundamento da Parte 3 (como a das Partes 1 e 2) e conferir na fonte as
+  - ⏳ **22h04 — aprofundamento da Parte 3 em andamento** (pedido do titular às 22h02): 22 lotes (4.594 itens)
+    em `.scratch/aprofundar3/` (brief, `exportar.py`, `juntar.py`); 11 redatores soltos (ADM 01-04, CIV 01-04,
+    CPP 01-03); faltam soltar 11: CRI, IGR, LEG, LPE 01-03, PEN 01-05. Depois: `juntar.py` (valida cada lote)
+    e o montador.
+  - ⏳ **Falta também:** conferir na fonte as
     divergências de `revisao/material/nfpss/CONFERIR_P3.md` (~60 itens; vários escritos "de memória" pelos redatores).
 - 🆕 **10/11/2026, 20h17 — Paleta de grifos (tecla G), pedido do titular:** fonte única `assets/grifa.js`, embutida
   por `ferramentas/embutir_grifa.py` no `index.html`, no Treino de Discursiva, no molde da Revisão e nos 5 cadernos

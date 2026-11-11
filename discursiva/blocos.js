@@ -202,9 +202,12 @@
   /* os gatilhos FORTES entram também no resumo "Não esqueça as exceções" (apenas/somente/desde que ficam só em vermelho) */
   const FORTES = /^(?:à exceção|com exceção|a não ser|a menos|não se aplica|não incide|não cabe|é vedad|vedad|é proibid|proibid|ressalvad|excetuad|independentemente|exceto|salvo)/i;
   const RX_EXC = new RegExp(`${L}(${alternancia(GATILHOS)})${R}`, 'giu');
-  const LIMITE_ORACAO = 64; /* a oração, não a frase inteira */
-  function fimOracao(t, i) {
-    const max = Math.min(t.length, i + LIMITE_ORACAO);
+  const LIMITE_ORACAO = 64; /* a oração, não a frase inteira (realce vermelho DENTRO do parágrafo, que segue visível) */
+  /* 10/11/2026 (titular): no quadro "Não esqueça as exceções" o trecho aparece SOZINHO; cortado em 64, saía frase pela
+     metade ("ressalvada justamente a hipótese em que a habilitação antecede o"). Lá a oração vai até a pontuação. */
+  const LIMITE_RESUMO = 260;
+  function fimOracao(t, i, limite = LIMITE_ORACAO) {
+    const max = Math.min(t.length, i + limite);
     for (let j = i; j < max; j++) {
       const c = t[j];
       if (',;:!?()[]“”"'.includes(c)) return j;
@@ -262,7 +265,13 @@
   }
   /* orações de exceção FORTES de um texto, para o quadro-resumo */
   function excecoesFortes(t) {
-    return faixasExcecao(t).filter(([i, , fg]) => FORTES.test(t.slice(i, fg))).map(([i, f]) => t.slice(i, f).trim()).filter(x => x.length > 6);
+    return faixasExcecao(t).filter(([i, , fg]) => FORTES.test(t.slice(i, fg))).map(([i, , fg]) => {
+      const f = fimOracao(t, fg, LIMITE_RESUMO);
+      /* parou num espaço = bateu no limite sem achar pontuação: o recorte se declara com reticências */
+      const cortou = f < t.length && /\s/.test(t[f]);
+      const s = t.slice(i, f).trim().replace(/[\s,;:–—-]+$/, '');
+      return cortou ? s + ' …' : s;
+    }).filter(x => x.length > 6);
   }
 
   /* cabeçalho de alternativa ("A – Correta.", "b) Errada.", "Alternativa C:") ou de assertiva ("1ª Assertiva (Correta)", "II – Incorreta") */
@@ -338,7 +347,10 @@
     fechaAlts();
     /* resumo das exceções fortes (cópia, marcada como gerada), quando o comentário não tem quadro de Atenção próprio */
     if (!grupos.some(g => g.tipo === 'atencao')) {
-      const todas = [...new Set(grupos.flatMap(g => g.itens.flatMap(r => excecoesFortes(textoDe(r)))))].slice(0, 5);
+      /* 10/11/2026: tabela, fórmula e conta ficam fora — achatadas, juntam células de colunas diferentes e o quadro
+         mostrava frase embaralhada ("estar por de autoriza permissivo") */
+      const corrido = r => r.t !== 'tab' && r.t !== 'formula' && r.t !== 'conta';
+      const todas = [...new Set(grupos.flatMap(g => g.itens.filter(corrido).flatMap(r => excecoesFortes(textoDe(r)))))].slice(0, 5);
       if (todas.length) out.push(gerado(`<section class="cm-q cm-resumo-exc"><header class="cm-rot">⛔ Não esqueça as exceções</header><ul>${todas.map(x => `<li><span class="cm-exc">${esc(x)}</span></li>`).join('')}</ul></section>`));
     }
     return `<div class="cm">${out.join('')}</div>`;

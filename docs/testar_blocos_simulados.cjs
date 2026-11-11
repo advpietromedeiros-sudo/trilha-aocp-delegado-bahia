@@ -53,6 +53,24 @@ prova("palavras-chave em negrito: prazo, fração, percentual, artigo, lei, súm
 prova("exceção longa não pinta a frase inteira (oração de no máximo ~64 caracteres depois do gatilho)", (() => { const h = B.realcar("Apenas " + "palavra ".repeat(30) + "fim."); const m = h.match(/<span class="cm-exc">([\s\S]*?)<\/span>/); return m && desmonta(m[1]).length <= 72; })());
 prova("quadros: nenhum caractere perdido e html do texto escapado", sem(desmonta(hq)) === sem(exQ.map(b => b[1]).join("")) && hq.includes("&lt;b&gt;escapado&lt;/b&gt;"), sem(desmonta(hq)).length + " vs " + sem(exQ.map(b => b[1]).join("")).length);
 prova("alínea 'a)' de lei, sem 'correta/errada', NÃO vira análise de alternativa", !/cm-alt/.test(comentario([["p", "Diz a lei:"], ["p", "a) o crime cometido;"], ["p", "b) a pena aplicada."]])));
+// 10/11/2026 (imagem do titular): o quadro "Não esqueça as exceções" mostrava a oração cortada em 64 caracteres
+// ("ressalvada justamente a hipótese em que a habilitação antecede o"). Lá a oração vai até a pontuação.
+const des = s => s.replace(/<[^>]+>/g, "").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&amp;/g, "&");
+const itensResumo = h => { const m = h.match(/cm-resumo-exc[\s\S]*?<\/section>/); return m ? [...m[0].matchAll(/<li>([\s\S]*?)<\/li>/g)].map(x => des(x[1])) : []; };
+/* um item do quadro está INTEIRO se termina com reticências (recorte declarado) ou se, no texto, vem seguido de pontuação ou do fim */
+const cortados = (itens, fonte) => itens.filter(x => {
+  if (x.endsWith("…")) return false;
+  const i = fonte.indexOf(x); if (i < 0) return true;
+  const resto = fonte.slice(i + x.length);
+  return !(resto === "" || /^\s*[,;:!?()[\]“”".–—-]/.test(resto) || /^\s*$/.test(resto));
+});
+{ const longa = "A sessão pública segue a ordem do edital, ressalvada justamente a hipótese em que a habilitação antecede o julgamento das propostas, conforme previsto no edital.";
+  const it = B.excecoesFortes(longa);
+  prova("quadro de exceções: oração longa sai INTEIRA, até a vírgula", it.length === 1 && it[0] === "ressalvada justamente a hipótese em que a habilitação antecede o julgamento das propostas", JSON.stringify(it));
+  const enorme = "Salvo " + "palavra ".repeat(60) + "fim.";
+  prova("quadro de exceções: oração além de 260 caracteres termina em reticências (recorte declarado)", B.excecoesFortes(enorme)[0].endsWith(" …"), B.excecoesFortes(enorme)[0].slice(-20));
+  prova("o conferidor de corte ACUSA a oração cortada no meio (o defeito antigo)", cortados(["ressalvada justamente a hipótese em que a habilitação antecede o"], longa).length === 1);
+  prova("o realce vermelho DENTRO do parágrafo continua curto (só o quadro mudou)", (() => { const h = B.realcar(longa); const m = h.match(/<span class="cm-exc">([\s\S]*?)<\/span>/); return m && desmonta(m[1]).length <= 72; })()); }
 prova("Pente Fino: **negrito** do markdown vira <strong> e a exceção fica vermelha", B.marcado("É **decisão surpresa**, salvo urgência.") === 'É <strong class="cm-chave">decisão surpresa</strong>, <span class="cm-exc"><strong>salvo</strong> urgência</span>.', B.marcado("É **decisão surpresa**, salvo urgência."));
 
 const arq = path.join(__dirname, "..", "discursiva", "simulados_delta.js");
@@ -73,6 +91,15 @@ if (fs.existsSync(arq)) {
   { const ruins = [];
     for (const s of S) for (const q of s.questoes) if (sem(desmonta(comentario(q.com, { gab: q.gab }))) !== sem(q.com.filter(b => b[0] === "p" || b[0] === "pre").map(b => b[1]).join(""))) ruins.push(s.id + "#" + q.n);
     prova(`comentário em quadros: nenhum caractere perdido nos ${S.reduce((n, s) => n + s.questoes.length, 0)} comentários`, ruins.length === 0, ruins.slice(0, 6).join(", ")); }
+  { const ruins = []; let n = 0;
+    for (const s of S) for (const q of s.questoes) {
+      if (!q.com) continue;
+      const it = itensResumo(comentario(q.com, { gab: q.gab })); n += it.length;
+      /* mesmo texto que a tela usa (célula e linha de fórmula separadas por espaço), para não acusar o inocente */
+      const fonte = analisar(q.com).map(r => r.t === "tab" ? r.linhas.flat().join(" ") : r.t === "formula" ? r.linhas.join(" ") : r.x).join(" ");
+      for (const x of cortados(it, fonte)) ruins.push(`${s.id}#${q.n}: "${x.slice(-40)}"`);
+    }
+    prova(`quadro "Não esqueça as exceções": nenhum dos ${n} itens termina no meio da oração`, ruins.length === 0, ruins.length + " cortados, ex.: " + ruins.slice(0, 4).join(" | ")); }
   const caso = S.flatMap(s => s.questoes).find(q => (q.com || []).some(b => b[0] === "pre" && /que requereu a consulta\)/.test(b[1])));
   if (caso) prova("o caso da imagem do titular (parecer médico-legal) sai emendado e sem largura fixa", analisar(caso.com).some(r => /parte interessada\s+que requereu a consulta\)/.test(r.x)));
   const i = process.argv.indexOf("--previa");
