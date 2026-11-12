@@ -30,3 +30,7 @@ revisao/dados/
 revisao/relatorios/
 # Conteúdo dos módulos (JSON lido por ferramentas/gerar_revisao.py): usa material de terceiro (D-018)
 revisao/conteudo/
+
+# Olho de Águia (12/11/2026): assertivas da Revisão (D-022) e marcações dos Simulados Delta (D-017), gerados, só no disco
+discursiva/olho_aguia_assertivas.js
+discursiva/olho_aguia_simulados.js

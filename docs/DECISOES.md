@@ -336,3 +336,23 @@ COLOCO DEPOIS. VEJA SE CONSEGUE SEM PERDER NADA DO CONTEÚDO."*
   `servidor.py` só serve `/index.html`, por isso embutido e não `<script src>`); grifos salvos por navegador e por tela.
 - ⚠️ **A autorização é para subir, não é aprovação visual registrada:** a story fica em `Aguardando Análise` até o
   titular aprovar a aparência no Storybook (§G6.5).
+
+### D-024 — Olho de Águia: reta final em leitura rápida, com metas de 3 h/dia (12/11/2026, 07h1x–07h29, titular)
+
+- **Pedido, textual:** *"crie o olho de águia... vai pegar os simulados... já colocar as questões respondidas, a alternativa
+  marcada... e nas alternativas erradas já grifa de vermelho a parte que está errada... e abaixo já mostra o comentário todo
+  esquematizado... ao lado vc coloca todas essas questões de revisão... pente fino... cria blocos de 100 em 100 assertivas
+  corretas e abaixo de cada assertiva o que a AOCP poderá cobrar como pegadinha... o foco da AOCP seria letra de lei e
+  jurisprudência batida"*; *"vai de 100 em 100... por essa ordem de importância... em todas as matérias dentro das 100"*;
+  ordem: *"importância da disciplina... leis mais atuais... leis que sempre caem pois têm a ver com o cargo de delegado"*;
+  **3 horas por dia**; *"você não mexe na parte discursiva"*.
+- **O que se fez:** `discursiva/Olho_de_Aguia.html` (atalho na barra do Treino; o conteúdo discursivo não foi tocado).
+  Blocos montados por `ferramentas/olho_de_aguia/montar_assertivas.cjs`: cota por disciplina = peso do mapa de prioridade;
+  dentro da disciplina, escore = lei 2023+ (3) ou 2019+ (2) + núcleo do Delegado (2) + letra de lei (1) + jurisprudência (1)
+  + incidência AOCP do ponto (Pente Fino). Assertiva errada entra pela correção; a versão errada vira a pegadinha.
+  Marcação dos 400 simulados e pegadinhas dos blocos 1–20 geradas por redatores, com validador (`.scratch/olho/`) e
+  juntadas por `ferramentas/olho_de_aguia/juntar.py`. Nas 57 questões que pedem a INCORRETA, só o gabarito é grifado.
+- **Fora do Git** (material de terceiro, D-017/D-022): `discursiva/olho_aguia_*.js` e `revisao/material/olho/`.
+- ⚠️ **Em aberto:** pegadinhas dos blocos 21–105 (4.447) a gerar em ondas à frente do ritmo; 6 questões com "⚠ Conferir"
+  (S1 q70, S2 q36, S2 q58, S4 q25, S4 q27, S4 q67); S1 q12 perdeu as frações na importação do PDF. Story no Storybook
+  ainda não feita (§G6.5).

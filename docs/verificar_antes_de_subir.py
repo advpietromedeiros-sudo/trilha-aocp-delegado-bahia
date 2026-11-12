@@ -111,6 +111,10 @@ PORTAS: list[tuple[str, list[str], str]] = [
      "G abrindo dentro de campo; grifo que some ao redesenhar; grifo no lugar errado em trecho repetido"),
     ("o teste dos grifos acusa", ["node", "docs/testar_grifa.cjs", "--autoteste"],
      "teste que passa com o contexto ignorado ou sem reaplicar o grifo (verde falso)"),
+    ("olho de águia: comportamento", ["node", "docs/testar_olho_de_aguia.cjs"],
+     "alternativa verdadeira grifada de vermelho; grifo fora do trecho exato; bloco com mais de 100; meta que não conta"),
+    ("o teste do olho de águia acusa", ["node", "docs/testar_olho_de_aguia.cjs", "--autoteste"],
+     "teste que passa com o grifo do trecho errado sumido (verde falso)"),
 ]
 
 # Régua de segredo (31/10/2026): exige VALOR de 20+ caracteres depois do `=` — o LEIA_PRIMEIRO cita

@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Olho de Águia · Trilha AOCP Delegado BA</title>
+<!-- Olho de Águia (pedido do titular, 12/11/2026): leitura rápida para a reta final.
+     Esquerda: os 4 simulados DPC-BA já resolvidos — correta marcada, o trecho errado de cada alternativa grifado em vermelho
+     e o comentário esquematizado. Direita: Revisão + Pente Fino em blocos de 100 assertivas CORRETAS, por ordem de
+     importância (peso da disciplina, lei atual, núcleo do Delegado, letra de lei e jurisprudência), com a pegadinha da AOCP.
+     Metas: 3 h por dia até a prova (06/12/2026), recalculadas pelo ritmo medido. Não mexe na parte discursiva.
+     Dados (gerados, fora do Git): olho_aguia_assertivas.js, olho_aguia_simulados.js; e simulados_delta.js. -->
+<style>
+:root{--fundo:#f4f1ea;--cartao:#fff;--tinta:#1d2433;--suave:#5d6677;--borda:#e3dccd;--ouro:#b07d1e;--azul:#1d4fa3;--verde:#1f7a46;--verm:#c62828;--vfundo:#fde3e1;--gfundo:#e3f4ea}
+@media (prefers-color-scheme:dark){:root{--fundo:#121722;--cartao:#1b2230;--tinta:#e8ecf3;--suave:#a6b0c2;--borda:#2e384b;--ouro:#e0b45a;--azul:#8db4ff;--verde:#5fd08e;--verm:#ff7b72;--vfundo:#4a1f22;--gfundo:#173826}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--fundo);color:var(--tinta);font:16px/1.55 Inter,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+p,li,.txt{text-align:justify;hyphens:auto}
+header{position:sticky;top:0;z-index:5;background:#111b2e;color:#fff;padding:10px 16px;display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center}
+header h1{margin:0;font-size:20px;letter-spacing:.02em}
+header h1 small{display:block;font-size:11px;font-weight:600;color:#e0b45a;letter-spacing:.08em;text-transform:uppercase}
+.metas{display:flex;flex-wrap:wrap;gap:8px;flex:1}
+.meta{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:10px;padding:6px 10px;font-size:13px;line-height:1.3}
+.meta b{display:block;font-size:17px;color:#ffe2a3}
+.meta.alerta{border-color:#ff8a80;background:rgba(255,82,82,.16)}
+.barra{height:6px;background:rgba(255,255,255,.15);border-radius:9px;overflow:hidden;margin-top:4px}.barra i{display:block;height:100%;background:#e0b45a}
+#abasCel{display:none}
+main{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:14px 16px 60px;align-items:start}
+.painel{background:var(--cartao);border:1px solid var(--borda);border-radius:14px;min-width:0;position:sticky;top:calc(var(--hcab,64px) + 14px);max-height:calc(100vh - var(--hcab,64px) - 28px);overflow:auto}
+.pcab{position:sticky;top:0;z-index:3;background:var(--cartao);border-bottom:1px solid var(--borda);border-radius:14px 14px 0 0;padding:10px 14px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.pcab h2{margin:0 auto 0 0;font-size:17px}
+.pcorpo{padding:12px 16px 18px}
+button,select,input{font:inherit}
+.bt{border:1px solid var(--borda);background:var(--fundo);color:var(--tinta);border-radius:9px;padding:6px 11px;cursor:pointer;font-weight:600;font-size:14px}
+.bt:hover{border-color:var(--ouro)}.bt.pri{background:var(--ouro);border-color:var(--ouro);color:#fff}
+select,input[type=number]{border:1px solid var(--borda);background:var(--fundo);color:var(--tinta);border-radius:9px;padding:5px 8px}
+.ctx{font-size:13px;color:var(--suave)}
+.enun{font-weight:600;margin:8px 0 10px}
+.alt{border:1px solid var(--borda);border-radius:10px;padding:8px 10px;margin:6px 0;display:grid;grid-template-columns:30px 1fr;gap:6px}
+.alt .l{font-weight:800}
+.alt.ok{background:var(--gfundo);border-color:var(--verde)}.alt.ok .l{color:var(--verde)}
+.alt.ruim .l{color:var(--verm)}
+mark.erro{background:var(--vfundo);color:var(--verm);font-weight:700;text-decoration:underline wavy;text-decoration-thickness:1px;padding:0 2px;border-radius:3px}
+.porq{grid-column:2;font-size:13.5px;color:var(--suave)}
+.porq b{color:var(--verm)}.porq .c{color:var(--verde);font-weight:700}
+.esq{border-left:4px solid var(--azul);background:rgba(29,79,163,.06);border-radius:0 10px 10px 0;padding:10px 12px;margin-top:12px}
+.esq h3{margin:0 0 6px;font-size:15px;color:var(--azul)}
+.esq ul{margin:6px 0 4px;padding-left:20px}
+.chip{display:inline-block;font-size:12px;font-weight:700;border-radius:999px;padding:1px 8px;margin:2px 4px 2px 0;background:var(--fundo);border:1px solid var(--borda)}
+.peg{margin-top:8px;border:1px dashed var(--verm);border-radius:9px;padding:6px 10px;font-size:14px}
+.peg b{color:var(--verm)}
+details{margin-top:10px}summary{cursor:pointer;font-weight:700;color:var(--suave)}
+pre{white-space:pre-wrap;font-size:13px}
+.textobase{max-height:260px;overflow:auto;background:var(--fundo);border-radius:9px;padding:8px 12px;font-size:14px}
+.disc{margin:16px 0 6px;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--ouro);border-bottom:2px solid var(--borda);padding-bottom:3px}
+.as{display:grid;grid-template-columns:38px 1fr;gap:4px 8px;padding:8px 0;border-bottom:1px solid var(--borda)}
+.as .n{font-weight:800;color:var(--suave);font-size:13px;padding-top:2px}
+.as .txt{font-weight:600}
+.as .info{grid-column:2}
+.as .peg{margin-top:4px}
+.as .velho{color:var(--verm);text-decoration:line-through;text-decoration-thickness:1px}
+.mem{font-size:13.5px;color:var(--suave);margin-top:4px}
+.base{font-size:12.5px;color:var(--suave);margin-top:3px}
+.feito{color:var(--verde);font-weight:800}
+.lidas{display:flex;flex-wrap:wrap;gap:3px;margin-top:8px}
+.lidas span{width:20px;height:8px;border-radius:3px;background:var(--borda)}.lidas span.v{background:var(--verde)}.lidas span.a{outline:2px solid var(--ouro)}
+@media(max-width:1100px){main{grid-template-columns:1fr}.painel{position:static;max-height:none;overflow:visible}.pcab{top:var(--hcab,64px)}#abasCel{display:flex;gap:6px;width:100%}#abasCel button{flex:1}
+  body[data-painel=sim] #pAss,body[data-painel=ass] #pSim{display:none}}
+</style></head><body data-painel="sim">
+<header>
+  <h1><small>Reta final · leitura rápida</small>🦅 Olho de Águia</h1>
+  <div class="metas" id="metas"></div>
+  <a class="bt" href="Treino_Discursiva.html" style="color:#ffe2a3;background:transparent;border-color:rgba(255,226,163,.5);text-decoration:none">↩ Treino</a>
+  <div id="abasCel"><button class="bt" data-painel="sim">📝 Simulados</button><button class="bt" data-painel="ass">📚 Assertivas</button></div>
+</header>
+<main>
+  <section class="painel" id="pSim"><div class="pcab"><h2>📝 Simulados resolvidos</h2>
+    <select id="selSim" aria-label="Simulado"></select>
+    <button class="bt" id="qAnt" title="Questão anterior (←)">←</button><span id="qNum" class="ctx"></span><button class="bt pri" id="qProx" title="Próxima questão (→)">→</button>
+  </div><div class="pcorpo" id="sim"></div></section>
+  <section class="painel" id="pAss"><div class="pcab"><h2>📚 Assertivas corretas</h2>
+    <select id="selBloco" aria-label="Bloco de 100"></select>
+    <button class="bt pri" id="concluir">✔ Concluí este bloco</button>
+  </div><div class="pcorpo" id="ass"></div></section>
+</main>
+<script src="simulados_delta.js"></script>
+<script src="olho_aguia_simulados.js"></script>
+<script src="olho_aguia_assertivas.js"></script>
+<script>
+'use strict';
+const PROVA = new Date(2026, 11, 6), HORAS_DIA = 3;
+const $ = id => document.getElementById(id);
+const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const neg = s => esc(s).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>');
+const LS = { ler(k, d) { try { const v = localStorage.getItem('olho:v1:' + k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } },
+  gravar(k, v) { try { localStorage.setItem('olho:v1:' + k, JSON.stringify(v)); } catch (e) { } } };
+const hoje = () => { const d = new Date(); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); };
+const SIM = typeof SIMULADOS !== 'undefined' ? SIMULADOS : [], MARC = window.OLHO_SIM || {}, OA = window.OLHO_ASSERTIVAS || { blocos: [], disciplinas: {} };
+const TOTAL_Q = SIM.reduce((a, s) => a + s.questoes.length, 0), TOTAL_B = OA.blocos.length;
+
+/* ---------- estado ---------- */
+let st = Object.assign({ sim: 0, q: 0, bloco: 0, lidas: {}, blocos: {}, dia: {}, tq: [] }, LS.ler('estado', {}));
+const salvar = () => LS.gravar('estado', st);
+const doDia = () => (st.dia[hoje()] = st.dia[hoje()] || { b: 0, q: 0 });
+let inicioBloco = Date.now(), inicioQ = Date.now();
+
+/* ---------- metas ---------- */
+function diasRestantes() {  // dias de estudo de hoje até a véspera da prova, contando hoje
+  const a = new Date(); a.setHours(0, 0, 0, 0); return Math.max(1, Math.round((PROVA - a) / 864e5));
+}
+function media(lista, padrao) { const v = lista.filter(x => x > 0.2 && x < 240); return v.length ? v.reduce((a, b) => a + b, 0) / v.length : padrao; }
+function metas() {
+  const dias = diasRestantes(), feitosB = Object.keys(st.blocos).length, lidasQ = Object.keys(st.lidas).length;
+  const restB = TOTAL_B - feitosB, restQ = TOTAL_Q - lidasQ, d = doDia();
+  const mpb = media(Object.values(st.blocos).map(b => b.min), 35), mpq = media(st.tq, 1.2);   // minutos por bloco / por questão
+  // a meta de hoje divide o que falta pelos dias que faltam, contando o que já foi feito hoje
+  const metaB = Math.ceil((restB + d.b) / dias), metaQ = Math.ceil((restQ + d.q) / dias);
+  const precisa = (restB * mpb + restQ * mpq) / dias, cabe = HORAS_DIA * 60;
+  const ate = Math.min(TOTAL_B, feitosB + Math.floor(Math.max(0, cabe * dias - restQ * mpq) / mpb));
+  $('metas').innerHTML =
+    `<div class="meta">Faltam<b>${dias} dia${dias > 1 ? 's' : ''}</b>prova 06/12</div>` +
+    `<div class="meta">Meta de hoje<b>${d.b}/${metaB} blocos · ${d.q}/${metaQ} questões</b><div class="barra"><i style="width:${Math.min(100, 100 * (d.b / metaB + d.q / Math.max(1, metaQ)) / 2)}%"></i></div></div>` +
+    `<div class="meta">Assertivas<b>${feitosB}/${TOTAL_B} blocos</b><div class="barra"><i style="width:${100 * feitosB / Math.max(1, TOTAL_B)}%"></i></div></div>` +
+    `<div class="meta">Simulados<b>${lidasQ}/${TOTAL_Q} questões</b><div class="barra"><i style="width:${100 * lidasQ / Math.max(1, TOTAL_Q)}%"></i></div></div>` +
+    `<div class="meta ${precisa > cabe ? 'alerta' : ''}">Seu ritmo<b>${Math.round(mpb)} min/bloco · ${mpq.toFixed(1)} min/questão</b>` +
+    (precisa > cabe ? `com 3 h/dia, chega ao <b style="display:inline;font-size:13px">bloco ${ate}</b> — os depois são os de menor prioridade` : `precisa de ${Math.round(precisa)} min/dia de 180`) + `</div>`;
+  document.documentElement.style.setProperty('--hcab', document.querySelector('header').offsetHeight + 'px');
+}
+
+/* ---------- simulados ---------- */
+function blocosHtml(bl) {
+  return (bl || []).map(b => b[0] === 'br' ? '' : b[0] === 'pre' ? `<pre>${esc(b[1])}</pre>` : `<p>${esc(b[1])}</p>`).join('');
+}
+function marcar(texto, trecho) {
+  const t = String(texto), i = trecho ? t.indexOf(trecho) : -1;
+  return i < 0 ? esc(t) : esc(t.slice(0, i)) + `<mark class="erro">${esc(trecho)}</mark>` + esc(t.slice(i + trecho.length));
+}
+function mostrarQuestao() {
+  const s = SIM[st.sim]; if (!s) { $('sim').innerHTML = '<p>Simulados não encontrados (discursiva/simulados_delta.js).</p>'; return; }
+  st.q = Math.max(0, Math.min(s.questoes.length - 1, st.q));
+  const q = s.questoes[st.q], m = (MARC[s.id.replace('dpcba-', '')] || {})[String(q.n)];
+  const tb = (s.textos || []).find(t => q.n >= t.de && q.n <= t.ate);
+  $('qNum').textContent = `Questão ${q.n} de ${s.questoes.length}`;
+  const incorreta = m && m.pede === 'incorreta';
+  const alts = Object.entries(q.alts).map(([L, tx]) => {
+    if (q.anulada) return `<div class="alt"><span class="l">${L}</span><span class="txt">${esc(tx)}</span></div>`;
+    if (incorreta) {  // "assinale a INCORRETA": o gabarito é a falsa; as outras são verdadeiras
+      const a = m.alts[L] || {};
+      if (L === q.gab) return `<div class="alt ok"><span class="l">✔ ${L}</span><span class="txt"><b>É a FALSA (gabarito):</b> ${marcar(tx, a.trecho)}</span>` +
+        `<div class="porq"><b>Por que é falsa:</b> ${neg(a.motivo)} <span class="c">→ Certo: ${neg(a.certo)}</span></div></div>`;
+      return `<div class="alt"><span class="l" style="color:var(--verde)">V ${L}</span><span class="txt">${esc(tx)}</span>` +
+        (a.motivo ? `<div class="porq"><span class="c">Verdadeira:</span> ${neg(a.motivo)}</div>` : '') + `</div>`;
+    }
+    if (L === q.gab) return `<div class="alt ok"><span class="l">✔ ${L}</span><span class="txt"><b>${esc(tx)}</b></span></div>`;
+    const a = m && m.alts && m.alts[L];
+    return `<div class="alt ruim"><span class="l">✘ ${L}</span><span class="txt">${marcar(tx, a && a.trecho)}</span>` +
+      (a ? `<div class="porq"><b>Errado:</b> ${neg(a.motivo)} <span class="c">→ Certo: ${neg(a.certo)}</span></div>` : '') + `</div>`;
+  }).join('');
+  const e = m && m.esquema;
+  $('sim').innerHTML = `<div class="ctx">${esc(q.disc)} · ${esc(q.tema)}${q.anulada ? ' · <b>ANULADA</b>' : ''} · gabarito <b>${esc(q.gab)}</b></div>` +
+    (tb ? `<details><summary>Texto-base (questões ${tb.de} a ${tb.ate})</summary><div class="textobase">${blocosHtml(tb.blocos)}</div></details>` : '') +
+    `<div class="enun">${blocosHtml(q.enun)}</div>${alts}` +
+    (e ? `<div class="esq"><h3>🧭 ${neg(e.ideia)}</h3>${(e.base || []).map(b => `<span class="chip">📜 ${esc(b)}</span>`).join('')}` +
+      `<ul>${(e.pontos || []).map(p => `<li>${neg(p)}</li>`).join('')}</ul>${e.pegadinha ? `<div class="peg"><b>⚠ Pegadinha:</b> ${neg(e.pegadinha)}</div>` : ''}</div>`
+      : `<div class="esq"><h3>🧭 Esquema em preparo</h3><p class="ctx">O grifo do trecho errado e o esquema desta questão ainda estão sendo gerados.</p></div>`) +
+    `<details><summary>Comentário completo do simulado</summary>${blocosHtml(q.com)}</details>` +
+    `<div class="lidas">${s.questoes.map((x, i) => `<span class="${st.lidas[s.id + ':' + x.n] ? 'v' : ''} ${i === st.q ? 'a' : ''}" title="Questão ${x.n}"></span>`).join('')}</div>`;
+  inicioQ = Date.now(); salvar();
+}
+function irQuestao(d) {
+  const s = SIM[st.sim]; if (!s) return;
+  if (d > 0) {  // passou adiante: a questão conta como lida
+    const k = s.id + ':' + s.questoes[st.q].n;
+    if (!st.lidas[k]) { st.lidas[k] = 1; doDia().q++; const min = (Date.now() - inicioQ) / 6e4; if (min < 30) st.tq = st.tq.concat(min).slice(-80); }
+    if (st.q === s.questoes.length - 1 && st.sim < SIM.length - 1) { st.sim++; st.q = 0; $('selSim').value = st.sim; mostrarQuestao(); metas(); return; }
+  }
+  st.q += d; mostrarQuestao(); metas(); topo('pSim');
+}
+
+/* ---------- assertivas ---------- */
+const TAG = { atual: '🆕 Lei atual', delegado: '👮 Delegado', lei: '📜 Letra de lei', juris: '⚖️ Jurisprudência' };
+function mostrarBloco() {
+  const b = OA.blocos[st.bloco]; if (!b) { $('ass').innerHTML = '<p>Assertivas não encontradas (rode ferramentas/olho_de_aguia/montar_assertivas.cjs).</p>'; return; }
+  const cont = {}; b.forEach(i => cont[i.d] = (cont[i.d] || 0) + 1);
+  let html = `<p class="ctx"><b>Bloco ${st.bloco + 1} de ${TOTAL_B}</b> · ${b.length} assertivas, todas na forma <b>CORRETA</b> · ` +
+    Object.entries(cont).map(([d, n]) => `${esc((OA.disciplinas[d] || {}).nome || d)} ${n}`).join(' · ') +
+    (st.blocos[st.bloco] ? ` · <span class="feito">✔ concluído</span>` : '') + `</p>`;
+  let disc = '', n = 0;
+  for (const i of b) {
+    if (i.d !== disc) { disc = i.d; html += `<h3 class="disc">${esc((OA.disciplinas[disc] || {}).nome || disc)}</h3>`; }
+    n++;
+    const peg = i.p ? (i.po ? `<div class="peg"><b>⚠ A AOCP pode cobrar assim (ERRADO):</b> <span class="velho">${esc(i.p)}</span></div>`
+      : `<div class="peg"><b>⚠ Pegadinha AOCP:</b> ${neg(i.p)}</div>`) : '';
+    html += `<div class="as"><span class="n">${n}</span><div><div class="txt">${neg(i.t)}</div>` +
+      `<div>${(i.tg || []).map(t => `<span class="chip">${TAG[t] || t}</span>`).join('')}</div></div><div class="info">${peg}` +
+      (i.b && i.b.length ? `<div class="base">📌 ${i.b.map(esc).join(' · ')}</div>` : '') +
+      (!i.p && i.m ? `<div class="mem">🧠 ${neg(i.m)}</div>` : '') + `</div></div>`;
+  }
+  $('ass').innerHTML = html; inicioBloco = Date.now(); salvar();
+}
+function opcoesBloco() {
+  $('selBloco').innerHTML = OA.blocos.map((b, k) => `<option value="${k}">${st.blocos[k] ? '✔ ' : ''}Bloco ${k + 1}</option>`).join('');
+  $('selBloco').value = st.bloco;
+}
+$('concluir').onclick = () => {
+  if (!st.blocos[st.bloco]) { st.blocos[st.bloco] = { min: Math.round((Date.now() - inicioBloco) / 6e4 * 10) / 10, em: hoje() }; doDia().b++; }
+  const prox = OA.blocos.findIndex((_, k) => !st.blocos[k]); if (prox >= 0) st.bloco = prox;
+  opcoesBloco(); mostrarBloco(); metas(); topo('pAss');
+};
+$('selBloco').onchange = e => { st.bloco = +e.target.value; mostrarBloco(); topo('pAss'); };
+function topo(id) { const p = $(id); if (getComputedStyle(p).overflowY === 'auto') p.scrollTop = 0; else p.scrollIntoView({ block: 'start' }); }
+
+/* ---------- início ---------- */
+$('selSim').innerHTML = SIM.map((s, k) => `<option value="${k}">${esc(s.titulo)}</option>`).join('');
+$('selSim').value = st.sim;
+$('selSim').onchange = e => { st.sim = +e.target.value; st.q = 0; mostrarQuestao(); };
+$('qAnt').onclick = () => irQuestao(-1); $('qProx').onclick = () => irQuestao(1);
+document.querySelectorAll('[data-painel]').forEach(b => b.onclick = () => { document.body.dataset.painel = b.dataset.painel; });
+document.addEventListener('keydown', e => {
+  if (e.ctrlKey || e.metaKey || e.altKey || /^(INPUT|SELECT|TEXTAREA)$/.test(e.target.tagName)) return;
+  if (e.key === 'ArrowRight') { e.preventDefault(); irQuestao(1); } else if (e.key === 'ArrowLeft') { e.preventDefault(); irQuestao(-1); }
+});
+opcoesBloco(); mostrarQuestao(); mostrarBloco(); metas();
+addEventListener('resize', metas);
+</script>
+<script src="../assets/grifa.js"></script>
+</body></html>

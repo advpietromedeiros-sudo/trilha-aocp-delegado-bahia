@@ -2,9 +2,19 @@
 
 > Estado, tarefas e o que ficou rodando. Atualizado a cada ~15 min de trabalho e no fechamento.
 
-**Última atualização:** 10/11/2026, 20h33.
+**Última atualização:** 12/11/2026, 08h05.
 
 ## Estado
+
+- 🆕 **12/11/2026, 08h05 — Olho de Águia (D-024), pedido do titular para a reta final** (prova 06/12, 3 h/dia):
+  `discursiva/Olho_de_Aguia.html`, atalho "🦅 Olho de Águia" no Treino. Esquerda: os **400** simulados resolvidos, com o
+  trecho errado grifado em cada alternativa errada (nas **57** que pedem a INCORRETA, só o gabarito) e o comentário
+  esquematizado. Direita: **10.481** assertivas corretas da Revisão + Pente Fino em **105 blocos de 100**, por importância
+  (peso da disciplina, lei atual, núcleo do Delegado, letra de lei, jurisprudência), com a pegadinha AOCP. Metas do dia
+  recalculadas pelo ritmo medido. Prova: `docs/testar_olho_de_aguia.cjs` (14/14 com os dados reais; autoteste acusa);
+  portão 35/35.
+  - ⏳ **Falta:** pegadinhas dos blocos 21–105 (4.447), em ondas; conferir 6 gabaritos marcados "⚠ Conferir" e a S1 q12
+    (frações perdidas na importação); story do Storybook.
 
 - ✅ **10/11/2026, 22h23 — Simulados: quadro "Não esqueça as exceções" com frase cortada** (imagem do titular,
   22h18). Causa: a oração de exceção era cortada em 64 caracteres, limite pensado para o realce vermelho dentro do

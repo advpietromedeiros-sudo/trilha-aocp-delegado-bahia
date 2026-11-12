@@ -232,10 +232,10 @@ function passosDe(p){
 }
 
 /* ---------- abas ---------- */
-const ABAS=[['edital','🗺️ Edital'],['pecas','📜 Peças'],['casos','✍️ Estudos de caso'],['simulados','📝 Simulados'],['pente','🔍 Pente Fino'],['revisao','📚 Revisão'],['memoria','🧠 Memorizar'],['progresso','📊 Progresso']];
+const ABAS=[['edital','🗺️ Edital'],['pecas','📜 Peças'],['casos','✍️ Estudos de caso'],['simulados','📝 Simulados'],['pente','🔍 Pente Fino'],['revisao','📚 Revisão'],['memoria','🧠 Memorizar'],['progresso','📊 Progresso'],['aguia','🦅 Olho de Águia']];
 let aba='edital';
 const marcarAba=a=>{aba=a;$('abas').innerHTML=ABAS.map(([k,n])=>`<button class="${k===a?'on':''}" data-aba="${k}">${n}</button>`).join('')};
-function ir(a){aba=a;$('abas').innerHTML=ABAS.map(([k,n])=>`<button class="${k===a?'on':''}" data-aba="${k}">${n}</button>`).join('');({edital,pecas:listaPecas,casos:listaCasos,simulados:listaSimulados,pente:()=>pfModo('pente'),revisao:()=>pfModo('revisao'),memoria:memorizar,progresso})[a]();scrollTo(0,0)}
+function ir(a){aba=a;$('abas').innerHTML=ABAS.map(([k,n])=>`<button class="${k===a?'on':''}" data-aba="${k}">${n}</button>`).join('');({edital,pecas:listaPecas,casos:listaCasos,simulados:listaSimulados,pente:()=>pfModo('pente'),revisao:()=>pfModo('revisao'),memoria:memorizar,progresso,aguia:()=>{location.href='Olho_de_Aguia.html'}})[a]();scrollTo(0,0)}
 document.addEventListener('click',e=>{const b=e.target.closest('[data-aba]');if(b)ir(b.dataset.aba)});
 
 function edital(){
