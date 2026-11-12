@@ -21,10 +21,15 @@ header h1 small{display:block;font-size:11px;font-weight:600;color:#e0b45a;lette
 .meta b{display:block;font-size:17px;color:#ffe2a3}
 .meta.alerta{border-color:#ff8a80;background:rgba(255,82,82,.16)}
 .barra{height:6px;background:rgba(255,255,255,.15);border-radius:9px;overflow:hidden;margin-top:4px}.barra i{display:block;height:100%;background:#e0b45a}
-#abasCel{display:none}
-main{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:14px 16px 60px;align-items:start}
-.painel{background:var(--cartao);border:1px solid var(--borda);border-radius:14px;min-width:0;position:sticky;top:calc(var(--hcab,64px) + 14px);max-height:calc(100vh - var(--hcab,64px) - 28px);overflow:auto}
-.pcab{position:sticky;top:0;z-index:3;background:var(--cartao);border-bottom:1px solid var(--borda);border-radius:14px 14px 0 0;padding:10px 14px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+#abas{display:flex;gap:6px;width:100%}
+#abas button{flex:1;max-width:340px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.06);color:#dfe6f2;border-radius:10px 10px 0 0;padding:9px 14px;font-weight:800;font-size:15px;cursor:pointer}
+#abas button:hover{background:rgba(255,255,255,.14)}
+#abas button.on{background:var(--fundo);color:var(--tinta);border-color:var(--fundo)}
+header{padding-bottom:0}
+main{max-width:1100px;margin:0 auto;padding:14px 16px 60px}
+body[data-painel=sim] #pAss,body[data-painel=ass] #pSim{display:none}
+.painel{background:var(--cartao);border:1px solid var(--borda);border-radius:14px;min-width:0}
+.pcab{position:sticky;top:var(--hcab,64px);z-index:3;background:var(--cartao);border-bottom:1px solid var(--borda);border-radius:14px 14px 0 0;padding:10px 14px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .pcab h2{margin:0 auto 0 0;font-size:17px}
 .pcorpo{padding:12px 16px 18px}
 button,select,input{font:inherit}
@@ -61,14 +66,13 @@ pre{white-space:pre-wrap;font-size:13px}
 .feito{color:var(--verde);font-weight:800}
 .lidas{display:flex;flex-wrap:wrap;gap:3px;margin-top:8px}
 .lidas span{width:20px;height:8px;border-radius:3px;background:var(--borda)}.lidas span.v{background:var(--verde)}.lidas span.a{outline:2px solid var(--ouro)}
-@media(max-width:1100px){main{grid-template-columns:1fr}.painel{position:static;max-height:none;overflow:visible}.pcab{top:var(--hcab,64px)}#abasCel{display:flex;gap:6px;width:100%}#abasCel button{flex:1}
-  body[data-painel=sim] #pAss,body[data-painel=ass] #pSim{display:none}}
+@media(max-width:700px){#abas button{font-size:13px;padding:8px 8px}}
 </style></head><body data-painel="sim">
 <header>
   <h1><small>Reta final · leitura rápida</small>🦅 Olho de Águia</h1>
   <div class="metas" id="metas"></div>
   <a class="bt" href="Treino_Discursiva.html" style="color:#ffe2a3;background:transparent;border-color:rgba(255,226,163,.5);text-decoration:none">↩ Treino</a>
-  <div id="abasCel"><button class="bt" data-painel="sim">📝 Simulados</button><button class="bt" data-painel="ass">📚 Assertivas</button></div>
+  <nav id="abas" role="tablist"><button data-painel="sim" role="tab">📝 Simulados resolvidos</button><button data-painel="ass" role="tab">📚 Assertivas corretas</button></nav>
 </header>
 <main>
   <section class="painel" id="pSim"><div class="pcab"><h2>📝 Simulados resolvidos</h2>
@@ -205,19 +209,21 @@ $('concluir').onclick = () => {
   opcoesBloco(); mostrarBloco(); metas(); topo('pAss');
 };
 $('selBloco').onchange = e => { st.bloco = +e.target.value; mostrarBloco(); topo('pAss'); };
-function topo(id) { const p = $(id); if (getComputedStyle(p).overflowY === 'auto') p.scrollTop = 0; else p.scrollIntoView({ block: 'start' }); }
+function topo() { scrollTo(0, 0); }
 
 /* ---------- início ---------- */
 $('selSim').innerHTML = SIM.map((s, k) => `<option value="${k}">${esc(s.titulo)}</option>`).join('');
 $('selSim').value = st.sim;
 $('selSim').onchange = e => { st.sim = +e.target.value; st.q = 0; mostrarQuestao(); };
 $('qAnt').onclick = () => irQuestao(-1); $('qProx').onclick = () => irQuestao(1);
-document.querySelectorAll('[data-painel]').forEach(b => b.onclick = () => { document.body.dataset.painel = b.dataset.painel; });
+function aba(p) { st.aba = p; document.body.dataset.painel = p; document.querySelectorAll('#abas button').forEach(b => { const on = b.dataset.painel === p; b.classList.toggle('on', on); b.setAttribute('aria-selected', on); }); salvar(); scrollTo(0, 0); }
+document.querySelectorAll('#abas button').forEach(b => b.onclick = () => aba(b.dataset.painel));
 document.addEventListener('keydown', e => {
   if (e.ctrlKey || e.metaKey || e.altKey || /^(INPUT|SELECT|TEXTAREA)$/.test(e.target.tagName)) return;
+  if (st.aba === 'ass') return;
   if (e.key === 'ArrowRight') { e.preventDefault(); irQuestao(1); } else if (e.key === 'ArrowLeft') { e.preventDefault(); irQuestao(-1); }
 });
-opcoesBloco(); mostrarQuestao(); mostrarBloco(); metas();
+aba(st.aba === 'ass' ? 'ass' : 'sim'); opcoesBloco(); mostrarQuestao(); mostrarBloco(); metas();
 addEventListener('resize', metas);
 </script>
 <script src="../assets/grifa.js"></script>

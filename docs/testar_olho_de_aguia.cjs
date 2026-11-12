@@ -103,6 +103,15 @@ prova("\"Concluí este bloco\" conta na meta de hoje e vai para o próximo bloco
 w.eval("st.sim=0;st.q=0;mostrarQuestao()");
 d.dispatchEvent(new w.KeyboardEvent("keydown", { key: "ArrowRight", bubbles: true }));
 prova("→ passa a questão e a conta como lida", w.eval("st.q") === 1 && Object.keys(w.eval("st.lidas")).length === 1);
+// abas (pedido do titular, 12/11/2026, 08h12: "fica confuso em duas telas... coloque em abas, abre uma tela ou outra")
+const abas = [...d.querySelectorAll("#abas button")], css = d.querySelector("style").textContent;
+abas.find(b => b.dataset.painel === "ass").click();
+const qAntes = w.eval("st.q");
+d.dispatchEvent(new w.KeyboardEvent("keydown", { key: "ArrowRight", bubbles: true }));
+prova("duas abas, uma tela por vez: na aba Assertivas, a de Simulados some e → não mexe nos simulados", abas.length === 2 && d.body.dataset.painel === "ass" &&
+  /body\[data-painel=sim\] #pAss,body\[data-painel=ass\] #pSim\{display:none\}/.test(css) && w.eval("st.q") === qAntes && abas[1].classList.contains("on") && !abas[0].classList.contains("on"));
+abas.find(b => b.dataset.painel === "sim").click();
+prova("a aba escolhida fica guardada para a próxima vez", d.body.dataset.painel === "sim" && w.eval("st.aba") === "sim");
 prova("tecla G: paleta de grifos presente", !!w.Grifa);
 prova("nenhum erro de JavaScript em todo o fluxo", erros.length === 0, erros.join(" | "));
 
