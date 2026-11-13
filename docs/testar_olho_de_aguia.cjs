@@ -55,7 +55,7 @@ prova("§G6.6: texto justificado nas assertivas e alternativas", /p,li,\.txt\{te
 
 // percorre TODAS as questões: correta em verde e sem grifo; erradas com o trecho exato grifado; INCORRETA com só o gabarito grifado
 const SIM = w.eval("SIM"), MARC = w.OLHO_SIM;
-let questoes = 0, ruins = [], incorretas = 0;
+let questoes = 0, ruins = [], incorretas = 0, didatica = [];
 for (let s = 0; s < SIM.length; s++) {
   w.eval(`st.sim=${s};st.q=0`);
   for (let i = 0; i < SIM[s].questoes.length; i++) {
@@ -75,8 +75,15 @@ for (let s = 0; s < SIM.length; s++) {
       if (ok[0].querySelector("mark.erro")) ruins.push(`S${s + 1} q${q.n}: grifo na correta`);
     }
     if (!d.querySelector(".esq h3") || d.querySelector(".esq h3").textContent.includes("em preparo")) ruins.push(`S${s + 1} q${q.n}: sem esquema`);
+    // comentário didático (12/11/2026): cada errada com "o certo é" e "por quê"; a INCORRETA com aviso
+    const erradas = m.pede === "incorreta" ? [ok[0]] : [...d.querySelectorAll("#sim .alt.ruim")];
+    erradas.forEach(el => { const L = (el.querySelector(".l").textContent.match(/[A-E]/) || [])[0], a = m.alts[L] || {};
+      if (a.certo && !/O certo é/i.test(el.textContent)) didatica.push(`S${s + 1} q${q.n} ${L}: sem "o certo é"`);
+      if (a.motivo && !/Por quê/i.test(el.textContent)) didatica.push(`S${s + 1} q${q.n} ${L}: sem "por quê"`); });
+    if ((m.pede === "incorreta") !== !!d.querySelector("#sim .aviso")) didatica.push(`S${s + 1} q${q.n}: aviso da INCORRETA`);
   }
 }
+prova("comentário didático: toda alternativa errada com \"o certo é\" e \"por quê\" em linhas próprias, e aviso só nas que pedem a INCORRETA", didatica.length === 0, didatica.slice(0, 5).join(" | "));
 prova(`todas as ${questoes} questões: correta marcada, trecho errado grifado exatamente, ${incorretas} que pedem a INCORRETA com só o gabarito grifado, esquema presente`, questoes > 0 && incorretas > 0 && ruins.length === 0, ruins.slice(0, 5).join(" | "));
 prova("negrito do esquema vira <b> (sem asteriscos na tela)", !d.getElementById("sim").textContent.includes("**"));
 
@@ -96,7 +103,8 @@ const cards = [...d.querySelectorAll("#ass .as")], b0 = OA.blocos[0];
 prova("o bloco aparece por disciplina, cada assertiva com a pegadinha (ou o memorize, se não houver)", cards.length === b0.length && d.querySelectorAll("#ass .disc").length === new Set(b0.map(i => i.d)).size &&
   cards.every((c, k) => b0[k].p ? !!c.querySelector(".peg") : (!b0[k].m || !!c.querySelector(".mem"))));
 const iOrig = b0.findIndex(i => i.po);
-prova("assertiva que era errada mostra a versão errada original riscada como pegadinha", iOrig < 0 || !!cards[iOrig].querySelector(".velho"));
+prova("assertiva que era errada mostra a versão errada da banca ao lado da certa", iOrig < 0 || (!!cards[iOrig].querySelector(".velho") && !!cards[iOrig].querySelector(".cmp .lado.cer")));
+prova("\"Para memorizar\" aparece em toda assertiva que o tem, mesmo com pegadinha", cards.every((c, k) => !b0[k].m || !!c.querySelector(".mem")));
 const antes = d.getElementById("metas").textContent;
 d.getElementById("concluir").click();
 prova("\"Concluí este bloco\" conta na meta de hoje e vai para o próximo bloco", d.getElementById("metas").textContent.includes("1/" + OA.blocos.length + " blocos") && w.eval("st.bloco") === 1 && antes !== d.getElementById("metas").textContent);

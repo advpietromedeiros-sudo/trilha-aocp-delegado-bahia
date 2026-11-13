@@ -2,9 +2,11 @@
 
 > Estado, tarefas e o que ficou rodando. Atualizado a cada ~15 min de trabalho e no fechamento.
 
-**Última atualização:** 12/11/2026, 08h05.
+**Última atualização:** 12/11/2026, 22h43.
 
 ## Estado
+
+- 🆕 **12/11/2026, 22h43 — Olho de Águia: comentários mais fáceis de entender** (pedido do titular, 22h36). Só apresentação, sem mexer nos dados. Simulados: cada alternativa errada em três linhas (o erro está em / o certo é / por quê), a correta com "por que é a certa", aviso em destaque nas 57 que pedem a INCORRETA, esquema com rótulos ("em uma frase", "o que você precisa saber", "como a AOCP tenta te enganar"). Assertivas: tema acima da frase; versão errada da banca ao lado da certa, com as palavras trocadas destacadas (sem riscado); descrição da manobra separada de nota de detalhe; "Para memorizar" sempre visível. Prova: `docs/testar_olho_de_aguia.cjs` 18/18 (3 provas novas), prints conferidos; portão 35/35.
 
 - 🆕 **12/11/2026, 08h05 — Olho de Águia (D-024), pedido do titular para a reta final** (prova 06/12, 3 h/dia):
   `discursiva/Olho_de_Aguia.html`, atalho "🦅 Olho de Águia" no Treino. Esquerda: os **400** simulados resolvidos, com o
