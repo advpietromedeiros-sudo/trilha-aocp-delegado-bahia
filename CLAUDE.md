@@ -24,7 +24,7 @@
 - 🏛️ ~~**Destino:** será uma funcionalidade do portal Pietro Medeiros (`../pietromedeiros-portal`),
   por ordem do titular de 31/10/2026 — ver o `CLAUDE.md` da pasta-mãe.~~ Decisão de arquitetura aqui
   pergunta *"isso encaixa no portal?"*.
-- **Remoto:** `advpietromedeiros-sudo/trilha-aocp-delegado-bahia`, **privado** (D-001).
+- **Remoto:** `advpietromedeiros-sudo/trilha-aocp-delegado-bahia`, **PÚBLICO desde 14/11/2026 (D-025**, substitui o D-001) · Pages: https://advpietromedeiros-sudo.github.io/trilha-aocp-delegado-bahia/ (sem os dados de terceiros).
 - 🔴 **`.env` tem a chave de API — não se lê** (§F59). O Storybook não serve pasta do disco por
   isso: as stories leem o `index.html` como texto.
 - 🔴 Quatro assets derivados de terceiros ficam **fora do Git** (D-002, `docs/PROCEDENCIA.md`).

@@ -356,3 +356,17 @@ COLOCO DEPOIS. VEJA SE CONSEGUE SEM PERDER NADA DO CONTEÚDO."*
 - ⚠️ **Em aberto:** pegadinhas dos blocos 21–105 (4.447) a gerar em ondas à frente do ritmo; 6 questões com "⚠ Conferir"
   (S1 q70, S2 q36, S2 q58, S4 q25, S4 q27, S4 q67); S1 q12 perdeu as frações na importação do PDF. Story no Storybook
   ainda não feita (§G6.5).
+
+## D-025 — Repositório público e GitHub Pages (14/11/2026, 10h03) — ✅ decidida pelo titular
+
+- **Ordem do titular (14/11/2026, 09h59):** *"boote publico no guit"*, depois de pedir *"o link do guithub publico da
+  trilha aocp a versão mais atualizada"*. **Substitui o D-001** (repositório privado).
+- **Antes de abrir, varredura medida às 10h00:** nenhuma chave de API nos 62 commits; `.env` nunca commitado; o único
+  número com forma de CPF é o fictício 123.456.789-09 do autoteste de `ferramentas/ampliar_acervo.py`; nenhum e-mail
+  pessoal. O material de terceiros (D-002, D-017, D-018, D-022) **continua fora do Git** e, portanto, fora do link.
+- **Publicado:** https://advpietromedeiros-sudo.github.io/trilha-aocp-delegado-bahia/ (Pages da `main`, raiz).
+- ⚠️ **Limite:** no link, o Olho de Águia, os Simulados e a Revisão abrem **sem dados** (404 em `simulados_delta.js`,
+  `olho_aguia_*.js` e `revisao_nfpss.js`), porque são material pago de terceiro; a versão completa segue só na máquina
+  do titular. O assistente de IA do `index.html` depende do `servidor.py` local e não funciona no link.
+- **Daqui em diante:** todo commit fica público — a régua de segredo do portão passa a proteger também contra exposição.
+
