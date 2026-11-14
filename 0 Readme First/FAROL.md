@@ -2,9 +2,11 @@
 
 > Estado, tarefas e o que ficou rodando. Atualizado a cada ~15 min de trabalho e no fechamento.
 
-**Última atualização:** 14/11/2026, 10h16.
+**Última atualização:** 14/11/2026, 11h01.
 
 ## Estado
+
+- 🆕 **14/11/2026, 11h01 — Cópia privada completa (opção 1 do titular):** `ferramentas/gerar_pacote_privado.py` gera Treino (19,9 MB) e Olho de Águia (7,6 MB) em arquivo único em `C:/Users/advpi/OneDrive/Trilha AOCP - versao completa (privada)/` (fora do Git). Conferido no Chrome: 0 erro, dados presentes. ⏳ **O aplicativo do OneDrive não está instalado nesta máquina** (a pasta existe, o programa não): a pasta não sobe sozinha — o titular envia pelo onedrive.live.com ou instala o app. Rodar de novo o gerador depois de cada atualização dos dados.
 
 - 🆕 **14/11/2026, 10h16 — Repositório público (D-025) e paleta de grifos ampliada.** Link: https://advpietromedeiros-sudo.github.io/trilha-aocp-delegado-bahia/ — Treino abre sem erro de JavaScript no link (conferido no Chrome), mas Simulados, Revisão e Olho de Águia ficam sem dados lá (material de terceiro fora do Git). Paleta (tecla G): 9 cores (+ lilás, vermelho, turquesa, cinza), Negrito (B) e Sublinhado (U), que se somam a uma cor; `docs/testar_grifa.cjs` 32 conferências, autoteste 3/3; commit 8ac6cd3, CI verde.
 
