@@ -13,6 +13,7 @@ const RAIZ = path.join(__dirname, "..");
 const FONTE = fs.readFileSync(path.join(RAIZ, "assets", "grifa.js"), "utf8");
 const AUTO = process.argv.includes("--autoteste");
 const espera = ms => new Promise(r => setTimeout(r, ms));
+let conferidas = 0;
 
 const PAGINA = `<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"></head><body>
 <main id="m"><p id="p1">A prescrição da pretensão punitiva regula-se pelo máximo da pena cominada ao crime.</p>
@@ -34,7 +35,7 @@ function selecionar(w, no, ini, fim) {
 const textoDe = (d, sel) => [...d.querySelectorAll(sel)].map(m => m.textContent).join("|");
 
 async function suite(js) {
-  const falhas = [], ok = (nome, cond, det = "") => { if (!cond) falhas.push(nome + (det ? " — " + det : "")); };
+  const falhas = [], ok = (nome, cond, det = "") => { conferidas++; if (!cond) falhas.push(nome + (det ? " — " + det : "")); };
   const dom = abrir(js), w = dom.window, d = w.document;
   await espera(20);
   ok("expõe window.Grifa", !!w.Grifa);
@@ -46,7 +47,8 @@ async function suite(js) {
   tecla(w, d.body, "g");
   const pal = d.getElementById("grf-paleta");
   ok("G abre a paleta", pal && !pal.hidden);
-  ok("paleta com 5 cores e borracha", pal && pal.querySelectorAll(".grf-cor").length === 5 && !!pal.querySelector('[data-ferramenta="borracha"]'));
+  ok("paleta com 9 cores, negrito, sublinhado e borracha", pal && pal.querySelectorAll(".grf-cor").length === 9 && !!pal.querySelector('[data-ferramenta="borracha"]') &&
+    !!pal.querySelector('[data-ferramenta="negrito"]') && !!pal.querySelector('[data-ferramenta="sublinhado"]'));
   ok("aberta, a página reserva a faixa da barra (não cobre o conteúdo)", d.documentElement.classList.contains("grf-reserva"));
   ok("paleta é uma barra de ferramentas com nome", pal && pal.getAttribute("role") === "toolbar" && !!pal.getAttribute("aria-label"));
   // 2) selecionar com a cor ativa grifa e salva
@@ -93,6 +95,25 @@ async function suite(js) {
   ok("o pedido de confirmação aparece na tela, ao lado da barra", !pal.querySelector(".grf-aviso").hidden && /Confirmar/.test(pal.querySelector(".grf-aviso").textContent));
   lp.click();
   ok("2º clique apaga todos", w.Grifa.lista().length === 0 && d.querySelectorAll("mark.grf").length === 0);
+  // 7b) negrito e sublinhado (14/11/2026): marcam sem pintar o fundo e somam-se a uma cor no mesmo trecho
+  w.Grifa.limparTela(); m.innerHTML = html; await espera(20);
+  try {
+  const t1b = () => d.getElementById("p1").firstChild;
+  pal.querySelector('[data-ferramenta="lilas"]').click(); selecionar(w, t1b(), 2, 12); await espera(20);
+  const corTxt = textoDe(d, "#p1 mark.grf-lilas");
+  pal.querySelector('[data-ferramenta="negrito"]').click();
+  const lil = d.querySelector("#p1 mark.grf-lilas").firstChild; selecionar(w, lil, 0, lil.nodeValue.length); await espera(20);
+  const neg = d.querySelector("#p1 mark.grf-negrito");
+  ok("negrito por cima de um grifo colorido: os dois ficam (cor + negrito no mesmo trecho)", !!neg && textoDe(d, "#p1 mark.grf-negrito") === corTxt && !!d.querySelector("#p1 mark.grf-lilas") && w.Grifa.lista().length === 2);
+  ok("negrito não pinta o fundo e deixa a letra em negrito", !!neg && neg.classList.contains("grf-letra") && /mark\.grf\.grf-letra\{background:transparent/.test(d.getElementById("grf-estilo").textContent) && /mark\.grf-negrito\{font-weight:800/.test(d.getElementById("grf-estilo").textContent));
+  pal.querySelector('[data-ferramenta="sublinhado"]').click();
+  const t3 = d.getElementById("p2").firstChild; selecionar(w, t3, 0, 5); await espera(20);
+  ok("sublinhado marca o trecho escolhido e fica salvo", !!d.querySelector("#p2 mark.grf-sublinhado") && /text-decoration:underline/.test(d.getElementById("grf-estilo").textContent) && w.Grifa.lista().some(g => g.cor === "sublinhado"));
+  m.innerHTML = html; await espera(400);
+  ok("negrito e sublinhado voltam depois do redesenho", !!d.querySelector("#p1 mark.grf-negrito") && !!d.querySelector("#p2 mark.grf-sublinhado"));
+  w.Grifa.limparTela();
+  ok("o texto volta inteiro depois de apagar negrito, cor e sublinhado", d.getElementById("p2").textContent === "Prazo de cinco anos para a Administração anular seus atos, salvo má-fé." && d.querySelectorAll("mark.grf").length === 0);
+  } catch (e) { ok("negrito/sublinhado sem erro", false, String(e && e.message || e)); }
   // 8) Esc e G fecham
   tecla(w, d.body, "Escape"); ok("Esc fecha a paleta", pal.hidden);
   tecla(w, d.body, "G"); ok("G maiúsculo também abre", !pal.hidden);
@@ -141,5 +162,5 @@ const SABOTAGENS = [
   }
   const falhas = [...await suite(FONTE), ...await telasReais()];
   if (falhas.length) { for (const f of falhas) console.log("  ❌ " + f); console.log(`FALHA: ${falhas.length} conferência(s)`); process.exit(1); }
-  console.log("OK: paleta de grifos — 27 conferências de comportamento e 2 telas reais");
+  console.log(`OK: paleta de grifos — ${conferidas} conferências de comportamento e 2 telas reais`);
 })();
