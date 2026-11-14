@@ -2,9 +2,11 @@
 
 > Estado, tarefas e o que ficou rodando. Atualizado a cada ~15 min de trabalho e no fechamento.
 
-**Última atualização:** 12/11/2026, 22h43.
+**Última atualização:** 14/11/2026, 10h16.
 
 ## Estado
+
+- 🆕 **14/11/2026, 10h16 — Repositório público (D-025) e paleta de grifos ampliada.** Link: https://advpietromedeiros-sudo.github.io/trilha-aocp-delegado-bahia/ — Treino abre sem erro de JavaScript no link (conferido no Chrome), mas Simulados, Revisão e Olho de Águia ficam sem dados lá (material de terceiro fora do Git). Paleta (tecla G): 9 cores (+ lilás, vermelho, turquesa, cinza), Negrito (B) e Sublinhado (U), que se somam a uma cor; `docs/testar_grifa.cjs` 32 conferências, autoteste 3/3; commit 8ac6cd3, CI verde.
 
 - 🆕 **12/11/2026, 22h43 — Olho de Águia: comentários mais fáceis de entender** (pedido do titular, 22h36). Só apresentação, sem mexer nos dados. Simulados: cada alternativa errada em três linhas (o erro está em / o certo é / por quê), a correta com "por que é a certa", aviso em destaque nas 57 que pedem a INCORRETA, esquema com rótulos ("em uma frase", "o que você precisa saber", "como a AOCP tenta te enganar"). Assertivas: tema acima da frase; versão errada da banca ao lado da certa, com as palavras trocadas destacadas (sem riscado); descrição da manobra separada de nota de detalhe; "Para memorizar" sempre visível. Prova: `docs/testar_olho_de_aguia.cjs` 18/18 (3 provas novas), prints conferidos; portão 35/35.
 
