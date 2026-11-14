@@ -34,3 +34,5 @@ revisao/conteudo/
 # Olho de Águia (12/11/2026): assertivas da Revisão (D-022) e marcações dos Simulados Delta (D-017), gerados, só no disco
 discursiva/olho_aguia_assertivas.js
 discursiva/olho_aguia_simulados.js
+# Aba "900 Discursivas" (14/11/2026): banco de questões discursivas de terceiro (PDF do titular), só no disco, fora do Git e do link público
+discursiva/questoes_discursivas_penal.js

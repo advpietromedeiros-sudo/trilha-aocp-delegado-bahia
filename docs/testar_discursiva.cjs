@@ -36,7 +36,7 @@ const w = dom.window, d = w.document, A = w.discAPI;
 let falhas = 0; const prova = (n, ok, det = "") => { console.log(`  ${ok ? "✅" : "❌"} ${n}${!ok && det ? " — " + det : ""}`); if (!ok) falhas++; };
 const clicar = id => d.getElementById(id).click();
 
-prova("página carrega com as 9 abas (Pente Fino desde 07/11/2026, Revisão desde 09/11/2026, atalho do Olho de Águia desde 12/11/2026) e sem erro de JavaScript", d.querySelectorAll("#abas button").length === 9 && erros.length === 0, erros.join(" | "));
+prova("página carrega com as 10 abas (Pente Fino desde 07/11/2026, Revisão desde 09/11/2026, atalho do Olho de Águia desde 12/11/2026, 900 Discursivas desde 14/11/2026) e sem erro de JavaScript", d.querySelectorAll("#abas button").length === 10 && erros.length === 0, erros.join(" | "));
 // conteúdo
 const ruins = [];
 for (const p of A.PECAS) A.passosDe(p).forEach((s, i) => { if (!s.t || !s.orient || !String(s.modelo || "").trim() || !Array.isArray(s.check) || !s.check.length) ruins.push(p.id + " passo " + (i + 1)); });
@@ -173,6 +173,8 @@ if (TEM_REV) {
   const d2 = new JSDOM(htmlSemSim, { runScripts: "dangerously", url: "http://localhost/", pretendToBeVisual: true, beforeParse(w) { w.scrollTo = () => {}; } });
   d2.window.discAPI.ir("simulados");
   prova("sem os dados de terceiro, a aba Simulados avisa e não quebra", /não estão nesta cópia/.test(d2.window.document.body.textContent));
+  d2.window.discAPI.ir("discursivas");
+  prova("sem os dados de terceiro, a aba 900 Discursivas avisa e não quebra", /só na sua cópia privada/.test(d2.window.document.body.textContent));
 }
 // ligações do "Escrever a peça" ao "Estudo completo" (pedido do titular, 10/11/2026): artigo, súmula e conceito viram link
 {

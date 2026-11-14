@@ -191,6 +191,7 @@ img.fig{display:block;max-width:100%;margin:10px auto;border:1px solid var(--lin
 <script src="pente_fino_lpe.js" data-opcional="1"></script>
 <script src="pente_fino_inf.js" data-opcional="1"></script>
 <script src="revisao_nfpss.js" data-local="terceiro"></script>
+<script src="questoes_discursivas_penal.js" data-local="terceiro"></script>
 <script>
 /* Treino de Discursiva (02/11/2026, pedido do titular): fazer a peça e os estudos de caso PASSO A PASSO, sob orientação,
    e memorizar os artigos de cada um (cartões com repetição espaçada + Certo/Errado para a objetiva).
@@ -232,10 +233,10 @@ function passosDe(p){
 }
 
 /* ---------- abas ---------- */
-const ABAS=[['edital','🗺️ Edital'],['pecas','📜 Peças'],['casos','✍️ Estudos de caso'],['simulados','📝 Simulados'],['pente','🔍 Pente Fino'],['revisao','📚 Revisão'],['memoria','🧠 Memorizar'],['progresso','📊 Progresso'],['aguia','🦅 Olho de Águia']];
+const ABAS=[['edital','🗺️ Edital'],['pecas','📜 Peças'],['casos','✍️ Estudos de caso'],['discursivas','🖊️ 900 Discursivas'],['simulados','📝 Simulados'],['pente','🔍 Pente Fino'],['revisao','📚 Revisão'],['memoria','🧠 Memorizar'],['progresso','📊 Progresso'],['aguia','🦅 Olho de Águia']];
 let aba='edital';
 const marcarAba=a=>{aba=a;$('abas').innerHTML=ABAS.map(([k,n])=>`<button class="${k===a?'on':''}" data-aba="${k}">${n}</button>`).join('')};
-function ir(a){aba=a;$('abas').innerHTML=ABAS.map(([k,n])=>`<button class="${k===a?'on':''}" data-aba="${k}">${n}</button>`).join('');({edital,pecas:listaPecas,casos:listaCasos,simulados:listaSimulados,pente:()=>pfModo('pente'),revisao:()=>pfModo('revisao'),memoria:memorizar,progresso,aguia:()=>{location.href='Olho_de_Aguia.html'}})[a]();scrollTo(0,0)}
+function ir(a){aba=a;$('abas').innerHTML=ABAS.map(([k,n])=>`<button class="${k===a?'on':''}" data-aba="${k}">${n}</button>`).join('');({edital,pecas:listaPecas,casos:listaCasos,discursivas:qdTela,simulados:listaSimulados,pente:()=>pfModo('pente'),revisao:()=>pfModo('revisao'),memoria:memorizar,progresso,aguia:()=>{location.href='Olho_de_Aguia.html'}})[a]();scrollTo(0,0)}
 document.addEventListener('click',e=>{const b=e.target.closest('[data-aba]');if(b)ir(b.dataset.aba)});
 
 function edital(){
@@ -703,6 +704,68 @@ document.addEventListener('keydown',ev=>{if((aba!=='pente'&&aba!=='revisao')||ev
  if(k==='c'||k==='e'){const b=document.querySelector(`[data-pfr="${k.toUpperCase()}"]`);if(b&&!b.disabled){ev.preventDefault();b.click()}}
  else if(ev.key==='ArrowRight'&&$('pfProx')&&!$('pfProx').disabled){ev.preventDefault();$('pfProx').click()}
  else if(ev.key==='ArrowLeft'&&$('pfAnt')&&!$('pfAnt').disabled){ev.preventDefault();$('pfAnt').click()}});
+/* ---------- 900 Discursivas (14/11/2026, pedido do titular): ler a PERGUNTA, escrever a resposta e conferir pelo ESPELHO.
+   Material de TERCEIRO (window.QD_PENAL em questoes_discursivas_penal.js): só no disco, fora do Git e do link público (D-002/D-025). */
+const QD=Array.isArray(window.QD_PENAL)?window.QD_PENAL:[];
+st.qd=Object.assign({resp:{},stt:{},filtro:{p:'',t:''},ordem:null,pos:0},st.qd||{});
+const qdPartes=()=>[...new Set(QD.map(o=>o.p))];
+const qdTemas=p=>[...new Set(QD.filter(o=>o.p===p&&o.t).map(o=>o.t))];
+const qdFiltrados=()=>{const f=st.qd.filtro;return QD.map((o,i)=>i).filter(i=>(!f.p||QD[i].p===f.p)&&(!f.t||QD[i].t===f.t))};
+const qdSelo=s=>s==='ok'?'✔️ acertei':s==='rev'?'🔁 revisar':'';
+function qdMontarOrdem(ale){let ix=qdFiltrados();if(ale){for(let k=ix.length-1;k>0;k--){const j=Math.floor(Math.random()*(k+1));[ix[k],ix[j]]=[ix[j],ix[k]]}}st.qd.ordem=ix;st.qd.pos=0;salvar()}
+function qdSalvaResp(){const t=$('qd-resp');if(t&&st.qd.ordem){st.qd.resp[st.qd.ordem[st.qd.pos]]=t.value;salvar()}}
+function qdTela(){
+ if(!QD.length){$('tela').innerHTML=`<div class="card"><h2>🖊️ 900 Discursivas — Penal e Processo Penal</h2>
+  <p>Esta aba usa o banco completo de <b>questões discursivas respondidas</b>, que é material de terceiro e fica <b>só na sua cópia privada</b> (fora do link público). Por isso, aqui no link público ela aparece vazia.</p>
+  <p class="cont">Para usá-la, abra a versão completa gerada em <code>OneDrive\\Trilha AOCP - versao completa (privada)</code>.</p></div>`;return}
+ const f=st.qd.filtro, fil=qdFiltrados();
+ const estud=fil.filter(i=>st.qd.stt[i]).length,ok=fil.filter(i=>st.qd.stt[i]==='ok').length,rev=fil.filter(i=>st.qd.stt[i]==='rev').length;
+ const temas=f.p?qdTemas(f.p):[];
+ const podeCont=st.qd.ordem&&st.qd.ordem.length&&st.qd.pos<st.qd.ordem.length;
+ $('tela').innerHTML=`<div class="card"><h2>🖊️ 900 Discursivas — Penal e Processo Penal</h2>
+  <p>Leia a <b>pergunta</b>, escreva a sua resposta e depois revele o <b>espelho</b> (a resposta modelo) para comparar e se autoavaliar. São <b>${QD.length}</b> questões, de provas e orais.</p>
+  <div style="display:flex;gap:10px;flex-wrap:wrap;margin:12px 0">${[[fil.length,'no filtro'],[estud,'estudadas'],[ok,'✔️ acertei'],[rev,'🔁 revisar']].map(([v,l])=>`<div style="flex:1;min-width:92px;background:#eef2f8;border:1px solid var(--linha);border-radius:10px;padding:10px 12px;text-align:center"><div style="font-size:1.5em;font-weight:700;color:var(--azul)">${v}</div><small>${l}</small></div>`).join('')}</div>
+  <div class="linha-bts" style="margin-top:12px;align-items:center;gap:10px;flex-wrap:wrap">
+   <label>Parte: <select id="qd-p"><option value="">Todas</option>${qdPartes().map(p=>`<option value="${esc(p)}"${p===f.p?' selected':''}>${esc(p)}</option>`).join('')}</select></label>
+   <label>Tema: <select id="qd-t"${temas.length?'':' disabled'}><option value="">Todos</option>${temas.map(t=>`<option value="${esc(t)}"${t===f.t?' selected':''}>${esc(t)}</option>`).join('')}</select></label>
+  </div>
+  <div class="linha-bts" style="margin-top:12px">
+   <button class="bt pri" data-qd="start">▶️ Começar (em ordem)</button>
+   <button class="bt" data-qd="startale">🔀 Aleatório</button>
+   ${podeCont?`<button class="bt" data-qd="cont">↩️ Continuar (${st.qd.pos+1} de ${st.qd.ordem.length})</button>`:''}
+  </div>
+  <p class="cont" style="margin-top:12px"><small>Dica: aperte <b>G</b> para abrir a paleta e grifar a pergunta ou o espelho. Tudo fica salvo neste navegador.</small></p></div>`;
+}
+function qdQuestao(){
+ const ord=st.qd.ordem;if(!ord||!ord.length){qdTela();return}
+ if(st.qd.pos<0)st.qd.pos=0;if(st.qd.pos>=ord.length)st.qd.pos=ord.length-1;
+ const gi=ord[st.qd.pos],o=QD[gi],resp=st.qd.resp[gi]||'',s=st.qd.stt[gi],last=st.qd.pos>=ord.length-1;
+ $('tela').innerHTML=`<div class="card sq"><div class="linha-bts" style="margin-top:0"><button class="bt" data-qd="voltar">← Lista</button><span style="margin-left:auto;align-self:center"><b>${st.qd.pos+1}</b> de ${ord.length}</span></div>
+  <small>${esc(o.p)}${o.t?' · '+esc(o.t):''}${s?' · '+qdSelo(s):''}</small>
+  <h2 style="font-size:1.12em;line-height:1.4;text-align:justify">${esc(o.q)}</h2>
+  <p class="cont">Escreva a sua resposta; depois confira pelo espelho.</p>
+  <textarea id="qd-resp" rows="8" style="width:100%;font:inherit;padding:10px;border:1px solid var(--linha);border-radius:8px;line-height:1.55;resize:vertical" placeholder="Digite aqui a sua resposta…">${esc(resp)}</textarea>
+  <div class="linha-bts" style="margin-top:10px"><button class="bt" data-qd="prev"${st.qd.pos===0?' disabled':''}>← Anterior</button><button class="bt pri" data-qd="esp">👁️ Ver espelho</button><button class="bt" data-qd="next"${last?' disabled':''}>Próxima →</button></div>
+  <div id="qd-espbox"></div></div>`;
+}
+function qdVerEspelho(){
+ const gi=st.qd.ordem[st.qd.pos],o=QD[gi],last=st.qd.pos>=st.qd.ordem.length-1;
+ $('qd-espbox').innerHTML=`<div class="card com" style="margin-top:14px;background:#f7f9fc"><h3>📖 Espelho — resposta modelo</h3>${o.e.map(p=>`<p style="text-align:justify;margin:.5em 0">${esc(p)}</p>`).join('')}
+  <div class="linha-bts" style="margin-top:12px"><button class="bt" data-qd="rev">🔁 Marcar: revisar</button><button class="bt pri" data-qd="ok">✔️ Acertei → ${last?'voltar à lista':'próxima'}</button></div></div>`;
+ $('qd-espbox').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function qdIr(d){qdSalvaResp();st.qd.pos+=d;if(st.qd.pos<0)st.qd.pos=0;if(st.qd.pos>=st.qd.ordem.length)st.qd.pos=st.qd.ordem.length-1;salvar();qdQuestao()}
+function qdMarcar(s){qdSalvaResp();const gi=st.qd.ordem[st.qd.pos];st.qd.stt[gi]=s;if(st.qd.pos<st.qd.ordem.length-1){st.qd.pos++;salvar();qdQuestao()}else{salvar();qdTela()}}
+document.addEventListener('change',e=>{if(e.target.id==='qd-p'){st.qd.filtro.p=e.target.value;st.qd.filtro.t='';salvar();qdTela()}else if(e.target.id==='qd-t'){st.qd.filtro.t=e.target.value;salvar();qdTela()}});
+document.addEventListener('click',e=>{const b=e.target.closest('[data-qd]');if(!b)return;const a=b.dataset.qd;
+ if(a==='start'){qdMontarOrdem(false);qdQuestao()}
+ else if(a==='startale'){qdMontarOrdem(true);qdQuestao()}
+ else if(a==='cont'){qdQuestao()}
+ else if(a==='voltar'){qdSalvaResp();qdTela()}
+ else if(a==='prev'){qdIr(-1)}else if(a==='next'){qdIr(1)}
+ else if(a==='esp'){qdSalvaResp();qdVerEspelho()}
+ else if(a==='ok'){qdMarcar('ok')}else if(a==='rev'){qdMarcar('rev')}});
+
 window.discAPI={pente:{tela:telaPente,st:()=>pf,responder:pfResponder,CHAVE:PF_CHAVE},PECAS,CASOS,CARTOES,LEIS:typeof LEIS==='undefined'?[]:LEIS,passosDe,linhas,st:()=>st,abrirPeca,abrirCaso,ir,
  CONDUCAO:typeof CONDUCAO==='undefined'?{}:CONDUCAO,TEMAS:typeof TEMAS==='undefined'?{}:TEMAS,ESTUDO:typeof ESTUDO==='undefined'?{}:ESTUDO,ARTIGOS:typeof ARTIGOS==='undefined'?{}:ARTIGOS,JURIS:typeof JURIS==='undefined'?{}:JURIS,chaveDe,rotulo,SIMS,abrirSim,listaSimulados};
 ir('edital');

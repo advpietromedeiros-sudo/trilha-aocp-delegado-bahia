@@ -308,3 +308,28 @@ prompt do servidor já manda não aplicar norma posterior.
   - **No repositório:** o CPF não está escrito em arquivo nenhum; o autoteste usa um número montado na execução.
 - **As assertivas:** são texto novo, escrito sobre o conteúdo do material. Doutrina e julgados aparecem como o material
   os cita.
+
+## 14/11/2026, 14h1x — Banco de questões discursivas (Penal e Processo Penal) na aba "900 Discursivas"
+
+- **O quê:** um e-book de terceiro com ~900 **questões discursivas respondidas** de Direito Penal e Processual Penal
+  (Parte 1 Penal, Parte 2 Processual, Parte 3 Legislação Especial em 20 temas). Dele extraímos **924 pares
+  pergunta/espelho** para a aba "900 Discursivas" do Treino: o titular lê a pergunta, escreve a resposta e confere
+  pelo espelho (a resposta modelo do autor).
+  - **Autor e título:** constam do PDF; não se repetem aqui.
+  - **Forma de chegada:** o PDF (protegido por senha) veio anexado no chat pelo titular; não estava no disco.
+- **Autorização:** pedido escrito do titular (14/11/2026: *"QUERO QUE NO PROJETO DAS DISCURSIVAS ABRA UMA ABA SÓ PRA
+  ESSE MATERIAL… EU LER A PERGUNTA E COM BASE NA RESPOSTA E NO ESPELHO FAZER A RESPOSTA"*), para seu estudo pessoal; o
+  app não vai para o portal (D-009). **Sem** autorização do autor para distribuição.
+- **Senha do PDF:** é do titular; **não** fica no repositório (§F59) — entra por `--senha` ou pela variável `QD_SENHA`
+  na hora de importar.
+- **Onde ficou, tudo fora do Git:**
+  - PDF-fonte e texto extraído: `OneDrive/Trilha AOCP - versao completa (privada)/_fonte/` (fora do repositório);
+  - o gerado: `discursiva/questoes_discursivas_penal.js` (no `.gitignore`, `data-local`);
+  - não vai no arquivo único de envio nem no link público; entra só na cópia privada (embutido por
+    `gerar_pacote_privado.py`).
+  - No Git entram só o **importador** (`ferramentas/importar_discursivas.py`) e o **código da aba** no
+    `Treino_Discursiva.html`, que são autorais.
+- **Marca d'água (dado pessoal de terceiro):** toda página traz uma marca com o nome e o e-mail do licenciado do e-book.
+  - **Na extração:** a marca é retirada (linhas com o identificador do licenciado são descartadas antes do parser).
+  - **No repositório:** esse nome e esse e-mail **não** estão escritos em arquivo nenhum.
+- **As perguntas e os espelhos** são conteúdo do autor do e-book (material de terceiro); ficam só na cópia privada.
