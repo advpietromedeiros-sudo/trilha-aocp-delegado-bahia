@@ -333,3 +333,23 @@ prompt do servidor já manda não aplicar norma posterior.
   - **Na extração:** a marca é retirada (linhas com o identificador do licenciado são descartadas antes do parser).
   - **No repositório:** esse nome e esse e-mail **não** estão escritos em arquivo nenhum.
 - **As perguntas e os espelhos** são conteúdo do autor do e-book (material de terceiro); ficam só na cópia privada.
+
+## 15/11/2026 — E-book "Discursivas e Peças Práticas FGV" na aba "PED — FGV"
+
+- **O quê:** um e-book de terceiro com **questões discursivas e peças práticas** de provas de Delegado (banca FGV e
+  afins), organizado por disciplina (Constitucional, Administrativo, Tributário, Penal, Processo Penal) e uma seção de
+  Peças Práticas. Dele extraímos **38 itens** (pergunta/peça + espelho) para a aba "PED — FGV" do Treino.
+  - **Fonte e autores:** constam do PDF; não se repetem aqui.
+  - **Forma de chegada:** o PDF (protegido por senha) veio anexado no chat pelo titular; não estava no disco.
+- **Autorização:** pedido escrito do titular (15/11/2026: *"O PED SERÁ ESSE AÍ"*, após confirmar que a aba era para
+  esse material), para estudo pessoal; o app não vai para o portal (D-009). **Sem** autorização do autor para distribuição.
+- **Senha do PDF:** é do titular; **não** fica no repositório (§F59) — entra por `--senha`/`QD_SENHA` ao importar.
+- **Onde ficou, tudo fora do Git:**
+  - PDF-fonte e texto extraído: `OneDrive/Trilha AOCP - versao completa (privada)/_fonte/`;
+  - o gerado: `discursiva/questoes_fgv_ped.js` (no `.gitignore`, `data-local`), embutido só na cópia privada;
+  - no Git entram só o **importador** (`ferramentas/importar_discursivas_fgv.py`) e o **código da aba**, autorais.
+- **Marca d'água (dado pessoal de terceiro):** toda página traz o site, "E-book comprado por <nome>" e o **CPF** do
+  comprador. Na extração essas três linhas são descartadas antes do parser; esse nome e esse CPF **não** estão escritos
+  em arquivo nenhum do repositório.
+- **Os enunciados, os espelhos (sugestão de resposta, gabarito da banca, jurisprudência) e as peças** são conteúdo do
+  autor do e-book (material de terceiro); ficam só na cópia privada.

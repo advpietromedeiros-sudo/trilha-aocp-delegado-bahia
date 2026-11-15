@@ -192,6 +192,7 @@ img.fig{display:block;max-width:100%;margin:10px auto;border:1px solid var(--lin
 <script src="pente_fino_inf.js" data-opcional="1"></script>
 <script src="revisao_nfpss.js" data-local="terceiro"></script>
 <script src="questoes_discursivas_penal.js" data-local="terceiro"></script>
+<script src="questoes_fgv_ped.js" data-local="terceiro"></script>
 <script>
 /* Treino de Discursiva (02/11/2026, pedido do titular): fazer a peça e os estudos de caso PASSO A PASSO, sob orientação,
    e memorizar os artigos de cada um (cartões com repetição espaçada + Certo/Errado para a objetiva).
@@ -233,10 +234,10 @@ function passosDe(p){
 }
 
 /* ---------- abas ---------- */
-const ABAS=[['edital','🗺️ Edital'],['pecas','📜 Peças'],['casos','✍️ Estudos de caso'],['discursivas','🖊️ 900 Discursivas'],['simulados','📝 Simulados'],['pente','🔍 Pente Fino'],['revisao','📚 Revisão'],['memoria','🧠 Memorizar'],['progresso','📊 Progresso'],['aguia','🦅 Olho de Águia']];
+const ABAS=[['edital','🗺️ Edital'],['pecas','📜 Peças'],['casos','✍️ Estudos de caso'],['discursivas','🖊️ 900 Discursivas'],['fgv','📄 PED — FGV'],['simulados','📝 Simulados'],['pente','🔍 Pente Fino'],['revisao','📚 Revisão'],['memoria','🧠 Memorizar'],['progresso','📊 Progresso'],['aguia','🦅 Olho de Águia']];
 let aba='edital';
 const marcarAba=a=>{aba=a;$('abas').innerHTML=ABAS.map(([k,n])=>`<button class="${k===a?'on':''}" data-aba="${k}">${n}</button>`).join('')};
-function ir(a){aba=a;$('abas').innerHTML=ABAS.map(([k,n])=>`<button class="${k===a?'on':''}" data-aba="${k}">${n}</button>`).join('');({edital,pecas:listaPecas,casos:listaCasos,discursivas:qdTela,simulados:listaSimulados,pente:()=>pfModo('pente'),revisao:()=>pfModo('revisao'),memoria:memorizar,progresso,aguia:()=>{location.href='Olho_de_Aguia.html'}})[a]();scrollTo(0,0)}
+function ir(a){aba=a;$('abas').innerHTML=ABAS.map(([k,n])=>`<button class="${k===a?'on':''}" data-aba="${k}">${n}</button>`).join('');({edital,pecas:listaPecas,casos:listaCasos,discursivas:qdTela,fgv:qfTela,simulados:listaSimulados,pente:()=>pfModo('pente'),revisao:()=>pfModo('revisao'),memoria:memorizar,progresso,aguia:()=>{location.href='Olho_de_Aguia.html'}})[a]();scrollTo(0,0)}
 document.addEventListener('click',e=>{const b=e.target.closest('[data-aba]');if(b)ir(b.dataset.aba)});
 
 function edital(){
@@ -765,6 +766,71 @@ document.addEventListener('click',e=>{const b=e.target.closest('[data-qd]');if(!
  else if(a==='prev'){qdIr(-1)}else if(a==='next'){qdIr(1)}
  else if(a==='esp'){qdSalvaResp();qdVerEspelho()}
  else if(a==='ok'){qdMarcar('ok')}else if(a==='rev'){qdMarcar('rev')}});
+
+/* ---------- PED — FGV (15/11/2026, pedido do titular): questões discursivas e PEÇAS PRÁTICAS da banca FGV.
+   Material de TERCEIRO (window.QD_FGV em questoes_fgv_ped.js): só no disco, fora do Git e do link público (D-002/D-025).
+   Cada item tem p=disciplina, t=tópico, prova (origem), q=enunciado e e=espelho (parágrafos; 【rótulo】 vira subtítulo:
+   SUGESTÃO DE RESPOSTA, GABARITO DA BANCA EXAMINADORA e JURISPRUDÊNCIA RELACIONADA). */
+const QF=Array.isArray(window.QD_FGV)?window.QD_FGV:[];
+st.qf=Object.assign({resp:{},stt:{},filtro:{p:'',t:''},ordem:null,pos:0},st.qf||{});
+const qfPartes=()=>[...new Set(QF.map(o=>o.p))];
+const qfTemas=p=>[...new Set(QF.filter(o=>o.p===p&&o.t).map(o=>o.t))];
+const qfFiltrados=()=>{const f=st.qf.filtro;return QF.map((o,i)=>i).filter(i=>(!f.p||QF[i].p===f.p)&&(!f.t||QF[i].t===f.t))};
+function qfMontarOrdem(ale){let ix=qfFiltrados();if(ale){for(let k=ix.length-1;k>0;k--){const j=Math.floor(Math.random()*(k+1));[ix[k],ix[j]]=[ix[j],ix[k]]}}st.qf.ordem=ix;st.qf.pos=0;salvar()}
+function qfSalvaResp(){const t=$('qf-resp');if(t&&st.qf.ordem){st.qf.resp[st.qf.ordem[st.qf.pos]]=t.value;salvar()}}
+const qfEsp=segs=>segs.map(s=>{const m=/^【(.+)】$/.exec(s);return m?`<h4 style="margin:.9em 0 .2em;color:var(--azul)">${esc(m[1])}</h4>`:`<p style="text-align:justify;margin:.5em 0">${esc(s)}</p>`}).join('');
+function qfTela(){
+ if(!QF.length){$('tela').innerHTML=`<div class="card"><h2>📄 PED — FGV: Discursivas e Peças Práticas</h2>
+  <p>Esta aba usa o banco de <b>questões discursivas e peças práticas da banca FGV</b>, que é material de terceiro e fica <b>só na sua cópia privada</b> (fora do link público). Por isso, aqui no link público ela aparece vazia.</p>
+  <p class="cont">Para usá-la, abra a versão completa gerada em <code>OneDrive\\Trilha AOCP - versao completa (privada)</code>.</p></div>`;return}
+ const f=st.qf.filtro, fil=qfFiltrados();
+ const estud=fil.filter(i=>st.qf.stt[i]).length,ok=fil.filter(i=>st.qf.stt[i]==='ok').length,rev=fil.filter(i=>st.qf.stt[i]==='rev').length;
+ const temas=f.p?qfTemas(f.p):[];
+ const podeCont=st.qf.ordem&&st.qf.ordem.length&&st.qf.pos<st.qf.ordem.length;
+ $('tela').innerHTML=`<div class="card"><h2>📄 PED — FGV: Discursivas e Peças Práticas</h2>
+  <p>Questões discursivas e <b>peças práticas</b> de provas de Delegado (banca FGV e afins). Leia o enunciado, escreva a sua resposta e confira pelo <b>espelho</b> (sugestão de resposta, gabarito da banca e jurisprudência). São <b>${QF.length}</b> itens.</p>
+  <div style="display:flex;gap:10px;flex-wrap:wrap;margin:12px 0">${[[fil.length,'no filtro'],[estud,'estudados'],[ok,'✔️ acertei'],[rev,'🔁 revisar']].map(([v,l])=>`<div style="flex:1;min-width:92px;background:#eef2f8;border:1px solid var(--linha);border-radius:10px;padding:10px 12px;text-align:center"><div style="font-size:1.5em;font-weight:700;color:var(--azul)">${v}</div><small>${l}</small></div>`).join('')}</div>
+  <div class="linha-bts" style="margin-top:12px;align-items:center;gap:10px;flex-wrap:wrap">
+   <label>Disciplina: <select id="qf-p"><option value="">Todas</option>${qfPartes().map(p=>`<option value="${esc(p)}"${p===f.p?' selected':''}>${esc(p)}</option>`).join('')}</select></label>
+   <label>Tópico: <select id="qf-t"${temas.length?'':' disabled'}><option value="">Todos</option>${temas.map(t=>`<option value="${esc(t)}"${t===f.t?' selected':''}>${esc(t)}</option>`).join('')}</select></label>
+  </div>
+  <div class="linha-bts" style="margin-top:12px">
+   <button class="bt pri" data-qf="start">▶️ Começar (em ordem)</button>
+   <button class="bt" data-qf="startale">🔀 Aleatório</button>
+   ${podeCont?`<button class="bt" data-qf="cont">↩️ Continuar (${st.qf.pos+1} de ${st.qf.ordem.length})</button>`:''}
+  </div>
+  <p class="cont" style="margin-top:12px"><small>As peças práticas trazem enunciado longo e modelo de peça no espelho. Aperte <b>G</b> para grifar. Tudo fica salvo neste navegador.</small></p></div>`;
+}
+function qfQuestao(){
+ const ord=st.qf.ordem;if(!ord||!ord.length){qfTela();return}
+ if(st.qf.pos<0)st.qf.pos=0;if(st.qf.pos>=ord.length)st.qf.pos=ord.length-1;
+ const gi=ord[st.qf.pos],o=QF[gi],resp=st.qf.resp[gi]||'',s=st.qf.stt[gi],last=st.qf.pos>=ord.length-1;
+ const peca=o.p==='PEÇAS PRÁTICAS'||/^PEÇA PRÁTICA/.test(o.q);
+ $('tela').innerHTML=`<div class="card sq"><div class="linha-bts" style="margin-top:0"><button class="bt" data-qf="voltar">← Lista</button><span style="margin-left:auto;align-self:center"><b>${st.qf.pos+1}</b> de ${ord.length}</span></div>
+  <small>${esc(o.p)}${o.t?' · '+esc(o.t):''}${o.prova?' · '+esc(o.prova):''}${s?' · '+(s==='ok'?'✔️ acertei':'🔁 revisar'):''}</small>
+  <h2 style="font-size:1.05em;line-height:1.45;text-align:justify">${peca?'📝 PEÇA PRÁTICA — ':''}${esc(o.q)}</h2>
+  <p class="cont">Escreva a sua ${peca?'peça':'resposta'}; depois confira pelo espelho.</p>
+  <textarea id="qf-resp" rows="${peca?14:8}" style="width:100%;font:inherit;padding:10px;border:1px solid var(--linha);border-radius:8px;line-height:1.55;resize:vertical" placeholder="Digite aqui a sua ${peca?'peça':'resposta'}…">${esc(resp)}</textarea>
+  <div class="linha-bts" style="margin-top:10px"><button class="bt" data-qf="prev"${st.qf.pos===0?' disabled':''}>← Anterior</button><button class="bt pri" data-qf="esp">👁️ Ver espelho</button><button class="bt" data-qf="next"${last?' disabled':''}>Próximo →</button></div>
+  <div id="qf-espbox"></div></div>`;
+}
+function qfVerEspelho(){
+ const gi=st.qf.ordem[st.qf.pos],o=QF[gi],last=st.qf.pos>=st.qf.ordem.length-1;
+ $('qf-espbox').innerHTML=`<div class="card com" style="margin-top:14px;background:#f7f9fc"><h3>📖 Espelho</h3>${qfEsp(o.e)}
+  <div class="linha-bts" style="margin-top:12px"><button class="bt" data-qf="rev">🔁 Marcar: revisar</button><button class="bt pri" data-qf="ok">✔️ Estudei → ${last?'voltar à lista':'próximo'}</button></div></div>`;
+ $('qf-espbox').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function qfIr(d){qfSalvaResp();st.qf.pos+=d;if(st.qf.pos<0)st.qf.pos=0;if(st.qf.pos>=st.qf.ordem.length)st.qf.pos=st.qf.ordem.length-1;salvar();qfQuestao()}
+function qfMarcar(s){qfSalvaResp();const gi=st.qf.ordem[st.qf.pos];st.qf.stt[gi]=s;if(st.qf.pos<st.qf.ordem.length-1){st.qf.pos++;salvar();qfQuestao()}else{salvar();qfTela()}}
+document.addEventListener('change',e=>{if(e.target.id==='qf-p'){st.qf.filtro.p=e.target.value;st.qf.filtro.t='';salvar();qfTela()}else if(e.target.id==='qf-t'){st.qf.filtro.t=e.target.value;salvar();qfTela()}});
+document.addEventListener('click',e=>{const b=e.target.closest('[data-qf]');if(!b)return;const a=b.dataset.qf;
+ if(a==='start'){qfMontarOrdem(false);qfQuestao()}
+ else if(a==='startale'){qfMontarOrdem(true);qfQuestao()}
+ else if(a==='cont'){qfQuestao()}
+ else if(a==='voltar'){qfSalvaResp();qfTela()}
+ else if(a==='prev'){qfIr(-1)}else if(a==='next'){qfIr(1)}
+ else if(a==='esp'){qfSalvaResp();qfVerEspelho()}
+ else if(a==='ok'){qfMarcar('ok')}else if(a==='rev'){qfMarcar('rev')}});
 
 window.discAPI={pente:{tela:telaPente,st:()=>pf,responder:pfResponder,CHAVE:PF_CHAVE},PECAS,CASOS,CARTOES,LEIS:typeof LEIS==='undefined'?[]:LEIS,passosDe,linhas,st:()=>st,abrirPeca,abrirCaso,ir,
  CONDUCAO:typeof CONDUCAO==='undefined'?{}:CONDUCAO,TEMAS:typeof TEMAS==='undefined'?{}:TEMAS,ESTUDO:typeof ESTUDO==='undefined'?{}:ESTUDO,ARTIGOS:typeof ARTIGOS==='undefined'?{}:ARTIGOS,JURIS:typeof JURIS==='undefined'?{}:JURIS,chaveDe,rotulo,SIMS,abrirSim,listaSimulados};
