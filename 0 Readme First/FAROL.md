@@ -235,6 +235,16 @@
    - ⏳ Falta: indexar as **provas AOCP de Direito e de Português** (Downloads, AOCP 01–06 e
      PORTUGUÊS 01–08 + Delegado) — hoje só as de Informática e Raciocínio Lógico estão no índice.
 
+- ✅ **15/11/2026 — link extra "Revisão Dirigida — Delegado PC-BA"** (`discursiva/Revisao_Delegado_BA.html`
+  + `discursiva/revisao_delegado_ba_dados.js`): assertivas Certo/Errado comentadas (comentário em mini-aula),
+  estilo AOCP (letra de lei), foco em legislação LOCAL da Bahia (Constituição estadual, Lei 11.370/2009 — Lei
+  Orgânica da PC-BA, Lei 6.677/1994 — Estatuto dos servidores), poderes do delegado e atualizações. Sem Português
+  nem Informática. **Bloco 1 (prioridade máxima) com 50** assertivas (18 baianas, 16 "Errado"). Conteúdo autoral,
+  fundado na letra de lei — vai no Git. Teste `docs/testar_revisao_ba.cjs` no portão (37 portas). CI verde.
+  ⏳ **Falta: o Bloco 2 (mais 50)**, pedido do titular — total 100.
+  - 🆕 **Também em 14-15/11: abas "900 Discursivas" (penal/PP) e "PED — FGV"** no Treino (material de terceiro,
+    só na cópia privada, fora do Git). Ver `docs/PROCEDENCIA.md`.
+
 ## O que fica rodando
 
 - Storybook (`npm run storybook`), porta 6006, iniciado pela sessão de 31/10/2026.

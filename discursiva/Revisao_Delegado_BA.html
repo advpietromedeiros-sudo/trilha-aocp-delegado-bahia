@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Revisão Dirigida — Delegado PC-BA (Certo/Errado comentado)</title>
+<style>
+:root{--azul:#13315c;--azul2:#e7eefb;--tinta:#1c2230;--linha:#dfe4ec;--verde:#1b7f3b;--vermelho:#b52a2a;--bg:#f4f6fa}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.6 system-ui,Segoe UI,Roboto,Arial,sans-serif;color:var(--tinta);background:var(--bg)}
+header{background:linear-gradient(135deg,#13315c,#1e4d8c);color:#fff;padding:18px 20px}
+header h1{margin:0;font-size:1.15em}
+header p{margin:6px 0 0;opacity:.92;font-size:.9em}
+main{max-width:900px;margin:0 auto;padding:16px}
+.card{background:#fff;border:1px solid var(--linha);border-radius:14px;padding:18px 20px;margin:14px 0;box-shadow:0 10px 30px rgba(10,30,60,.06)}
+h2{font-size:1.1em;color:var(--azul);margin:.2em 0 .6em}
+h3{font-size:1em;color:var(--azul);margin:1em 0 .3em}
+.bt{background:#fff;border:1px solid #c6cfdd;color:var(--tinta);border-radius:999px;padding:9px 16px;min-height:42px;font:inherit;cursor:pointer;transition:.15s}
+.bt:hover{background:#f0f4fb;border-color:var(--azul)}
+.bt.pri{background:var(--azul);color:#fff;border-color:var(--azul);font-weight:600}
+.bt:disabled{opacity:.5;cursor:default}
+.linha-bts{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;align-items:center}
+.caixas{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
+.cx{flex:1;min-width:92px;background:var(--azul2);border:1px solid var(--linha);border-radius:10px;padding:10px;text-align:center}
+.cx b{display:block;font-size:1.5em;color:var(--azul)}
+.cx small{color:#52627a}
+.assert{font-size:1.06em;text-align:justify;line-height:1.6;margin:.3em 0 .2em}
+.meta{color:#52627a;font-size:.85em}
+.ce{display:flex;gap:10px;margin-top:14px}
+.ce .bt{flex:1;font-weight:600}
+.fb{margin-top:14px;border-radius:12px;padding:12px 14px;font-weight:600}
+.fb.ok{background:#e8f6ec;border:1px solid #bfe3c9;color:var(--verde)}
+.fb.no{background:#fbeaea;border:1px solid #f0c9c9;color:var(--vermelho)}
+.com{margin-top:12px;background:#f7f9fc;border:1px solid #e4e9f0;border-radius:12px;padding:12px 14px}
+.com p{text-align:justify;margin:.4em 0}
+.base{display:inline-block;margin-top:6px;background:#eef2f8;border:1px solid #d7dfeb;border-radius:8px;padding:3px 9px;font-size:.85em;color:var(--azul);font-weight:600}
+.grade{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin-top:12px}
+.item{background:#fff;border:1px solid var(--linha);border-radius:12px;padding:14px;text-align:left;cursor:pointer;font:inherit}
+.item:hover{border-color:var(--azul);box-shadow:0 6px 18px rgba(10,30,60,.08)}
+.item b{color:var(--azul)}
+.selo{display:inline-block;margin-top:8px;font-size:.8em;border-radius:999px;padding:2px 10px}
+.selo.feito{background:#e8f6ec;color:var(--verde)}
+.selo.pend{background:#eef2f8;color:#52627a}
+.tag{display:inline-block;background:#eef2f8;border:1px solid #d7dfeb;border-radius:999px;padding:2px 9px;font-size:.78em;color:#42546e;margin:2px 4px 0 0}
+.prog{height:8px;background:#e9edf4;border-radius:999px;overflow:hidden;margin-top:10px}
+.prog > i{display:block;height:100%;background:var(--azul)}
+footer{max-width:900px;margin:10px auto 40px;padding:0 16px;color:#6b7890;font-size:.82em;text-align:justify}
+@media(max-width:600px){.ce{flex-direction:column}}
+</style>
+</head>
+<body>
+<header>
+  <h1>🎯 Revisão Dirigida — Delegado PC‑BA</h1>
+  <p>Certo/Errado comentado, no estilo <b>AOCP</b> (letra de lei), com foco em <b>legislação local da Bahia</b>, poderes do <b>delegado</b> e atualizações legislativas. Sem Português e sem Informática. Uso pessoal, offline.</p>
+</header>
+<main id="tela"></main>
+<footer id="rodape"></footer>
+
+<script src="revisao_delegado_ba_dados.js"></script>
+<script>
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const CHAVE='revdelba:v1';
+let st={resp:{}};try{st=Object.assign(st,JSON.parse(localStorage.getItem(CHAVE)||'{}'))}catch(e){}
+const salvar=()=>{try{localStorage.setItem(CHAVE,JSON.stringify(st))}catch(e){}};
+const BLOCOS=Array.isArray(window.REV_DELBA)?window.REV_DELBA:[];
+let bloco=null,ordem=[],pos=0,respondeu=false;
+
+function home(){
+ if(!BLOCOS.length){$('tela').innerHTML=`<div class="card"><h2>Material não carregado</h2><p>O arquivo <code>revisao_delegado_ba_dados.js</code> não foi encontrado ao lado deste HTML. Baixe os dois juntos.</p></div>`;return}
+ const linhas=BLOCOS.map((b,bi)=>{
+   const feitos=b.itens.filter((_,i)=>st.resp[b.id+':'+i]).length,ac=b.itens.filter((_,i)=>{const r=st.resp[b.id+':'+i];return r&&r.ok}).length;
+   const pct=Math.round(100*feitos/b.itens.length);
+   return `<button class="item" data-bloco="${bi}"><b>${esc(b.titulo)}</b><br><span class="meta">${b.itens.length} assertivas · ${esc(b.sub||'')}</span>
+     <div class="prog"><i style="width:${pct}%"></i></div>
+     <span class="selo ${feitos===b.itens.length?'feito':'pend'}">${feitos}/${b.itens.length} feitas · ${ac} certas</span></button>`;
+ }).join('');
+ const tot=BLOCOS.reduce((n,b)=>n+b.itens.length,0);
+ $('tela').innerHTML=`<div class="card"><h2>Como revisar</h2>
+   <p style="text-align:justify">Leia a assertiva, marque <b>Certo</b> ou <b>Errado</b> e confira o <b>comentário com a base legal</b>. O foco é o que a banca <b>AOCP</b> mais cobra para Delegado na Bahia: <b>letra de lei</b>, <b>legislação local baiana</b>, poderes de polícia judiciária e <b>atualizações legislativas</b>. São <b>${tot}</b> assertivas, em blocos de prioridade.</p>
+   <div class="caixas">${BLOCOS.map(b=>`<div class="cx"><b>${b.itens.length}</b><small>${esc(b.curto||b.titulo)}</small></div>`).join('')}</div>
+   </div>
+   <div class="card"><h2>Blocos</h2><div class="grade">${linhas}</div></div>`;
+}
+function abrir(bi,embaralhar){
+ bloco=BLOCOS[bi];ordem=bloco.itens.map((_,i)=>i);
+ if(embaralhar)for(let k=ordem.length-1;k>0;k--){const j=Math.floor(Math.random()*(k+1));[ordem[k],ordem[j]]=[ordem[j],ordem[k]]}
+ pos=0;telaItem();
+}
+function telaItem(){
+ respondeu=false;
+ const it=bloco.itens[ordem[pos]];
+ const key=bloco.id+':'+ordem[pos],prev=st.resp[key];
+ const feitos=bloco.itens.filter((_,i)=>st.resp[bloco.id+':'+i]).length,ac=bloco.itens.filter((_,i)=>{const r=st.resp[bloco.id+':'+i];return r&&r.ok}).length;
+ $('tela').innerHTML=`<div class="card">
+   <div class="linha-bts" style="margin-top:0"><button class="bt" data-home="1">← Blocos</button>
+     <span class="meta" style="margin-left:auto"><b>${pos+1}</b> de ${ordem.length} · ${ac}/${feitos} certas</span></div>
+   <div style="margin-top:10px"><span class="tag">${esc(it.disc)}</span>${it.tema?`<span class="tag">${esc(it.tema)}</span>`:''}${it.novo?'<span class="tag" style="background:#fff3e0;border-color:#ffd9a8;color:#8a5200">🆕 atualização</span>':''}${it.ba?'<span class="tag" style="background:#eaf4ff;border-color:#bcdcff;color:#13406b">🏛️ Bahia</span>':''}</div>
+   <p class="assert">${esc(it.a)}</p>
+   <div class="ce"><button class="bt" data-ce="C">✔️ Certo</button><button class="bt" data-ce="E">✖️ Errado</button></div>
+   <div id="pos"></div></div>`;
+ if(prev)mostrar(prev.marcou);
+}
+function mostrar(marcou){
+ respondeu=true;
+ const it=bloco.itens[ordem[pos]],ok=marcou===it.g;
+ const key=bloco.id+':'+ordem[pos];
+ st.resp[key]={marcou,ok};salvar();
+ const last=pos>=ordem.length-1;
+ $('pos').innerHTML=`<div class="fb ${ok?'ok':'no'}">${ok?'✔️ Você acertou.':'✖️ Não foi dessa vez.'} Gabarito: <b>${it.g==='C'?'CERTO':'ERRADO'}</b>.</div>
+   <div class="com"><p>${esc(it.c)}</p>${it.base?`<span class="base">📖 ${esc(it.base)}</span>`:''}</div>
+   <div class="linha-bts"><button class="bt" data-nav="-1" ${pos===0?'disabled':''}>← Anterior</button>
+     <button class="bt pri" data-nav="1" ${last?'disabled':''}>Próxima →</button>
+     ${last?'<button class="bt" data-home="1">Terminar bloco</button>':''}</div>`;
+ document.querySelectorAll('[data-ce]').forEach(b=>{b.disabled=true;if(b.dataset.ce===it.g)b.style.background=ok?'#e8f6ec':'#eef7ee';if(b.dataset.ce===marcou&&!ok)b.style.background='#fbeaea'});
+}
+document.addEventListener('click',e=>{
+ const h=e.target.closest('[data-home]');if(h){home();scrollTo(0,0);return}
+ const b=e.target.closest('[data-bloco]');if(b){abrir(+b.dataset.bloco,false);scrollTo(0,0);return}
+ const ce=e.target.closest('[data-ce]');if(ce&&!respondeu){mostrar(ce.dataset.ce);return}
+ const nv=e.target.closest('[data-nav]');if(nv){pos+=+nv.dataset.nav;if(pos<0)pos=0;if(pos>=ordem.length)pos=ordem.length-1;telaItem();scrollTo(0,0);return}
+});
+$('rodape').innerHTML='Assertivas autorais, fundadas na <b>letra de lei</b> (texto oficial) e em jurisprudência consolidada. Confira sempre no texto atualizado da norma. Material de estudo pessoal — gerado em 15/11/2026.';
+home();
+</script>
+</body>
+</html>

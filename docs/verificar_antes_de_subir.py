@@ -115,6 +115,10 @@ PORTAS: list[tuple[str, list[str], str]] = [
      "alternativa verdadeira grifada; grifo fora do trecho exato; bloco com mais de 100; meta que não conta"),
     ("o teste do olho de águia acusa", ["node", "docs/testar_olho_de_aguia.cjs", "--autoteste"],
      "teste que passa com o grifo do trecho errado sumido (verde falso)"),
+    ("revisão Delegado-BA: comportamento", ["node", "docs/testar_revisao_ba.cjs"],
+     "assertivas C/E com gabarito e base; Bloco 1 com 50; legislação baiana; responder mostra veredito e comentário"),
+    ("o teste da revisão Delegado-BA acusa", ["node", "docs/testar_revisao_ba.cjs", "--autoteste"],
+     "teste que passa com um gabarito inválido (C/E corrompido) — verde falso"),
 ]
 
 # Régua de segredo (31/10/2026): exige VALOR de 20+ caracteres depois do `=` — o LEIA_PRIMEIRO cita
