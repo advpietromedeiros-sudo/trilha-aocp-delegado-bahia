@@ -21,17 +21,21 @@ const w = dom.window, d = w.document;
 let falhas = 0; const prova = (n, ok, det = "") => { console.log(`  ${ok ? "✅" : "❌"} ${n}${!ok && det ? " — " + det : ""}`); if (!ok) falhas++; };
 
 const B = w.REV_DELBA;
-prova("os dados carregam com pelo menos 1 bloco", Array.isArray(B) && B.length >= 1, String(B && B.length));
+prova("os dados carregam com os 2 blocos", Array.isArray(B) && B.length === 2, String(B && B.length));
 const b1 = B[0];
 prova("o Bloco 1 (prioridade máxima) tem 50 assertivas", b1.itens.length === 50, String(b1.itens.length));
+prova("o Bloco 2 (aprofundamento) tem 50 assertivas", B[1] && B[1].itens.length === 50, String(B[1] && B[1].itens.length));
+const total = B.reduce((n, b) => n + b.itens.length, 0);
+prova("o total é de 100 assertivas", total === 100, String(total));
 
-// integridade de cada item
-const ruins = b1.itens.filter(i => !i.a || !i.c || !i.base || (i.g !== "C" && i.g !== "E"));
+// integridade de cada item (os dois blocos)
+const todos = B.flatMap(b => b.itens);
+const ruins = todos.filter(i => !i.a || !i.c || !i.base || (i.g !== "C" && i.g !== "E"));
 prova("toda assertiva tem enunciado, gabarito C/E válido, comentário e base legal", ruins.length === 0, ruins.slice(0, 2).map(i => (i.a || "").slice(0, 40)).join(" | "));
 
-// sem duplicatas
+// sem duplicatas (entre todos os 100)
 const vistos = new Set(); let dup = 0;
-for (const i of b1.itens) { const k = (i.a || "").trim().toLowerCase(); if (vistos.has(k)) dup++; vistos.add(k); }
+for (const i of todos) { const k = (i.a || "").trim().toLowerCase(); if (vistos.has(k)) dup++; vistos.add(k); }
 prova("não há assertivas duplicadas", dup === 0, String(dup));
 
 // foco pedido: legislação local da Bahia e equilíbrio de gabaritos

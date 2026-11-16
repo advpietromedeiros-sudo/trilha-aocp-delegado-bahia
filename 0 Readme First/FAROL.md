@@ -241,7 +241,7 @@
   Orgânica da PC-BA, Lei 6.677/1994 — Estatuto dos servidores), poderes do delegado e atualizações. Sem Português
   nem Informática. **Bloco 1 (prioridade máxima) com 50** assertivas (18 baianas, 16 "Errado"). Conteúdo autoral,
   fundado na letra de lei — vai no Git. Teste `docs/testar_revisao_ba.cjs` no portão (37 portas). CI verde.
-  ⏳ **Falta: o Bloco 2 (mais 50)**, pedido do titular — total 100.
+  ✅ **Bloco 2 (mais 50) concluído em 15/11/2026** — total 100 assertivas (2 blocos).
   - 🆕 **Também em 14-15/11: abas "900 Discursivas" (penal/PP) e "PED — FGV"** no Treino (material de terceiro,
     só na cópia privada, fora do Git). Ver `docs/PROCEDENCIA.md`.
 
