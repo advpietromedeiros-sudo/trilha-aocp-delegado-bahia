@@ -24,7 +24,8 @@ from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
 FONTE = RAIZ / "assets" / "grifa.js"
-TELAS_GIT = ["index.html", "discursiva/Treino_Discursiva.html", "revisao/molde/caderno.html"]
+TELAS_GIT = ["index.html", "discursiva/Treino_Discursiva.html", "revisao/molde/caderno.html",
+             "discursiva/Revisao_Delegado_BA.html"]
 INICIO = "<!-- grifa:inicio (gerado de assets/grifa.js por ferramentas/embutir_grifa.py; não editar aqui) -->"
 FIM = "<!-- grifa:fim -->"
 
