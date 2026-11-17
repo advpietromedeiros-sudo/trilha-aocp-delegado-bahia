@@ -160,7 +160,9 @@ function home(){
    </div>
    <div class="card"><h2>Blocos de estudo</h2><div class="blocos">${cards}</div></div>`;
 }
-function abrir(bi){ bloco=BLOCOS[bi];ordem=bloco.itens.map((_,i)=>i);pos=0;telaItem(); }
+function abrir(bi){ bloco=BLOCOS[bi];ordem=bloco.itens.map((_,i)=>i);
+  pos=ordem.findIndex(i=>!st.resp[bloco.id+':'+i]); if(pos<0)pos=0; // retoma na 1ª ainda não respondida
+  telaItem(); }
 function telaItem(){
  respondeu=false;
  const it=bloco.itens[ordem[pos]], key=bloco.id+':'+ordem[pos], prev=st.resp[key];
@@ -180,7 +182,9 @@ function comentarioHTML(it){
  const i=c.indexOf('Mini-aula:');
  if(i>=0){ justif=c.slice(0,i).trim(); apro=c.slice(i+'Mini-aula:'.length).trim(); }
  justif=justif.replace(/^(Certo|Errado)\s*[—–-]?\s*\.?\s*/,'');
+ if(!justif.trim()){ justif=apro; apro=''; }        /* evita caixa "Por quê" vazia */
  if(justif)justif=justif.charAt(0).toUpperCase()+justif.slice(1);
+ if(apro)apro=apro.charAt(0).toUpperCase()+apro.slice(1);
  return `<div class="com">
    <div class="cab"><span class="vd ${it.g==='C'?'ok':'no'}">${it.g==='C'?'CERTO':'ERRADO'}</span><span class="ti">Por que ${it.g==='C'?'está certo':'está errado'}</span></div>
    <div class="corpo"><p class="just">${realcar(esc(justif))}</p>
@@ -199,12 +203,22 @@ function mostrar(marcou){
  document.querySelectorAll('[data-ce]').forEach(b=>{b.disabled=true;
    if(b.dataset.ce===it.g)b.classList.add('sel-ok','gab');
    if(b.dataset.ce===marcou&&!ok)b.classList.add('sel-no')});
+ // ao responder, rola a tela até o início da correção
+ const fb=$('pos').querySelector('.fb'); if(fb)fb.scrollIntoView({behavior:'smooth',block:'start'});
 }
 document.addEventListener('click',e=>{
  const h=e.target.closest('[data-home]');if(h){home();scrollTo(0,0);return}
  const b=e.target.closest('[data-bloco]');if(b){abrir(+b.dataset.bloco);scrollTo(0,0);return}
  const ce=e.target.closest('[data-ce]');if(ce&&!respondeu){mostrar(ce.dataset.ce);return}
  const nv=e.target.closest('[data-nav]');if(nv){pos+=+nv.dataset.nav;if(pos<0)pos=0;if(pos>=ordem.length)pos=ordem.length-1;telaItem();scrollTo(0,0);return}
+});
+/* Enter avança para a próxima depois de responder; ← / → navegam */
+document.addEventListener('keydown',e=>{
+ if(e.ctrlKey||e.metaKey||e.altKey||/^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName))return;
+ if(!bloco)return;
+ if(e.key==='Enter'){ if(!respondeu)return; const nx=document.querySelector('[data-nav="1"]'); if(nx&&!nx.disabled){e.preventDefault();pos+=1;if(pos>=ordem.length)pos=ordem.length-1;telaItem();scrollTo(0,0);} }
+ else if(e.key==='ArrowRight'&&respondeu){ const nx=document.querySelector('[data-nav="1"]'); if(nx&&!nx.disabled){e.preventDefault();pos+=1;telaItem();scrollTo(0,0);} }
+ else if(e.key==='ArrowLeft'){ if(pos>0){e.preventDefault();pos-=1;telaItem();scrollTo(0,0);} }
 });
 $('rodape').innerHTML='Assertivas autorais, fundadas na <b>letra de lei</b> (texto oficial) e em jurisprudência consolidada; a legislação baiana foi conferida em fonte oficial. Confira sempre no texto atualizado da norma. Material de estudo pessoal — 15/11/2026.';
 home();
@@ -244,7 +258,10 @@ home();
   var ESTILOS = [
     { id: 'negrito', nome: 'Negrito', icone: '<b style="font-weight:900">B</b>', css: 'font-weight:800 !important' },
     { id: 'sublinhado', nome: 'Sublinhado', icone: '<u style="text-decoration-thickness:2px">U</u>',
-      css: 'text-decoration:underline !important;text-decoration-thickness:2px !important;text-underline-offset:2px' }
+      css: 'text-decoration:underline !important;text-decoration-thickness:2px !important;text-underline-offset:2px' },
+    /* 16/11/2026 (titular: "nos botoes G coloque um la que seja ao mesmo tempo negrito e sublinhado num botão só") */
+    { id: 'negsub', nome: 'Negrito + Sublinhado', icone: '<b style="font-weight:900;text-decoration:underline;text-underline-offset:2px">B̲U̲</b>',
+      css: 'font-weight:800 !important;text-decoration:underline !important;text-decoration-thickness:2px !important;text-underline-offset:2px' }
   ];
   var MARCAS = CORES.map(function (c) { return c.id; }).concat(ESTILOS.map(function (s) { return s.id; }));
   var CTX = 32;

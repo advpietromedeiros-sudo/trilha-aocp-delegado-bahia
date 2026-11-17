@@ -21,12 +21,12 @@ const w = dom.window, d = w.document;
 let falhas = 0; const prova = (n, ok, det = "") => { console.log(`  ${ok ? "✅" : "❌"} ${n}${!ok && det ? " — " + det : ""}`); if (!ok) falhas++; };
 
 const B = w.REV_DELBA;
-prova("os dados carregam com os 5 blocos", Array.isArray(B) && B.length === 5, String(B && B.length));
+prova("os dados carregam com os 6 blocos", Array.isArray(B) && B.length === 6, String(B && B.length));
 const b1 = B[0];
 const tamanhos = B.map(b => b.itens.length);
-prova("os blocos têm 50, 50, 50, 50 e 100 assertivas", JSON.stringify(tamanhos) === JSON.stringify([50, 50, 50, 50, 100]), tamanhos.join(","));
+prova("os blocos têm 50, 50, 50, 50, 100 e 50 assertivas", JSON.stringify(tamanhos) === JSON.stringify([50, 50, 50, 50, 100, 50]), tamanhos.join(","));
 const total = B.reduce((n, b) => n + b.itens.length, 0);
-prova("o total é de 300 assertivas", total === 300, String(total));
+prova("o total é de 350 assertivas", total === 350, String(total));
 
 // integridade de cada item (os dois blocos)
 const todos = B.flatMap(b => b.itens);

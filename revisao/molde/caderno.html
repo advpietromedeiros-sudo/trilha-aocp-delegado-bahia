@@ -181,7 +181,10 @@
   var ESTILOS = [
     { id: 'negrito', nome: 'Negrito', icone: '<b style="font-weight:900">B</b>', css: 'font-weight:800 !important' },
     { id: 'sublinhado', nome: 'Sublinhado', icone: '<u style="text-decoration-thickness:2px">U</u>',
-      css: 'text-decoration:underline !important;text-decoration-thickness:2px !important;text-underline-offset:2px' }
+      css: 'text-decoration:underline !important;text-decoration-thickness:2px !important;text-underline-offset:2px' },
+    /* 16/11/2026 (titular: "nos botoes G coloque um la que seja ao mesmo tempo negrito e sublinhado num botão só") */
+    { id: 'negsub', nome: 'Negrito + Sublinhado', icone: '<b style="font-weight:900;text-decoration:underline;text-underline-offset:2px">B̲U̲</b>',
+      css: 'font-weight:800 !important;text-decoration:underline !important;text-decoration-thickness:2px !important;text-underline-offset:2px' }
   ];
   var MARCAS = CORES.map(function (c) { return c.id; }).concat(ESTILOS.map(function (s) { return s.id; }));
   var CTX = 32;
