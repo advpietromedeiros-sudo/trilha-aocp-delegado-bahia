@@ -353,3 +353,19 @@ prompt do servidor já manda não aplicar norma posterior.
   em arquivo nenhum do repositório.
 - **Os enunciados, os espelhos (sugestão de resposta, gabarito da banca, jurisprudência) e as peças** são conteúdo do
   autor do e-book (material de terceiro); ficam só na cópia privada.
+
+## 16/11/2026 — Lei seca destacada "LD DELTA" como GUIA de frequência da aba "Letra de Lei"
+
+- **O quê:** três PDFs de terceiro ("LD DELTA 2022 E 2021", "2024 E 2023", "2026 E 2026") com **lei seca destacada
+  para Delegado**, em que cada artigo traz **quantas vezes caiu** (banca, instituição, ano) em provas de 2021-2026.
+  Usados **somente como guia de priorização** — para decidir QUAIS artigos entram na aba "Letra de Lei" e em que
+  ordem (por frequência). Deles extraímos apenas o **ranking** (artigo + nº de ocorrências por disciplina).
+- **O que entrou no Git:** **nada do material de terceiro**. A letra de lei é **pública** e as 190 cartas de lacunas
+  (`discursiva/lei_seca_delegado_ba_dados.js`) foram **redigidas de forma autoral** pela sessão, a partir do texto
+  legal oficial. O ranking serviu de bússola, não de fonte de texto.
+- **Marca d'água (dado pessoal de terceiro):** os PDFs trazem no rodapé o **nome e o CPF** do comprador. Esse nome e
+  esse CPF **não** estão escritos em arquivo nenhum do repositório; os PDFs **não** entram no Git (ficam só na pasta
+  pessoal do titular, em `Downloads`).
+- **Autorização:** pedido escrito do titular (16/11/2026: *"edital inteiro, por frequência"*, após confirmar o uso dos
+  PDFs como base de prioridade), para estudo pessoal; o app não vai para o portal (D-009). **Sem** autorização do autor
+  do material para distribuição — por isso só o ranking (fato) orienta, e o conteúdo publicado é autoral.
