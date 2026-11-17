@@ -119,6 +119,10 @@ PORTAS: list[tuple[str, list[str], str]] = [
      "Bloco 1 com 50 assertivas C/E (gabarito e base); responder mostra veredito e comentário"),
     ("o teste da revisão Delegado-BA acusa", ["node", "docs/testar_revisao_ba.cjs", "--autoteste"],
      "teste que passa com um gabarito inválido (C/E corrompido) — verde falso"),
+    ("treino de letra de lei: comportamento", ["node", "docs/testar_lei_seca_ba.cjs"],
+     "artigos por lacunas (lacunas=respostas, base); revelar preenche e salva o progresso"),
+    ("o teste do treino de letra de lei acusa", ["node", "docs/testar_lei_seca_ba.cjs", "--autoteste"],
+     "teste que passa com lacunas sem resposta correspondente — verde falso"),
 ]
 
 # Régua de segredo (31/10/2026): exige VALOR de 20+ caracteres depois do `=` — o LEIA_PRIMEIRO cita

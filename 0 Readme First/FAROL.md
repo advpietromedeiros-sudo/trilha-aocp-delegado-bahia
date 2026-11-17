@@ -242,6 +242,17 @@
   nem Informática. **Bloco 1 (prioridade máxima) com 50** assertivas (18 baianas, 16 "Errado"). Conteúdo autoral,
   fundado na letra de lei — vai no Git. Teste `docs/testar_revisao_ba.cjs` no portão (37 portas). CI verde.
   ✅ **Bloco 2 (mais 50) concluído em 15/11/2026** — total 100 assertivas (2 blocos).
+  ✅ **16/11/2026 — Revisão Dirigida com 6 blocos / 350 assertivas:** Blocos 3-5 (mais 2×50 + 1×100 de
+    Ambiental/Tributário/Medicina Legal/Criminologia/Civil/CPC) e **Bloco 6 — Reforma Tributária (EC 132/2023)**
+    com 50 C/E (IBS, CBS, Imposto Seletivo, Comitê Gestor, cashback, cesta básica, ITCMD progressivo/exterior,
+    calendário de transição). UX: Enter avança, ao marcar C/E a tela rola para a correção, ao reabrir o bloco
+    **retoma na 1ª não respondida**. Grifo (G) ganhou botão **Negrito+Sublinhado**. Commit 6967f5d, CI verde.
+  - ✅ **16/11/2026 — nova aba "⚖️ Letra de Lei"** (`discursiva/Lei_Seca_Delegado_BA.html` +
+    `discursiva/lei_seca_delegado_ba_dados.js`): treino de memorização por **lacunas (cloze)** dos artigos mais
+    batidos para delegado — 6 blocos, 82 cartas (Penal, Proc. Penal, Legislação Especial no centro; + Const./
+    Tributário/Ambiental/Civil/CPC do edital), com ênfase nos **novos/atualizados** (Pacote Anticrime, feminicídio
+    autônomo, Henry Borel, Abuso de Autoridade, EC 132). Revela a palavra‑chave, autoavalia e salva o progresso.
+    Aba ligada no hub (Treino). Teste `docs/testar_lei_seca_ba.cjs` no portão (agora 39 portas).
   - 🆕 **Também em 14-15/11: abas "900 Discursivas" (penal/PP) e "PED — FGV"** no Treino (material de terceiro,
     só na cópia privada, fora do Git). Ver `docs/PROCEDENCIA.md`.
 
