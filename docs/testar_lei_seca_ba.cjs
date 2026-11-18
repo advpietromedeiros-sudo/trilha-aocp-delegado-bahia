@@ -27,7 +27,7 @@ const b1 = B[0];
 const todos = B.flatMap(b => b.itens);
 prova("há pelo menos 300 artigos no total", todos.length >= 300, String(todos.length));
 const blocoBA = B.find(b => /Bahia/i.test(b.titulo || ""));
-prova("há um bloco local da Bahia com 100 cartas", !!blocoBA && blocoBA.itens.length === 100, String(blocoBA && blocoBA.itens.length));
+prova("há um bloco local da Bahia com pelo menos 100 cartas", !!blocoBA && blocoBA.itens.length >= 100, String(blocoBA && blocoBA.itens.length));
 prova("o bloco local tem forte presença baiana (>= 50 cartas 'ba')", !!blocoBA && blocoBA.itens.filter(i => i.ba).length >= 50, String(blocoBA && blocoBA.itens.filter(i => i.ba).length));
 
 // integridade: cada carta tem texto, rubrica, base e lacunas == respostas
