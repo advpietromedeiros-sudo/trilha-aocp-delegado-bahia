@@ -43,6 +43,10 @@ select,input[type=number]{border:1px solid var(--borda);background:var(--fundo);
 .alt.ok{background:var(--gfundo);border-color:var(--verde)}.alt.ok .l{color:var(--verde)}
 .alt.ruim .l{color:var(--verm)}
 mark.erro{background:var(--vfundo);color:var(--verm);font-weight:700;text-decoration:underline wavy;text-decoration-thickness:1px;padding:0 2px;border-radius:3px}
+mark.cert{background:var(--gfundo);color:var(--verde);font-weight:800;text-decoration:underline;text-decoration-thickness:1px;padding:0 2px;border-radius:3px}
+.corrigir{display:inline-flex;align-items:center;gap:3px;font:inherit;font-size:12px;font-weight:700;cursor:pointer;border:1px solid var(--azul);color:var(--azul);background:var(--fundo);border-radius:999px;padding:1px 9px;margin-left:5px;white-space:nowrap;vertical-align:baseline}
+.corrigir:hover{background:var(--azul);color:#fff}
+.corrigir.on{background:var(--gfundo);border-color:var(--verde);color:var(--verde)}
 .porq{grid-column:2;font-size:13.5px;color:var(--suave)}
 .porq b{color:var(--verm)}.porq .c{color:var(--verde);font-weight:700}
 .esq{border:1px solid var(--borda);border-left:4px solid var(--azul);background:rgba(29,79,163,.045);border-radius:10px;padding:12px 14px;margin-top:12px}
@@ -159,6 +163,22 @@ function marcar(texto, trecho) {
   const t = String(texto), i = trecho ? t.indexOf(trecho) : -1;
   return i < 0 ? esc(t) : esc(t.slice(0, i)) + `<mark class="erro">${esc(trecho)}</mark>` + esc(t.slice(i + trecho.length));
 }
+function marcarCerto(texto, trecho, certo) {
+  const t = String(texto), i = trecho ? t.indexOf(trecho) : -1;
+  return i < 0 ? esc(t) : esc(t.slice(0, i)) + `<mark class="cert">${esc(certo)}</mark>` + esc(t.slice(i + trecho.length));
+}
+// alternativa corrigível: guarda o texto/trecho/certo e oferece o botão "ver corrigida"
+function alvoHtml(tx, a) {
+  if (!(a && a.trecho && a.certo)) return marcar(tx, a && a.trecho);
+  return `<span class="alvo" data-tx="${esc(tx)}" data-tr="${esc(a.trecho)}" data-ce="${esc(a.certo)}">${marcar(tx, a.trecho)}</span> <button class="corrigir" type="button" title="Trocar o trecho errado pelo certo e ver a alternativa correta">✎ ver corrigida</button>`;
+}
+document.addEventListener('click', e => {
+  const b = e.target.closest('.corrigir'); if (!b) return;
+  e.stopPropagation();
+  const sp = b.parentNode.querySelector('.alvo'); if (!sp) return;
+  if (sp.dataset.on === '1') { sp.innerHTML = marcar(sp.dataset.tx, sp.dataset.tr); sp.dataset.on = ''; b.textContent = '✎ ver corrigida'; b.classList.remove('on'); }
+  else { sp.innerHTML = marcarCerto(sp.dataset.tx, sp.dataset.tr, sp.dataset.ce); sp.dataset.on = '1'; b.textContent = '↩ ver original'; b.classList.add('on'); }
+});
 function mostrarQuestao() {
   const s = SIM[st.sim]; if (!s) { $('sim').innerHTML = '<p>Simulados não encontrados (discursiva/simulados_delta.js).</p>'; return; }
   st.q = Math.max(0, Math.min(s.questoes.length - 1, st.q));
@@ -175,7 +195,7 @@ function mostrarQuestao() {
     if (q.anulada) return `<div class="alt"><span class="l">${L}</span><span class="txt">${esc(tx)}</span></div>`;
     if (incorreta) {  // "assinale a INCORRETA": o gabarito é a falsa; as outras são verdadeiras
       const a = m.alts[L] || {};
-      if (L === q.gab) return `<div class="alt ok"><span class="l">✔ ${L}</span><span class="txt"><b>RESPOSTA — esta é a única ERRADA:</b> ${marcar(tx, a.trecho)}</span>` +
+      if (L === q.gab) return `<div class="alt ok"><span class="l">✔ ${L}</span><span class="txt"><b>RESPOSTA — esta é a única ERRADA:</b> ${alvoHtml(tx, a)}</span>` +
         explica(a, 'O erro está em') + `</div>`;
       return `<div class="alt"><span class="l" style="color:var(--verde)">V ${L}</span><span class="txt">${esc(tx)}</span>` +
         (a.motivo ? `<div class="porq explica"><div class="lin"><span class="rot c">✅ Está certa</span><span>${neg(a.motivo)}</span></div></div>` : '') + `</div>`;
@@ -183,7 +203,7 @@ function mostrarQuestao() {
     if (L === q.gab) return `<div class="alt ok"><span class="l">✔ ${L}</span><span class="txt"><b>${esc(tx)}</b></span>` +
       (e && e.ideia ? `<div class="porq explica"><div class="lin"><span class="rot c">✅ Por que é a certa</span><span>${neg(e.ideia)}</span></div></div>` : '') + `</div>`;
     const a = m && m.alts && m.alts[L];
-    return `<div class="alt ruim"><span class="l">✘ ${L}</span><span class="txt">${marcar(tx, a && a.trecho)}</span>` + explica(a, 'O erro está em') + `</div>`;
+    return `<div class="alt ruim"><span class="l">✘ ${L}</span><span class="txt">${alvoHtml(tx, a)}</span>` + explica(a, 'O erro está em') + `</div>`;
   }).join('');
   const aviso = incorreta ? `<div class="aviso">⚠ Atenção: esta questão pede a alternativa <u>INCORRETA</u>. As outras estão certas — a resposta é a única errada.</div>` : '';
   $('sim').innerHTML = `<div class="ctx">${esc(q.disc)} · ${esc(q.tema)}${q.anulada ? ' · <b>ANULADA</b>' : ''} · gabarito <b>${esc(q.gab)}</b></div>` +
