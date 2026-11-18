@@ -67,10 +67,13 @@ pre{white-space:pre-wrap;font-size:13px}
 .lidas{display:flex;flex-wrap:wrap;gap:3px;margin-top:8px}
 .lidas span{width:20px;height:8px;border-radius:3px;background:var(--borda)}.lidas span.v{background:var(--verde)}.lidas span.a{outline:2px solid var(--ouro)}
 /* comentários didáticos (12/11/2026): erro / certo / por quê em linhas separadas; comparação lado a lado */
-.explica{grid-column:2;display:grid;gap:4px;font-size:14px;margin-top:6px;padding:7px 10px;border-radius:9px;background:var(--fundo);color:var(--tinta)}
-.explica .lin{display:grid;grid-template-columns:190px 1fr;gap:10px;align-items:baseline}
+.explica{grid-column:2;display:grid;gap:7px;font-size:14px;margin-top:6px;padding:9px 12px;border-radius:10px;background:var(--fundo);color:var(--tinta)}
+.explica .lin{display:flex;flex-wrap:wrap;gap:5px 9px;align-items:baseline}
+.explica .lin>span:last-child{flex:1 1 220px;min-width:0;line-height:1.5}
 .rot{font-weight:800;font-size:12.5px;text-transform:uppercase;letter-spacing:.03em;white-space:nowrap}
+.explica .rot{display:inline-flex;align-items:center;gap:4px;font-size:11px;border-radius:999px;padding:2px 9px;line-height:1.5;flex:0 0 auto}
 .rot.e{color:var(--verm)}.rot.c{color:var(--verde)}.rot.p{color:var(--azul)}
+.explica .rot.e{background:var(--vfundo)}.explica .rot.c{background:var(--gfundo)}.explica .rot.p{background:rgba(29,79,163,.10)}
 .explica .q{font-weight:700;color:var(--verm)}
 .aviso{border:2px solid var(--verm);background:var(--vfundo);border-radius:10px;padding:8px 12px;margin:8px 0;font-weight:700}
 .esq .sub{font-size:12.5px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:var(--suave);margin:8px 0 2px}
@@ -83,7 +86,7 @@ pre{white-space:pre-wrap;font-size:13px}
 del.dif{background:rgba(198,40,40,.22);color:var(--verm);text-decoration:none;font-weight:800;border-radius:3px;padding:0 1px}
 ins.dif{background:rgba(31,122,70,.22);color:var(--verde);text-decoration:none;font-weight:800;border-radius:3px;padding:0 1px}
 .mem b.r{color:var(--tinta)}
-@media(max-width:700px){#abas button{font-size:13px;padding:8px 8px}.cmp{grid-template-columns:1fr}.explica .lin{grid-template-columns:1fr;gap:0}}
+@media(max-width:700px){#abas button{font-size:13px;padding:8px 8px}.cmp{grid-template-columns:1fr}.explica .lin{gap:4px 8px}}
 </style></head><body data-painel="sim">
 <header>
   <h1><small>Reta final · leitura rápida</small>🦅 Olho de Águia</h1>
