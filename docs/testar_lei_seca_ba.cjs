@@ -22,10 +22,13 @@ const w = dom.window, d = w.document;
 let falhas = 0; const prova = (n, ok, det = "") => { console.log(`  ${ok ? "✅" : "❌"} ${n}${!ok && det ? " — " + det : ""}`); if (!ok) falhas++; };
 
 const B = w.LEI_SECA;
-prova("os dados carregam com os 11 blocos (edital inteiro, por frequência)", Array.isArray(B) && B.length === 11, String(B && B.length));
+prova("os dados carregam com os 12 blocos (edital inteiro + Bahia local)", Array.isArray(B) && B.length === 12, String(B && B.length));
 const b1 = B[0];
 const todos = B.flatMap(b => b.itens);
-prova("há pelo menos 180 artigos no total", todos.length >= 180, String(todos.length));
+prova("há pelo menos 300 artigos no total", todos.length >= 300, String(todos.length));
+const blocoBA = B.find(b => /Bahia/i.test(b.titulo || ""));
+prova("há um bloco local da Bahia com 100 cartas", !!blocoBA && blocoBA.itens.length === 100, String(blocoBA && blocoBA.itens.length));
+prova("o bloco local tem forte presença baiana (>= 50 cartas 'ba')", !!blocoBA && blocoBA.itens.filter(i => i.ba).length >= 50, String(blocoBA && blocoBA.itens.filter(i => i.ba).length));
 
 // integridade: cada carta tem texto, rubrica, base e lacunas == respostas
 const ruins = todos.filter(i => !i.t || !i.rub || !i.base || !Array.isArray(i.g) ||
