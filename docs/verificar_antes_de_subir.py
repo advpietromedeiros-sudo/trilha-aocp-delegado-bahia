@@ -123,6 +123,10 @@ PORTAS: list[tuple[str, list[str], str]] = [
      "artigos por lacunas (lacunas=respostas, base); revelar preenche e salva o progresso"),
     ("o teste do treino de letra de lei acusa", ["node", "docs/testar_lei_seca_ba.cjs", "--autoteste"],
      "teste que passa com lacunas sem resposta correspondente — verde falso"),
+    ("lei na íntegra: comportamento", ["node", "docs/testar_lei_integra.cjs"],
+     "artigo inteiro em 3 modos (Esconder/Teste/Revisão), palavras-chave {}, mnemônico e áudio; progresso salvo"),
+    ("o teste da lei na íntegra acusa", ["node", "docs/testar_lei_integra.cjs", "--autoteste"],
+     "teste que passa com um artigo sem palavra-chave {} — verde falso"),
 ]
 
 # Régua de segredo (31/10/2026): exige VALOR de 20+ caracteres depois do `=` — o LEIA_PRIMEIRO cita
