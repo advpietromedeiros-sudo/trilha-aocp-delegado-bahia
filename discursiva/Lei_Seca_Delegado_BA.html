@@ -60,9 +60,6 @@ p{text-align:justify}
 .lac.on{color:var(--vermelho);font-weight:800;border-bottom-color:var(--vermelho);background:var(--vermelho-bg);border-radius:4px;padding:0 4px}
 .dica{color:var(--suave);font-size:.9em;margin:12px 0 2px;display:flex;align-items:center;gap:6px}
 .base{display:inline-flex;align-items:center;gap:6px;margin:12px 0 2px;background:var(--azul-claro);border:1px solid #d4e1f3;border-radius:9px;padding:5px 12px;font-size:.86em;color:var(--azul);font-weight:700}
-/* ver corrigida (texto completo, palavras-chave em verde) */
-.corr{color:var(--verde);font-weight:800;background:var(--verde-bg);border:1px solid var(--verde-bd);border-radius:5px;padding:0 5px}
-.lei.corrigida{border-left-color:var(--verde-bd);background:#f1fbf4}
 /* agendar reaparição (1 a 10) */
 .schrow{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-top:10px}
 .schn{min-width:42px;padding:9px 11px;min-height:40px;justify-content:center;font-weight:700}
@@ -93,7 +90,7 @@ const CHAVE='leiseca:v1';
 let st={resp:{}};try{st=Object.assign(st,JSON.parse(localStorage.getItem(CHAVE)||'{}'))}catch(e){}
 const salvar=()=>{try{localStorage.setItem(CHAVE,JSON.stringify(st))}catch(e){}};
 const BLOCOS=Array.isArray(window.LEI_SECA)?window.LEI_SECA:[];
-let bloco=null,ordem=[],pos=0,revelado=false,corrigidaOn=false;
+let bloco=null,ordem=[],pos=0,revelado=false;
 
 /* monta o texto do artigo; mostrada=false => lacunas escondidas; true => preenchidas em vermelho */
 function leiHTML(it,mostrada){
@@ -103,16 +100,6 @@ function leiHTML(it,mostrada){
     const resp=esc((it.g&&it.g[k-1])||'');
     h+= mostrada ? '<span class="lac on">'+resp+'</span>' : '<span class="lac">'+resp+'</span>';
     h+= esc(partes[k]);
-  }
-  return h;
-}
-
-/* "ver corrigida": artigo completo, corrido, com as palavras-chave em VERDE (leitura fluida) */
-function leiCorrHTML(it){
-  const partes=String(it.t).split('___');
-  let h=esc(partes[0]);
-  for(let k=1;k<partes.length;k++){
-    h+='<b class="corr">'+esc((it.g&&it.g[k-1])||'')+'</b>'+esc(partes[k]);
   }
   return h;
 }
@@ -154,7 +141,7 @@ function abrir(bi){
 }
 
 function telaItem(){
-  revelado=false; corrigidaOn=false;
+  revelado=false;
   const it=bloco.itens[ordem[pos]];
   const tags=[`<span class="tag dip">${esc(it.d)}${it.art&&it.art!=='—'?' · art. '+esc(it.art):''}</span>`];
   if(it.novo)tags.push('<span class="tag novo">🆕 atualizado</span>');
@@ -183,8 +170,7 @@ function revelar(){
   if(revelado)return; revelado=true;
   const it=bloco.itens[ordem[pos]], last=pos>=ordem.length-1;
   $('lei').innerHTML=leiHTML(it,true);
-  const extra=`<div class="bt-lin" style="margin-top:14px"><button class="bt" data-corr="1">✎ Ver corrigida (texto completo)</button></div>
-    <div class="base">📖 ${esc(it.base||'')}</div>
+  const extra=`<div class="base" style="margin-top:14px">📖 ${esc(it.base||'')}</div>
     <div class="dica" style="margin-top:14px">Você lembrou das palavras‑chave?</div>
     <div class="bt-lin">
       <button class="bt" data-marca="ok" style="border-color:var(--verde-bd);color:var(--verde)">✓ Lembrei</button>
@@ -196,7 +182,6 @@ function revelar(){
       ${last?'<button class="bt" data-home="1">✓ Terminar bloco</button>':''}
     </div>`;
   $('pos').insertAdjacentHTML('beforeend',extra);
-  const base=$('pos').querySelector('.base'); if(base)base.scrollIntoView({behavior:'smooth',block:'center'});
 }
 
 function marcar(v){
@@ -207,14 +192,6 @@ function marcar(v){
     b.style.background=on?(v==='ok'?'var(--verde-bg)':'var(--vermelho-bg)'):'';
     b.style.fontWeight=on?'700':'';
   });
-}
-
-/* "ver corrigida": alterna entre lacunas-preenchidas (vermelho) e texto completo corrido (verde) */
-function toggleCorrigida(btn){
-  const it=bloco.itens[ordem[pos]], lei=$('lei'); if(!lei)return;
-  corrigidaOn=!corrigidaOn;
-  if(corrigidaOn){ lei.innerHTML=leiCorrHTML(it); lei.classList.add('corrigida'); btn.textContent='↩ Ver com lacunas'; }
-  else { lei.innerHTML=leiHTML(it,true); lei.classList.remove('corrigida'); btn.textContent='✎ Ver corrigida (texto completo)'; }
 }
 
 /* reaparição: reinjeta a carta atual N questões à frente na fila da sessão (não apertar = segue normal) */
@@ -230,7 +207,6 @@ document.addEventListener('click',e=>{
   const h=e.target.closest('[data-home]'); if(h){home();scrollTo(0,0);return}
   const b=e.target.closest('[data-bloco]'); if(b){abrir(+b.dataset.bloco);scrollTo(0,0);return}
   const r=e.target.closest('[data-rev]'); if(r){revelar();return}
-  const cr=e.target.closest('[data-corr]'); if(cr){toggleCorrigida(cr);return}
   const sc=e.target.closest('[data-sched]'); if(sc){ if(sc.dataset.sched==='toggle'){const row=$('schrow');if(row)row.hidden=!row.hidden;} else {agendarRever(+sc.dataset.sched);} return}
   const m=e.target.closest('[data-marca]'); if(m){marcar(m.dataset.marca);return}
   const nv=e.target.closest('[data-nav]'); if(nv){pos+=+nv.dataset.nav;if(pos<0)pos=0;if(pos>=ordem.length)pos=ordem.length-1;telaItem();scrollTo(0,0);return}
