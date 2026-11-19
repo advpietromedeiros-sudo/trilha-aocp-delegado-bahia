@@ -2,9 +2,18 @@
 
 > Estado, tarefas e o que ficou rodando. Atualizado a cada ~15 min de trabalho e no fechamento.
 
-**Última atualização:** 19/11/2026, 15h11.
+**Última atualização:** 19/11/2026, 16h19.
 
 ## Estado
+
+- 🆕 **19/11/2026, 16h19 — Modo Teste consertado + protótipo "Kindle + Stories".** (1) O Teste da Lei na Íntegra
+  não funcionava (`render()` reiniciava o contador a cada toque — o titular "não consegui usar"); separei navegação
+  (`abrir`) de re-render (`render`) e redesenhei como autoteste: lacuna a lacuna, "Revelar" → "Acertei/Errei" →
+  placar (X de N, %) + "Refazer". `testar_lei_integra.cjs` cobre o fluxo; commit `5138502`, CI verde, Portão 41.
+  (2) Protótipo aprovado p/ commit (`e9123a0`): `stories/kindle-stories.stories.js` — home estilo Kindle (Retomar +
+  Biblioteca em capas + barra inferior) + modo **Stories** (tela cheia, barrinhas no topo, toque revela/avança),
+  em "Aguardando Análise" no Storybook. ⏳ **Falta implementar de verdade** (home-launcher real + Stories como 4º
+  modo na Lei na Íntegra puxando os 66 artigos) quando o titular aprovar.
 
 - 🆕 **19/11/2026, 15h11 — Lei na Íntegra: Fase 3 (CC + CPC + CTN).** A pedido do titular ("faça, mas antes me envie
   o link"). Enviados e conferidos (HTTP 200, versão no ar) os links públicos do projeto. Depois ampliei a aba de 40
