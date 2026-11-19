@@ -385,3 +385,19 @@ prompt do servidor já manda não aplicar norma posterior.
 - **Autorização:** pedido escrito do titular (18/11/2026), para estudo pessoal; o app não vai para o portal (D-009).
   Sem autorização do autor do material para distribuição — por isso só a incidência (fato) orienta, e o conteúdo
   publicado é autoral.
+
+## 18/11/2026 — "DECORANDO A LEI SECA AOCP 01" como GUIA de incidência (Bloco 15)
+
+- **O quê:** PDF de terceiro com 723 assertivas de Verdadeiro/Falso extraídas de provas AOCP, cada uma marcada com
+  o artigo e o código de origem (`[Art. X, CÓDIGO]`) e o texto oficial grifado. Usado **somente como guia** para
+  apurar QUAIS artigos ainda não haviam sido vistos nos Blocos 1 a 14 e mereciam entrar. A medição (dump do
+  `d|art` por diploma) mostrou que o corpo ainda intocado era o **Código Civil**; daí o Bloco 15 "Lei Seca AOCP II
+  (Civil)", com 105 cartas de Parte Geral, posse, família e sucessões.
+- **O que entrou no Git:** **nada do material de terceiro**. A letra de lei do Código Civil é **pública/oficial** e
+  as 105 cartas de lacuna (`discursiva/lei_seca_delegado_ba_dados.js`) foram **redigidas de forma autoral** pela
+  sessão, a partir do texto legal. A incidência serviu de bússola, não de fonte de texto.
+- **Marca d'água (dado pessoal de terceiro):** o PDF traz no rodapé **nome e CPF** do comprador. Esse nome e esse
+  CPF **não** estão escritos em arquivo nenhum do repositório; o PDF **não** entra no Git.
+- **Autorização:** pedido escrito do titular (18/11/2026: *"veja esse arquivo quais ainda não foram cobertos nos
+  blocos de 1 a 14 e gere o Bloco 15"*), para estudo pessoal; o app não vai para o portal (D-009). Sem autorização
+  do autor do material para distribuição — por isso só a incidência (fato) orienta, e o conteúdo publicado é autoral.
