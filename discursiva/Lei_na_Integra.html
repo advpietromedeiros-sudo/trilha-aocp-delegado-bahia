@@ -69,6 +69,12 @@ p{text-align:justify}
 .mnem small{color:#d98fbd;font-weight:700}
 .dica{color:var(--suave);font-size:.9em;margin:12px 2px 2px;display:flex;align-items:center;gap:6px}
 .base{display:inline-flex;align-items:center;gap:6px;margin:12px 0 2px;background:var(--azul-claro);border:1px solid #d4e1f3;border-radius:9px;padding:5px 12px;font-size:.86em;color:var(--azul);font-weight:700}
+.tpanel{margin:14px 0 2px;padding:14px 16px;background:var(--azul-claro);border:1px solid #d4e1f3;border-radius:12px;display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.tpanel.tdone{background:var(--verde-bg);border-color:var(--verde-bd)}
+.tprog{font-weight:700;color:var(--azul)}
+.trow{display:flex;gap:10px;flex-wrap:wrap}
+.tscore{font-size:1.15em;color:var(--verde);font-weight:700}
+.tpanel .bt{min-width:150px;justify-content:center}
 .navrow{display:flex;gap:10px;margin-top:16px}
 .navrow .bt{flex:1;justify-content:center}
 .ghint{display:inline-flex;align-items:center;gap:6px;background:#ffffff22;border:1px solid #ffffff44;border-radius:999px;padding:3px 10px;font-size:.8em;margin-top:10px}
@@ -97,7 +103,7 @@ const CHAVE='leiintegra:v1';
 let st={done:{}};try{st=Object.assign(st,JSON.parse(localStorage.getItem(CHAVE)||'{}'))}catch(e){}
 const salvar=()=>{try{localStorage.setItem(CHAVE,JSON.stringify(st))}catch(e){}};
 const A=Array.isArray(window.LEI_INTEGRA)?window.LEI_INTEGRA:[];
-let atual=0, modo='esconder', foco=0, GAPS=[];
+let atual=0, modo='esconder', foco=0, GAPS=[], grade=false, acertos=0;
 
 const chaveArt=a=>a.d+' '+a.art;
 
@@ -115,9 +121,10 @@ function montaTexto(txt, poder){
     if(modo==='revisao'){ h+='<span class="gr'+(poder?' poder':'')+'">'+esc(p.s)+'</span>'; return; }
     const gi=GAPS.length; GAPS.push(p.s);
     let cls='lac';
-    if(modo==='teste'){ if(gi<foco) cls+=' on'; else if(gi===foco) cls+=' foco'; }
+    const mostra=(modo==='teste') && (gi<foco || (gi===foco && grade));
+    if(modo==='teste'){ if(mostra) cls+=' on'; if(gi===foco) cls+=' foco'; }
     const w=Math.min(300,Math.max(52,p.s.length*9));
-    const dentro=(modo==='teste'&&gi<foco)?esc(p.s):'';
+    const dentro=mostra?esc(p.s):'';
     const stl=(cls.indexOf(' on')<0)?(' style="width:'+w+'px"'):'';
     h+='<span class="'+cls+'" data-gi="'+gi+'"'+stl+'>'+dentro+'</span>';
   });
@@ -152,8 +159,26 @@ function home(){
   $('tela').innerHTML=h;
 }
 
-function leitor(i){
-  atual=((i%A.length)+A.length)%A.length; foco=0; GAPS=[];
+function abrir(i){ atual=((i%A.length)+A.length)%A.length; foco=0; grade=false; acertos=0; render(); }
+
+function painelTeste(tot){
+  if(tot===0) return '<div class="tpanel"><span class="tprog">Este artigo não tem lacunas para testar.</span></div>';
+  if(foco>=tot){
+    const pct=Math.round(acertos/tot*100);
+    return '<div class="tpanel tdone"><div class="tscore">🎯 Você acertou <b>'+acertos+'</b> de <b>'+tot+'</b> ('+pct+'%)</div>'
+      +'<button class="bt pri" data-refazer="1">↻ Refazer este artigo</button></div>';
+  }
+  if(grade){
+    return '<div class="tpanel"><span class="tprog">Lacuna '+(foco+1)+' de '+tot+' — você acertou?</span>'
+      +'<div class="trow"><button class="bt" data-grade="ok" style="border-color:var(--verde-bd);color:var(--verde)">✓ Acertei</button>'
+      +'<button class="bt" data-grade="no" style="border-color:var(--vermelho-bd);color:var(--vermelho)">✗ Errei</button></div></div>';
+  }
+  return '<div class="tpanel"><span class="tprog">Lacuna <b>'+(foco+1)+'</b> de '+tot+' · acertos: '+acertos+'</span>'
+    +'<button class="bt pri" data-rev-teste="1">👁️ Revelar a resposta</button></div>';
+}
+
+function render(){
+  GAPS=[];
   const a=A[atual];
   let body='<p class="art-p"><b class="rot">Art. '+esc(a.art)+'</b> '+montaTexto(a.caput)+'</p>';
   if(modo==='revisao' && a.mnem) body+='<div class="mnem">🧠 '+esc(a.mnem)+' <small>mnemônico</small></div>';
@@ -166,8 +191,9 @@ function leitor(i){
   (a.paragrafos||[]).forEach(pg=>{
     body+='<p class="art-p"><b class="rot">'+esc(pg.rot)+'</b> '+montaTexto(pg.t, pg.poder)+'</p>';
   });
+  const tot=totalGaps(a);
   const dica={esconder:'Toque em cada caixa para revelar. Tente recitar antes.',
-              teste:'Uma lacuna por vez. Toque para avançar e ir preenchendo.',
+              teste:'Tente lembrar a lacuna em destaque; revele e marque se acertou. Vai uma por vez, com placar no fim.',
               revisao:'O secundário fica apagado; o essencial, grifado. Fixe pela ordem do mnemônico.'}[modo];
   const mbar='<div class="mbar"><div class="modos">'
     +'<button class="modo'+(modo==='esconder'?' on':'')+'" data-modo="esconder">🙈 Esconder</button>'
@@ -177,6 +203,7 @@ function leitor(i){
   $('tela').innerHTML='<section class="card">'+mbar
     +'<div class="titulo">'+esc(a.titulo)+'</div>'
     +'<div class="lei-full">'+body+'</div>'
+    +(modo==='teste'?painelTeste(tot):'')
     +'<div class="dica">💡 '+dica+'</div>'
     +'<div><span class="base">📖 '+esc(a.base)+'</span></div>'
     +'<div class="navrow"><button class="bt" data-nav="-1">← Anterior</button>'
@@ -184,6 +211,7 @@ function leitor(i){
     +'<button class="bt pri" data-nav="1">Próximo →</button></div>'
     +'<div class="bt-lin"><button class="bt" data-domino="1" style="border-color:var(--verde-bd);color:var(--verde)">✓ Já domino este artigo</button></div>'
     +'</section>';
+  if(modo==='teste' && foco<tot){ const el=document.querySelector('.lac.foco'); if(el&&el.scrollIntoView){try{el.scrollIntoView({block:'center',behavior:'smooth'})}catch(e){}} }
 }
 
 function falar(btn){
@@ -200,15 +228,17 @@ function falar(btn){
 }
 
 document.addEventListener('click', e=>{
-  const mb=e.target.closest('[data-modo]'); if(mb){ modo=mb.dataset.modo; leitor(atual); return; }
+  const mb=e.target.closest('[data-modo]'); if(mb){ modo=mb.dataset.modo; foco=0; grade=false; acertos=0; render(); return; }
   const som=e.target.closest('[data-som]'); if(som){ falar(som); return; }
-  const it=e.target.closest('[data-artigo]'); if(it){ leitor(+it.dataset.artigo); scrollTo(0,0); return; }
+  const it=e.target.closest('[data-artigo]'); if(it){ abrir(+it.dataset.artigo); scrollTo(0,0); return; }
   const hm=e.target.closest('[data-home]'); if(hm){ if(window.speechSynthesis)speechSynthesis.cancel(); home(); scrollTo(0,0); return; }
-  const nav=e.target.closest('[data-nav]'); if(nav){ if(window.speechSynthesis)speechSynthesis.cancel(); leitor(atual+(+nav.dataset.nav)); scrollTo(0,0); return; }
-  const dm=e.target.closest('[data-domino]'); if(dm){ st.done[chaveArt(A[atual])]=true; salvar(); leitor(atual); return; }
+  const nav=e.target.closest('[data-nav]'); if(nav){ if(window.speechSynthesis)speechSynthesis.cancel(); abrir(atual+(+nav.dataset.nav)); scrollTo(0,0); return; }
+  const dm=e.target.closest('[data-domino]'); if(dm){ st.done[chaveArt(A[atual])]=true; salvar(); render(); return; }
+  const rt=e.target.closest('[data-rev-teste]'); if(rt){ grade=true; render(); return; }
+  const gr=e.target.closest('[data-grade]'); if(gr){ if(gr.dataset.grade==='ok') acertos++; foco++; grade=false; render(); return; }
+  const rf=e.target.closest('[data-refazer]'); if(rf){ foco=0; grade=false; acertos=0; render(); return; }
   const lac=e.target.closest('.lac');
   if(lac && modo==='esconder'){ lac.classList.add('on'); lac.textContent=GAPS[+lac.dataset.gi]; lac.style.width=''; return; }
-  if(modo==='teste' && (lac || e.target.closest('.lei-full'))){ if(foco<GAPS.length){ foco++; leitor(atual); } return; }
 });
 
 $('rodape').innerHTML='Texto oficial da CF/88 (público). Método de estudo autoral; nenhum material de terceiro entra aqui — só a incidência medida orientou a seleção dos artigos (ver docs/PROCEDENCIA.md).';

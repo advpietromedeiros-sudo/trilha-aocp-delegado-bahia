@@ -70,6 +70,16 @@ prova("clicar numa lacuna a revela (.on, com texto)", primeira.classList.contain
 d.querySelector('[data-modo="teste"]').click();
 prova("no Teste fica exatamente uma lacuna em foco", d.querySelectorAll(".lac.foco").length === 1, String(d.querySelectorAll(".lac.foco").length));
 
+// Teste é autoteste: Revelar preenche a lacuna em foco e oferece Acertei/Errei
+d.querySelector("[data-rev-teste]").click();
+prova("Revelar no Teste preenche a lacuna em foco e oferece Acertei/Errei",
+  d.querySelector(".lac.foco") && d.querySelector(".lac.foco").textContent.length > 0 && !!d.querySelector("[data-grade]"));
+
+// marcar Acertei avança para a próxima lacuna e conta o acerto (sem reiniciar — era o bug)
+d.querySelector('[data-grade="ok"]').click();
+prova("Acertei avança para a 2ª lacuna e conta o acerto (não reinicia)",
+  /Lacuna\s*2\s*de/.test(d.body.textContent) && /acertos:\s*1/.test(d.body.textContent), d.querySelector(".tprog") && d.querySelector(".tprog").textContent);
+
 // modo Revisão: grifa o essencial e mostra o mnemônico
 d.querySelector('[data-modo="revisao"]').click();
 prova("no Revisão o essencial fica grifado e o mnemônico aparece", d.querySelectorAll(".gr").length >= 3 && !!d.querySelector(".mnem"),
