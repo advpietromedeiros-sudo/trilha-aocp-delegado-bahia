@@ -2,9 +2,17 @@
 
 > Estado, tarefas e o que ficou rodando. Atualizado a cada ~15 min de trabalho e no fechamento.
 
-**Última atualização:** 19/11/2026, 16h19.
+**Última atualização:** 19/11/2026, 16h57.
 
 ## Estado
+
+- 🆕 **19/11/2026, 16h57 — Kindle + Stories implementados na Lei na Íntegra** (titular: "Kindle pode fazer").
+  A home virou **estilo Kindle**: "Retomar" (último artigo estudado, salvo em `leiintegra:v1.last`) + **Biblioteca em
+  capas por diploma** (CF/CP/CPP/CC/CPC/CTN, com % estudado); tocar numa capa abre a lista do diploma. Novo **4º modo
+  Stories** (pegada Instagram): tela cheia com barrinhas de progresso no topo, um slide por lacuna, toque à direita
+  revela/avança, à esquerda volta, ✕ fecha, slide final de "fim". Entra por "▶ Stories deste artigo" (no leitor) e
+  "▶ Treinar <diploma> em Stories" (na tela do diploma), puxando os 66 artigos reais. `testar_lei_integra.cjs` 19/19
+  (home Kindle, capa→artigo, 3 modos, Stories) + autoteste; Portão 41; pacote privado regenerado (86,7 KB).
 
 - 🆕 **19/11/2026, 16h19 — Modo Teste consertado + protótipo "Kindle + Stories".** (1) O Teste da Lei na Íntegra
   não funcionava (`render()` reiniciava o contador a cada toque — o titular "não consegui usar"); separei navegação

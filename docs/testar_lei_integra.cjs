@@ -48,8 +48,12 @@ prova("as palavras-chave {} estão todas fechadas", desbalanceado.length === 0, 
 const temImp = (A || []).some(a => (a.incisos || []).some(i => i.imp || i.destaque));
 prova("há incisos marcados como mais cobrados (imp/destaque)", temImp);
 
-// home mostra os artigos
-prova("a home mostra a lista de artigos", d.querySelectorAll("[data-artigo]").length >= 6, String(d.querySelectorAll("[data-artigo]").length));
+// home estilo Kindle: a Biblioteca mostra os diplomas em capas
+prova("a home estilo Kindle mostra a Biblioteca por diplomas (capas)", d.querySelectorAll("[data-dip]").length >= 6, String(d.querySelectorAll("[data-dip]").length));
+
+// abrir o diploma CF lista seus artigos
+d.querySelector('[data-dip="CF"]').click();
+prova("abrir um diploma lista seus artigos", d.querySelectorAll("[data-artigo]").length >= 3, String(d.querySelectorAll("[data-artigo]").length));
 
 // abrir o art. 5º (o mais denso) — abre o leitor com barra de modos, áudio e base
 const alvo = A.findIndex(a => a.art === "5º");
@@ -90,9 +94,23 @@ d.querySelector("[data-domino]").click();
 let salvo = {}; try { salvo = JSON.parse(w.localStorage.getItem("leiintegra:v1") || "{}"); } catch (e) {}
 prova("marcar \"Já domino\" salva o progresso (localStorage)", salvo.done && salvo.done["CF 5º"] === true, JSON.stringify(salvo.done || {}).slice(0, 60));
 
-// voltar à home reflete o treinado
+// voltar à home (Kindle) e abrir o diploma reflete o treinado
 d.querySelector("[data-home]").click();
-prova("a home mostra o artigo como treinado", /treinado/.test(d.body.textContent) && !!d.querySelector(".selo.feito"));
+d.querySelector('[data-dip="CF"]').click();
+prova("o diploma mostra o artigo como treinado", /treinado/.test(d.body.textContent) && !!d.querySelector(".selo.feito"));
+
+// Modo Stories: abrir pelo artigo mostra o palco com barrinhas; tocar à direita revela a lacuna
+d.querySelector('[data-artigo="' + alvo + '"]').click();         // reabre o leitor do art. 5º
+d.querySelector('[data-stories="art:' + alvo + '"]').click();    // ▶ Stories deste artigo
+prova("Stories abre o palco cheio com barrinhas de progresso e a 1ª lacuna oculta",
+  !!d.querySelector("#stage.on") && d.querySelectorAll("#segs .seg").length >= 1 && !!d.querySelector(".pill.hid"));
+d.querySelector('[data-tap="next"]').click();   // 1º toque à direita: revela
+prova("tocar à direita revela a lacuna do story (pill deixa de estar oculta)",
+  !!d.querySelector("#stage .pill") && !d.querySelector("#stage .pill.hid"));
+d.querySelector('[data-tap="next"]').click();   // 2º toque: avança (barra anterior preenchida)
+prova("tocar de novo avança para o próximo story", d.querySelectorAll("#segs .seg.done").length >= 1);
+d.querySelector('[data-close]').click();
+prova("o ✕ fecha o Stories", !d.querySelector("#stage.on"));
 
 if (AUTO) { console.log(falhas ? "AUTOTESTE OK: o defeito plantado foi acusado" : "AUTOTESTE FALHOU: o defeito passou"); process.exit(falhas ? 0 : 1); }
 console.log(falhas ? `❌ ${falhas} falha(s)` : "✅ Lei na Íntegra verde"); process.exit(falhas ? 1 : 0);

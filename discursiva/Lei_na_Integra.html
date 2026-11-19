@@ -81,6 +81,45 @@ p{text-align:justify}
 kbd{background:#fff;color:var(--azul);border-radius:5px;padding:0 6px;font:600 .85em/1.5 system-ui;border:1px solid #cdd8e8}
 footer{max-width:860px;margin:6px auto 44px;padding:0 20px;color:#73819a;font-size:.82em;text-align:justify}
 @media(max-width:600px){.card{padding:16px}.wrap{padding:0 14px}main{padding:14px}.modo{font-size:12px;padding:9px 4px}}
+/* ===== Home estilo Kindle ===== */
+.ksec{font-weight:800;color:var(--azul);margin:16px 2px 9px;font-size:1.02em;display:flex;align-items:center}
+.ksec .kmais{margin-left:auto;color:var(--suave);font-weight:400;font-size:.82em}
+.rcard{display:flex;gap:12px;width:100%;text-align:left;background:var(--papel);border:1px solid var(--linha);border-radius:14px;padding:12px 14px;cursor:pointer;font:inherit;align-items:center;box-shadow:var(--sombra)}
+.rcard:hover{border-color:var(--azul2)}
+.rcap{width:40px;height:54px;border-radius:5px;background:linear-gradient(135deg,var(--azul2),var(--azul));color:#fff;font:800 14px system-ui;display:flex;align-items:center;justify-content:center;flex:none}
+.rc-tt{font-weight:700;color:var(--azul)}
+.rc-au{color:var(--suave);font-size:.88em;margin-top:2px}
+.rc-bar{height:5px;background:#e7edf5;border-radius:999px;margin-top:8px;overflow:hidden}
+.rc-bar>i{display:block;height:100%;background:linear-gradient(90deg,var(--azul2),#3b7fd1)}
+.estante{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.cap{cursor:pointer;background:none;border:0;padding:0;font:inherit}
+.capimg{aspect-ratio:3/4;border-radius:9px;background:linear-gradient(160deg,var(--azul2),var(--azul));color:#fff;position:relative;display:flex;flex-direction:column;justify-content:flex-end;padding:11px;box-shadow:var(--sombra)}
+.capimg .sig{font:800 30px Georgia,serif;line-height:1}
+.capimg .nm{font:600 11px system-ui;opacity:.95;line-height:1.15;text-align:left;margin-top:4px}
+.capimg .pc{position:absolute;top:7px;right:7px;background:#fff;color:var(--azul);border-radius:999px;font:700 10px system-ui;padding:2px 7px}
+.cap .leg{font:400 11px system-ui;color:var(--suave);margin-top:5px;text-align:center}
+/* ===== Stories (pegada Instagram) ===== */
+.stage{position:fixed;inset:0;background:#141414;color:#fff;display:none;flex-direction:column;z-index:60}
+.stage.on{display:flex}
+.segs{display:flex;gap:3px;padding:12px 12px 6px}
+.seg{flex:1;height:3px;background:rgba(255,255,255,.28);border-radius:3px}
+.seg.done,.seg.cur{background:#fff}
+.shead{display:flex;align-items:center;gap:10px;padding:2px 16px 6px}
+.schip{background:rgba(255,255,255,.16);border-radius:999px;padding:4px 12px;font:800 13px system-ui;flex:none}
+.srub{font:400 13px system-ui;opacity:.85;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.sclose{margin-left:auto;background:none;border:0;color:#fff;font-size:22px;cursor:pointer;flex:none;line-height:1}
+.sbody{flex:1;display:flex;flex-direction:column;justify-content:center;padding:20px 28px}
+.sart{font:700 12px system-ui;opacity:.6;letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px}
+.stext{font:500 24px/1.55 Georgia,serif}
+.pill{display:inline-block;background:#fff;color:#141414;border-radius:8px;padding:0 10px;font-weight:800}
+.pill.hid{color:transparent;background:rgba(255,255,255,.3);min-width:80px}
+.shint{position:absolute;bottom:24px;left:0;right:0;text-align:center;font:600 13px system-ui;opacity:.7;pointer-events:none}
+.taps{position:absolute;inset:48px 0 0;display:flex}
+.stage.done .taps{display:none}
+.taps .z{flex:1} .taps .z.r{flex:2}
+.sdone{text-align:center}
+.sdone .big{font:800 30px system-ui;margin-bottom:8px}
+.bt2{margin-top:18px;background:#fff;color:#141414;border:0;border-radius:10px;padding:12px 22px;font:700 15px system-ui;cursor:pointer}
 </style>
 </head>
 <body>
@@ -100,7 +139,8 @@ footer{max-width:860px;margin:6px auto 44px;padding:0 20px;color:#73819a;font-si
 const $=id=>document.getElementById(id);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const CHAVE='leiintegra:v1';
-let st={done:{}};try{st=Object.assign(st,JSON.parse(localStorage.getItem(CHAVE)||'{}'))}catch(e){}
+let st={done:{},last:null};try{st=Object.assign(st,JSON.parse(localStorage.getItem(CHAVE)||'{}'))}catch(e){}
+const NOMES={CF:'Constituição Federal',CP:'Código Penal',CPP:'Processo Penal',CC:'Código Civil',CPC:'Processo Civil',CTN:'Código Tributário'};
 const salvar=()=>{try{localStorage.setItem(CHAVE,JSON.stringify(st))}catch(e){}};
 const A=Array.isArray(window.LEI_INTEGRA)?window.LEI_INTEGRA:[];
 let atual=0, modo='esconder', foco=0, GAPS=[], grade=false, acertos=0;
@@ -139,27 +179,54 @@ function totalGaps(a){
   return n;
 }
 
-function home(){
-  foco=0;
-  const feitos=A.filter(a=>st.done[chaveArt(a)]).length;
-  let h='<section class="card"><h2>⚖️ A letra de lei virando exercício</h2>'
-    +'<p>São <b>'+A.length+'</b> artigos de alta incidência, estudados por <b>recordação ativa</b>. Cada palavra‑chave entre caixas é testada. O progresso fica salvo neste navegador.</p>'
-    +'<div class="nums"><div class="num"><b>'+A.length+'</b><small>artigos</small></div>'
-    +'<div class="num"><b>'+feitos+'</b><small>treinados</small></div>'
-    +'<div class="num"><b>3</b><small>modos de estudo</small></div></div></section>';
-  h+='<div class="lista">';
-  A.forEach((a,i)=>{
-    const ok=st.done[chaveArt(a)];
-    h+='<button class="item" data-artigo="'+i+'">'
-      +'<span class="selo '+(ok?'feito':'pend')+'">'+(ok?'✓ treinado':'treinar')+'</span>'
-      +'<span class="tt">Art. '+esc(a.art)+' · '+esc(a.d)+'</span>'
-      +'<span class="meta">'+esc(a.rub)+' — '+esc(a.titulo)+'</span></button>';
-  });
-  h+='</div>';
-  $('tela').innerHTML=h;
+// agrupa os artigos por diploma, na ordem em que aparecem
+function porDiploma(){
+  const ordem=[], map={};
+  A.forEach((a,i)=>{ if(!map[a.d]){ map[a.d]={sig:a.d,idxs:[]}; ordem.push(map[a.d]); } map[a.d].idxs.push(i); });
+  return ordem;
 }
 
-function abrir(i){ atual=((i%A.length)+A.length)%A.length; foco=0; grade=false; acertos=0; render(); }
+function home(){
+  foco=0;
+  let h='';
+  // Retomar (continuar de onde parou)
+  if(st.last && A[st.last.i] && A[st.last.i].art===st.last.art){
+    const a=A[st.last.i], tot=totalGaps(a), fe=st.done[chaveArt(a)]?100:0;
+    h+='<div class="ksec">Retomar</div>'
+      +'<button class="rcard" data-artigo="'+st.last.i+'"><div class="rcap">'+esc(a.d)+'</div>'
+      +'<div style="flex:1"><div class="rc-tt">Art. '+esc(a.art)+' · '+esc(a.d)+'</div>'
+      +'<div class="rc-au">'+esc(a.rub)+'</div>'
+      +'<div class="rc-bar"><i style="width:'+fe+'%"></i></div></div></button>';
+  }
+  // Biblioteca — capas por diploma
+  h+='<div class="ksec">Biblioteca <span class="kmais">'+A.length+' artigos</span></div><div class="estante">';
+  porDiploma().forEach(d=>{
+    const feitos=d.idxs.filter(i=>st.done[chaveArt(A[i])]).length;
+    const pct=Math.round(feitos/d.idxs.length*100);
+    h+='<button class="cap" data-dip="'+d.sig+'"><div class="capimg"><span class="pc">'+pct+'%</span>'
+      +'<span class="sig">'+esc(d.sig)+'</span><span class="nm">'+esc(NOMES[d.sig]||d.sig)+'</span></div>'
+      +'<div class="leg">'+d.idxs.length+' artigos</div></button>';
+  });
+  h+='</div>';
+  $('tela').innerHTML='<section class="card">'+h+'</section>';
+}
+
+// tela de um diploma: lista de artigos + treinar em Stories
+function dploma(sig){
+  foco=0;
+  const idxs=[]; A.forEach((a,i)=>{ if(a.d===sig) idxs.push(i); });
+  let h='<div class="bt-lin"><button class="bt" data-home="1">← Biblioteca</button>'
+    +'<button class="bt pri" data-stories="dip:'+sig+'">▶ Treinar '+esc(sig)+' em Stories</button></div>'
+    +'<h2 style="margin-top:14px">'+esc(NOMES[sig]||sig)+'</h2><div class="lista">';
+  idxs.forEach(i=>{ const a=A[i], ok=st.done[chaveArt(a)];
+    h+='<button class="item" data-artigo="'+i+'"><span class="selo '+(ok?'feito':'pend')+'">'+(ok?'✓ treinado':'treinar')+'</span>'
+      +'<span class="tt">Art. '+esc(a.art)+'</span><span class="meta">'+esc(a.rub)+'</span></button>';
+  });
+  h+='</div>';
+  $('tela').innerHTML='<section class="card">'+h+'</section>';
+}
+
+function abrir(i){ atual=((i%A.length)+A.length)%A.length; foco=0; grade=false; acertos=0; st.last={art:A[atual].art,i:atual}; salvar(); render(); }
 
 function painelTeste(tot){
   if(tot===0) return '<div class="tpanel"><span class="tprog">Este artigo não tem lacunas para testar.</span></div>';
@@ -209,10 +276,68 @@ function render(){
     +'<div class="navrow"><button class="bt" data-nav="-1">← Anterior</button>'
     +'<button class="bt" data-home="1">Todos os artigos</button>'
     +'<button class="bt pri" data-nav="1">Próximo →</button></div>'
-    +'<div class="bt-lin"><button class="bt" data-domino="1" style="border-color:var(--verde-bd);color:var(--verde)">✓ Já domino este artigo</button></div>'
+    +'<div class="bt-lin"><button class="bt pri" data-stories="art:'+atual+'">▶ Stories deste artigo</button>'
+    +'<button class="bt" data-domino="1" style="border-color:var(--verde-bd);color:var(--verde)">✓ Já domino este artigo</button></div>'
     +'</section>';
   if(modo==='teste' && foco<tot){ const el=document.querySelector('.lac.foco'); if(el&&el.scrollIntoView){try{el.scrollIntoView({block:'center',behavior:'smooth'})}catch(e){}} }
 }
+
+/* ===== Stories (pegada Instagram): um slide por lacuna ===== */
+let storySlides=[], sIdx=0, sRev=false;
+function slidesArtigo(a){
+  const campos=[{t:a.caput,rot:'caput'}]
+    .concat((a.incisos||[]).map(i=>({t:i.t,rot:i.n})))
+    .concat((a.paragrafos||[]).map(p=>({t:p.t,rot:p.rot})));
+  const out=[];
+  campos.forEach(c=>{ const toks=partes(c.t);
+    toks.forEach((tk,i)=>{ if(tk.k==='g') out.push({d:a.d,art:a.art,rub:a.rub,rot:c.rot,toks:toks,target:i}); });
+  });
+  return out;
+}
+function corpoSlide(sl){
+  let h='';
+  sl.toks.forEach((tk,i)=>{
+    if(tk.k==='t'){ h+=esc(tk.s); return; }
+    if(i===sl.target){ h+='<span class="pill'+(sRev?'':' hid')+'">'+esc(tk.s)+'</span>'; }
+    else { h+=esc(tk.s); }  // outras lacunas aparecem como contexto
+  });
+  return h;
+}
+function stageEl(){
+  let s=document.getElementById('stage');
+  if(!s){ s=document.createElement('div'); s.id='stage'; s.className='stage';
+    s.innerHTML='<div class="segs" id="segs"></div>'
+      +'<div class="shead"><span class="schip" id="schip"></span><span class="srub" id="srub"></span><button class="sclose" data-close="1">✕</button></div>'
+      +'<div class="sbody" id="sbody"></div><div class="shint" id="shint"></div>'
+      +'<div class="taps"><div class="z l" data-tap="prev"></div><div class="z r" data-tap="next"></div></div>';
+    document.body.appendChild(s);
+  }
+  return s;
+}
+function abrirStories(scope){
+  let sl=[];
+  if(scope.indexOf('art:')===0){ sl=slidesArtigo(A[+scope.slice(4)]); }
+  else if(scope.indexOf('dip:')===0){ const sig=scope.slice(4); A.forEach(a=>{ if(a.d===sig) sl=sl.concat(slidesArtigo(a)); }); }
+  storySlides=sl; sIdx=0; sRev=false; stageEl().classList.add('on'); pintaStory();
+}
+function pintaStory(){
+  const stg=stageEl(), tot=storySlides.length, fim=sIdx>=tot;
+  stg.classList.toggle('done', fim);
+  document.getElementById('segs').innerHTML=storySlides.map((_,i)=>'<div class="seg'+(i<sIdx||fim?' done':(i===sIdx?' cur':''))+'"></div>').join('');
+  if(fim){
+    document.getElementById('schip').textContent=''; document.getElementById('srub').textContent=''; document.getElementById('shint').textContent='';
+    document.getElementById('sbody').innerHTML='<div class="sdone"><div class="big">🎉 Fim do bloco</div><div>Você passou por '+tot+' ponto(s) da lei.</div><button class="bt2" data-restart="1">↺ Rever de novo</button></div>';
+    return;
+  }
+  const sl=storySlides[sIdx];
+  document.getElementById('schip').textContent=sl.d+' · Art. '+sl.art;
+  document.getElementById('srub').textContent=sl.rub;
+  document.getElementById('sbody').innerHTML='<div class="sart">'+esc(sl.rot)+'</div><div class="stext">'+corpoSlide(sl)+'</div>';
+  document.getElementById('shint').textContent=sRev?'toque à direita para continuar ›':'toque à direita para revelar ›';
+}
+function nextStory(){ if(sIdx>=storySlides.length)return; if(!sRev){sRev=true;pintaStory();return;} sIdx++; sRev=false; pintaStory(); }
+function prevStory(){ if(sRev){sRev=false;pintaStory();return;} if(sIdx>0){sIdx--;sRev=true;pintaStory();} }
+function fecharStory(){ const s=document.getElementById('stage'); if(s)s.classList.remove('on'); }
 
 function falar(btn){
   if(!('speechSynthesis' in window)){ btn.textContent='🔇'; return; }
@@ -228,6 +353,12 @@ function falar(btn){
 }
 
 document.addEventListener('click', e=>{
+  // Stories (overlay)
+  const so=e.target.closest('[data-stories]'); if(so){ abrirStories(so.dataset.stories); return; }
+  if(e.target.closest('[data-close]')){ fecharStory(); return; }
+  if(e.target.closest('[data-restart]')){ sIdx=0; sRev=false; pintaStory(); return; }
+  const tp=e.target.closest('[data-tap]'); if(tp){ tp.dataset.tap==='next'?nextStory():prevStory(); return; }
+  const dp=e.target.closest('[data-dip]'); if(dp){ dploma(dp.dataset.dip); scrollTo(0,0); return; }
   const mb=e.target.closest('[data-modo]'); if(mb){ modo=mb.dataset.modo; foco=0; grade=false; acertos=0; render(); return; }
   const som=e.target.closest('[data-som]'); if(som){ falar(som); return; }
   const it=e.target.closest('[data-artigo]'); if(it){ abrir(+it.dataset.artigo); scrollTo(0,0); return; }
