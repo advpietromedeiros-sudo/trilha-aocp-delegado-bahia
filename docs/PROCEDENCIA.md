@@ -369,3 +369,19 @@ prompt do servidor já manda não aplicar norma posterior.
 - **Autorização:** pedido escrito do titular (16/11/2026: *"edital inteiro, por frequência"*, após confirmar o uso dos
   PDFs como base de prioridade), para estudo pessoal; o app não vai para o portal (D-009). **Sem** autorização do autor
   do material para distribuição — por isso só o ranking (fato) orienta, e o conteúdo publicado é autoral.
+
+## 18/11/2026 — "LD - JURIS AOCP" e "LD - AOCP" como GUIA de incidência (Blocos 13 e 14)
+
+- **O quê:** dois PDFs de terceiro da "Legislação/Jurisprudência Destacada" voltados a provas da banca AOCP —
+  um de **lei seca** (artigos por disciplina, com nº de vezes que caíram, por cargo/instituição/ano) e um de
+  **jurisprudência** (súmulas, teses de repercussão geral e julgados do STF/STJ, também com a incidência por prova).
+  Usados **somente como guia de priorização** — para decidir QUAIS artigos (Bloco 13 "Lei Seca AOCP") e QUAIS
+  súmulas/teses (Bloco 14 "Juris AOCP") entram no app, com foco no cargo de Delegado.
+- **O que entrou no Git:** **nada do material de terceiro**. A letra de lei é pública e as súmulas/teses são **texto
+  oficial** do STF/STJ; as cartas de lacuna (`discursiva/lei_seca_delegado_ba_dados.js`) foram **redigidas de forma
+  autoral** pela sessão, a partir desse texto oficial. A incidência serviu de bússola, não de fonte de texto.
+- **Marca d'água (dado pessoal de terceiro):** os PDFs trazem no rodapé **nome e CPF** do comprador. Esse nome e
+  esse CPF **não** estão escritos em arquivo nenhum do repositório; os PDFs **não** entram no Git.
+- **Autorização:** pedido escrito do titular (18/11/2026), para estudo pessoal; o app não vai para o portal (D-009).
+  Sem autorização do autor do material para distribuição — por isso só a incidência (fato) orienta, e o conteúdo
+  publicado é autoral.
