@@ -421,3 +421,7 @@ prompt do servidor já manda não aplicar norma posterior.
   ainda nos blocos e coloque no próximo bloco"*), para estudo pessoal; o app não vai para o portal (D-009). Sem
   autorização do autor do material para distribuição — por isso só a incidência (fato) orienta, e o conteúdo
   publicado é autoral.
+- **Desdobramento (aba "Lei na Íntegra", 19/11/2026):** a mesma medição de incidência orientou um novo módulo
+  (`discursiva/Lei_na_Integra.html` + `lei_integra_dados.js`) que estuda o **artigo inteiro** em 3 modos
+  (Esconder/Teste/Revisão). O texto é a **CF/88 oficial e pública**; o método (esconder-lembrar, modos, mnemônico,
+  áudio por `speechSynthesis`) é técnica de estudo. Nada de terceiro entra — nem conteúdo, nem marca/identidade.

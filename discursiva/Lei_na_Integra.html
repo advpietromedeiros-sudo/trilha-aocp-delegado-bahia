@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lei na Íntegra — Delegado PC-BA (artigo inteiro em 3 modos)</title>
+<style>
+:root{
+  --azul:#13315c; --azul2:#1e4d8c; --azul-claro:#e9f0fb;
+  --tinta:#1b2430; --suave:#54637a; --linha:#e3e9f2; --bg:#eef2f8; --papel:#ffffff;
+  --verde:#15803d; --verde-bg:#e7f6ec; --verde-bd:#bfe3c9;
+  --vermelho:#c0241f; --vermelho-bg:#fcebe9; --vermelho-bd:#f1c7c3;
+  --ambar:#9a6400; --ambar-bg:#fff4e0; --ambar-bd:#ffdda8;
+  --amarelo:#ffe86b; --amarelo-bd:#f2c200; --ciano:#67dad9;
+  --rosa:#c01f74; --rosa-bg:#ffe8f3; --apagado:#bcc3cf; --foco:#ffb703; --barra:#101728;
+  --sombra:0 10px 34px rgba(16,37,66,.08);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--tinta);background:var(--bg)}
+header{background:linear-gradient(135deg,#0f2748,#1e4d8c 70%,#2a63ad);color:#fff;padding:22px 20px 24px}
+.wrap{max-width:860px;margin:0 auto;padding:0 18px}
+header h1{margin:0;font-size:1.28em;letter-spacing:.2px;display:flex;align-items:center;gap:9px}
+header p{margin:8px 0 0;opacity:.94;font-size:.92em;text-align:justify}
+main{max-width:860px;margin:0 auto;padding:18px}
+.card{background:var(--papel);border:1px solid var(--linha);border-radius:16px;padding:20px 22px;margin:16px 0;box-shadow:var(--sombra)}
+h2{font-size:1.14em;color:var(--azul);margin:.1em 0 .5em}
+p{text-align:justify}
+.bt{background:#fff;border:1px solid #c6d0df;color:var(--tinta);border-radius:11px;padding:11px 18px;min-height:44px;font:inherit;cursor:pointer;transition:.15s;display:inline-flex;align-items:center;gap:7px}
+.bt:hover{background:#f2f6fc;border-color:var(--azul2)}
+.bt:active{transform:translateY(1px)}
+.bt.pri{background:var(--azul2);color:#fff;border-color:var(--azul2);font-weight:600}
+.bt.pri:hover{background:var(--azul)}
+.bt-lin{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;align-items:center}
+.nums{display:flex;gap:12px;flex-wrap:wrap;margin:16px 0 4px}
+.num{flex:1;min-width:96px;background:var(--azul-claro);border:1px solid #d4e1f3;border-radius:13px;padding:13px 10px;text-align:center}
+.num b{display:block;font-size:1.7em;line-height:1;color:var(--azul);font-weight:800}
+.num small{display:block;margin-top:5px;color:var(--suave);font-size:.82em}
+.lista{display:grid;gap:14px;margin-top:6px}
+.item{display:block;width:100%;text-align:left;background:var(--papel);border:1px solid var(--linha);border-radius:14px;padding:16px 18px;cursor:pointer;font:inherit;transition:.15s;position:relative}
+.item:hover{border-color:var(--azul2);box-shadow:var(--sombra);transform:translateY(-1px)}
+.item .tt{font-weight:800;color:var(--azul);font-size:1.08em}
+.item .meta{color:var(--suave);font-size:.88em;margin-top:3px}
+.selo{display:inline-block;font-size:.8em;border-radius:999px;padding:3px 11px;font-weight:700;position:absolute;top:14px;right:14px}
+.selo.feito{background:var(--verde-bg);color:var(--verde)}
+.selo.pend{background:#eef2f8;color:var(--suave)}
+/* barra de modos */
+.mbar{position:sticky;top:0;background:var(--barra);color:#fff;padding:9px 10px;display:flex;gap:6px;align-items:center;z-index:5;border-radius:12px;margin:0 0 14px}
+.modos{display:flex;gap:5px;flex:1}
+.modo{flex:1;border:0;border-radius:999px;padding:10px 6px;font:700 13px system-ui,sans-serif;color:#cdd3e0;background:#263350;cursor:pointer;white-space:nowrap}
+.modo.on{background:#fff;color:#101728}
+.som{border:0;background:#263350;color:#fff;width:42px;height:42px;border-radius:999px;font-size:18px;cursor:pointer;flex:none}
+.som.falando{background:var(--foco);color:#101728}
+/* leitor */
+.titulo{color:var(--azul2);font:800 14px system-ui,sans-serif;letter-spacing:.04em;text-align:center;margin:2px 0 14px}
+.lei-full{font-size:1.1em;line-height:1.95;padding:16px 18px;background:#f8fafd;border:1px solid var(--linha);border-left:4px solid var(--azul-claro);border-radius:12px}
+.art-p{margin:0 0 10px;text-align:justify;hyphens:auto}
+.art-p b.rot{font-weight:800;color:var(--azul)}
+.inc{display:flex;gap:9px;margin:9px 0;text-align:justify;hyphens:auto}
+.inc .num{font-weight:800;flex:none;min-width:30px;color:var(--azul)}
+.inc .bang{color:var(--vermelho);font-weight:900;flex:none;width:12px}
+.lac{display:inline-block;min-width:52px;height:1.1em;vertical-align:-2px;background:#c9ced6;border-radius:5px;cursor:pointer;transition:.12s}
+.lac.on{background:transparent;color:var(--vermelho);font-weight:800;cursor:default;height:auto;vertical-align:baseline;border-bottom:2px solid var(--vermelho)}
+.lac.foco{outline:3px solid var(--foco);outline-offset:2px;background:#eef3ff}
+.gr{background:var(--amarelo);border-radius:3px;padding:0 2px;box-shadow:0 0 0 1px var(--amarelo-bd) inset}
+.gr.poder{background:var(--ciano)}
+.apagado{color:var(--apagado)}
+.mnem{display:inline-flex;align-items:center;gap:8px;background:var(--rosa-bg);border-radius:999px;padding:7px 15px;margin:4px 0 10px;font-weight:800;color:var(--rosa)}
+.mnem small{color:#d98fbd;font-weight:700}
+.dica{color:var(--suave);font-size:.9em;margin:12px 2px 2px;display:flex;align-items:center;gap:6px}
+.base{display:inline-flex;align-items:center;gap:6px;margin:12px 0 2px;background:var(--azul-claro);border:1px solid #d4e1f3;border-radius:9px;padding:5px 12px;font-size:.86em;color:var(--azul);font-weight:700}
+.navrow{display:flex;gap:10px;margin-top:16px}
+.navrow .bt{flex:1;justify-content:center}
+.ghint{display:inline-flex;align-items:center;gap:6px;background:#ffffff22;border:1px solid #ffffff44;border-radius:999px;padding:3px 10px;font-size:.8em;margin-top:10px}
+kbd{background:#fff;color:var(--azul);border-radius:5px;padding:0 6px;font:600 .85em/1.5 system-ui;border:1px solid #cdd8e8}
+footer{max-width:860px;margin:6px auto 44px;padding:0 20px;color:#73819a;font-size:.82em;text-align:justify}
+@media(max-width:600px){.card{padding:16px}.wrap{padding:0 14px}main{padding:14px}.modo{font-size:12px;padding:9px 4px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>📜 Lei na Íntegra — Delegado PC‑BA</h1>
+    <p>Estude o <b>artigo inteiro</b> (caput, incisos e parágrafos) do jeito que ele cai: <b>🙈 Esconder &amp; lembrar</b>, <b>🎯 Teste</b> (uma lacuna por vez) e <b>📖 Revisão</b> (o essencial grifado, com mnemônico). O <b>!</b> marca o que mais cai na AOCP.</p>
+    <span class="ghint">✏️ Aperte <kbd>G</kbd> para grifar</span>
+    <span class="ghint"><a href="Treino_Discursiva.html" style="color:#fff;text-decoration:none">← Voltar ao Treino</a></span>
+  </div>
+</header>
+<main id="tela"></main>
+<footer id="rodape"></footer>
+
+<script src="lei_integra_dados.js"></script>
+<script>
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const CHAVE='leiintegra:v1';
+let st={done:{}};try{st=Object.assign(st,JSON.parse(localStorage.getItem(CHAVE)||'{}'))}catch(e){}
+const salvar=()=>{try{localStorage.setItem(CHAVE,JSON.stringify(st))}catch(e){}};
+const A=Array.isArray(window.LEI_INTEGRA)?window.LEI_INTEGRA:[];
+let atual=0, modo='esconder', foco=0, GAPS=[];
+
+const chaveArt=a=>a.d+' '+a.art;
+
+/* quebra texto com {chaves} em partes */
+function partes(txt){
+  const out=[], re=/\{([^}]+)\}/g; let i=0,m;
+  while((m=re.exec(txt))){ if(m.index>i) out.push({k:'t',s:txt.slice(i,m.index)}); out.push({k:'g',s:m[1]}); i=m.index+m[0].length; }
+  if(i<txt.length) out.push({k:'t',s:txt.slice(i)});
+  return out;
+}
+function montaTexto(txt, poder){
+  let h='';
+  partes(txt).forEach(p=>{
+    if(p.k==='t'){ h+=esc(p.s); return; }
+    if(modo==='revisao'){ h+='<span class="gr'+(poder?' poder':'')+'">'+esc(p.s)+'</span>'; return; }
+    const gi=GAPS.length; GAPS.push(p.s);
+    let cls='lac';
+    if(modo==='teste'){ if(gi<foco) cls+=' on'; else if(gi===foco) cls+=' foco'; }
+    const w=Math.min(300,Math.max(52,p.s.length*9));
+    const dentro=(modo==='teste'&&gi<foco)?esc(p.s):'';
+    const stl=(cls.indexOf(' on')<0)?(' style="width:'+w+'px"'):'';
+    h+='<span class="'+cls+'" data-gi="'+gi+'"'+stl+'>'+dentro+'</span>';
+  });
+  return h;
+}
+
+/* conta total de lacunas do artigo (para marcar "treinado") */
+function totalGaps(a){
+  let n=(a.caput.match(/\{/g)||[]).length;
+  (a.incisos||[]).forEach(i=>n+=(i.t.match(/\{/g)||[]).length);
+  (a.paragrafos||[]).forEach(p=>n+=(p.t.match(/\{/g)||[]).length);
+  return n;
+}
+
+function home(){
+  foco=0;
+  const feitos=A.filter(a=>st.done[chaveArt(a)]).length;
+  let h='<section class="card"><h2>⚖️ A letra de lei virando exercício</h2>'
+    +'<p>São <b>'+A.length+'</b> artigos de alta incidência, estudados por <b>recordação ativa</b>. Cada palavra‑chave entre caixas é testada. O progresso fica salvo neste navegador.</p>'
+    +'<div class="nums"><div class="num"><b>'+A.length+'</b><small>artigos</small></div>'
+    +'<div class="num"><b>'+feitos+'</b><small>treinados</small></div>'
+    +'<div class="num"><b>3</b><small>modos de estudo</small></div></div></section>';
+  h+='<div class="lista">';
+  A.forEach((a,i)=>{
+    const ok=st.done[chaveArt(a)];
+    h+='<button class="item" data-artigo="'+i+'">'
+      +'<span class="selo '+(ok?'feito':'pend')+'">'+(ok?'✓ treinado':'treinar')+'</span>'
+      +'<span class="tt">Art. '+esc(a.art)+' · '+esc(a.d)+'</span>'
+      +'<span class="meta">'+esc(a.rub)+' — '+esc(a.titulo)+'</span></button>';
+  });
+  h+='</div>';
+  $('tela').innerHTML=h;
+}
+
+function leitor(i){
+  atual=((i%A.length)+A.length)%A.length; foco=0; GAPS=[];
+  const a=A[atual];
+  let body='<p class="art-p"><b class="rot">Art. '+esc(a.art)+'</b> '+montaTexto(a.caput)+'</p>';
+  if(modo==='revisao' && a.mnem) body+='<div class="mnem">🧠 '+esc(a.mnem)+' <small>mnemônico</small></div>';
+  (a.incisos||[]).forEach(it=>{
+    const apaga=(modo==='revisao' && !it.imp && !it.destaque);
+    body+='<div class="inc'+(apaga?' apagado':'')+'">'
+      +'<span class="bang">'+(it.imp||it.destaque?'!':'')+'</span>'
+      +'<span class="num">'+esc(it.n)+' -</span><span>'+montaTexto(it.t)+'</span></div>';
+  });
+  (a.paragrafos||[]).forEach(pg=>{
+    body+='<p class="art-p"><b class="rot">'+esc(pg.rot)+'</b> '+montaTexto(pg.t, pg.poder)+'</p>';
+  });
+  const dica={esconder:'Toque em cada caixa para revelar. Tente recitar antes.',
+              teste:'Uma lacuna por vez. Toque para avançar e ir preenchendo.',
+              revisao:'O secundário fica apagado; o essencial, grifado. Fixe pela ordem do mnemônico.'}[modo];
+  const mbar='<div class="mbar"><div class="modos">'
+    +'<button class="modo'+(modo==='esconder'?' on':'')+'" data-modo="esconder">🙈 Esconder</button>'
+    +'<button class="modo'+(modo==='teste'?' on':'')+'" data-modo="teste">🎯 Teste</button>'
+    +'<button class="modo'+(modo==='revisao'?' on':'')+'" data-modo="revisao">📖 Revisão</button>'
+    +'</div><button class="som" data-som="1" title="Ouvir o artigo">🔊</button></div>';
+  $('tela').innerHTML='<section class="card">'+mbar
+    +'<div class="titulo">'+esc(a.titulo)+'</div>'
+    +'<div class="lei-full">'+body+'</div>'
+    +'<div class="dica">💡 '+dica+'</div>'
+    +'<div><span class="base">📖 '+esc(a.base)+'</span></div>'
+    +'<div class="navrow"><button class="bt" data-nav="-1">← Anterior</button>'
+    +'<button class="bt" data-home="1">Todos os artigos</button>'
+    +'<button class="bt pri" data-nav="1">Próximo →</button></div>'
+    +'<div class="bt-lin"><button class="bt" data-domino="1" style="border-color:var(--verde-bd);color:var(--verde)">✓ Já domino este artigo</button></div>'
+    +'</section>';
+}
+
+function falar(btn){
+  if(!('speechSynthesis' in window)){ btn.textContent='🔇'; return; }
+  if(speechSynthesis.speaking){ speechSynthesis.cancel(); btn.classList.remove('falando'); return; }
+  const a=A[atual];
+  const limpa=s=>String(s).replace(/[{}]/g,'');
+  let txt='Artigo '+a.art+'. '+limpa(a.caput)+' '
+    +(a.incisos||[]).map(i=>i.n+', '+limpa(i.t)).join('. ')+'. '
+    +(a.paragrafos||[]).map(p=>p.rot+' '+limpa(p.t)).join(' ');
+  const u=new SpeechSynthesisUtterance(txt); u.lang='pt-BR'; u.rate=.95;
+  u.onend=()=>btn.classList.remove('falando');
+  btn.classList.add('falando'); speechSynthesis.speak(u);
+}
+
+document.addEventListener('click', e=>{
+  const mb=e.target.closest('[data-modo]'); if(mb){ modo=mb.dataset.modo; leitor(atual); return; }
+  const som=e.target.closest('[data-som]'); if(som){ falar(som); return; }
+  const it=e.target.closest('[data-artigo]'); if(it){ leitor(+it.dataset.artigo); scrollTo(0,0); return; }
+  const hm=e.target.closest('[data-home]'); if(hm){ if(window.speechSynthesis)speechSynthesis.cancel(); home(); scrollTo(0,0); return; }
+  const nav=e.target.closest('[data-nav]'); if(nav){ if(window.speechSynthesis)speechSynthesis.cancel(); leitor(atual+(+nav.dataset.nav)); scrollTo(0,0); return; }
+  const dm=e.target.closest('[data-domino]'); if(dm){ st.done[chaveArt(A[atual])]=true; salvar(); leitor(atual); return; }
+  const lac=e.target.closest('.lac');
+  if(lac && modo==='esconder'){ lac.classList.add('on'); lac.textContent=GAPS[+lac.dataset.gi]; lac.style.width=''; return; }
+  if(modo==='teste' && (lac || e.target.closest('.lei-full'))){ if(foco<GAPS.length){ foco++; leitor(atual); } return; }
+});
+
+$('rodape').innerHTML='Texto oficial da CF/88 (público). Método de estudo autoral; nenhum material de terceiro entra aqui — só a incidência medida orientou a seleção dos artigos (ver docs/PROCEDENCIA.md).';
+home();
+</script>
+<!-- grifa:inicio (gerado de assets/grifa.js por ferramentas/embutir_grifa.py; não editar aqui) -->
+<script>
+/* Paleta de grifos — FONTE ÚNICA (10/11/2026, pedido do titular: "sempre que eu apertar G aparece uma paleta de
+   grifos... para eu grifar algum texto que eu queira, em todas as telas").
+   ⚠️ Não se edita a cópia embutida nas telas: edita-se ESTE arquivo e roda-se
+   "python ferramentas/embutir_grifa.py". O portão (--conferir) reprova cópia diferente desta.
+   Como funciona:
+   - G (sem Ctrl/Alt, fora de campo de texto) abre e fecha a paleta; Esc fecha.
+   - Com a paleta aberta e uma cor escolhida, selecionar um texto já o grifa (como caneta marca-texto).
+     Com texto já selecionado, clicar na cor grifa na hora.
+   - 9 cores de marca-texto e, desde 14/11/2026, Negrito (B) e Sublinhado (U), que funcionam do mesmo jeito e podem
+     somar-se a uma cor no mesmo trecho (grifa de amarelo e depois passa o B por cima).
+   - Borracha: clicar num grifo o apaga. "Limpar esta tela" pede confirmação na própria paleta.
+   - Os grifos ficam salvos neste navegador, por tela (localStorage "grifos:v1:<caminho>"), ancorados pelo TEXTO
+     (o trecho + 32 caracteres de contexto de cada lado), e voltam sozinhos quando a tela se redesenha
+     (troca de aba, próxima questão, recarregar a página). Trecho repetido sem o mesmo contexto não é grifado. */
+(function () {
+  'use strict';
+  if (window.Grifa) return;
+  var CORES = [
+    { id: 'amarelo', nome: 'Amarelo', fundo: '#fff176' },
+    { id: 'verde', nome: 'Verde', fundo: '#b9f6ca' },
+    { id: 'azul', nome: 'Azul', fundo: '#b3e5fc' },
+    { id: 'rosa', nome: 'Rosa', fundo: '#f8bbd0' },
+    { id: 'laranja', nome: 'Laranja', fundo: '#ffcc80' },
+    /* 14/11/2026 (titular: "inclua mais algumas cores... e inclua também a opção de negrito e sublinhado") */
+    { id: 'lilas', nome: 'Lilás', fundo: '#e1bee7' },
+    { id: 'vermelho', nome: 'Vermelho', fundo: '#ff8a80' },
+    { id: 'turquesa', nome: 'Turquesa', fundo: '#a7ffeb' },
+    { id: 'cinza', nome: 'Cinza', fundo: '#e0e0e0' }
+  ];
+  /* estilos de letra: funcionam como as cores (escolhe e seleciona) e podem somar-se a um grifo colorido */
+  var ESTILOS = [
+    { id: 'negrito', nome: 'Negrito', icone: '<b style="font-weight:900">B</b>', css: 'font-weight:800 !important' },
+    { id: 'sublinhado', nome: 'Sublinhado', icone: '<u style="text-decoration-thickness:2px">U</u>',
+      css: 'text-decoration:underline !important;text-decoration-thickness:2px !important;text-underline-offset:2px' },
+    /* 16/11/2026 (titular: "nos botoes G coloque um la que seja ao mesmo tempo negrito e sublinhado num botão só") */
+    { id: 'negsub', nome: 'Negrito + Sublinhado', icone: '<b style="font-weight:900;text-decoration:underline;text-underline-offset:2px">B̲U̲</b>',
+      css: 'font-weight:800 !important;text-decoration:underline !important;text-decoration-thickness:2px !important;text-underline-offset:2px' }
+  ];
+  var MARCAS = CORES.map(function (c) { return c.id; }).concat(ESTILOS.map(function (s) { return s.id; }));
+  var CTX = 32;
+  var CHAVE = 'grifos:v1:' + decodeURIComponent(location.pathname || '/');
+  var PULAR = /^(SCRIPT|STYLE|NOSCRIPT|TEXTAREA|INPUT|SELECT|OPTION|TEMPLATE|svg|SVG)$/;
+  var ferramenta = 'amarelo';
+  var paleta = null, observador = null, agendado = 0, aplicando = false, confirmaLimpar = 0;
+
+  function ler() {
+    try { var d = JSON.parse(localStorage.getItem(CHAVE) || '[]'); return Array.isArray(d) ? d : []; }
+    catch (e) { return []; }
+  }
+  function gravar(lista) {
+    try { localStorage.setItem(CHAVE, JSON.stringify(lista)); return true; }
+    catch (e) { aviso('Não deu para salvar o grifo neste navegador (armazenamento cheio ou bloqueado).'); return false; }
+  }
+
+  /* ---------- índice do texto visível da página ---------- */
+  function fora(no) {
+    for (var el = no.parentNode; el && el !== document.body; el = el.parentNode) {
+      if (el.nodeType !== 1) continue;
+      if (PULAR.test(el.nodeName) || el.id === 'grf-paleta' || el.isContentEditable) return true;
+    }
+    return false;
+  }
+  function indice() {
+    var nos = [], inicios = [], partes = [], total = 0;
+    if (!document.body) return { nos: nos, inicios: inicios, texto: '' };
+    var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null);
+    for (var n = w.nextNode(); n; n = w.nextNode()) {
+      if (!n.nodeValue || fora(n)) continue;
+      nos.push(n); inicios.push(total); partes.push(n.nodeValue); total += n.nodeValue.length;
+    }
+    return { nos: nos, inicios: inicios, texto: partes.join('') };
+  }
+  function posicao(ix, recipiente, desloc, fim) {
+    if (recipiente.nodeType === 3) {
+      var i = ix.nos.indexOf(recipiente);
+      if (i >= 0) return ix.inicios[i] + desloc;
+    }
+    /* recipiente é elemento (ou texto fora do índice): procura o primeiro texto do índice depois do ponto */
+    var alvo = recipiente.nodeType === 1 ? (recipiente.childNodes[desloc] || null) : recipiente;
+    for (var k = 0; k < ix.nos.length; k++) {
+      var no = ix.nos[k];
+      if (alvo === null) {
+        if (!recipiente.contains(no) && (recipiente.compareDocumentPosition(no) & Node.DOCUMENT_POSITION_FOLLOWING)) return ix.inicios[k];
+      } else if (alvo === no || alvo.contains(no) || (alvo.compareDocumentPosition(no) & Node.DOCUMENT_POSITION_FOLLOWING)) {
+        return ix.inicios[k];
+      }
+    }
+    return fim ? ix.texto.length : -1;
+  }
+
+  /* ---------- envolver um intervalo [ini, fim) do índice em <mark> ---------- */
+  function envolver(ix, ini, fim, g) {
+    var feitos = 0;
+    for (var k = ix.nos.length - 1; k >= 0; k--) {
+      var no = ix.nos[k], a = ix.inicios[k], b = a + no.nodeValue.length;
+      if (b <= ini || a >= fim) continue;
+      var s = Math.max(ini, a) - a, e = Math.min(fim, b) - a;
+      var pedaco = no.nodeValue.slice(s, e);
+      if (!pedaco.trim()) continue; /* espaço entre células de tabela: não se envolve (quebraria a estrutura) */
+      var alvo = no;
+      if (e < alvo.nodeValue.length) alvo.splitText(e);
+      if (s > 0) alvo = alvo.splitText(s);
+      var m = document.createElement('mark');
+      m.className = 'grf grf-' + g.cor + (ESTILOS.some(function (x) { return x.id === g.cor; }) ? ' grf-letra' : '');
+      m.setAttribute('data-grf', g.id); m.title = 'Grifo (' + g.cor + ')';
+      alvo.parentNode.insertBefore(m, alvo); m.appendChild(alvo); feitos++;
+    }
+    return feitos;
+  }
+  function achar(ix, g) {
+    var t = ix.texto, melhor = -1, nota = -1, vistos = 0;
+    for (var p = t.indexOf(g.t); p >= 0; p = t.indexOf(g.t, p + 1)) {
+      vistos++;
+      var antes = t.slice(Math.max(0, p - g.a.length), p), depois = t.slice(p + g.t.length, p + g.t.length + g.d.length);
+      var n = (antes === g.a ? 2 : 0) + (depois === g.d ? 2 : 0);
+      if (n > nota) { nota = n; melhor = p; }
+      if (vistos > 500) break;
+    }
+    if (melhor < 0) return -1;
+    if (vistos > 1 && nota < 2) return -1; /* repetido e sem o contexto: não arrisca grifar o lugar errado */
+    return melhor;
+  }
+  function presente(id) { return !!document.querySelector('mark.grf[data-grf="' + id + '"]'); }
+
+  function aplicar() {
+    agendado = 0;
+    var lista = ler(), falta = [];
+    for (var i = 0; i < lista.length; i++) if (!presente(lista[i].id)) falta.push(lista[i]);
+    if (!falta.length) return 0;
+    aplicando = true; pausar();
+    var n = 0;
+    try {
+      for (var j = 0; j < falta.length; j++) {
+        var ix = indice(), p = achar(ix, falta[j]);
+        if (p >= 0 && envolver(ix, p, p + falta[j].t.length, falta[j])) n++;
+      }
+    } finally { retomar(); aplicando = false; }
+    contar();
+    return n;
+  }
+  function agendar() { if (!agendado) agendado = setTimeout(aplicar, 250); }
+  function pausar() { if (observador) observador.disconnect(); }
+  function retomar() {
+    if (!observador && window.MutationObserver) observador = new MutationObserver(function () { if (!aplicando) agendar(); });
+    if (observador && document.body) observador.observe(document.body, { childList: true, subtree: true, characterData: true });
+  }
+
+  /* ---------- criar e apagar ---------- */
+  function grifarSelecao(cor) {
+    var sel = window.getSelection && window.getSelection();
+    if (!sel || sel.isCollapsed || !sel.rangeCount) return false;
+    var r = sel.getRangeAt(0);
+    if (paleta && paleta.contains(r.commonAncestorContainer)) return false;
+    var ix = indice();
+    var ini = posicao(ix, r.startContainer, r.startOffset, false), fim = posicao(ix, r.endContainer, r.endOffset, true);
+    if (ini < 0 || fim <= ini) return false;
+    var trecho = ix.texto.slice(ini, fim);
+    var esq = trecho.length - trecho.replace(/^\s+/, '').length, dir = trecho.length - trecho.replace(/\s+$/, '').length;
+    ini += esq; fim -= dir;
+    if (fim <= ini) return false;
+    var g = { id: 'g' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6), cor: cor,
+      t: ix.texto.slice(ini, fim), a: ix.texto.slice(Math.max(0, ini - CTX), ini), d: ix.texto.slice(fim, fim + CTX),
+      em: new Date().toISOString() };
+    var lista = ler(); lista.push(g);
+    if (!gravar(lista)) return false;
+    pausar();
+    try { envolver(ix, ini, fim, g); } finally { retomar(); }
+    sel.removeAllRanges();
+    contar();
+    return true;
+  }
+  function desembrulhar(id) {
+    pausar();
+    try {
+      var ms = document.querySelectorAll('mark.grf[data-grf="' + id + '"]');
+      for (var i = 0; i < ms.length; i++) {
+        var m = ms[i], pai = m.parentNode;
+        while (m.firstChild) pai.insertBefore(m.firstChild, m);
+        pai.removeChild(m); pai.normalize();
+      }
+    } finally { retomar(); }
+  }
+  function apagar(id) {
+    gravar(ler().filter(function (g) { return g.id !== id; }));
+    desembrulhar(id); contar();
+  }
+  function limparTela() {
+    var lista = ler();
+    for (var i = 0; i < lista.length; i++) desembrulhar(lista[i].id);
+    gravar([]); contar();
+  }
+
+  /* ---------- a paleta ---------- */
+  function estilo() {
+    if (document.getElementById('grf-estilo')) return;
+    var css = '' +
+      'mark.grf{color:#111 !important;border-radius:2px;padding:0 1px;-webkit-print-color-adjust:exact;print-color-adjust:exact}' +
+      CORES.map(function (c) { return 'mark.grf-' + c.id + '{background:' + c.fundo + ' !important}'; }).join('') +
+      /* negrito e sublinhado não pintam o fundo e mantêm a cor do texto (vale no tema escuro) */
+      'mark.grf.grf-letra{background:transparent !important;color:inherit !important;padding:0}' +
+      ESTILOS.map(function (s) { return 'mark.grf-' + s.id + '{' + s.css + '}'; }).join('') +
+      '#grf-paleta .grf-letra-bt{font-family:Georgia,"Times New Roman",serif;font-size:17px}' +
+      'body.grf-borracha mark.grf{cursor:pointer;outline:2px dashed #b71c1c;outline-offset:1px}' +
+      /* 10/11/2026, 21h44 (titular): barra VERTICAL fina presa na borda direita, centrada na altura — a caixa no
+         canto de baixo ficava em cima das palavras. Só ícones; o texto de ajuda vai no title e no leitor de tela. */
+      '#grf-paleta{position:fixed;right:6px;top:50%;transform:translateY(-50%);z-index:2147483000;background:#fff;' +
+      'color:#1b1b1b;border:1px solid #9e9e9e;border-radius:14px;box-shadow:0 4px 18px rgba(0,0,0,.22);padding:6px 5px;' +
+      'font:13px/1.2 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;display:flex;flex-direction:column;' +
+      'align-items:center;gap:4px;text-align:center;max-height:calc(100vh - 12px);overflow-y:auto;scrollbar-width:thin}' +
+      '#grf-paleta[hidden]{display:none}' +
+      /* com a paleta aberta, a página abre uma faixa à direita para a barra não cobrir o conteúdo */
+      'html.grf-reserva body{margin-right:54px !important}' +
+      '#grf-paleta .grf-titulo{font-size:16px;line-height:1;padding:2px 0 0;cursor:default}' +
+      '#grf-paleta .grf-conta{display:block;font-size:11px;font-weight:700;color:#0d47a1;min-height:13px}' +
+      '#grf-paleta .grf-sep{width:24px;border-top:1px solid #d0d0d0;margin:2px 0}' +
+      '#grf-paleta button{font:inherit;cursor:pointer;border:1px solid #757575;border-radius:8px;background:#fafafa;' +
+      'color:#1b1b1b;width:30px;height:30px;min-height:30px;flex:0 0 auto;padding:0;display:flex;align-items:center;justify-content:center;font-size:15px}' +
+      '#grf-paleta button:focus-visible{outline:3px solid #0d47a1;outline-offset:2px}' +
+      '#grf-paleta .grf-cor{border-radius:50%}' +
+      '#grf-paleta button[aria-pressed="true"]{border:3px solid #0d47a1;box-shadow:0 0 0 2px #fff inset}' +
+      '#grf-paleta .grf-fechar{width:26px;height:26px;min-height:26px;font-size:13px;border-color:#bdbdbd}' +
+      '#grf-paleta .grf-dica{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}' +
+      '#grf-paleta .grf-limpar[data-confirma="1"]{background:#b71c1c;color:#fff;border-color:#b71c1c}' +
+      '#grf-paleta .grf-aviso{position:fixed;right:52px;top:50%;transform:translateY(-50%);background:#b71c1c;color:#fff;' +
+      'padding:6px 10px;border-radius:8px;font-size:13px;white-space:nowrap;box-shadow:0 2px 10px rgba(0,0,0,.25)}' +
+      '#grf-paleta .grf-aviso[hidden]{display:none}' +
+      '@media print{#grf-paleta{display:none !important}}';
+    CORES.forEach(function (c) { css += 'body.grf-cor-' + c.id + ' ::selection{background:' + c.fundo + ';color:#111}'; });
+    var s = document.createElement('style'); s.id = 'grf-estilo'; s.textContent = css;
+    (document.head || document.documentElement).appendChild(s);
+  }
+  function montar() {
+    if (paleta) return paleta;
+    estilo();
+    paleta = document.createElement('div');
+    paleta.id = 'grf-paleta'; paleta.hidden = true;
+    paleta.setAttribute('role', 'toolbar'); paleta.setAttribute('aria-label', 'Paleta de grifos');
+    var h = '<button type="button" class="grf-fechar" aria-label="Fechar a paleta (G ou Esc)" title="Fechar (G ou Esc)">✕</button>' +
+      '<span class="grf-titulo" title="Grifos: escolha a cor e selecione o texto. G abre e fecha.">🖍️</span>' +
+      '<span class="grf-conta" aria-live="polite"></span><span class="grf-sep" aria-hidden="true"></span>';
+    CORES.forEach(function (c) {
+      h += '<button type="button" class="grf-cor" data-ferramenta="' + c.id + '" aria-pressed="false" aria-label="Grifar em ' +
+        c.nome.toLowerCase() + '" title="Grifar em ' + c.nome.toLowerCase() + '" style="background:' + c.fundo + '"></button>';
+    });
+    h += '<span class="grf-sep" aria-hidden="true"></span>';
+    ESTILOS.forEach(function (s) {
+      h += '<button type="button" class="grf-letra-bt" data-ferramenta="' + s.id + '" aria-pressed="false" aria-label="' + s.nome +
+        ': selecione o texto" title="' + s.nome + ' (selecione o texto; pode somar com uma cor)">' + s.icone + '</button>';
+    });
+    h += '<span class="grf-sep" aria-hidden="true"></span>' +
+      '<button type="button" data-ferramenta="borracha" aria-pressed="false" aria-label="Borracha: clique num grifo para apagá-lo" title="Borracha: clique num grifo para apagá-lo">🧽</button>' +
+      '<button type="button" class="grf-limpar" aria-label="Limpar esta tela" title="Limpar os grifos desta tela">🗑</button>' +
+      '<span class="grf-aviso" hidden></span>' +
+      '<p class="grf-dica">Escolha a cor e selecione o texto: ele fica grifado. Os grifos ficam salvos neste navegador. G abre e fecha.</p>';
+    paleta.innerHTML = h;
+    paleta.addEventListener('mousedown', function (e) { if (e.target.closest('button')) e.preventDefault(); }); /* não perde a seleção */
+    paleta.addEventListener('click', function (e) {
+      var b = e.target.closest('button'); if (!b) return;
+      if (b.classList.contains('grf-fechar')) return fechar();
+      if (b.classList.contains('grf-limpar')) {
+        if (!ler().length) return;
+        if (b.getAttribute('data-confirma') === '1') { clearTimeout(confirmaLimpar); limparTela(); rotuloLimpar(); return; }
+        var txt = 'Confirmar: apagar ' + ler().length + ' grifo(s)? Clique de novo.';
+        b.setAttribute('data-confirma', '1'); b.setAttribute('aria-label', txt); b.title = txt; b.textContent = '✓';
+        var av = paleta.querySelector('.grf-aviso'); av.textContent = txt; av.hidden = false;
+        confirmaLimpar = setTimeout(rotuloLimpar, 4000); return;
+      }
+      var f = b.getAttribute('data-ferramenta');
+      if (f) { escolher(f); if (f !== 'borracha') grifarSelecao(f); }
+    });
+    document.body.appendChild(paleta);
+    escolher(ferramenta);
+    return paleta;
+  }
+  function rotuloLimpar() {
+    var b = paleta && paleta.querySelector('.grf-limpar'); if (!b) return;
+    b.removeAttribute('data-confirma'); b.textContent = '🗑';
+    b.setAttribute('aria-label', 'Limpar esta tela'); b.title = 'Limpar os grifos desta tela';
+    var av = paleta.querySelector('.grf-aviso'); if (av) { av.hidden = true; av.textContent = ''; }
+  }
+  function escolher(f) {
+    ferramenta = f;
+    if (!paleta) return;
+    var bs = paleta.querySelectorAll('[data-ferramenta]');
+    for (var i = 0; i < bs.length; i++) bs[i].setAttribute('aria-pressed', bs[i].getAttribute('data-ferramenta') === f ? 'true' : 'false');
+    marcarCorpo();
+  }
+  function marcarCorpo() {
+    var c = document.body.classList, aberta = paleta && !paleta.hidden;
+    MARCAS.forEach(function (x) { c.remove('grf-cor-' + x); });
+    c.remove('grf-borracha');
+    document.documentElement.classList.toggle('grf-reserva', !!aberta);
+    if (!aberta) return;
+    if (ferramenta === 'borracha') c.add('grf-borracha'); else c.add('grf-cor-' + ferramenta);
+  }
+  function contar() {
+    if (!paleta) return;
+    var lista = ler(), vistos = 0;
+    for (var i = 0; i < lista.length; i++) if (presente(lista[i].id)) vistos++;
+    var fora = lista.length - vistos;
+    var el = paleta.querySelector('.grf-conta');
+    el.textContent = lista.length ? String(lista.length) : '';
+    el.title = lista.length ? lista.length + ' grifo(s) nesta tela' + (fora ? ' (' + fora + ' fora da vista agora)' : '') : '';
+  }
+  function abrir() { montar().hidden = false; marcarCorpo(); contar(); }
+  function fechar() { if (paleta) { paleta.hidden = true; rotuloLimpar(); } marcarCorpo(); }
+  function alternar() { if (paleta && !paleta.hidden) fechar(); else abrir(); }
+  function aviso(txt) { try { console.warn('[grifos] ' + txt); } catch (e) { /* sem console */ } if (paleta) paleta.querySelector('.grf-dica').textContent = txt; }
+  function campo(el) {
+    return !!el && (/^(INPUT|TEXTAREA|SELECT)$/.test(el.tagName) || el.isContentEditable);
+  }
+
+  /* ---------- eventos ---------- */
+  document.addEventListener('keydown', function (e) {
+    if (e.ctrlKey || e.metaKey || e.altKey || campo(e.target)) return;
+    if (e.key === 'g' || e.key === 'G') { e.preventDefault(); alternar(); return; }
+    if (e.key === 'Escape' && paleta && !paleta.hidden) fechar();
+  });
+  document.addEventListener('mouseup', function (e) {
+    if (!paleta || paleta.hidden || ferramenta === 'borracha' || paleta.contains(e.target) || campo(e.target)) return;
+    setTimeout(function () { grifarSelecao(ferramenta); }, 0);
+  });
+  document.addEventListener('click', function (e) {
+    if (!paleta || paleta.hidden || ferramenta !== 'borracha') return;
+    var m = e.target.closest && e.target.closest('mark.grf[data-grf]');
+    if (!m) return;
+    e.preventDefault(); e.stopPropagation();
+    apagar(m.getAttribute('data-grf'));
+  }, true);
+
+  function iniciar() { estilo(); aplicar(); retomar(); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', iniciar); else iniciar();
+
+  window.Grifa = { abrir: abrir, fechar: fechar, alternar: alternar, escolher: escolher, grifarSelecao: grifarSelecao,
+    aplicar: aplicar, apagar: apagar, limparTela: limparTela, lista: ler, chave: CHAVE, cores: CORES, estilos: ESTILOS };
+})();
+</script>
+<!-- grifa:fim -->
+</body>
+</html>

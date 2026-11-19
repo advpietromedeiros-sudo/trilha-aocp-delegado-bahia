@@ -2,9 +2,19 @@
 
 > Estado, tarefas e o que ficou rodando. Atualizado a cada ~15 min de trabalho e no fechamento.
 
-**Última atualização:** 19/11/2026, 09h06.
+**Última atualização:** 19/11/2026, 11h35.
 
 ## Estado
+
+- 🆕 **19/11/2026, 11h35 — Nova aba "Lei na Íntegra" no Treino de Letra de Lei** (pedido do titular às 08h47/11h16,
+  a partir de telas de um app concorrente). Módulo próprio `discursiva/Lei_na_Integra.html` + `lei_integra_dados.js`,
+  ligado como 13ª aba do hub (`Treino_Discursiva.html`). Estuda o **artigo inteiro** (caput + incisos + §) em **3
+  modos** saindo do mesmo registro: 🙈 Esconder & lembrar, 🎯 Teste (uma lacuna por vez), 📖 Revisão (secundário
+  apagado, essencial grifado + mnemônico). "!" nos incisos mais cobrados; **áudio** por `speechSynthesis` (nativo,
+  sem terceiro). Fase 1 com **CF 1º, 2º, 3º, 4º, 5º e 37** (a maior lacuna medida). Paleta de grifos (tecla G)
+  embutida. Provas: `docs/testar_lei_integra.cjs` 12/12 + autoteste acusa; hub ajustado p/ 13 abas; **as 8 portas
+  `docs/testar_*.cjs` verdes** e `build-storybook` verde. Protótipo do visual ficou no Storybook (`stories/lei-integra.stories.js`,
+  "Aguardando Análise"), aprovado pelo titular ("PODE IMPLEMENTAR"). ⏳ **Fase 2:** ampliar p/ CF alta incidência + CPP/CP.
 
 - 🆕 **19/11/2026, 09h06 — Bloco 16 "Lei Seca AOCP III (Constitucional + Processo)" no Treino de Letra de Lei.**
   Pedido do titular (08h47: *"veja o que tem no DECORANDO A LEI SECA 02 que não tem ainda nos blocos e coloque no
