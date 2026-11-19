@@ -2,9 +2,21 @@
 
 > Estado, tarefas e o que ficou rodando. Atualizado a cada ~15 min de trabalho e no fechamento.
 
-**Última atualização:** 19/11/2026, 11h35.
+**Última atualização:** 19/11/2026, 14h10.
 
 ## Estado
+
+- 🆕 **19/11/2026, 14h10 — Lei na Íntegra ampliada p/ o núcleo do Delegado + pacote privado com o projeto inteiro**
+  (pedido do titular, 14h00: *"complete, pode fazer todo e gerar o HTML com todo projeto"*). `lei_integra_dados.js`
+  foi de 6 para **40 artigos inteiros**: CF 14 (fundamentos, direitos do art. 5º, nacionalidade, direitos políticos,
+  Judiciário/STF, MP, defesa do Estado, segurança pública), CP 16 (anterioridade, lei no tempo, causalidade, dolo/culpa,
+  erro, excludentes, concurso, penas, dosimetria, extinção) e CPP 10 (IP, ANPP, prova, prova ilícita, cautelares,
+  prisão, custódia, preventiva, absolvição sumária). `docs/testar_lei_integra.cjs` segue verde + autoteste; Portão 41/41.
+  **Pacote privado agora traz o PROJETO INTEIRO:** `gerar_pacote_privado.py` ganhou Letra de Lei, Lei na Íntegra e
+  Revisão (antes só Treino + Olho). Regenerado em `C:/Users/advpi/OneDrive/Trilha AOCP - versao completa (privada)/`:
+  Treino 21,1 MB · Olho 7,6 MB · Letra de Lei 273,8 KB (c/ Bloco 16) · Lei na Íntegra 63,5 KB · Revisão 245,6 KB.
+  ⏳ **OneDrive app não instalado nesta máquina** — a pasta existe mas não sincroniza sozinha; o titular sobe pelo
+  onedrive.live.com ou instala o app. Rodar o gerador de novo a cada atualização dos dados.
 
 - 🆕 **19/11/2026, 11h35 — Nova aba "Lei na Íntegra" no Treino de Letra de Lei** (pedido do titular às 08h47/11h16,
   a partir de telas de um app concorrente). Módulo próprio `discursiva/Lei_na_Integra.html` + `lei_integra_dados.js`,

@@ -17,7 +17,8 @@ import sys
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DISC = os.path.join(RAIZ, "discursiva")
-TELAS = ["Treino_Discursiva.html", "Olho_de_Aguia.html"]
+TELAS = ["Treino_Discursiva.html", "Olho_de_Aguia.html", "Lei_Seca_Delegado_BA.html",
+         "Lei_na_Integra.html", "Revisao_Delegado_BA.html"]
 SAIDA_PADRAO = os.path.join(os.path.expanduser("~"), "OneDrive", "Trilha AOCP - versao completa (privada)")
 TAG = re.compile(r'<script\s+src="([^"]+)"[^>]*>\s*</script>', re.I)
 
@@ -59,10 +60,13 @@ def gerar(saida):
             print("      faltam no disco: " + ", ".join(faltam))
             rc = 1
     io.open(os.path.join(saida, "LEIA-ME.txt"), "w", encoding="utf-8").write(
-        "Trilha AOCP - versao COMPLETA e PRIVADA (com Simulados, Revisao e Olho de Aguia).\n"
+        "Trilha AOCP - versao COMPLETA e PRIVADA (projeto inteiro: Treino/Simulados/Pente Fino/Revisao,\n"
+        "Olho de Aguia, Letra de Lei, Lei na Integra).\n"
         "NAO compartilhe esta pasta: contem material de curso de terceiro, para estudo pessoal.\n"
-        "Abra Treino_Discursiva.html ou Olho_de_Aguia.html no navegador (Chrome ou Edge).\n"
-        "No celular: baixe o arquivo pelo app do OneDrive e abra no navegador.\n"
+        "Abra Treino_Discursiva.html (o hub, com abas para todos os modulos) no navegador (Chrome ou Edge).\n"
+        "Tambem abrem sozinhos: Olho_de_Aguia.html, Lei_Seca_Delegado_BA.html, Lei_na_Integra.html,\n"
+        "Revisao_Delegado_BA.html.\n"
+        "No celular: baixe os arquivos pelo app do OneDrive e abra no navegador.\n"
         "Os grifos e o progresso ficam salvos no navegador em que voce abrir.\n"
         "Gerado por ferramentas/gerar_pacote_privado.py.\n")
     return rc
