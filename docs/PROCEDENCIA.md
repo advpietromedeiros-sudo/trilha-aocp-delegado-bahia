@@ -401,3 +401,23 @@ prompt do servidor já manda não aplicar norma posterior.
 - **Autorização:** pedido escrito do titular (18/11/2026: *"veja esse arquivo quais ainda não foram cobertos nos
   blocos de 1 a 14 e gere o Bloco 15"*), para estudo pessoal; o app não vai para o portal (D-009). Sem autorização
   do autor do material para distribuição — por isso só a incidência (fato) orienta, e o conteúdo publicado é autoral.
+
+## 19/11/2026 — "DECORANDO A LEI SECA 02" como GUIA de incidência (Bloco 16)
+
+- **O quê:** PDF de terceiro (584 páginas) com assertivas de Verdadeiro/Falso extraídas de provas AOCP, cada uma
+  marcada com o artigo e o código de origem (`[Art. X, CÓDIGO]`) e o texto oficial grifado — abrangendo vários
+  diplomas (CF, CC, CP, CPC, CPP, CTN e leis administrativas). Usado **somente como guia** para apurar QUAIS artigos
+  ainda não haviam sido vistos nos Blocos 1 a 15 e mereciam entrar. A medição (cruzamento `d|art` do guia contra a
+  cobertura atual) apontou a **Constituição** como a maior lacuna (253 assertivas no guia × 40 artigos na app), com
+  folga também em Processo Civil, Processo Penal e Penal; daí o Bloco 16 "Lei Seca AOCP III (Constitucional +
+  Processo)", com 125 cartas (CF 92, CPC 11, CPP 9, CP 7, CC 3, CTN 3).
+- **O que entrou no Git:** **nada do material de terceiro**. A letra de lei é **pública/oficial** e as 125 cartas de
+  lacuna (`discursiva/lei_seca_delegado_ba_dados.js`) foram **redigidas de forma autoral** pela sessão, a partir do
+  texto legal. A incidência serviu de bússola, não de fonte de texto. O texto extraído do PDF (via `pdftotext`) ficou
+  só no scratchpad temporário da sessão, fora do repositório.
+- **Marca d'água (dado pessoal de terceiro):** o PDF traz no rodapé **nome e CPF** do comprador. Esse nome e esse
+  CPF **não** estão escritos em arquivo nenhum do repositório; o PDF **não** entra no Git (fica só em `Downloads`).
+- **Autorização:** pedido escrito do titular (19/11/2026: *"veja o que tem no DECORANDO A LEI SECA 02 que não tem
+  ainda nos blocos e coloque no próximo bloco"*), para estudo pessoal; o app não vai para o portal (D-009). Sem
+  autorização do autor do material para distribuição — por isso só a incidência (fato) orienta, e o conteúdo
+  publicado é autoral.

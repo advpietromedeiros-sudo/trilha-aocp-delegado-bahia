@@ -2,9 +2,17 @@
 
 > Estado, tarefas e o que ficou rodando. Atualizado a cada ~15 min de trabalho e no fechamento.
 
-**Última atualização:** 14/11/2026, 11h01.
+**Última atualização:** 19/11/2026, 09h06.
 
 ## Estado
+
+- 🆕 **19/11/2026, 09h06 — Bloco 16 "Lei Seca AOCP III (Constitucional + Processo)" no Treino de Letra de Lei.**
+  Pedido do titular (08h47: *"veja o que tem no DECORANDO A LEI SECA 02 que não tem ainda nos blocos e coloque no
+  próximo bloco"*). Cruzei o guia de incidência "DECORANDO A LEI SECA 02" (584 págs, material de terceiro — só a
+  incidência serviu de bússola, nada entra no Git; ver `docs/PROCEDENCIA.md`) contra as 724 cartas dos Blocos 1 a 15:
+  a maior lacuna era a **Constituição**. Acrescentadas **125 cartas** autorais de lacuna (CF 92, CPC 11, CPP 9,
+  CP 7, CC 3, CTN 3), 0 duplicata, lacunas == respostas. Portão do teste ajustado de 15→16 blocos. **16 blocos /
+  849 cartas.** Cascata verde e medida: as 7 portas `docs/testar_*.cjs` em exit=0; autoteste acusa o defeito plantado.
 
 - 🆕 **14/11/2026, 11h01 — Cópia privada completa (opção 1 do titular):** `ferramentas/gerar_pacote_privado.py` gera Treino (19,9 MB) e Olho de Águia (7,6 MB) em arquivo único em `C:/Users/advpi/OneDrive/Trilha AOCP - versao completa (privada)/` (fora do Git). Conferido no Chrome: 0 erro, dados presentes. ⏳ **O aplicativo do OneDrive não está instalado nesta máquina** (a pasta existe, o programa não): a pasta não sobe sozinha — o titular envia pelo onedrive.live.com ou instala o app. Rodar de novo o gerador depois de cada atualização dos dados.
 
