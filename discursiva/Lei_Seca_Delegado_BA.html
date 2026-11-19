@@ -60,6 +60,13 @@ p{text-align:justify}
 .lac.on{color:var(--vermelho);font-weight:800;border-bottom-color:var(--vermelho);background:var(--vermelho-bg);border-radius:4px;padding:0 4px}
 .dica{color:var(--suave);font-size:.9em;margin:12px 0 2px;display:flex;align-items:center;gap:6px}
 .base{display:inline-flex;align-items:center;gap:6px;margin:12px 0 2px;background:var(--azul-claro);border:1px solid #d4e1f3;border-radius:9px;padding:5px 12px;font-size:.86em;color:var(--azul);font-weight:700}
+/* ver corrigida (texto completo, palavras-chave em verde) */
+.corr{color:var(--verde);font-weight:800;background:var(--verde-bg);border:1px solid var(--verde-bd);border-radius:5px;padding:0 5px}
+.lei.corrigida{border-left-color:var(--verde-bd);background:#f1fbf4}
+/* agendar reaparição (1 a 10) */
+.schrow{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-top:10px}
+.schn{min-width:42px;padding:9px 11px;min-height:40px;justify-content:center;font-weight:700}
+.schmsg{color:var(--verde);font-weight:600;font-size:.9em;margin-top:8px}
 footer{max-width:860px;margin:6px auto 44px;padding:0 20px;color:#73819a;font-size:.82em;text-align:justify}
 .ghint{display:inline-flex;align-items:center;gap:6px;background:#ffffff22;border:1px solid #ffffff44;border-radius:999px;padding:3px 10px;font-size:.8em;margin-top:10px}
 kbd{background:#fff;color:var(--azul);border-radius:5px;padding:0 6px;font:600 .85em/1.5 system-ui;border:1px solid #cdd8e8}
@@ -86,7 +93,7 @@ const CHAVE='leiseca:v1';
 let st={resp:{}};try{st=Object.assign(st,JSON.parse(localStorage.getItem(CHAVE)||'{}'))}catch(e){}
 const salvar=()=>{try{localStorage.setItem(CHAVE,JSON.stringify(st))}catch(e){}};
 const BLOCOS=Array.isArray(window.LEI_SECA)?window.LEI_SECA:[];
-let bloco=null,ordem=[],pos=0,revelado=false;
+let bloco=null,ordem=[],pos=0,revelado=false,corrigidaOn=false;
 
 /* monta o texto do artigo; mostrada=false => lacunas escondidas; true => preenchidas em vermelho */
 function leiHTML(it,mostrada){
@@ -96,6 +103,16 @@ function leiHTML(it,mostrada){
     const resp=esc((it.g&&it.g[k-1])||'');
     h+= mostrada ? '<span class="lac on">'+resp+'</span>' : '<span class="lac">'+resp+'</span>';
     h+= esc(partes[k]);
+  }
+  return h;
+}
+
+/* "ver corrigida": artigo completo, corrido, com as palavras-chave em VERDE (leitura fluida) */
+function leiCorrHTML(it){
+  const partes=String(it.t).split('___');
+  let h=esc(partes[0]);
+  for(let k=1;k<partes.length;k++){
+    h+='<b class="corr">'+esc((it.g&&it.g[k-1])||'')+'</b>'+esc(partes[k]);
   }
   return h;
 }
@@ -137,7 +154,7 @@ function abrir(bi){
 }
 
 function telaItem(){
-  revelado=false;
+  revelado=false; corrigidaOn=false;
   const it=bloco.itens[ordem[pos]];
   const tags=[`<span class="tag dip">${esc(it.d)}${it.art&&it.art!=='—'?' · art. '+esc(it.art):''}</span>`];
   if(it.novo)tags.push('<span class="tag novo">🆕 atualizado</span>');
@@ -148,7 +165,16 @@ function telaItem(){
     <div class="rub">${esc(it.rub||'')}</div>
     <div class="lei" id="lei">${leiHTML(it,false)}</div>
     <div class="dica">🧠 Tente lembrar as palavras ocultas; depois revele.</div>
-    <div class="bt-lin"><button class="bt pri" data-rev="1">👁️ Revelar resposta</button></div>
+    <div class="bt-lin">
+      <button class="bt pri" data-rev="1">👁️ Revelar resposta</button>
+      <button class="bt" data-sched="toggle" title="Agendar esta carta para reaparecer mais à frente nesta sessão">↻ Rever em…</button>
+    </div>
+    <div class="schrow" id="schrow" hidden>
+      <span style="color:var(--suave);font-size:.9em">Reaparece após</span>
+      ${[1,2,3,4,5,6,7,8,9,10].map(n=>`<button class="bt schn" data-sched="${n}">${n}</button>`).join('')}
+      <span style="color:var(--suave);font-size:.9em">questões</span>
+    </div>
+    <div class="schmsg" id="schmsg"></div>
   </section>`;
   $('rodape').innerHTML='';
 }
@@ -157,7 +183,8 @@ function revelar(){
   if(revelado)return; revelado=true;
   const it=bloco.itens[ordem[pos]], last=pos>=ordem.length-1;
   $('lei').innerHTML=leiHTML(it,true);
-  const extra=`<div class="base">📖 ${esc(it.base||'')}</div>
+  const extra=`<div class="bt-lin" style="margin-top:14px"><button class="bt" data-corr="1">✎ Ver corrigida (texto completo)</button></div>
+    <div class="base">📖 ${esc(it.base||'')}</div>
     <div class="dica" style="margin-top:14px">Você lembrou das palavras‑chave?</div>
     <div class="bt-lin">
       <button class="bt" data-marca="ok" style="border-color:var(--verde-bd);color:var(--verde)">✓ Lembrei</button>
@@ -182,10 +209,29 @@ function marcar(v){
   });
 }
 
+/* "ver corrigida": alterna entre lacunas-preenchidas (vermelho) e texto completo corrido (verde) */
+function toggleCorrigida(btn){
+  const it=bloco.itens[ordem[pos]], lei=$('lei'); if(!lei)return;
+  corrigidaOn=!corrigidaOn;
+  if(corrigidaOn){ lei.innerHTML=leiCorrHTML(it); lei.classList.add('corrigida'); btn.textContent='↩ Ver com lacunas'; }
+  else { lei.innerHTML=leiHTML(it,true); lei.classList.remove('corrigida'); btn.textContent='✎ Ver corrigida (texto completo)'; }
+}
+
+/* reaparição: reinjeta a carta atual N questões à frente na fila da sessão (não apertar = segue normal) */
+function agendarRever(n){
+  const alvo=ordem[pos];
+  let at=pos+1+n; if(at>ordem.length)at=ordem.length;
+  ordem.splice(at,0,alvo);
+  const row=$('schrow'); if(row)row.hidden=true;
+  const msg=$('schmsg'); if(msg)msg.textContent=`✓ Esta carta reaparece em ${n} questã${n===1?'o':'es'} (fila agora: ${ordem.length} cartas).`;
+}
+
 document.addEventListener('click',e=>{
   const h=e.target.closest('[data-home]'); if(h){home();scrollTo(0,0);return}
   const b=e.target.closest('[data-bloco]'); if(b){abrir(+b.dataset.bloco);scrollTo(0,0);return}
   const r=e.target.closest('[data-rev]'); if(r){revelar();return}
+  const cr=e.target.closest('[data-corr]'); if(cr){toggleCorrigida(cr);return}
+  const sc=e.target.closest('[data-sched]'); if(sc){ if(sc.dataset.sched==='toggle'){const row=$('schrow');if(row)row.hidden=!row.hidden;} else {agendarRever(+sc.dataset.sched);} return}
   const m=e.target.closest('[data-marca]'); if(m){marcar(m.dataset.marca);return}
   const nv=e.target.closest('[data-nav]'); if(nv){pos+=+nv.dataset.nav;if(pos<0)pos=0;if(pos>=ordem.length)pos=ordem.length-1;telaItem();scrollTo(0,0);return}
 });
