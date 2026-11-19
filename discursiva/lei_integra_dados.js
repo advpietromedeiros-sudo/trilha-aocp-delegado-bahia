@@ -328,6 +328,175 @@ window.LEI_INTEGRA = [
   {n:"III", t:"que o fato narrado evidentemente {não constitui crime}", imp:true, destaque:true},
   {n:"IV", t:"extinta a {punibilidade} do agente"}
  ],
- paragrafos:[], mnem:"absolvição sumária: ilicitude · culpabilidade · atipicidade · extinção da punibilidade", base:"CPP, art. 397"}
+ paragrafos:[], mnem:"absolvição sumária: ilicitude · culpabilidade · atipicidade · extinção da punibilidade", base:"CPP, art. 397"},
+
+/* ==================== CÓDIGO CIVIL ==================== */
+{d:"CC", art:"1º", titulo:"CÓDIGO CIVIL — Das pessoas naturais", rub:"Capacidade de direito",
+ caput:"Toda pessoa é {capaz} de direitos e deveres na ordem civil.",
+ incisos:[], paragrafos:[], mnem:"personalidade: capacidade de DIREITO é de toda pessoa", base:"CC, art. 1º"},
+
+{d:"CC", art:"2º", titulo:"CÓDIGO CIVIL", rub:"Início da personalidade e nascituro",
+ caput:"A personalidade civil da pessoa começa do {nascimento com vida}; mas a lei põe a salvo, desde a {concepção}, os direitos do nascituro.",
+ incisos:[], paragrafos:[], mnem:"personalidade: nasce com VIDA; nascituro protegido desde a CONCEPÇÃO", base:"CC, art. 2º"},
+
+{d:"CC", art:"3º", titulo:"CÓDIGO CIVIL", rub:"Absolutamente incapazes",
+ caput:"São absolutamente incapazes de exercer pessoalmente os atos da vida civil os {menores de 16 anos}.",
+ incisos:[], paragrafos:[], mnem:"absolutamente incapaz hoje = SÓ o menor de 16 (Estatuto da Pessoa com Deficiência)", base:"CC, art. 3º"},
+
+{d:"CC", art:"4º", titulo:"CÓDIGO CIVIL", rub:"Relativamente incapazes",
+ caput:"São incapazes, relativamente a certos atos ou à maneira de os exercer:",
+ incisos:[
+  {n:"I", t:"os maiores de dezesseis e menores de {dezoito anos}", imp:true},
+  {n:"II", t:"os {ébrios habituais} e os viciados em tóxico"},
+  {n:"III", t:"aqueles que, por causa transitória ou permanente, não puderem {exprimir sua vontade}", imp:true},
+  {n:"IV", t:"os {pródigos}", imp:true, destaque:true}
+ ],
+ paragrafos:[], mnem:"relativamente incapaz: 16–18, ébrio/viciado, sem exprimir vontade, pródigo", base:"CC, art. 4º"},
+
+{d:"CC", art:"11", titulo:"CÓDIGO CIVIL — Direitos da personalidade", rub:"Características",
+ caput:"Com exceção dos casos previstos em lei, os direitos da personalidade são {intransmissíveis} e {irrenunciáveis}, não podendo o seu exercício sofrer limitação voluntária.",
+ incisos:[], paragrafos:[], mnem:"direitos da personalidade: INTRANSMISSÍVEIS e IRRENUNCIÁVEIS", base:"CC, art. 11"},
+
+{d:"CC", art:"186", titulo:"CÓDIGO CIVIL — Dos atos ilícitos", rub:"Ato ilícito",
+ caput:"Aquele que, por ação ou omissão voluntária, {negligência ou imprudência}, violar direito e causar dano a outrem, ainda que exclusivamente {moral}, comete ato ilícito.",
+ incisos:[], paragrafos:[], mnem:"ato ilícito = conduta + culpa (negligência/imprudência) + dano (até só moral)", base:"CC, art. 186"},
+
+{d:"CC", art:"187", titulo:"CÓDIGO CIVIL", rub:"Abuso de direito",
+ caput:"Também comete ato ilícito o titular de um direito que, ao exercê-lo, excede manifestamente os limites impostos pelo seu fim econômico ou social, pela {boa-fé} ou pelos bons costumes.",
+ incisos:[], paragrafos:[], mnem:"abuso de direito = ato ilícito (responsabilidade OBJETIVA, dispensa culpa)", base:"CC, art. 187"},
+
+{d:"CC", art:"188", titulo:"CÓDIGO CIVIL", rub:"Excludentes de ilicitude (civil)",
+ caput:"Não constituem atos ilícitos:",
+ incisos:[
+  {n:"I", t:"os praticados em {legítima defesa} ou no exercício regular de um direito reconhecido", imp:true},
+  {n:"II", t:"a deterioração ou destruição da coisa alheia, ou a lesão a pessoa, a fim de remover {perigo iminente} (estado de necessidade)", imp:true}
+ ],
+ paragrafos:[], mnem:"civil: legítima defesa, exercício regular, estado de necessidade (remover perigo)", base:"CC, art. 188"},
+
+{d:"CC", art:"927", titulo:"CÓDIGO CIVIL — Da responsabilidade civil", rub:"Obrigação de indenizar",
+ caput:"Aquele que, por ato ilícito (arts. 186 e 187), causar dano a outrem, fica obrigado a {repará-lo}.",
+ incisos:[],
+ paragrafos:[{rot:"Parágrafo único.", t:"Haverá obrigação de reparar o dano, independentemente de culpa, nos casos especificados em lei, ou quando a atividade normalmente desenvolvida pelo autor do dano implicar, por sua natureza, {risco} para os direitos de outrem.", imp:true, destaque:true}],
+ mnem:"responsabilidade OBJETIVA: teoria do RISCO (§ único), dispensa culpa", base:"CC, art. 927"},
+
+{d:"CC", art:"932", titulo:"CÓDIGO CIVIL", rub:"Responsabilidade por fato de terceiro",
+ caput:"São também responsáveis pela reparação civil:",
+ incisos:[
+  {n:"I", t:"os {pais}, pelos filhos menores que estiverem sob sua autoridade e em sua companhia", imp:true},
+  {n:"III", t:"o {empregador}, por seus empregados, serviçais e prepostos, no exercício do trabalho que lhes competir, ou em razão dele", imp:true, destaque:true}
+ ],
+ paragrafos:[], mnem:"responsabilidade dos pais e do empregador é OBJETIVA (art. 933)", base:"CC, art. 932"},
+
+/* ==================== CÓDIGO DE PROCESSO CIVIL ==================== */
+{d:"CPC", art:"1º", titulo:"CÓDIGO DE PROCESSO CIVIL — Normas fundamentais", rub:"Conformidade com a Constituição",
+ caput:"O processo civil será ordenado, disciplinado e interpretado conforme os valores e as normas fundamentais estabelecidos na {Constituição} da República Federativa do Brasil, observando-se as disposições deste Código.",
+ incisos:[], paragrafos:[], mnem:"CPC começa pela CONSTITUIÇÃO (processo constitucional)", base:"CPC, art. 1º"},
+
+{d:"CPC", art:"2º", titulo:"CÓDIGO DE PROCESSO CIVIL", rub:"Inércia e impulso oficial",
+ caput:"O processo começa por {iniciativa da parte} e se desenvolve por {impulso oficial}, salvo as exceções previstas em lei.",
+ incisos:[], paragrafos:[], mnem:"inércia da jurisdição: parte INICIA, Estado IMPULSIONA", base:"CPC, art. 2º"},
+
+{d:"CPC", art:"3º", titulo:"CÓDIGO DE PROCESSO CIVIL", rub:"Inafastabilidade e meios consensuais",
+ caput:"Não se excluirá da apreciação jurisdicional {ameaça ou lesão a direito}.",
+ incisos:[],
+ paragrafos:[
+  {rot:"§ 1º", t:"É permitida a {arbitragem}, na forma da lei."},
+  {rot:"§ 2º", t:"O Estado promoverá, sempre que possível, a {solução consensual} dos conflitos.", imp:true}
+ ],
+ mnem:"inafastabilidade (CF 5º, XXXV) + estímulo à conciliação/arbitragem", base:"CPC, art. 3º"},
+
+{d:"CPC", art:"139", titulo:"CÓDIGO DE PROCESSO CIVIL", rub:"Poderes do juiz",
+ caput:"O juiz dirigirá o processo conforme as disposições deste Código, incumbindo-lhe:",
+ incisos:[
+  {n:"I", t:"assegurar às partes {igualdade de tratamento}"},
+  {n:"II", t:"velar pela {duração razoável} do processo"},
+  {n:"IV", t:"determinar todas as medidas indutivas, coercitivas, mandamentais ou sub-rogatórias necessárias para assegurar o {cumprimento} de ordem judicial, inclusive nas ações que tenham por objeto prestação pecuniária", imp:true, destaque:true}
+ ],
+ paragrafos:[], mnem:"art. 139, IV: poder geral de efetivação das decisões", base:"CPC, art. 139"},
+
+{d:"CPC", art:"300", titulo:"CÓDIGO DE PROCESSO CIVIL — Tutela provisória", rub:"Tutela de urgência",
+ caput:"A tutela de urgência será concedida quando houver elementos que evidenciem a {probabilidade do direito} e o {perigo de dano} ou o risco ao resultado útil do processo.",
+ incisos:[], paragrafos:[], mnem:"urgência: fumus boni iuris (probabilidade) + periculum in mora (perigo)", base:"CPC, art. 300"},
+
+{d:"CPC", art:"373", titulo:"CÓDIGO DE PROCESSO CIVIL — Das provas", rub:"Ônus da prova",
+ caput:"O ônus da prova incumbe:",
+ incisos:[
+  {n:"I", t:"ao autor, quanto ao fato {constitutivo} de seu direito", imp:true, destaque:true},
+  {n:"II", t:"ao réu, quanto à existência de fato {impeditivo, modificativo ou extintivo} do direito do autor", imp:true}
+ ],
+ paragrafos:[], mnem:"autor: fato CONSTITUTIVO · réu: impeditivo/modificativo/extintivo", base:"CPC, art. 373"},
+
+{d:"CPC", art:"485", titulo:"CÓDIGO DE PROCESSO CIVIL — Sentença", rub:"Extinção sem resolução de mérito",
+ caput:"O juiz não resolverá o mérito quando:",
+ incisos:[
+  {n:"I", t:"indeferir a {petição inicial}"},
+  {n:"IV", t:"verificar a ausência de {pressupostos} de constituição e de desenvolvimento válido e regular do processo"},
+  {n:"VI", t:"verificar ausência de {legitimidade} ou de interesse processual", imp:true}
+ ],
+ paragrafos:[], mnem:"sem mérito = sentença TERMINATIVA (não faz coisa julgada material)", base:"CPC, art. 485"},
+
+{d:"CPC", art:"487", titulo:"CÓDIGO DE PROCESSO CIVIL", rub:"Resolução de mérito",
+ caput:"Haverá resolução de mérito quando o juiz:",
+ incisos:[
+  {n:"I", t:"acolher ou rejeitar o pedido formulado na ação ou na {reconvenção}", imp:true},
+  {n:"II", t:"decidir, de ofício ou a requerimento, sobre a ocorrência de {decadência ou prescrição}", imp:true, destaque:true}
+ ],
+ paragrafos:[], mnem:"com mérito = sentença DEFINITIVA (faz coisa julgada material)", base:"CPC, art. 487"},
+
+{d:"CPC", art:"927", titulo:"CÓDIGO DE PROCESSO CIVIL", rub:"Precedentes obrigatórios",
+ caput:"Os juízes e os tribunais {observarão}:",
+ incisos:[
+  {n:"I", t:"as decisões do {STF} em controle concentrado de constitucionalidade", imp:true},
+  {n:"II", t:"os enunciados de {súmula vinculante}", imp:true, destaque:true},
+  {n:"III", t:"os acórdãos em incidente de assunção de competência ou de resolução de demandas repetitivas e em julgamento de recursos extraordinário e especial repetitivos"},
+  {n:"IV", t:"os enunciados das súmulas do STF em matéria constitucional e do STJ em matéria infraconstitucional"}
+ ],
+ paragrafos:[], mnem:"sistema de precedentes vinculantes do CPC/2015", base:"CPC, art. 927"},
+
+/* ==================== CÓDIGO TRIBUTÁRIO NACIONAL ==================== */
+{d:"CTN", art:"3º", titulo:"CÓDIGO TRIBUTÁRIO NACIONAL", rub:"Definição de tributo",
+ caput:"Tributo é toda prestação pecuniária compulsória, em moeda ou cujo valor nela se possa exprimir, que não constitua {sanção de ato ilícito}, instituída em lei e cobrada mediante atividade administrativa {plenamente vinculada}.",
+ incisos:[], paragrafos:[], mnem:"tributo NÃO é multa (não é sanção de ato ilícito); cobrança VINCULADA", base:"CTN, art. 3º"},
+
+{d:"CTN", art:"16", titulo:"CÓDIGO TRIBUTÁRIO NACIONAL", rub:"Imposto",
+ caput:"Imposto é o tributo cuja obrigação tem por fato gerador uma situação {independente} de qualquer atividade estatal específica, relativa ao contribuinte.",
+ incisos:[], paragrafos:[], mnem:"IMPOSTO = tributo NÃO vinculado (independe de atividade estatal)", base:"CTN, art. 16"},
+
+{d:"CTN", art:"77", titulo:"CÓDIGO TRIBUTÁRIO NACIONAL", rub:"Taxa",
+ caput:"As taxas têm como fato gerador o exercício regular do {poder de polícia}, ou a utilização, efetiva ou potencial, de {serviço público} específico e divisível, prestado ao contribuinte ou posto à sua disposição.",
+ incisos:[], paragrafos:[], mnem:"TAXA: poder de polícia OU serviço público específico e divisível", base:"CTN, art. 77"},
+
+{d:"CTN", art:"97", titulo:"CÓDIGO TRIBUTÁRIO NACIONAL", rub:"Princípio da legalidade tributária",
+ caput:"Somente a {lei} pode estabelecer:",
+ incisos:[
+  {n:"I", t:"a instituição de tributos, ou a sua {extinção}", imp:true},
+  {n:"II", t:"a {majoração} de tributos, ou sua redução", imp:true, destaque:true}
+ ],
+ paragrafos:[], mnem:"legalidade estrita: criar/extinguir e majorar/reduzir tributo SÓ por lei", base:"CTN, art. 97"},
+
+{d:"CTN", art:"113", titulo:"CÓDIGO TRIBUTÁRIO NACIONAL", rub:"Obrigação tributária",
+ caput:"A obrigação tributária é {principal} ou {acessória}.",
+ incisos:[],
+ paragrafos:[
+  {rot:"§ 1º", t:"A obrigação principal surge com a ocorrência do fato gerador, tem por objeto o pagamento de {tributo ou penalidade} pecuniária e extingue-se juntamente com o crédito dela decorrente.", imp:true},
+  {rot:"§ 2º", t:"A obrigação acessória decorre da legislação tributária e tem por objeto as prestações, {positivas ou negativas}, nela previstas no interesse da arrecadação ou da fiscalização dos tributos."}
+ ],
+ mnem:"principal = pagar ($); acessória = fazer/não fazer (deveres instrumentais)", base:"CTN, art. 113"},
+
+{d:"CTN", art:"142", titulo:"CÓDIGO TRIBUTÁRIO NACIONAL", rub:"Lançamento",
+ caput:"Compete {privativamente} à autoridade administrativa constituir o {crédito tributário} pelo lançamento, assim entendido o procedimento administrativo tendente a verificar a ocorrência do fato gerador, determinar a matéria tributável, calcular o montante do tributo devido, identificar o sujeito passivo e, sendo caso, propor a penalidade cabível.",
+ incisos:[],
+ paragrafos:[{rot:"Parágrafo único.", t:"A atividade administrativa de lançamento é {vinculada} e obrigatória, sob pena de responsabilidade funcional.", imp:true}],
+ mnem:"lançamento: privativo da autoridade, VINCULADO e obrigatório", base:"CTN, art. 142"},
+
+{d:"CTN", art:"156", titulo:"CÓDIGO TRIBUTÁRIO NACIONAL", rub:"Extinção do crédito tributário",
+ caput:"Extinguem o crédito tributário:",
+ incisos:[
+  {n:"I", t:"o {pagamento}", imp:true},
+  {n:"III", t:"a {transação}"},
+  {n:"IV", t:"a remissão"},
+  {n:"V", t:"a {prescrição} e a decadência", imp:true, destaque:true}
+ ],
+ paragrafos:[], mnem:"extinção: pagamento, transação, remissão, prescrição/decadência (rol do art. 156)", base:"CTN, art. 156"}
 
 ];

@@ -423,6 +423,6 @@ prompt do servidor já manda não aplicar norma posterior.
   publicado é autoral.
 - **Desdobramento (aba "Lei na Íntegra", 19/11/2026):** a mesma medição de incidência orientou um novo módulo
   (`discursiva/Lei_na_Integra.html` + `lei_integra_dados.js`) que estuda o **artigo inteiro** em 3 modos
-  (Esconder/Teste/Revisão). O texto é a **legislação oficial e pública** (CF/88, Código Penal e CPP — núcleo do
-  Delegado, ~40 artigos); o método (esconder-lembrar, modos, mnemônico, áudio por `speechSynthesis`) é técnica de
-  estudo. Nada de terceiro entra — nem conteúdo, nem marca/identidade.
+  (Esconder/Teste/Revisão). O texto é a **legislação oficial e pública** (CF/88, CP, CPP, CC, CPC e CTN — 66 artigos
+  inteiros); o método (esconder-lembrar, modos, mnemônico, áudio por `speechSynthesis`) é técnica de estudo. Nada de
+  terceiro entra — nem conteúdo, nem marca/identidade.

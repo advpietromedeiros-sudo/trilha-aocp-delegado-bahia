@@ -2,9 +2,17 @@
 
 > Estado, tarefas e o que ficou rodando. Atualizado a cada ~15 min de trabalho e no fechamento.
 
-**Última atualização:** 19/11/2026, 14h10.
+**Última atualização:** 19/11/2026, 15h11.
 
 ## Estado
+
+- 🆕 **19/11/2026, 15h11 — Lei na Íntegra: Fase 3 (CC + CPC + CTN).** A pedido do titular ("faça, mas antes me envie
+  o link"). Enviados e conferidos (HTTP 200, versão no ar) os links públicos do projeto. Depois ampliei a aba de 40
+  para **66 artigos inteiros**: + CC 10 (personalidade, incapazes, atos ilícitos, abuso, responsabilidade civil),
+  CPC 9 (normas fundamentais, inércia, poderes do juiz, tutela de urgência, ônus da prova, sentença, precedentes) e
+  CTN 7 (tributo, imposto, taxa, legalidade, obrigação, lançamento, extinção). 0 duplicata; `testar_lei_integra.cjs`
+  verde + autoteste; Portão 41/41. Pacote privado regenerado (Lei na Íntegra 76,3 KB). Links do app:
+  https://advpietromedeiros-sudo.github.io/trilha-aocp-delegado-bahia/discursiva/Lei_na_Integra.html
 
 - 🆕 **19/11/2026, 14h10 — Lei na Íntegra ampliada p/ o núcleo do Delegado + pacote privado com o projeto inteiro**
   (pedido do titular, 14h00: *"complete, pode fazer todo e gerar o HTML com todo projeto"*). `lei_integra_dados.js`
