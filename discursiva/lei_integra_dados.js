@@ -497,6 +497,161 @@ window.LEI_INTEGRA = [
   {n:"IV", t:"a remissão"},
   {n:"V", t:"a {prescrição} e a decadência", imp:true, destaque:true}
  ],
- paragrafos:[], mnem:"extinção: pagamento, transação, remissão, prescrição/decadência (rol do art. 156)", base:"CTN, art. 156"}
+ paragrafos:[], mnem:"extinção: pagamento, transação, remissão, prescrição/decadência (rol do art. 156)", base:"CTN, art. 156"},
+
+/* ==================== LEI ANTIFACÇÃO (Lei 15.358/2026) ==================== */
+{d:"L.15.358", art:"1º", titulo:"LEI ANTIFACÇÃO — Marco Legal do Combate ao Crime Organizado", rub:"Objeto e nomenclaturas",
+ caput:"Esta Lei institui o {Marco Legal do Combate ao Crime Organizado} no Brasil, para definir e punir as condutas de organizações criminosas {ultraviolentas}, grupos paramilitares ou milícias privadas, e tipifica os crimes de domínio social estruturado e de favorecimento ao domínio social estruturado.",
+ incisos:[], paragrafos:[], mnem:"Lei RAUL JUNGMANN = Lei ANTIFACÇÃO", base:"Lei 15.358/26, art. 1º"},
+
+{d:"L.15.358", art:"2º caput", titulo:"DOMÍNIO SOCIAL ESTRUTURADO", rub:"Domínio social estruturado",
+ caput:"Constitui crime, {independentemente de suas razões ou motivações}, a prática, por integrante de organização criminosa ultraviolenta, grupo paramilitar ou milícia privada, de qualquer das condutas previstas (controle territorial, uso de armas/explosivos, barricadas contra a polícia, ataques a presídios etc.).",
+ incisos:[
+  {n:"I", t:"utilizar violência ou grave ameaça para impor ou exercer o {controle, o domínio ou a influência} sobre áreas geográficas, comunidades ou territórios", imp:true, destaque:true},
+  {n:"III", t:"impedir a atuação das forças de segurança mediante {barricadas}, bloqueios, incêndios ou destruição de vias", imp:true},
+  {n:"VI", t:"promover ataques, com violência ou grave ameaça, contra {instituições prisionais}", imp:true}
+ ],
+ paragrafos:[], mnem:"crime INDEPENDENTE de razões/motivações", base:"Lei 15.358/26, art. 2º"},
+
+{d:"L.15.358", art:"2º pena", titulo:"DOMÍNIO SOCIAL ESTRUTURADO", rub:"Pena",
+ caput:"Pena - {reclusão}, de {20 (vinte) a 40 (quarenta) anos}, sem prejuízo das sanções correspondentes à ameaça, à violência ou a de outros crimes previstos na legislação penal.",
+ incisos:[], paragrafos:[], mnem:"domínio social estruturado = 20 a 40 anos", base:"Lei 15.358/26, art. 2º"},
+
+{d:"L.15.358", art:"2º §1º", titulo:"DOMÍNIO SOCIAL ESTRUTURADO", rub:"Causas de aumento",
+ caput:"Aumenta-se a pena de {2/3 (dois terços) ao dobro} se:",
+ incisos:[
+  {n:"I", t:"o agente exercer {comando ou liderança} da organização, mesmo sem praticar os atos de execução", imp:true, destaque:true},
+  {n:"VII", t:"houver emprego de {arma de fogo de uso restrito ou proibido}, explosivo ou artefato análogo", imp:true},
+  {n:"VIII", t:"o agente envolver {criança ou adolescente}, ainda que de forma eventual", imp:true},
+  {n:"IX", t:"houver {relações transnacionais} ou destinação do produto ao exterior"}
+ ],
+ paragrafos:[], mnem:"aumento: 2/3 AO DOBRO", base:"Lei 15.358/26, art. 2º, §1º"},
+
+{d:"L.15.358", art:"2º §2º", titulo:"DOMÍNIO SOCIAL ESTRUTURADO", rub:"Conceito de facção criminosa",
+ caput:"Considera-se organização criminosa ultraviolenta, denominada {facção criminosa}, o agrupamento de {3 (três) ou mais pessoas} que emprega violência, grave ameaça ou coação para impor controle territorial ou social, intimidar populações ou autoridades ou atacar serviços e infraestrutura essenciais.",
+ incisos:[], paragrafos:[], mnem:"facção = 3 OU MAIS pessoas", base:"Lei 15.358/26, art. 2º, §2º"},
+
+{d:"L.15.358", art:"2º §4º", titulo:"DOMÍNIO SOCIAL ESTRUTURADO", rub:"Insuscetibilidades",
+ caput:"Os crimes previstos neste artigo são {insuscetíveis} de:",
+ incisos:[
+  {n:"I", t:"{anistia, graça e indulto}", imp:true, destaque:true},
+  {n:"II", t:"{fiança}", imp:true},
+  {n:"III", t:"{livramento condicional}", imp:true}
+ ],
+ paragrafos:[], mnem:"3 vedações: anistia/graça/indulto · fiança · livramento condicional", base:"Lei 15.358/26, art. 2º, §4º"},
+
+{d:"L.15.358", art:"2º §5º", titulo:"DOMÍNIO SOCIAL ESTRUTURADO", rub:"Atos preparatórios",
+ caput:"Aquele que praticar {atos preparatórios}, com propósito inequívoco de consumar qualquer das condutas, estará sujeito à pena do crime consumado, {reduzida de 1/3 (um terço) até a 1/2 (metade)}.",
+ incisos:[], paragrafos:[], mnem:"pune ATO PREPARATÓRIO (consumado reduzido 1/3 a 1/2)", base:"Lei 15.358/26, art. 2º, §5º"},
+
+{d:"L.15.358", art:"2º §7º", titulo:"DOMÍNIO SOCIAL ESTRUTURADO", rub:"Segurança máxima",
+ caput:"As pessoas condenadas ou cautelarmente custodiadas, quando houver indícios concretos de que exerçam {liderança ou chefia} ou integrem núcleo de comando, cumprirão obrigatoriamente a pena ou a custódia em {estabelecimento penal federal de segurança máxima}.",
+ incisos:[], paragrafos:[], mnem:"líder/chefe → presídio FEDERAL de segurança máxima", base:"Lei 15.358/26, art. 2º, §7º"},
+
+{d:"L.15.358", art:"2º §8º", titulo:"DOMÍNIO SOCIAL ESTRUTURADO", rub:"Varas Criminais Colegiadas",
+ caput:"Os {homicídios} cometidos por membros de facção, ou sua tentativa, quando conexos a estes crimes, serão julgados pelas {Varas Criminais Colegiadas} (art. 1º-A da Lei 12.694/2012), e não pelo Tribunal do Júri.",
+ incisos:[], paragrafos:[], mnem:"tira do JÚRI → colegiado de 3 juízes (segurança do magistrado)", base:"Lei 15.358/26, art. 2º, §8º"},
+
+{d:"L.15.358", art:"2º §9º", titulo:"DOMÍNIO SOCIAL ESTRUTURADO", rub:"Prisão preventiva",
+ caput:"A prática dos crimes previstos neste artigo é {causa suficiente} para a decretação de {prisão preventiva}.",
+ incisos:[], paragrafos:[], mnem:"prática do crime = causa suficiente p/ PREVENTIVA", base:"Lei 15.358/26, art. 2º, §9º"},
+
+{d:"L.15.358", art:"3º", titulo:"FAVORECIMENTO AO DOMÍNIO SOCIAL ESTRUTURADO", rub:"Favorecimento — condutas",
+ caput:"Constitui crime: {promover ou fundar} organização criminosa ultraviolenta, grupo paramilitar ou milícia privada, ou a eles {aderir}, assim como apoiá-los de qualquer forma; distribuir material de incitação; fornecer armas/explosivos; ceder local; ou {alegar falsamente} pertencer a facção para obter vantagem ou intimidar.",
+ incisos:[], paragrafos:[], mnem:"favorecer = promover/fundar/aderir/apoiar", base:"Lei 15.358/26, art. 3º"},
+
+{d:"L.15.358", art:"3º pena", titulo:"FAVORECIMENTO AO DOMÍNIO SOCIAL ESTRUTURADO", rub:"Pena",
+ caput:"Pena - {reclusão}, de {12 (doze) a 20 (vinte) anos}, e multa.",
+ incisos:[], paragrafos:[], mnem:"favorecimento = 12 a 20 anos + multa", base:"Lei 15.358/26, art. 3º"},
+
+{d:"L.15.358", art:"4º", titulo:"DISPOSIÇÕES PENAIS", rub:"Natureza hedionda",
+ caput:"Os crimes previstos no caput e nos §§ 1º e 3º do art. 2º e no art. 3º desta Lei são considerados {hediondos}, para todos os fins jurídicos e legais (art. 5º, XLIII, da CF e Lei 8.072/90).",
+ incisos:[], paragrafos:[], mnem:"domínio e favorecimento = crimes HEDIONDOS", base:"Lei 15.358/26, art. 4º"},
+
+{d:"L.15.358", art:"5º", titulo:"NORMAS PROCESSUAIS — Inquérito policial", rub:"Prazos do inquérito",
+ caput:"Nos crimes desta Lei, o inquérito policial será concluído no prazo de {90 (noventa) dias}, se o indiciado estiver {preso}, e de {270 (duzentos e setenta) dias}, quando estiver {solto}, prorrogável por igual período.",
+ incisos:[], paragrafos:[], mnem:"IP: 90 PRESO / 270 SOLTO (prorrogável por igual período)", base:"Lei 15.358/26, art. 5º"},
+
+{d:"L.15.358", art:"5º §1º", titulo:"NORMAS PROCESSUAIS", rub:"Prazo do juiz",
+ caput:"No curso das investigações, o juiz decidirá as representações do delegado de polícia ou os requerimentos do Ministério Público no prazo de {15 (quinze) dias}, contado da conclusão dos autos.",
+ incisos:[], paragrafos:[], mnem:"juiz decide em 15 dias", base:"Lei 15.358/26, art. 5º, §1º"},
+
+{d:"L.15.358", art:"5º §2º", titulo:"NORMAS PROCESSUAIS", rub:"Parecer do MP",
+ caput:"Na hipótese de representação do delegado de polícia, o Ministério Público emitirá parecer no prazo de {5 (cinco) dias}, contado do recebimento dos autos.",
+ incisos:[], paragrafos:[], mnem:"MP: parecer em 5 dias", base:"Lei 15.358/26, art. 5º, §2º"},
+
+{d:"L.15.358", art:"5º §3º", titulo:"NORMAS PROCESSUAIS", rub:"Urgência (24h)",
+ caput:"Na hipótese de urgência ou de risco de ineficácia da medida, o Ministério Público manifestar-se-á e o juiz decidirá no prazo simultâneo de {24 (vinte e quatro) horas}, facultado à parte manifestar-se após a decisão.",
+ incisos:[], paragrafos:[], mnem:"urgência: MP + juiz em 24h (simultâneo)", base:"Lei 15.358/26, art. 5º, §3º"},
+
+{d:"L.15.358", art:"5º §4º", titulo:"NORMAS PROCESSUAIS", rub:"Descumprimento de prazos",
+ caput:"O descumprimento de quaisquer dos prazos {não gera automaticamente} o relaxamento da prisão ou a concessão de liberdade ao preso, devendo o juiz avaliar as circunstâncias do caso concreto.",
+ incisos:[], paragrafos:[], mnem:"estourar prazo NÃO relaxa a prisão automaticamente", base:"Lei 15.358/26, art. 5º, §4º"},
+
+{d:"L.15.358", art:"5º §6º", titulo:"NORMAS PROCESSUAIS", rub:"Revisão pelo delegado",
+ caput:"Indeferida a representação do delegado de polícia e não sendo interposto recurso pelo MP, poderá o {delegado de polícia}, no prazo de {48 (quarenta e oito) horas}, submeter a matéria à revisão da instância superior do órgão ministerial, que deliberará no mesmo prazo.",
+ incisos:[], paragrafos:[], mnem:"delegado pode provocar revisão em 48h", base:"Lei 15.358/26, art. 5º, §6º"},
+
+{d:"L.15.358", art:"6º", titulo:"NORMAS OPERACIONAIS", rub:"Forças-tarefa integradas",
+ caput:"Os órgãos de investigação, persecução e inteligência poderão atuar em {forças-tarefa integradas}, formalizadas por {termo de cooperação}; o eventual descumprimento do disposto neste artigo {não gera nulidade} na obtenção das provas.",
+ incisos:[], paragrafos:[], mnem:"força-tarefa por TERMO DE COOPERAÇÃO; falha ≠ nulidade", base:"Lei 15.358/26, art. 6º"},
+
+{d:"L.15.358", art:"8º/32", titulo:"NORMAS PROCESSUAIS", rub:"Meios de obtenção de prova",
+ caput:"Aplicam-se os meios de obtenção de prova da Lei {12.850/2013}: colaboração premiada, captação ambiental, {ação controlada}, infiltração de agentes, interceptação telefônica/telemática e afastamento de sigilos, além da Lei de {Lavagem} de Capitais (9.613/98).",
+ incisos:[], paragrafos:[], mnem:"usa os meios de prova da LEI DAS ORCRIM (12.850/13)", base:"Lei 15.358/26, arts. 8º e 32"},
+
+{d:"L.15.358", art:"9º", titulo:"MEDIDAS ASSECURATÓRIAS CAUTELARES", rub:"Rol e contraditório diferido",
+ caput:"O juiz, de ofício, a requerimento do MP ou por representação do delegado, poderá decretar, no curso da investigação ou da ação penal, {sequestro, arresto, bloqueio ou indisponibilidade} de bens, inclusive {ativos digitais ou virtuais}.",
+ incisos:[],
+ paragrafos:[{rot:"§ 1º", t:"As medidas poderão ser decretadas {sem prévia oitiva} da parte, aplicando-se o {contraditório diferido}.", imp:true, destaque:true}],
+ mnem:"cautelar patrimonial com CONTRADITÓRIO DIFERIDO", base:"Lei 15.358/26, art. 9º"},
+
+{d:"L.15.358", art:"9º §8º", titulo:"MEDIDAS ASSECURATÓRIAS CAUTELARES", rub:"Perdimento extraordinário",
+ caput:"Se restar clara a origem {ilícita} do bem, direito ou valor, o juiz poderá decretar o seu {perdimento extraordinário}, {independentemente de condenação penal}.",
+ incisos:[], paragrafos:[], mnem:"perdimento EXTRAORDINÁRIO: independe de condenação", base:"Lei 15.358/26, art. 9º, §8º"},
+
+{d:"L.15.358", art:"10", titulo:"MEDIDAS ASSECURATÓRIAS CAUTELARES", rub:"Intervenção judicial na PJ",
+ caput:"Havendo indícios de que pessoa jurídica seja beneficiada por facção, o juiz determinará o {afastamento dos sócios} e a {intervenção judicial} na administração; o interventor assumirá a empresa pelo prazo de {6 (seis) meses}, prorrogável.",
+ incisos:[], paragrafos:[], mnem:"PJ beneficiada → afasta sócios + INTERVENÇÃO (6 meses)", base:"Lei 15.358/26, art. 10"},
+
+{d:"L.15.358", art:"11", titulo:"MEDIDAS DEFINITIVAS", rub:"Confisco ampliado",
+ caput:"Após o {trânsito em julgado}, o juiz determinará as medidas de desarticulação financeira, inclusive o {confisco ampliado} de bens incompatíveis com a renda declarada do condenado nos {5 (cinco) anos} anteriores ao fato, salvo prova cabal de origem lícita.",
+ incisos:[], paragrafos:[], mnem:"confisco AMPLIADO: bens incompatíveis dos 5 anos anteriores", base:"Lei 15.358/26, art. 11"},
+
+{d:"L.15.358", art:"12", titulo:"AÇÃO CIVIL DE PERDIMENTO DE BENS", rub:"Perdimento civil — imprescritível",
+ caput:"Fica instituída a {ação civil autônoma de perdimento de bens}, que extingue a posse e a propriedade sobre bens que sejam produto ou proveito de atividade ilícita; essa ação é {imprescritível}.",
+ incisos:[], paragrafos:[], mnem:"ação civil de perdimento é IMPRESCRITÍVEL (art. 12, §3º)", base:"Lei 15.358/26, arts. 12 e 13"},
+
+{d:"L.15.358", art:"29", titulo:"BANCO DE DADOS", rub:"Banco Nacional de Dados",
+ caput:"Fica instituído o Banco Nacional de Dados de Organizações Criminosas Ultraviolentas, regulamentado em até {180 (cento e oitenta) dias}; a inclusão do nome/CPF/CNPJ no banco {presumirá} o vínculo da pessoa à respectiva organização criminosa.",
+ incisos:[], paragrafos:[], mnem:"Banco de Dados em 180 dias; inclusão PRESUME o vínculo", base:"Lei 15.358/26, art. 29"},
+
+{d:"L.15.358", art:"CP 121", titulo:"ALTERAÇÕES NO CÓDIGO PENAL", rub:"Homicídio por facção",
+ caput:"Novo § 2º-D do art. 121 do CP: se o {homicídio doloso} é cometido por integrante de facção, no contexto do art. 2º, a pena é de {reclusão, de 20 a 40 anos}.",
+ incisos:[], paragrafos:[], mnem:"homicídio por facção = 20 a 40 anos (CP, 121, §2º-D)", base:"Lei 15.358/26, art. 33 (CP, art. 121)"},
+
+{d:"L.15.358", art:"CP 157", titulo:"ALTERAÇÕES NO CÓDIGO PENAL", rub:"Roubo por facção",
+ caput:"Novo § 4º do art. 157 do CP: se a violência ou grave ameaça do roubo é cometida por integrante de facção, no contexto do art. 2º, aplica-se {em triplo} a pena do caput, desprezadas as demais causas de aumento.",
+ incisos:[], paragrafos:[], mnem:"roubo por facção: pena EM TRIPLO", base:"Lei 15.358/26, art. 33 (CP, art. 157)"},
+
+{d:"L.15.358", art:"LEP 112", titulo:"ALTERAÇÕES NA LEP", rub:"Progressão de regime",
+ caput:"Novos percentuais de progressão (art. 112 da LEP): {70%} da pena (hediondo, primário); {75%} (comando de facção, vedado o livramento); {80%} (reincidente em hediondo); {85%} (reincidente em hediondo com resultado morte, vedado o livramento).",
+ incisos:[], paragrafos:[], mnem:"progressão: 70 · 75 (comando) · 80 · 85 (morte)", base:"Lei 15.358/26, art. 35 (LEP, art. 112)"},
+
+{d:"L.15.358", art:"CPP 310", titulo:"ALTERAÇÕES NO CPP", rub:"Custódia por videoconferência",
+ caput:"Nova redação do art. 310 do CPP: após o auto de prisão em flagrante, no prazo máximo de {24 horas}, o juiz promoverá, por {videoconferência} em tempo real, a audiência de custódia, com a presença do acusado, defesa e Ministério Público.",
+ incisos:[], paragrafos:[], mnem:"custódia agora por VIDEOCONFERÊNCIA (24h)", base:"Lei 15.358/26, art. 38 (CPP, art. 310)"},
+
+{d:"L.15.358", art:"CPP 313", titulo:"ALTERAÇÕES NO CPP", rub:"Preventiva por facção",
+ caput:"Novo inciso V do art. 313 do CPP: admite-se a {prisão preventiva} se o crime for cometido por integrante de {facção}, no contexto ou para a consecução das condutas do art. 2º desta Lei.",
+ incisos:[], paragrafos:[], mnem:"nova hipótese de PREVENTIVA: crime de facção (CPP 313, V)", base:"Lei 15.358/26, art. 38 (CPP, art. 313)"},
+
+{d:"L.15.358", art:"CPP 78", titulo:"ALTERAÇÕES NO CPP", rub:"Competência × Júri",
+ caput:"Nova redação do art. 78, I, do CPP: no concurso entre o júri e outro órgão, prevalece o {júri}, {salvo} os homicídios cometidos por membros de facção, que vão para as {Varas Criminais Colegiadas}.",
+ incisos:[], paragrafos:[], mnem:"regra: prevalece o júri; EXCEÇÃO: homicídio de facção → colegiado", base:"Lei 15.358/26, art. 38 (CPP, art. 78)"},
+
+{d:"L.15.358", art:"44", titulo:"DISPOSIÇÕES FINAIS", rub:"Vigência",
+ caput:"Esta Lei entra em vigor na data de sua {publicação} (24 de março de 2026), sem período de vacância.",
+ incisos:[], paragrafos:[], mnem:"vigência IMEDIATA (na publicação), sem vacatio", base:"Lei 15.358/26, art. 44"}
 
 ];

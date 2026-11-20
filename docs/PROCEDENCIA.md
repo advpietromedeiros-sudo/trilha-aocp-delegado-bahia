@@ -426,3 +426,16 @@ prompt do servidor já manda não aplicar norma posterior.
   (Esconder/Teste/Revisão). O texto é a **legislação oficial e pública** (CF/88, CP, CPP, CC, CPC e CTN — 66 artigos
   inteiros); o método (esconder-lembrar, modos, mnemônico, áudio por `speechSynthesis`) é técnica de estudo. Nada de
   terceiro entra — nem conteúdo, nem marca/identidade.
+
+## 20/11/2026 — "DD LEGIS — Lei Antifacção (15.358/26)" como FONTE do texto legal (Lei na Íntegra)
+
+- **O quê:** PDF de terceiro (DD LEGIS / Dedicação Delta, com marca e esquematização próprias) da **Lei nº
+  15.358/2026 (Lei Antifacção / Marco Legal do Combate ao Crime Organizado)**. O titular pediu "uns Stories para
+  decorar todo esse conteúdo".
+- **O que entrou no Git:** **nada do material de terceiro** — nem a marca, nem as tabelas/esquemas/comentários do
+  DD LEGIS. A **letra de lei da 15.358/2026 é oficial e pública** (sancionada em 24/03/2026); as 34 cartas de
+  lacuna (`discursiva/lei_integra_dados.js`, diploma `L.15.358`) foram **redigidas de forma autoral** a partir do
+  texto legal, cobrindo o núcleo (crimes dos arts. 2º e 3º, penas, insuscetibilidades, prazos do IP, medidas
+  assecuratórias, hediondez e as alterações em CP/CPP/LEP). O PDF serviu só para localizar a lei e os pontos.
+- **Autorização:** pedido escrito do titular (20/11/2026); para estudo pessoal; o app não vai para o portal (D-009).
+  O conteúdo publicado é autoral e o texto é público, sem dependência de autorização do autor do PDF.

@@ -101,7 +101,7 @@ html[data-cel="1"] .bt-lin .bt{flex:1 1 100%;justify-content:center}
 html[data-cel="1"] .tpanel .bt,html[data-cel="1"] .trow .bt,html[data-cel="1"] .trow{flex:1 1 100%;width:100%}
 html[data-cel="1"] .tprog{font-size:1.1em}
 html[data-cel="1"] .estante{grid-template-columns:repeat(2,1fr);gap:14px}
-html[data-cel="1"] .capimg .sig{font-size:42px}
+html[data-cel="1"] .capimg .sig{font-size:34px}
 html[data-cel="1"] .capimg .nm{font-size:14px}
 html[data-cel="1"] .item{padding:20px 16px}
 html[data-cel="1"] .item .tt{font-size:1.32em}
@@ -131,7 +131,7 @@ footer{max-width:860px;margin:6px auto 44px;padding:0 20px;color:#73819a;font-si
 .estante{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .cap{cursor:pointer;background:none;border:0;padding:0;font:inherit}
 .capimg{aspect-ratio:3/4;border-radius:9px;background:linear-gradient(160deg,var(--azul2),var(--azul));color:#fff;position:relative;display:flex;flex-direction:column;justify-content:flex-end;padding:11px;box-shadow:var(--sombra)}
-.capimg .sig{font:800 30px Georgia,serif;line-height:1}
+.capimg .sig{font:800 28px/1.02 Georgia,serif;word-break:break-word;overflow-wrap:anywhere}
 .capimg .nm{font:600 11px system-ui;opacity:.95;line-height:1.15;text-align:left;margin-top:4px}
 .capimg .pc{position:absolute;top:7px;right:7px;background:#fff;color:var(--azul);border-radius:999px;font:700 10px system-ui;padding:2px 7px}
 .cap .leg{font:400 11px system-ui;color:var(--suave);margin-top:5px;text-align:center}
@@ -178,7 +178,7 @@ const $=id=>document.getElementById(id);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const CHAVE='leiintegra:v1';
 let st={done:{},last:null,cel:false};try{st=Object.assign(st,JSON.parse(localStorage.getItem(CHAVE)||'{}'))}catch(e){}
-const NOMES={CF:'Constituição Federal',CP:'Código Penal',CPP:'Processo Penal',CC:'Código Civil',CPC:'Processo Civil',CTN:'Código Tributário'};
+const NOMES={CF:'Constituição Federal',CP:'Código Penal',CPP:'Processo Penal',CC:'Código Civil',CPC:'Processo Civil',CTN:'Código Tributário','L.15.358':'Lei Antifacção (15.358/26)'};
 const salvar=()=>{try{localStorage.setItem(CHAVE,JSON.stringify(st))}catch(e){}};
 const A=Array.isArray(window.LEI_INTEGRA)?window.LEI_INTEGRA:[];
 let atual=0, modo='esconder', foco=0, GAPS=[], grade=false, acertos=0;

@@ -2,9 +2,19 @@
 
 > Estado, tarefas e o que ficou rodando. Atualizado a cada ~15 min de trabalho e no fechamento.
 
-**Última atualização:** 19/11/2026, 16h57.
+**Última atualização:** 20/11/2026, 10h30.
 
 ## Estado
+
+- 🆕 **20/11/2026, 10h30 — Lei Antifacção (15.358/26) na Lei na Íntegra + Modo celular reforçado.** (1) A pedido do
+  titular ("uns Stories para decorar todo esse conteúdo"), a **Lei Antifacção** virou novo diploma `L.15.358` em
+  `lei_integra_dados.js` — **34 cartas** autorais (crimes dos arts. 2º/3º, penas 20-40 e 12-20, facção = 3+ pessoas,
+  insuscetibilidades, hediondez, prazos do IP 90/270, medidas assecuratórias, confisco ampliado, Banco de Dados e as
+  alterações em CP/CPP/LEP). Vira uma capa nova na Biblioteca e estuda-se nos 4 modos, inclusive **Stories**. Fonte:
+  PDF de terceiro (DD LEGIS); só o texto oficial/público entrou (ver `docs/PROCEDENCIA.md`). Módulo agora com **100
+  artigos**. (2) Modo celular: o **conserto do Teste**, a **letra maior**, os **rótulos do Stories** e a **retomada
+  do Stories** (continua de onde parou ao atualizar/sair) entraram ao longo de 19–20/11. `testar_lei_integra.cjs`
+  verde + autoteste; Portão 41.
 
 - 🆕 **19/11/2026, 16h57 — Kindle + Stories implementados na Lei na Íntegra** (titular: "Kindle pode fazer").
   A home virou **estilo Kindle**: "Retomar" (último artigo estudado, salvo em `leiintegra:v1.last`) + **Biblioteca em
