@@ -2,9 +2,16 @@
 
 > Estado, tarefas e o que ficou rodando. Atualizado a cada ~15 min de trabalho e no fechamento.
 
-**Última atualização:** 20/11/2026, 11h24.
+**Última atualização:** 20/11/2026, 19h41.
 
 ## Estado
+
+- 🆕 **20/11/2026, 19h41 — Discursivas em Stories ampliado para 9 blocos / 39 questões** (pedido do titular "amplie os
+  blocos"). Acrescentados: **Administrativo** (poder de polícia, ato adm., improbidade, resp. civil do Estado,
+  licitações 14.133), **Direitos Humanos** (características, status dos tratados, sistemas, convencionalidade), **Civil**
+  (personalidade/incapacidade, prescrição×decadência, resp. civil, posse), **Criminologia** (escolas, labeling,
+  prevenção, vitimologia) e **Medicina Legal** (energias/lesões, tanatologia, sexologia, documentos). Tudo autoral.
+  `testar_discursivas_stories.cjs` verde + autoteste; Portão 43; pacote privado regenerado.
 
 - 🆕 **20/11/2026, 11h24 — Novo módulo "Discursivas em Stories"** (pedido do titular: transformar o material em questões
   discursivas na metodologia dos Stories, em blocos). `discursiva/Discursivas_Stories.html` + `discursivas_stories_dados.js`,

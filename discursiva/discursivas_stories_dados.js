@@ -177,6 +177,210 @@ window.DISC_STORIES = [
     "Efeito automático da condenação: perda do cargo e interdição para seu exercício pelo dobro do prazo da pena (art. 1º, §5º).",
     "Se o agente é servidor público, a pena é aumentada; regime inicial fechado."
    ], base:"Lei 9.455/97; CF, art. 5º, XLIII"}
+]},
+
+{id:"adm", bloco:"Direito Administrativo", curto:"Administrativo", itens:[
+  {tema:"Poder de polícia",
+   enun:"Disserte sobre os poderes da Administração, com destaque para o poder de polícia e seus atributos.",
+   pontos:[
+    "Poderes administrativos são instrumentais e irrenunciáveis: vinculado, discricionário, hierárquico, disciplinar, regulamentar e de polícia.",
+    "Poder de polícia é a faculdade de condicionar/limitar o uso de bens, direitos e atividades em prol do interesse público.",
+    "Atributos: discricionariedade, autoexecutoriedade (dispensa o Judiciário) e coercibilidade (imposição coativa).",
+    "Ciclo de polícia (4 fases): ordem, consentimento, fiscalização e sanção. A fiscalização e a sanção são indelegáveis a privados.",
+    "Limites: proporcionalidade, legalidade e menor restrição possível (não pode ser arbitrário)."
+   ], base:"Doutrina; CF; CTN, art. 78"},
+  {tema:"Requisitos do ato administrativo",
+   enun:"Aponte os requisitos de validade e os atributos do ato administrativo.",
+   pontos:[
+    "Requisitos/elementos (COM-FI-FO-MO-OB): Competência, Finalidade, Forma, Motivo e Objeto.",
+    "Competência, finalidade e forma são, em regra, vinculados; motivo e objeto podem ser discricionários (mérito).",
+    "Atributos: presunção de legitimidade e veracidade, imperatividade, autoexecutoriedade e tipicidade.",
+    "Teoria dos motivos determinantes: o ato vincula-se aos motivos declarados; se falsos/inexistentes, é inválido.",
+    "Convalidação: vícios sanáveis de competência e forma; vícios de finalidade, motivo e objeto não se convalidam."
+   ], base:"Lei 9.784/99; doutrina"},
+  {tema:"Improbidade administrativa",
+   enun:"Discorra sobre as espécies de ato de improbidade e o elemento subjetivo após a Lei 14.230/21.",
+   pontos:[
+    "Três espécies: enriquecimento ilícito (art. 9º), prejuízo ao erário (art. 10) e atentado aos princípios da Administração (art. 11).",
+    "Após a Lei 14.230/21, exige-se DOLO (vontade livre e consciente de alcançar o resultado ilícito) em todas as espécies.",
+    "A modalidade culposa foi extinta: a mera ilegalidade ou culpa não configura mais improbidade.",
+    "Sanções (art. 12): perda da função, suspensão dos direitos políticos, ressarcimento, multa e proibição de contratar com o Poder Público.",
+    "A ação de ressarcimento ao erário por ato doloso é imprescritível (CF, art. 37, §5º)."
+   ], base:"Lei 8.429/92; CF, art. 37"},
+  {tema:"Responsabilidade civil do Estado",
+   enun:"Disserte sobre a responsabilidade civil do Estado, a teoria adotada e as excludentes.",
+   pontos:[
+    "A CF (art. 37, §6º) adota a responsabilidade OBJETIVA, na modalidade teoria do risco administrativo.",
+    "Requisitos: conduta do agente (nessa qualidade), dano e nexo causal — dispensa-se a prova de culpa.",
+    "Excludentes/atenuantes do nexo: culpa exclusiva da vítima, caso fortuito/força maior e fato exclusivo de terceiro.",
+    "Há direito de regresso contra o agente nos casos de dolo ou culpa (responsabilidade subjetiva do agente).",
+    "Na omissão, parte da doutrina/jurisprudência exige responsabilidade subjetiva (faute du service — falta do serviço)."
+   ], base:"CF, art. 37, §6º"},
+  {tema:"Licitações (Lei 14.133/21)",
+   enun:"Aponte as modalidades e as fases do procedimento licitatório na Lei 14.133/21.",
+   pontos:[
+    "Modalidades: pregão, concorrência, concurso, leilão e diálogo competitivo (extinguiram-se tomada de preços e convite).",
+    "Critérios de julgamento: menor preço, maior desconto, melhor técnica ou conteúdo artístico, técnica e preço, maior lance e maior retorno econômico.",
+    "Fases (art. 17): preparatória, divulgação do edital, apresentação de propostas/lances, julgamento, habilitação, recursal e homologação.",
+    "Em regra, a habilitação ocorre após o julgamento (inversão de fases, como no pregão).",
+    "Princípios: legalidade, impessoalidade, moralidade, publicidade, eficiência, isonomia, competitividade e julgamento objetivo."
+   ], base:"Lei 14.133/21"}
+]},
+
+{id:"dh", bloco:"Direitos Humanos", curto:"Dir. Humanos", itens:[
+  {tema:"Características dos Direitos Humanos",
+   enun:"Discorra sobre as características dos direitos humanos e a diferença entre direitos humanos e direitos fundamentais.",
+   pontos:[
+    "Características: universalidade, indivisibilidade, interdependência, imprescritibilidade, inalienabilidade, irrenunciabilidade e historicidade.",
+    "Vedação ao retrocesso (efeito cliquet): os direitos já reconhecidos não podem ser suprimidos.",
+    "Direitos humanos: plano internacional (tratados); direitos fundamentais: positivados na Constituição de um Estado.",
+    "Fundamento comum: a dignidade da pessoa humana.",
+    "Dimensões: 1ª (liberdade/civis e políticos), 2ª (igualdade/sociais), 3ª (fraternidade/difusos)."
+   ], base:"Doutrina; CF, art. 5º"},
+  {tema:"Status dos tratados de direitos humanos",
+   enun:"Explique a hierarquia dos tratados internacionais de direitos humanos no ordenamento brasileiro.",
+   pontos:[
+    "Tratados comuns ingressam com status de lei ordinária.",
+    "Tratados de direitos humanos aprovados pelo rito do art. 5º, §3º (3/5, em 2 turnos, nas 2 Casas) têm status de EMENDA constitucional.",
+    "Tratados de direitos humanos não aprovados por esse rito têm status SUPRALEGAL (acima da lei, abaixo da CF) — STF.",
+    "Consequência: o Pacto de San José tornou inaplicável a prisão civil do depositário infiel (Súmula Vinculante 25).",
+    "Incidente de deslocamento de competência (IDC) para a Justiça Federal em grave violação de direitos humanos (art. 109, §5º)."
+   ], base:"CF, art. 5º, §§2º e 3º"},
+  {tema:"Sistemas de proteção",
+   enun:"Aponte os sistemas internacionais de proteção dos direitos humanos.",
+   pontos:[
+    "Sistema global (ONU): Declaração Universal de 1948, Pactos de 1966 (civis/políticos e sociais).",
+    "Sistema regional interamericano (OEA): Convenção Americana (Pacto de San José da Costa Rica, 1969).",
+    "Órgãos: Comissão Interamericana e Corte Interamericana de Direitos Humanos.",
+    "O Brasil reconheceu a jurisdição contenciosa da Corte Interamericana em 1998.",
+    "Controle de convencionalidade: compatibilização das leis internas com os tratados de direitos humanos."
+   ], base:"Convenção Americana; Pactos de 1966"},
+  {tema:"Controle de convencionalidade",
+   enun:"Conceitue o controle de convencionalidade e suas espécies.",
+   pontos:[
+    "É a verificação de compatibilidade das normas internas com os tratados internacionais de direitos humanos.",
+    "Parâmetro: tratados de direitos humanos (bloco de convencionalidade).",
+    "Controle difuso (nacional): qualquer juiz pode afastar a norma incompatível com o tratado.",
+    "Controle concentrado (internacional): exercido pela Corte Interamericana.",
+    "Fundamenta-se no dever de os Estados darem efetividade aos tratados ratificados (boa-fé e pacta sunt servanda)."
+   ], base:"Doutrina; Convenção Americana"}
+]},
+
+{id:"civ", bloco:"Direito Civil", curto:"Civil", itens:[
+  {tema:"Personalidade e capacidade",
+   enun:"Disserte sobre o início da personalidade civil e o regime das incapacidades após o Estatuto da Pessoa com Deficiência.",
+   pontos:[
+    "A personalidade civil começa do nascimento com vida; a lei põe a salvo, desde a concepção, os direitos do nascituro (art. 2º).",
+    "Teorias sobre o nascituro: natalista, concepcionista e da personalidade condicional.",
+    "Absolutamente incapazes: apenas os menores de 16 anos (art. 3º, após a Lei 13.146/15).",
+    "Relativamente incapazes: 16 a 18 anos, ébrios/viciados, os que não puderem exprimir vontade e os pródigos (art. 4º).",
+    "A pessoa com deficiência, em regra, é capaz; sujeita-se à tomada de decisão apoiada e, excepcionalmente, à curatela (que atinge atos patrimoniais)."
+   ], base:"CC, arts. 2º a 4º; Lei 13.146/15"},
+  {tema:"Prescrição e decadência",
+   enun:"Diferencie prescrição e decadência, apontando efeitos e prazos gerais.",
+   pontos:[
+    "Prescrição atinge a pretensão (exigibilidade do direito) pela inércia; decadência atinge o próprio direito potestativo.",
+    "Prazo geral de prescrição: 10 anos (art. 205), quando a lei não fixar prazo menor (art. 206).",
+    "A prescrição admite impedimento, suspensão e interrupção; a decadência legal, em regra, não.",
+    "A prescrição pode ser alegada em qualquer grau de jurisdição e reconhecida de ofício.",
+    "A decadência legal é irrenunciável; a convencional pode ser renunciada."
+   ], base:"CC, arts. 189, 205 e 206"},
+  {tema:"Responsabilidade civil",
+   enun:"Aponte os pressupostos da responsabilidade civil e distinga a subjetiva da objetiva.",
+   pontos:[
+    "Pressupostos: conduta (ação/omissão), culpa ou dolo (na subjetiva), nexo causal e dano.",
+    "Responsabilidade subjetiva (regra, art. 186): depende da prova de culpa ou dolo.",
+    "Responsabilidade objetiva: independe de culpa, nos casos previstos em lei ou pela teoria do risco (art. 927, §único).",
+    "O dano pode ser material, moral ou estético, sendo cumuláveis (Súmula 387 STJ).",
+    "Abuso de direito (art. 187) é ato ilícito e gera responsabilidade objetiva."
+   ], base:"CC, arts. 186, 187 e 927"},
+  {tema:"Posse",
+   enun:"Discorra sobre a teoria da posse adotada pelo Código Civil e suas classificações.",
+   pontos:[
+    "O CC adotou a teoria OBJETIVA de Ihering: basta o exercício de fato dos poderes da propriedade (corpus), dispensando o animus domini.",
+    "Posse direta e indireta (desdobramento, ex.: locador e locatário).",
+    "Posse justa (sem violência, clandestinidade ou precariedade) × injusta.",
+    "Posse de boa-fé × má-fé (ciência do vício), relevante para frutos, benfeitorias e usucapião.",
+    "Efeitos: proteção possessória (interditos), usucapião, percepção de frutos e indenização por benfeitorias."
+   ], base:"CC, arts. 1.196 e seguintes"}
+]},
+
+{id:"cri", bloco:"Criminologia", curto:"Criminologia", itens:[
+  {tema:"Escola Clássica × Positiva",
+   enun:"Diferencie a Escola Clássica e a Escola Positiva da criminologia.",
+   pontos:[
+    "Escola Clássica (Beccaria, Carrara): parte do livre-arbítrio; o crime é opção racional; foco no fato/delito; pena com função retributiva.",
+    "Escola Positiva (Lombroso, Ferri, Garofalo): método empírico; determinismo; foco no criminoso.",
+    "Lombroso: criminoso nato (antropologia criminal); Ferri: fatores sociais (sociologia criminal); Garofalo: delito natural.",
+    "A pena, para o positivismo, tem função de defesa social e tratamento/ressocialização.",
+    "A Clássica inaugura o direito penal liberal; a Positiva, a criminologia científica."
+   ], base:"História da criminologia"},
+  {tema:"Labeling approach",
+   enun:"Explique a teoria do etiquetamento (labeling approach) e seus conceitos de criminalização.",
+   pontos:[
+    "O labeling approach (rotulação) sustenta que o desvio não é qualidade do ato, mas resultado da reação social que o rotula.",
+    "Criminalização primária: criação da lei penal (seleção abstrata de condutas).",
+    "Criminalização secundária: aplicação da lei pelas agências (polícia, MP, Judiciário), de forma seletiva.",
+    "Desvio primário (conduta inicial) × desvio secundário (assunção do papel de desviante após a rotulação).",
+    "Fundamenta a criminologia crítica e o garantismo; critica a cifra oculta e a seletividade penal."
+   ], base:"Criminologia crítica"},
+  {tema:"Prevenção criminal",
+   enun:"Aponte os níveis de prevenção à criminalidade.",
+   pontos:[
+    "Prevenção primária: atua sobre as causas sociais do crime (educação, emprego, moradia) — longo prazo.",
+    "Prevenção secundária: dirige-se a grupos e locais de risco (policiamento ostensivo, urbanismo).",
+    "Prevenção terciária: destina-se ao condenado, buscando evitar a reincidência (ressocialização).",
+    "A prevenção situacional reduz oportunidades do crime (teoria das atividades rotineiras).",
+    "O delegado atua sobretudo na prevenção secundária e na repressão qualificada."
+   ], base:"Criminologia aplicada"},
+  {tema:"Vitimologia",
+   enun:"Conceitue a vitimologia e os processos de vitimização.",
+   pontos:[
+    "Vitimologia estuda a vítima, seu papel no fato criminoso e as formas de proteção e reparação.",
+    "Vitimização primária: dano sofrido diretamente com o crime.",
+    "Vitimização secundária (sobrevitimização): sofrimento causado pelas instâncias formais (polícia, Justiça) ao reviver o fato.",
+    "Vitimização terciária: estigmatização pela sociedade e pelo meio após o crime.",
+    "A atuação policial deve reduzir a vitimização secundária (acolhimento, não revitimização)."
+   ], base:"Vitimologia"}
+]},
+
+{id:"mle", bloco:"Medicina Legal", curto:"Medicina Legal", itens:[
+  {tema:"Energias e lesões",
+   enun:"Classifique as energias que produzem lesões corporais, de interesse médico-legal.",
+   pontos:[
+    "Energias de ordem MECÂNICA: ferimentos por instrumentos perfurantes, cortantes, contundentes e mistos.",
+    "Energias de ordem FÍSICA: temperatura, eletricidade, pressão, radiação e luz.",
+    "Energias de ordem QUÍMICA: cáusticos (ácidos e bases) e venenos.",
+    "Energias FÍSICO-QUÍMICAS: asfixias (enforcamento, estrangulamento, esganadura, afogamento).",
+    "Energias BIOQUÍMICAS (perturbações nutritivas), BIODINÂMICAS (funcionais) e de ordem MISTA."
+   ], base:"Medicina legal — lesões"},
+  {tema:"Tanatologia",
+   enun:"Disserte sobre os fenômenos cadavéricos e a cronotanatognose.",
+   pontos:[
+    "Tanatologia estuda a morte e o cadáver; cronotanatognose é a estimativa do tempo de morte.",
+    "Fenômenos abióticos imediatos: perda da consciência, abolição de sensibilidade, cessação da respiração e circulação.",
+    "Fenômenos abióticos consecutivos: resfriamento (algor), livores (hipóstases), rigidez (rigor mortis) e desidratação.",
+    "Fenômenos transformativos destrutivos: autólise e putrefação (inicia pela mancha verde abdominal).",
+    "Fenômenos transformativos conservadores: mumificação, saponificação (adipocera) e calcificação."
+   ], base:"Medicina legal — tanatologia"},
+  {tema:"Sexologia forense",
+   enun:"Aponte os principais temas da sexologia forense de interesse policial.",
+   pontos:[
+    "Conjunção carnal: introdução do pênis na cavidade vaginal; antes exigia ruptura himenal para prova.",
+    "Atos libidinosos diversos: qualquer ato de natureza sexual que não a conjunção carnal.",
+    "Vestígios: exame do hímen (complacente, roto), pesquisa de sêmen, lesões e DST.",
+    "Importante para o estupro (art. 213 CP) e o estupro de vulnerável (art. 217-A CP).",
+    "A palavra da vítima tem especial relevância nos crimes sexuais, praticados às ocultas."
+   ], base:"Medicina legal — sexologia"},
+  {tema:"Documentos médico-legais",
+   enun:"Aponte os principais documentos médico-legais e suas finalidades.",
+   pontos:[
+    "Notificação: comunicação compulsória de fato (ex.: doenças, violência) às autoridades.",
+    "Atestado: afirmação simples de um fato médico.",
+    "Parecer: resposta a quesitos por especialista (consultor), sobre tese ou fato.",
+    "Relatório: descrição minuciosa de perícia — pode ser auto (ditado na hora) ou laudo (redigido depois).",
+    "O laudo pericial tem valor probatório relevante no inquérito e no processo penal."
+   ], base:"Medicina legal — documentos"}
 ]}
 
 ];
