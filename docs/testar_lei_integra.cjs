@@ -112,5 +112,13 @@ prova("tocar de novo avança para o próximo story", d.querySelectorAll("#segs .
 d.querySelector('[data-close]').click();
 prova("o ✕ fecha o Stories", !d.querySelector("#stage.on"));
 
+// Modo celular: o botão adapta o layout (data-cel) e salva a escolha
+const fsb = d.getElementById("fsbtn");
+prova("há o botão 📱 Modo celular no cabeçalho", !!fsb && /celular/i.test(fsb.textContent));
+if (fsb) fsb.click();
+let salvo2 = {}; try { salvo2 = JSON.parse(w.localStorage.getItem("leiintegra:v1") || "{}"); } catch (e) {}
+prova("apertar o Modo celular adapta o layout (data-cel=1) e salva",
+  d.documentElement.getAttribute("data-cel") === "1" && salvo2.cel === true);
+
 if (AUTO) { console.log(falhas ? "AUTOTESTE OK: o defeito plantado foi acusado" : "AUTOTESTE FALHOU: o defeito passou"); process.exit(falhas ? 0 : 1); }
 console.log(falhas ? `❌ ${falhas} falha(s)` : "✅ Lei na Íntegra verde"); process.exit(falhas ? 1 : 0);
