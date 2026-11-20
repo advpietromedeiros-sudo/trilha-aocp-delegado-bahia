@@ -36,7 +36,7 @@ const w = dom.window, d = w.document, A = w.discAPI;
 let falhas = 0; const prova = (n, ok, det = "") => { console.log(`  ${ok ? "✅" : "❌"} ${n}${!ok && det ? " — " + det : ""}`); if (!ok) falhas++; };
 const clicar = id => d.getElementById(id).click();
 
-prova("página carrega com as 13 abas (Pente Fino desde 07/11/2026, Revisão desde 09/11/2026, atalho do Olho de Águia desde 12/11/2026, 900 Discursivas desde 14/11/2026, PED — FGV desde 15/11/2026, Letra de Lei desde 16/11/2026, Lei na Íntegra desde 19/11/2026) e sem erro de JavaScript", d.querySelectorAll("#abas button").length === 13 && erros.length === 0, erros.join(" | "));
+prova("página carrega com as 14 abas (Pente Fino desde 07/11/2026, Revisão desde 09/11/2026, atalho do Olho de Águia desde 12/11/2026, 900 Discursivas desde 14/11/2026, PED — FGV desde 15/11/2026, Letra de Lei desde 16/11/2026, Lei na Íntegra desde 19/11/2026, Discursivas Stories desde 20/11/2026) e sem erro de JavaScript", d.querySelectorAll("#abas button").length === 14 && erros.length === 0, erros.join(" | "));
 // conteúdo
 const ruins = [];
 for (const p of A.PECAS) A.passosDe(p).forEach((s, i) => { if (!s.t || !s.orient || !String(s.modelo || "").trim() || !Array.isArray(s.check) || !s.check.length) ruins.push(p.id + " passo " + (i + 1)); });

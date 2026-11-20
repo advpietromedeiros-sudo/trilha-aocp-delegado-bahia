@@ -127,6 +127,10 @@ PORTAS: list[tuple[str, list[str], str]] = [
      "artigo inteiro em 3 modos, palavras-chave {}, mnemônico e áudio; progresso salvo"),
     ("o teste da lei na íntegra acusa", ["node", "docs/testar_lei_integra.cjs", "--autoteste"],
      "teste que passa com um artigo sem palavra-chave {} — verde falso"),
+    ("discursivas em stories: comportamento", ["node", "docs/testar_discursivas_stories.cjs"],
+     "questões discursivas em Stories: enunciado fixo, revelar pontos e avançar/retomar"),
+    ("teste das discursivas stories acusa", ["node", "docs/testar_discursivas_stories.cjs", "--autoteste"],
+     "teste que passa com uma questão sem pontos-chave — verde falso"),
 ]
 
 # Régua de segredo (31/10/2026): exige VALOR de 20+ caracteres depois do `=` — o LEIA_PRIMEIRO cita

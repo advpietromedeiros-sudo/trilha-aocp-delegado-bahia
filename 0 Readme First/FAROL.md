@@ -2,9 +2,17 @@
 
 > Estado, tarefas e o que ficou rodando. Atualizado a cada ~15 min de trabalho e no fechamento.
 
-**Última atualização:** 20/11/2026, 10h30.
+**Última atualização:** 20/11/2026, 11h24.
 
 ## Estado
+
+- 🆕 **20/11/2026, 11h24 — Novo módulo "Discursivas em Stories"** (pedido do titular: transformar o material em questões
+  discursivas na metodologia dos Stories, em blocos). `discursiva/Discursivas_Stories.html` + `discursivas_stories_dados.js`,
+  14ª aba do hub. Cada questão tem **enunciado fixo** e você toca para revelar **um ponto-chave da resposta por vez**
+  (recordação da estrutura), com barrinhas de progresso, placar de bloco e retomada da posição. **4 blocos / 18 questões**
+  autorais: Penal (5), Processo Penal (5), Constitucional (3), Legislação Penal Especial (5). Modo celular + grifo (tecla G).
+  Provas: `docs/testar_discursivas_stories.cjs` 12/12 + autoteste; hub p/ 14 abas; **Portão 43**; pacote privado ganhou a tela.
+  Conteúdo autoral (lei seca + doutrina), nada de terceiro. ⏳ Dá para ampliar blocos (Administrativo, Dir. Humanos, Civil…).
 
 - 🆕 **20/11/2026, 10h30 — Lei Antifacção (15.358/26) na Lei na Íntegra + Modo celular reforçado.** (1) A pedido do
   titular ("uns Stories para decorar todo esse conteúdo"), a **Lei Antifacção** virou novo diploma `L.15.358` em

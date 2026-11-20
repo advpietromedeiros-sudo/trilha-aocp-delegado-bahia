@@ -18,7 +18,7 @@ import sys
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DISC = os.path.join(RAIZ, "discursiva")
 TELAS = ["Treino_Discursiva.html", "Olho_de_Aguia.html", "Lei_Seca_Delegado_BA.html",
-         "Lei_na_Integra.html", "Revisao_Delegado_BA.html"]
+         "Lei_na_Integra.html", "Discursivas_Stories.html", "Revisao_Delegado_BA.html"]
 SAIDA_PADRAO = os.path.join(os.path.expanduser("~"), "OneDrive", "Trilha AOCP - versao completa (privada)")
 TAG = re.compile(r'<script\s+src="([^"]+)"[^>]*>\s*</script>', re.I)
 
