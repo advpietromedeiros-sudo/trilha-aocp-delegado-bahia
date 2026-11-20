@@ -109,8 +109,17 @@ prova("tocar à direita revela a lacuna do story (pill deixa de estar oculta)",
   !!d.querySelector("#stage .pill") && !d.querySelector("#stage .pill.hid"));
 d.querySelector('[data-tap="next"]').click();   // 2º toque: avança (barra anterior preenchida)
 prova("tocar de novo avança para o próximo story", d.querySelectorAll("#segs .seg.done").length >= 1);
+// o Stories salva a posição (para retomar ao atualizar/sair e voltar)
+let ps = {}; try { ps = JSON.parse(w.localStorage.getItem("leiintegra:v1") || "{}"); } catch (e) {}
+prova("o Stories salva a posição para retomar", ps.story && ps.story.scope === "art:" + alvo && ps.story.i >= 1,
+  JSON.stringify(ps.story || {}));
 d.querySelector('[data-close]').click();
-prova("o ✕ fecha o Stories", !d.querySelector("#stage.on"));
+prova("o ✕ fecha o Stories sem perder a posição", !d.querySelector("#stage.on"));
+// reabrir o mesmo bloco retoma de onde parou (barras já preenchidas)
+d.querySelector('[data-stories="art:' + alvo + '"]').click();
+prova("reabrir o Stories retoma de onde parou", !!d.querySelector("#stage.on") && d.querySelectorAll("#segs .seg.done").length >= 1,
+  String(d.querySelectorAll("#segs .seg.done").length));
+d.querySelector('[data-close]').click();
 
 // Modo celular: o botão adapta o layout (data-cel) e salva a escolha
 const fsb = d.getElementById("fsbtn");

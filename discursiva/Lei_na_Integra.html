@@ -82,31 +82,34 @@ p{text-align:justify}
 .fsbtn:active{transform:translateY(1px)}
 .fsbtn.on{background:#1b7a34;color:#fff;border-color:#1b7a34}
 /* ===== Modo celular (botão 📱): layout e letra adaptados ao telefone ===== */
-html[data-cel="1"] body{font-size:19px}
-html[data-cel="1"] .wrap,html[data-cel="1"] main{padding-left:12px;padding-right:12px}
+html[data-cel="1"] body{font-size:23px}
+html[data-cel="1"] .wrap,html[data-cel="1"] main{padding-left:11px;padding-right:11px}
 html[data-cel="1"] main{max-width:100%}
-html[data-cel="1"] header h1{font-size:1.16em}
-html[data-cel="1"] header p{font-size:.98em}
-html[data-cel="1"] .card{padding:16px 14px}
-html[data-cel="1"] .lei-full{font-size:1.3em;line-height:2.05;padding:16px 15px}
-html[data-cel="1"] .inc{margin:13px 0;gap:10px}
-html[data-cel="1"] .titulo{font-size:1em}
-html[data-cel="1"] .mbar{padding:9px 8px}
-html[data-cel="1"] .modo{font-size:14px;padding:13px 6px}
-html[data-cel="1"] .som{width:46px;height:46px;font-size:20px}
-html[data-cel="1"] .bt{font-size:1.06em;padding:15px 18px;min-height:54px}
+html[data-cel="1"] header h1{font-size:1.2em}
+html[data-cel="1"] header p{font-size:.95em}
+html[data-cel="1"] .card{padding:16px 13px}
+html[data-cel="1"] .lei-full{font-size:1.6em;line-height:2.1;padding:16px 15px}
+html[data-cel="1"] .inc{margin:15px 0;gap:10px}
+html[data-cel="1"] .titulo{font-size:1.05em}
+html[data-cel="1"] .mbar{padding:10px 8px}
+html[data-cel="1"] .modo{font-size:15px;padding:14px 6px}
+html[data-cel="1"] .som{width:48px;height:48px;font-size:21px}
+html[data-cel="1"] .bt{font-size:1.14em;padding:16px 18px;min-height:58px}
 html[data-cel="1"] .navrow{flex-wrap:wrap}
 html[data-cel="1"] .navrow .bt{flex:1 1 100%}
 html[data-cel="1"] .bt-lin .bt{flex:1 1 100%;justify-content:center}
 html[data-cel="1"] .tpanel .bt,html[data-cel="1"] .trow .bt,html[data-cel="1"] .trow{flex:1 1 100%;width:100%}
+html[data-cel="1"] .tprog{font-size:1.1em}
 html[data-cel="1"] .estante{grid-template-columns:repeat(2,1fr);gap:14px}
-html[data-cel="1"] .capimg .sig{font-size:36px}
-html[data-cel="1"] .capimg .nm{font-size:12.5px}
-html[data-cel="1"] .item{padding:18px 16px}
-html[data-cel="1"] .item .tt{font-size:1.16em}
-html[data-cel="1"] .item .meta{font-size:.95em}
-html[data-cel="1"] .stext{font-size:1.8em;line-height:1.5}
-html[data-cel="1"] .schip,html[data-cel="1"] .srub{font-size:15px}
+html[data-cel="1"] .capimg .sig{font-size:42px}
+html[data-cel="1"] .capimg .nm{font-size:14px}
+html[data-cel="1"] .item{padding:20px 16px}
+html[data-cel="1"] .item .tt{font-size:1.32em}
+html[data-cel="1"] .item .meta{font-size:1.05em}
+html[data-cel="1"] .ksec{font-size:1.2em}
+html[data-cel="1"] .stext{font-size:2.15em;line-height:1.5}
+html[data-cel="1"] .schip,html[data-cel="1"] .srub{font-size:16px}
+html[data-cel="1"] .shint{font-size:15px}
 kbd{background:#fff;color:var(--azul);border-radius:5px;padding:0 6px;font:600 .85em/1.5 system-ui;border:1px solid #cdd8e8}
 footer{max-width:860px;margin:6px auto 44px;padding:0 20px;color:#73819a;font-size:.82em;text-align:justify}
 @media(max-width:600px){.card{padding:16px}.wrap{padding:0 14px}main{padding:14px}.modo{font-size:12px;padding:9px 4px}}
@@ -313,7 +316,8 @@ function render(){
 }
 
 /* ===== Stories (pegada Instagram): um slide por lacuna ===== */
-let storySlides=[], sIdx=0, sRev=false;
+let storySlides=[], sIdx=0, sRev=false, storyScope='';
+function salvarStory(){ st.story={scope:storyScope,i:sIdx,rev:sRev}; salvar(); }
 function slidesArtigo(a){
   const campos=[{t:a.caput,rot:'caput'}]
     .concat((a.incisos||[]).map(i=>({t:i.t,rot:i.n})))
@@ -348,13 +352,18 @@ function abrirStories(scope){
   let sl=[];
   if(scope.indexOf('art:')===0){ sl=slidesArtigo(A[+scope.slice(4)]); }
   else if(scope.indexOf('dip:')===0){ const sig=scope.slice(4); A.forEach(a=>{ if(a.d===sig) sl=sl.concat(slidesArtigo(a)); }); }
-  storySlides=sl; sIdx=0; sRev=false; stageEl().classList.add('on'); pintaStory();
+  storySlides=sl; storyScope=scope;
+  // retoma de onde parou, se for o mesmo bloco e ainda não terminou
+  if(st.story && st.story.scope===scope && st.story.i < sl.length){ sIdx=st.story.i; sRev=!!st.story.rev; }
+  else { sIdx=0; sRev=false; }
+  salvarStory(); stageEl().classList.add('on'); pintaStory();
 }
 function pintaStory(){
   const stg=stageEl(), tot=storySlides.length, fim=sIdx>=tot;
   stg.classList.toggle('done', fim);
   document.getElementById('segs').innerHTML=storySlides.map((_,i)=>'<div class="seg'+(i<sIdx||fim?' done':(i===sIdx?' cur':''))+'"></div>').join('');
   if(fim){
+    st.story=null; salvar();   // terminou: da próxima vez começa do início
     document.getElementById('schip').textContent=''; document.getElementById('srub').textContent=''; document.getElementById('shint').textContent='';
     document.getElementById('sbody').innerHTML='<div class="sdone"><div class="big">🎉 Fim do bloco</div><div>Você passou por '+tot+' ponto(s) da lei.</div><button class="bt2" data-restart="1">↺ Rever de novo</button></div>';
     return;
@@ -365,9 +374,9 @@ function pintaStory(){
   document.getElementById('sbody').innerHTML='<div class="sart">'+esc(sl.rot)+'</div><div class="stext">'+corpoSlide(sl)+'</div>';
   document.getElementById('shint').textContent=sRev?'toque à direita para continuar ›':'toque à direita para revelar ›';
 }
-function nextStory(){ if(sIdx>=storySlides.length)return; if(!sRev){sRev=true;pintaStory();return;} sIdx++; sRev=false; pintaStory(); }
-function prevStory(){ if(sRev){sRev=false;pintaStory();return;} if(sIdx>0){sIdx--;sRev=true;pintaStory();} }
-function fecharStory(){ const s=document.getElementById('stage'); if(s)s.classList.remove('on'); }
+function nextStory(){ if(sIdx>=storySlides.length)return; if(!sRev){sRev=true;}else{sIdx++;sRev=false;} salvarStory(); pintaStory(); }
+function prevStory(){ if(sRev){sRev=false;}else if(sIdx>0){sIdx--;sRev=true;}else{return;} salvarStory(); pintaStory(); }
+function fecharStory(){ const s=document.getElementById('stage'); if(s)s.classList.remove('on'); }  // guarda a posição: reabrir retoma
 
 function falar(btn){
   if(!('speechSynthesis' in window)){ btn.textContent='🔇'; return; }
@@ -386,7 +395,7 @@ document.addEventListener('click', e=>{
   // Stories (overlay)
   const so=e.target.closest('[data-stories]'); if(so){ abrirStories(so.dataset.stories); return; }
   if(e.target.closest('[data-close]')){ fecharStory(); return; }
-  if(e.target.closest('[data-restart]')){ sIdx=0; sRev=false; pintaStory(); return; }
+  if(e.target.closest('[data-restart]')){ sIdx=0; sRev=false; salvarStory(); pintaStory(); return; }
   const tp=e.target.closest('[data-tap]'); if(tp){ tp.dataset.tap==='next'?nextStory():prevStory(); return; }
   const dp=e.target.closest('[data-dip]'); if(dp){ dploma(dp.dataset.dip); scrollTo(0,0); return; }
   const mb=e.target.closest('[data-modo]'); if(mb){ modo=mb.dataset.modo; foco=0; grade=false; acertos=0; render(); return; }
@@ -413,6 +422,8 @@ aplicaCel();
 
 $('rodape').innerHTML='Texto oficial da CF/88 (público). Método de estudo autoral; nenhum material de terceiro entra aqui — só a incidência medida orientou a seleção dos artigos (ver docs/PROCEDENCIA.md).';
 home();
+// se saiu no meio de um Stories, retoma automaticamente ao abrir a página
+if(st.story && st.story.scope){ try{ abrirStories(st.story.scope); }catch(e){} }
 </script>
 <!-- grifa:inicio (gerado de assets/grifa.js por ferramentas/embutir_grifa.py; não editar aqui) -->
 <script>
