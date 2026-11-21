@@ -337,7 +337,7 @@
     só na cópia privada, fora do Git). Ver `docs/PROCEDENCIA.md`.
 
 - ✅ **21/11/2026 — nova aba "📰 Atualidades"** (`discursiva/Atualidades_CE.html` +
-  `discursiva/atualidades_dados.js`): **102 assertivas Certo/Errado comentadas** cobrindo todo o anexo de
+  `discursiva/atualidades_dados.js`): **115 assertivas Certo/Errado comentadas** cobrindo todo o anexo de
   atualidades da prova (segurança pública, eleições 2026, gênero/DH, clima/COP30, saúde, economia, internacional,
   educação/cultura, tecnologia e Comunicação). Modos **Treino** (responde C/E → gabarito + comentário) e **Estudo**
   (tudo revelado), filtro por tema, placar, **Modo celular**, termos-chave em **negrito vermelho** e tabelas (Nobel,

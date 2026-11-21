@@ -446,7 +446,7 @@ prompt do servidor já manda não aplicar norma posterior.
   com a curadoria dos temas de atualidades mais prováveis na prova (06/12/2026). O titular pediu 100+ assertivas
   Certo/Errado comentadas "batendo todo o conteúdo do anexo".
 - **O que entrou no Git:** **nada do material de terceiro** — nem a marca, nem o texto, nem os slides. O anexo serviu
-  apenas de **seleção de temas** (quais fatos cobrar). As 102 assertivas e os comentários
+  apenas de **seleção de temas** (quais fatos cobrar). As 115 assertivas e os comentários
   (`discursiva/atualidades_dados.js`) foram **redigidos de forma autoral**, a partir de **fontes públicas**: TSE,
   STF, Senado/Câmara, gov.br/Planalto, Banco Central, IBGE, FAO/ONU, FMI, Anvisa, OPAS/OMS, FBSP, Unesco e imprensa.
 - **Ressalva (atualidades é sensível à data):** o corte de conhecimento do modelo é jan/2026; fatos de fev–nov/2026
