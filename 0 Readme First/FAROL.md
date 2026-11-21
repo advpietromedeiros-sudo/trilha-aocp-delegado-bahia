@@ -78,6 +78,17 @@
   `docs/testar_*.cjs` verdes** e `build-storybook` verde. Protótipo do visual ficou no Storybook (`stories/lei-integra.stories.js`,
   "Aguardando Análise"), aprovado pelo titular ("PODE IMPLEMENTAR"). ⏳ **Fase 2:** ampliar p/ CF alta incidência + CPP/CP.
 
+- 🆕 **21/11/2026, 20h — Bloco 17 "Complementos AOCP" no Treino de Letra de Lei.** Pedido do titular: conferir se o
+  anexo "LD - AOCP - Delegado" (135 págs, lei seca destacada — material de terceiro com marca d'água de CPF; só a
+  seleção de temas serviu de guia, nada entra no Git; ver `docs/PROCEDENCIA.md`) já estava coberto, e pôr o que
+  faltava no Bloco 17. Cruzei o índice das 849 cartas: quase tudo já estava (CP/CPP/CF/CTN, Leis 8.112/8.429/8.987,
+  Maria da Penha, Drogas, Orcrim, Abuso, LEP, Tortura, Ambiental, LINDB, posse, súmulas). Faltava: **ECA
+  proteção/socioeducativo, Empresarial (CC 978/991/1.039/1.147; Lei 11.101 art. 2º/3º/20-A/76), Súmula 606-STF,
+  CF 5º §4º, CPP 401, julgados avulsos (Vicuña, concorrência de culpas, pertenças, corte de energia) e Direitos
+  Humanos/tratados (SV 25, RE 466343, HC 171118, ADPF 496/347, ADI 3239, RE 511961, Convenção da ONU contra a
+  Tortura, DUDH, Res. 34/169)**, mais um núcleo Eleitoral sinalizado como AOCP genérico. **+46 cartas** autorais de
+  lacuna, 0 inválida, lacunas == respostas. Portão do teste ajustado de 16→17 blocos. **17 blocos / 895 cartas.**
+
 - 🆕 **19/11/2026, 09h06 — Bloco 16 "Lei Seca AOCP III (Constitucional + Processo)" no Treino de Letra de Lei.**
   Pedido do titular (08h47: *"veja o que tem no DECORANDO A LEI SECA 02 que não tem ainda nos blocos e coloque no
   próximo bloco"*). Cruzei o guia de incidência "DECORANDO A LEI SECA 02" (584 págs, material de terceiro — só a

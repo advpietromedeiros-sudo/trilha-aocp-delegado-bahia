@@ -22,7 +22,7 @@ const w = dom.window, d = w.document;
 let falhas = 0; const prova = (n, ok, det = "") => { console.log(`  ${ok ? "✅" : "❌"} ${n}${!ok && det ? " — " + det : ""}`); if (!ok) falhas++; };
 
 const B = w.LEI_SECA;
-prova("os dados carregam com os 16 blocos (edital inteiro + Bahia local + Lei Seca AOCP + Juris AOCP + Lei Seca AOCP II + Lei Seca AOCP III)", Array.isArray(B) && B.length === 16, String(B && B.length));
+prova("os dados carregam com os 17 blocos (edital inteiro + Bahia local + Lei Seca AOCP + Juris AOCP + Lei Seca AOCP II + Lei Seca AOCP III + Complementos AOCP)", Array.isArray(B) && B.length === 17, String(B && B.length));
 const b1 = B[0];
 const todos = B.flatMap(b => b.itens);
 prova("há pelo menos 300 artigos no total", todos.length >= 300, String(todos.length));

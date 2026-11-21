@@ -454,3 +454,19 @@ prompt do servidor já manda não aplicar norma posterior.
   prova".
 - **Autorização:** pedido escrito do titular (21/11/2026); para estudo pessoal; o app não vai para o portal (D-009).
   Conteúdo publicado é autoral; fontes públicas, sem dependência de autorização do autor do anexo.
+
+## 21/11/2026, 20h — Anexo AOCP "Legislação Destacada" (Delegado) como CONFERÊNCIA DE COBERTURA
+
+- **O quê:** 1 PDF de lei seca destacada de curso preparatório (135 págs.), enviado pelo titular no chat, com
+  marca d'água de nome e CPF de **terceiro comprador** — dado pessoal de terceiro que **não** foi lido para uso,
+  copiado nem reproduzido em lugar algum.
+- **Uso:** só como **lista de conferência** de quais dispositivos o anexo cobra. Cruzei a lista com a aplicação
+  `discursiva/Lei_Seca_Delegado_BA.html` (índice de 849 cartas) e, para o que faltava, escrevi o **Bloco 17 —
+  Complementos** (`discursiva/lei_seca_delegado_ba_dados.js`, 46 cartas cloze): ECA proteção/socioeducativo,
+  Empresarial, Súmula 606-STF, CF 5º §4º, CPP 401, julgados avulsos (Vicuña, concorrência de culpas, pertenças,
+  corte de energia), Direitos Humanos/tratados (SV 25, RE 466343, HC 171118, ADPF 496, ADPF 347, ADI 3239,
+  RE 511961, Convenção da ONU contra a Tortura, DUDH, Res. 34/169) e um núcleo Eleitoral **sinalizado** como AOCP
+  genérico (a conferir contra o edital da PC-BA).
+- **Não entrou:** nenhuma diagramação, comentário, grifo, marca ou a marca d'água do anexo. A letra de lei e a
+  jurisprudência são **públicas** (Lei 9.610/98, art. 8º, IV) e foram **redigidas de forma autoral**, com a lacuna
+  (cloze) sobre a palavra-chave. O PDF não está no repositório.
