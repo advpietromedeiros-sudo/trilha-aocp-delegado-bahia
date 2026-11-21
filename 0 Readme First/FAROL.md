@@ -344,9 +344,12 @@
   palavras do ano). A seleção de temas vem do anexo pessoal do titular; **as questões e os comentários são autorais,
   de fontes públicas** (ver `docs/PROCEDENCIA.md`). Aba ligada no hub, na paleta de grifos e no pacote privado.
   Teste `docs/testar_atualidades.cjs` + 2 portas no portão (**45 portas**). Prova em 06/12/2026.
-  - ⏳ **Pendente (pedido 21/11, em sequência):** melhorar a metodologia de REVISÃO do módulo *Discursivas Stories* —
-    usar a pedagogia do Estudo de Caso **sem a parte de escrever** (é revisão), com pontos principais em
-    **negrito+sublinhado** e **conectivos em vermelho**. Criar essa metodologia de leitura guiada.
+  - ✅ **21/11/2026 — Revisão Guiada no módulo *Discursivas Stories*:** novo modo **📖 Revisão** (padrão) que mostra
+    a resposta-modelo pronta para leitura, **sem o aluno escrever** (etapa de revisão), com os **pontos principais
+    em negrito+sublinhado** (referências legais e ênfases `*...*`) e os **conectivos em vermelho** (realce
+    automático), mais um roteiro de estrutura (tese → fundamento → aplicação → conclusão). O modo **🎯 Treino**
+    antigo (revelar ponto a ponto) continua, alternável no cabeçalho e no palco. Teste
+    `docs/testar_discursivas_stories.cjs` atualizado (cobre os dois modos). Portão 45 portas, CI a confirmar.
 
 ## O que fica rodando
 

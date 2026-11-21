@@ -51,6 +51,18 @@ footer{max-width:860px;margin:6px auto 44px;padding:0 20px;color:#73819a;font-si
 .ponto.on{background:rgba(120,200,140,.16);box-shadow:0 0 0 1px rgba(120,200,140,.4) inset}
 .ponto.next{outline:2px solid var(--foco);outline-offset:1px}
 .ponto .pn{font-weight:800;color:#8fd3a3;margin-right:6px}
+.ponto.rev{background:rgba(255,255,255,.07)}
+/* Revisão guiada (21/11/2026): ponto principal = negrito+sublinhado; conectivo = vermelho */
+.lp{font-weight:800;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px;color:#fff}
+.conec{color:#ff7b7b;font-weight:700;font-style:normal}
+.roteiro{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-left:3px solid var(--foco);border-radius:12px;padding:12px 14px;margin:0 0 10px;font-size:14px;line-height:1.6}
+.roteiro b{color:#ffd45e}
+.legenda{font-size:12.5px;opacity:.92;margin:0 0 12px}
+.legenda .lp,.legenda .conec{font-size:12.5px}
+.modorev{display:inline-flex;border:1px solid #cdd8e8;border-radius:999px;overflow:hidden;margin:10px 0 0 8px;vertical-align:middle}
+.modorev button{background:#fff;color:var(--azul);border:0;padding:7px 14px;font:700 .85em system-ui;cursor:pointer;min-height:36px}
+.modorev button.on{background:#1b7a34;color:#fff}
+.srev{margin-left:auto;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);color:#fff;border-radius:999px;padding:4px 11px;font:700 12px system-ui;cursor:pointer;flex:none}
 .shint{position:absolute;bottom:22px;left:0;right:0;text-align:center;font:600 13px system-ui;opacity:.75;pointer-events:none}
 .taps{position:absolute;inset:140px 0 60px;display:flex}
 .stage.done .taps{display:none}
@@ -75,10 +87,11 @@ html[data-cel="1"] .sclose{font-size:28px}
 <header>
   <div class="wrap">
     <h1>✍️ Discursivas em Stories — Delegado PC‑BA</h1>
-    <p>Questões discursivas estudadas como <b>Stories</b>: o <b>enunciado</b> fica fixo e você toca para revelar <b>um ponto‑chave da resposta por vez</b> — treina a estrutura da resposta de cabeça. Organizadas em <b>blocos por disciplina</b>.</p>
+    <p>Questões discursivas estudadas como <b>Stories</b>: o <b>enunciado</b> fica fixo e você toca para revelar <b>um ponto‑chave da resposta por vez</b> — treina a estrutura da resposta de cabeça. Em <b>📖 Revisão</b>, a resposta-modelo vem pronta para leitura, com os <b>pontos principais em negrito e sublinhado</b> e os <span style="color:#ff9a9a;font-weight:700">conectivos em vermelho</span> — sem escrever. Organizadas em <b>blocos por disciplina</b>.</p>
     <span class="ghint">✏️ Aperte <kbd>G</kbd> para grifar</span>
     <span class="ghint"><a href="Treino_Discursiva.html" style="color:#fff;text-decoration:none">← Voltar ao Treino</a></span>
     <button class="fsbtn" id="fsbtn" title="Adaptar o layout para o celular">📱 Modo celular</button>
+    <span class="modorev" id="modorev"><button type="button" data-rev="1">📖 Revisão</button><button type="button" data-rev="0">🎯 Treino</button></span>
   </div>
 </header>
 <main id="tela"></main>
@@ -89,9 +102,24 @@ html[data-cel="1"] .sclose{font-size:28px}
 const $=id=>document.getElementById(id);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const CHAVE='discstories:v1';
-let st={done:{},cel:false,last:null};try{st=Object.assign(st,JSON.parse(localStorage.getItem(CHAVE)||'{}'))}catch(e){}
+let st={done:{},cel:false,last:null,rev:true};try{st=Object.assign(st,JSON.parse(localStorage.getItem(CHAVE)||'{}'))}catch(e){}
 const salvar=()=>{try{localStorage.setItem(CHAVE,JSON.stringify(st))}catch(e){}};
+const revOn=()=>st.rev!==false;
 const B=Array.isArray(window.DISC_STORIES)?window.DISC_STORIES:[];
+
+/* ===== Revisão guiada (21/11/2026, pedido do titular): realça os PONTOS PRINCIPAIS em negrito+sublinhado
+   (referências legais e ênfases marcadas com *...*) e os CONECTIVOS em vermelho — metodologia de leitura
+   para a etapa de revisão, sem o aluno escrever. */
+const CONEC=['nos termos de','à luz de','sob pena de','a fim de','de modo que','por conseguinte','por sua vez','por isso','isto é','ou seja','em regra','em suma','em síntese','por fim','nesse sentido','nesse diapasão','não obstante','ainda que','desde que','uma vez que','visto que','haja vista','dado que','posto que','além disso','bem como','com efeito','de fato','no entanto','portanto','logo','assim','destarte','consequentemente','outrossim','ademais','todavia','contudo','entretanto','porém','embora','conquanto','porquanto','conforme','segundo','sobretudo','mormente','inclusive','salvo','exceto','primeiramente','inicialmente','pois','porque'];
+const reConec=new RegExp('(?<![0-9A-Za-zÀ-ÿ])('+CONEC.map(c=>c.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).join('|')+')(?![0-9A-Za-zÀ-ÿ])','gi');
+const reLei=/(art\.?\s*\d+[ºo]?(?:[,\s]*(?:§\s*\d+[ºo]?|inc\.?\s*[IVXLC]+|[IVXLC]{1,4})\b)*|§+\s*\d+[ºo]?|incisos?\s+[IVXLC]+|Leis?\s*(?:n[ºo.]*\s*)?\d[\d.]*\/?\d*|S[úu]mulas?\s*(?:Vinculante\s*)?n?[ºo.]*\s*\d+|CF(?:\/88)?|CPP|CPC|CTN|CDC|LEP|CP|CC|STF|STJ)\b/g;
+function realce(txt){
+  let s=esc(txt);
+  s=s.replace(/\*([^*]+)\*/g,'<span class="lp">$1</span>');   // ênfase manual nos dados (*...*)
+  s=s.replace(reLei,'<span class="lp">$&</span>');            // referência legal = ponto principal
+  s=s.replace(reConec,'<span class="conec">$1</span>');       // conectivo em vermelho
+  return s;
+}
 
 function home(){
   let h='<section class="card"><h2>✍️ Discursivas que viram Stories</h2>'
@@ -114,7 +142,7 @@ function stageEl(){
   let s=$('stage');
   if(!s){ s=document.createElement('div'); s.id='stage'; s.className='stage';
     s.innerHTML='<div class="segs" id="segs"></div>'
-      +'<div class="shead"><span class="schip" id="schip"></span><span class="sbloco" id="sbloco"></span><button class="sclose" data-close="1">✕</button></div>'
+      +'<div class="shead"><span class="schip" id="schip"></span><span class="sbloco" id="sbloco"></span><button class="srev" id="srev" data-revtoggle="1" title="Alternar Revisão / Treino"></button><button class="sclose" data-close="1">✕</button></div>'
       +'<div class="sbody" id="sbody"></div><div class="sbase" id="sbase"></div><div class="shint" id="shint"></div>'
       +'<div class="taps"><div class="z l" data-tap="prev"></div><div class="z r" data-tap="next"></div></div>';
     document.body.appendChild(s);
@@ -127,36 +155,45 @@ function abrirStories(bi, resume){
   salvarPos(); stageEl().classList.add('on'); pinta();
 }
 function pinta(){
-  const stg=stageEl(), b=B[bAtual], qs=b.itens, fim=qIdx>=qs.length;
+  const stg=stageEl(), b=B[bAtual], qs=b.itens, fim=qIdx>=qs.length, rev=revOn();
   stg.classList.toggle('done', fim);
   $('segs').innerHTML=qs.map((_,i)=>'<div class="seg'+(i<qIdx||fim?' done':(i===qIdx?' cur':''))+'"></div>').join('');
+  const rb=$('srev'); if(rb) rb.textContent=rev?'🎯 Treino':'📖 Revisão';
   if(fim){
     $('schip').textContent=''; $('sbloco').textContent=''; $('shint').textContent=''; $('sbase').textContent='';
-    $('sbody').innerHTML='<div class="sdone"><div class="big">🎉 Fim do bloco</div><div>Você treinou '+qs.length+' questão(ões) de '+esc(b.bloco)+'.</div><button class="bt2" data-restart="1">↺ Treinar de novo</button></div>';
+    $('sbody').innerHTML='<div class="sdone"><div class="big">🎉 Fim do bloco</div><div>Você '+(rev?'revisou':'treinou')+' '+qs.length+' questão(ões) de '+esc(b.bloco)+'.</div><button class="bt2" data-restart="1">↺ '+(rev?'Rever':'Treinar')+' de novo</button></div>';
     st.done[b.id]=qs.length; salvar();
     return;
   }
   const q=qs[qIdx], np=q.pontos.length;
   $('schip').textContent='Questão '+(qIdx+1)+'/'+qs.length;
   $('sbloco').textContent=esc(b.bloco)+' · '+esc(q.tema);
-  let body='<div class="enun">'+esc(q.enun)+'</div>';
-  q.pontos.forEach((p,i)=>{
-    let cls='ponto';
-    if(i<rIdx) cls+=' on'; else { cls+=' hid'; if(i===rIdx) cls+=' next'; }
-    const txt=i<rIdx?('<span class="pn">'+(i+1)+'.</span>'+esc(p)):'';
-    body+='<div class="'+cls+'" data-n="'+(i+1)+'">'+txt+'</div>';
-  });
+  let body='<div class="enun">'+realce(q.enun)+'</div>';
+  if(rev){
+    body+='<div class="roteiro"><b>Revisão guiada</b> — leia a resposta-modelo (não escreva). Estrutura: <b>1)</b> tese/conceito · <b>2)</b> fundamento legal · <b>3)</b> aplicação ao caso · <b>4)</b> conclusão.</div>'
+      +'<div class="legenda"><span class="lp">pontos principais</span> em negrito e sublinhado · <span class="conec">conectivos</span> em vermelho.</div>';
+    q.pontos.forEach((p,i)=>{ body+='<div class="ponto on rev" data-n="'+(i+1)+'"><span class="pn">'+(i+1)+'.</span>'+realce(p)+'</div>'; });
+  } else {
+    q.pontos.forEach((p,i)=>{
+      let cls='ponto';
+      if(i<rIdx) cls+=' on'; else { cls+=' hid'; if(i===rIdx) cls+=' next'; }
+      const txt=i<rIdx?('<span class="pn">'+(i+1)+'.</span>'+realce(p)):'';
+      body+='<div class="'+cls+'" data-n="'+(i+1)+'">'+txt+'</div>';
+    });
+  }
   $('sbody').innerHTML=body;
   $('sbase').textContent=q.base?('📖 '+q.base):'';
-  $('shint').textContent=(rIdx<np)?'toque à direita para revelar o próximo ponto ›':'toque à direita para a próxima questão ›';
+  $('shint').textContent=rev?'toque à direita para a próxima questão ›':((rIdx<np)?'toque à direita para revelar o próximo ponto ›':'toque à direita para a próxima questão ›');
 }
 function avancar(){
   const qs=B[bAtual].itens; if(qIdx>=qs.length) return;
+  if(revOn()){ qIdx++; rIdx=0; salvarPos(); pinta(); return; }
   const np=qs[qIdx].pontos.length;
   if(rIdx<np){ rIdx++; } else { qIdx++; rIdx=0; }
   salvarPos(); pinta();
 }
 function voltar(){
+  if(revOn()){ if(qIdx>0){ qIdx--; rIdx=0; salvarPos(); pinta(); } return; }
   if(rIdx>0){ rIdx--; }
   else if(qIdx>0){ qIdx--; rIdx=B[bAtual].itens[qIdx].pontos.length; }
   else { return; }
@@ -170,17 +207,24 @@ function aplicaCel(){
   document.documentElement.setAttribute('data-cel', on?'1':'0');
   const b=$('fsbtn'); if(b){ b.textContent=on?'📱 Modo celular ✓':'📱 Modo celular'; b.classList.toggle('on',on); }
 }
+function aplicaRev(){
+  const m=$('modorev'); if(!m) return; const rev=revOn();
+  m.querySelectorAll('button').forEach(b=>b.classList.toggle('on',(b.dataset.rev==='1')===rev));
+}
 
 document.addEventListener('click', e=>{
   const sb=e.target.closest('[data-bloco]'); if(sb){ abrirStories(+sb.dataset.bloco, true); return; }
   if(e.target.closest('[data-close]')){ fechar(); return; }
   if(e.target.closest('[data-restart]')){ qIdx=0; rIdx=0; salvarPos(); pinta(); return; }
+  if(e.target.closest('[data-revtoggle]')){ st.rev=(st.rev===false); salvar(); rIdx=0; aplicaRev(); pinta(); return; }
+  const rv=e.target.closest('[data-rev]'); if(rv){ st.rev=rv.dataset.rev==='1'; salvar(); rIdx=0; aplicaRev(); const s=$('stage'); if(s&&s.classList.contains('on'))pinta(); return; }
   const tp=e.target.closest('[data-tap]'); if(tp){ tp.dataset.tap==='next'?avancar():voltar(); return; }
   if(e.target.closest('#fsbtn')){ st.cel=!st.cel; salvar(); aplicaCel(); return; }
 });
 
 $('rodape').innerHTML='Conteúdo autoral, fundado na lei seca oficial e na doutrina majoritária; nenhum material de terceiro entra aqui (ver docs/PROCEDENCIA.md).';
 aplicaCel();
+aplicaRev();
 home();
 // retoma um Stories em andamento ao abrir a página
 if(st.last && typeof st.last.b==='number' && B[st.last.b]){ try{ abrirStories(st.last.b, true); }catch(e){} }

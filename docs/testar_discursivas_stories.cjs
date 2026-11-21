@@ -47,24 +47,28 @@ d.querySelector('[data-bloco="0"]').click();
 prova("abrir um bloco mostra o palco com enunciado, barrinhas e dica de toque",
   !!d.querySelector("#stage.on") && !!d.querySelector(".enun") && d.querySelectorAll("#segs .seg").length >= 1 && !!d.querySelector(".shint"));
 
-// os pontos começam ocultos
-prova("os pontos da resposta começam ocultos", d.querySelectorAll(".ponto.on").length === 0 && d.querySelectorAll(".ponto.hid").length >= 2,
-  d.querySelectorAll(".ponto.hid").length + " ocultos");
+// Revisão guiada (padrão): resposta-modelo pronta, com roteiro e todos os pontos visíveis
+prova("no modo Revisão a resposta-modelo vem pronta (roteiro + pontos visíveis, nada oculto)",
+  !!d.querySelector(".roteiro") && d.querySelectorAll(".ponto.on").length >= 2 && d.querySelectorAll(".ponto.hid").length === 0,
+  d.querySelectorAll(".ponto.on").length + " visíveis / " + d.querySelectorAll(".ponto.hid").length + " ocultos");
+prova("a Revisão realça conectivos (.conec) e/ou pontos principais (.lp)",
+  d.querySelectorAll(".conec, .lp").length >= 1, String(d.querySelectorAll(".conec, .lp").length));
 
-// tocar à direita revela o 1º ponto
+// na Revisão, tocar à direita avança de QUESTÃO (não ponto a ponto)
 d.querySelector('[data-tap="next"]').click();
-prova("tocar à direita revela um ponto-chave (.on com texto)",
-  d.querySelectorAll(".ponto.on").length === 1 && d.querySelector(".ponto.on").textContent.length > 0);
-
-// revelar todos os pontos e mais um toque avança para a 2ª questão
-const nPontos = B[0].itens[0].pontos.length;
-for (let i = 1; i < nPontos; i++) d.querySelector('[data-tap="next"]').click(); // revela os demais
-d.querySelector('[data-tap="next"]').click();                                   // passa de questão
-prova("após revelar todos os pontos, avança para a 2ª questão", /Questão\s*2\//.test(d.body.textContent), d.querySelector(".schip") && d.querySelector(".schip").textContent);
+prova("na Revisão, tocar à direita vai para a 2ª questão", /Questão\s*2\//.test(d.body.textContent), d.querySelector(".schip") && d.querySelector(".schip").textContent);
 
 // posição salva para retomar
 let salvo = {}; try { salvo = JSON.parse(w.localStorage.getItem("discstories:v1") || "{}"); } catch (e) {}
 prova("o Stories salva a posição para retomar", salvo.last && salvo.last.b === 0 && salvo.last.q >= 1, JSON.stringify(salvo.last || {}));
+
+// alternar para Treino: os pontos voltam a ficar ocultos e revelam um a um
+d.querySelector('[data-rev="0"]').click();
+prova("no modo Treino os pontos começam ocultos", d.querySelectorAll(".ponto.hid").length >= 2 && d.querySelectorAll(".ponto.on").length === 0,
+  d.querySelectorAll(".ponto.hid").length + " ocultos");
+d.querySelector('[data-tap="next"]').click();
+prova("no Treino, tocar à direita revela um ponto-chave (.on com texto)",
+  d.querySelectorAll(".ponto.on").length === 1 && d.querySelector(".ponto.on").textContent.length > 0);
 
 // ✕ fecha o palco
 d.querySelector('[data-close]').click();
