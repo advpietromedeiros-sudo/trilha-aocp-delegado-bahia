@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atualidades · Certo e Errado · Delegado PC-BA</title>
+<style>
+:root{--bg:#f6f4ef;--papel:#fff;--tinta:#1f2433;--suave:#5d6577;--linha:#ddd8cc;--azul:#24508f;--azul2:#e7eef9;--verde:#1f7a4d;--verde2:#e3f3ea;--vermelho:#b3261e;--vermelho2:#fbe9e7;--ouro:#9a6b00;--ouro2:#fff4d6}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--tinta);font:16px/1.6 "Segoe UI",system-ui,sans-serif}
+header{background:var(--azul);color:#fff;padding:14px 20px;box-shadow:0 3px 14px #172b491f}
+header .top{display:flex;gap:12px;align-items:center;flex-wrap:wrap;max-width:1080px;margin:0 auto}
+header h1{margin:0;font-size:20px}
+header a.volta{color:#fff;border:1px solid #ffffff66;border-radius:999px;padding:6px 13px;text-decoration:none;font-size:14px}
+header a.volta:hover{background:#ffffff1a}
+.prova{margin-left:auto;background:#ffffff1f;border:1px solid #ffffff4d;border-radius:10px;padding:6px 12px;font-size:13px;line-height:1.3}
+.prova b{font-size:17px}
+main{max-width:1080px;margin:0 auto;padding:18px 16px 60px}
+.barra{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
+.btmodo{border:1px solid var(--azul);background:#fff;color:var(--azul);border-radius:999px;padding:8px 16px;min-height:42px;font:inherit;cursor:pointer}
+.btmodo.on{background:var(--azul);color:#fff;font-weight:700}
+.btcel{margin-left:auto;border:1px solid var(--azul);background:#fff;color:var(--azul);border-radius:999px;padding:8px 14px;min-height:42px;font:inherit;cursor:pointer}
+.btcel.on{background:var(--ouro);border-color:var(--ouro);color:#fff;font-weight:700}
+.temas{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.temas button{border:1px solid var(--linha);background:#fff;border-radius:999px;padding:6px 13px;min-height:40px;font:14px "Segoe UI",sans-serif;cursor:pointer;color:var(--tinta);transition:border-color .12s,background-color .12s}
+.temas button:hover{border-color:var(--azul)}
+.temas button.on{background:var(--azul);color:#fff;border-color:var(--azul);font-weight:700}
+.placar{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin:0 0 16px}
+.placar div{background:#fff;border:1px solid var(--linha);border-radius:12px;padding:10px 14px;line-height:1.3;box-shadow:0 2px 8px #1f24330a}
+.placar small{color:var(--suave);font-size:12px}
+.placar b{display:block;font-size:24px;color:var(--azul);margin-top:2px}
+.placar b.ok{color:var(--verde)}.placar b.no{color:var(--vermelho)}
+.q{background:#fff;border:1px solid var(--linha);border-radius:16px;padding:18px 20px;margin:0 0 16px;box-shadow:0 4px 16px #1f24330c;scroll-margin-top:12px}
+.q .meta{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:13px;color:var(--suave);margin-bottom:10px}
+.q .num{background:#eef2f8;color:#26384f;border-radius:999px;padding:3px 11px;font-weight:800}
+.q .badge{background:var(--azul2);color:#1b3f73;border-radius:999px;padding:3px 11px;font-weight:700}
+.q .afirm{font-size:18px;line-height:1.7;font-weight:600;margin:0 0 14px;text-align:justify;hyphens:auto}
+.ce{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ce button{min-height:60px;border-radius:14px;font:800 17px/1.2 "Segoe UI",system-ui,sans-serif;letter-spacing:.05em;cursor:pointer;border:2px solid;transition:transform .1s,box-shadow .12s}
+.ce button:not(:disabled):hover{transform:translateY(-1px);box-shadow:0 6px 16px #1f243320}
+.ce [data-r="1"]{background:#eef8f2;border-color:var(--verde);color:#145c39}
+.ce [data-r="0"]{background:#fdeceb;border-color:var(--vermelho);color:#8f1d17}
+.ce button:disabled{cursor:default;opacity:.5}
+.ce button.sel{opacity:1;box-shadow:inset 0 0 0 3px currentColor}
+.gab{display:inline-flex;align-items:center;gap:8px;margin:14px 0 4px;font-weight:800;font-size:15px;border-radius:999px;padding:6px 14px}
+.gab.c{background:var(--verde2);color:#145c39}
+.gab.e{background:var(--vermelho2);color:#8f1d17}
+.fb{font-weight:800;border-radius:10px;padding:8px 12px;margin:10px 0}
+.fb.acerto{background:var(--verde2);color:#145c39}
+.fb.erro{background:var(--vermelho2);color:#8f1d17}
+/* comentário */
+.com{margin-top:12px;border:1px solid #d7dfeb;border-left:4px solid var(--azul);border-radius:12px;background:#f9fbfe;padding:2px 16px 14px}
+.com>.rot{color:var(--azul);font-size:12px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;margin:0 -16px 10px;padding:12px 16px 9px;border-bottom:1px solid #e4e9f2;background:#eef3fb;border-radius:11px 11px 0 0}
+.com p{margin:.6em 0;text-align:justify;hyphens:auto;line-height:1.72}
+.com ul{margin:.5em 0;padding-left:1.25em}.com li{margin:.3em 0}
+.k{font-weight:800;color:var(--vermelho)}
+.n{font-weight:800;color:#13294b}
+.ok{font-weight:700;color:#145c39}
+.com table{border-collapse:collapse;width:100%;margin:10px 0;font-size:.95em}
+.com th,.com td{border:1px solid #d7dfeb;padding:8px 10px;text-align:left;vertical-align:top;line-height:1.5}
+.com th{background:#eef2f8;color:#26384f;font-weight:700}
+.com tbody tr:nth-child(even){background:#f4f7fc}
+.fonte{display:block;margin-top:10px;font-size:12.5px;color:var(--suave)}
+.fonte b{color:#3b4352}
+.nota{background:#fff8e7;border:1px solid #f0e2bb;border-left:4px solid var(--ouro);border-radius:10px;padding:12px 16px;margin:0 0 16px;line-height:1.6}
+.fim{background:var(--verde2);border:1px solid #b9ddc7;border-radius:14px;padding:16px 18px;margin:18px 0;color:#145c39;line-height:1.6}
+.vazio{background:#f4f6f9;border:1px dashed #b9c2d0;border-radius:14px;padding:22px;text-align:center;color:#3b4352}
+.topbts{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+.bt{border:1px solid var(--linha);background:#fff;border-radius:9px;padding:8px 14px;min-height:40px;font:inherit;cursor:pointer}
+.bt:hover{border-color:var(--azul)}
+.bt.pri{background:var(--azul);border-color:var(--azul);color:#fff;font-weight:700}
+/* ---- modo celular ---- */
+html[data-cel="1"] body{font-size:20px}
+html[data-cel="1"] header h1{font-size:23px}
+html[data-cel="1"] .q .afirm{font-size:23px;line-height:1.75}
+html[data-cel="1"] .q .num,html[data-cel="1"] .q .badge{font-size:16px}
+html[data-cel="1"] .ce button{font-size:21px;min-height:68px}
+html[data-cel="1"] .com{font-size:20px}
+html[data-cel="1"] .com>.rot{font-size:15px}
+html[data-cel="1"] .com table{font-size:1em}
+html[data-cel="1"] .temas button,html[data-cel="1"] .btmodo,html[data-cel="1"] .btcel{font-size:17px}
+html[data-cel="1"] .placar b{font-size:28px}
+@media(max-width:560px){main{padding:12px}.q{padding:14px}.ce{grid-template-columns:1fr}.prova{width:100%;margin:8px 0 0}}
+</style>
+</head>
+<body>
+<header>
+ <div class="top">
+  <h1>📰 Atualidades · Certo &amp; Errado</h1>
+  <a class="volta" href="Treino_Discursiva.html">⬅ Hub</a>
+  <div class="prova" id="prova"></div>
+ </div>
+</header>
+<main>
+ <div class="nota">
+  <b>Como usar.</b> Programa do edital — <b>Atualidades</b> em âmbito internacional, nacional e da Bahia (geopolítica, direitos humanos, meio ambiente, economia, saúde, segurança pública, tecnologia, cultura) <b>e Comunicação</b>. No modo <b>Treino</b>, marque Certo/Errado e confira o comentário; no modo <b>Estudo</b>, tudo já vem revelado para leitura. Termos decisivos vêm em <span class="k">negrito vermelho</span>. <br><small id="atual"></small>
+ </div>
+ <div class="barra">
+  <button class="btmodo on" id="mTreino">🎯 Treino</button>
+  <button class="btmodo" id="mEstudo">📖 Estudo</button>
+  <button class="btcel" id="bcel">📱 Modo celular</button>
+ </div>
+ <div class="temas" id="temas"></div>
+ <div class="placar" id="placar"></div>
+ <div class="topbts" style="margin-bottom:14px">
+  <button class="bt" id="bzerar">↺ Zerar respostas deste filtro</button>
+ </div>
+ <div id="lista"></div>
+</main>
+<script src="atualidades_dados.js"></script>
+<script>
+/* Atualidades Certo & Errado (21/11/2026, pedido do titular): bater TODO o anexo de atualidades da prova,
+   em assertivas Certo/Errado comentadas. Seleção de temas inspirada no material de revisão do titular
+   (uso pessoal, ver docs/PROCEDENCIA.md); as assertivas e os comentários são originais, redigidos a partir
+   de fontes públicas. Progresso e preferências ficam no navegador (localStorage). */
+const $=id=>document.getElementById(id);
+const D=(window.ATUALIDADES||{info:{},temas:[],questoes:[]});
+const QS=D.questoes||[],TEMAS=D.temas||[],INFO=D.info||{};
+const CHAVE='atualidades-pcba:v1';
+let st={modo:'treino',tema:'todos',cel:0,resp:{}};
+try{st=Object.assign(st,JSON.parse(localStorage.getItem(CHAVE)||'{}'))}catch(e){}
+const salvar=()=>{try{localStorage.setItem(CHAVE,JSON.stringify(st))}catch(e){}};
+const nomeTema=id=>{const t=TEMAS.find(x=>x.id===id);return t?((t.emoji?t.emoji+' ':'')+t.nome):id};
+
+/* ---- cabeçalho: prova e contagem ---- */
+(function(){
+ if(INFO.prova){
+  const[d,m,a]=INFO.prova.split('/').map(Number);
+  const alvo=new Date(a,m-1,d),hoje=new Date();hoje.setHours(0,0,0,0);
+  const dias=Math.round((alvo-hoje)/864e5);
+  $('prova').innerHTML=`Prova: <b>${INFO.prova}</b><br>${dias>0?('faltam '+dias+' dia'+(dias===1?'':'s')):(dias===0?'é hoje!':'prova realizada')}`;
+ }
+ $('atual').textContent='Conteúdo atualizado em '+(INFO.atualizado||'')+'. Atualidades muda rápido — confira os fatos perto da prova.';
+})();
+
+/* ---- filtros de tema ---- */
+function pintaTemas(){
+ const cont={};for(const q of QS)cont[q.t]=(cont[q.t]||0)+1;
+ const bts=[`<button data-tm="todos" class="${st.tema==='todos'?'on':''}">Todos · ${QS.length}</button>`];
+ for(const t of TEMAS)if(cont[t.id])bts.push(`<button data-tm="${t.id}" class="${st.tema===t.id?'on':''}">${(t.emoji?t.emoji+' ':'')+t.nome} · ${cont[t.id]}</button>`);
+ $('temas').innerHTML=bts.join('');
+}
+
+/* ---- placar ---- */
+function filtradas(){return st.tema==='todos'?QS:QS.filter(q=>q.t===st.tema)}
+function placar(){
+ const fs=filtradas();let resp=0,ac=0;
+ for(const q of fs){const r=st.resp[q.id];if(r!==undefined){resp++;if((r?1:0)===(q.g?1:0))ac++}}
+ const perc=resp?Math.round(ac/resp*100):0;
+ $('placar').innerHTML=`
+  <div><small>Questões</small><b>${fs.length}</b></div>
+  <div><small>Respondidas</small><b>${resp}</b></div>
+  <div><small>Acertos</small><b class="ok">${ac}</b></div>
+  <div><small>Erros</small><b class="no">${resp-ac}</b></div>
+  <div><small>Aproveitamento</small><b>${perc}%</b></div>`;
+}
+
+/* ---- render de uma questão ---- */
+function cardQ(q,i){
+ const r=st.resp[q.id];                 // undefined | true(certo) | false(errado)
+ const revelar=(st.modo==='estudo')||(r!==undefined);
+ const acertou=r!==undefined&&((r?1:0)===(q.g?1:0));
+ let h=`<div class="q" id="q${q.id}"><div class="meta"><span class="num">${i+1}</span><span class="badge">${esc(nomeTema(q.t))}</span>${revelar?`<span class="gab ${q.g?'c':'e'}">GABARITO: ${q.g?'CERTO':'ERRADO'}</span>`:''}</div>`;
+ h+=`<p class="afirm">${q.a}</p>`;
+ if(st.modo==='treino'){
+  h+=`<div class="ce">
+   <button data-id="${q.id}" data-r="1" ${r!==undefined?'disabled':''} class="${r===true?'sel':''}">CERTO</button>
+   <button data-id="${q.id}" data-r="0" ${r!==undefined?'disabled':''} class="${r===false?'sel':''}">ERRADO</button></div>`;
+  if(r!==undefined)h+=`<div class="fb ${acertou?'acerto':'erro'}">${acertou?'✔ Você acertou.':'✘ Você errou — leia o comentário.'}</div>`;
+ }
+ if(revelar)h+=`<div class="com"><p class="rot">Comentário</p>${q.c}${q.f?`<span class="fonte"><b>Fonte(s):</b> ${esc(q.f)}</span>`:''}</div>`;
+ h+='</div>';
+ return h;
+}
+function esc(s){return String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+
+function render(){
+ pintaTemas();placar();
+ $('mTreino').className='btmodo'+(st.modo==='treino'?' on':'');
+ $('mEstudo').className='btmodo'+(st.modo==='estudo'?' on':'');
+ $('bcel').className='btcel'+(st.cel?' on':'');
+ document.documentElement.setAttribute('data-cel',st.cel?'1':'0');
+ const fs=filtradas();
+ $('lista').innerHTML=fs.length?fs.map((q,i)=>cardQ(q,i)).join(''):'<div class="vazio">Sem questões neste filtro.</div>';
+ const resp=fs.filter(q=>st.resp[q.id]!==undefined).length;
+ if(st.modo==='treino'&&fs.length&&resp===fs.length){
+  const ac=fs.filter(q=>(st.resp[q.id]?1:0)===(q.g?1:0)).length;
+  $('lista').insertAdjacentHTML('beforeend',`<div class="fim"><b>Fim do bloco.</b> Você acertou <b>${ac}</b> de <b>${fs.length}</b> (${Math.round(ac/fs.length*100)}%). Releia os comentários dos erros e, se quiser, zere para refazer.</div>`);
+ }
+}
+
+/* ---- eventos ---- */
+document.addEventListener('click',e=>{
+ const tm=e.target.closest('[data-tm]');if(tm){st.tema=tm.dataset.tm;salvar();render();scrollTo(0,0);return}
+ const ce=e.target.closest('.ce button[data-id]');
+ if(ce&&!ce.disabled){const id=ce.dataset.id;st.resp[id]=ce.dataset.r==='1';salvar();render();const el=$('q'+id);if(el)el.scrollIntoView({block:'nearest'});return}
+});
+$('mTreino').onclick=()=>{st.modo='treino';salvar();render()};
+$('mEstudo').onclick=()=>{st.modo='estudo';salvar();render()};
+$('bcel').onclick=()=>{st.cel=st.cel?0:1;salvar();render()};
+$('bzerar').onclick=()=>{for(const q of filtradas())delete st.resp[q.id];salvar();render();scrollTo(0,0)};
+
+render();
+</script>
+<!-- grifa:inicio (gerado de assets/grifa.js por ferramentas/embutir_grifa.py; não editar aqui) -->
+<script>
+/* Paleta de grifos — FONTE ÚNICA (10/11/2026, pedido do titular: "sempre que eu apertar G aparece uma paleta de
+   grifos... para eu grifar algum texto que eu queira, em todas as telas").
+   ⚠️ Não se edita a cópia embutida nas telas: edita-se ESTE arquivo e roda-se
+   "python ferramentas/embutir_grifa.py". O portão (--conferir) reprova cópia diferente desta.
+   Como funciona:
+   - G (sem Ctrl/Alt, fora de campo de texto) abre e fecha a paleta; Esc fecha.
+   - Com a paleta aberta e uma cor escolhida, selecionar um texto já o grifa (como caneta marca-texto).
+     Com texto já selecionado, clicar na cor grifa na hora.
+   - 9 cores de marca-texto e, desde 14/11/2026, Negrito (B) e Sublinhado (U), que funcionam do mesmo jeito e podem
+     somar-se a uma cor no mesmo trecho (grifa de amarelo e depois passa o B por cima).
+   - Borracha: clicar num grifo o apaga. "Limpar esta tela" pede confirmação na própria paleta.
+   - Os grifos ficam salvos neste navegador, por tela (localStorage "grifos:v1:<caminho>"), ancorados pelo TEXTO
+     (o trecho + 32 caracteres de contexto de cada lado), e voltam sozinhos quando a tela se redesenha
+     (troca de aba, próxima questão, recarregar a página). Trecho repetido sem o mesmo contexto não é grifado. */
+(function () {
+  'use strict';
+  if (window.Grifa) return;
+  var CORES = [
+    { id: 'amarelo', nome: 'Amarelo', fundo: '#fff176' },
+    { id: 'verde', nome: 'Verde', fundo: '#b9f6ca' },
+    { id: 'azul', nome: 'Azul', fundo: '#b3e5fc' },
+    { id: 'rosa', nome: 'Rosa', fundo: '#f8bbd0' },
+    { id: 'laranja', nome: 'Laranja', fundo: '#ffcc80' },
+    /* 14/11/2026 (titular: "inclua mais algumas cores... e inclua também a opção de negrito e sublinhado") */
+    { id: 'lilas', nome: 'Lilás', fundo: '#e1bee7' },
+    { id: 'vermelho', nome: 'Vermelho', fundo: '#ff8a80' },
+    { id: 'turquesa', nome: 'Turquesa', fundo: '#a7ffeb' },
+    { id: 'cinza', nome: 'Cinza', fundo: '#e0e0e0' }
+  ];
+  /* estilos de letra: funcionam como as cores (escolhe e seleciona) e podem somar-se a um grifo colorido */
+  var ESTILOS = [
+    { id: 'negrito', nome: 'Negrito', icone: '<b style="font-weight:900">B</b>', css: 'font-weight:800 !important' },
+    { id: 'sublinhado', nome: 'Sublinhado', icone: '<u style="text-decoration-thickness:2px">U</u>',
+      css: 'text-decoration:underline !important;text-decoration-thickness:2px !important;text-underline-offset:2px' },
+    /* 16/11/2026 (titular: "nos botoes G coloque um la que seja ao mesmo tempo negrito e sublinhado num botão só") */
+    { id: 'negsub', nome: 'Negrito + Sublinhado', icone: '<b style="font-weight:900;text-decoration:underline;text-underline-offset:2px">B̲U̲</b>',
+      css: 'font-weight:800 !important;text-decoration:underline !important;text-decoration-thickness:2px !important;text-underline-offset:2px' }
+  ];
+  var MARCAS = CORES.map(function (c) { return c.id; }).concat(ESTILOS.map(function (s) { return s.id; }));
+  var CTX = 32;
+  var CHAVE = 'grifos:v1:' + decodeURIComponent(location.pathname || '/');
+  var PULAR = /^(SCRIPT|STYLE|NOSCRIPT|TEXTAREA|INPUT|SELECT|OPTION|TEMPLATE|svg|SVG)$/;
+  var ferramenta = 'amarelo';
+  var paleta = null, observador = null, agendado = 0, aplicando = false, confirmaLimpar = 0;
+
+  function ler() {
+    try { var d = JSON.parse(localStorage.getItem(CHAVE) || '[]'); return Array.isArray(d) ? d : []; }
+    catch (e) { return []; }
+  }
+  function gravar(lista) {
+    try { localStorage.setItem(CHAVE, JSON.stringify(lista)); return true; }
+    catch (e) { aviso('Não deu para salvar o grifo neste navegador (armazenamento cheio ou bloqueado).'); return false; }
+  }
+
+  /* ---------- índice do texto visível da página ---------- */
+  function fora(no) {
+    for (var el = no.parentNode; el && el !== document.body; el = el.parentNode) {
+      if (el.nodeType !== 1) continue;
+      if (PULAR.test(el.nodeName) || el.id === 'grf-paleta' || el.isContentEditable) return true;
+    }
+    return false;
+  }
+  function indice() {
+    var nos = [], inicios = [], partes = [], total = 0;
+    if (!document.body) return { nos: nos, inicios: inicios, texto: '' };
+    var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null);
+    for (var n = w.nextNode(); n; n = w.nextNode()) {
+      if (!n.nodeValue || fora(n)) continue;
+      nos.push(n); inicios.push(total); partes.push(n.nodeValue); total += n.nodeValue.length;
+    }
+    return { nos: nos, inicios: inicios, texto: partes.join('') };
+  }
+  function posicao(ix, recipiente, desloc, fim) {
+    if (recipiente.nodeType === 3) {
+      var i = ix.nos.indexOf(recipiente);
+      if (i >= 0) return ix.inicios[i] + desloc;
+    }
+    /* recipiente é elemento (ou texto fora do índice): procura o primeiro texto do índice depois do ponto */
+    var alvo = recipiente.nodeType === 1 ? (recipiente.childNodes[desloc] || null) : recipiente;
+    for (var k = 0; k < ix.nos.length; k++) {
+      var no = ix.nos[k];
+      if (alvo === null) {
+        if (!recipiente.contains(no) && (recipiente.compareDocumentPosition(no) & Node.DOCUMENT_POSITION_FOLLOWING)) return ix.inicios[k];
+      } else if (alvo === no || alvo.contains(no) || (alvo.compareDocumentPosition(no) & Node.DOCUMENT_POSITION_FOLLOWING)) {
+        return ix.inicios[k];
+      }
+    }
+    return fim ? ix.texto.length : -1;
+  }
+
+  /* ---------- envolver um intervalo [ini, fim) do índice em <mark> ---------- */
+  function envolver(ix, ini, fim, g) {
+    var feitos = 0;
+    for (var k = ix.nos.length - 1; k >= 0; k--) {
+      var no = ix.nos[k], a = ix.inicios[k], b = a + no.nodeValue.length;
+      if (b <= ini || a >= fim) continue;
+      var s = Math.max(ini, a) - a, e = Math.min(fim, b) - a;
+      var pedaco = no.nodeValue.slice(s, e);
+      if (!pedaco.trim()) continue; /* espaço entre células de tabela: não se envolve (quebraria a estrutura) */
+      var alvo = no;
+      if (e < alvo.nodeValue.length) alvo.splitText(e);
+      if (s > 0) alvo = alvo.splitText(s);
+      var m = document.createElement('mark');
+      m.className = 'grf grf-' + g.cor + (ESTILOS.some(function (x) { return x.id === g.cor; }) ? ' grf-letra' : '');
+      m.setAttribute('data-grf', g.id); m.title = 'Grifo (' + g.cor + ')';
+      alvo.parentNode.insertBefore(m, alvo); m.appendChild(alvo); feitos++;
+    }
+    return feitos;
+  }
+  function achar(ix, g) {
+    var t = ix.texto, melhor = -1, nota = -1, vistos = 0;
+    for (var p = t.indexOf(g.t); p >= 0; p = t.indexOf(g.t, p + 1)) {
+      vistos++;
+      var antes = t.slice(Math.max(0, p - g.a.length), p), depois = t.slice(p + g.t.length, p + g.t.length + g.d.length);
+      var n = (antes === g.a ? 2 : 0) + (depois === g.d ? 2 : 0);
+      if (n > nota) { nota = n; melhor = p; }
+      if (vistos > 500) break;
+    }
+    if (melhor < 0) return -1;
+    if (vistos > 1 && nota < 2) return -1; /* repetido e sem o contexto: não arrisca grifar o lugar errado */
+    return melhor;
+  }
+  function presente(id) { return !!document.querySelector('mark.grf[data-grf="' + id + '"]'); }
+
+  function aplicar() {
+    agendado = 0;
+    var lista = ler(), falta = [];
+    for (var i = 0; i < lista.length; i++) if (!presente(lista[i].id)) falta.push(lista[i]);
+    if (!falta.length) return 0;
+    aplicando = true; pausar();
+    var n = 0;
+    try {
+      for (var j = 0; j < falta.length; j++) {
+        var ix = indice(), p = achar(ix, falta[j]);
+        if (p >= 0 && envolver(ix, p, p + falta[j].t.length, falta[j])) n++;
+      }
+    } finally { retomar(); aplicando = false; }
+    contar();
+    return n;
+  }
+  function agendar() { if (!agendado) agendado = setTimeout(aplicar, 250); }
+  function pausar() { if (observador) observador.disconnect(); }
+  function retomar() {
+    if (!observador && window.MutationObserver) observador = new MutationObserver(function () { if (!aplicando) agendar(); });
+    if (observador && document.body) observador.observe(document.body, { childList: true, subtree: true, characterData: true });
+  }
+
+  /* ---------- criar e apagar ---------- */
+  function grifarSelecao(cor) {
+    var sel = window.getSelection && window.getSelection();
+    if (!sel || sel.isCollapsed || !sel.rangeCount) return false;
+    var r = sel.getRangeAt(0);
+    if (paleta && paleta.contains(r.commonAncestorContainer)) return false;
+    var ix = indice();
+    var ini = posicao(ix, r.startContainer, r.startOffset, false), fim = posicao(ix, r.endContainer, r.endOffset, true);
+    if (ini < 0 || fim <= ini) return false;
+    var trecho = ix.texto.slice(ini, fim);
+    var esq = trecho.length - trecho.replace(/^\s+/, '').length, dir = trecho.length - trecho.replace(/\s+$/, '').length;
+    ini += esq; fim -= dir;
+    if (fim <= ini) return false;
+    var g = { id: 'g' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6), cor: cor,
+      t: ix.texto.slice(ini, fim), a: ix.texto.slice(Math.max(0, ini - CTX), ini), d: ix.texto.slice(fim, fim + CTX),
+      em: new Date().toISOString() };
+    var lista = ler(); lista.push(g);
+    if (!gravar(lista)) return false;
+    pausar();
+    try { envolver(ix, ini, fim, g); } finally { retomar(); }
+    sel.removeAllRanges();
+    contar();
+    return true;
+  }
+  function desembrulhar(id) {
+    pausar();
+    try {
+      var ms = document.querySelectorAll('mark.grf[data-grf="' + id + '"]');
+      for (var i = 0; i < ms.length; i++) {
+        var m = ms[i], pai = m.parentNode;
+        while (m.firstChild) pai.insertBefore(m.firstChild, m);
+        pai.removeChild(m); pai.normalize();
+      }
+    } finally { retomar(); }
+  }
+  function apagar(id) {
+    gravar(ler().filter(function (g) { return g.id !== id; }));
+    desembrulhar(id); contar();
+  }
+  function limparTela() {
+    var lista = ler();
+    for (var i = 0; i < lista.length; i++) desembrulhar(lista[i].id);
+    gravar([]); contar();
+  }
+
+  /* ---------- a paleta ---------- */
+  function estilo() {
+    if (document.getElementById('grf-estilo')) return;
+    var css = '' +
+      'mark.grf{color:#111 !important;border-radius:2px;padding:0 1px;-webkit-print-color-adjust:exact;print-color-adjust:exact}' +
+      CORES.map(function (c) { return 'mark.grf-' + c.id + '{background:' + c.fundo + ' !important}'; }).join('') +
+      /* negrito e sublinhado não pintam o fundo e mantêm a cor do texto (vale no tema escuro) */
+      'mark.grf.grf-letra{background:transparent !important;color:inherit !important;padding:0}' +
+      ESTILOS.map(function (s) { return 'mark.grf-' + s.id + '{' + s.css + '}'; }).join('') +
+      '#grf-paleta .grf-letra-bt{font-family:Georgia,"Times New Roman",serif;font-size:17px}' +
+      'body.grf-borracha mark.grf{cursor:pointer;outline:2px dashed #b71c1c;outline-offset:1px}' +
+      /* 10/11/2026, 21h44 (titular): barra VERTICAL fina presa na borda direita, centrada na altura — a caixa no
+         canto de baixo ficava em cima das palavras. Só ícones; o texto de ajuda vai no title e no leitor de tela. */
+      '#grf-paleta{position:fixed;right:6px;top:50%;transform:translateY(-50%);z-index:2147483000;background:#fff;' +
+      'color:#1b1b1b;border:1px solid #9e9e9e;border-radius:14px;box-shadow:0 4px 18px rgba(0,0,0,.22);padding:6px 5px;' +
+      'font:13px/1.2 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;display:flex;flex-direction:column;' +
+      'align-items:center;gap:4px;text-align:center;max-height:calc(100vh - 12px);overflow-y:auto;scrollbar-width:thin}' +
+      '#grf-paleta[hidden]{display:none}' +
+      /* com a paleta aberta, a página abre uma faixa à direita para a barra não cobrir o conteúdo */
+      'html.grf-reserva body{margin-right:54px !important}' +
+      '#grf-paleta .grf-titulo{font-size:16px;line-height:1;padding:2px 0 0;cursor:default}' +
+      '#grf-paleta .grf-conta{display:block;font-size:11px;font-weight:700;color:#0d47a1;min-height:13px}' +
+      '#grf-paleta .grf-sep{width:24px;border-top:1px solid #d0d0d0;margin:2px 0}' +
+      '#grf-paleta button{font:inherit;cursor:pointer;border:1px solid #757575;border-radius:8px;background:#fafafa;' +
+      'color:#1b1b1b;width:30px;height:30px;min-height:30px;flex:0 0 auto;padding:0;display:flex;align-items:center;justify-content:center;font-size:15px}' +
+      '#grf-paleta button:focus-visible{outline:3px solid #0d47a1;outline-offset:2px}' +
+      '#grf-paleta .grf-cor{border-radius:50%}' +
+      '#grf-paleta button[aria-pressed="true"]{border:3px solid #0d47a1;box-shadow:0 0 0 2px #fff inset}' +
+      '#grf-paleta .grf-fechar{width:26px;height:26px;min-height:26px;font-size:13px;border-color:#bdbdbd}' +
+      '#grf-paleta .grf-dica{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}' +
+      '#grf-paleta .grf-limpar[data-confirma="1"]{background:#b71c1c;color:#fff;border-color:#b71c1c}' +
+      '#grf-paleta .grf-aviso{position:fixed;right:52px;top:50%;transform:translateY(-50%);background:#b71c1c;color:#fff;' +
+      'padding:6px 10px;border-radius:8px;font-size:13px;white-space:nowrap;box-shadow:0 2px 10px rgba(0,0,0,.25)}' +
+      '#grf-paleta .grf-aviso[hidden]{display:none}' +
+      '@media print{#grf-paleta{display:none !important}}';
+    CORES.forEach(function (c) { css += 'body.grf-cor-' + c.id + ' ::selection{background:' + c.fundo + ';color:#111}'; });
+    var s = document.createElement('style'); s.id = 'grf-estilo'; s.textContent = css;
+    (document.head || document.documentElement).appendChild(s);
+  }
+  function montar() {
+    if (paleta) return paleta;
+    estilo();
+    paleta = document.createElement('div');
+    paleta.id = 'grf-paleta'; paleta.hidden = true;
+    paleta.setAttribute('role', 'toolbar'); paleta.setAttribute('aria-label', 'Paleta de grifos');
+    var h = '<button type="button" class="grf-fechar" aria-label="Fechar a paleta (G ou Esc)" title="Fechar (G ou Esc)">✕</button>' +
+      '<span class="grf-titulo" title="Grifos: escolha a cor e selecione o texto. G abre e fecha.">🖍️</span>' +
+      '<span class="grf-conta" aria-live="polite"></span><span class="grf-sep" aria-hidden="true"></span>';
+    CORES.forEach(function (c) {
+      h += '<button type="button" class="grf-cor" data-ferramenta="' + c.id + '" aria-pressed="false" aria-label="Grifar em ' +
+        c.nome.toLowerCase() + '" title="Grifar em ' + c.nome.toLowerCase() + '" style="background:' + c.fundo + '"></button>';
+    });
+    h += '<span class="grf-sep" aria-hidden="true"></span>';
+    ESTILOS.forEach(function (s) {
+      h += '<button type="button" class="grf-letra-bt" data-ferramenta="' + s.id + '" aria-pressed="false" aria-label="' + s.nome +
+        ': selecione o texto" title="' + s.nome + ' (selecione o texto; pode somar com uma cor)">' + s.icone + '</button>';
+    });
+    h += '<span class="grf-sep" aria-hidden="true"></span>' +
+      '<button type="button" data-ferramenta="borracha" aria-pressed="false" aria-label="Borracha: clique num grifo para apagá-lo" title="Borracha: clique num grifo para apagá-lo">🧽</button>' +
+      '<button type="button" class="grf-limpar" aria-label="Limpar esta tela" title="Limpar os grifos desta tela">🗑</button>' +
+      '<span class="grf-aviso" hidden></span>' +
+      '<p class="grf-dica">Escolha a cor e selecione o texto: ele fica grifado. Os grifos ficam salvos neste navegador. G abre e fecha.</p>';
+    paleta.innerHTML = h;
+    paleta.addEventListener('mousedown', function (e) { if (e.target.closest('button')) e.preventDefault(); }); /* não perde a seleção */
+    paleta.addEventListener('click', function (e) {
+      var b = e.target.closest('button'); if (!b) return;
+      if (b.classList.contains('grf-fechar')) return fechar();
+      if (b.classList.contains('grf-limpar')) {
+        if (!ler().length) return;
+        if (b.getAttribute('data-confirma') === '1') { clearTimeout(confirmaLimpar); limparTela(); rotuloLimpar(); return; }
+        var txt = 'Confirmar: apagar ' + ler().length + ' grifo(s)? Clique de novo.';
+        b.setAttribute('data-confirma', '1'); b.setAttribute('aria-label', txt); b.title = txt; b.textContent = '✓';
+        var av = paleta.querySelector('.grf-aviso'); av.textContent = txt; av.hidden = false;
+        confirmaLimpar = setTimeout(rotuloLimpar, 4000); return;
+      }
+      var f = b.getAttribute('data-ferramenta');
+      if (f) { escolher(f); if (f !== 'borracha') grifarSelecao(f); }
+    });
+    document.body.appendChild(paleta);
+    escolher(ferramenta);
+    return paleta;
+  }
+  function rotuloLimpar() {
+    var b = paleta && paleta.querySelector('.grf-limpar'); if (!b) return;
+    b.removeAttribute('data-confirma'); b.textContent = '🗑';
+    b.setAttribute('aria-label', 'Limpar esta tela'); b.title = 'Limpar os grifos desta tela';
+    var av = paleta.querySelector('.grf-aviso'); if (av) { av.hidden = true; av.textContent = ''; }
+  }
+  function escolher(f) {
+    ferramenta = f;
+    if (!paleta) return;
+    var bs = paleta.querySelectorAll('[data-ferramenta]');
+    for (var i = 0; i < bs.length; i++) bs[i].setAttribute('aria-pressed', bs[i].getAttribute('data-ferramenta') === f ? 'true' : 'false');
+    marcarCorpo();
+  }
+  function marcarCorpo() {
+    var c = document.body.classList, aberta = paleta && !paleta.hidden;
+    MARCAS.forEach(function (x) { c.remove('grf-cor-' + x); });
+    c.remove('grf-borracha');
+    document.documentElement.classList.toggle('grf-reserva', !!aberta);
+    if (!aberta) return;
+    if (ferramenta === 'borracha') c.add('grf-borracha'); else c.add('grf-cor-' + ferramenta);
+  }
+  function contar() {
+    if (!paleta) return;
+    var lista = ler(), vistos = 0;
+    for (var i = 0; i < lista.length; i++) if (presente(lista[i].id)) vistos++;
+    var fora = lista.length - vistos;
+    var el = paleta.querySelector('.grf-conta');
+    el.textContent = lista.length ? String(lista.length) : '';
+    el.title = lista.length ? lista.length + ' grifo(s) nesta tela' + (fora ? ' (' + fora + ' fora da vista agora)' : '') : '';
+  }
+  function abrir() { montar().hidden = false; marcarCorpo(); contar(); }
+  function fechar() { if (paleta) { paleta.hidden = true; rotuloLimpar(); } marcarCorpo(); }
+  function alternar() { if (paleta && !paleta.hidden) fechar(); else abrir(); }
+  function aviso(txt) { try { console.warn('[grifos] ' + txt); } catch (e) { /* sem console */ } if (paleta) paleta.querySelector('.grf-dica').textContent = txt; }
+  function campo(el) {
+    return !!el && (/^(INPUT|TEXTAREA|SELECT)$/.test(el.tagName) || el.isContentEditable);
+  }
+
+  /* ---------- eventos ---------- */
+  document.addEventListener('keydown', function (e) {
+    if (e.ctrlKey || e.metaKey || e.altKey || campo(e.target)) return;
+    if (e.key === 'g' || e.key === 'G') { e.preventDefault(); alternar(); return; }
+    if (e.key === 'Escape' && paleta && !paleta.hidden) fechar();
+  });
+  document.addEventListener('mouseup', function (e) {
+    if (!paleta || paleta.hidden || ferramenta === 'borracha' || paleta.contains(e.target) || campo(e.target)) return;
+    setTimeout(function () { grifarSelecao(ferramenta); }, 0);
+  });
+  document.addEventListener('click', function (e) {
+    if (!paleta || paleta.hidden || ferramenta !== 'borracha') return;
+    var m = e.target.closest && e.target.closest('mark.grf[data-grf]');
+    if (!m) return;
+    e.preventDefault(); e.stopPropagation();
+    apagar(m.getAttribute('data-grf'));
+  }, true);
+
+  function iniciar() { estilo(); aplicar(); retomar(); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', iniciar); else iniciar();
+
+  window.Grifa = { abrir: abrir, fechar: fechar, alternar: alternar, escolher: escolher, grifarSelecao: grifarSelecao,
+    aplicar: aplicar, apagar: apagar, limparTela: limparTela, lista: ler, chave: CHAVE, cores: CORES, estilos: ESTILOS };
+})();
+</script>
+<!-- grifa:fim -->
+</body>
+</html>

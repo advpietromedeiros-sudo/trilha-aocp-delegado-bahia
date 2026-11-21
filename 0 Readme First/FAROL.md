@@ -336,6 +336,18 @@
   - 🆕 **Também em 14-15/11: abas "900 Discursivas" (penal/PP) e "PED — FGV"** no Treino (material de terceiro,
     só na cópia privada, fora do Git). Ver `docs/PROCEDENCIA.md`.
 
+- ✅ **21/11/2026 — nova aba "📰 Atualidades"** (`discursiva/Atualidades_CE.html` +
+  `discursiva/atualidades_dados.js`): **102 assertivas Certo/Errado comentadas** cobrindo todo o anexo de
+  atualidades da prova (segurança pública, eleições 2026, gênero/DH, clima/COP30, saúde, economia, internacional,
+  educação/cultura, tecnologia e Comunicação). Modos **Treino** (responde C/E → gabarito + comentário) e **Estudo**
+  (tudo revelado), filtro por tema, placar, **Modo celular**, termos-chave em **negrito vermelho** e tabelas (Nobel,
+  palavras do ano). A seleção de temas vem do anexo pessoal do titular; **as questões e os comentários são autorais,
+  de fontes públicas** (ver `docs/PROCEDENCIA.md`). Aba ligada no hub, na paleta de grifos e no pacote privado.
+  Teste `docs/testar_atualidades.cjs` + 2 portas no portão (**45 portas**). Prova em 06/12/2026.
+  - ⏳ **Pendente (pedido 21/11, em sequência):** melhorar a metodologia de REVISÃO do módulo *Discursivas Stories* —
+    usar a pedagogia do Estudo de Caso **sem a parte de escrever** (é revisão), com pontos principais em
+    **negrito+sublinhado** e **conectivos em vermelho**. Criar essa metodologia de leitura guiada.
+
 ## O que fica rodando
 
 - Storybook (`npm run storybook`), porta 6006, iniciado pela sessão de 31/10/2026.

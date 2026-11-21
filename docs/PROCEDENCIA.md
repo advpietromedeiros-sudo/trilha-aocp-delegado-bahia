@@ -439,3 +439,18 @@ prompt do servidor já manda não aplicar norma posterior.
   assecuratórias, hediondez e as alterações em CP/CPP/LEP). O PDF serviu só para localizar a lei e os pontos.
 - **Autorização:** pedido escrito do titular (20/11/2026); para estudo pessoal; o app não vai para o portal (D-009).
   O conteúdo publicado é autoral e o texto é público, sem dependência de autorização do autor do PDF.
+
+## 21/11/2026 — Anexo "Hora da Verdade PC-BA" (Atualidades) como SELEÇÃO DE TEMAS
+
+- **O quê:** apostila de revisão de atualidades de terceiro ("Hora da Verdade PC-BA"), de uso pessoal do titular,
+  com a curadoria dos temas de atualidades mais prováveis na prova (06/12/2026). O titular pediu 100+ assertivas
+  Certo/Errado comentadas "batendo todo o conteúdo do anexo".
+- **O que entrou no Git:** **nada do material de terceiro** — nem a marca, nem o texto, nem os slides. O anexo serviu
+  apenas de **seleção de temas** (quais fatos cobrar). As 102 assertivas e os comentários
+  (`discursiva/atualidades_dados.js`) foram **redigidos de forma autoral**, a partir de **fontes públicas**: TSE,
+  STF, Senado/Câmara, gov.br/Planalto, Banco Central, IBGE, FAO/ONU, FMI, Anvisa, OPAS/OMS, FBSP, Unesco e imprensa.
+- **Ressalva (atualidades é sensível à data):** o corte de conhecimento do modelo é jan/2026; fatos de fev–nov/2026
+  foram pesquisados em fontes públicas e seguem o anexo do titular. A tela avisa para "conferir os fatos perto da
+  prova".
+- **Autorização:** pedido escrito do titular (21/11/2026); para estudo pessoal; o app não vai para o portal (D-009).
+  Conteúdo publicado é autoral; fontes públicas, sem dependência de autorização do autor do anexo.

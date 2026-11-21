@@ -131,6 +131,10 @@ PORTAS: list[tuple[str, list[str], str]] = [
      "questões discursivas em Stories: enunciado fixo, revelar pontos e avançar/retomar"),
     ("teste das discursivas stories acusa", ["node", "docs/testar_discursivas_stories.cjs", "--autoteste"],
      "teste que passa com uma questão sem pontos-chave — verde falso"),
+    ("atualidades Certo/Errado: comportamento", ["node", "docs/testar_atualidades.cjs"],
+     "quiz de atualidades: 100+ C/E com tema, gabarito booleano e comentário por questão"),
+    ("teste das atualidades acusa", ["node", "docs/testar_atualidades.cjs", "--autoteste"],
+     "teste que passa com um gabarito corrompido (não booleano) — verde falso"),
 ]
 
 # Régua de segredo (31/10/2026): exige VALOR de 20+ caracteres depois do `=` — o LEIA_PRIMEIRO cita
