@@ -470,3 +470,16 @@ prompt do servidor já manda não aplicar norma posterior.
 - **Não entrou:** nenhuma diagramação, comentário, grifo, marca ou a marca d'água do anexo. A letra de lei e a
   jurisprudência são **públicas** (Lei 9.610/98, art. 8º, IV) e foram **redigidas de forma autoral**, com a lacuna
   (cloze) sobre a palavra-chave. O PDF não está no repositório.
+
+## 22/11/2026 — Edital oficial PC-BA e leis estaduais da Bahia (fontes públicas)
+
+- **O quê:** (a) Edital de Abertura do concurso PC-BA 2026 (SAEB nº 02/2026 / banca AOCP), baixado do portal oficial
+  (rhbahia.ba.gov.br / Gran Cursos); (b) texto oficial da **Lei estadual BA nº 12.209/2011** (processo administrativo)
+  e da **Lei estadual BA nº 14.634/2023** (licitações e contratos), dos portais públicos (legislabahia.ba.gov.br,
+  UNEB, TJBA).
+- **Uso:** o edital serviu para **alinhar a grade** (disciplinas, nº de questões por bloco, peso, lugar de Direitos
+  Humanos) e decidir o que fica/sai do Bloco 17 da Lei Seca. O texto das duas leis estaduais foi **conferido** para
+  escrever as cartas de lacuna com precisão (princípios, prazos, modalidades, revogação).
+- **Natureza:** todos são **atos normativos e documentos oficiais públicos** (Lei 9.610/98, art. 8º, I e IV — leis,
+  editais e atos oficiais não são protegidos por direito autoral). As cartas são autorais (lacuna sobre a
+  palavra-chave). Os PDFs não entram no repositório.

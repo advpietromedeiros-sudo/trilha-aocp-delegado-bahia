@@ -2747,16 +2747,21 @@ window.LEI_SECA = [
  ]
 },
 
-/* ===================================================================== BLOCO 17 — COMPLEMENTOS
-   Lacunas dos dispositivos do anexo AOCP de lei seca destacada que ainda NÃO tinham carta própria
-   (conferência de cobertura em 21/11/2026). O anexo serviu só como GUIA de quais temas cobrar; a
-   letra de lei e a jurisprudência aqui são PÚBLICAS e foram redigidas de forma autoral — nada de
-   terceiro nem dado pessoal entra (ver docs/PROCEDENCIA.md). Áreas: ECA (proteção/socioeducativo),
-   Empresarial, DH/tratados, mais julgados e dispositivos avulsos. O núcleo Eleitoral vem sinalizado
-   por ser material AOCP genérico (conferir contra o edital da PC-BA). */
+/* ===================================================================== BLOCO 17 — COMPLEMENTOS + REFORÇO
+   Alinhado ao EDITAL DA PC-BA (Delegado), banca AOCP, após conferência da grade (21/11/2026).
+   (1) Complementos do anexo que CAEM no edital: ECA (Lei 8.069/90, listada na Legislação Penal
+   Extravagante), Empresarial (Direito Civil e Empresarial) e julgados/avulsos de Constitucional,
+   Penal, Processo, Administrativo, Ambiental e Civil.
+   (2) REFORÇO das disciplinas gerais pouco trabalhadas: Legislação Geral da Bahia (Lei 12.209/11 —
+   processo administrativo estadual; Lei 14.634/23 — licitações e contratos estaduais), Promoção da
+   Igualdade Racial e de Gênero e Medicina Legal.
+   RETIRADO por estar FORA do edital PC-BA: Direito Eleitoral (Leis 9.504/97 e 6.091/74) e tratados
+   de Direitos Humanos sem disciplina própria do Delegado (Convenção da ONU contra a Tortura, DUDH,
+   Res. 34/169). A letra de lei e a jurisprudência são PÚBLICAS e redigidas de forma autoral — nada
+   de terceiro nem dado pessoal (ver docs/PROCEDENCIA.md). */
 {
- id:"ls17", titulo:"Bloco 17 — Complementos (ECA · Empresarial · DH · avulsos)", curto:"Complementos AOCP",
- sub:"O que faltava do anexo AOCP: ECA proteção/socioeducativo, Empresarial, Direitos Humanos e tratados, julgados e avulsos (Eleitoral sinalizado)",
+ id:"ls17", titulo:"Bloco 17 — Complementos + reforço (Legislação BA · Igualdade · Medicina Legal)", curto:"Complementos + reforço",
+ sub:"Complementos do edital (ECA, Empresarial, julgados) e reforço das gerais: Legislação Geral da Bahia, Igualdade Racial/Gênero e Medicina Legal",
  itens:[
  /* --- ECA (Lei 8.069/90) — proteção e medidas socioeducativas --- */
  {d:"ECA", art:"14, §5º", rub:"Detecção de risco psíquico",
@@ -2850,7 +2855,7 @@ window.LEI_SECA = [
   t:"Os instrumentos de adaptação para condução veicular por pessoa com deficiência classificam-se como ___ e, por não serem parte integrante do bem principal, não são alcançados pelo negócio jurídico que o envolver, salvo imposição legal ou manifestação das partes.",
   g:["pertenças"], base:"STJ, REsp 1.305.183; CC, arts. 93-94", novo:true},
 
- /* --- Direitos Humanos e tratados --- */
+ /* --- Jurisprudência de Direitos Humanos (cai em Constitucional/Penal) --- */
  {d:"Súmula Vinc.", art:"25", rub:"Depositário infiel",
   t:"É ___ a prisão civil de depositário infiel, qualquer que seja a modalidade do depósito.",
   g:["ilícita"], base:"Súmula Vinculante 25-STF", novo:true},
@@ -2875,38 +2880,57 @@ window.LEI_SECA = [
  {d:"STF", art:"RE 511961", rub:"Diploma de jornalista",
   t:"O STF declarou ___ a exigência de diploma de curso superior para o exercício da profissão de jornalista, por constituir restrição às liberdades de expressão e de informação (art. 220, §1º).",
   g:["inconstitucional"], base:"STF, RE 511961", novo:true},
- {d:"Conv. Tortura", art:"2º", rub:"Vedação absoluta",
-  t:"Em nenhum caso poderão invocar-se circunstâncias excepcionais, tais como ameaça ou estado de guerra, instabilidade política interna ou qualquer outra emergência pública, como ___ para a tortura.",
-  g:["justificação"], base:"Convenção da ONU contra a Tortura, art. 2º, 2", novo:true},
- {d:"Conv. Tortura", art:"4º", rub:"Tipificação obrigatória",
-  t:"Cada Estado-Parte assegurará que todos os atos de tortura sejam considerados ___ segundo a sua legislação penal, o mesmo se aplicando à tentativa e à cumplicidade ou participação na tortura.",
-  g:["crimes"], base:"Convenção da ONU contra a Tortura, art. 4º, 1", novo:true},
- {d:"DUDH", art:"11", rub:"Presunção de inocência",
-  t:"Todo ser humano acusado de um ato delituoso tem o direito de ser presumido ___ até que a sua culpabilidade tenha sido provada de acordo com a lei, em julgamento público com todas as garantias de defesa.",
-  g:["inocente"], base:"DUDH, art. 11", novo:true},
- {d:"DUDH", art:"14", rub:"Asilo",
-  t:"Todo ser humano, vítima de perseguição, tem o direito de procurar e de gozar ___ em outros países; esse direito não pode ser invocado em caso de perseguição motivada por crimes de direito comum.",
-  g:["asilo"], base:"DUDH, art. 14", novo:true},
- {d:"DUDH", art:"15", rub:"Nacionalidade",
-  t:"Todo ser humano tem direito a uma ___; ninguém será arbitrariamente privado dela, nem do direito de mudá-la.",
-  g:["nacionalidade"], base:"DUDH, art. 15", novo:true},
- {d:"Res. ONU 34/169", art:"5º", rub:"Código de Conduta",
-  t:"Nenhum funcionário responsável pela aplicação da lei pode infligir, instigar ou tolerar tortura ou tratamento cruel, nem invocar ordens ___ ou circunstâncias excepcionais como justificativa para esses atos.",
-  g:["superiores"], base:"Código de Conduta da ONU (Res. 34/169), art. 5º", novo:true},
+ /* ===================== REFORÇO DAS DISCIPLINAS GERAIS ===================== */
 
- /* --- Núcleo Eleitoral (anexo AOCP genérico — conferir contra o edital PC-BA) --- */
- {d:"Cód. Eleitoral", art:"42, §único", rub:"Domicílio eleitoral",
-  t:"[Eleitoral — AOCP genérico] Para o efeito da inscrição, é domicílio eleitoral o lugar de ___ ou moradia do requerente; tendo mais de uma, considera-se domicílio qualquer delas.",
-  g:["residência"], base:"Código Eleitoral, art. 42, §único", novo:true},
- {d:"L. 9.504/97", art:"9º", rub:"Condições de elegibilidade",
-  t:"[Eleitoral — AOCP genérico] Para concorrer às eleições, o candidato deverá possuir domicílio eleitoral na respectiva circunscrição pelo prazo de ___ meses e estar com a filiação deferida pelo partido no mesmo prazo.",
-  g:["6 (seis)"], base:"Lei 9.504/97, art. 9º", novo:true},
- {d:"L. 9.504/97", art:"10, §3º", rub:"Cota de gênero",
-  t:"[Eleitoral — AOCP genérico] Do número de vagas, cada partido ou coligação preencherá o mínimo de ___% e o máximo de 70% para candidaturas de cada sexo.",
-  g:["30"], base:"Lei 9.504/97, art. 10, §3º", novo:true},
- {d:"L. 6.091/74", art:"6º", rub:"Dever de votar",
-  t:"[Eleitoral — AOCP genérico] A indisponibilidade ou as deficiências do transporte de eleitores não eximem o eleitor do dever de ___.",
-  g:["votar"], base:"Lei 6.091/74, art. 6º", novo:true},
+ /* --- Legislação Geral da Bahia · Lei 12.209/2011 (processo administrativo estadual) --- */
+ {d:"L. BA 12.209/11", art:"3º", rub:"Princípios do processo adm. (BA)",
+  t:"A Administração Pública obedecerá aos princípios da legalidade, impessoalidade, moralidade, publicidade, eficiência, celeridade, razoabilidade, proporcionalidade, motivação, devido processo legal e ___ defesa, segurança jurídica, oficialidade, verdade material e gratuidade.",
+  g:["ampla"], base:"Lei BA 12.209/2011, art. 3º", novo:true, ba:true},
+ {d:"L. BA 12.209/11", art:"3º, §1º", rub:"Reserva legal",
+  t:"No processo administrativo estadual, somente a ___ pode condicionar o exercício de direito, impor dever, prever infração ou prescrever sanção.",
+  g:["lei"], base:"Lei BA 12.209/2011, art. 3º, §1º", novo:true, ba:true},
+ {d:"L. BA 12.209/11", art:"55, §1º", rub:"Prazo de recurso",
+  t:"O prazo para interposição de recurso administrativo, na Lei de Processo Administrativo da Bahia, é de ___ dias.",
+  g:["10 (dez)"], base:"Lei BA 12.209/2011, art. 55, §1º", novo:true, ba:true},
+ {d:"L. BA 12.209/11", art:"conclusão", rub:"Prazo de conclusão do processo",
+  t:"O prazo para conclusão do processo, com decisão final da autoridade julgadora, é de ___ dias, admitida prorrogação por igual prazo, uma vez.",
+  g:["180 (cento e oitenta)"], base:"Lei BA 12.209/2011 (prazo de conclusão)", novo:true, ba:true},
+
+ /* --- Legislação Geral da Bahia · Lei 14.634/2023 (licitações e contratos estaduais) --- */
+ {d:"L. BA 14.634/23", art:"1º", rub:"Âmbito (licitações BA)",
+  t:"A Lei nº 14.634/2023 disciplina as normas de licitações e contratos administrativos aplicáveis no âmbito da Administração Pública do Estado da ___.",
+  g:["Bahia"], base:"Lei BA 14.634/2023, art. 1º", novo:true, ba:true},
+ {d:"L. BA 14.634/23", art:"2º", rub:"Adoção da Lei nacional",
+  t:"Aplica-se a Lei Federal nº ___/2021, que estabelece as normas gerais de licitação e contratação, aos órgãos e entidades da Administração Pública do Estado da Bahia.",
+  g:["14.133"], base:"Lei BA 14.634/2023, art. 2º", novo:true, ba:true},
+ {d:"L. BA 14.634/23", art:"6º", rub:"Agente de contratação",
+  t:"A licitação será conduzida por ___ de contratação; na modalidade pregão, o responsável pela condução do certame será designado pregoeiro.",
+  g:["agente"], base:"Lei BA 14.634/2023, art. 6º", novo:true, ba:true},
+ {d:"L. BA 14.634/23", art:"79, I", rub:"Revogação da lei antiga",
+  t:"A Lei nº 14.634/2023 revogou a antiga lei estadual de licitações da Bahia, a Lei nº ___/2005.",
+  g:["9.433"], base:"Lei BA 14.634/2023, art. 79, I", novo:true, ba:true},
+
+ /* --- Promoção da Igualdade Racial e de Gênero (gerais) --- */
+ {d:"L. 11.645/08", art:"ensino", rub:"História afro-brasileira e indígena",
+  t:"A Lei nº 11.645/2008 tornou obrigatório, nos estabelecimentos de ensino fundamental e médio, o estudo da história e cultura afro-brasileira e ___.",
+  g:["indígena"], base:"Lei 11.645/2008 (altera a LDB, art. 26-A)", novo:true},
+ {d:"L. 7.716/89", art:"2º-A", rub:"Pena da injúria racial",
+  t:"Com a Lei nº 14.532/2023, a injúria racial passou a ser punida como crime de racismo, com pena de reclusão de ___ anos e multa.",
+  g:["2 (dois) a 5 (cinco)"], base:"Lei 7.716/89, art. 2º-A (Lei 14.532/2023)", novo:true},
+ {d:"CP", art:"147-B", rub:"Violência psicológica contra a mulher",
+  t:"A Lei nº 14.188/2021 inseriu no Código Penal o crime de violência ___ contra a mulher: causar-lhe dano emocional que a prejudique e perturbe o pleno desenvolvimento ou degrade/controle suas ações, mediante ameaça, constrangimento, humilhação, manipulação, isolamento, etc.",
+  g:["psicológica"], base:"CP, art. 147-B (Lei 14.188/2021)", novo:true},
+
+ /* --- Medicina Legal (ancorada em lei) --- */
+ {d:"CP", art:"129, §2º", rub:"Lesão corporal gravíssima",
+  t:"A lesão corporal é ___ (art. 129, §2º) quando resulta em incapacidade permanente para o trabalho, enfermidade incurável, perda ou inutilização de membro, sentido ou função, deformidade permanente ou aborto.",
+  g:["gravíssima"], base:"CP, art. 129, §2º", novo:true},
+ {d:"CPP", art:"164", rub:"Fotografia do cadáver",
+  t:"Os cadáveres serão sempre ___ na posição em que forem encontrados, bem como, na medida do possível, todas as lesões externas e vestígios deixados no local do crime.",
+  g:["fotografados"], base:"CPP, art. 164", novo:true},
+ {d:"CP", art:"128", rub:"Aborto não punível",
+  t:"Não se pune o aborto praticado por médico quando não há outro meio de salvar a vida da gestante (aborto ___) ou quando a gravidez resulta de estupro, com consentimento da gestante (aborto ___).",
+  g:["necessário","sentimental"], base:"CP, art. 128, I e II", novo:true},
  ]
 }
 ];

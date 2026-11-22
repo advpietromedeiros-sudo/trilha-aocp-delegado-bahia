@@ -88,6 +88,17 @@
   Humanos/tratados (SV 25, RE 466343, HC 171118, ADPF 496/347, ADI 3239, RE 511961, Convenção da ONU contra a
   Tortura, DUDH, Res. 34/169)**, mais um núcleo Eleitoral sinalizado como AOCP genérico. **+46 cartas** autorais de
   lacuna, 0 inválida, lacunas == respostas. Portão do teste ajustado de 16→17 blocos. **17 blocos / 895 cartas.**
+  - ✏️ **22/11/2026 — Bloco 17 realinhado ao EDITAL da PC-BA (Delegado/AOCP), após conferir a grade oficial.**
+    O edital é 100 questões (40 gerais + 60 específicas), peso 1,0 igual, mínimo 70; **Direitos Humanos não é
+    disciplina autônoma** do Delegado (aparece em Constitucional — Pacto de São José, Atualidades e Igualdade).
+    **Removidos** (fora do edital): núcleo Eleitoral (Leis 9.504/97, 6.091/74) e tratados de DH sem disciplina
+    própria (Convenção da ONU contra a Tortura, DUDH, Res. 34/169). **ECA mantido** (Lei 8.069 consta na Legislação
+    Penal Extravagante do Delegado). **Reforço acrescentado** nas gerais pouco trabalhadas, com texto oficial
+    verificado (PDFs UNEB/TJBA + Portal Legislação BA): **Lei BA 12.209/11** (processo adm.: princípios art. 3º,
+    reserva legal, recurso 10 dias, conclusão 180 dias) e **Lei BA 14.634/23** (licitações: âmbito art. 1º, adota a
+    14.133 art. 2º, agente de contratação art. 6º, revogou a 9.433 art. 79), **Igualdade/Gênero** (Lei 11.645/08,
+    pena da injúria racial 14.532/23, violência psicológica CP 147-B) e **Medicina Legal** (CP 129 §2º, CPP 164,
+    CP 128). Bloco 17 passou a **50 cartas**; teste da lei seca verde. Atualidades fica na aba própria (115 C/E).
 
 - 🆕 **19/11/2026, 09h06 — Bloco 16 "Lei Seca AOCP III (Constitucional + Processo)" no Treino de Letra de Lei.**
   Pedido do titular (08h47: *"veja o que tem no DECORANDO A LEI SECA 02 que não tem ainda nos blocos e coloque no
